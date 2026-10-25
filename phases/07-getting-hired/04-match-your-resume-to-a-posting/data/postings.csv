@@ -1,0 +1,16 @@
+posting_id,company,title,text
+P1,Brightmoor Retail,Data Analyst,"About us: we sell home goods across 40 stores and our R&D team designs every product.
+What you need: SQL, Power BI and Excel. Comfort with statistics.
+Nice to have: Python, Google Analytics."
+P2,Calloway Health,Product Analyst,"About us: a clinic booking app.
+What you need: SQL, Python, A/B testing and Tableau.
+Nice to have: dbt, Looker."
+P3,Darnell Bank,Risk Analyst,"About us: a regional bank. Reporting to the head of risk.
+What you need: SAS, SQL, statistics and Excel.
+Nice to have: R, machine learning."
+P4,Elmstead Media,Marketing Analyst,"About us: a podcast network.
+What you need: Google Analytics, Excel, Power-BI.
+Nice to have: SQL, experimentation."
+P5,Fairhaven Logistics,Senior Data Analyst,"About us: freight across three countries.
+What you need: SQL, Python, Snowflake, dbt and Looker.
+Nice to have: Power BI, statistics."

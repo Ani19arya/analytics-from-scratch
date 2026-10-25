@@ -1,0 +1,13 @@
+Maya Okafor
+Data analyst, Pune
+
+Skills: SQL (PostgreSQL), Python (pandas), PowerBI, Excel, statistics, A/B tests, GA4
+
+Experience
+Analyst intern, Lumen Freight (fictional), 2025 to 2026
+- Built a PowerBI dashboard for late deliveries used by 30 depot managers.
+- Wrote PostgreSQL queries to join shipment and invoice tables.
+- Ran two A/B tests on reminder emails and wrote up the results.
+
+Projects
+- Churn analysis for a subscription business in Python with a two proportion test.

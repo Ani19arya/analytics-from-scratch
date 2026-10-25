@@ -112,4 +112,4 @@ On 25 October 2026 the Real Analyst Jobs live feed had 1,193 live analyst postin
 
 ## Next
 
-Phase 02 is done. Phase 03 (metrics and product analytics) is planned and not written yet, so continue with [Phase 06: AI for analysts](../../06-ai-for-analysts/). The [phase list](../../README.md) shows what is coming.
+Phase 02 is done. Go on to [Phase 03: Metrics and product analytics](../../03-metrics-and-product-analytics/), starting with [Metric trees](../../03-metrics-and-product-analytics/01-metric-trees/).

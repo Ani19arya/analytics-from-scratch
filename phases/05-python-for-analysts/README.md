@@ -1,7 +1,8 @@
 # Python for analysts
 
-Coming soon: cleaning messy CSVs, reshaping data and automating a weekly report with the standard library.
+This phase uses only the Python standard library: `csv`, `datetime`, `re` and plain dictionaries. No pandas. That is on purpose. Every step pandas does for you in one call, such as parsing dates, pivoting a table or grouping by week, is written out here by hand, so you see the decisions hidden inside those calls and can tell when a library made the wrong one. Each lesson runs on Python 3.9 or later with nothing to install.
 
-The lessons follow the same format as the rest of the course (see [LESSON_TEMPLATE.md](../../LESSON_TEMPLATE.md)). Watch or star the repo to get them as they land, or open an issue to suggest a lesson.
-
-While you wait, start with [01 SQL](../01-sql/), [02 Statistics and experiments](../02-statistics-and-experiments/) or [06 AI for analysts](../06-ai-for-analysts/).
+1. [Clean a messy CSV](01-clean-a-messy-csv/)
+2. [Reshape wide and long](02-reshape-wide-and-long/)
+3. [Dates, weeks and time zones](03-dates-weeks-and-time-zones/)
+4. [Automate the weekly report](04-automate-the-weekly-report/)

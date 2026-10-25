@@ -1,0 +1,301 @@
+posting_id,tools,min_years,max_years,visa
+1,Python;SQL,,,silent
+2,Power BI;Python;SQL,2,,silent
+3,Excel;Power BI;SQL;Tableau,1,,silent
+4,Excel;Power BI;Python;SQL;Tableau,1,,no
+5,Python;R,4,,silent
+6,Python;SQL;dbt,4,6,silent
+7,Python;SQL;Tableau,1,,silent
+8,SQL,1,,silent
+9,SQL,,,no
+10,Excel;Python;Tableau,5,,silent
+11,Power BI,3,,silent
+12,SQL,,,silent
+13,Python;SQL,3,5,silent
+14,Power BI;Python,4,6,no
+15,Python;SQL,3,6,yes
+16,Excel;Tableau,7,,yes
+17,Excel;Power BI;Python;SQL,3,,silent
+18,SQL,6,9,no
+19,Excel;Python,3,,silent
+20,Excel;Power BI;SQL;Tableau,1,,no
+21,Excel;Python;SQL,1,,silent
+22,Excel;SQL;Tableau,1,,silent
+23,Excel;SQL,4,7,silent
+24,Excel;SQL;Tableau,2,,silent
+25,R;SQL;Tableau,,,yes
+26,Python;SQL,1,,silent
+27,SQL,1,,yes
+28,Python;SQL,,,silent
+29,SQL,3,6,silent
+30,Power BI;Python;R;SQL,3,6,silent
+31,SQL,3,6,silent
+32,Excel;Tableau,7,10,no
+33,Power BI;Python;SQL;Tableau,1,,no
+34,Looker;Python;SQL,4,,silent
+35,SQL;Tableau,2,5,silent
+36,Excel;Power BI;SQL,3,6,silent
+37,Excel;Python,1,,silent
+38,Excel;SQL;Tableau,,,no
+39,Excel;Power BI;Tableau;dbt,,,silent
+40,Power BI;SQL,4,6,silent
+41,Excel;SQL;Tableau;dbt,6,,silent
+42,SQL,2,,no
+43,SQL,,,silent
+44,Power BI;Python,0,2,silent
+45,SQL,1,4,silent
+46,Tableau,3,,silent
+47,Python;SQL;dbt,1,,silent
+48,Power BI;Python;SQL;Tableau,,,yes
+49,Python,3,6,silent
+50,Looker;Power BI,3,,silent
+51,Power BI;SQL;Tableau,3,6,silent
+52,Power BI;Python;SQL;dbt,6,9,silent
+53,Excel;SQL;Tableau,0,3,silent
+54,Power BI;Python;dbt,1,,silent
+55,Excel;Looker;Power BI,4,7,silent
+56,Excel;SQL,0,3,yes
+57,Excel;Looker;Power BI;SQL,3,6,yes
+58,SQL,4,6,silent
+59,Excel;R;SQL,0,3,silent
+60,Excel,,,silent
+61,Excel;SQL;Tableau,1,,silent
+62,Power BI;Python;R;SQL,3,,silent
+63,Tableau,2,4,silent
+64,Looker;SQL;Tableau,2,5,silent
+65,SQL;Tableau,4,7,silent
+66,Excel;Power BI;SQL;Tableau,5,,silent
+67,Looker;Python;SQL,,,silent
+68,SQL,3,6,silent
+69,Power BI;Python;SQL,5,7,yes
+70,Excel;Python;SQL;dbt,7,,silent
+71,Excel;Power BI;Python;R,2,,silent
+72,Excel;Power BI;SQL;dbt,1,,yes
+73,Power BI;Python;R;SQL;Tableau;dbt,1,,no
+74,Excel,0,2,silent
+75,SQL;dbt,5,,silent
+76,Python;Tableau,,,silent
+77,Excel;Power BI;SQL,3,,yes
+78,Excel;Python;SQL,2,,silent
+79,Excel,4,,silent
+80,Excel;R;SQL,1,4,silent
+81,SQL;Tableau,5,7,silent
+82,Excel;Power BI;Python;SQL;Tableau,1,,silent
+83,Excel;Looker,2,5,silent
+84,dbt,5,8,yes
+85,SQL,,,silent
+86,Excel;Power BI;Python;SQL;Tableau,6,8,silent
+87,SQL;Tableau,0,2,no
+88,Excel;Power BI;Python;SQL,3,6,silent
+89,Excel;SQL;dbt,2,,silent
+90,Python,0,3,no
+91,Excel;Looker;SQL,0,3,silent
+92,Python;R;SQL;Tableau,1,,silent
+93,Looker;Power BI;Python;SQL,,,silent
+94,Excel;R;SQL;Tableau,3,,silent
+95,Excel;SQL,3,5,silent
+96,Excel;Python;SQL,0,3,silent
+97,R;SQL,0,3,silent
+98,Excel;Python;SQL;Tableau,2,,silent
+99,Power BI;Python;SQL;dbt,3,5,silent
+100,Excel;R,1,3,silent
+101,Python,0,3,silent
+102,Excel;Power BI;Tableau,3,,silent
+103,Excel;Python;Tableau,1,,silent
+104,Power BI;Python;SQL,,,silent
+105,Power BI;Python;SQL,0,2,silent
+106,Excel;Python;R;SQL,1,,silent
+107,SQL;Tableau,4,,silent
+108,Python;R;Tableau,3,,silent
+109,Python,0,2,silent
+110,Power BI;SQL;Tableau,1,,silent
+111,Excel;SQL;Tableau,5,,silent
+112,Excel;Python;SQL,,,yes
+113,Python,0,3,silent
+114,Excel;Power BI;SQL,1,,silent
+115,Python,2,5,silent
+116,Power BI;Python,,,silent
+117,Excel;SQL,2,5,silent
+118,SQL,3,,silent
+119,Excel;Python;SQL;Tableau,2,4,silent
+120,Power BI;Python,2,4,silent
+121,Excel;Looker;Power BI;dbt,1,,silent
+122,SQL,1,,silent
+123,Excel;Python;SQL;Tableau,4,,silent
+124,Excel;Power BI;SQL;Tableau,4,6,silent
+125,Excel;Power BI;SQL,2,4,silent
+126,SQL,2,4,silent
+127,Excel;Power BI;Python;SQL,2,5,silent
+128,SQL,2,4,no
+129,Excel;SQL,2,,silent
+130,Power BI;Python;R;SQL;Tableau,,,silent
+131,Excel;Python;Tableau,1,,silent
+132,Power BI;Python;R;SQL,1,,silent
+133,Excel;Looker;Python;SQL,0,3,silent
+134,Power BI;SQL,3,,silent
+135,SQL,1,,silent
+136,Excel;R,0,3,no
+137,Power BI;R;SQL;Tableau,,,no
+138,Excel;SQL;Tableau,5,8,silent
+139,Excel;Looker;Power BI;Python,2,5,silent
+140,SQL,,,silent
+141,SQL;dbt,4,,yes
+142,Excel;SQL,3,,silent
+143,Power BI;SQL;dbt,3,,no
+144,Python;SQL,2,5,silent
+145,SQL,3,,silent
+146,Power BI;Python;R;SQL;Tableau,1,,silent
+147,Excel;Python;R;Tableau,3,,silent
+148,SQL;Tableau;dbt,2,,silent
+149,Excel;Power BI;Python;R;Tableau,2,,silent
+150,Power BI;R;SQL,1,,silent
+151,SQL,0,2,silent
+152,Excel;Python;R;SQL;Tableau,4,,silent
+153,SQL;Tableau,3,,silent
+154,Excel;Python;SQL,1,,silent
+155,Looker;Power BI;R;SQL,4,,silent
+156,Excel;Python,3,6,silent
+157,Excel;Power BI;Python;SQL,4,,silent
+158,Excel;SQL,5,,yes
+159,Excel;SQL;Tableau,0,2,silent
+160,Python;R,3,5,no
+161,SQL,7,,silent
+162,SQL;Tableau,4,,no
+163,Power BI;Python;SQL,1,,yes
+164,SQL,0,3,silent
+165,Excel,0,3,silent
+166,SQL,,,silent
+167,SQL,2,,silent
+168,SQL;Tableau,,,yes
+169,Excel;Looker;Python;SQL;Tableau,5,7,silent
+170,Excel;Python;SQL,2,4,silent
+171,Python;SQL,4,6,silent
+172,Excel;Python;SQL,5,8,silent
+173,Python;SQL;Tableau,1,,silent
+174,Excel;Power BI;Tableau,0,2,silent
+175,Excel;Python;SQL,,,silent
+176,Excel;Python;SQL,3,6,silent
+177,Looker;Tableau,5,8,silent
+178,Python;SQL;Tableau,,,no
+179,Power BI;SQL;Tableau,2,,silent
+180,Looker;Power BI;Python,1,,yes
+181,Power BI;SQL;dbt,,,no
+182,Excel;Python;SQL;Tableau,,,yes
+183,Excel;R;SQL;Tableau,3,,silent
+184,Excel;Python;SQL,1,,yes
+185,Power BI;SQL;Tableau,0,3,silent
+186,Excel;Tableau,4,6,silent
+187,Excel;Python;SQL;Tableau,0,2,silent
+188,Python,6,,silent
+189,Excel;Python;SQL;Tableau,3,,silent
+190,Power BI;SQL,,,silent
+191,SQL;Tableau,2,5,silent
+192,Excel,1,,silent
+193,Python;R,7,,silent
+194,Python;SQL,1,4,silent
+195,Excel;Looker;Python;SQL;dbt,1,,silent
+196,Python;SQL;Tableau,1,,silent
+197,Power BI;SQL;Tableau,1,,silent
+198,SQL;Tableau,2,4,no
+199,SQL;Tableau,1,,silent
+200,Excel;Looker;SQL;Tableau,1,,silent
+201,Power BI;Python;SQL,7,,silent
+202,Power BI,7,,silent
+203,Excel;Python,2,4,silent
+204,Power BI;R;dbt,2,4,silent
+205,Excel;Power BI;SQL,0,3,silent
+206,Excel,6,9,silent
+207,Looker;Python;R;SQL,3,,silent
+208,SQL;dbt,2,4,silent
+209,Python;Tableau,,,no
+210,Python;Tableau,1,,no
+211,Excel,1,,silent
+212,SQL;Tableau,4,,silent
+213,Power BI,3,,silent
+214,SQL,4,7,silent
+215,Python;R;SQL,1,4,silent
+216,Looker;Python;SQL;Tableau,2,,silent
+217,Power BI;Python;R;SQL,,,silent
+218,R;SQL,3,6,silent
+219,Excel;SQL,1,,silent
+220,Looker;Power BI;Tableau,5,8,silent
+221,Excel;Power BI;Python;SQL,4,,silent
+222,Power BI;Python,7,,silent
+223,Power BI;Python;SQL,1,,silent
+224,Python;SQL;Tableau,7,9,silent
+225,Excel;Python;SQL,,,no
+226,SQL,,,yes
+227,Python;R;SQL,0,2,silent
+228,Power BI;Python;SQL,6,,silent
+229,Excel;SQL,7,,silent
+230,SQL;dbt,5,7,silent
+231,Power BI;Python;SQL;Tableau,,,no
+232,SQL;Tableau,,,silent
+233,R,2,,silent
+234,Python;SQL,,,silent
+235,Looker;SQL;Tableau,3,5,no
+236,Excel;Python;dbt,1,,silent
+237,SQL,4,6,silent
+238,Excel;Looker;SQL;Tableau,3,5,silent
+239,Excel;Python,,,silent
+240,SQL;Tableau,7,,silent
+241,Excel,,,silent
+242,Excel;Python,,,silent
+243,R;SQL;Tableau,0,3,silent
+244,SQL,4,,no
+245,Power BI;Python;SQL,4,6,silent
+246,Looker;Python,1,,silent
+247,Power BI;Python;R;SQL,,,silent
+248,Python;SQL;Tableau,6,9,silent
+249,Excel;Python,7,,silent
+250,Python;Tableau,3,5,no
+251,SQL;Tableau,3,,silent
+252,SQL;Tableau;dbt,3,,silent
+253,Power BI,0,2,silent
+254,Excel;Python;SQL;Tableau,,,silent
+255,Excel;SQL,5,,silent
+256,Power BI;Python,3,6,no
+257,SQL;Tableau,4,7,silent
+258,Excel;Python;R;SQL;Tableau,1,3,silent
+259,Looker;dbt,,,silent
+260,Python,1,,no
+261,Power BI;SQL,1,4,silent
+262,Excel;Python;SQL;Tableau,1,,silent
+263,Excel;Looker;Power BI;SQL,3,5,silent
+264,Power BI;Python;SQL,0,3,silent
+265,Excel;R;SQL,1,,silent
+266,Excel;Power BI,2,4,silent
+267,Excel;Python;SQL,3,5,silent
+268,SQL;Tableau,2,,silent
+269,Excel;R;SQL,3,6,silent
+270,Looker;Power BI;SQL,3,6,silent
+271,SQL,3,6,silent
+272,SQL;Tableau,3,,yes
+273,Python;SQL,0,2,silent
+274,SQL,1,,silent
+275,Power BI;Python;SQL,6,,yes
+276,Power BI;Python,,,silent
+277,Power BI,3,5,silent
+278,Excel;Power BI;SQL,4,7,yes
+279,Power BI;Python;SQL;Tableau,,,silent
+280,Python;SQL,6,8,silent
+281,Excel;Power BI;SQL,1,,silent
+282,Python;R,1,,silent
+283,SQL,1,4,silent
+284,Power BI;Python;SQL,1,,silent
+285,SQL;dbt,3,,silent
+286,Excel;Python;SQL,0,3,silent
+287,Power BI;SQL,2,4,silent
+288,SQL;Tableau,1,,silent
+289,SQL,,,silent
+290,Excel;Looker;Python;R;SQL,,,silent
+291,Excel;SQL;Tableau,,,silent
+292,R;SQL,4,,yes
+293,Power BI;Python;R;SQL;Tableau,4,6,silent
+294,SQL;dbt,0,2,silent
+295,Excel;Python;Tableau,0,2,silent
+296,Excel;Python;SQL,2,,silent
+297,Excel;Python;Tableau,3,,no
+298,SQL,1,3,no
+299,Power BI;SQL,3,,silent
+300,Excel;Power BI;SQL,2,5,silent

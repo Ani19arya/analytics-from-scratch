@@ -103,4 +103,4 @@ Checking AI output against the data is a Python and SQL job. On the Real Analyst
 
 ## Next
 
-That ends phase 06. Phase 07 (getting hired) is planned and not written yet. The [phase list](../../README.md) shows what is ready.
+That ends phase 06. Go on to [Phase 07: Getting hired](../../07-getting-hired/), starting with [Read job postings like data](../../07-getting-hired/01-read-job-postings-like-data/).
