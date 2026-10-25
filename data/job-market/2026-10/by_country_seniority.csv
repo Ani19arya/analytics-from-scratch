@@ -1,0 +1,218 @@
+country,experience,postings
+US,Mid Level,1048
+US,Not Specified,838
+US,Entry Level,375
+US,Lead / Staff,336
+US,Senior,192
+IN,Not Specified,339
+IN,Mid Level,321
+IN,Lead / Staff,202
+IN,Entry Level,183
+IN,Senior,129
+UNKNOWN,Not Specified,344
+UNKNOWN,Mid Level,206
+UNKNOWN,Entry Level,75
+UNKNOWN,Lead / Staff,49
+UNKNOWN,Senior,31
+GB,Not Specified,368
+GB,Mid Level,126
+GB,Lead / Staff,63
+GB,Entry Level,43
+GB,Senior,20
+FR,Not Specified,305
+FR,Mid Level,20
+FR,Entry Level,6
+FR,Senior,5
+FR,Lead / Staff,2
+DE,Not Specified,160
+DE,Mid Level,42
+DE,Entry Level,14
+DE,Lead / Staff,4
+DE,Senior,4
+CA,Mid Level,84
+CA,Not Specified,80
+CA,Lead / Staff,20
+CA,Entry Level,16
+CA,Senior,14
+PL,Not Specified,110
+PL,Mid Level,36
+PL,Lead / Staff,32
+PL,Entry Level,18
+PL,Senior,7
+SG,Not Specified,88
+SG,Mid Level,46
+SG,Lead / Staff,25
+SG,Entry Level,14
+SG,Senior,3
+ES,Not Specified,58
+ES,Mid Level,55
+ES,Entry Level,20
+ES,Lead / Staff,6
+ES,Senior,3
+MX,Not Specified,41
+MX,Mid Level,36
+MX,Entry Level,32
+MX,Lead / Staff,15
+MX,Senior,6
+PH,Not Specified,56
+PH,Mid Level,35
+PH,Entry Level,14
+PH,Lead / Staff,10
+PH,Senior,5
+BR,Not Specified,64
+BR,Mid Level,20
+BR,Lead / Staff,16
+BR,Entry Level,6
+BR,Senior,1
+NL,Not Specified,40
+NL,Mid Level,32
+NL,Entry Level,8
+NL,Lead / Staff,8
+NL,Senior,7
+PT,Not Specified,52
+PT,Mid Level,14
+PT,Entry Level,11
+PT,Lead / Staff,7
+PT,Senior,2
+MY,Not Specified,44
+MY,Mid Level,19
+MY,Lead / Staff,7
+MY,Entry Level,6
+MY,Senior,5
+BE,Mid Level,28
+BE,Not Specified,26
+BE,Senior,7
+BE,Entry Level,6
+BE,Lead / Staff,5
+TH,Entry Level,17
+TH,Mid Level,17
+TH,Not Specified,17
+TH,Lead / Staff,2
+TH,Senior,2
+JP,Mid Level,22
+JP,Not Specified,19
+JP,Entry Level,5
+JP,Lead / Staff,4
+JP,Senior,4
+RO,Not Specified,18
+RO,Lead / Staff,14
+RO,Mid Level,10
+RO,Entry Level,6
+RO,Senior,2
+CH,Not Specified,31
+CH,Mid Level,10
+CH,Senior,3
+CH,Entry Level,2
+CH,Lead / Staff,2
+AR,Mid Level,18
+AR,Not Specified,16
+AR,Entry Level,9
+AR,Lead / Staff,2
+AR,Senior,2
+AU,Not Specified,24
+AU,Mid Level,10
+AU,Entry Level,6
+AU,Lead / Staff,4
+AU,Senior,3
+IE,Not Specified,20
+IE,Mid Level,17
+IE,Lead / Staff,6
+IE,Senior,2
+IE,Entry Level,1
+CN,Mid Level,14
+CN,Not Specified,12
+CN,Entry Level,6
+CN,Lead / Staff,6
+CN,Senior,4
+CO,Not Specified,23
+CO,Mid Level,7
+CO,Lead / Staff,5
+CO,Entry Level,4
+CO,Senior,3
+CZ,Not Specified,22
+CZ,Mid Level,7
+CZ,Entry Level,6
+CZ,Lead / Staff,3
+CZ,Senior,1
+IT,Not Specified,25
+IT,Mid Level,9
+IT,Entry Level,3
+IT,Senior,2
+SE,Not Specified,22
+SE,Mid Level,8
+SE,Lead / Staff,4
+SE,Senior,3
+SE,Entry Level,2
+AE,Not Specified,17
+AE,Mid Level,11
+AE,Lead / Staff,5
+AE,Senior,4
+HK,Entry Level,13
+HK,Mid Level,11
+HK,Not Specified,7
+HK,Lead / Staff,3
+HK,Senior,1
+HU,Not Specified,16
+HU,Lead / Staff,8
+HU,Mid Level,6
+HU,Entry Level,3
+HU,Senior,2
+EG,Not Specified,13
+EG,Mid Level,10
+EG,Entry Level,8
+EG,Lead / Staff,2
+EG,Senior,1
+SA,Not Specified,19
+SA,Mid Level,3
+SA,Entry Level,1
+SA,Lead / Staff,1
+KR,Not Specified,15
+KR,Mid Level,5
+KR,Entry Level,2
+KR,Lead / Staff,1
+AT,Not Specified,19
+AT,Lead / Staff,1
+AT,Mid Level,1
+IL,Mid Level,12
+IL,Not Specified,5
+IL,Entry Level,2
+IL,Lead / Staff,1
+IL,Senior,1
+ZA,Not Specified,7
+ZA,Entry Level,6
+ZA,Mid Level,5
+ZA,Lead / Staff,1
+ID,Mid Level,5
+ID,Entry Level,4
+ID,Not Specified,4
+ID,Senior,1
+VN,Not Specified,6
+VN,Mid Level,4
+VN,Entry Level,2
+DK,Not Specified,7
+DK,Mid Level,3
+CL,Not Specified,6
+CL,Mid Level,2
+PK,Entry Level,3
+PK,Mid Level,3
+PK,Not Specified,1
+TR,Mid Level,3
+TR,Not Specified,2
+TR,Entry Level,1
+TR,Lead / Staff,1
+NG,Mid Level,4
+NG,Entry Level,1
+NG,Senior,1
+BD,Mid Level,3
+BD,Not Specified,2
+FI,Mid Level,3
+FI,Not Specified,2
+KE,Mid Level,1
+KE,Not Specified,1
+KW,Not Specified,2
+LK,Entry Level,1
+LK,Not Specified,1
+NO,Not Specified,1
+NO,Senior,1
+NZ,Not Specified,2
+QA,Mid Level,1

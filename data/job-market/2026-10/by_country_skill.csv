@@ -1,0 +1,425 @@
+country,skill,postings_listing_skill,postings_listing_any_tool,share_pct
+US,SQL,1477,2056,71.8
+US,Python,996,2056,48.4
+US,Excel,860,2056,41.8
+US,Tableau,740,2056,36.0
+US,Power BI,492,2056,23.9
+US,Looker,232,2056,11.3
+US,R,324,2056,15.8
+US,dbt,157,2056,7.6
+IN,SQL,634,900,70.4
+IN,Python,448,900,49.8
+IN,Excel,411,900,45.7
+IN,Tableau,309,900,34.3
+IN,Power BI,350,900,38.9
+IN,Looker,82,900,9.1
+IN,R,139,900,15.4
+IN,dbt,42,900,4.7
+UNKNOWN,SQL,358,484,74.0
+UNKNOWN,Python,251,484,51.9
+UNKNOWN,Excel,197,484,40.7
+UNKNOWN,Tableau,150,484,31.0
+UNKNOWN,Power BI,156,484,32.2
+UNKNOWN,Looker,59,484,12.2
+UNKNOWN,R,75,484,15.5
+UNKNOWN,dbt,40,484,8.3
+GB,SQL,286,413,69.2
+GB,Python,222,413,53.8
+GB,Excel,145,413,35.1
+GB,Tableau,92,413,22.3
+GB,Power BI,101,413,24.5
+GB,Looker,57,413,13.8
+GB,R,42,413,10.2
+GB,dbt,43,413,10.4
+FR,SQL,76,91,83.5
+FR,Python,51,91,56.0
+FR,Excel,12,91,13.2
+FR,Tableau,28,91,30.8
+FR,Power BI,20,91,22.0
+FR,Looker,14,91,15.4
+FR,R,18,91,19.8
+FR,dbt,14,91,15.4
+DE,SQL,98,122,80.3
+DE,Python,76,122,62.3
+DE,Excel,38,122,31.1
+DE,Tableau,37,122,30.3
+DE,Power BI,32,122,26.2
+DE,Looker,27,122,22.1
+DE,R,17,122,13.9
+DE,dbt,19,122,15.6
+CA,SQL,109,160,68.1
+CA,Python,83,160,51.9
+CA,Excel,65,160,40.6
+CA,Tableau,43,160,26.9
+CA,Power BI,41,160,25.6
+CA,Looker,16,160,10.0
+CA,R,14,160,8.8
+CA,dbt,6,160,3.8
+PL,SQL,77,117,65.8
+PL,Python,44,117,37.6
+PL,Excel,52,117,44.4
+PL,Tableau,24,117,20.5
+PL,Power BI,41,117,35.0
+PL,Looker,21,117,17.9
+PL,R,4,117,3.4
+PL,dbt,11,117,9.4
+SG,SQL,63,101,62.4
+SG,Python,45,101,44.6
+SG,Excel,51,101,50.5
+SG,Tableau,31,101,30.7
+SG,Power BI,26,101,25.7
+SG,Looker,8,101,7.9
+SG,R,9,101,8.9
+SG,dbt,3,101,3.0
+ES,SQL,75,103,72.8
+ES,Python,58,103,56.3
+ES,Excel,40,103,38.8
+ES,Tableau,32,103,31.1
+ES,Power BI,26,103,25.2
+ES,Looker,23,103,22.3
+ES,R,19,103,18.4
+ES,dbt,13,103,12.6
+MX,SQL,67,99,67.7
+MX,Python,51,99,51.5
+MX,Excel,52,99,52.5
+MX,Tableau,37,99,37.4
+MX,Power BI,39,99,39.4
+MX,Looker,17,99,17.2
+MX,R,20,99,20.2
+MX,dbt,7,99,7.1
+PH,SQL,47,71,66.2
+PH,Python,19,71,26.8
+PH,Excel,32,71,45.1
+PH,Tableau,18,71,25.4
+PH,Power BI,22,71,31.0
+PH,Looker,7,71,9.9
+PH,R,8,71,11.3
+PH,dbt,0,71,0.0
+BR,SQL,71,89,79.8
+BR,Python,46,89,51.7
+BR,Excel,36,89,40.4
+BR,Tableau,25,89,28.1
+BR,Power BI,27,89,30.3
+BR,Looker,15,89,16.9
+BR,R,12,89,13.5
+BR,dbt,10,89,11.2
+NL,SQL,55,67,82.1
+NL,Python,41,67,61.2
+NL,Excel,21,67,31.3
+NL,Tableau,17,67,25.4
+NL,Power BI,23,67,34.3
+NL,Looker,11,67,16.4
+NL,R,10,67,14.9
+NL,dbt,6,67,9.0
+PT,SQL,30,48,62.5
+PT,Python,25,48,52.1
+PT,Excel,16,48,33.3
+PT,Tableau,7,48,14.6
+PT,Power BI,12,48,25.0
+PT,Looker,9,48,18.8
+PT,R,6,48,12.5
+PT,dbt,2,48,4.2
+MY,SQL,20,45,44.4
+MY,Python,7,45,15.6
+MY,Excel,30,45,66.7
+MY,Tableau,9,45,20.0
+MY,Power BI,18,45,40.0
+MY,Looker,2,45,4.4
+MY,R,1,45,2.2
+MY,dbt,0,45,0.0
+BE,SQL,28,39,71.8
+BE,Python,17,39,43.6
+BE,Excel,7,39,17.9
+BE,Tableau,7,39,17.9
+BE,Power BI,19,39,48.7
+BE,Looker,1,39,2.6
+BE,R,1,39,2.6
+BE,dbt,3,39,7.7
+TH,SQL,47,51,92.2
+TH,Python,28,51,54.9
+TH,Excel,28,51,54.9
+TH,Tableau,42,51,82.4
+TH,Power BI,20,51,39.2
+TH,Looker,0,51,0.0
+TH,R,26,51,51.0
+TH,dbt,0,51,0.0
+JP,SQL,35,46,76.1
+JP,Python,21,46,45.7
+JP,Excel,21,46,45.7
+JP,Tableau,23,46,50.0
+JP,Power BI,9,46,19.6
+JP,Looker,3,46,6.5
+JP,R,9,46,19.6
+JP,dbt,2,46,4.3
+RO,SQL,23,29,79.3
+RO,Python,6,29,20.7
+RO,Excel,5,29,17.2
+RO,Tableau,5,29,17.2
+RO,Power BI,8,29,27.6
+RO,Looker,4,29,13.8
+RO,R,2,29,6.9
+RO,dbt,2,29,6.9
+CH,SQL,13,18,72.2
+CH,Python,8,18,44.4
+CH,Excel,6,18,33.3
+CH,Tableau,8,18,44.4
+CH,Power BI,4,18,22.2
+CH,Looker,2,18,11.1
+CH,R,4,18,22.2
+CH,dbt,1,18,5.6
+AR,SQL,19,35,54.3
+AR,Python,17,35,48.6
+AR,Excel,17,35,48.6
+AR,Tableau,16,35,45.7
+AR,Power BI,15,35,42.9
+AR,Looker,4,35,11.4
+AR,R,7,35,20.0
+AR,dbt,4,35,11.4
+AU,SQL,21,33,63.6
+AU,Python,18,33,54.5
+AU,Excel,8,33,24.2
+AU,Tableau,6,33,18.2
+AU,Power BI,7,33,21.2
+AU,Looker,3,33,9.1
+AU,R,5,33,15.2
+AU,dbt,0,33,0.0
+IE,SQL,15,32,46.9
+IE,Python,9,32,28.1
+IE,Excel,13,32,40.6
+IE,Tableau,9,32,28.1
+IE,Power BI,10,32,31.2
+IE,Looker,5,32,15.6
+IE,R,6,32,18.8
+IE,dbt,2,32,6.2
+CN,SQL,15,25,60.0
+CN,Python,13,25,52.0
+CN,Excel,16,25,64.0
+CN,Tableau,4,25,16.0
+CN,Power BI,4,25,16.0
+CN,Looker,0,25,0.0
+CN,R,3,25,12.0
+CN,dbt,0,25,0.0
+CO,SQL,19,32,59.4
+CO,Python,15,32,46.9
+CO,Excel,18,32,56.2
+CO,Tableau,7,32,21.9
+CO,Power BI,12,32,37.5
+CO,Looker,6,32,18.8
+CO,R,3,32,9.4
+CO,dbt,3,32,9.4
+CZ,SQL,15,27,55.6
+CZ,Python,15,27,55.6
+CZ,Excel,13,27,48.1
+CZ,Tableau,6,27,22.2
+CZ,Power BI,7,27,25.9
+CZ,Looker,2,27,7.4
+CZ,R,3,27,11.1
+CZ,dbt,0,27,0.0
+IT,SQL,14,24,58.3
+IT,Python,12,24,50.0
+IT,Excel,13,24,54.2
+IT,Tableau,4,24,16.7
+IT,Power BI,17,24,70.8
+IT,Looker,2,24,8.3
+IT,R,5,24,20.8
+IT,dbt,0,24,0.0
+SE,SQL,21,25,84.0
+SE,Python,13,25,52.0
+SE,Excel,4,25,16.0
+SE,Tableau,4,25,16.0
+SE,Power BI,9,25,36.0
+SE,Looker,2,25,8.0
+SE,R,0,25,0.0
+SE,dbt,3,25,12.0
+AE,SQL,23,28,82.1
+AE,Python,18,28,64.3
+AE,Excel,12,28,42.9
+AE,Tableau,10,28,35.7
+AE,Power BI,11,28,39.3
+AE,Looker,4,28,14.3
+AE,R,4,28,14.3
+AE,dbt,2,28,7.1
+HK,SQL,22,31,71.0
+HK,Python,22,31,71.0
+HK,Excel,12,31,38.7
+HK,Tableau,12,31,38.7
+HK,Power BI,8,31,25.8
+HK,Looker,1,31,3.2
+HK,R,4,31,12.9
+HK,dbt,0,31,0.0
+HU,SQL,7,21,33.3
+HU,Python,7,21,33.3
+HU,Excel,10,21,47.6
+HU,Tableau,2,21,9.5
+HU,Power BI,9,21,42.9
+HU,Looker,1,21,4.8
+HU,R,2,21,9.5
+HU,dbt,0,21,0.0
+EG,SQL,5,15,33.3
+EG,Python,1,15,6.7
+EG,Excel,11,15,73.3
+EG,Tableau,5,15,33.3
+EG,Power BI,6,15,40.0
+EG,Looker,0,15,0.0
+EG,R,0,15,0.0
+EG,dbt,0,15,0.0
+SA,SQL,3,10,30.0
+SA,Python,1,10,10.0
+SA,Excel,3,10,30.0
+SA,Tableau,1,10,10.0
+SA,Power BI,3,10,30.0
+SA,Looker,0,10,0.0
+SA,R,0,10,0.0
+SA,dbt,0,10,0.0
+KR,SQL,12,20,60.0
+KR,Python,13,20,65.0
+KR,Excel,5,20,25.0
+KR,Tableau,10,20,50.0
+KR,Power BI,8,20,40.0
+KR,Looker,2,20,10.0
+KR,R,3,20,15.0
+KR,dbt,0,20,0.0
+AT,SQL,4,5,80.0
+AT,Python,4,5,80.0
+AT,Excel,3,5,60.0
+AT,Tableau,1,5,20.0
+AT,Power BI,0,5,0.0
+AT,Looker,0,5,0.0
+AT,R,1,5,20.0
+AT,dbt,0,5,0.0
+IL,SQL,18,19,94.7
+IL,Python,10,19,52.6
+IL,Excel,1,19,5.3
+IL,Tableau,8,19,42.1
+IL,Power BI,2,19,10.5
+IL,Looker,5,19,26.3
+IL,R,2,19,10.5
+IL,dbt,1,19,5.3
+ZA,SQL,3,9,33.3
+ZA,Python,2,9,22.2
+ZA,Excel,6,9,66.7
+ZA,Tableau,2,9,22.2
+ZA,Power BI,3,9,33.3
+ZA,Looker,1,9,11.1
+ZA,R,1,9,11.1
+ZA,dbt,0,9,0.0
+ID,SQL,4,12,33.3
+ID,Python,7,12,58.3
+ID,Excel,6,12,50.0
+ID,Tableau,7,12,58.3
+ID,Power BI,7,12,58.3
+ID,Looker,6,12,50.0
+ID,R,3,12,25.0
+ID,dbt,0,12,0.0
+VN,SQL,5,9,55.6
+VN,Python,3,9,33.3
+VN,Excel,6,9,66.7
+VN,Tableau,5,9,55.6
+VN,Power BI,7,9,77.8
+VN,Looker,2,9,22.2
+VN,R,1,9,11.1
+VN,dbt,0,9,0.0
+DK,SQL,7,9,77.8
+DK,Python,5,9,55.6
+DK,Excel,6,9,66.7
+DK,Tableau,4,9,44.4
+DK,Power BI,6,9,66.7
+DK,Looker,2,9,22.2
+DK,R,2,9,22.2
+DK,dbt,0,9,0.0
+CL,SQL,3,5,60.0
+CL,Python,4,5,80.0
+CL,Excel,1,5,20.0
+CL,Tableau,1,5,20.0
+CL,Power BI,1,5,20.0
+CL,Looker,1,5,20.0
+CL,R,1,5,20.0
+CL,dbt,1,5,20.0
+PK,SQL,5,6,83.3
+PK,Python,2,6,33.3
+PK,Excel,6,6,100.0
+PK,Tableau,2,6,33.3
+PK,Power BI,3,6,50.0
+PK,Looker,0,6,0.0
+PK,R,1,6,16.7
+PK,dbt,0,6,0.0
+TR,SQL,3,5,60.0
+TR,Python,2,5,40.0
+TR,Excel,1,5,20.0
+TR,Tableau,1,5,20.0
+TR,Power BI,2,5,40.0
+TR,Looker,0,5,0.0
+TR,R,0,5,0.0
+TR,dbt,1,5,20.0
+NG,SQL,5,6,83.3
+NG,Python,3,6,50.0
+NG,Excel,3,6,50.0
+NG,Tableau,1,6,16.7
+NG,Power BI,2,6,33.3
+NG,Looker,0,6,0.0
+NG,R,0,6,0.0
+NG,dbt,0,6,0.0
+BD,SQL,4,4,100.0
+BD,Python,2,4,50.0
+BD,Excel,2,4,50.0
+BD,Tableau,0,4,0.0
+BD,Power BI,1,4,25.0
+BD,Looker,0,4,0.0
+BD,R,0,4,0.0
+BD,dbt,0,4,0.0
+FI,SQL,3,3,100.0
+FI,Python,2,3,66.7
+FI,Excel,0,3,0.0
+FI,Tableau,2,3,66.7
+FI,Power BI,2,3,66.7
+FI,Looker,1,3,33.3
+FI,R,1,3,33.3
+FI,dbt,1,3,33.3
+KE,SQL,1,2,50.0
+KE,Python,0,2,0.0
+KE,Excel,1,2,50.0
+KE,Tableau,0,2,0.0
+KE,Power BI,0,2,0.0
+KE,Looker,0,2,0.0
+KE,R,0,2,0.0
+KE,dbt,0,2,0.0
+KW,SQL,0,0,
+KW,Python,0,0,
+KW,Excel,0,0,
+KW,Tableau,0,0,
+KW,Power BI,0,0,
+KW,Looker,0,0,
+KW,R,0,0,
+KW,dbt,0,0,
+LK,SQL,0,2,0.0
+LK,Python,0,2,0.0
+LK,Excel,1,2,50.0
+LK,Tableau,0,2,0.0
+LK,Power BI,1,2,50.0
+LK,Looker,0,2,0.0
+LK,R,0,2,0.0
+LK,dbt,0,2,0.0
+NO,SQL,1,1,100.0
+NO,Python,1,1,100.0
+NO,Excel,0,1,0.0
+NO,Tableau,0,1,0.0
+NO,Power BI,1,1,100.0
+NO,Looker,0,1,0.0
+NO,R,0,1,0.0
+NO,dbt,0,1,0.0
+NZ,SQL,0,2,0.0
+NZ,Python,0,2,0.0
+NZ,Excel,1,2,50.0
+NZ,Tableau,1,2,50.0
+NZ,Power BI,0,2,0.0
+NZ,Looker,0,2,0.0
+NZ,R,0,2,0.0
+NZ,dbt,0,2,0.0
+QA,SQL,0,0,
+QA,Python,0,0,
+QA,Excel,0,0,
+QA,Tableau,0,0,
+QA,Power BI,0,0,
+QA,Looker,0,0,
+QA,R,0,0,
+QA,dbt,0,0,

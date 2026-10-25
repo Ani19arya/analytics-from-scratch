@@ -1,0 +1,16 @@
+rep,region,sales
+R01,North,50000
+R02,North,55000
+R03,North,55000
+R04,North,60000
+R05,North,60000
+R06,South,55000
+R07,South,55000
+R08,South,70000
+R09,South,60000
+R10,South,80000
+R11,West,50000
+R12,West,75000
+R13,West,55000
+R14,West,80000
+R15,West,75000
