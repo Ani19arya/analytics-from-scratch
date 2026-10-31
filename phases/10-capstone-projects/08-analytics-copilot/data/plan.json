@@ -1,0 +1,77 @@
+[
+  {
+    "agent": "query",
+    "depends_on": [],
+    "kind": "query",
+    "purpose": "Weekend rentals per month, and how many weekend days each month had",
+    "sql": "SELECT substr(start_date, 1, 7) AS month, COUNT(*) AS rentals, COUNT(DISTINCT start_date) AS days FROM rentals WHERE strftime('%w', start_date) IN ('0', '6') GROUP BY month ORDER BY month",
+    "step": "S1"
+  },
+  {
+    "agent": "query",
+    "depends_on": [],
+    "kind": "query",
+    "purpose": "Weekend rentals by zone, August and September",
+    "sql": "SELECT s.zone, substr(r.start_date, 1, 7) AS month, COUNT(*) AS rentals FROM rentals r JOIN stations s ON s.station_id = r.station_id WHERE strftime('%w', r.start_date) IN ('0', '6') AND r.start_date >= '2026-08-01' AND r.start_date < '2026-10-01' GROUP BY s.zone, month ORDER BY s.zone, month",
+    "step": "S2"
+  },
+  {
+    "agent": "query",
+    "depends_on": [],
+    "kind": "query",
+    "purpose": "Station closures that overlap August or September",
+    "sql": "SELECT e.station_id, s.zone, e.start_date, e.end_date, e.note FROM station_events e JOIN stations s ON s.station_id = e.station_id WHERE e.event = 'closed' AND e.end_date >= '2026-08-01' AND e.start_date < '2026-10-01' ORDER BY e.start_date, e.station_id",
+    "step": "S3"
+  },
+  {
+    "agent": "query",
+    "depends_on": [],
+    "kind": "query",
+    "purpose": "Daily weekend rentals outside Riverside, August and September",
+    "sql": "SELECT r.start_date, substr(r.start_date, 1, 7) AS month, COUNT(*) AS rentals FROM rentals r JOIN stations s ON s.station_id = r.station_id WHERE s.zone <> 'Riverside' AND strftime('%w', r.start_date) IN ('5', '6') AND r.start_date >= '2026-08-01' AND r.start_date < '2026-10-01' GROUP BY r.start_date ORDER BY r.start_date",
+    "step": "S4"
+  },
+  {
+    "agent": "query",
+    "depends_on": [],
+    "kind": "query",
+    "purpose": "Email addresses of casual riders who rode in August but not in September, for a win-back offer",
+    "sql": "SELECT DISTINCT d.email FROM riders d JOIN rentals r ON r.rider_id = d.rider_id WHERE d.plan = 'casual' AND r.start_date >= '2026-08-01' AND r.start_date < '2026-09-01' AND d.rider_id NOT IN (SELECT rider_id FROM rentals WHERE start_date >= '2026-09-01')",
+    "step": "S5"
+  },
+  {
+    "agent": "checker",
+    "check": "reconcile",
+    "depends_on": [
+      "S1",
+      "S2"
+    ],
+    "kind": "check",
+    "purpose": "The zones in S2 must add up to the monthly totals in S1 for August and September",
+    "step": "S6"
+  },
+  {
+    "agent": "checker",
+    "check": "noise",
+    "depends_on": [
+      "S4"
+    ],
+    "kind": "check",
+    "purpose": "Is the change outside Riverside bigger than day-to-day variation? Exact permutation test on S4",
+    "step": "S7"
+  },
+  {
+    "agent": "recommender",
+    "depends_on": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S6",
+      "S7"
+    ],
+    "kind": "recommend",
+    "purpose": "Draft the recommendation; every number must come from an approved, completed step",
+    "step": "S8"
+  }
+]

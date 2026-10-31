@@ -32,8 +32,8 @@ flowchart LR
 4. SaaS subscription and churn analysis *(planned)*. Build the churn model the finance team can plan with.
 5. Executive dashboard *(planned)*. Design, model and verify the CEO dashboard, in the tool of your choice.
 6. Automated analytics reporting *(planned)*. Make the weekly business review build, test and send itself.
-7. A natural-language-to-SQL assistant *(planned)*. Build, evaluate and guard an assistant that answers questions from a database.
-8. A multi-agent analytics copilot *(planned)*. Agents that plan, query, check and recommend, with a human approving each step.
+7. [A natural-language-to-SQL assistant](07-nl-to-sql-assistant/). Build, evaluate and guard an assistant that answers questions from a database.
+8. [A multi-agent analytics copilot](08-analytics-copilot/). Agents that plan, query, check and recommend, with a human approving each step.
 
 The AI capstones (7 and 8) run offline on recorded model outputs, and include an optional script to run them against a live model with your own key.
 

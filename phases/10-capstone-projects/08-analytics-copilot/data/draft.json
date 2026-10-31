@@ -1,0 +1,145 @@
+{
+  "claims": [
+    {
+      "expr": "rentals",
+      "id": "C1",
+      "kind": "value",
+      "step": "S1",
+      "text": "256",
+      "where": {
+        "month": "2026-08"
+      }
+    },
+    {
+      "expr": "rentals",
+      "id": "C2",
+      "kind": "value",
+      "step": "S1",
+      "text": "171",
+      "where": {
+        "month": "2026-09"
+      }
+    },
+    {
+      "from": {
+        "expr": "rentals",
+        "step": "S1",
+        "where": {
+          "month": "2026-08"
+        }
+      },
+      "id": "C3",
+      "kind": "pct_fall",
+      "text": "49.7%",
+      "to": {
+        "expr": "rentals",
+        "step": "S1",
+        "where": {
+          "month": "2026-09"
+        }
+      }
+    },
+    {
+      "expr": "days",
+      "id": "C4",
+      "kind": "value",
+      "step": "S1",
+      "text": "8",
+      "where": {
+        "month": "2026-09"
+      }
+    },
+    {
+      "expr": "days",
+      "id": "C5",
+      "kind": "value",
+      "step": "S1",
+      "text": "10",
+      "where": {
+        "month": "2026-08"
+      }
+    },
+    {
+      "expr": "rentals / days",
+      "id": "C6",
+      "kind": "value",
+      "step": "S1",
+      "text": "25.6",
+      "where": {
+        "month": "2026-08"
+      }
+    },
+    {
+      "expr": "rentals / days",
+      "id": "C7",
+      "kind": "value",
+      "step": "S1",
+      "text": "21.4",
+      "where": {
+        "month": "2026-09"
+      }
+    },
+    {
+      "expr": "rentals",
+      "id": "C8",
+      "kind": "value",
+      "step": "S2",
+      "text": "75",
+      "where": {
+        "month": "2026-08",
+        "zone": "Riverside"
+      }
+    },
+    {
+      "expr": "rentals",
+      "id": "C9",
+      "kind": "value",
+      "step": "S2",
+      "text": "14",
+      "where": {
+        "month": "2026-09",
+        "zone": "Riverside"
+      }
+    },
+    {
+      "id": "C10",
+      "kind": "count",
+      "step": "S3",
+      "text": "3",
+      "where": {
+        "zone": "Riverside"
+      }
+    },
+    {
+      "from": {
+        "expr": "mean_aug",
+        "step": "S7",
+        "where": {}
+      },
+      "id": "C11",
+      "kind": "pct_change",
+      "text": "+2.2%",
+      "to": {
+        "expr": "mean_sep",
+        "step": "S7",
+        "where": {}
+      }
+    },
+    {
+      "expr": "p_value",
+      "id": "C12",
+      "kind": "value",
+      "step": "S7",
+      "text": "0.87",
+      "where": {}
+    },
+    {
+      "id": "C13",
+      "kind": "count",
+      "step": "S5",
+      "text": "52",
+      "where": {}
+    }
+  ],
+  "text": "Weekend rentals fell from 256 in August to 171 in September, a 49.7% drop. Part of that is the calendar: September had 8 weekend days against 10 in August, so rentals per weekend day went from 25.6 to 21.4. Riverside accounts for most of the rest: its weekend rentals went from 75 to 14 while its 3 stations were closed for roadworks. Outside Riverside, weekend rentals per day changed by +2.2%, within normal day-to-day variation (p = 0.87). We recommend a temporary dock at the Riverside footbridge until the roadworks end, and a 15% weekend discount sent to the 52 casual riders who stopped riding."
+}

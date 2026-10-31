@@ -1,0 +1,5 @@
+station_id,event,start_date,end_date,note
+BQ11,closed,2026-08-12,2026-08-12,dock repair
+BQ01,closed,2026-09-07,2026-09-30,roadworks on the river path
+BQ02,closed,2026-09-07,2026-09-30,roadworks on the river path
+BQ03,closed,2026-09-07,2026-09-30,roadworks on the river path

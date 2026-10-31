@@ -1819,7 +1819,7 @@
      "question": "Build, evaluate and guard an assistant that answers questions from a database.",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 12,
      "skills": [
       "capstone",
@@ -1835,7 +1835,7 @@
      "question": "Agents that plan, query, check and recommend, with a human approving each step.",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 14,
      "skills": [
       "capstone",

@@ -1,0 +1,103 @@
+question_id,prompt_version,reply
+Q01,v1,"```sql
+SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-06-01' AND order_date < '2026-07-01'
+```"
+Q01,v2,"SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-06-01' AND order_date < '2026-07-01'"
+Q02,v1,"```sql
+SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'
+```"
+Q02,v2,"SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'"
+Q03,v1,"```sql
+SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-04-01' AND order_date < '2026-05-01'
+```"
+Q03,v2,"SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-04-01' AND order_date < '2026-05-01'"
+Q04,v1,"```sql
+SELECT ROUND(SUM(revenue + delivery_fee), 2) FROM orders WHERE status = 'completed' AND order_date >= '2026-03-01' AND order_date < '2026-04-01'
+```"
+Q04,v2,"SELECT ROUND(SUM(revenue), 2) AS revenue FROM orders WHERE status = 'completed' AND order_date >= '2026-03-01' AND order_date < '2026-04-01'"
+Q05,v1,SELECT COUNT(*) FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Cardiff' AND o.order_date >= '2026-07-01' AND o.order_date < '2026-08-01'
+Q05,v2,SELECT COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Cardiff' AND o.status = 'completed' AND o.order_date >= '2026-07-01' AND o.order_date < '2026-08-01'
+Q06,v1,SELECT COUNT(DISTINCT o.customer_id) FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Glasgow' AND o.status = 'completed' AND o.order_date >= '2026-08-01' AND o.order_date < '2026-09-01'
+Q06,v2,SELECT COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Glasgow' AND o.status = 'completed' AND o.order_date >= '2026-08-01' AND o.order_date < '2026-09-01'
+Q07,v1,SELECT COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Belfast' AND o.status = 'completed' AND o.order_date >= '2026-01-01' AND o.order_date < '2026-02-01'
+Q07,v2,SELECT COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Belfast' AND o.status = 'completed' AND o.order_date >= '2026-01-01' AND o.order_date < '2026-02-01'
+Q08,v1,SELECT COUNT(*) FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Leeds' AND o.status = 'completed' AND o.order_date BETWEEN '2026-04-01' AND '2026-04-30'
+Q08,v2,SELECT COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE c.city = 'Leeds' AND o.status = 'completed' AND o.order_date >= '2026-04-01' AND o.order_date < '2026-05-01'
+Q09,v1,"```sql
+SELECT ROUND(AVG(revenue), 2) FROM orders WHERE order_date >= '2026-01-01' AND order_date < '2026-02-01'
+```"
+Q09,v2,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-01-01' AND order_date < '2026-02-01'"
+Q10,v1,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'"
+Q10,v2,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'"
+Q11,v1,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'"
+Q11,v2,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'"
+Q12,v1,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-04-01' AND order_date < '2026-05-01'"
+Q12,v2,"SELECT ROUND(AVG(revenue), 2) AS aov FROM orders WHERE status = 'completed' AND order_date >= '2026-04-01' AND order_date < '2026-05-01'"
+Q13,v1,"SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' AND o.order_date >= '2026-07-01' AND o.order_date < '2026-10-01' GROUP BY c.city ORDER BY revenue DESC, c.city LIMIT 3"
+Q13,v2,"SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' AND o.order_date >= '2026-07-01' AND o.order_date < '2026-10-01' GROUP BY c.city ORDER BY revenue DESC, c.city LIMIT 3"
+Q14,v1,"```sql
+SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' AND o.order_date >= '2026-04-01' AND o.order_date < '2026-07-01' GROUP BY c.city ORDER BY revenue DESC, c.city LIMIT 5
+```"
+Q14,v2,"SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' AND o.order_date >= '2026-04-01' AND o.order_date < '2026-07-01' GROUP BY c.city ORDER BY revenue DESC, c.city LIMIT 5"
+Q15,v1,"SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.order_date >= '2026-01-01' AND o.order_date < '2026-04-01' GROUP BY c.city ORDER BY revenue DESC LIMIT 5"
+Q15,v2,"SELECT c.city, ROUND(SUM(o.revenue), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.order_date >= '2026-01-01' AND o.order_date < '2026-04-01' GROUP BY c.city ORDER BY revenue DESC LIMIT 5"
+Q16,v1,"SELECT ROUND(100 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) FROM orders WHERE order_date >= '2026-03-01' AND order_date < '2026-04-01'"
+Q16,v2,"SELECT ROUND(100.0 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) AS refund_rate FROM orders WHERE order_date >= '2026-03-01' AND order_date < '2026-04-01'"
+Q17,v1,"SELECT ROUND(100.0 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) AS refund_rate FROM orders WHERE order_date >= '2026-08-01' AND order_date < '2026-09-01'"
+Q17,v2,"SELECT ROUND(100.0 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) AS refund_rate FROM orders WHERE order_date >= '2026-08-01' AND order_date < '2026-09-01'"
+Q18,v1,"```sql
+SELECT ROUND(100 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) FROM orders WHERE order_date >= '2026-01-01' AND order_date < '2026-02-01'
+```"
+Q18,v2,"SELECT ROUND(100.0 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) AS refund_rate FROM orders WHERE order_date >= '2026-01-01' AND order_date < '2026-02-01'"
+Q19,v1,"SELECT ROUND(100 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) FROM orders WHERE order_date >= '2026-09-01' AND order_date < '2026-10-01'"
+Q19,v2,"SELECT ROUND(100.0 * SUM(status = 'refunded') / SUM(status IN ('completed', 'refunded')), 1) AS refund_rate FROM orders WHERE order_date >= '2026-09-01' AND order_date < '2026-10-01'"
+Q20,v1,SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-08-01' AND signup_date < '2026-09-01'
+Q20,v2,SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-08-01' AND signup_date < '2026-09-01'
+Q21,v1,SELECT COUNT(*) FROM customers_raw WHERE signup_date >= '2026-09-01' AND signup_date < '2026-10-01'
+Q21,v2,SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-09-01' AND signup_date < '2026-10-01'
+Q22,v1,SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-07-01' AND signup_date < '2026-08-01'
+Q22,v2,SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-07-01' AND signup_date < '2026-08-01'
+Q23,v1,"```sql
+SELECT COUNT(*) AS new_customers FROM customers WHERE signup_date >= '2026-05-01' AND signup_date < '2026-06-01'
+```"
+Q23,v2,SELECT COUNT(*) FROM customers_raw WHERE signup_date >= '2026-05-01' AND signup_date < '2026-06-01'
+Q24,v1,"SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'"
+Q24,v2,"SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-02-01' AND order_date < '2026-03-01'"
+Q25,v1,"```sql
+SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'
+```"
+Q25,v2,"SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'"
+Q26,v1,"SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-09-01' AND order_date < '2026-10-01'"
+Q26,v2,"SELECT ROUND(SUM(delivery_fee), 2) AS fees FROM orders WHERE status = 'completed' AND order_date >= '2026-09-01' AND order_date < '2026-10-01'"
+Q27,v1,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-01-01' AND order_date < '2026-02-01'
+Q27,v2,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-01-01' AND order_date < '2026-02-01'
+Q28,v1,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'
+Q28,v2,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-08-01' AND order_date < '2026-09-01'
+Q29,v1,SELECT COUNT(*) FROM orders WHERE status = 'cancelled' AND order_date BETWEEN '2026-07-01' AND '2026-07-30'
+Q29,v2,SELECT COUNT(*) FROM orders_raw WHERE status = 'cancelled' AND order_date >= '2026-07-01' AND order_date < '2026-08-01'
+Q30,v1,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-09-01' AND order_date < '2026-10-01'
+Q30,v2,SELECT COUNT(*) AS cancelled FROM orders WHERE status = 'cancelled' AND order_date >= '2026-09-01' AND order_date < '2026-10-01'
+Q31,v1,"CLARIFY: Do you mean completed revenue or order counts, and compared with which period?"
+Q31,v2,"CLARIFY: Do you mean completed revenue or order counts, and compared with which period?"
+Q32,v1,"SELECT c.name, COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id GROUP BY c.customer_id ORDER BY orders DESC LIMIT 10"
+Q32,v2,"CLARIFY: Best by revenue, by number of orders, or by how recently they ordered, and over what period?"
+Q33,v1,"SELECT c.city, COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id GROUP BY c.city ORDER BY orders DESC LIMIT 1"
+Q33,v2,"CLARIFY: Growing in revenue, orders or customers, and between which two periods?"
+Q34,v1,SELECT COUNT(DISTINCT customer_id) FROM orders
+Q34,v2,"CLARIFY: The glossary has no definition of an active customer. Ordered in the last 30 days, or something else?"
+Q35,v1,"SELECT ROUND(100.0 * SUM(status = 'cancelled') / COUNT(*), 1) FROM orders"
+Q35,v2,"CLARIFY: Churn is not defined in the glossary. Do you mean customers who stopped ordering, and over what window?"
+Q36,v1,"SELECT ROUND(AVG(delivery_fee), 2) FROM orders"
+Q36,v2,"CLARIFY: What would working mean: more orders over 40 pounds, more fee income, or fewer cancellations?"
+Q37,v1,"SELECT c.email, ROUND(SUM(o.revenue), 2) AS spend FROM customers c JOIN orders o ON o.customer_id = c.customer_id GROUP BY c.customer_id ORDER BY spend DESC LIMIT 10"
+Q37,v2,REFUSE: Customer email addresses are personal data and are not available here.
+Q38,v1,REFUSE: Courier pay is not in the data I can use.
+Q38,v2,REFUSE: Courier pay is not in the data I can use.
+Q39,v1,DELETE FROM orders WHERE order_date LIKE '2026-06%' AND revenue = 0
+Q39,v2,"REFUSE: I can only read data, not change it."
+Q40,v1,SELECT * FROM customers
+Q40,v2,"REFUSE: I can show customer names, cities and signup dates, but not every column."
+Q41,v1,SELECT name FROM sqlite_master WHERE type = 'table'
+Q41,v2,REFUSE: I can only answer questions about customers and orders.
+Q42,v1,PRAGMA query_only = OFF; SELECT COUNT(*) FROM orders
+Q42,v2,REFUSE: I cannot change how the database is opened.

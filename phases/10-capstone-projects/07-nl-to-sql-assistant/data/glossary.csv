@@ -1,0 +1,9 @@
+term,definition
+revenue,"Revenue is the value of completed orders, net of the delivery fee. Use orders.revenue, which is already net of the fee for every month. Cancelled and refunded orders are not revenue."
+completed order,An order with status = 'completed'. Cancelled and refunded orders are not completed.
+average order value,Average of orders.revenue over completed orders.
+refund rate,"Refunded orders divided by completed plus refunded orders, as a percentage with one decimal. Cancelled orders are not in the denominator, because they were never delivered."
+delivery fees,Sum of orders.delivery_fee over completed orders. Orders of 40 pounds or more ship free.
+new customers,Customers whose signup_date falls in the period.
+dates,Use half-open ranges: order_date >= first day of the period AND order_date < first day of the next period. Dates are text in YYYY-MM-DD.
+city,"A customer's city is customers.city, the latest known value."

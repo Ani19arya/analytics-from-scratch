@@ -1,0 +1,9 @@
+step,decision,edited_sql,reviewer,note
+S1,approve,,Nadia,
+S2,approve,,Nadia,
+S3,approve,,Nadia,
+S4,edit,"SELECT r.start_date, substr(r.start_date, 1, 7) AS month, COUNT(*) AS rentals FROM rentals r JOIN stations s ON s.station_id = r.station_id WHERE s.zone <> 'Riverside' AND strftime('%w', r.start_date) IN ('0', '6') AND r.start_date >= '2026-08-01' AND r.start_date < '2026-10-01' GROUP BY r.start_date ORDER BY r.start_date",Nadia,strftime %w is 0 for Sunday and 6 for Saturday; '5' is Friday
+S5,reject,,Nadia,"personal data: emails are not needed to find the cause, and win-back goes through CRM"
+S6,approve,,Nadia,
+S7,approve,,Nadia,
+S8,approve,,Nadia,approve the draft for checking

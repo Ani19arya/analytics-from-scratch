@@ -1,0 +1,17 @@
+{
+  "agents": "planner and query agent (plan.json: steps, SQL, checks), recommender (draft.json), human reviewer (approvals.csv, also simulated)",
+  "date": "not applicable",
+  "files": [
+    "plan.json",
+    "approvals.csv",
+    "draft.json"
+  ],
+  "how": "make_data.py wrote the plan and approvals by hand, with one planted query bug (Friday and Saturday as the weekend in S4) and one step that asks for personal data (S5). The draft's numbers are computed from this seed's data, with three planted problems: a percentage on the wrong base, a number from the rejected step, and an uncited number. The answer key is in build() only, not in any file.",
+  "model": "none: no model was called",
+  "prompt": "planner: 'Weekend rentals fell in September. Plan the queries and checks to find out why. Each step: purpose, SQL over rentals, stations, station_events, riders.' recommender: 'Write the recommendation. For every number, cite the step and the cell it comes from.'",
+  "seed": 1008,
+  "snapshot": "2026-10-01 00:00:00",
+  "source": "simulated",
+  "tables": "stations, station_events, riders and rentals_raw are synthetic, built by make_data.py",
+  "temperature": "not applicable"
+}

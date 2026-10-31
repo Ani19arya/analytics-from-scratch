@@ -8,3 +8,5 @@ writeup.md
 my_diagram.svg
 my_chart*.svg
 my_region_totals.csv
+live_runs/
+live_session/

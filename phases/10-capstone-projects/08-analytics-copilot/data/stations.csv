@@ -1,0 +1,13 @@
+station_id,name,zone,docks
+BQ01,Footbridge,Riverside,16
+BQ02,Mill Steps,Riverside,12
+BQ03,Weir Lane,Riverside,14
+BQ04,Cornmarket,Old Town,18
+BQ05,Abbey Green,Old Town,12
+BQ06,Tanners Row,Old Town,10
+BQ07,Library,University,20
+BQ08,Science Park,University,12
+BQ09,Halls,University,14
+BQ10,Ferry Slip,Harbour,14
+BQ11,Customs House,Harbour,12
+BQ12,Lighthouse,Harbour,10

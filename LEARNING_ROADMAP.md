@@ -296,8 +296,8 @@ Level total: about 144 hours of focused work.
 - [ ] 10-04 SaaS subscription and churn analysis *(planned)*: Build the churn model the finance team can plan with. About 10 h.
 - [ ] 10-05 Executive dashboard *(planned)*: Design, model and verify the CEO dashboard, in the tool of your choice. About 10 h.
 - [ ] 10-06 Automated analytics reporting *(planned)*: Make the weekly business review build, test and send itself. About 10 h.
-- [ ] 10-07 A natural-language-to-SQL assistant *(planned)*: Build, evaluate and guard an assistant that answers questions from a database. About 12 h.
-- [ ] 10-08 A multi-agent analytics copilot *(planned)*: Agents that plan, query, check and recommend, with a human approving each step. About 14 h.
+- [x] 10-07 [A natural-language-to-SQL assistant](phases/10-capstone-projects/07-nl-to-sql-assistant): Build, evaluate and guard an assistant that answers questions from a database. About 12 h.
+- [x] 10-08 [A multi-agent analytics copilot](phases/10-capstone-projects/08-analytics-copilot): Agents that plan, query, check and recommend, with a human approving each step. About 14 h.
 
 Level total: about 108 hours of focused work.
 <!-- /generated:level-advanced -->

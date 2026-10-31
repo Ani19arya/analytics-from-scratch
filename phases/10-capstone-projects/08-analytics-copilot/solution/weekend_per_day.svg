@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="330" font-family="sans-serif" font-size="13">
+<rect width="100%" height="100%" fill="white"/>
+<text x="70" y="22" font-size="14">Weekend rentals per weekend day (synthetic data)</text>
+<line x1="70" x2="330" y1="270" y2="270" stroke="#555"/>
+<rect x="100" y="210.0" width="70" height="60.0" fill="#4a78a8"/>
+<rect x="100" y="65.2" width="70" height="144.8" fill="#9cb8d6"/>
+<rect x="100" y="65.2" width="70" height="0.0" fill="#d9a441"/>
+<text x="120" y="59.2">25.6</text>
+<text x="108" y="288">August</text>
+<rect x="220" y="256.0" width="70" height="14.0" fill="#4a78a8"/>
+<rect x="220" y="108.0" width="70" height="148.0" fill="#9cb8d6"/>
+<rect x="220" y="99.0" width="70" height="9.0" fill="#d9a441"/>
+<text x="240" y="93.0">21.4</text>
+<text x="228" y="288">September</text>
+<text x="46" y="274.0" fill="#555">0</text>
+<text x="46" y="194.0" fill="#555">10</text>
+<text x="46" y="114.0" fill="#555">20</text>
+<text x="46" y="34.0" fill="#555">30</text>
+<rect x="360" y="80" width="14" height="14" fill="#4a78a8"/>
+<text x="380" y="92">Riverside</text>
+<rect x="360" y="102" width="14" height="14" fill="#9cb8d6"/>
+<text x="380" y="114">Other zones</text>
+<rect x="360" y="124" width="14" height="14" fill="#d9a441"/>
+<text x="380" y="136">Unplaced</text>
+</svg>
