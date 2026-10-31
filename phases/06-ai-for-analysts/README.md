@@ -28,7 +28,7 @@ flowchart LR
 ```
 
 - A **recorded** fixture is real model output saved to a file, labelled with the model name, the prompt version, the date and the temperature.
-- A **simulated** fixture is made up by `make_data.py` to behave like model output, and says so in the README and next to the data. The three live lessons use simulated fixtures. Their numbers teach the method, not how good any real model is.
+- A **simulated** fixture is made up by `make_data.py` to behave like model output, and says so in the README and next to the data. Every lesson in this phase uses simulated fixtures, with `data/fixture.json` saying so. Their numbers teach the method, not how good any real model is.
 - A lesson may ship an optional `live_run.py` that re-records the fixture with the learner's own key. The test never calls it.
 
 ## Lessons

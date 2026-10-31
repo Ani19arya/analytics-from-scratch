@@ -1,6 +1,23 @@
-# Repository audit (31 October 2026)
+# Repository audit
 
-This is the starting point for the course rebuild: what the repository does well, what is wrong, what is missing, and the order in which to fix it. It was written after reading every lesson README, exercise, solution and test, running every README code block, and rebuilding every dataset.
+## Current state (31 October 2026)
+
+| | |
+|---|---|
+| Lessons | 129, all live, in 12 phases (00 to 11) |
+| Levels | Level 1 beginner: 39. Level 2 intermediate: 63. Level 3 advanced: 19. Level 4 land the job: 8 |
+| Kinds | 127 tested lessons (each with a test on two seeded datasets) and 2 guides |
+| Time | About 348 hours of focused work |
+| Checks | `python3 tools/run_all_tests.py --exercise`: 127 tested lessons, 0 problems (every solution passes, every shipped exercise fails). `python3 tools/lint.py --strict`: 0 errors, 0 warnings. `python3 tools/build_docs.py --check`: up to date. Every `make_data.py` rebuilds its data byte for byte. CI runs all of this on Python 3.9 and 3.12 |
+| Runtime | Python 3.9+ standard library and `sqlite3`. Offline. No installs, no keys |
+
+What changed since the baseline below is logged in [section 8, Progress since the baseline](#8-progress-since-the-baseline). An external review on 31 October 2026 scored the repository 8.2 out of 10; the work after that review improves the learning experience (placement, fast tracks, tutor modes) rather than adding lessons.
+
+## Historical baseline audit (31 October 2026, before the rebuild)
+
+Everything from here down to section 7 is the original audit, kept as written so the fixes can be traced. Its counts describe the repository as it was then (27 lessons in 7 phases), not as it is now.
+
+This was the starting point for the course rebuild: what the repository does well, what is wrong, what is missing, and the order in which to fix it. It was written after reading every lesson README, exercise, solution and test, running every README code block, and rebuilding every dataset.
 
 The line-by-line findings live in three appendices:
 
@@ -8,7 +25,7 @@ The line-by-line findings live in three appendices:
 - [docs/audit/2026-10-31-phases-04-07.md](docs/audit/2026-10-31-phases-04-07.md): dashboards, Python, AI, getting hired, tools and the tutor skill. 15 lessons, 53 defects.
 - [docs/audit/2026-10-31-skills-evidence.md](docs/audit/2026-10-31-skills-evidence.md): what employers ask for, from 9,044 live analyst postings (29 Oct 2026) and 20 cited external sources.
 
-## 1. Where the course stands
+## 1. Where the course stood (baseline)
 
 | | |
 |---|---|
@@ -113,7 +130,7 @@ Little, because the course is a week old. Two framing updates:
 | 8. Business and projects | Phase 09 industry case studies, phase 10 capstones with rubrics, phase 07 interview rounds and role roadmaps | |
 | 9. Quality | Full re-audit, link check, style lint, test run; refresh job-market evidence monthly | |
 
-## 8. Progress
+## 8. Progress since the baseline
 
 | Date | Wave | Result |
 |---|---|---|

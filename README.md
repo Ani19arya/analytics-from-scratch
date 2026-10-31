@@ -285,7 +285,7 @@ A new `YYYY-MM/` folder is added every month and older folders are never edited.
 
 - Every lesson test runs in CI on Python 3.9 and 3.12. Every solution must pass, every exercise must fail, and every dataset must rebuild byte for byte.
 - `tools/lint.py` blocks broken links, placeholder lessons and style drift.
-- The [repository audit](REPOSITORY_AUDIT.md) lists every known defect and the order they are being fixed in. Found another? [Open an issue](https://github.com/Ani19arya/analytics-from-scratch/issues).
+- The [repository audit](REPOSITORY_AUDIT.md) opens with the current state and checks, then keeps the original baseline audit with every defect it found, and a dated log of how each was fixed. Found another? [Open an issue](https://github.com/Ani19arya/analytics-from-scratch/issues).
 
 ## Share a lesson
 
