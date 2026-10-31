@@ -33,3 +33,18 @@ jobs:
           for f in phases/*/*/make_data.py; do (cd "$(dirname "$f")" && python make_data.py > /dev/null); done
           git status --short
           test -z "$(git status --porcelain)"
+
+  visuals-browser:
+    # Real browser tests of the pages in visuals/. The official Playwright image ships
+    # Chromium for this exact version; the npm module is installed to match, without browsers.
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.63.0-noble
+    env:
+      HOME: /root
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Playwright module (only if the image does not provide it)
+        run: node -e "require('playwright')" 2>/dev/null || npm install --no-save --no-package-lock playwright@1.63.0
+      - name: Browser tests of the visual explainers
+        run: node tools/visuals_browser_test.mjs
