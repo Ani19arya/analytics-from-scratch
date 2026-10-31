@@ -203,6 +203,17 @@ class TestLoopRules(AgentCase):
         self.assertTrue(all(o.startswith("error: ") for o in obs), "a bad reply, an unknown tool and a blocked query all become 'error: ...' observations")
         self.assertEqual(run["steps"][3]["observation"], "rows: [(1,)]")
 
+    def test_count_star_is_checked(self):
+        # COUNT(*) reads no column, so SQLite passes no database name: on a stored table as on a WITH name
+        for sql in ["SELECT COUNT(*) FROM sqlite_master", "SELECT COUNT(*) FROM SQLITE_MASTER", "SELECT 1 FROM sqlite_master LIMIT 1",
+                    "SELECT COUNT(*) FROM pragma_table_info('customers')"]:
+            with self.assertRaises(lesson.ToolError, msg="run_sql must refuse %r" % sql):
+                lesson.run_sql_readonly(self.path, sql)
+        for sql in ["WITH t AS (SELECT DISTINCT country FROM customers) SELECT COUNT(*) FROM t",
+                    "WITH t AS (SELECT amount FROM orders) SELECT COUNT(*) FROM t", "SELECT COUNT(*) FROM Orders"]:
+            self.assertEqual(lesson.run_sql_readonly(self.path, sql), "rows: [(1,)]", "a WITH over allowed tables must run: %r" % sql)
+        self.assertEqual(file_hash(self.path), self.hash)
+
     def test_stuck_needs_repeats_in_a_row(self):
         a, b = tool_call("list_tables"), tool_call("describe_table", table="orders")
         run = lesson.run_agent("q", Echo([a, a, b, a, a, '{"final": "ok"}']), self.tools)

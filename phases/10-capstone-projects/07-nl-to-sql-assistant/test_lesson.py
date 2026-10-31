@@ -301,6 +301,12 @@ class TestGateway(GatewayCase):
             ("SELECT AVG(hourly_rate) FROM courier_pay", "blocked"),
             ("SELECT COUNT(*) FROM orders_raw", "blocked"),
             ("SELECT COUNT(*) FROM courier_pay", "blocked"),
+            ("SELECT COUNT(*) FROM COURIER_PAY", "blocked"),
+            ("SELECT COUNT(*) FROM Orders_Raw", "blocked"),
+            ("SELECT 1 FROM courier_pay LIMIT 1", "blocked"),
+            ("SELECT COUNT(*) FROM SQLITE_MASTER", "blocked"),
+            ("WITH c AS (SELECT DISTINCT city FROM customers) SELECT COUNT(*) FROM c", "ok"),
+            ("SELECT COUNT(*) FROM Orders", "ok"),
             ("SELECT COUNT(*) FROM sqlite_master", "blocked"),
             ("SELECT COUNT(*) FROM pragma_table_info('customers')", "blocked"),
             ("WITH RECURSIVE n(i) AS (SELECT 1 UNION ALL SELECT i + 1 FROM n WHERE i < 3) SELECT COUNT(*) FROM n", "ok"),
@@ -333,10 +339,12 @@ class TestGateway(GatewayCase):
         try:
             self.assertEqual(conn.execute("SELECT COUNT(*) FROM customers").fetchone()[0], len(reference_clean(self.data)[0]))
             self.assertEqual(reasons, [], "an allowed read should leave reasons empty")
-            for sql in ("SELECT email FROM customers", "SELECT * FROM courier_pay", "SELECT COUNT(*) FROM courier_pay", "DELETE FROM orders"):
+            refuse = ("SELECT email FROM customers", "SELECT * FROM courier_pay", "SELECT COUNT(*) FROM courier_pay",
+                      "SELECT COUNT(*) FROM COURIER_PAY", "SELECT COUNT(*) FROM sqlite_master", "DELETE FROM orders")
+            for sql in refuse:
                 with self.assertRaises(sqlite3.Error, msg="the authorizer should refuse %r" % sql):
                     conn.execute(sql)
-            self.assertGreaterEqual(len(reasons), 4, "append a reason for every refusal")
+            self.assertGreaterEqual(len(reasons), len(refuse), "append a reason for every refusal")
         finally:
             conn.close()
 

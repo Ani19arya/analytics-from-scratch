@@ -64,7 +64,7 @@ flowchart TB
 
 **Walls 1 and 2 read the text.** They are cheap and give a clear reason. But text checks are easy to fool. `WITH c AS (...) DELETE FROM orders` starts with WITH and is a delete. `SELECT * FROM customers` contains no forbidden word and returns every email address. `SELECT name FROM pragma_table_info('customers')` contains no whole word PRAGMA.
 
-**Wall 3 asks the database.** SQLite already parses the query perfectly, so let it tell you what the query will touch. While it prepares the statement, it calls the authorizer with an action code (`SQLITE_SELECT`, `SQLITE_READ`, `SQLITE_DELETE`, `SQLITE_PRAGMA` and so on) and, for a read, the table and column. The authorizer here is an allowlist: it allows the four read actions (select, read, calling a function, a recursive CTE), reads only from `customers` and `orders`, and never the column `customers.email`. Everything else is refused, and the query fails before it runs a single step. `SELECT *` is refused because it reads the email column. A WITH name is not a stored table, and SQLite marks it by passing no database name, so the authorizer lets reads of a CTE through and checks the tables inside it instead.
+**Wall 3 asks the database.** SQLite already parses the query perfectly, so let it tell you what the query will touch. While it prepares the statement, it calls the authorizer with an action code (`SQLITE_SELECT`, `SQLITE_READ`, `SQLITE_DELETE`, `SQLITE_PRAGMA` and so on) and, for a read, the table and column. The authorizer here is an allowlist: it allows the four read actions (select, read, calling a function, a recursive CTE), reads only from `customers` and `orders`, and never the column `customers.email`. Everything else is refused, and the query fails before it runs a single step. `SELECT *` is refused because it reads the email column. A WITH name needs care. A column read inside a WITH is reported under the stored table it comes from, so it is checked like any other read. But a read of no column, such as `COUNT(*)`, comes with no database name, and the name is then either a stored table or a WITH name. So the authorizer lets a read with no database name through only when the name is not a stored table and does not start with `sqlite_` or `pragma_`. It compares names in lower case, because SQLite passes the name as it was typed: `STAFF_PAY` is still `staff_pay`.
 
 **Wall 4 is the lock on the door.** `sqlite3.connect("file:shop.db?mode=ro", uri=True)` opens the file read-only, and `PRAGMA query_only = ON` makes the connection refuse writes too. Either one would have stopped every delete in the fixture. They are there because walls 1 to 3 are code you wrote, and code has bugs.
 
@@ -256,7 +256,44 @@ Eight queries answer (one of them truncated to 500 of 1,200 orders), eleven are 
 
     Q04 ends with a `--` comment, which swallows the closing bracket, so the rewritten query is broken. Rewriting can also drop a trailing semicolon wrongly or change the meaning of ORDER BY. Fetching at most 501 rows from the cursor caps the result without touching the SQL.
 3. **Relying on one wall.** Each wall has a gap on its own: text checks miss WITH ... DELETE, `query_only` can be switched off by SQL, and the authorizer only exists if every code path remembers to set it. Keep all of them, and test them with a fixture of hostile queries like this one every time the gateway changes.
-4. **Letting the model see the forbidden schema.** If the prompt lists `staff_pay` and the email column, the model will happily write queries for them, and people will see "blocked" instead of an answer. Give the model only the allowed tables and columns, and keep the walls for when it, or the person typing, goes beyond them.
+4. **Reading "no database name" as "a WITH name".** The authorizer sees no database name for `COUNT(*)` on a WITH name, so it is tempting to wave every such read through. Here is that authorizer:
+
+    ```python
+    import os, sqlite3, sys, tempfile
+    sys.path.insert(0, "solution")
+    import solution as s
+
+    def no_name_means_with(action, arg1, arg2, db_name, trigger):
+        if action not in s.READ_ACTIONS:
+            return sqlite3.SQLITE_DENY
+        if action == sqlite3.SQLITE_READ and db_name is not None and arg1 not in s.ALLOWED_TABLES:
+            return sqlite3.SQLITE_DENY
+        return sqlite3.SQLITE_OK
+
+    path = os.path.join(tempfile.mkdtemp(), "shop.db")
+    s.build_db(path, s.load_tables())
+    conn = sqlite3.connect(path)
+    conn.set_authorizer(no_name_means_with)
+    for sql in ["SELECT AVG(annual_salary) FROM staff_pay", "SELECT COUNT(*) FROM staff_pay",
+                "SELECT COUNT(*) FROM sqlite_master"]:
+        try:
+            print("ran:", conn.execute(sql).fetchall(), "|", sql)
+        except sqlite3.Error as e:
+            print("refused:", e, "|", sql)
+    for sql in ["SELECT COUNT(*) FROM staff_pay", "WITH t AS (SELECT DISTINCT country FROM customers) SELECT COUNT(*) FROM t"]:
+        print("gateway:", s.run_question(path, sql), "|", sql)
+    ```
+
+    ```
+    refused: access to staff_pay.annual_salary is prohibited | SELECT AVG(annual_salary) FROM staff_pay
+    ran: [(25,)] | SELECT COUNT(*) FROM staff_pay
+    ran: [(3,)] | SELECT COUNT(*) FROM sqlite_master
+    gateway: {'status': 'blocked', 'reason': 'table staff_pay is not allowed', 'rows': None} | SELECT COUNT(*) FROM staff_pay
+    gateway: {'status': 'ok', 'reason': '', 'rows': [(5,)]} | WITH t AS (SELECT DISTINCT country FROM customers) SELECT COUNT(*) FROM t
+    ```
+
+    It refuses the salary column, then tells anyone who asks how many people are on the payroll and how many tables the database holds: `COUNT(*)` on a stored table also comes with no database name. Checking every read against the allowlist goes too far the other way, because the last query really does report a read of `t`. The gateway decides by the name: a read with no database name passes only when the name is not a stored table.
+5. **Letting the model see the forbidden schema.** If the prompt lists `staff_pay` and the email column, the model will happily write queries for them, and people will see "blocked" instead of an answer. Give the model only the allowed tables and columns, and keep the walls for when it, or the person typing, goes beyond them.
 
 ## Your turn
 

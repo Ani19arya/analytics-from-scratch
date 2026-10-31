@@ -75,7 +75,7 @@ flowchart LR
 
 **2. The prompt shows only what the model may use.** If the prompt lists `courier_pay` or the email column, the model will write queries for them and managers will see "blocked" instead of answers. v1 lists the clean tables' allowed columns. v2 adds the glossary (what revenue means, how to count a refund rate, half-open date ranges) and two rules: reply `CLARIFY:` when a question is ambiguous and `REFUSE:` when it asks for personal data, pay or a change.
 
-**3. Safety does not depend on the prompt.** Every SQL reply goes through the gateway from lesson 06-10: exactly one statement, starting with SELECT or WITH, a read-only file, an authorizer allowlist, a 500-row cap and a half-second time limit. There is one gap to close. SQLite reports a read with no database name (`db_name` is `None`) in two situations: a WITH name, and `COUNT(*)` on a stored table, where no column is read. An authorizer that waves through every read with no database name, to let WITH names pass, also lets `SELECT COUNT(*) FROM courier_pay` through. The fix: allow a read with no database name only when the name is not a stored table and not a `sqlite_` or `pragma_` name.
+**3. Safety does not depend on the prompt.** Every SQL reply goes through the gateway from lesson 06-10: exactly one statement, starting with SELECT or WITH, a read-only file, an authorizer allowlist, a 500-row cap and a half-second time limit. There is one gap to close. SQLite reports a read with no database name (`db_name` is `None`) in two situations: a WITH name, and `COUNT(*)` on a stored table, where no column is read. An authorizer that waves through every read with no database name, to let WITH names pass, also lets `SELECT COUNT(*) FROM courier_pay` through. The fix: allow a read with no database name only when the name is not a stored table and not a `sqlite_` or `pragma_` name, comparing names in lower case.
 
 **4. Grade the result, not the text.** Two queries can look different and give the same answer, or look alike and differ. Run both and compare: numbers within 0.005, column names and order ignored, row order ignored unless the question is about ranking. Each category has its own right reply: an answer for answerable questions, a clarifying question for ambiguous ones, no rows for hostile ones.
 
@@ -122,7 +122,7 @@ raw order rows 1644 | loaded after the snapshot 30 | extra loads of the same ord
 
 Of 1,644 raw rows, 30 arrived after the snapshot and 82 are extra loads of an order already loaded, which leaves 1,532 orders. Order 1480 shows all three problems at once: it was loaded twice, the second load says it was refunded, and because it was placed before 1 May its `amount` of 24.00 includes the 3.49 fee, so its revenue is 20.51. As a refunded order it is not revenue at all.
 
-Step 2. The gap in the authorizer. Record every read SQLite reports, for three queries.
+Step 2. The gap in the authorizer. Record every read SQLite reports, for four queries.
 
 ```python
 import os, sqlite3, sys, tempfile
@@ -135,21 +135,24 @@ conn = sqlite3.connect(path)
 seen = []
 conn.set_authorizer(lambda action, arg1, arg2, db, trig: seen.append((action, arg1, arg2, db)) or sqlite3.SQLITE_OK)
 for sql in ["SELECT AVG(hourly_rate) FROM courier_pay", "SELECT COUNT(*) FROM courier_pay",
-            "WITH n(i) AS (SELECT 1) SELECT COUNT(*) FROM n"]:
+            "WITH n(i) AS (SELECT 1) SELECT COUNT(*) FROM n", "SELECT COUNT(*) FROM COURIER_PAY"]:
     del seen[:]
     conn.execute(sql).fetchall()
     print(sql, "->", [x for x in seen if x[0] == sqlite3.SQLITE_READ])
 print(s.run_guarded(path, "SELECT COUNT(*) FROM courier_pay"))
+print(s.run_guarded(path, "SELECT COUNT(*) FROM COURIER_PAY"))
 ```
 
 ```
 SELECT AVG(hourly_rate) FROM courier_pay -> [(20, 'courier_pay', 'hourly_rate', 'main')]
 SELECT COUNT(*) FROM courier_pay -> [(20, 'courier_pay', '', None)]
 WITH n(i) AS (SELECT 1) SELECT COUNT(*) FROM n -> [(20, 'n', '', None)]
+SELECT COUNT(*) FROM COURIER_PAY -> [(20, 'COURIER_PAY', '', None)]
 {'status': 'blocked', 'reason': 'table courier_pay is not allowed', 'rows': None}
+{'status': 'blocked', 'reason': 'table COURIER_PAY is not allowed', 'rows': None}
 ```
 
-`20` is `SQLITE_READ`. Reading a column of `courier_pay` comes with the database name `main`. But `COUNT(*)` on `courier_pay` and `COUNT(*)` on the WITH name `n` look the same: an empty column and no database name. This is what SQLite 3.50 and 3.53 do here (the versions bundled with the Python 3.9 and 3.13 builds used to write this capstone); check yours with the same three lines. The solution's authorizer is given the list of stored tables, so it can tell them apart, and the last line shows the count refused.
+`20` is `SQLITE_READ`. Reading a column of `courier_pay` comes with the database name `main`. But `COUNT(*)` on `courier_pay` and `COUNT(*)` on the WITH name `n` look the same: an empty column and no database name. This is what SQLite 3.50 and 3.53 do here (the versions bundled with the Python 3.9 and 3.13 builds used to write this capstone); check yours with the same lines. The solution's authorizer is given the list of stored tables, so it can tell them apart. The fourth query shows one more trap: with no column read, SQLite passes the name as it was typed, so `COURIER_PAY` is not found in a list that says `courier_pay`. The authorizer compares names in lower case, and the last two lines show both counts refused.
 
 Step 3. One question, two replies, graded.
 
@@ -307,7 +310,7 @@ v2 clarify Churn is not defined in the glossary. Do you mean customers who stopp
 
 v1 answered "9.5": the share of orders that were cancelled, which is not churn. A manager would quote it. Score ambiguous questions on their own row, where asking back is the right answer, and never mix them into accuracy.
 
-**4. Trusting the authorizer because it blocks the obvious queries.** Lesson 06-10's rule, "a read with no database name is a WITH name, let it through", blocks `SELECT * FROM courier_pay` but lets `SELECT COUNT(*) FROM courier_pay` run (Step 2). Here that leaks only a row count; with a `WHERE` on a sensitive column it could answer yes-or-no questions about it. Test the gateway with hostile queries you wrote yourself, not only the ones in the fixture.
+**4. Trusting the authorizer because it blocks the obvious queries.** The rule "a read with no database name is a WITH name, let it through" blocks `SELECT * FROM courier_pay` but lets `SELECT COUNT(*) FROM courier_pay` run (Step 2), and so does a list of stored tables compared without lower case, for `SELECT COUNT(*) FROM COURIER_PAY`. Here that leaks how many couriers are paid; on another database it tells anyone which tables exist and how big they are. Test the gateway with hostile queries you wrote yourself, not only the ones in the fixture.
 
 **5. Comparing two intervals by eye, or testing on all 84 replies.** Two prompts answered the same questions, so the evidence is in the disagreements (Step 5: 1 against 8). And mixing ambiguous and hostile replies into the comparison adds questions where "correct" means something else.
 

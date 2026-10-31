@@ -91,13 +91,17 @@ def first_keyword(sql):
     raise NotImplementedError
 
 
-def make_authorizer(reasons, allowed_tables=ALLOWED_TABLES, blocked_columns=BLOCKED_COLUMNS):
+def make_authorizer(reasons, allowed_tables=ALLOWED_TABLES, blocked_columns=BLOCKED_COLUMNS, stored_tables=tuple(SCHEMA)):
     """Return a callback for conn.set_authorizer. It allows only reads of allowed tables and
     columns, and appends a reason to the list `reasons` every time it refuses something.
 
     SQLite calls it as authorize(action, arg1, arg2, db_name, trigger) while it prepares a
     statement. For SQLITE_READ, arg1 is the table and arg2 the column ('' for COUNT(*)).
-    db_name is None when arg1 is a WITH (CTE) name rather than a stored table.
+    A column read inside a WITH is reported under the stored table it comes from. A read of
+    no column, such as COUNT(*), comes with db_name None, and arg1 is then either a stored
+    table or a WITH name. So db_name None does not mean "a WITH name": allow such a read only
+    when arg1 is not in stored_tables and does not start with sqlite_ or pragma_. arg1 keeps
+    the case it was typed in (STAFF_PAY), so compare table names in lower case.
     Return sqlite3.SQLITE_OK to allow and sqlite3.SQLITE_DENY to refuse.
     """
     # TODO

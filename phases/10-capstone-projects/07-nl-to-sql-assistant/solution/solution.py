@@ -208,17 +208,21 @@ def make_authorizer(reasons, known_tables):
     known_tables is every table name stored in the database. SQLite reports a read with no
     database name (db_name None) both for a WITH name and for COUNT(*) on a stored table, so a
     db_name of None is allowed only when arg1 is not a stored table and not a sqlite_ or pragma_ name.
+    arg1 keeps the case it was typed in (COURIER_PAY), so compare table names in lower case.
     """
+    known = {t.lower() for t in known_tables}
+
     def authorize(action, arg1, arg2, db_name, trigger):
         if action not in READ_ACTIONS:
             reasons.append("action %d is not allowed" % action)
             return sqlite3.SQLITE_DENY
-        if action == sqlite3.SQLITE_READ and arg1 not in ALLOWED_TABLES:
-            is_cte = db_name is None and arg1 not in known_tables and not arg1.lower().startswith(("sqlite_", "pragma_"))
+        table = arg1.lower() if action == sqlite3.SQLITE_READ else None
+        if action == sqlite3.SQLITE_READ and table not in ALLOWED_TABLES:
+            is_cte = db_name is None and table not in known and not table.startswith(("sqlite_", "pragma_"))
             if not is_cte:
                 reasons.append("table %s is not allowed" % arg1)
                 return sqlite3.SQLITE_DENY
-        if action == sqlite3.SQLITE_READ and (arg1, arg2) in BLOCKED_COLUMNS:
+        if action == sqlite3.SQLITE_READ and (table, arg2) in BLOCKED_COLUMNS:
             reasons.append("column %s.%s is not allowed" % (arg1, arg2))
             return sqlite3.SQLITE_DENY
         return sqlite3.SQLITE_OK

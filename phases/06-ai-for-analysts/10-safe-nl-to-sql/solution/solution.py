@@ -117,25 +117,36 @@ def first_keyword(sql):
     return sql[i:j].upper()
 
 
-def make_authorizer(reasons, allowed_tables=ALLOWED_TABLES, blocked_columns=BLOCKED_COLUMNS):
+def make_authorizer(reasons, allowed_tables=ALLOWED_TABLES, blocked_columns=BLOCKED_COLUMNS, stored_tables=tuple(SCHEMA)):
     """Return a callback for conn.set_authorizer. It allows only reads of allowed tables and
     columns, and appends a reason to the list `reasons` every time it refuses something.
 
     SQLite calls it as authorize(action, arg1, arg2, db_name, trigger) while it prepares a
     statement. For SQLITE_READ, arg1 is the table and arg2 the column ('' for COUNT(*)).
-    db_name is None when arg1 is a WITH (CTE) name rather than a stored table.
+    A column read inside a WITH is reported under the stored table it comes from. A read of
+    no column, such as COUNT(*), comes with db_name None, and arg1 is then either a stored
+    table or a WITH name. So db_name None does not mean "a WITH name": allow such a read only
+    when arg1 is not in stored_tables and does not start with sqlite_ or pragma_. arg1 keeps
+    the case it was typed in (STAFF_PAY), so compare table names in lower case.
     Return sqlite3.SQLITE_OK to allow and sqlite3.SQLITE_DENY to refuse.
     """
+    allowed = {t.lower() for t in allowed_tables}
+    stored = {t.lower() for t in stored_tables}
+
     def authorize(action, arg1, arg2, db_name, trigger):
         if action not in READ_ACTIONS:
             reasons.append("%s is not allowed" % ACTION_NAMES.get(action, "action %d" % action))
             return sqlite3.SQLITE_DENY
-        # db_name is None when the "table" is a WITH (CTE) name, not a stored table
-        if action == sqlite3.SQLITE_READ and db_name is not None:
-            if arg1 not in allowed_tables:
+        if action == sqlite3.SQLITE_READ:
+            table = arg1.lower()
+            # COUNT(*) on a WITH name: no database name, and the name is not a stored table.
+            # COUNT(*) on a stored table also has no database name, so the name decides.
+            if db_name is None and table not in stored and not table.startswith(("sqlite_", "pragma_")):
+                return sqlite3.SQLITE_OK
+            if table not in allowed:
                 reasons.append("table %s is not allowed" % arg1)
                 return sqlite3.SQLITE_DENY
-            if (arg1, arg2) in blocked_columns:
+            if (table, arg2) in blocked_columns:
                 reasons.append("column %s.%s is not allowed" % (arg1, arg2))
                 return sqlite3.SQLITE_DENY
         return sqlite3.SQLITE_OK
@@ -163,8 +174,9 @@ def run_question(path, sql, max_rows=MAX_ROWS, max_seconds=MAX_SECONDS):
     if keyword not in ("SELECT", "WITH"):
         return {"status": "blocked", "reason": "starts with %s, only SELECT or WITH is allowed" % keyword, "rows": None}
     conn = open_readonly(path)
+    stored = [r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type IN ('table', 'view')")]
     reasons = []
-    conn.set_authorizer(make_authorizer(reasons))
+    conn.set_authorizer(make_authorizer(reasons, stored_tables=stored))
     deadline = time.monotonic() + max_seconds
     conn.set_progress_handler(lambda: time.monotonic() > deadline, 1000)
     try:

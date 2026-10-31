@@ -57,8 +57,13 @@ def build_db(path, tables):
 def _authorize(action, arg1, arg2, db_name, trigger):
     if action not in READ_ACTIONS:
         return sqlite3.SQLITE_DENY
-    if action == sqlite3.SQLITE_READ and db_name is not None:
-        if arg1 not in VISIBLE_COLUMNS or (arg1, arg2) in BLOCKED_COLUMNS:
+    if action == sqlite3.SQLITE_READ:
+        table = arg1.lower()  # SQLite passes the name as typed: COUNT(*) FROM ORDERS gives "ORDERS"
+        # COUNT(*) reads no column, so it comes with no database name (db_name None), on a stored
+        # table and on a WITH name alike. Only a name that is not a stored table is a WITH name.
+        if db_name is None and table not in SCHEMA and not table.startswith(("sqlite_", "pragma_")):
+            return sqlite3.SQLITE_OK
+        if table not in VISIBLE_COLUMNS or (table, arg2) in BLOCKED_COLUMNS:
             return sqlite3.SQLITE_DENY
     return sqlite3.SQLITE_OK
 

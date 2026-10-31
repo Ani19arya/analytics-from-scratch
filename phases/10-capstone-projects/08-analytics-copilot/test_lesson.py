@@ -21,6 +21,7 @@ import math
 import os
 import random
 import shutil
+import sqlite3
 import tempfile
 import unittest
 
@@ -339,6 +340,23 @@ class SessionMixin(object):
 class TestSessionCommitted(SessionMixin, SessionCase):
     def approvals_without(self, step):
         return [a for a in self.data["approvals"] if a["step"] != step]
+
+    def test_gateway_checks_count_star(self):
+        # COUNT(*) reads no column, so SQLite passes no database name: on a stored table as on a WITH name
+        for sql in ["SELECT COUNT(*) FROM rentals_raw", "SELECT COUNT(*) FROM RENTALS_RAW", "SELECT 1 FROM rentals_raw LIMIT 1",
+                    "SELECT COUNT(*) FROM sqlite_master", "SELECT COUNT(*) FROM pragma_table_info('riders')", "SELECT email FROM Riders"]:
+            got = lesson.run_guarded(self.path, sql)
+            self.assertEqual((got["status"], got["rows"]), ("blocked", None), "the gateway must refuse %r, got %s" % (sql, got["status"]))
+        conn = sqlite3.connect(self.path)
+        try:
+            for sql in ["WITH z AS (SELECT DISTINCT zone FROM stations) SELECT COUNT(*) FROM z",
+                        "WITH r AS (SELECT station_id FROM rentals) SELECT COUNT(*) FROM r", "SELECT COUNT(*) FROM Riders"]:
+                got = lesson.run_guarded(self.path, sql)
+                self.assertEqual((got["status"], list(got["rows"] or [])), ("ok", conn.execute(sql).fetchall()),
+                                 "a WITH over allowed tables must run: %r (%s)" % (sql, got["reason"]))
+        finally:
+            conn.close()
+        self.assertEqual(file_hash(self.path), self.hash)
 
     def test_missing_approval_halts(self):
         run = self.replay(self.approvals_without("S3"))

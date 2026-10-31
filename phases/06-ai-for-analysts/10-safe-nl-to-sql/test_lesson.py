@@ -117,17 +117,29 @@ class TestWalls(GatewayCase):
                              self.reference_rows("SELECT COUNT(*) FROM orders")[0][0])
             self.assertEqual(reasons, [])
             for sql, word in [("SELECT email FROM customers", "email"), ("SELECT * FROM staff_pay", "staff_pay"),
+                              ("SELECT COUNT(*) FROM staff_pay", "staff_pay"),
+                              ("SELECT COUNT(*) FROM sqlite_master", "sqlite_master"),
+                              ("SELECT COUNT(*) FROM STAFF_PAY", "STAFF_PAY"),
                               ("DELETE FROM orders", "DELETE")]:
                 del reasons[:]
                 with self.assertRaises(sqlite3.Error, msg="the authorizer allowed %r" % sql):
                     conn.execute(sql)
                 self.assertTrue(any(word in r for r in reasons), "no reason mentioning %s was recorded for %r" % (word, sql))
+            # COUNT(*) on a WITH name comes with no database name too, and must still run
+            for sql in ["WITH t AS (SELECT customer_id FROM customers) SELECT COUNT(*) FROM t",
+                        "WITH t AS (SELECT DISTINCT country FROM customers) SELECT COUNT(*) FROM t"]:
+                del reasons[:]
+                self.assertEqual(conn.execute(sql).fetchall(), self.reference_rows(sql))
+                self.assertEqual(reasons, [], "a WITH over allowed tables was refused: %s" % reasons)
         finally:
             conn.close()
 
     def test_hand_made_queries(self):
         blocked = [
             "", "SELECT 1; SELECT 2", "WITH staff_pay AS (SELECT 1 AS x) SELECT * FROM main.staff_pay",
+            "SELECT COUNT(*) FROM staff_pay", "SELECT COUNT(*) FROM sqlite_master", "SELECT COUNT(*) FROM Staff_Pay",
+            "SELECT 1 FROM staff_pay LIMIT 1", "SELECT COUNT(*) FROM pragma_table_info('staff_pay')",
+            "WITH s AS (SELECT staff_id FROM staff_pay) SELECT COUNT(*) FROM s",
             "SELECT name FROM customers WHERE customer_id IN (SELECT staff_id FROM staff_pay)",
             "select lower(email) from customers", "INSERT INTO orders (order_id) VALUES (99999)",
             "WITH x AS (SELECT 1) UPDATE orders SET amount = 0",
@@ -136,6 +148,8 @@ class TestWalls(GatewayCase):
             result = self.run_and_check_file(sql)
             self.assertEqual(result["status"], "blocked", "%r should be blocked, got %s" % (sql, result["status"]))
         ok = ["select count(*) from customers", "WITH t AS (SELECT amount FROM orders) SELECT COUNT(*) FROM t",
+              "WITH t AS (SELECT customer_id, country FROM customers) SELECT country, COUNT(*) FROM t GROUP BY country",
+              "WITH t AS (SELECT DISTINCT country FROM customers) SELECT COUNT(*) FROM t",
               "SELECT COUNT(*) FROM customers WHERE name = 'a;b'"]
         for sql in ok:
             result = self.run_and_check_file(sql)

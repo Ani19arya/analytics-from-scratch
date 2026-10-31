@@ -168,6 +168,7 @@ def make_authorizer(reasons, known_tables):
     known_tables is every table name stored in the database. SQLite reports a read with no
     database name (db_name None) both for a WITH name and for COUNT(*) on a stored table, so a
     db_name of None is allowed only when arg1 is not a stored table and not a sqlite_ or pragma_ name.
+    arg1 keeps the case it was typed in (COURIER_PAY), so compare table names in lower case.
     """
     raise NotImplementedError("TODO: write make_authorizer")
 

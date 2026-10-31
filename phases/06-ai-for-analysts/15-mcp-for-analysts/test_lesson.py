@@ -127,6 +127,18 @@ class TestProtocol(ServerCase):
         self.assertEqual(r["error"]["code"], -32602, "run_query is not allowed for this client")
         self.assertEqual(lesson.summarise_log(self.state["log"], self.state["allowed"])["refused_tools"], ["run_query"])
 
+    def test_count_star_is_checked(self):
+        # COUNT(*) reads no column, so SQLite passes no database name: on a stored table as on a WITH name
+        for sql in ["SELECT COUNT(*) FROM payouts", "SELECT COUNT(*) FROM PAYOUTS", "SELECT 1 FROM payouts LIMIT 1",
+                    "SELECT COUNT(*) FROM sqlite_master", "SELECT COUNT(*) FROM pragma_table_info('customers')"]:
+            with self.assertRaises(lesson.ToolError, msg="the gateway must refuse %r" % sql):
+                lesson.guarded_query(self.path, sql)
+        for sql in ["WITH t AS (SELECT DISTINCT city FROM customers) SELECT COUNT(*) FROM t",
+                    "WITH r AS (SELECT rating FROM reviews) SELECT COUNT(*) FROM r", "SELECT COUNT(*) FROM Orders"]:
+            columns, rows, truncated = lesson.guarded_query(self.path, sql)
+            self.assertEqual({"columns": columns, "rows": rows, "truncated": truncated}, self.direct(sql),
+                             "a WITH over readable tables must run: %r" % sql)
+
     def test_log(self):
         self.send({"jsonrpc": "2.0", "id": 1, "method": "tools/list"})
         self.send({"jsonrpc": "2.0", "method": "notifications/initialized"})

@@ -125,16 +125,20 @@ def first_keyword(sql):
 
 
 def _authorizer(reasons, known_tables):
+    known = {t.lower() for t in known_tables}
+
     def authorize(action, arg1, arg2, db_name, trigger):
         if action not in READ_ACTIONS:
             reasons.append("action %d is not allowed" % action)
             return sqlite3.SQLITE_DENY
-        if action == sqlite3.SQLITE_READ and arg1 not in ALLOWED_TABLES:
-            # db_name is None for a WITH name, and also for COUNT(*) on a stored table
-            if db_name is not None or arg1 in known_tables or arg1.lower().startswith(("sqlite_", "pragma_")):
+        # SQLite passes the name as typed when no column is read: COUNT(*) FROM RENTALS_RAW gives "RENTALS_RAW"
+        table = arg1.lower() if action == sqlite3.SQLITE_READ else None
+        if action == sqlite3.SQLITE_READ and table not in ALLOWED_TABLES:
+            # db_name is None for COUNT(*) on a WITH name, and also for COUNT(*) on a stored table
+            if db_name is not None or table in known or table.startswith(("sqlite_", "pragma_")):
                 reasons.append("table %s is not allowed" % arg1)
                 return sqlite3.SQLITE_DENY
-        if action == sqlite3.SQLITE_READ and (arg1, arg2) in BLOCKED_COLUMNS:
+        if action == sqlite3.SQLITE_READ and (table, arg2) in BLOCKED_COLUMNS:
             reasons.append("column %s.%s is not allowed" % (arg1, arg2))
             return sqlite3.SQLITE_DENY
         return sqlite3.SQLITE_OK
