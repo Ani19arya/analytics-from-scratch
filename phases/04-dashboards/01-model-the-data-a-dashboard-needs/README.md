@@ -135,7 +135,7 @@ SELECT
 FROM days
 ```
 
-`strftime('%w', date)` is SQLite and gives 0 for Sunday up to 6 for Saturday. The `substr` picks three letters out of a 21 letter string. PostgreSQL writes `EXTRACT(DOW FROM date)` and `to_char(date, 'Dy')`, and SQL Server `DATEPART(weekday, date)`.
+`strftime('%w', date)` is SQLite and gives 0 for Sunday up to 6 for Saturday. The `substr` picks three letters out of a 21 letter string. PostgreSQL writes `EXTRACT(DOW FROM date)` and `to_char(date, 'Dy')`, and SQL Server `DATEPART(weekday, date)` (1 to 7, and which day is 1 depends on the `DATEFIRST` setting).
 
 ```sql
 SELECT COUNT(*) AS days, MIN(date), MAX(date) FROM dim_date

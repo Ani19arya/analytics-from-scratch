@@ -20,7 +20,7 @@ An interview SQL question is a small puzzle with one trap in it. The interviewer
 
 | Question | Everyday version | The trap |
 |---|---|---|
-| Second highest salary | Two runners tie for gold. Silver goes to the next time, not to the second runner | Counting people instead of values |
+| Second highest salary | Two runners tie for the fastest time. The second fastest time is the next different time, not the second runner's | Counting people instead of values |
 | Duplicate emails | "Ana@Example.com" and " ana@example.com" on a guest list are one guest | Comparing the text exactly as typed |
 | Three day streaks | A gym card stamped Monday, Tuesday and Wednesday is a streak; two stamps on Tuesday are still one day | Counting stamps instead of days |
 | Top two per department | The top two batting averages per team, when two players tie | A ranking rule that drops or skips ties |

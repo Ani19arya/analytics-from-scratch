@@ -166,7 +166,7 @@ The marketing slide's "+2%" is the last line: an average of daily rates, rounded
 
 ## Common mistakes
 
-**1. Averaging daily rates on uneven traffic (the trap).** It gives a quiet Sunday the same weight as a campaign day with 11 to 14 times as many visits. Here it turns a 0.45 point fall into a 0.05 point rise. For "what share of visits converted", always add up the counts and divide once. The same trap appears whenever you average percentages from groups of different size: average order value across stores, click-through rate across ads, pass rates across schools.
+**1. Averaging daily rates on uneven traffic (the trap).** It gives a quiet Sunday the same weight as a campaign day with 11 to 14 times as many visits. Here it turns a 0.45 point fall into a 0.05 point rise. For "what share of visits converted", always add up the counts and divide once. The same trap appears whenever you average ratios from groups of different size: average order value across stores, click-through rate across ads, pass rates across schools.
 
 **2. Saying "%" when you mean points, or the other way round.** "+2%" about a 2.5% rate means 2.55%; "+2 points" means 4.50%. Write "points" (or "pp") for differences between rates and "%" only for relative changes, and when it matters, give both: "-0.45 points (-19.1%)".
 

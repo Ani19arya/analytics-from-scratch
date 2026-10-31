@@ -237,7 +237,7 @@ Check your numbers with the [sample size calculator](https://realanalystjobs.com
 
 ## What to tell the stakeholder
 
-"If the smallest lift worth shipping is 10%, we can test search, product and checkout in two weeks each, home and signup in three, and cart in six. Search is the only page where a 5% lift is detectable in two weeks; cart is only worth testing for changes where anything under a 20% lift would not matter. We will fix each test's length before it starts and read the result once, at the end." Caveat: the weeks are minimums, because our traffic counts visits, and unique users grow more slowly than visits.
+"If the smallest lift worth shipping is 10%, we can test search, product and checkout in two weeks each, home and signup in three, and cart in six. Search is the only page where a 5% lift is detectable in two weeks; cart fits in two weeks only if the smallest lift that matters is 20%. We will fix each test's length before it starts and read the result once, at the end." Caveat: the weeks are minimums, because our traffic counts visits, and unique users grow more slowly than visits.
 
 ## In real job postings
 

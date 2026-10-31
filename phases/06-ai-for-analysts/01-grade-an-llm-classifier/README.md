@@ -12,7 +12,7 @@ Is the LLM good enough at spotting refund tickets that we can route them automat
 
 Northwind Desk, a fictional software company, tried an LLM to label incoming support tickets as billing, bug, refund or other. Priya, the support lead, wants refund tickets to skip the queue and go straight to the refunds team, but only if the LLM rarely sends the wrong ticket there and rarely misses a real refund. Her rule: precision for refund at least 0.90 and recall at least 0.80. A person already labelled 400 recent tickets, and the LLM's labels for the same tickets are saved next to them. She needs a yes or no by Friday's ops review.
 
-The dataset in `data/tickets.csv` is synthetic, built by `make_data.py` with a fixed random seed. **No model was called.** The `llm_label` column is simulated, and `data/fixture.json` says so. The simulation behaves like a real model run at temperature 0 (the setting that makes a model give the same answer to the same input): each label depends on the ticket's text, the same text always gets the same label, and most mistakes happen on genuinely ambiguous wording.
+The dataset in `data/tickets.csv` is synthetic, built by `make_data.py` with a fixed random seed. **No model was called.** The `llm_label` column is simulated, and `data/fixture.json` says so. The simulation behaves like a real model run at temperature 0 (the setting that makes a model's answer to the same input as repeatable as it can be): each label depends on the ticket's text, the same text always gets the same label, and most mistakes happen on genuinely ambiguous wording.
 
 ## In plain words
 
@@ -255,7 +255,7 @@ python3 test_lesson.py
 
 The test checks your functions on tiny hand-made matrices (empty, zero denominators, 19 out of 20), on the committed data, and on a second dataset built with another seed, where the right answer is computed independently.
 
-Stretch: keep precision at 0.829 and work out how many predicted refunds you would need before the upper end of the interval drops below 0.85. That is how a bigger sample turns "not proven" into a clear answer.
+Stretch: keep recall at 63/77 (0.818) and work out how many actual refund tickets you would need before the lower end of its interval clears 0.80. That is how a bigger sample turns "not proven" into a clear answer.
 
 ## Check yourself
 
@@ -276,7 +276,7 @@ Stretch: keep precision at 0.829 and work out how many predicted refunds you wou
 
 ## What to tell the stakeholder
 
-"Not yet. On 400 labelled tickets, 63 of the 76 tickets the LLM would send to refunds belong there (83%), and the 95% range is 73% to 90%, so it does not meet your 90% bar. All 13 wrong routings are billing corrections such as double charges, so the next step is a prompt fix for that case, checked on a fresh set of labelled tickets."
+"Not yet. On 400 labelled tickets, 63 of the 76 tickets the LLM would send to refunds belong there (83%), and the 95% range is 72.9% to 89.7%, so even the hopeful end is below your 90% bar. All 13 wrong routings are billing corrections such as double charges, so the next step is a prompt fix for that case, checked on a fresh set of labelled tickets."
 
 ## In real job postings
 

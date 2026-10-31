@@ -24,7 +24,7 @@ Three more words you will need:
 
 - **Conversion rate**: the share of users who placed an order.
 - **Lift**: B's rate minus A's rate, in percentage points. (A relative lift divides that by A's rate.)
-- **Alpha**: the p-value cut-off you pick before the test, usually 0.05. It is the false alarm rate you accept: how often you would "find" a difference that is not there.
+- **Alpha**: the p-value cut-off you pick before the test, usually 0.05. It is the false alarm rate you accept: when there is no real difference, how often the test would still "find" one.
 
 ## What you will build from scratch
 
@@ -187,7 +187,7 @@ srm {'chi2': 1.4232, 'p_value': 0.2329}
 decision: ship
 ```
 
-A converted at 10.96% and B at 14.61%, a lift of 3.65 percentage points. The pooled rate is 12.74%, the standard error is 0.0153, z is 2.38 and the two-sided p-value is 0.017. That is below 0.05 and the lift is positive, so the rule says ship. The 95% interval on the lift runs from 0.6 to 6.7 points: B is very likely better, but the gain could be anywhere from barely noticeable to large.
+A converted at 10.96% and B at 14.61%, a lift of 3.65 percentage points. The pooled rate is 12.74%, the standard error is 0.0153, z is 2.38 and the two-sided p-value is 0.017. That is below 0.05 and the lift is positive, so the rule says ship. The 95% interval on the lift runs from 0.6 to 6.7 points: the whole range is above zero, but it is wide, from a barely noticeable gain to a large one.
 
 Was the test big enough? `make_data.py` built in true rates of 10% for A and 13.5% for B. By the sample size formula in lesson 04, a test with about 950 users per group had only about a 66% chance (its **power**) of detecting that change. This test got a significant result, but a repeat of it would miss the same real effect about one time in three.
 

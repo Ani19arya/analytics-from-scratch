@@ -173,7 +173,7 @@ That returns 38.0, 44.3 and 34.1. Either change takes purchases from 31 to about
 
 **1. Dividing events by events (the trap).** Purchase events over checkout events gives 14.7%, because 86 users fired 211 checkout events. By users, checkout converts at 40.3%. The dashboard tile makes a healthy step look broken.
 
-**2. Not requiring the earlier steps.** Counting every user who added to cart gives 160 at step 2; only 145 of them viewed a course first. The 15 saved cart users inflate step 2 and then shrink step 3 for no reason.
+**2. Not requiring the earlier steps.** Counting every user who added to cart gives 160 at step 2; only 145 of them viewed a course first. The 15 saved cart users inflate step 2, and the 9 of them who began checkout inflate step 3 too, so the funnel no longer describes people who started from a course page.
 
 **3. Writing `SUM(t2 >= t1)` and moving to another database.** It works in SQLite and fails or behaves differently elsewhere. Write `SUM(CASE WHEN t2 >= t1 THEN 1 ELSE 0 END)`.
 

@@ -10,7 +10,7 @@ Which rows of this export can we trust, and what did we change to get there?
 
 ## The problem
 
-Kestrel Home, a fictional online furniture shop, sells in the US and India. Every month the ops team exports September orders from two systems and pastes them into one CSV. Priya, the head of finance, needs the September order table cleaned by Thursday so she can total revenue by currency. She has asked for a short note of what was fixed and what was dropped, because last month a duplicated order went into the board numbers.
+Kestrel Home, a fictional online furniture shop, sells in the US and India. Every month the ops team exports that month's orders from two systems and pastes them into one CSV. Priya, the head of finance, needs the September order table cleaned by Thursday so she can total revenue by currency. She has asked for a short note of what was fixed and what was dropped, because last month a duplicated order went into the board numbers.
 
 The file `data/orders_raw.csv` (107 rows) is synthetic, built by `make_data.py` with a fixed random seed. The mess was added on purpose and is the same every time you rebuild it.
 
@@ -57,7 +57,7 @@ Every arrow into "Dropped" carries a reason, and the report lists both piles. No
 
 **Spaces.** `"  Asha  Rao "` and `"Asha Rao"` are the same customer. `" ".join(value.split())` strips both ends and collapses inner runs of spaces. Do this to every cell first, because every later check depends on it.
 
-**Dates.** The export has `2026-09-14`, `14/09/2026`, `Sep 14, 2026` and `14-Sep-2026`. Try each format in a fixed order and keep the first one that parses. The order matters for slashes: `03/04/2026` is 3 April if the file is day first and 4 March if it is month first. No code can guess that. You have to know where the file came from. Here the slash dates come from the India office, so they are day first, and that rule is written in `DATE_FORMATS`, not hidden in your head.
+**Dates.** The export has `2026-09-14`, `14/09/2026`, `Sep 14, 2026` and `14-Sep-2026`. Try each format in a fixed order and keep the first one that parses. The format you choose matters for slashes: `03/04/2026` is 3 April if the file is day first and 4 March if it is month first. No code can guess that. You have to know where the file came from. Here the slash dates come from the India office, so they are day first, and that rule is written in `DATE_FORMATS`, not hidden in your head.
 
 **Money.** A money string is a currency marker, optional spaces, then a number. Here is the pattern, one piece per line:
 
@@ -139,7 +139,7 @@ Sep 20, 2026 -> 2026-09-20
 TBD -> None
 ```
 
-Line by line: `strptime` (string parse time) reads text with a format, where `%Y` is a four digit year, `%m` a month number, `%d` a day and `%b` a short month name. If the text does not fit, it raises `ValueError`, so `except ValueError: pass` moves on to the next format. `break` stops at the first format that works. `strftime` (string format time) writes the date back out in one standard form. `04/09/2026` becomes 4 September because the day first format comes before any month first one. `TBD` fits no format, so it stays `None` and the row is dropped as `bad_date`.
+Line by line: `strptime` (string parse time) reads text with a format, where `%Y` is a four digit year, `%m` a month number, `%d` a day and `%b` a short month name. If the text does not fit, it raises `ValueError`, so `except ValueError: pass` moves on to the next format. `break` stops at the first format that works. `strftime` (string format time) writes the date back out in one standard form. `04/09/2026` becomes 4 September because the only slash format in the list, `%d/%m/%Y`, is day first. `TBD` fits no format, so it stays `None` and the row is dropped as `bad_date`.
 
 Pull the currency and number out of a money string:
 
