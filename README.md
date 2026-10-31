@@ -77,7 +77,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 |---|---|---|---|
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 14 | 0 |
-| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
+| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 15 | 0 |
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 14 | 0 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 10 | 0 |
@@ -86,7 +86,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **107** | **14** |
+| **All** | | **110** | **11** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -132,9 +132,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 10. 02-10 [Correlation, causation and Simpson's paradox](phases/02-statistics-and-experiments/10-correlation-causation-and-simpson): Users who get more notifications work out more. Should we send more? (Level 2)
 11. 02-11 [Linear regression from scratch](phases/02-statistics-and-experiments/11-linear-regression-from-scratch): How much does each extra visit add to monthly spend, and what does R squared really say? (Level 2)
 12. 02-12 [Bootstrap confidence intervals](phases/02-statistics-and-experiments/12-bootstrap-intervals): How sure are we about a median or a ratio when no simple formula exists? (Level 2)
-13. 02-13 A/B test pitfalls *(planned)*: We tested five variants on three metrics. Which wins are real? (Level 3)
-14. 02-14 Ratio metrics and the delta method *(planned)*: Is the drop in replies per application real when one user sends many? (Level 3)
-15. 02-15 Variance reduction with CUPED *(planned)*: Can pre-test behaviour make the test finish in half the time? (Level 3)
+13. 02-13 [A/B test pitfalls](phases/02-statistics-and-experiments/13-ab-test-pitfalls): We tested five variants on three metrics. Which wins are real? (Level 3)
+14. 02-14 [Ratio metrics and the delta method](phases/02-statistics-and-experiments/14-ratio-metrics-and-the-delta-method): Is the drop in replies per application real when one user sends many? (Level 3)
+15. 02-15 [Variance reduction with CUPED](phases/02-statistics-and-experiments/15-variance-reduction-with-cuped): Can pre-test behaviour make the test finish in half the time? (Level 3)
 
 ### 03 Metrics and product analytics
 

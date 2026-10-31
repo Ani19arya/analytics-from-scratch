@@ -489,7 +489,7 @@
      "question": "We tested five variants on three metrics. Which wins are real?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "experimentation"
@@ -503,7 +503,7 @@
      "question": "Is the drop in replies per application real when one user sends many?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "experimentation"
@@ -517,7 +517,7 @@
      "question": "Can pre-test behaviour make the test finish in half the time?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "experimentation"

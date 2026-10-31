@@ -6,7 +6,7 @@ You need Python 3.9 or later. No SQL is required, though [GROUP BY from raw rows
 
 ## Lessons, in learning order
 
-Folder numbers stay fixed because they are live links; the list below is the order to take them in. Planned lessons are listed so you can see where the phase is going; they have no folder yet.
+Folder numbers stay fixed because they are live links; the list below is the order to take them in.
 
 **Level 1: beginner**
 
@@ -28,9 +28,9 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 
 **Level 3: advanced**
 
-13. 13 A/B test pitfalls (planned): we tested five variants on three metrics. Which wins are real?
-14. 14 Ratio metrics and the delta method (planned): is the drop in replies per application real when one user sends many?
-15. 15 Variance reduction with CUPED (planned): can pre-test behaviour make the test finish in half the time?
+13. [13 A/B test pitfalls](13-ab-test-pitfalls/): we tested five variants on three metrics. Which wins are real?
+14. [14 Ratio metrics and the delta method](14-ratio-metrics-and-the-delta-method/): is the drop in replies per application real when one user sends many?
+15. [15 Variance reduction with CUPED](15-variance-reduction-with-cuped/): can pre-test behaviour make the test finish in half the time?
 
 **About prerequisites for the interval lesson.** Lessons 05 (probability by simulation) and 07 (sampling and the central limit theorem) are the intended prerequisites for [02 Confidence interval by hand](02-confidence-interval-by-hand/). Until they exist, lesson 02 includes a short version of both: the normal bell curve, where 1.96 comes from, and a simulation of 1,000 surveys that you can run.
 

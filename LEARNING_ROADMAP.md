@@ -269,9 +269,9 @@ Level total: about 144 hours of focused work.
 
 **02 Statistics and experiments**
 
-- [ ] 02-13 A/B test pitfalls *(planned)*: We tested five variants on three metrics. Which wins are real? About 2 h.
-- [ ] 02-14 Ratio metrics and the delta method *(planned)*: Is the drop in replies per application real when one user sends many? About 2 h.
-- [ ] 02-15 Variance reduction with CUPED *(planned)*: Can pre-test behaviour make the test finish in half the time? About 2 h.
+- [x] 02-13 [A/B test pitfalls](phases/02-statistics-and-experiments/13-ab-test-pitfalls): We tested five variants on three metrics. Which wins are real? About 2 h.
+- [x] 02-14 [Ratio metrics and the delta method](phases/02-statistics-and-experiments/14-ratio-metrics-and-the-delta-method): Is the drop in replies per application real when one user sends many? About 2 h.
+- [x] 02-15 [Variance reduction with CUPED](phases/02-statistics-and-experiments/15-variance-reduction-with-cuped): Can pre-test behaviour make the test finish in half the time? About 2 h.
 
 **03 Metrics and product analytics**
 
