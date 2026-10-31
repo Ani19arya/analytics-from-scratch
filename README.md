@@ -78,15 +78,15 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 14 | 0 |
 | [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
-| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 12 | 2 |
+| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 14 | 0 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 10 | 0 |
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 12 | 3 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
-| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
+| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **104** | **17** |
+| **All** | | **107** | **14** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -150,8 +150,8 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 10. 03-10 [Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): DAU fell 20% overnight. Tracking bug, holiday, segment, or real? (Level 2)
 11. 03-11 [Attribution: first touch, last touch, linear](phases/03-metrics-and-product-analytics/11-attribution-models): Which channel gets credit for the sale, and how much does the answer depend on the model? (Level 2)
 12. 03-12 [Unit economics: LTV, CAC and payback](phases/03-metrics-and-product-analytics/12-ltv-cac-and-payback): Is paid social acquisition profitable once churn is included? (Level 2)
-13. 03-13 Marketplace metrics and liquidity *(planned)*: What share of job posts get an application within 48 hours, and which side is the constraint? (Level 3)
-14. 03-14 Causal impact without an experiment: difference in differences *(planned)*: We launched in one city and not the others. Did it work? (Level 3)
+13. 03-13 [Marketplace metrics and liquidity](phases/03-metrics-and-product-analytics/13-marketplace-metrics): What share of job posts get an application within 48 hours, and which side is the constraint? (Level 3)
+14. 03-14 [Causal impact without an experiment: difference in differences](phases/03-metrics-and-product-analytics/14-difference-in-differences): We launched in one city and not the others. Did it work? (Level 3)
 
 ### 04 Dashboards and spreadsheets
 
@@ -219,7 +219,7 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 1. 08-01 [Warehouse layers: raw, staging and marts](phases/08-modern-data-stack/01-warehouse-layers): Why do we never edit raw data, and where should a metric be computed? (Level 2)
 2. 08-02 [dbt from scratch](phases/08-modern-data-stack/02-dbt-from-scratch): In what order must these six models build, and what do their tests prove? (Level 2)
 3. 08-03 [Incremental models and backfills](phases/08-modern-data-stack/03-incremental-models-and-backfills): Can yesterday's numbers be fixed without rebuilding three years of data? (Level 2)
-4. 08-04 Orchestration: a tiny DAG runner *(planned)*: What happens at 6 am when the 5 am job failed? (Level 3)
+4. 08-04 [Orchestration: a tiny DAG runner](phases/08-modern-data-stack/04-orchestration-dag-runner): What happens at 6 am when the 5 am job failed? (Level 3)
 5. 08-05 [Query cost in a cloud warehouse](phases/08-modern-data-stack/05-cloud-warehouse-cost): Why did one dashboard cost 400 dollars, and how do partitions fix it? (Level 2)
 6. 08-06 [Git for analysts](phases/08-modern-data-stack/06-git-for-analysts): Who changed the revenue query, and can we undo it? (Level 1)
 

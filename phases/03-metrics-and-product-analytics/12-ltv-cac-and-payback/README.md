@@ -237,4 +237,4 @@ In the Real Analyst Jobs data drop of 25 October 2026, 996 of the 2,056 US analy
 
 ## Next
 
-[Phase 03: Metrics and product analytics](../README.md). The next lesson in this phase, marketplace metrics and liquidity, is Level 3 and planned. The next phase is [04 Dashboards](../../04-dashboards/).
+[13: Marketplace metrics and liquidity](../13-marketplace-metrics/) (Level 3): what share of job posts get an application within 48 hours, and which side of a marketplace is short.

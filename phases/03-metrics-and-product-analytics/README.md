@@ -20,7 +20,7 @@ This phase is about the numbers a product team runs on: how to break a top-line 
 10. [Diagnose a metric drop](10-diagnose-a-metric-drop/) (level 2): DAU fell 20% overnight. Tracking bug, holiday, segment, or real?
 11. [Attribution: first touch, last touch, linear](11-attribution-models/) (level 2): which channel gets credit for the sale, and how much does the answer depend on the model?
 12. [Unit economics: LTV, CAC and payback](12-ltv-cac-and-payback/) (level 2): is paid social acquisition profitable once churn is included?
-13. Marketplace metrics and liquidity (planned): what share of job posts get an application within 48 hours, and which side is the constraint?
-14. Causal impact without an experiment: difference in differences (planned): we launched in one city and not the others. Did it work?
+13. [Marketplace metrics and liquidity](13-marketplace-metrics/) (level 3): what share of job posts get an application within 48 hours, and which side is the constraint?
+14. [Causal impact without an experiment: difference in differences](14-difference-in-differences/) (level 3): we launched in one city and not the others. Did it work?
 
 Previous phase: [02 Statistics and experiments](../02-statistics-and-experiments/). Next phase: [04 Dashboards](../04-dashboards/).

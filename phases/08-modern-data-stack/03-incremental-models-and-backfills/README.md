@@ -312,4 +312,4 @@ Incremental models are what most dbt projects run every night. In the Real Analy
 
 ## Next
 
-[08-05 Query cost in a cloud warehouse](../05-cloud-warehouse-cost/): why reading the whole history costs money, and how partitions let a query read only the days it needs.
+[08-04 Orchestration: a tiny DAG runner](../04-orchestration-dag-runner/) (Level 3): what happens at 6 am when the 5 am job failed, and how to rerun it safely.

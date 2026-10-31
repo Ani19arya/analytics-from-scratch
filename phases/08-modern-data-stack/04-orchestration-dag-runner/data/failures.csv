@@ -1,0 +1,9 @@
+run_date,job,attempt
+2026-10-03,dim_customers,1
+2026-10-09,extract_payments,1
+2026-10-10,extract_orders,1
+2026-10-12,stg_payments,1
+2026-10-14,extract_orders,1
+2026-10-14,extract_payments,1
+2026-10-14,extract_payments,2
+2026-10-14,extract_payments,3

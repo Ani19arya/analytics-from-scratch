@@ -1,0 +1,13 @@
+job,depends_on,minutes,retries
+dashboard_refresh,mart_city_revenue mart_customer_counts,4,2
+dim_customers,stg_customers,2,1
+extract_customers,,2,2
+extract_orders,,7,2
+extract_payments,,5,2
+fct_orders,stg_orders stg_payments,6,1
+finance_email,mart_city_revenue,1,0
+mart_city_revenue,fct_orders dim_customers,3,1
+mart_customer_counts,dim_customers,1,1
+stg_customers,extract_customers,1,1
+stg_orders,extract_orders,3,1
+stg_payments,extract_payments,4,1

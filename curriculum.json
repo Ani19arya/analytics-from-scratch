@@ -711,7 +711,7 @@
      "question": "What share of job posts get an application within 48 hours, and which side is the constraint?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",
@@ -726,7 +726,7 @@
      "question": "We launched in one city and not the others. Did it work?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "causal"
@@ -1533,7 +1533,7 @@
      "question": "What happens at 6 am when the 5 am job failed?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "orchestration"

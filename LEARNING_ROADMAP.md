@@ -275,8 +275,8 @@ Level total: about 144 hours of focused work.
 
 **03 Metrics and product analytics**
 
-- [ ] 03-13 Marketplace metrics and liquidity *(planned)*: What share of job posts get an application within 48 hours, and which side is the constraint? About 2 h.
-- [ ] 03-14 Causal impact without an experiment: difference in differences *(planned)*: We launched in one city and not the others. Did it work? About 2 h.
+- [x] 03-13 [Marketplace metrics and liquidity](phases/03-metrics-and-product-analytics/13-marketplace-metrics): What share of job posts get an application within 48 hours, and which side is the constraint? About 2 h.
+- [x] 03-14 [Causal impact without an experiment: difference in differences](phases/03-metrics-and-product-analytics/14-difference-in-differences): We launched in one city and not the others. Did it work? About 2 h.
 
 **06 AI for analysts**
 
@@ -286,7 +286,7 @@ Level total: about 144 hours of focused work.
 
 **08 Modern data stack**
 
-- [ ] 08-04 Orchestration: a tiny DAG runner *(planned)*: What happens at 6 am when the 5 am job failed? About 2 h.
+- [x] 08-04 [Orchestration: a tiny DAG runner](phases/08-modern-data-stack/04-orchestration-dag-runner): What happens at 6 am when the 5 am job failed? About 2 h.
 
 **10 Capstone projects**
 
