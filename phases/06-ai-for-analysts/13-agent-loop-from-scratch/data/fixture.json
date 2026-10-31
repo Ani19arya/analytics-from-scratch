@@ -1,0 +1,11 @@
+{
+  "file": "agent_script.csv",
+  "source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "You are an analytics agent for the Larkspur Goods shop database. Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer.",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "Each turn was written for this lesson to behave like a tool-using model. The numbers in final answers come from running the script's own SQL on the seed's data. Some scripts go wrong on purpose. questions.csv says what a correct loop must do with each script.",
+  "tables": "customers.csv and orders.csv are synthetic, built by make_data.py",
+  "seed": 613
+}

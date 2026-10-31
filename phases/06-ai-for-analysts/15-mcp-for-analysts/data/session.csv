@@ -1,0 +1,26 @@
+seq,request,expected,why
+1,"{""jsonrpc"": ""2.0"", ""method"": ""initialize"", ""id"": 1, ""params"": {""client"": ""assistant""}}",result,the handshake
+2,"{""jsonrpc"": ""2.0"", ""method"": ""notifications/initialized""}",none,a notification has no id and gets no reply
+3,"{""jsonrpc"": ""2.0"", ""method"": ""tools/list"", ""id"": 2}",result,lists only the allowed tools
+4,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 3, ""params"": {""name"": ""list_tables"", ""arguments"": {}}}",result,names of the tables it may read
+5,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 4, ""params"": {""name"": ""describe_table"", ""arguments"": {""table"": ""customers""}}}",result,"columns, without phone"
+6,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 5, ""params"": {""name"": ""describe_table"", ""arguments"": {""table"": ""payouts""}}}",tool_error,payouts is not readable
+7,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 6, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT city, COUNT(*) AS orders, ROUND(SUM(amount), 2) AS revenue FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE status = 'completed' GROUP BY city ORDER BY city""}}}",result,an ordinary read
+8,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 7, ""params"": {""name"": ""get_metric"", ""arguments"": {""metric"": ""aov""}}}",result,a glossary lookup
+9,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 8, ""params"": {""name"": ""get_metric"", ""arguments"": {""metric"": ""nps""}}}",tool_error,no such metric
+10,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 9, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT name, phone FROM customers""}}}",tool_error,phone is blocked
+11,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 10, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT * FROM payouts""}}}",tool_error,payouts is not on the allowlist
+12,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 11, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""DELETE FROM orders WHERE status = 'cancelled'""}}}",tool_error,a write
+13,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 12, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT 1; DROP TABLE orders""}}}",tool_error,two statements
+14,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 13, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT order_id, amount FROM orders ORDER BY order_id""}}}",result,more rows than the cap: truncated
+15,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 14, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT review_id, rating, comment FROM reviews WHERE rating = 2 ORDER BY review_id""}}}",result,data that contains an instruction is still only data
+16,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 15, ""params"": {""name"": ""export_table"", ""arguments"": {""table"": ""customers""}}}",-32602,export_table exists on the server but is not allowed for this client
+17,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 16, ""params"": {""name"": ""run_query"", ""arguments"": {""query"": ""SELECT 1""}}}",-32602,wrong argument name
+18,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 17, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": 42}}}",-32602,sql must be a string
+19,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 18, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT 1"", ""timeout"": 999}}}",-32602,an argument the tool does not take
+20,"{""jsonrpc"": ""2.0"", ""method"": ""resources/delete"", ""id"": 19, ""params"": {""name"": ""orders""}}",-32601,no such method
+21,"{""jsonrpc"": ""2.0"", ""id"": 20, ""method"": ""tools/list""",-32700,not valid JSON
+22,"{""jsonrpc"": ""1.0"", ""id"": 21, ""method"": ""tools/list""}",-32600,wrong protocol version
+23,"{""jsonrpc"": ""2.0"", ""id"": 22, ""method"": ""tools/call"", ""params"": [""run_query""]}",-32600,params must be an object
+24,"[1, 2, 3]",-32600,a request must be a JSON object
+25,"{""jsonrpc"": ""2.0"", ""method"": ""tools/call"", ""id"": 23, ""params"": {""name"": ""run_query"", ""arguments"": {""sql"": ""SELECT COUNT(*) FROM orders WHERE status = 'completed'""}}}",result,back to normal: one bad request does not break the session

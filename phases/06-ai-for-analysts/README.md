@@ -45,8 +45,7 @@ flowchart LR
 10. [Natural language to SQL, safely](10-safe-nl-to-sql/). Can we let people ask the database questions in English without breaking anything?
 11. [Keep personal data out of prompts](11-keep-pii-out-of-prompts/). Is any customer's email or phone number about to leave the building?
 12. [RAG over the metrics glossary](12-rag-over-the-metrics-glossary/). Which definition of active user did the bot cite, and was it the right one?
-13. An analytics agent loop from scratch *(planned)*. What does an agent actually do between your question and its answer?
-14. Audit an agent's work *(planned)*. The agent says revenue grew 12%. Which step should we check, and was it right?
-15. MCP for analysts *(planned)*. How does an assistant get safe, read-only access to your data?
+13. [An analytics agent loop from scratch](13-agent-loop-from-scratch/). What does an agent actually do between your question and its answer?
+14. [Audit an agent's work](14-audit-an-agent-run/). The agent says revenue grew 12%. Which step should we check, and was it right?
+15. [MCP for analysts](15-mcp-for-analysts/). How does an assistant get safe, read-only access to your data?
 
-Planned lessons are listed in [curriculum.json](../../curriculum.json) and get a link here when they are finished and pass their tests.

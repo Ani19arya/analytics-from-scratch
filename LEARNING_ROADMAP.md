@@ -280,9 +280,9 @@ Level total: about 144 hours of focused work.
 
 **06 AI for analysts**
 
-- [ ] 06-13 An analytics agent loop from scratch *(planned)*: What does an agent actually do between your question and its answer? About 2 h.
-- [ ] 06-14 Audit an agent's work *(planned)*: The agent says revenue grew 12%. Which step should we check, and was it right? About 2 h.
-- [ ] 06-15 MCP for analysts *(planned)*: How does an assistant get safe, read-only access to your data? About 2 h.
+- [x] 06-13 [An analytics agent loop from scratch](phases/06-ai-for-analysts/13-agent-loop-from-scratch): What does an agent actually do between your question and its answer? About 2 h.
+- [x] 06-14 [Audit an agent's work](phases/06-ai-for-analysts/14-audit-an-agent-run): The agent says revenue grew 12%. Which step should we check, and was it right? About 2 h.
+- [x] 06-15 [MCP for analysts](phases/06-ai-for-analysts/15-mcp-for-analysts): How does an assistant get safe, read-only access to your data? About 2 h.
 
 **08 Modern data stack**
 

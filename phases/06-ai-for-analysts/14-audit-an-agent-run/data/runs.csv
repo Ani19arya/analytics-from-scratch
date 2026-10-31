@@ -1,0 +1,9 @@
+run_id,question,month_from,month_to,answer,planted_verdict,planted_step,depends_on,why
+R1,How much did revenue change from September to October 2026?,2026-09,2026-10,Revenue grew 12% from September to October.,wrong_definition,3,"2,3,4",the October query counts cancelled and refunded orders
+R2,How much did revenue change from August to September 2026?,2026-08,2026-09,Revenue grew 3.8% from August to September.,ok,,"2,3,4",clean
+R3,How much did revenue change from September to October 2026?,2026-09,2026-10,Revenue fell 11.7% from September to October.,ok,,"3,4,5",clean; step 2 looked at all October orders but the answer does not use it
+R4,How much did revenue change from September to October 2026?,2026-09,2026-10,Revenue fell 14.6% from September to October.,wrong_definition,3,"2,3,4",the October query stops before 31 October
+R5,How much did revenue change from August to September 2026?,2026-08,2026-09,Revenue fell 0.2% from August to September.,replay_mismatch,2,"2,3,4",the August result was recorded before late refunds were loaded
+R6,How much did revenue change from September to October 2026?,2026-09,2026-10,Revenue fell 13.3% from September to October.,arithmetic,4,"2,3,4",divides by the later month instead of the earlier one
+R7,How much did revenue change from August to September 2026?,2026-08,2026-09,Revenue grew 6.8% from August to September.,unsupported,5,,the final number is not the one the calculator returned
+R8,How much did revenue change from August to October 2026?,2026-08,2026-10,Revenue fell 8% from August to October.,ok,,"2,3,4",clean; the answer rounds to a whole percent

@@ -1,0 +1,11 @@
+{
+  "file": "run_steps.csv",
+  "source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "You are an analytics agent for the Larkspur Goods shop database. Answer the question using the tools describe_table, run_sql and calculate, then give a final answer.",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "Each trace was written for this lesson to look like an agent's step log. Observations come from running each step's SQL on the seed's data, except where a problem was planted. runs.csv records what was planted.",
+  "tables": "orders.csv is synthetic, built by make_data.py",
+  "seed": 676
+}

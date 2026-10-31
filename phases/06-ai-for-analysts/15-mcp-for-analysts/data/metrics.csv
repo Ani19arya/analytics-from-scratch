@@ -1,0 +1,4 @@
+metric,definition,sql
+completed_revenue,"Sum of amount over orders with status completed, by order_date.","SELECT ROUND(SUM(amount), 2) FROM orders WHERE status = 'completed'"
+aov,Average order value: completed revenue divided by the number of completed orders.,"SELECT ROUND(AVG(amount), 2) FROM orders WHERE status = 'completed'"
+active_customers,Customers with at least one completed order in the last 28 days.,"SELECT COUNT(DISTINCT customer_id) FROM orders WHERE status = 'completed' AND order_date >= date('2026-10-31', '-27 days')"

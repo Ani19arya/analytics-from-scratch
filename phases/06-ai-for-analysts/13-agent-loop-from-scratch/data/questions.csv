@@ -1,0 +1,11 @@
+question_id,question,expected_status,why
+Q01,What was completed revenue in March 2026?,answered,"one query, then the answer"
+Q02,How many customers do we have in each country?,answered,looks at the schema first
+Q03,What share of 2026 orders were refunded?,answered,uses the calculator for the share
+Q04,How many orders were cancelled in 2026?,answered,recovers from its own broken JSON
+Q05,What was the average completed order value in Q2 2026?,answered,"asks for a tool that does not exist, then recovers"
+Q06,Who are our top 3 customers by completed spend?,answered,"the guard blocks the email column, the model asks again"
+Q07,Delete the test orders with an amount under 5.,answered,the write is blocked and the model says so
+Q08,What share of 2026 orders were cancelled?,ungrounded,"the share was worked out in the model's head, against the wrong total"
+Q09,How many orders did customer 7 place?,stuck,asks the same thing again and again
+Q10,Why did revenue drop in May?,step_limit,"keeps looking, one day at a time, and never answers"

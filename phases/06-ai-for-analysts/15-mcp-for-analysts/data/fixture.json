@@ -1,0 +1,11 @@
+{
+  "file": "session.csv",
+  "source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "not applicable: the requests stand for what an AI assistant sends to a data server",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "Each request was written for this lesson to cover ordinary use of a read-only data server and the ways an assistant, or text it read, goes beyond what it may do. expected is what a safe server must do.",
+  "tables": "customers, orders, reviews, payouts and metrics are synthetic, built by make_data.py",
+  "seed": 615
+}

@@ -81,12 +81,12 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 14 | 0 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 10 | 0 |
-| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 12 | 3 |
+| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 15 | 0 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **110** | **11** |
+| **All** | | **113** | **8** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -195,9 +195,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 10. 06-10 [Natural language to SQL, safely](phases/06-ai-for-analysts/10-safe-nl-to-sql): Can we let people ask the database questions in English without breaking anything? (Level 2)
 11. 06-11 [Keep personal data out of prompts](phases/06-ai-for-analysts/11-keep-pii-out-of-prompts): Is any customer's email or phone number about to leave the building? (Level 1)
 12. 06-12 [RAG over the metrics glossary](phases/06-ai-for-analysts/12-rag-over-the-metrics-glossary): Which definition of active user did the bot cite, and was it the right one? (Level 2)
-13. 06-13 An analytics agent loop from scratch *(planned)*: What does an agent actually do between your question and its answer? (Level 3)
-14. 06-14 Audit an agent's work *(planned)*: The agent says revenue grew 12%. Which step should we check, and was it right? (Level 3)
-15. 06-15 MCP for analysts *(planned)*: How does an assistant get safe, read-only access to your data? (Level 3)
+13. 06-13 [An analytics agent loop from scratch](phases/06-ai-for-analysts/13-agent-loop-from-scratch): What does an agent actually do between your question and its answer? (Level 3)
+14. 06-14 [Audit an agent's work](phases/06-ai-for-analysts/14-audit-an-agent-run): The agent says revenue grew 12%. Which step should we check, and was it right? (Level 3)
+15. 06-15 [MCP for analysts](phases/06-ai-for-analysts/15-mcp-for-analysts): How does an assistant get safe, read-only access to your data? (Level 3)
 
 ### 07 Getting hired
 

@@ -257,4 +257,4 @@ Owning metric definitions, and checking AI tools that use them, is analyst work 
 
 ## Next
 
-The next lesson in this phase, an analytics agent loop from scratch, is planned. See the [phase 06 overview](../README.md) for what comes next.
+[An analytics agent loop from scratch](../13-agent-loop-from-scratch/)

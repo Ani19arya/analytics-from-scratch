@@ -1258,7 +1258,7 @@
      "question": "What does an agent actually do between your question and its answer?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1273,7 +1273,7 @@
      "question": "The agent says revenue grew 12%. Which step should we check, and was it right?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1289,7 +1289,7 @@
      "question": "How does an assistant get safe, read-only access to your data?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
