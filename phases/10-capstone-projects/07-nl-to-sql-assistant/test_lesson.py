@@ -483,7 +483,7 @@ class TestRecommend(unittest.TestCase):
 
 # ---------- the optional live layer (live_run.py): FakeAdapter only, no network, no key ----------
 
-FAKE_KEY = "sk-fake-test-key-" + "7f3a9c" * 4
+FAKE_KEY = "FAKE_not_a_real_key_" + "7f3a9c" * 4
 QUESTIONS = [{"question_id": "T%d" % i, "question": "How many orders in month %d?" % i} for i in range(1, 4)]
 
 
