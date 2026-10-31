@@ -1,6 +1,8 @@
 -- Lesson 02: funnel conversion. Worked answer.
 -- Table: events(user_id, event_name, event_time)   event_time is text 'YYYY-MM-DD HH:MM:SS'
 -- Steps in order: view_course, add_to_cart, begin_checkout, purchase
+-- Comparing event_time as text gives time order only because the format is
+-- ISO (biggest unit first, fixed width). In other databases use a timestamp column.
 
 -- query: events_per_step
 SELECT event_name, COUNT(*) AS events, COUNT(DISTINCT user_id) AS users
@@ -22,15 +24,18 @@ WITH firsts AS (
   GROUP BY user_id
 ),
 reached AS (
+  -- CASE WHEN ... THEN 1 ELSE 0 END works in every database. A comparison with
+  -- NULL is not true, so a user missing a step gets 0.
   SELECT
     user_id,
-    t1 IS NOT NULL AS s1,
-    t1 IS NOT NULL AND t2 >= t1 AS s2,
-    t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AS s3,
-    t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AND t4 >= t3 AS s4
+    CASE WHEN t1 IS NOT NULL THEN 1 ELSE 0 END AS s1,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 THEN 1 ELSE 0 END AS s2,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 THEN 1 ELSE 0 END AS s3,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AND t4 >= t3 THEN 1 ELSE 0 END AS s4
   FROM firsts
 ),
 steps AS (
+  -- UNION ALL stacks the four one-row results into one table, keeping every row.
   SELECT 1 AS step_number, 'view_course' AS step, SUM(s1) AS users FROM reached
   UNION ALL SELECT 2, 'add_to_cart', SUM(s2) FROM reached
   UNION ALL SELECT 3, 'begin_checkout', SUM(s3) FROM reached
@@ -58,10 +63,10 @@ WITH firsts AS (
 ),
 reached AS (
   SELECT
-    t1 IS NOT NULL AS s1,
-    t1 IS NOT NULL AND t2 >= t1 AS s2,
-    t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AS s3,
-    t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AND t4 >= t3 AS s4
+    CASE WHEN t1 IS NOT NULL THEN 1 ELSE 0 END AS s1,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 THEN 1 ELSE 0 END AS s2,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 THEN 1 ELSE 0 END AS s3,
+    CASE WHEN t1 IS NOT NULL AND t2 >= t1 AND t3 >= t2 AND t4 >= t3 THEN 1 ELSE 0 END AS s4
   FROM firsts
 ),
 steps AS (
@@ -82,5 +87,5 @@ conv AS (
 SELECT from_step, to_step, users_lost, step_conversion_pct
 FROM conv
 WHERE from_step IS NOT NULL
-ORDER BY step_conversion_pct ASC
+ORDER BY step_conversion_pct ASC, step_number ASC
 LIMIT 1;

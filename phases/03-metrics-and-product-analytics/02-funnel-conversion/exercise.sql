@@ -19,7 +19,8 @@
 -- Both rounded to 1 decimal.
 -- Columns: step_number, step, users, step_conversion_pct, overall_conversion_pct.
 -- Order by step_number.
--- Hint: MIN(CASE WHEN event_name = '...' THEN event_time END) per user, then
+-- Hint: MIN(CASE WHEN event_name = '...' THEN event_time END) per user, then a
+-- 0/1 flag per step with CASE WHEN ... THEN 1 ELSE 0 END, then
 -- LAG() and FIRST_VALUE() over (ORDER BY step_number).
 
 
@@ -27,3 +28,4 @@
 -- TODO: the single step-to-step transition with the lowest step conversion.
 -- Columns: from_step, to_step, users_lost, step_conversion_pct (1 decimal).
 -- users_lost = users at from_step - users at to_step.
+-- On a tie (two transitions with the same rounded step_conversion_pct), return the earlier one.

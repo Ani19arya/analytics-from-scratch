@@ -27,16 +27,27 @@ def load_weeks(path, split_date, channel=None):
     raise NotImplementedError
 
 
+def log_mean(a, b):
+    """The logarithmic mean of two positive numbers:
+    L(a, b) = (a - b) / (ln a - ln b), and L(a, a) = a."""
+    # TODO
+    raise NotImplementedError
+
+
 def decompose(prior, current):
-    """Split the revenue change into the part from each factor with the log method:
-    effect_f = total_change * ln(current_f / prior_f) / ln(current_rev / prior_rev)
+    """Split the revenue change into the part from each factor (LMDI):
+    effect_f = log_mean(current revenue, prior revenue) * ln(current_f / prior_f)
     Return a dict with keys visitors, conversion, aov, total, where
-    total = current revenue - prior revenue. If revenue did not change, every effect is 0.0."""
+    total = current revenue - prior revenue. The three effects add up to total,
+    even when revenue did not change.
+    If revenue or any factor is 0 in either period, set the three factor
+    effects to None (a log of 0 is undefined) and still fill in total."""
     # TODO
     raise NotImplementedError
 
 
 def main_driver(effects):
-    """Return the factor name (visitors, conversion or aov) with the largest absolute effect."""
+    """Return the factor name (visitors, conversion or aov) with the largest absolute effect.
+    A tie goes to the factor listed first in FACTORS. Return None if the effects are None."""
     # TODO
     raise NotImplementedError

@@ -1,6 +1,7 @@
 """Lesson 01: metric trees. Worked answer.
 
 revenue = visitors x conversion x average order value (AOV)
+The split of a revenue change uses the logarithmic mean (LMDI).
 """
 import csv
 import math
@@ -10,7 +11,8 @@ FACTORS = ("visitors", "conversion", "aov")
 
 def build_tree(visitors, orders, revenue):
     """Return the tree for one period as a dict with keys
-    visitors, orders, revenue, conversion (orders / visitors), aov (revenue / orders)."""
+    visitors, orders, revenue, conversion (orders / visitors), aov (revenue / orders).
+    A ratio whose denominator is 0 is 0.0."""
     return {
         "visitors": visitors,
         "orders": orders,
@@ -36,24 +38,43 @@ def load_weeks(path, split_date, channel=None):
     return build_tree(*sums["prior"]), build_tree(*sums["current"])
 
 
+def log_mean(a, b):
+    """The logarithmic mean of two positive numbers: (a - b) / (ln a - ln b),
+    and a itself when a equals b (the limit of the formula)."""
+    if a == b:
+        return float(a)
+    return (a - b) / (math.log(a) - math.log(b))
+
+
 def decompose(prior, current):
-    """Split the revenue change into the part from each factor with the log method:
-    effect_f = total_change * ln(current_f / prior_f) / ln(current_rev / prior_rev).
-    Return a dict with keys visitors, conversion, aov, total. The three effects sum to total."""
+    """Split the revenue change into the part from each factor (LMDI):
+    effect_f = L(current_rev, prior_rev) * ln(current_f / prior_f).
+    Return a dict with keys visitors, conversion, aov, total. The three effects sum to total.
+    If revenue or any factor is 0 in either period, the logs are undefined, so every
+    factor effect is None and only total is filled in."""
     total = current["revenue"] - prior["revenue"]
     result = {"total": total}
-    log_total = math.log(current["revenue"] / prior["revenue"])
+    values = [prior["revenue"], current["revenue"]] + [t[f] for t in (prior, current) for f in FACTORS]
+    if any(v <= 0 for v in values):
+        for f in FACTORS:
+            result[f] = None
+        return result
+    weight = log_mean(current["revenue"], prior["revenue"])
     for f in FACTORS:
-        if log_total == 0:
-            result[f] = 0.0
-        else:
-            result[f] = total * math.log(current[f] / prior[f]) / log_total
+        result[f] = weight * math.log(current[f] / prior[f])
     return result
 
 
 def main_driver(effects):
-    """Return the factor name (visitors, conversion or aov) with the largest absolute effect."""
-    return max(FACTORS, key=lambda f: abs(effects[f]))
+    """Return the factor name (visitors, conversion or aov) with the largest absolute effect.
+    A tie goes to the factor listed first in FACTORS. None if the effects are None."""
+    if any(effects[f] is None for f in FACTORS):
+        return None
+    best = FACTORS[0]
+    for f in FACTORS[1:]:
+        if abs(effects[f]) > abs(effects[best]):
+            best = f
+    return best
 
 
 if __name__ == "__main__":
@@ -68,5 +89,5 @@ if __name__ == "__main__":
     for ch in ("search", "email", "paid_social"):
         p, c = load_weeks(data, "2026-10-12", channel=ch)
         e = decompose(p, c)
-        print("%-12s revenue change %9.2f  conversion %.4f -> %.4f  driver: %s" % (
-            ch, e["total"], p["conversion"], c["conversion"], main_driver(e)))
+        print("%-12s revenue change %9.2f  conversion %.4f -> %.4f  aov %.2f -> %.2f  driver: %s" % (
+            ch, e["total"], p["conversion"], c["conversion"], p["aov"], c["aov"], main_driver(e)))
