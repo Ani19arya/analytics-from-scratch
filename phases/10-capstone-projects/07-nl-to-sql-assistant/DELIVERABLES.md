@@ -50,4 +50,11 @@ Score it with [RUBRIC.md](RUBRIC.md). Then read [solution/WRITEUP.md](solution/W
 
 ## Optional: run it against a real model
 
-`live_run.py` re-records the replies with a model of your choice, through a command you supply that holds your own key. It is never used by the test. Grade the new replies with the same code, and say in your write-up which model, date and temperature produced them.
+Not needed to pass, and it costs money. Follow "Going live (optional)" in the [README](README.md): rehearse with `python3 live_run.py --dry-run --use-solution`, then record a run with a model of your choice into `data/live_runs/<time>/`. Hand in:
+
+1. The `fixture.json` of your run (it never holds your key): model, date, prompt version, temperature, tokens and cost, and whether the budget stopped it.
+2. The live and simulated scorecards side by side from `python3 live_run.py --grade <folder>`, and the decision the BRIEF's rule gives for each.
+3. Three lines: how many replies failed the JSON check, how many queries the gateway blocked, and one reply that was graded differently from the simulated one, with why.
+4. One sentence for Morven on what a live run changes in your recommendation, and why it is one run of one model on one day.
+
+If you used the fictional rate card, say so next to any cost figure.

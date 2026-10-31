@@ -324,9 +324,31 @@ The test rebuilds the snapshot a second way and compares it with yours, on the c
 
 Then write the scorecard, the error analysis, the chart and the one-page write-up, and score them with [RUBRIC.md](RUBRIC.md). Read `solution/` only after that: [solution/WRITEUP.md](solution/WRITEUP.md) is a two-point answer on every rubric row, with the reasoning.
 
-Optional: `live_run.py` re-records the replies with a real model through a command you supply, which holds your own key. Grade them with your own code and compare with the simulated replies.
-
 Stretch: a manager will not ask the 30 questions in the test set. Write 10 more answerable questions the way a manager would type them ("leeds rev last month?"), with golden SQL, and add them to your own copy of the eval set. How much does the Wilson interval for v2 narrow, and what would it take to get its lower end above 0.90?
+
+### Going live (optional)
+
+Everything above runs offline on simulated replies, and the test never calls a model. `live_run.py` is a provided helper (not a TODO) that asks a real model the same 42 questions and records the run, so you can see what calling an API properly takes. It uses only the standard library: no provider SDK.
+
+- **Adapters.** `openai` posts to any OpenAI-compatible chat completions endpoint; `command` pipes each prompt to a command you supply; `FakeAdapter` replays the simulated replies and is what the test uses. To add a provider, write one class with a `complete()` method.
+- **Retries.** A 429, a 5xx or a timeout is retried with exponential backoff and jitter (waits of up to 1, 2, then 4 seconds, each a random point in the top half), honouring `Retry-After`. A 401 or a bad request is not retried.
+- **Budget.** Each run has a token cap and a money cap, checked before every call. Tokens come from the provider's `usage` field when it sends one, else an estimate (about 4 characters per token), marked `estimated` in `calls.csv`. The built-in rate card is **fictional**; set `LLM_PRICE_IN` and `LLM_PRICE_OUT` (price per million tokens, from your provider's price page) for a real estimate.
+- **Structured output.** The model must reply with JSON: `kind` (sql, clarify or refuse), `sql` and a short `reason`. A reply that fails the check gets one retry with the error; a second failure is recorded as an empty reply, which can never be graded correct.
+- **The gateway.** Every query the model writes goes through `run_guarded` (yours, or the solution's with `--use-solution`) on a fresh database file. Nothing else runs SQL.
+- **The key.** Read only from `LLM_API_KEY`, sent only in the `Authorization` header over HTTPS, never printed. Every file is checked before it is written; if the key would end up in one, nothing is written and the run stops.
+
+Rehearse for free first, then do a small live run, then a full one (from this folder, with your own provider's URL and model name):
+
+    python3 live_run.py --dry-run --use-solution
+    export LLM_BASE_URL="https://your-provider.example/v1" LLM_MODEL="the model name"
+    read -s LLM_API_KEY && export LLM_API_KEY
+    python3 live_run.py --use-solution --limit 4 --max-cost 0.05
+    python3 live_run.py --use-solution
+    python3 live_run.py --use-solution --grade data/live_runs/<the folder it printed>
+
+`read -s` keeps the key out of your shell history. With `LLM_COMMAND` instead of `LLM_BASE_URL`, your own command holds the key. Drop `--use-solution` to use your own `exercise.py`. Each run writes `data/live_runs/<UTC time>/` (git-ignored, never committed): `model_runs.csv` with the same columns as `data/model_runs.csv`, `calls.csv` with tokens, retries and the gateway result for every reply, and `fixture.json` with the provenance: model, endpoint host, date, prompt version and a hash of each prompt template, temperature, tokens, cost and whether the budget stopped the run.
+
+`--grade` scores the recording with the same offline grader, prints the simulated scorecards for the same questions under it, then lists every reply graded differently. The dry run shows 0 differences; a live run will not. Be honest about what a live run is: it costs money, the replies change between model versions and from run to run even at temperature 0, and the JSON wrapper tells v1 that it may ask back or refuse, which the plain v1 prompt does not. Record once, grade many times, and quote the model, date and temperature from `fixture.json` next to any live number.
 
 ## Check yourself
 

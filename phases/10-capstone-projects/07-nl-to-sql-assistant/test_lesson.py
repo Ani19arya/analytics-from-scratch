@@ -7,12 +7,17 @@ What it checks, all against answers worked out here, not read from the solution:
   (never written to a CSV) plus a direct run of the SQL where a mistake can be right by luck;
 - Wilson against a bisection on the score inequality, exact McNemar against full enumeration
   and a seeded simulation;
-- the scorecards and the recommendation, by the rule in BRIEF.md.
+- the scorecards and the recommendation, by the rule in BRIEF.md;
+- the optional live layer in live_run.py (a provided helper, not a TODO), driven only by its
+  FakeAdapter and a stand-in for the network: retries and backoff, the budget caps, the JSON
+  schema check, the gateway on every model-written query, and that the key is never written.
 The database file is hashed before and after grading, so a gateway that lets a write through fails.
 """
 import csv
 import hashlib
 import importlib.util
+import io
+import json
 import math
 import os
 import random
@@ -20,6 +25,7 @@ import shutil
 import sqlite3
 import tempfile
 import unittest
+import urllib.error
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TARGET = os.path.join(HERE, "solution", "solution.py") if os.environ.get("CHECK_SOLUTION") == "1" else os.path.join(HERE, "exercise.py")
@@ -34,6 +40,7 @@ def load_module(name, path):
 
 lesson = load_module("submission", TARGET)
 make_data = load_module("make_data_10_07", os.path.join(HERE, "make_data.py"))
+live = load_module("live_run_10_07", os.path.join(HERE, "live_run.py"))
 
 OTHER_SEED = 2004
 SNAPSHOT = "2026-10-01 00:00:00"
@@ -472,6 +479,225 @@ class TestRecommend(unittest.TestCase):
         card = lesson.scorecard({}, [], "v2")
         self.assertEqual((card["answerable"], card["correct"], card["accuracy"]), (0, 0, 0.0), "no answerable questions: accuracy 0.0")
         self.assertEqual((card["wilson_low"], card["wilson_high"]), (0.0, 1.0))
+
+
+# ---------- the optional live layer (live_run.py): FakeAdapter only, no network, no key ----------
+
+FAKE_KEY = "sk-fake-test-key-" + "7f3a9c" * 4
+QUESTIONS = [{"question_id": "T%d" % i, "question": "How many orders in month %d?" % i} for i in range(1, 4)]
+
+
+def valid_json(kind="sql", sql="SELECT COUNT(*) FROM orders", reason="counts the orders"):
+    return json.dumps({"kind": kind, "sql": sql if kind == "sql" else "", "reason": reason})
+
+
+class LiveCase(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="w9-live-test-")
+        self.out = os.path.join(self.tmp, "run")
+        self.log, self.sleeps, self.gateway_sql = [], [], []
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def stub_gateway(self, sql):
+        """Stands in for run_guarded in tests that are not about the gateway. It runs nothing."""
+        self.gateway_sql.append(sql)
+        return {"status": "ok", "reason": "", "rows": [(1,)]}
+
+    def record(self, adapter, gateway=None, questions=QUESTIONS, **kw):
+        kw.setdefault("sleep", self.sleeps.append)
+        kw.setdefault("rand", lambda: 0.5)
+        clock = iter(range(0, 10000))
+        kw.setdefault("clock", lambda: float(next(clock)))
+        return live.record_run(questions, adapter, self.out, lambda q, v: "Question: " + q, gateway or self.stub_gateway,
+                               log=self.log.append, **kw)
+
+    def read_csv(self, name):
+        with open(os.path.join(self.out, name), newline="") as f:
+            return list(csv.DictReader(f))
+
+
+class TestLiveRetry(LiveCase):
+    def test_backoff_doubles_with_jitter(self):
+        self.assertEqual([live.backoff_delay(a, 1.0, 30.0, lambda: 0.5) for a in (1, 2, 3, 4)], [0.75, 1.5, 3.0, 6.0])
+        self.assertEqual(live.backoff_delay(9, 1.0, 30.0, lambda: 1.0), 30.0, "the wait never passes the cap")
+        rng = random.Random(3)
+        for attempt in range(1, 9):
+            ceiling = min(30.0, 2 ** (attempt - 1))
+            wait = live.backoff_delay(attempt, 1.0, 30.0, rng.random)
+            self.assertTrue(ceiling / 2 <= wait <= ceiling, "jitter keeps the wait in the top half of the ceiling")
+
+    def test_retries_429_5xx_and_timeouts_then_succeeds(self):
+        fake = live.FakeAdapter([live.TransientError("rate limited", 429), live.TransientError("server", 503),
+                                 live.TransientError("timeout"), live.Reply("ok")])
+        reply, calls, waits = live.call_with_retry(fake, [{"role": "user", "content": "x"}], 0.0, 10,
+                                                   sleep=self.sleeps.append, rand=lambda: 0.5)
+        self.assertEqual((reply.text, calls), ("ok", 4))
+        self.assertEqual(self.sleeps, [0.75, 1.5, 3.0], "waits double: 0.75, 1.5, 3.0 with the jitter fixed at 0.5")
+        self.assertEqual(waits, self.sleeps)
+
+    def test_retry_after_is_honoured_up_to_the_cap(self):
+        fake = live.FakeAdapter([live.TransientError("slow down", 429, retry_after=12), live.TransientError("slow", 429, retry_after=99),
+                                 live.Reply("ok")])
+        live.call_with_retry(fake, [{"role": "user", "content": "x"}], 0.0, 10, max_delay=20.0, sleep=self.sleeps.append, rand=lambda: 0.5)
+        self.assertEqual(self.sleeps, [12, 20.0])
+
+    def test_gives_up_and_never_retries_a_permanent_error(self):
+        fake = live.FakeAdapter([live.TransientError("busy", 503)] * 4)
+        with self.assertRaises(live.TransientError):
+            live.call_with_retry(fake, [{"role": "user", "content": "x"}], 0.0, 10, max_attempts=4, sleep=self.sleeps.append, rand=lambda: 0.5)
+        self.assertEqual((len(fake.calls), len(self.sleeps)), (4, 3), "4 calls, 3 waits, then give up")
+        fake = live.FakeAdapter([live.PermanentError("HTTP 401"), live.Reply("never reached")])
+        with self.assertRaises(live.PermanentError):
+            live.call_with_retry(fake, [{"role": "user", "content": "x"}], 0.0, 10, sleep=self.sleeps.append)
+        self.assertEqual(len(fake.calls), 1, "a 401 is not retried")
+
+    def test_a_failing_provider_stops_the_run_and_keeps_what_was_done(self):
+        fake = live.FakeAdapter([valid_json()] + [live.TransientError("busy", 503)] * 4)
+        fixture = self.record(fake, versions=("v1",), max_attempts=4)
+        self.assertIn("call failed", fixture["budget"]["stopped_early"])
+        self.assertEqual([r["question_id"] for r in self.read_csv("model_runs.csv")], ["T1"])
+
+
+class TestLiveBudget(LiveCase):
+    def test_token_cap_stops_the_run(self):
+        fake = live.FakeAdapter(lambda m, meta: live.Reply(valid_json(), {"prompt_tokens": 400, "completion_tokens": 50}))
+        fixture = self.record(fake, budget=live.Budget(max_tokens=1000), max_output_tokens=100)
+        self.assertEqual(len(fake.calls), 2, "450 + 450 tokens used; a third call could pass 1000, so it is never made")
+        self.assertTrue(fixture["budget"]["stopped_early"].startswith("budget: token cap 1000"))
+        self.assertEqual(fixture["replies_recorded"], 2)
+        self.assertEqual(fixture["tokens"]["prompt"] + fixture["tokens"]["completion"], 900)
+        self.assertEqual(fixture["tokens"]["calls_with_reported_usage"], 2, "use the usage field when the provider sends it")
+        self.assertEqual(len(self.read_csv("model_runs.csv")), 2, "a stopped run still records what it did")
+
+    def test_cost_cap_uses_the_fictional_rate_card(self):
+        self.assertIn("FICTIONAL", live.FICTIONAL_RATE_CARD["label"])
+        fake = live.FakeAdapter(lambda m, meta: live.Reply(valid_json(), {"prompt_tokens": 400, "completion_tokens": 50}))
+        fixture = self.record(fake, budget=live.Budget(max_cost=0.001), max_output_tokens=100)
+        self.assertEqual(len(fake.calls), 1)
+        self.assertIn("cost cap", fixture["budget"]["stopped_early"])
+        self.assertAlmostEqual(fixture["cost"]["amount"], (400 * 1.00 + 50 * 5.00) / 1e6)
+        self.assertIn("FICTIONAL", fixture["cost"]["rate_card"]["label"])
+
+    def test_no_usage_field_means_a_labelled_estimate(self):
+        fake = live.FakeAdapter(lambda m, meta: valid_json())
+        fixture = self.record(fake, versions=("v1",))
+        self.assertEqual({r["token_source"] for r in self.read_csv("calls.csv")}, {"estimated"})
+        self.assertEqual(fixture["tokens"]["calls_with_estimated_usage"], 3)
+        self.assertIn("estimate", fixture["tokens"]["estimate_rule"])
+
+
+class TestLiveSchema(LiveCase):
+    def test_validate_reply(self):
+        good = [valid_json(), "```json\n" + valid_json("clarify", reason="Which month?") + "\n```", valid_json("refuse", reason="personal data")]
+        for text in good:
+            obj, err = live.validate_reply(text)
+            self.assertIsNone(err, "%r should be valid: %s" % (text, err))
+        bad = ["SELECT 1", "[1]", '{"kind": "sql", "sql": "SELECT 1"}', valid_json()[:-1] + ', "extra": 1}',
+               valid_json("guess"), json.dumps({"kind": "sql", "sql": "", "reason": "r"}),
+               json.dumps({"kind": "refuse", "sql": "SELECT 1", "reason": "r"}), json.dumps({"kind": "sql", "sql": "SELECT 1", "reason": ""})]
+        for text in bad:
+            obj, err = live.validate_reply(text)
+            self.assertIsNone(obj, "%r should fail the schema" % text)
+            self.assertTrue(err)
+        self.assertEqual(live.as_reply_text(live.validate_reply(valid_json("clarify", reason="Which month?"))[0]), "CLARIFY: Which month?")
+
+    def test_one_retry_with_the_error_then_a_recorded_failure(self):
+        fake = live.FakeAdapter(["SELECT COUNT(*) FROM orders", '{"kind": "sql"}'])
+        fixture = self.record(fake, questions=QUESTIONS[:1], versions=("v2",))
+        self.assertEqual(len(fake.calls), 2, "one retry, no more")
+        second = fake.calls[1]["messages"]
+        self.assertEqual([m["role"] for m in second], ["user", "assistant", "user"])
+        self.assertIn("not valid JSON", second[-1]["content"], "the retry tells the model what was wrong")
+        row = self.read_csv("calls.csv")[0]
+        self.assertEqual((row["status"], row["calls"]), ("schema_failed", "2"))
+        self.assertEqual(self.read_csv("model_runs.csv")[0]["reply"], "", "a failure is an empty reply, never counted correct")
+        self.assertEqual((fixture["schema_failures"], self.gateway_sql), (1, []), "nothing reached the database")
+
+    def test_a_fixed_reply_on_the_retry_is_accepted(self):
+        fake = live.FakeAdapter(['{"kind": "sql", "sql": "SELECT 1"}', valid_json()])
+        self.record(fake, questions=QUESTIONS[:1], versions=("v1",))
+        self.assertEqual(self.read_csv("calls.csv")[0]["status"], "ok")
+        self.assertEqual(self.gateway_sql, ["SELECT COUNT(*) FROM orders"])
+
+
+class TestLiveKey(LiveCase):
+    def fake_network(self, bodies):
+        """Stands in for urllib.request.urlopen: no connection is opened."""
+        self.requests = []
+
+        def urlopen(req, timeout):
+            self.requests.append(req)
+            status, body = bodies.pop(0)
+            if status != 200:
+                raise urllib.error.HTTPError(req.full_url, status, "error", {"Retry-After": "1"}, io.BytesIO(body.encode()))
+            return io.BytesIO(body.encode())
+        return urlopen
+
+    def completion(self, content):
+        return json.dumps({"choices": [{"message": {"content": content}}], "usage": {"prompt_tokens": 120, "completion_tokens": 30}})
+
+    def test_key_used_only_in_the_header_and_never_written_or_printed(self):
+        bodies = [(429, "rate limited for key %s" % FAKE_KEY)] + [(200, self.completion(valid_json()))] * 6
+        adapter = live.OpenAICompatibleAdapter("https://llm.example.test/v1", FAKE_KEY, "example-model", urlopen=self.fake_network(bodies))
+        self.assertNotIn(FAKE_KEY, repr(adapter))
+        fixture = self.record(adapter, secrets=[FAKE_KEY])
+        req = self.requests[0]
+        self.assertEqual(req.full_url, "https://llm.example.test/v1/chat/completions")
+        self.assertEqual(req.get_header("Authorization"), "Bearer " + FAKE_KEY)
+        self.assertNotIn(FAKE_KEY, req.data.decode(), "the key is not in the request body")
+        self.assertEqual((fixture["model"], fixture["endpoint_host"], fixture["retries"]), ("example-model", "llm.example.test", 1))
+        for name in os.listdir(self.out):
+            with open(os.path.join(self.out, name)) as f:
+                self.assertNotIn(FAKE_KEY, f.read(), "the key is in %s" % name)
+        self.assertNotIn(FAKE_KEY, "\n".join(self.log), "the key was printed")
+        self.assertIn("[redacted]", "\n".join(self.log), "the echoed key in the 429 body is redacted")
+
+    def test_a_reply_echoing_the_key_writes_nothing(self):
+        bodies = [(200, self.completion(valid_json("refuse", reason="my key is " + FAKE_KEY)))]
+        adapter = live.OpenAICompatibleAdapter("https://llm.example.test/v1", FAKE_KEY, "m", urlopen=self.fake_network(bodies))
+        with self.assertRaises(live.SecretLeak):
+            self.record(adapter, questions=QUESTIONS[:1], versions=("v2",), secrets=[FAKE_KEY])
+        self.assertFalse(os.path.exists(self.out) and os.listdir(self.out), "no file may be written")
+
+    def test_refuses_settings_that_would_leak_the_key(self):
+        with self.assertRaises(live.SecretLeak):
+            live.check_config({"LLM_BASE_URL": "https://x.test/v1/" + FAKE_KEY}, [FAKE_KEY])
+        with self.assertRaises(live.SecretLeak):
+            live.OpenAICompatibleAdapter("http://llm.example.test/v1", FAKE_KEY, "m")
+        with self.assertRaises(live.PermanentError):
+            live.OpenAICompatibleAdapter("https://llm.example.test/v1?key=abc", FAKE_KEY, "m")
+        with self.assertRaises(live.PermanentError):
+            live.OpenAICompatibleAdapter("https://llm.example.test/v1", "", "m")
+        live.OpenAICompatibleAdapter("http://localhost:8080/v1", FAKE_KEY, "m")
+        self.assertEqual(live.read_key({"LLM_API_KEY": FAKE_KEY}), FAKE_KEY)
+        with open(os.path.join(HERE, "live_run.py")) as f:
+            source = f.read()
+        self.assertNotIn("api-key", source.replace("LLM_API_KEY", ""), "the key has no command-line flag")
+        self.assertNotIn("import sqlite3", source, "live_run.py runs SQL only through the submission's run_guarded")
+
+
+class TestLiveGateway(GatewayCase):
+    def test_every_model_query_goes_through_the_gateway(self):
+        replies = {"H1": valid_json(sql="SELECT email FROM customers"), "H2": valid_json(sql="DELETE FROM orders"),
+                   "H3": valid_json(sql="SELECT COUNT(*) FROM courier_pay"), "A1": valid_json(sql="SELECT COUNT(*) FROM orders")}
+        questions = [{"question_id": k, "question": "q", "category": "answerable" if k == "A1" else "hostile",
+                      "golden_sql": "SELECT COUNT(*) FROM orders" if k == "A1" else "", "ordered": "0"} for k in sorted(replies)]
+        fake = live.FakeAdapter(lambda m, meta: replies[meta[0]])
+        out = os.path.join(self.tmp, "live_gateway")
+        live.record_run(questions, fake, out, lambda q, v: q, lambda sql: lesson.run_guarded(self.path, sql),
+                        versions=("v2",), sleep=lambda s: None, log=lambda t: None)
+        self.assertEqual(file_hash(self.path), self.hash, "a model-written query changed the database")
+        with open(os.path.join(out, "calls.csv"), newline="") as f:
+            status = {r["question_id"]: r["gateway_status"] for r in csv.DictReader(f)}
+        self.assertEqual(status, {"A1": "ok", "H1": "blocked", "H2": "blocked", "H3": "blocked"})
+        with open(os.path.join(out, "model_runs.csv"), newline="") as f:
+            runs = list(csv.DictReader(f))
+        self.assertEqual(list(runs[0].keys()), ["question_id", "prompt_version", "reply"], "same columns as data/model_runs.csv")
+        graded = lesson.grade_all(self.path, questions, runs)
+        self.assertEqual(graded, {("A1", "v2"): "correct", ("H1", "v2"): "blocked", ("H2", "v2"): "blocked", ("H3", "v2"): "blocked"},
+                         "the offline grader reads a live recording as it reads the simulated one")
 
 
 if __name__ == "__main__":
