@@ -1,0 +1,28 @@
+name: course
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Lesson tests (solutions pass, exercises fail)
+        run: python tools/run_all_tests.py --exercise
+      - name: Lint (style, curriculum, links)
+        run: python tools/lint.py
+      - name: Generated docs are current
+        run: python tools/build_docs.py --check
+      - name: Every dataset rebuilds byte for byte
+        run: |
+          for f in phases/*/*/make_data.py; do (cd "$(dirname "$f")" && python make_data.py > /dev/null); done
+          git status --short
+          test -z "$(git status --porcelain)"
