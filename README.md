@@ -89,7 +89,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | **All** | | **121** | **0** |
 <!-- /generated:phase-table -->
 
-Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
+Every lesson listed is live. A lesson is only listed as live when its test passes.
 
 <!-- generated:phase-lessons -->
 ### 00 Start here

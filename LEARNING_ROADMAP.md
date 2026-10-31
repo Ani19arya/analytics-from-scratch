@@ -304,4 +304,4 @@ Level total: about 108 hours of focused work.
 
 ## Stay current
 
-The job-market numbers in this course are refreshed from the public Real Analyst Jobs feed. When the evidence moves, [2026-2027-ANALYTICS-SKILLS.md](2026-2027-ANALYTICS-SKILLS.md) and this roadmap move with it. Lessons marked *planned* are being written in roughly the order listed; [CONTRIBUTING.md](CONTRIBUTING.md) explains how to help.
+The job-market numbers in this course are refreshed from the public Real Analyst Jobs feed. When the evidence moves, [2026-2027-ANALYTICS-SKILLS.md](2026-2027-ANALYTICS-SKILLS.md) and this roadmap move with it. Every lesson listed here is live; [CONTRIBUTING.md](CONTRIBUTING.md) explains how to report a problem or propose a new one.
