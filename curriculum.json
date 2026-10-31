@@ -1583,7 +1583,7 @@
      "question": "Revenue is down 8% on last quarter. Traffic, conversion, basket size or mix?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1598,7 +1598,7 @@
      "question": "Which customers leave, when, and which change would keep the most revenue?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1613,7 +1613,7 @@
      "question": "The campaign got credit for 3,000 sales. How many would have happened anyway?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1629,7 +1629,7 @@
      "question": "Cancellations doubled in six weeks. Restaurants, riders, customers or the app?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1644,7 +1644,7 @@
      "question": "If we approve more applicants, how many more defaults do we buy?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",

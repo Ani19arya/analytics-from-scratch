@@ -84,9 +84,9 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
-| [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
+| [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 5 | 4 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **87** | **34** |
+| **All** | | **92** | **29** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -225,11 +225,11 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 
 ### 09 Business case studies
 
-1. 09-01 E-commerce: why is revenue falling? *(planned)*: Revenue is down 8% on last quarter. Traffic, conversion, basket size or mix? (Level 2)
-2. 09-02 SaaS: reduce subscription churn *(planned)*: Which customers leave, when, and which change would keep the most revenue? (Level 2)
-3. 09-03 Marketing: is the campaign incremental? *(planned)*: The campaign got credit for 3,000 sales. How many would have happened anyway? (Level 2)
-4. 09-04 Food delivery: why are cancellations rising? *(planned)*: Cancellations doubled in six weeks. Restaurants, riders, customers or the app? (Level 2)
-5. 09-05 Fintech: loan approvals and defaults *(planned)*: If we approve more applicants, how many more defaults do we buy? (Level 2)
+1. 09-01 [E-commerce: why is revenue falling?](phases/09-business-case-studies/01-ecommerce-why-is-revenue-falling): Revenue is down 8% on last quarter. Traffic, conversion, basket size or mix? (Level 2)
+2. 09-02 [SaaS: reduce subscription churn](phases/09-business-case-studies/02-saas-reduce-subscription-churn): Which customers leave, when, and which change would keep the most revenue? (Level 2)
+3. 09-03 [Marketing: is the campaign incremental?](phases/09-business-case-studies/03-marketing-is-the-campaign-incremental): The campaign got credit for 3,000 sales. How many would have happened anyway? (Level 2)
+4. 09-04 [Food delivery: why are cancellations rising?](phases/09-business-case-studies/04-food-delivery-cancellations): Cancellations doubled in six weeks. Restaurants, riders, customers or the app? (Level 2)
+5. 09-05 [Fintech: loan approvals and defaults](phases/09-business-case-studies/05-fintech-approvals-and-defaults): If we approve more applicants, how many more defaults do we buy? (Level 2)
 6. 09-06 Retail: what to restock *(planned)*: Which products deserve more inventory next month, and which are tying up cash? (Level 2)
 7. 09-07 Growth: why is acquisition cost rising? *(planned)*: CAC is up 35% this year. Channel saturation, pricing or tracking? (Level 2)
 8. 09-08 Banking: which segments are profitable? *(planned)*: Which customer segments earn more than they cost to serve? (Level 2)

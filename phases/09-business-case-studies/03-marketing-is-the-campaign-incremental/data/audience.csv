@@ -1,0 +1,7 @@
+segment,grp,customers
+loyal,campaign,10800
+loyal,holdout,1200
+recent,campaign,16200
+recent,holdout,1800
+lapsed,campaign,27000
+lapsed,holdout,3000

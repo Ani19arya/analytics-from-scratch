@@ -246,11 +246,11 @@ Level total: about 76.5 hours of focused work.
 
 **09 Business case studies**
 
-- [ ] 09-01 E-commerce: why is revenue falling? *(planned)*: Revenue is down 8% on last quarter. Traffic, conversion, basket size or mix? About 4 h.
-- [ ] 09-02 SaaS: reduce subscription churn *(planned)*: Which customers leave, when, and which change would keep the most revenue? About 4 h.
-- [ ] 09-03 Marketing: is the campaign incremental? *(planned)*: The campaign got credit for 3,000 sales. How many would have happened anyway? About 4 h.
-- [ ] 09-04 Food delivery: why are cancellations rising? *(planned)*: Cancellations doubled in six weeks. Restaurants, riders, customers or the app? About 4 h.
-- [ ] 09-05 Fintech: loan approvals and defaults *(planned)*: If we approve more applicants, how many more defaults do we buy? About 4 h.
+- [x] 09-01 [E-commerce: why is revenue falling?](phases/09-business-case-studies/01-ecommerce-why-is-revenue-falling): Revenue is down 8% on last quarter. Traffic, conversion, basket size or mix? About 4 h.
+- [x] 09-02 [SaaS: reduce subscription churn](phases/09-business-case-studies/02-saas-reduce-subscription-churn): Which customers leave, when, and which change would keep the most revenue? About 4 h.
+- [x] 09-03 [Marketing: is the campaign incremental?](phases/09-business-case-studies/03-marketing-is-the-campaign-incremental): The campaign got credit for 3,000 sales. How many would have happened anyway? About 4 h.
+- [x] 09-04 [Food delivery: why are cancellations rising?](phases/09-business-case-studies/04-food-delivery-cancellations): Cancellations doubled in six weeks. Restaurants, riders, customers or the app? About 4 h.
+- [x] 09-05 [Fintech: loan approvals and defaults](phases/09-business-case-studies/05-fintech-approvals-and-defaults): If we approve more applicants, how many more defaults do we buy? About 4 h.
 - [ ] 09-06 Retail: what to restock *(planned)*: Which products deserve more inventory next month, and which are tying up cash? About 4 h.
 - [ ] 09-07 Growth: why is acquisition cost rising? *(planned)*: CAC is up 35% this year. Channel saturation, pricing or tracking? About 4 h.
 - [ ] 09-08 Banking: which segments are profitable? *(planned)*: Which customer segments earn more than they cost to serve? About 4 h.
