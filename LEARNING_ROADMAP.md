@@ -233,9 +233,9 @@ Level total: about 76.5 hours of focused work.
 
 - [x] 07-02 [SQL interview questions](phases/07-getting-hired/02-sql-interview-questions): Can you answer the six SQL questions that come up again and again in analyst interviews, and explain why the obvious answer is wrong? About 2 h.
 - [x] 07-03 [Portfolio project end to end](phases/07-getting-hired/03-portfolio-project-end-to-end): Do customers who start on a free trial cancel within 90 days more often than customers who pay from day one? About 2 h.
-- [ ] 07-08 The metrics case interview *(planned)*: Signups fell 20%. Walk me through it. About 2 h.
-- [ ] 07-09 The statistics interview round *(planned)*: Can you explain power, p-values and Simpson's paradox on real numbers? About 2 h.
-- [ ] 07-10 The take-home assignment *(planned)*: Four hours, one dataset: what does a strong submission contain? About 2 h.
+- [x] 07-08 [The metrics case interview](phases/07-getting-hired/08-metrics-case-interview): Signups fell 20%. Walk me through it. About 2 h.
+- [x] 07-09 [The statistics interview round](phases/07-getting-hired/09-statistics-interview-round): Can you explain power, p-values and Simpson's paradox on real numbers? About 2 h.
+- [x] 07-10 [The take-home assignment](phases/07-getting-hired/10-the-take-home-assignment): Four hours, one dataset: what does a strong submission contain? About 2 h.
 
 **08 Modern data stack**
 

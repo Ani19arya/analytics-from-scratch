@@ -12,7 +12,7 @@ Every phase page lists its lessons in order. The full learning order across phas
 | 04 | [Dashboards and spreadsheets](04-dashboards) | 12 | 0 |
 | 05 | [Python for analysts](05-python-for-analysts) | 10 | 0 |
 | 06 | [AI for analysts](06-ai-for-analysts) | 6 | 9 |
-| 07 | [Getting hired](07-getting-hired) | 9 | 3 |
+| 07 | [Getting hired](07-getting-hired) | 12 | 0 |
 | 08 | [Modern data stack](08-modern-data-stack) | 5 | 1 |
 | 09 | [Business case studies](09-business-case-studies) | 0 | 9 |
 | 10 | [Capstone projects](10-capstone-projects) | 0 | 8 |

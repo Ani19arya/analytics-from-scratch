@@ -262,4 +262,4 @@ In the Real Analyst Jobs data drop of 25 October 2026, 375 of the 2,789 US analy
 
 ## Next
 
-Back to [Getting hired](../README.md) for the full list of lessons in this phase.
+[08 The metrics case interview](../08-metrics-case-interview/)

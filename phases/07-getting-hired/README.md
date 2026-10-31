@@ -11,9 +11,9 @@ Lessons in order. Levels: 1 beginner, 2 intermediate, 3 advanced (see the [learn
 5. [Role roadmaps from postings](05-role-roadmaps-from-postings/) (level 1)
 6. [Explain findings to leadership](06-explain-findings-to-leadership/) (level 1)
 7. [Resume bullets that are true](07-resume-bullets-that-are-true/) (level 1)
-8. The metrics case interview (level 2, planned)
-9. The statistics interview round (level 2, planned)
-10. The take-home assignment (level 2, planned)
+8. [The metrics case interview](08-metrics-case-interview/) (level 2)
+9. [The statistics interview round](09-statistics-interview-round/) (level 2)
+10. [The take-home assignment](10-the-take-home-assignment/) (level 2)
 11. [Behavioural answers that show analysis](11-behavioural-answers/) (level 1, guide)
 12. [Publish your portfolio](12-publish-your-portfolio/) (level 1)
 

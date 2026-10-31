@@ -82,11 +82,11 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 10 | 0 |
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
-| [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 9 | 3 |
+| [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **84** | **37** |
+| **All** | | **87** | **34** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -208,9 +208,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 5. 07-05 [Role roadmaps from postings](phases/07-getting-hired/05-role-roadmaps-from-postings): Data, business, product or BI analyst: which skills differ? (Level 1)
 6. 07-06 [Explain findings to leadership](phases/07-getting-hired/06-explain-findings-to-leadership): Can the VP act on your summary after reading only the first two lines? (Level 1)
 7. 07-07 [Resume bullets that are true](phases/07-getting-hired/07-resume-bullets-that-are-true): Does every number on your resume come from work you can show? (Level 1)
-8. 07-08 The metrics case interview *(planned)*: Signups fell 20%. Walk me through it. (Level 2)
-9. 07-09 The statistics interview round *(planned)*: Can you explain power, p-values and Simpson's paradox on real numbers? (Level 2)
-10. 07-10 The take-home assignment *(planned)*: Four hours, one dataset: what does a strong submission contain? (Level 2)
+8. 07-08 [The metrics case interview](phases/07-getting-hired/08-metrics-case-interview): Signups fell 20%. Walk me through it. (Level 2)
+9. 07-09 [The statistics interview round](phases/07-getting-hired/09-statistics-interview-round): Can you explain power, p-values and Simpson's paradox on real numbers? (Level 2)
+10. 07-10 [The take-home assignment](phases/07-getting-hired/10-the-take-home-assignment): Four hours, one dataset: what does a strong submission contain? (Level 2)
 11. 07-11 [Behavioural answers that show analysis](phases/07-getting-hired/11-behavioural-answers): Tell me about a time your analysis changed a decision. Guide, no test. (Level 1)
 12. 07-12 [Publish your portfolio](phases/07-getting-hired/12-publish-your-portfolio): Can a hiring manager run your project in one command? (Level 1)
 
