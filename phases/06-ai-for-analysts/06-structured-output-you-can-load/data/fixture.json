@@ -1,0 +1,10 @@
+{
+  "file": "outputs.csv",
+  "raw_output_source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "Read the customer message. Reply with only a JSON object with keys order_id (TB- and 5 digits), issue (one of late, missing_item, wrong_item, cold_food, other), refund_requested (true or false), amount_rs (a number, or null if no amount is given) and severity (an integer from 1 to 5).",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "make_data.py writes the true fields as JSON, then applies one wrapper (none, code fence, prose, trailing comma, truncated) and one content problem (or none) chosen with a seeded random generator.",
+  "seed": 606
+}

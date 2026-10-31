@@ -1,0 +1,8 @@
+commit_id,parent_id,author,committed_at,message
+6f6c592,,Asha,2026-09-13 17:10:00,Add the monthly revenue query
+1eb3650,6f6c592,Asha,2026-09-19 23:32:00,Add orders per month for operations
+eb27082,1eb3650,Leena,2026-09-22 03:14:00,Count refunded orders as revenue too
+39261e4,eb27082,Ravi,2026-09-25 10:34:00,Operations counts only orders that were not cancelled
+37f14eb,39261e4,Asha,2026-10-01 13:46:00,Add a README for the query folder
+bbe6b52,37f14eb,Omar,2026-10-03 20:38:00,"Revenue is net of discounts, as finance defines it"
+fff30f3,bbe6b52,Ravi,2026-10-09 05:40:00,Say who owns the revenue query

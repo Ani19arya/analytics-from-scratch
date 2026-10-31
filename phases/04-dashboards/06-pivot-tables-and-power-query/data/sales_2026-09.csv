@@ -1,0 +1,129 @@
+Receipt,Date,Store,Product,Units,Revenue
+R2609-0001,2026-09-08,Riverside,Tents,1,$442.99
+R2609-0002,2026-09-14,Riverside,Sleeping Bags,1,$103.99
+R2609-0003,2026-09-24,Old Town,Jackets,2,$191.98
+R2609-0004,2026-09-20,Riverside,Tents,3,$377.97
+R2609-0005,2026-09-03,North  Mall,Sleeping Bags,1,$76.99
+R2609-0006,2026-09-19,Old Town,Stoves,3,$140.97
+R2609-0007,2026-09-30, Harbor Point,Jackets,1,$194.99
+R2609-0008,2026-09-07,Riverside,Tents,2,$943.98
+R2609-0009,2026-09-20,Old Town  ,Tents,3,$425.97
+R2609-0010,2026-09-16,HARBOR POINT,Sleeping Bags,2,$165.98
+R2609-0011,2026-09-13,Harbor Point,Stoves,3,$272.97
+R2609-0012,2026-09-02,Harbor Point,Boots,1,$92.99
+R2609-0013,2026-09-22,Old Town,Stoves,3,$272.97
+R2609-0014,2026-09-20,North Mall  ,Boots,2,$143.98
+R2609-0015,2026-09-12,North Mall  , Boots ,1,$169.99
+R2609-0016,2026-09-24,North Mall  , Sleeping Bags ,2,$185.98
+R2609-0017,2026-09-21,Harbor  Point,Boots,1,$190.99
+R2609-0018,2026-09-15,Old Town, Boots ,2,$185.98
+R2609-0019,2026-09-05,Old Town,Boots,3,$326.97
+R2609-0020,2026-09-16,Riverside,Stoves,3,$284.97
+R2609-0021,2026-09-30,Harbor  Point,Tents,1,$165.99
+R2609-0022,2026-09-21,Riverside,Sleeping Bags,1,$50.99
+R2609-0023,2026-09-08,OLD TOWN,Stoves,3,$359.97
+R2609-0024,2026-09-28, Harbor Point,Tents,1,$407.99
+R2609-0025,2026-09-19,harbor point,Sleeping Bags,1,$50.99
+R2609-0025,2026-09-19,harbor point,Sleeping Bags,1,$50.99
+R2609-0026,2026-09-16,Riverside, Sleeping Bags ,2,$127.98
+R2609-0027,2026-09-28, Old Town,Jackets,1,$107.99
+R2609-0028,2026-09-21,Riverside  ,Stoves,2,$197.98
+R2609-0029,2026-09-05,Old Town  ,Tents,2,$897.98
+R2609-0030,2026-09-24,North Mall  ,Tents,1,$286.99
+R2609-0031,2026-09-25,RIVERSIDE,Boots,1,$107.99
+R2609-0032,2026-09-12,Riverside,Sleeping Bags,2,$143.98
+R2609-0033,2026-09-23,Harbor Point,Stoves,1,$46.99
+R2609-0034,2026-09-16,Riverside  ,Jackets,1,$0.00
+R2609-0035,2026-09-26,Old Town  ,Sleeping Bags,1,$165.99
+R2609-0036,2026-09-23, Old Town,Tents,1,$348.99
+,,,,,
+R2609-0037,2026-09-11,Harbor Point,Sleeping Bags,3,$494.97
+R2609-0038,2026-09-05,Old Town,Tents,1,$289.99
+R2609-0039,2026-09-24,Old Town  ,Tents,1,$250.99
+R2609-0040,2026-09-28,Riverside,Stoves,1,$97.99
+R2609-0041,2026-09-06,riverside,Stoves,1,$120.99
+R2609-0042,2026-09-05,NORTH MALL,Stoves,1,$117.99
+R2609-0043,2026-09-19,north mall,Jackets,1,$152.99
+R2609-0044,2026-09-06,Harbor  Point,Boots,2,$327.98
+R2609-0045,2026-09-14, Riverside,Sleeping Bags,3,$539.97
+R2609-0046,2026-09-17,north mall,Jackets,2,$201.98
+R2609-0047,2026-09-04,old town,Jackets,2,$165.98
+R2609-0048,2026-09-13,Riverside  ,Boots,2,$293.98
+R2609-0049,2026-09-14,riverside,Stoves,2,$263.98
+R2609-0050,2026-09-01,Old Town  ,Sleeping Bags,1,$134.99
+R2609-0051,2026-09-18,riverside, Tents ,2,$0.00
+R2609-0052,2026-09-13,Old  Town,Tents,1,$363.99
+R2609-0053,2026-09-04,North  Mall,Jackets,1,$148.99
+R2609-0054,2026-09-06,harbor point,Stoves,1,$115.99
+R2609-0055,2026-09-02,Riverside,Sleeping Bags,2,$229.98
+R2609-0055,2026-09-02,Riverside,Sleeping Bags,2,$229.98
+R2609-0056,2026-09-21,North Mall  ,Sleeping Bags,3,$551.97
+R2609-0057,2026-09-26,North Mall,Stoves,2,$87.98
+R2609-0058,2026-09-08,riverside,Tents,2,$725.98
+R2609-0059,2026-09-13,harbor point,Boots,3,$389.97
+R2609-0060,2026-09-15,Old  Town,Stoves,3,$107.97
+R2609-0061,2026-09-05,Harbor Point,Jackets,2,$361.98
+R2609-0062,2026-09-03,North  Mall,Stoves,1,$121.99
+R2609-0063,2026-09-22,Harbor  Point,Tents,1,$204.99
+R2609-0064,2026-09-03,Old Town,Jackets,3,$422.97
+R2609-0065,2026-09-07,North Mall,Boots,1,$175.99
+R2609-0066,2026-09-28,HARBOR POINT, Sleeping Bags ,1,$63.99
+R2609-0067,2026-09-04,Riverside,Boots,1,$202.99
+R2609-0068,2026-09-10,Old Town,Boots,1,$82.99
+R2609-0069,2026-09-21,north mall,Boots,1,$151.99
+R2609-0070,2026-09-17,HARBOR POINT,Sleeping Bags,3,$554.97
+R2609-0071,2026-09-01,North Mall  , Stoves ,1,$41.99
+R2609-0072,2026-09-25,Harbor Point,Sleeping Bags,1,$137.99
+R2609-0073,2026-09-02,North Mall  ,Stoves,2,$199.98
+R2609-0074,2026-09-06,Harbor Point  ,Sleeping Bags,2,$123.98
+R2609-0075,2026-09-29,Old Town,Jackets,1,$123.99
+R2609-0076,2026-09-01,Harbor Point,Sleeping Bags,1,$166.99
+R2609-0077,2026-09-13,North Mall  ,Tents,2,$635.98
+R2609-0078,2026-09-27,riverside, Boots ,1,$59.99
+R2609-0079,2026-09-26,Riverside,Tents,3,$938.97
+R2609-0080,2026-09-11,Old  Town,Jackets,1,$136.99
+R2609-0081,2026-09-15,Riverside,Stoves,3,$416.97
+R2609-0081,2026-09-15,Riverside,Stoves,3,$416.97
+R2609-0082,2026-09-11,Riverside,Boots,3,$0.00
+R2609-0083,2026-09-27,Riverside,Jackets,1,$82.99
+R2609-0084,2026-09-13,Old Town,Stoves,1,$111.99
+R2609-0085,2026-09-22,harbor point,Boots,1,$161.99
+R2609-0086,2026-09-20,Harbor Point,Stoves,2,$127.98
+R2609-0087,2026-09-19, Old Town,Tents,1,$231.99
+R2609-0088,2026-09-29,Old Town  ,Jackets,1,$203.99
+R2609-0089,2026-09-12, Riverside,Sleeping Bags,2,$373.98
+R2609-0090,2026-09-20,Riverside,Tents,1,$246.99
+R2609-0091,2026-09-24,HARBOR POINT,Jackets,1,$206.99
+R2609-0092,2026-09-09, Riverside,Jackets,2,$353.98
+R2609-0093,2026-09-27,North Mall  ,Boots,1,$73.99
+R2609-0094,2026-09-29,Old  Town,Sleeping Bags,3,$146.97
+R2609-0095,2026-09-11,Riverside,Boots,1,$171.99
+R2609-0096,2026-09-23,Riverside,Stoves,3,$167.97
+R2609-0097,2026-09-29,riverside,Tents,1,$365.99
+R2609-0098,2026-09-25,Harbor Point,Stoves,1,$87.99
+R2609-0099,2026-09-07,Old Town, Stoves ,2,$71.98
+R2609-0100,2026-09-12,North Mall,Stoves,3,$119.97
+R2609-0101,2026-09-08,NORTH MALL,Tents,1,$469.99
+R2609-0102,2026-09-28,North Mall,Boots,1,$139.99
+R2609-0103,2026-09-15,north mall,Boots,2,$285.98
+R2609-0104,2026-09-28,North Mall,Jackets,2,$517.98
+R2609-0105,2026-09-10,Old  Town,Jackets,1,$151.99
+R2609-0106,2026-09-23,north mall,Stoves,3,$230.97
+R2609-0107,2026-09-22,Riverside,Stoves,3,$218.97
+R2609-0108,2026-09-29,harbor point,Jackets,1,$148.99
+R2609-0109,2026-09-06,OLD TOWN,Tents,3,"$1,097.97"
+R2609-0110,2026-09-09, Harbor Point,Sleeping Bags,1,$189.99
+R2609-0111,2026-09-19,North Mall,Jackets,1,$238.99
+R2609-0112,2026-09-29, North Mall,Tents,1,$284.99
+R2609-0113,2026-09-25, Harbor Point,Jackets,2,$271.98
+R2609-0114,2026-09-26,Old  Town,Jackets,2,$383.98
+R2609-0115,2026-09-21, Old Town,Tents,2,$497.98
+R2609-0116,2026-09-29,Riverside,Sleeping Bags,3,$203.97
+R2609-0117,2026-09-17,Riverside,Boots,2,$407.98
+R2609-0118,2026-09-03, North Mall,Boots,1,$128.99
+R2609-0119,2026-09-04,Harbor Point  ,Stoves,2,$245.98
+R2609-0120,2026-09-28,HARBOR POINT,Stoves,2,$233.98
+R2609-0121,2026-09-12,north mall,Boots,2,$393.98
+R2609-0122,2026-09-07,RIVERSIDE,Tents,3,$0.00
+R2609-0123,2026-09-15,Old Town, Jackets ,2,$389.98
+Total,,,,212,"$30,613.97"

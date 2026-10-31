@@ -1,0 +1,10 @@
+context,token,logit
+Your order was,delivered,2.2
+Your order was,late,1.4
+Your order was,cold,0.8
+Your order was,cancelled,0.3
+Your order was,wonderful,-1.0
+Overall the customer is,happy,1.1
+Overall the customer is,unhappy,1.0
+Overall the customer is,angry,0.4
+Overall the customer is,confused,0.1

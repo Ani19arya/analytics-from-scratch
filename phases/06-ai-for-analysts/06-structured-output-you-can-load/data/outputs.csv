@@ -1,0 +1,463 @@
+message_id,message,raw_output
+M0001,Order TB-17392 arrived without the dal makhani. Please refund Rs 260. This is the third time.,"{""order_id"": ""TB-17392"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 5}"
+M0002,Order TB-12475 had thali instead of what I ordered.,"```json
+{""order_id"": ""TB-12475"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}
+```"
+M0003,Order TB-74900 arrived without the misal pav. I want my money back.,"```json
+{""order_id"": ""TB-74900"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 2}
+```"
+M0004,Order TB-26925 came 50 minutes late.,"{""order_id"": ""TB-26925"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0005,Order TB-57946 came 50 minutes late. Please refund Rs 240.,"Here is the JSON you asked for:
+{""order_id"": ""TB-57946"", ""issue"": null, ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}
+Let me know if you need anything else."
+M0006,"Order TB-75314 was cold, the poha especially. Please refund Rs 120. This is the third time.","{""order_id"": ""TB-75314"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 5}"
+M0007,Order TB-69651 had a rude rider and a torn bag. Please refund Rs 120.,"{""order_id"": ""TB-69651"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 3}"
+M0008,"Order TB-13090 was cold, the misal pav especially. Please refund Rs 560.","{""order_id"": ""TB-13090"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": ""Rs 560"", ""severity"": 2}"
+M0009,"Order TB-71370 was cold, the chole especially. Please refund Rs 260.","{""order_id"": ""TB-71370"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 2}"
+M0010,Order TB-64972 had a rude rider and a torn bag.,"{""order_id"": ""TB-64972"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 7}"
+M0011,Order TB-96686 came 80 minutes late. I want my money back.,"{""order_id"": ""TB-96686"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 1}"
+M0012,Order TB-18397 came 35 minutes late. This is the third time.,"```json
+{""order_id"": ""TB-18397"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5}
+```"
+M0013,Order TB-19096 came 50 minutes late.,"```json
+{""order_id"": ""TB-19096"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""2""}
+```"
+M0014,Order TB-90899 had a rude rider and a torn bag. This is the third time.,"```json
+{""order_id"": ""TB-90899"", ""issue"": ""food quality"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4}
+```"
+M0015,Order TB-39443 arrived without the dal makhani.,"Here is the JSON you asked for:
+{""order_id"": ""TB-39443"", ""issue"": ""missing_item"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 2}
+Let me know if you need anything else."
+M0016,Order TB-36040 had paneer tikka instead of what I ordered. Please refund Rs 120. This is the third time.,"{""order_id"": ""TB-36040"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 5}"
+M0017,"Order TB-48028 was cold, the dal makhani especially. Please refund Rs 560.","{""order_id"": ""TB-48028"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 3}"
+M0018,Order TB-55396 came 40 minutes late. This is the third time.,"{""order_id"": ""TB-55396"", ""issue"": ""late"", ""re"
+M0019,Order TB-27812 had a rude rider and a torn bag. Please refund Rs 560.,"{""order_id"": ""TB-27812"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 2}"
+M0020,Order TB-75276 arrived without the paneer tikka.,"```json
+{""order_id"": ""TB-75276"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0021,Order TB-68419 had a rude rider and a torn bag. This is the third time.,"{""order_id"": ""TB-68419"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": 25000, ""severity"": 4,}"
+M0022,Order TB-71906 had thali instead of what I ordered.,"{""order_id"": ""TB-71906"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0023,Order TB-82479 came 65 minutes late.,"{""order_id"": ""TB-82479"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0024,"Order TB-66772 was cold, the chole especially. Please refund Rs 260.","{""order_id"": ""TB-66772"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 3}"
+M0025,Order TB-21000 had veg biryani instead of what I ordered. This is the third time.,"{""order_id"": ""TB-21000"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4,}"
+M0026,Order TB-99083 arrived without the poha.,"{""order_id"": ""TB-99083"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0027,Order TB-78288 had a rude rider and a torn bag. Please refund Rs 420.,"```json
+{""order_id"": ""TB-78288"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 3}
+```"
+M0028,Order TB-96707 arrived without the misal pav. Please refund Rs 180.,"{""order_id"": ""TB-96707"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 2}"
+M0029,Order TB-18738 had a rude rider and a torn bag. I want my money back. This is the third time.,"{""order_id"": ""TB-18738"", ""issue"": ""other"", ""refund_requested"": ""yes"", ""amount_rs"": null, ""severity"": 5,}"
+M0030,Order TB-27742 had misal pav instead of what I ordered. This is the third time.,"```json
+{""order_id"": ""TB-27742"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": -120, ""severity"": 5}
+```"
+M0031,"Order TB-12612 was cold, the dal makhani especially.","{""order_id"": ""TB-12612"", ""issue"": ""cold_food"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 3}"
+M0032,Order TB-96540 came 40 minutes late. Please refund Rs 180. This is the third time.,"Here is the JSON you asked for:
+{""order_id"": ""TB-96540"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 5}
+Let me know if you need anything else."
+M0033,Order TB-17022 had a rude rider and a torn bag. I want my money back.,"```json
+{""order_id"": ""TB-17022"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}
+```"
+M0034,Order TB-30179 had dal makhani instead of what I ordered. Please refund Rs 310.,"{""order_id"": ""TB-30179"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 2}"
+M0035,Order TB-57242 came 50 minutes late. I want my money back.,"Here is the JSON you asked for:
+{""order_id"": ""TB-57242"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 1}
+Let me know if you need anything else."
+M0036,"Order TB-91275 was cold, the thali especially. I paid Rs 120 for it.","{""order_id"": ""TB-91275"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 120, ""severity"": 1, ""notes"": ""angry""}"
+M0037,Order TB-83617 had thali instead of what I ordered.,"{""order_id"": ""TB-83617"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0038,Order TB-84812 had chole instead of what I ordered. Please refund Rs 260.,"{""order_id"": ""TB-84812"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 0}"
+M0039,"Order TB-70779 was cold, the poha especially. I want my money back.","{""order_id"": ""TB-70779"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 2}"
+M0040,Order TB-52564 had a rude rider and a torn bag. Please refund Rs 240.,"{""order_id"": ""TB-52564"", ""issue"": ""LATE"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0041,"Order TB-34563 was cold, the paneer tikka especially. Please refund Rs 180.","{""order_id"": ""TB-34563"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}"
+M0042,Order TB-53056 had a rude rider and a torn bag. I want my money back. This is the third time.,"[{""order_id"": ""TB-53056"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 5}]"
+M0043,Order TB-89719 had misal pav instead of what I ordered. I want my money back.,"{""order_id"": ""TB-89719"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}"
+M0044,"Order TB-78686 was cold, the thali especially. Please refund Rs 420. This is the third time.","{""order_id"": ""TB-78686"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 4, ""customer_mood"": ""angry""}"
+M0045,Order TB-22279 had misal pav instead of what I ordered. This is the third time.,"{""order_id"": ""TB-22279"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5, ""notes"": ""check with kitchen""}"
+M0046,"Order TB-68917 was cold, the poha especially. I want my money back. This is the third time.","{""order_id"": ""TB-68917"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": ""5"",}"
+M0047,Order TB-12841 arrived without the paneer tikka. Please refund Rs 420.,"{""order_id"": ""TB-12841"", ""issue"": ""missing_item"", ""refund_requested"": ""yes"", ""amount_rs"": 420, ""severity"": 3}"
+M0048,Order TB-38538 had a rude rider and a torn bag.,"{""order_id"": ""TB-38538"", ""issue"": ""missing item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0049,Order TB-53962 had a rude rider and a torn bag. Please refund Rs 180.,"```json
+{""order_id"": ""TB-53962"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 1}
+```"
+M0050,Order TB-90290 came 35 minutes late.,"Here is the JSON you asked for:
+{""order_id"": ""TB-90290"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2, ""notes"": 0.92}
+Let me know if you need anything else."
+M0051,Order TB-55103 had a rude rider and a torn bag. I want my money back.,"{""order_id"": ""TB-55103"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}"
+M0052,Order TB-30940 arrived without the misal pav. This is the third time.,"{""order_id"": ""TB-30940"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5}"
+M0053,Order TB-77426 arrived without the thali. Please refund Rs 120.,"{""order_id"": ""TB-77426"", ""issue"": ""late "", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 1}"
+M0054,Order TB-76617 had a rude rider and a torn bag. I want my money back.,"{""order_id"": ""TB-76617"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}"
+M0055,Order TB-10394 had chole instead of what I ordered. Please refund Rs 560.,"```json
+{""order_id"": ""TB-10394"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 3}
+```"
+M0056,Order TB-50080 came 40 minutes late.,"{""order_id"": ""TB-50080"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 7}"
+M0057,Order TB-16809 arrived without the chole. Please refund Rs 120.,"{""order_id"": ""TB-16809"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2}"
+M0058,"Order TB-29267 was cold, the paneer tikka especially. I paid Rs 420 for it.","{""order_id"": ""TB-29267"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 420}"
+M0059,Order TB-61511 had a rude rider and a torn bag. Please refund Rs 240. This is the third time.,"```json
+{""order_id"": ""61511"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 4}
+```"
+M0060,Order TB-71599 arrived without the thali. Please refund Rs 180.,"```json
+{""order_id"": ""TB-71599"", ""issue"": ""missing_item"", ""refund_requested"": ""yes"", ""amount_rs"": 180, ""severity"": 3}
+```"
+M0061,Order TB-85620 had a rude rider and a torn bag. Please refund Rs 180.,"```json
+{""order_id"": ""TB-85620"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}
+```"
+M0062,Order TB-17556 had misal pav instead of what I ordered. This is the third time.,"{""order_id"": ""TB-17556"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4}"
+M0063,Order TB-54400 came 35 minutes late. Please refund Rs 180.,"```json
+{""order_id"": ""TB-54400"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 2}
+```"
+M0064,Order TB-39947 arrived without the paneer tikka. Please refund Rs 120.,"{""order_id"": ""TB-39947"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2}"
+M0065,Order TB-91265 arrived without the veg biryani. Please refund Rs 310.,"{""order_id"": ""TB-91265"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 3, ""customer_mood"": ""angry""}"
+M0066,Order TB-32499 had a rude rider and a torn bag.,"{""order_id"": ""TB-32499"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0067,Order TB-70277 came 50 minutes late. Please refund Rs 560.,"{""order_id"": ""TB-70277"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 2}"
+M0068,Order TB-54757 had paneer tikka instead of what I ordered. Please refund Rs 260.,"```json
+{""order_id"": ""TB-54757"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 2}
+```"
+M0069,Order TB-15626 came 35 minutes late. Please refund Rs 560.,"```json
+{""order_id"": ""TB-15626"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 3}
+```"
+M0070,Order TB-40198 arrived without the misal pav.,"```json
+{""order_id"": ""TB-40198"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null}
+```"
+M0071,Order TB-51653 came 65 minutes late. Please refund Rs 420.,"{""order_id"": ""TB-51653"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": ""2""}"
+M0072,Order TB-36198 had a rude rider and a torn bag. I paid Rs 120 for it.,"```json
+{""order_id"": ""TB-36198"", ""issue"": ""other"", ""amount_rs"": 120, ""severity"": 3}
+```"
+M0073,Order TB-24565 had a rude rider and a torn bag.,"```json
+{""order_id"": ""TB-24565"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0074,Order TB-36439 had a rude rider and a torn bag. Please refund Rs 260.,"{""order_id"": ""TB-36439"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 1}"
+M0075,"Order TB-77611 was cold, the veg biryani especially.","```json
+{""order_id"": ""TB-77611"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0076,"Order TB-83208 was cold, the misal pav especially. Please refund Rs 240.","{""order_id"": ""TB-83208"", ""issue"": ""missing item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0077,Order TB-97728 had veg biryani instead of what I ordered. Please refund Rs 420.,"Here is the JSON you asked for:
+{""order_id"": ""TB-97728"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": true}
+Let me know if you need anything else."
+M0078,Order TB-80455 came 40 minutes late. I want my money back. This is the third time.,"{""order_id"": ""TB-80455"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 4,}"
+M0079,Order TB-63808 had a rude rider and a torn bag.,"{""order_id"": ""TB-63808"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0080,"Order TB-23722 was cold, the dal makhani especially. Please refund Rs 310. This is the third time.","{""order_id"": ""TB-23722"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 3"
+M0081,"Order TB-23583 was cold, the chole especially. I paid Rs 560 for it.","{""order_id"": ""TB-23583"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": 3, ""notes"": ""check with kitchen""}"
+M0082,Order TB-74171 had dal makhani instead of what I ordered.,"{""order_id"": ""TB-74171"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0083,Order TB-93363 had thali instead of what I ordered.,"{""order_id"": ""TB-93363"", ""issue"": ""wrong_item"", ""refund_requested"": fa"
+M0084,Order TB-38915 had a rude rider and a torn bag.,"{""order_id"": ""TB-38915"", ""issue"": ""other"", ""refun"
+M0085,Order TB-25609 arrived without the poha.,"{""order_id"": ""TB-25609"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0086,Order TB-82717 arrived without the chole. Please refund Rs 240.,"{""order_id"": ""TB-82717"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3,}"
+M0087,"Order TB-98703 was cold, the thali especially. Please refund Rs 260.","{""order_id"": ""TB-98703"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 260}"
+M0088,Order TB-93157 came 35 minutes late.,"```json
+{""order_id"": ""TB-93157"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0089,Order TB-34942 had a rude rider and a torn bag. I want my money back. This is the third time.,"```json
+{""order_id"": ""TB-34942"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 5}
+```"
+M0090,Order TB-15164 had a rude rider and a torn bag.,"{""order_id"": ""TB-15164"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": true}"
+M0091,Order TB-68730 had a rude rider and a torn bag. Please refund Rs 240.,"{""order_id"": ""TB-68730"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0092,Order TB-84613 arrived without the misal pav. I want my money back.,"{""order_id"": ""TB-84613"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 2}"
+M0093,Order TB-81404 came 35 minutes late. I paid Rs 310 for it. This is the third time.,"{""order_id"": ""TB-81404"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": 310, ""severity"": 4,}"
+M0094,"Order TB-65590 was cold, the misal pav especially. Please refund Rs 180. This is the third time.","{""order_id"": ""TB-65590"", ""issue"": ""cold_food"", ""refund_"
+M0095,Order TB-81996 arrived without the thali.,"{""order_id"": ""TB-81996"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""2""}"
+M0096,"Order TB-17003 was cold, the dal makhani especially. I paid Rs 180 for it.","{""order_id"": ""TB-17003"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 180, ""severity"": 3, ""customer_mood"": 0.92}"
+M0097,"Order TB-62960 was cold, the thali especially. Please refund Rs 420.","{""order_id"": ""TB-62960"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 3}"
+M0098,Order TB-72081 came 65 minutes late. Please refund Rs 260.,"{""order_id"": ""TB-72081"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 3}"
+M0099,Order TB-20473 had a rude rider and a torn bag. This is the third time.,"{""order_id"": ""TB-20473"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5}"
+M0100,Order TB-38935 had veg biryani instead of what I ordered. I paid Rs 120 for it.,"{""order_id"": ""TB-38935"", ""issue"": ""wrong_item"", ""refund_requested"": fals"
+M0101,"Order TB-20344 was cold, the poha especially. Please refund Rs 120.","{""order_id"": ""TB-20344"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 1}"
+M0102,Order TB-25243 had a rude rider and a torn bag. This is the third time.,"{""order_id"": ""TB-25243"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4}"
+M0103,"Order TB-28128 was cold, the dal makhani especially. Please refund Rs 240.","{""order_id"": ""TB-28128"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}"
+M0104,"Order TB-47817 was cold, the dal makhani especially.","```json
+{""order_id"": ""TB-47817"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""3""}
+```"
+M0105,Order TB-86324 arrived without the poha. I paid Rs 260 for it.,"```json
+{""order_id"": ""TB-86324"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": 260, ""severity"": 1}
+```"
+M0106,Order TB-30587 had poha instead of what I ordered.,"{""order_id"": ""TB-30587"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0107,"Order TB-99309 was cold, the dal makhani especially. Please refund Rs 240.","{""order_id"": ""TB-99309"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}"
+M0108,Order TB-28252 arrived without the dal makhani.,"{""order_id"": ""TB-28252"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0109,Order TB-10567 had thali instead of what I ordered.,"{""order_id"": ""TB-10567"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2,}"
+M0110,Order TB-63829 had a rude rider and a torn bag. Please refund Rs 240.,"```json
+{""order_id"": ""TB-63829"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}
+```"
+M0111,Order TB-63148 arrived without the dal makhani.,"{""order_id"": ""TB-63148"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0112,Order TB-84197 had veg biryani instead of what I ordered.,"{""order_id"": ""TB-84197"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0113,Order TB-84426 came 65 minutes late.,"{""order_id"": ""TB-84426"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0114,Order TB-81684 had misal pav instead of what I ordered. Please refund Rs 560. This is the third time.,"{""order_id"": ""TB-81684"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 5}"
+M0115,Order TB-91147 had a rude rider and a torn bag. I paid Rs 560 for it.,"{""order_id"": ""TB-91147"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": true}"
+M0116,Order TB-21546 had veg biryani instead of what I ordered. Please refund Rs 260.,"{""order_id"": ""TB-21546"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 1, ""notes"": 0.92}"
+M0117,"Order TB-55354 was cold, the paneer tikka especially. This is the third time.","{""order_id"": ""TB-55354"", ""issue"": ""cold_food"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 4,}"
+M0118,Order TB-35088 had chole instead of what I ordered. Please refund Rs 180.,"```json
+{""order_id"": ""TB-35088"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}
+```"
+M0119,"Order TB-24141 was cold, the paneer tikka especially.","{""order_id"": ""TB-24141"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": -120, ""severity"": 3}"
+M0120,Order TB-89836 had misal pav instead of what I ordered. Please refund Rs 420. This is the third time.,"{""order_id"": ""TB-89836"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 5}"
+M0121,Order TB-79276 arrived without the thali.,"```json
+{""order_id"": ""TB-79276"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""2""}
+```"
+M0122,Order TB-56435 came 35 minutes late. This is the third time.,"```json
+{""order_id"": ""TB-56435"", ""issue"": ""late"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 4}
+```"
+M0123,Order TB-88701 had a rude rider and a torn bag. This is the third time.,"{""order_id"": ""TB-88701"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": 25000, ""severity"": 4}"
+M0124,Order TB-70416 had misal pav instead of what I ordered.,"Here is the JSON you asked for:
+{""order_id"": ""TB-70416"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3, ""customer_mood"": ""angry""}
+Let me know if you need anything else."
+M0125,Order TB-78477 had dal makhani instead of what I ordered. Please refund Rs 420. This is the third time.,"{""order_id"": ""TB-78477"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 4}"
+M0126,"Order TB-19519 was cold, the misal pav especially. This is the third time.","{""order_id"": ""TB-19519"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5, ""customer_mood"": ""angry"",}"
+M0127,Order TB-82593 had paneer tikka instead of what I ordered. Please refund Rs 310.,"{""order_id"": ""TB-82593"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": ""1""}"
+M0128,Order TB-38173 had a rude rider and a torn bag. I paid Rs 310 for it.,"{""order_id"": ""TB-38173"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": 310, ""severity"": 3, ""customer_mood"": ""angry""}"
+M0129,Order TB-49189 came 80 minutes late. Please refund Rs 420. This is the third time.,"{""order_id"": ""TB-49189"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 4}"
+M0130,Order TB-59731 had misal pav instead of what I ordered.,"{""order_id"": ""TB-59731"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0131,"Order TB-68793 was cold, the poha especially. Please refund Rs 420.","{""order_id"": ""TB-68793"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 2}"
+M0132,Order TB-87354 had a rude rider and a torn bag. Please refund Rs 240.,"{""order_id"": ""TB-87354"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0133,Order TB-25696 had a rude rider and a torn bag. Please refund Rs 560. This is the third time.,"{""order_id"": ""TB-25696"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 5}"
+M0134,Order TB-76314 arrived without the thali. Please refund Rs 260.,"{""order_id"": ""TB-76314"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 1,}"
+M0135,"Order TB-26672 was cold, the thali especially.","{""order_id"": ""TB-26672"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0136,Order TB-24449 had a rude rider and a torn bag. Please refund Rs 260.,"```json
+{""order_id"": ""TB-24449"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": true}
+```"
+M0137,Order TB-46170 arrived without the paneer tikka. Please refund Rs 120. This is the third time.,"{""order_id"": ""TB-46170"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": -120, ""severity"": 4}"
+M0138,Order TB-79823 had a rude rider and a torn bag. Please refund Rs 120.,"```json
+{""order_id"": ""TB-79823"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2}
+```"
+M0139,Order TB-34224 arrived without the poha. I paid Rs 180 for it.,"Here is the JSON you asked for:
+{""order_id"": ""TB-34224"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": 180, ""severity"": 2}
+Let me know if you need anything else."
+M0140,"Order TB-55025 was cold, the dal makhani especially. Please refund Rs 240.","{""order_id"": ""TB-55025"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0141,Order TB-97276 had misal pav instead of what I ordered. I paid Rs 420 for it.,"[{""order_id"": ""TB-97276"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": 420, ""severity"": 1}]"
+M0142,Order TB-41235 arrived without the dal makhani.,"{""order_id"": ""TB-41235"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0143,Order TB-19426 had a rude rider and a torn bag. Please refund Rs 310.,"{""order_id"": ""TB-19426"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": ""3""}"
+M0144,Order TB-22796 arrived without the poha. I paid Rs 120 for it.,"{""order_id"": ""TB-22796"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": 120, ""severity"": 3}"
+M0145,Order TB-82389 arrived without the paneer tikka.,"{""order_id"": ""TB-82389"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0146,Order TB-97749 came 35 minutes late. Please refund Rs 180.,"Here is the JSON you asked for:
+{""order_id"": ""TB-97749"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 2}
+Let me know if you need anything else."
+M0147,Order TB-45307 had paneer tikka instead of what I ordered.,"{""order_id"": ""TB-45307"", ""issue"": null, ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0148,Order TB-80504 came 65 minutes late.,"{""order_id"": ""TB-80504"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0149,"Order TB-98688 was cold, the poha especially. Please refund Rs 260.","{""order_id"": ""TB-98688"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 3,}"
+M0150,Order TB-32783 had a rude rider and a torn bag. Please refund Rs 120.,"{""order_id"": ""TB-32783"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2}"
+M0151,Order TB-19801 arrived without the misal pav. This is the third time.,"{""order_id"": ""TB-19801"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": ""Rs 250"", ""severity"": 5}"
+M0152,Order TB-94615 came 80 minutes late.,"Here is the JSON you asked for:
+{""order_id"": ""TB-94615"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}
+Let me know if you need anything else."
+M0153,"Order TB-58672 was cold, the dal makhani especially. I paid Rs 310 for it.","{""order_id"": ""TB-58672"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 310, ""severity"": 3}"
+M0154,Order TB-35572 had chole instead of what I ordered. I paid Rs 560 for it. This is the third time.,"{""order_id"": ""TB-35572"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": true}"
+M0155,Order TB-87674 arrived without the poha. Please refund Rs 420.,"[{""order_id"": ""TB-87674"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 3}]"
+M0156,Order TB-30974 had poha instead of what I ordered.,"```json
+{""order_id"": ""TB-30974"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0157,Order TB-56788 had thali instead of what I ordered. Please refund Rs 180.,"{""order_id"": ""TB-56788"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 2}"
+M0158,Order TB-61392 arrived without the poha. Please refund Rs 180.,"{""order_id"": ""TB-61392"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 1,}"
+M0159,Order TB-44856 had a rude rider and a torn bag.,"[{""order_id"": ""TB-44856"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1,}]"
+M0160,"Order TB-90739 was cold, the poha especially.","```json
+{""order_id"": null, ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}
+```"
+M0161,Order TB-74182 had a rude rider and a torn bag. Please refund Rs 180.,"{""order_id"": ""TB-74182"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": true}"
+M0162,"Order TB-91787 was cold, the paneer tikka especially. Please refund Rs 240.","{""order_id"": ""TB-91787"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 1,}"
+M0163,Order TB-14580 had a rude rider and a torn bag. I paid Rs 560 for it.,"{""order_id"": ""TB-14580"", ""issue"": ""LATE"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": 2}"
+M0164,"Order TB-33033 was cold, the misal pav especially. Please refund Rs 310. This is the third time.","{""order_id"": ""TB-33033"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 5}"
+M0165,"Order TB-76413 was cold, the paneer tikka especially. Please refund Rs 560. This is the third time.","{""order_id"": ""TB-76413"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 5,}"
+M0166,Order TB-79007 had chole instead of what I ordered.,"{""order_id"": ""TB-79007"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0167,Order TB-18555 had paneer tikka instead of what I ordered. Please refund Rs 260. This is the third time.,"{""order_id"": ""TB-18555"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 5, ""notes"": ""check with kitchen""}"
+M0168,Order TB-48916 arrived without the veg biryani.,"{""order_id"": ""TB-48916"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0169,Order TB-56774 had misal pav instead of what I ordered. I paid Rs 240 for it. This is the third time.,"{""order_id"": ""TB-56774"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": 240, ""severity"": true,}"
+M0170,Order TB-39522 had a rude rider and a torn bag. Please refund Rs 120. This is the third time.,"{""order_id"": ""TB-39522"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 5,}"
+M0171,Order TB-44137 arrived without the dal makhani. This is the third time.,"{""order_id"": ""TB-44137"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5}"
+M0172,Order TB-67434 came 50 minutes late. I paid Rs 310 for it.,"{""order_id"": ""TB-67434"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": 310, ""severity"": 3}"
+M0173,"Order TB-17971 was cold, the poha especially. I want my money back.","{""order_id"": ""TB-17971"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3, ""customer_mood"": 0.92}"
+M0174,"Order TB-68479 was cold, the dal makhani especially. Please refund Rs 260.","```json
+{""order_id"": ""TB-68479"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": ""3""}
+```"
+M0175,Order TB-42866 came 35 minutes late. Please refund Rs 560. This is the third time.,"{""order_id"": ""TB-42866"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": ""5"",}"
+M0176,Order TB-84594 came 65 minutes late. I want my money back.,"Here is the JSON you asked for:
+{""order_id"": ""TB-84594"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 2}
+Let me know if you need anything else."
+M0177,Order TB-91620 had chole instead of what I ordered. Please refund Rs 120.,"{""order_id"": ""TB-91620"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 99999, ""severity"": 1,}"
+M0178,Order TB-50196 came 80 minutes late. I paid Rs 180 for it.,"{""order_id"": ""TB-50196"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": 180, ""severity"": 3}"
+M0179,Order TB-78850 had misal pav instead of what I ordered. I want my money back.,"[{""order_id"": ""TB-78850"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}]"
+M0180,Order TB-85025 had a rude rider and a torn bag. Please refund Rs 310. This is the third time.,"```json
+{""order_id"": ""TB-85025"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": true}
+```"
+M0181,Order TB-94780 came 35 minutes late.,"{""order_id"": ""TB-94780"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, "
+M0182,Order TB-33254 had veg biryani instead of what I ordered. Please refund Rs 120.,"{""order_id"": ""TB-33254"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 120}"
+M0183,Order TB-85283 came 40 minutes late. I want my money back. This is the third time.,"{""order_id"": ""TB-85283"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 5}"
+M0184,"Order TB-64044 was cold, the misal pav especially. I paid Rs 310 for it.","{""order_id"": ""TB-64044"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 310, ""severity"": 3}"
+M0185,Order TB-30127 came 40 minutes late.,"{""order_id"": ""TB-30127"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0186,Order TB-99089 had a rude rider and a torn bag.,"{""order_id"": ""TB-99089"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3,}"
+M0187,Order TB-60013 came 80 minutes late.,"{""order_id"": ""TB-60013"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0188,Order TB-43270 came 80 minutes late. I paid Rs 120 for it. This is the third time.,"{""order_id"": ""TB-43270"", ""issue"": ""late"", ""refund_requ"
+M0189,Order TB-81054 had paneer tikka instead of what I ordered.,"{""order_id"": ""TB-81054"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2,}"
+M0190,"Order TB-34701 was cold, the chole especially. Please refund Rs 560.","```json
+{""order_id"": ""TB-34701"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": 3}
+```"
+M0191,Order TB-50908 came 50 minutes late. I paid Rs 560 for it.,"{""order_id"": ""TB-50908"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": 3}"
+M0192,Order TB-14635 came 35 minutes late.,"{""order_id"": ""TB-14635"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0193,Order TB-70096 had a rude rider and a torn bag.,"{""order_id"": ""TB-70096"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0194,Order TB-81049 arrived without the poha. This is the third time.,"```json
+{""order_id"": ""TB-81049"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 5}
+```"
+M0195,Order TB-49510 came 40 minutes late. Please refund Rs 180. This is the third time.,"{""order_id"": ""TB-49510"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 4}"
+M0196,Order TB-84721 arrived without the misal pav. I paid Rs 560 for it.,"```json
+{""order_id"": ""TB-84721"", ""issue"": ""Late delivery"", ""refund_requested"": false, ""amount_rs"": 560, ""severity"": 1}
+```"
+M0197,"Order TB-88097 was cold, the poha especially.","```json
+{""order_id"": ""TB-88097"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0198,"Order TB-58340 was cold, the dal makhani especially. Please refund Rs 180.","```json
+{""order_id"": ""TB-58340"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": ""2""}
+```"
+M0199,"Order TB-12022 was cold, the thali especially. Please refund Rs 240.","{""order_id"": ""TB-12022"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0200,Order TB-72487 had poha instead of what I ordered. Please refund Rs 240.,"{""order_id"": ""TB-72487"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2,}"
+M0201,Order TB-37651 came 80 minutes late. Please refund Rs 310. This is the third time.,"```json
+{""order_id"": ""TB-37651"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 5}
+```"
+M0202,"Order TB-50436 was cold, the veg biryani especially. Please refund Rs 310.","Here is the JSON you asked for:
+{""order_id"": ""TB-50436"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 1}
+Let me know if you need anything else."
+M0203,Order TB-84199 had paneer tikka instead of what I ordered. Please refund Rs 240.,"{""order_id"": ""TB-84199"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}"
+M0204,"Order TB-76902 was cold, the misal pav especially. Please refund Rs 420. This is the third time.","{""order_id"": ""TB-76902"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": ""5""}"
+M0205,Order TB-62594 came 35 minutes late. Please refund Rs 420.,"```json
+{""order_id"": ""TB-62594"", ""issue"": ""late"", ""refund_requested"": ""yes"", ""amount_rs"": 420, ""severity"": 2}
+```"
+M0206,Order TB-14780 had thali instead of what I ordered.,"{""order_id"": ""TB-14780"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""3""}"
+M0207,Order TB-32438 arrived without the chole.,"{""order_id"": ""TB-32438"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": true}"
+M0208,"Order TB-88515 was cold, the chole especially. Please refund Rs 180.","{""order_id"": ""TB-88515"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": true}"
+M0209,Order TB-75175 arrived without the dal makhani. I want my money back.,"{""order_id"": ""TB-75175"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 1}"
+M0210,"Order TB-83034 was cold, the veg biryani especially.","```json
+{""order_id"": ""TB-83034"", ""issue"": ""LATE"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}
+```"
+M0211,"Order TB-17132 was cold, the paneer tikka especially. I paid Rs 420 for it.","```json
+{""order_id"": ""TB-17132"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 420, ""severity"": 2}
+```"
+M0212,Order TB-15902 had veg biryani instead of what I ordered. Please refund Rs 260.,"[{""order_id"": ""TB-15902"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 1}]"
+M0213,Order TB-50415 had a rude rider and a torn bag.,"{""order_id"": ""TB-50415"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""3""}"
+M0214,Order TB-92326 came 35 minutes late.,"{""order_id"": ""TB-92326"", ""issue"": ""Cold food"", ""r"
+M0215,"Order TB-41995 was cold, the veg biryani especially. I paid Rs 260 for it.","{""order_id"": ""TB-41995"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 260, ""severity"": 1}"
+M0216,Order TB-90031 had thali instead of what I ordered. Please refund Rs 180. This is the third time.,"```json
+{""order_id"": ""TB-90031"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": NaN, ""severity"": 5}
+```"
+M0217,Order TB-17461 arrived without the misal pav. Please refund Rs 240.,"{""order_id"": ""TB-17461"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}"
+M0218,Order TB-80884 had chole instead of what I ordered.,"```json
+{""order_id"": ""TB-80884"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}
+```"
+M0219,Order TB-57726 had chole instead of what I ordered. This is the third time.,"{""order_id"": ""TB-57726"", ""issue"": ""wrong_item"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 4}"
+M0220,Order TB-57451 arrived without the poha. This is the third time.,"```json
+{""order_id"": ""TB-57451"", ""issue"": ""Cold food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4}
+```"
+M0221,Order TB-81250 had dal makhani instead of what I ordered. I paid Rs 240 for it.,"{""order_id"": ""TB-81250"", ""issue"": ""wrong_item"", ""refund_requested"":"
+M0222,Order TB-45790 came 40 minutes late. Please refund Rs 260. This is the third time.,"{""order_id"": ""TB-45790"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 4}"
+M0223,"Order TB-10814 was cold, the paneer tikka especially. Please refund Rs 120.","```json
+{""order_id"": ""TB-10814"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2}
+```"
+M0224,Order TB-84799 arrived without the thali. Please refund Rs 120.,"{""order_id"": ""TB-84799"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 1}"
+M0225,Order TB-37629 came 65 minutes late. I want my money back.,"{""order_id"": ""TB-37629"", ""issue"": null, ""refund_requested"": true,"
+M0226,Order TB-61991 had a rude rider and a torn bag.,"{""order_id"": ""TB-61991"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1, ""confidence"": ""check with kitchen""}"
+M0227,Order TB-35696 came 80 minutes late. Please refund Rs 310. This is the third time.,"Here is the JSON you asked for:
+{""order_id"": ""TB-35696"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 4}
+Let me know if you need anything else."
+M0228,Order TB-41147 had chole instead of what I ordered. Please refund Rs 180.,"{""order_id"": ""TB-41147"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 25000, ""severity"": 3}"
+M0229,Order TB-32379 had a rude rider and a torn bag. Please refund Rs 260.,"Here is the JSON you asked for:
+{""order_id"": ""TB-32379"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 2}
+Let me know if you need anything else."
+M0230,Order TB-16655 came 35 minutes late.,"{""order_id"": ""TB-16655"", ""issue"": ""late "", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0231,Order TB-86903 came 35 minutes late. I paid Rs 260 for it.,"{""order_id"": ""TB-86903"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": 260, ""severity"": 3}"
+M0232,Order TB-73517 arrived without the misal pav. Please refund Rs 180.,"{""order_id"": ""TB-73517"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}"
+M0233,Order TB-98695 came 50 minutes late. I want my money back. This is the third time.,"{""order_id"": ""TB-98695"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 4}"
+M0234,Order TB-59022 arrived without the veg biryani. I paid Rs 180 for it.,"{""order_id"": ""TB-59022"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": 180, ""severity"": 7}"
+M0235,Order TB-55750 had poha instead of what I ordered. This is the third time.,"{""order_id"": ""TB-55750"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""4""}"
+M0236,Order TB-91307 had a rude rider and a torn bag. I want my money back. This is the third time.,"```json
+{""order_id"": ""TB-91307"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 4, ""confidence"": ""check with kitchen""}
+```"
+M0237,"Order TB-13502 was cold, the thali especially. Please refund Rs 420.","{""order_id"": ""TB-13502"", ""issue"": ""Cold food"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 1}"
+M0238,"Order TB-66476 was cold, the chole especially. Please refund Rs 120.","{""order_id"": ""TB-66476"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 2,}"
+M0239,Order TB-71250 had a rude rider and a torn bag. Please refund Rs 310.,"```json
+{""order_id"": ""TB-71250"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 3}
+```"
+M0240,Order TB-14484 came 50 minutes late. Please refund Rs 260. This is the third time.,"Here is the JSON you asked for:
+{""order_id"": ""TB-14484"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 5}
+Let me know if you need anything else."
+M0241,Order TB-45739 had chole instead of what I ordered. Please refund Rs 240. This is the third time.,"{""order_id"": ""TB-45739"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 4}"
+M0242,Order TB-18766 came 80 minutes late. Please refund Rs 180. This is the third time.,"{""order_id"": ""TB-18766"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 4}"
+M0243,Order TB-25522 had a rude rider and a torn bag.,"{""order_id"": ""TB-25522"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0244,Order TB-83427 came 40 minutes late. Please refund Rs 310.,"{""order_id"": ""TB-83427"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 3}"
+M0245,Order TB-57551 arrived without the misal pav. I want my money back.,"Here is the JSON you asked for:
+{""order_id"": ""TB-57551"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}
+Let me know if you need anything else."
+M0246,Order TB-27075 arrived without the chole. Please refund Rs 240.,"{""order_id"": ""TB-27075"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3}"
+M0247,Order TB-38321 arrived without the poha.,"{""order_id"": ""TB-38321"", ""issue"": ""Late delivery"", ""refund_requested"": false, ""amount_rs"
+M0248,"Order TB-64878 was cold, the misal pav especially. I paid Rs 180 for it. This is the third time.","{""order_id"": ""TB-64878"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": 180, ""severity"": 4}"
+M0249,Order TB-76587 arrived without the dal makhani. Please refund Rs 260.,"{""order_id"": ""TB-76587"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": ""3""}"
+M0250,Order TB-53581 came 65 minutes late. Please refund Rs 260.,"{""order_id"": ""TB-53581"", ""issue"": ""late "", ""refund_requested"": true, ""amount_rs"": 260, ""severity"": 2}"
+M0251,"Order TB-84462 was cold, the poha especially. Please refund Rs 560. This is the third time.","{""order_id"": ""TB-84462"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 560, ""severity"": ""4"",}"
+M0252,Order TB-80832 had dal makhani instead of what I ordered. Please refund Rs 120.,"{""order_id"": ""TB-80832"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 3}"
+M0253,Order TB-69959 came 80 minutes late. Please refund Rs 240.,"Here is the JSON you asked for:
+{""order_id"": ""TB-69959"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 2}
+Let me know if you need anything else."
+M0254,Order TB-58800 arrived without the misal pav.,"```json
+[{""order_id"": ""TB-58800"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}]
+```"
+M0255,Order TB-82256 had a rude rider and a torn bag.,"```json
+{""order_id"": ""TB-82256"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}
+```"
+M0256,Order TB-96314 had a rude rider and a torn bag. Please refund Rs 180.,"{""order_id"": ""TB-96314"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": ""Rs 180"", ""severity"": 2}"
+M0257,Order TB-83712 had a rude rider and a torn bag. I want my money back.,"{""order_id"": ""TB-83712"", ""issue"": ""other"", """
+M0258,Order TB-22602 had chole instead of what I ordered.,"{""order_id"": ""TB-22602"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1,}"
+M0259,Order TB-82418 had thali instead of what I ordered.,"```json
+{""order_id"": ""TB-82418"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0260,Order TB-36488 came 40 minutes late. Please refund Rs 420.,"{""order_id"": ""TB-36488"", ""issue"": ""late"", ""refund_requested"": true, ""am"
+M0261,Order TB-12575 had a rude rider and a torn bag. I want my money back.,"{""order_id"": ""TB-12575"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 3}"
+M0262,Order TB-55140 had poha instead of what I ordered. I want my money back. This is the third time.,"{""order_id"": ""TB-55140"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": null,}"
+M0263,Order TB-42493 arrived without the dal makhani.,"{""order_id"": ""TB-42493"", ""issue"": ""Late delivery"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0264,Order TB-73941 came 50 minutes late.,"{""order_id"": ""TB-73941"", ""issue"": ""late"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}"
+M0265,Order TB-30399 had chole instead of what I ordered.,"{""order_id"": ""TB-30399"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0266,Order TB-58111 had paneer tikka instead of what I ordered.,"{""order_id"": ""TB-58111"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2,}"
+M0267,Order TB-15343 had dal makhani instead of what I ordered. I paid Rs 260 for it.,"{""order_id"": ""TB-15343"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": 25000, ""severity"": 3}"
+M0268,Order TB-54362 came 40 minutes late. I want my money back.,"{""order_id"": ""TB-54362"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null, ""severity"": 2}"
+M0269,Order TB-11699 had a rude rider and a torn bag.,"```json
+{""order_id"": ""TB-11699"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": NaN, ""severity"": 2}
+```"
+M0270,Order TB-44370 came 35 minutes late. I want my money back. This is the third time.,"Here is the JSON you asked for:
+{""order_id"": ""TB-44370"", ""issue"": ""late"", ""refund_requested"": true, ""amount_rs"": null}
+Let me know if you need anything else."
+M0271,Order TB-81210 arrived without the paneer tikka.,"{""order_id"": ""TB-81210"", ""issue"": ""missing_item"", ""refund_requested"": ""no"", ""amount_rs"": null, ""severity"": 2}"
+M0272,Order TB-30565 had thali instead of what I ordered.,"{""order_id"": ""TB-30565"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": ""3""}"
+M0273,Order TB-23253 arrived without the paneer tikka. Please refund Rs 310.,"{""order_id"": ""TB-23253"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 1}"
+M0274,Order TB-43942 had a rude rider and a torn bag.,"{""order_id"": ""43942"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0275,Order TB-71937 had a rude rider and a torn bag. Please refund Rs 310.,"{""order_id"": ""TB-71937"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 2,}"
+M0276,"Order TB-71872 was cold, the misal pav especially. This is the third time.","Here is the JSON you asked for:
+{""order_id"": ""TB-71872"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4}
+Let me know if you need anything else."
+M0277,Order TB-89021 had poha instead of what I ordered. Please refund Rs 310.,"{""order_id"": ""TB-89021"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 1}"
+M0278,Order TB-20105 had a rude rider and a torn bag. Please refund Rs 180.,"```json
+{""order_id"": ""TB-20105"", ""issue"": ""late "", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}
+```"
+M0279,"Order TB-15742 was cold, the poha especially.","```json
+{""order_id"": ""TB-15742"", ""issue"": ""cold_food"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3}
+```"
+M0280,Order TB-44402 had thali instead of what I ordered. Please refund Rs 240.,"```json
+{""order_id"": ""TB-44402"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 3, ""confidence"": 0.92}
+```"
+M0281,Order TB-50456 had misal pav instead of what I ordered.,"{""order_id"": ""TB-50456"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 3,}"
+M0282,Order TB-51847 arrived without the dal makhani. This is the third time.,"{""order_id"": ""TB-51847"", ""issue"": ""missing_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 4,}"
+M0283,Order TB-17928 had thali instead of what I ordered. I paid Rs 240 for it.,"{""order_id"": ""TB-17928"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": 240, ""severity"": 2}"
+M0284,Order TB-20135 had paneer tikka instead of what I ordered. Please refund Rs 180. This is the third time.,"{""order_id"": ""TB-20135"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 5}"
+M0285,Order TB-98012 had poha instead of what I ordered. Please refund Rs 120. This is the third time.,"{""order_id"": ""TB-98012"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": ""5"",}"
+M0286,"Order TB-19561 was cold, the dal makhani especially. Please refund Rs 120.","{""order_id"": ""TB-19561"", ""issue"": ""cold_food"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 3}"
+M0287,Order TB-91800 had veg biryani instead of what I ordered. Please refund Rs 310. This is the third time.,"```json
+{""order_id"": ""TB-91800"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 310, ""severity"": 5}
+```"
+M0288,Order TB-28351 had misal pav instead of what I ordered. Please refund Rs 260.,"```json
+{""order_id"": ""TB-28351"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": -120, ""severity"": 2}
+```"
+M0289,Order TB-12905 had a rude rider and a torn bag.,"```json
+{""order_id"": ""TB-12905"", ""issue"": ""other"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2, ""confidence"": ""check with kitchen""}
+```"
+M0290,Order TB-72662 arrived without the dal makhani. Please refund Rs 240.,"{""order_id"": ""TB-72662"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 240, ""severity"": 1}"
+M0291,Order TB-51856 arrived without the chole. Please refund Rs 180.,"{""order_id"": ""TB-51856"", ""issue"": ""missing_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 2}"
+M0292,Order TB-20468 came 80 minutes late.,"{""order_id"": ""TB-20468"", ""issue"": ""late"", ""refund_requested"
+M0293,Order TB-62179 had misal pav instead of what I ordered.,"{""order_id"": ""TB-62179"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 1}"
+M0294,Order TB-92299 had paneer tikka instead of what I ordered.,"```json
+{""order_id"": ""TB-92299"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}
+```"
+M0295,Order TB-30915 had thali instead of what I ordered. Please refund Rs 420.,"Here is the JSON you asked for:
+{""order_id"": ""TB-30915"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 2}
+Let me know if you need anything else."
+M0296,Order TB-48758 had chole instead of what I ordered. Please refund Rs 180.,"{""order_id"": ""TB-48758"", ""issue"": ""wrong_item"", ""refund_requested"": true, ""amount_rs"": 180, ""severity"": 3}"
+M0297,Order TB-62336 had a rude rider and a torn bag. Please refund Rs 420. This is the third time.,"{""order_id"": ""TB-62336"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 420, ""severity"": 4,}"
+M0298,Order TB-70959 had paneer tikka instead of what I ordered.,"{""order_id"": ""TB-70959"", ""issue"": ""wrong_item"", ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"
+M0299,Order TB-53290 had a rude rider and a torn bag. Please refund Rs 120.,"{""order_id"": ""TB-53290"", ""issue"": ""other"", ""refund_requested"": true, ""amount_rs"": 120, ""severity"": 1}"
+M0300,Order TB-11526 arrived without the misal pav.,"{""order_id"": ""TB-11526"", ""issue"": null, ""refund_requested"": false, ""amount_rs"": null, ""severity"": 2}"

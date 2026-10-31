@@ -1,0 +1,19 @@
+Maya Okafor
+Data analyst, Pune
+
+Summary
+- Saved teams over 100 hours of manual reporting.
+
+Experience
+Analyst intern, Lumen Freight (lumen-freight)
+- Built a PowerBI dashboard for late deliveries used by 30 depot managers.
+- Automated the weekly late-delivery report in Python, cutting it from 6.5 to 4.25 hours, a 40% saving.
+- Ran an A/B test on payment reminder emails that lifted on-time payment by 3.2%.
+
+Projects
+Pantrybox churn analysis (pantrybox-churn)
+- Analysed 1,400 subscriptions and found that 224 of 779 trial starters (28.8%) never paid.
+- Showed that trial converters churn 4.6% more than paid starters within 90 days of paying.
+
+Tiffinbell dispatch test (tiffinbell-dispatch)
+- Measured a 4.0 point rise in on-time deliveries, from 80.5% to 84.5%, across 1,771 orders.

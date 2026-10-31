@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="238" viewBox="0 0 960 238" font-family="Helvetica, Arial, sans-serif">
+<rect width="960" height="238" fill="#ffffff"/>
+<text class="title" x="16" y="28" font-size="18" font-weight="bold">Tiffinbell, October so far</text>
+<text class="subtitle" x="16" y="48" font-size="12" fill="#5f6368">1-20 Oct 2026 compared with 1-20 Sep 2026. Data to the end of 20 October 2026.</text>
+<rect class="card" data-kpi="revenue" x="16" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="16" y="64" width="6" height="150" fill="#1b7f4b"/>
+<text class="card-label" x="34" y="90" font-size="13" fill="#3c4043">Revenue</text>
+<text class="card-value" x="34" y="128" font-size="28" font-weight="bold">Rs 236,942</text>
+<text class="card-change" x="34" y="154" font-size="12">+3.9% vs 1-20 Sep 2026</text>
+<text class="card-target" x="34" y="174" font-size="12" fill="#1b7f4b">102% of target pace (on track)</text>
+<rect class="card" data-kpi="orders" x="252" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="252" y="64" width="6" height="150" fill="#b3261e"/>
+<text class="card-label" x="270" y="90" font-size="13" fill="#3c4043">Orders</text>
+<text class="card-value" x="270" y="128" font-size="28" font-weight="bold">608</text>
+<text class="card-change" x="270" y="154" font-size="12">+1.0% vs 1-20 Sep 2026</text>
+<text class="card-target" x="270" y="174" font-size="12" fill="#b3261e">98% of target pace (behind)</text>
+<rect class="card" data-kpi="aov" x="488" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="488" y="64" width="6" height="150" fill="#5f6368"/>
+<text class="card-label" x="506" y="90" font-size="13" fill="#3c4043">Average order value</text>
+<text class="card-value" x="506" y="128" font-size="28" font-weight="bold">Rs 400</text>
+<text class="card-change" x="506" y="154" font-size="12">+2.4% vs 1-20 Sep 2026</text>
+<text class="card-target" x="506" y="174" font-size="12" fill="#5f6368">no target</text>
+<rect class="card" data-kpi="refund_rate" x="724" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="724" y="64" width="6" height="150" fill="#1b7f4b"/>
+<text class="card-label" x="742" y="90" font-size="13" fill="#3c4043">Refund rate</text>
+<text class="card-value" x="742" y="128" font-size="28" font-weight="bold">2.6%</text>
+<text class="card-change" x="742" y="154" font-size="12">-0.5 pts vs 1-20 Sep 2026</text>
+<text class="card-target" x="742" y="174" font-size="12" fill="#1b7f4b">1.4 pts under the 4.0% limit (on track)</text>
+</svg>

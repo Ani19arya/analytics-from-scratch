@@ -1,0 +1,17 @@
+{
+  "files": [
+    "run_v1.csv",
+    "run_v2.csv",
+    "other_week_v2.csv",
+    "dev_examples.csv"
+  ],
+  "label_source": "simulated",
+  "model": "none: no model was called",
+  "prompt_v1": "Label this support ticket as exactly one of: billing, bug, refund, other. Answer with the label only.",
+  "prompt_v2": "Label this support ticket as exactly one of: billing, bug, refund, other. Answer with the label only. A request to reverse, correct or explain a charge is billing. Use refund only when the customer asks for money back for something they bought or cancelled. Example: 'I was charged twice, please reverse one' is billing.",
+  "temperature": "simulated as 0: the same text always gets the same label",
+  "date": "not applicable",
+  "how": "make_data.py draws one random number per (seed, text) and maps it through each version's chances for that wording template, so the two versions only disagree where v2 changed the chances.",
+  "gold_label_source": "simulated single human labeller, treated as the truth",
+  "seed": 610
+}

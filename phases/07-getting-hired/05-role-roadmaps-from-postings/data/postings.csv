@@ -1,0 +1,601 @@
+posting_id,title,tools
+P0001,Product Analyst,"sql, Tableau, Python, Looker"
+P0002,Business Analyst,"SQL, Excel, POWER BI, Tableau"
+P0003,Senior Product Analyst,
+P0004,Business Systems Analyst,"Power BI, Python"
+P0005,IT Business Analyst,"SQL, Excel"
+P0006,Business Systems Analyst,"Excel, POWER BI"
+P0007,Business Analyst,
+P0008,Business Data Analyst,"power bi, SQL"
+P0009,Senior Business Analyst,"sql, Excel, sql"
+P0010,Product Analyst,SQL
+P0011,Data Analyst II,"Tableau, sql, Excel"
+P0012,Data Analyst,"Python, Tableau, Snowflake, Excel"
+P0013,Junior Data Analyst,Python
+P0014,Production Planning Analyst,"SQL, Tableau, Excel"
+P0015,Growth Product Analyst,"Python, SQL, R"
+P0016,Business Intelligence Analyst II,"Python, sql"
+P0017,Product Analyst,
+P0018,Senior Product Analyst,"Looker, sql, Tableau"
+P0019,People Analytics Analyst,Tableau
+P0020,data analyst,"POWER BI, SQL, Python, Excel"
+P0021,Business Systems Analyst,"SQL, power bi"
+P0022,Product Data Analyst,"Looker, sql"
+P0023,Product Data Analyst,"Python, Excel, SQL, DBT, Spark"
+P0024,data analyst,"power bi, SQL, Excel"
+P0025,Business Analyst,"Jira, Excel"
+P0026,Production Planning Analyst,"Excel, Python"
+P0027,Marketing Data Analyst,"SQL, Excel, Tableau, Python"
+P0028,IT Business Analyst,"Tableau, Excel, sql"
+P0029,Marketing Data Analyst,"sql, R, Excel"
+P0030,Data Analyst II,"Excel, Python, SQL, Looker"
+P0031,Data Analyst II,"Python, Excel, sql, Snowflake"
+P0032,Junior Data Analyst,"Excel, SQL, Looker, Power BI"
+P0033,Power BI Analyst,"SQL, POWER BI, Tableau"
+P0034,BUSINESS ANALYST,"SQL, Excel, Jira, power bi, sql"
+P0035,Junior Data Analyst,"POWER BI, Excel, sql, Python"
+P0036,data analyst,"dbt, SQL, Excel, Python"
+P0037,Growth Product Analyst,"Python, Snowflake, SQL, R"
+P0038,Product Analytics Analyst,"sql, Tableau, Excel"
+P0039,Business Intelligence Analyst II,
+P0040,Power BI Analyst,"SQL, power bi"
+P0041,Senior Product Analyst,"Python, Tableau, Looker, sql"
+P0042,Product Analytics Analyst,"sql, Python, R"
+P0043,data analyst,"Python, power bi"
+P0044,Senior Product Analyst,"R, SQL, DBT, Python"
+P0045,Data Analyst II,"Excel, R, sql, Snowflake"
+P0046,data analyst,"Tableau, Power BI, Looker, Excel"
+P0047,Senior Product Analyst,
+P0048,People Analytics Analyst,
+P0049,Product Analytics Analyst,"Tableau, sql"
+P0050,IT Business Analyst,"Excel, SQL, Power BI"
+P0051,Junior Data Analyst,"SQL, R"
+P0052,Senior Product Analyst,"Looker, Python"
+P0053,BI Reporting Analyst,"SQL, Tableau, power bi, Excel"
+P0054,Senior Business Intelligence Analyst,"SQL, POWER BI"
+P0055,Production Planning Analyst,"Excel, SQL, sql"
+P0056,Data Analyst,"Tableau, Python, SQL"
+P0057,Business Analyst,"sql, Excel, Looker"
+P0058,data analyst,"Python, R"
+P0059,Data Analyst,
+P0060,Business Analyst,"Excel, SQL, Jira"
+P0061,Senior Business Intelligence Analyst,"Alteryx, sql, Power BI, Excel, Tableau"
+P0062,IT Business Analyst,"Python, Excel"
+P0063,People Analytics Analyst,"Excel, POWER BI, Tableau, Python"
+P0064,Power BI Analyst,"POWER BI, Tableau, Looker, Python"
+P0065,Marketing Data Analyst,
+P0066,Data Analyst II,"Python, sql"
+P0067,Data Analyst,"Excel, POWER BI, SQL, R, Python, dbt"
+P0068,Data Analyst,"Python, dbt, power bi, SQL, Excel"
+P0069,Marketing Data Analyst,"SQL, Python"
+P0070,Senior Business Analyst,
+P0071,Growth Product Analyst,"Tableau, R, Excel, sql"
+P0072,BI Reporting Analyst,"Tableau, Excel, power bi, DBT, SQL, Looker"
+P0073,Senior Business Analyst,Python
+P0074,Business Intelligence Analyst,"POWER BI, Excel, Python"
+P0075,BI Reporting Analyst,"Alteryx, Tableau, SQL"
+P0076,Business Analyst,"Excel, Power BI"
+P0077,Data Analyst,"Looker, sql"
+P0078,IT Business Analyst,"sql, Excel, Jira"
+P0079,Senior Product Analyst,"dbt, Python, SQL"
+P0080,Data Analyst II,"Tableau, SQL, power bi"
+P0081,Senior Business Analyst,Excel
+P0082,Senior Data Analyst,
+P0083,Growth Product Analyst,
+P0084,Senior Business Analyst,"Excel, sql, SAS, Jira"
+P0085,Business Intelligence Analyst,"POWER BI, SQL"
+P0086,Product Analytics Analyst,"Python, SQL, Tableau"
+P0087,Senior Data Analyst,
+P0088,People Analytics Analyst,"Python, SQL, R, Tableau"
+P0089,Data Analyst II,"POWER BI, Excel"
+P0090,BUSINESS ANALYST,"Jira, Excel"
+P0091,Product Analyst,"Looker, Python, Excel"
+P0092,Data Analyst II,"Tableau, Power BI, sql, Python, Excel"
+P0093,Production Planning Analyst,"Python, Tableau, Excel"
+P0094,Power BI Analyst,"Snowflake, sql"
+P0095,Marketing Data Analyst,"R, SQL"
+P0096,Marketing Data Analyst,"Python, Excel"
+P0097,Supply Chain Analyst,Excel
+P0098,Marketing Data Analyst,"SQL, Python, Looker, R"
+P0099,Product Data Analyst,"Snowflake, SQL, sql"
+P0100,Marketing Data Analyst,SQL
+P0101,Business Intelligence Analyst,"Excel, sql, POWER BI, Tableau"
+P0102,Data Analyst II,
+P0103,People Analytics Analyst,
+P0104,Business Intelligence Analyst,"Tableau, Excel, SQL"
+P0105,Data Analyst II,"Excel, sql, Python"
+P0106,Business Intelligence Analyst,"Tableau, Excel, power bi, Snowflake"
+P0107,Senior Business Analyst,"sql, Tableau"
+P0108,Data Analyst II,"sql, Excel, power bi, Python"
+P0109,Junior Data Analyst,Excel
+P0110,Business Intelligence Analyst,"sql, Power BI"
+P0111,Senior Data Analyst,"SQL, Power BI, Python"
+P0112,Junior Data Analyst,sql
+P0113,Data Analyst,"sql, Python, Power BI"
+P0114,IT Business Analyst,"Jira, power bi, Tableau, sql"
+P0115,Marketing Data Analyst,sql
+P0116,Senior Data Analyst,"Python, power bi, sql, Excel"
+P0117,Credit Risk Analyst,"Power BI, Excel"
+P0118,Business Intelligence Analyst,
+P0119,Business Systems Analyst,Jira
+P0120,Financial Analyst,"Excel, Python, python"
+P0121,BUSINESS ANALYST,"Excel, POWER BI, SAS"
+P0122,Product Data Analyst,sql
+P0123,Senior Product Analyst,"sql, R, Tableau, sql"
+P0124,Business Systems Analyst,Excel
+P0125,Data Analyst II,"dbt, Excel, sql"
+P0126,Senior Product Analyst,"sql, Looker"
+P0127,People Analytics Analyst,"sql, Tableau, Python"
+P0128,Senior Data Analyst,
+P0129,Business Systems Analyst,Excel
+P0130,Product Data Analyst,"SQL, Python"
+P0131,Power BI Analyst,"SQL, Power BI, Excel, Looker"
+P0132,Supply Chain Analyst,Excel
+P0133,Business Analyst,"Excel, Power BI, SQL"
+P0134,Product Data Analyst,"Snowflake, Looker, SQL"
+P0135,Marketing Data Analyst,"Python, Tableau, SQL"
+P0136,BI Analyst,"Looker, tableau, power bi, Snowflake, Tableau"
+P0137,Data Analyst,"sql, sql, Snowflake, Python, Tableau"
+P0138,Product Analytics Analyst,"Looker, Python, SQL"
+P0139,Business Analyst,
+P0140,BI Reporting Analyst,"Power BI, Tableau"
+P0141,Growth Product Analyst,"Python, Looker, sql"
+P0142,Senior Data Analyst,"R, Python, Tableau"
+P0143,Senior Business Intelligence Analyst,
+P0144,data analyst,Excel
+P0145,data analyst,"SQL, Power BI, Python, Snowflake"
+P0146,Senior Data Analyst,"Python, SQL, Tableau"
+P0147,People Analytics Analyst,"POWER BI, sql, Looker"
+P0148,Marketing Data Analyst,"Looker, Python"
+P0149,data analyst,"SQL, R"
+P0150,Business Intelligence Analyst,
+P0151,Data Analyst II,"Python, SQL"
+P0152,Marketing Data Analyst,"Power BI, Tableau, R, sql, Python, Excel"
+P0153,Credit Risk Analyst,Excel
+P0154,BI Reporting Analyst,"dbt, power bi, R, Excel, sql, Snowflake"
+P0155,Junior Data Analyst,
+P0156,Junior Data Analyst,"SQL, sql, Tableau, Excel"
+P0157,Junior Data Analyst,"Python, Power BI"
+P0158,Product Data Analyst,"sql, Python"
+P0159,data analyst,"SQL, power bi, Excel, Tableau"
+P0160,Senior Business Intelligence Analyst,"SQL, Excel, Tableau, Python"
+P0161,Production Planning Analyst,"power bi, Excel, Python, SAS"
+P0162,Product Analyst,"dbt, Python, Excel, SQL, Tableau"
+P0163,IT Business Analyst,"POWER BI, SQL, Excel"
+P0164,BI Analyst,"Python, Looker, sql, Excel"
+P0165,Power BI Analyst,"SQL, POWER BI, Looker"
+P0166,Supply Chain Analyst,"sql, Excel, SAS"
+P0167,Marketing Data Analyst,"Excel, Tableau, power bi, Python"
+P0168,Supply Chain Analyst,"power bi, sql, Excel"
+P0169,Marketing Data Analyst,"Excel, Python, Tableau, sql, sql"
+P0170,Financial Analyst,
+P0171,Senior Business Analyst,"SAS, Excel, sql"
+P0172,Junior Data Analyst,"SQL, POWER BI, Python"
+P0173,Data Analyst II,"sql, Excel, Tableau, DBT"
+P0174,Junior Data Analyst,"Looker, Power BI, SQL"
+P0175,Product Data Analyst,"sql, Excel, Looker, Python, Tableau"
+P0176,Business Data Analyst,"power bi, Excel, SQL"
+P0177,Junior Data Analyst,"SQL, Tableau, Snowflake, R, power bi, Excel, Python"
+P0178,Growth Product Analyst,SQL
+P0179,BI Reporting Analyst,"power bi, Excel, Snowflake, Tableau"
+P0180,Product Data Analyst,Spark
+P0181,Product Analytics Analyst,"Looker, SQL, Tableau"
+P0182,BI Analyst,"power bi, Excel, Tableau, sql"
+P0183,Business Data Analyst,"sql, Excel, Jira"
+P0184,data analyst,"Looker, SQL, Python, Tableau"
+P0185,Supply Chain Analyst,"sql, Excel"
+P0186,Senior Business Intelligence Analyst,"Alteryx, POWER BI, Tableau, sql, Excel"
+P0187,Production Planning Analyst,
+P0188,BUSINESS ANALYST,"SAS, Excel"
+P0189,Junior Data Analyst,"Tableau, SQL, Excel"
+P0190,Financial Analyst,"Excel, Python, Power BI"
+P0191,Supply Chain Analyst,"SQL, Tableau, Excel"
+P0192,Junior Data Analyst,"power bi, SQL"
+P0193,Power BI Analyst,"Power BI, SQL, Alteryx, Excel"
+P0194,data analyst,"SQL, Tableau, Python, power bi"
+P0195,People Analytics Analyst,"Excel, sql, Looker, sql, Python, power bi"
+P0196,Business Analyst,"Power BI, Tableau"
+P0197,IT Business Analyst,"Excel, Python, sql"
+P0198,Business Analyst,"SQL, Tableau, Jira, Excel"
+P0199,Senior Business Analyst,
+P0200,Business Intelligence Analyst,Tableau
+P0201,BI Reporting Analyst,"POWER BI, Snowflake, Excel"
+P0202,IT Business Analyst,"SQL, Excel"
+P0203,Senior Business Intelligence Analyst,"Excel, Power BI, Snowflake, SQL"
+P0204,BI Analyst,
+P0205,Junior Data Analyst,
+P0206,Senior Product Analyst,"Looker, SQL, Python"
+P0207,Junior Data Analyst,"Python, Excel, sql, sql"
+P0208,Business Analyst,Looker
+P0209,Data Analyst,"SQL, RStudio, Python"
+P0210,BI Analyst,"Excel, POWER BI, Tableau, Alteryx, SQL"
+P0211,Business Analyst,"Excel, SQL"
+P0212,Marketing Data Analyst,"SQL, Tableau, Python, Excel"
+P0213,Senior Data Analyst,"SQL, Tableau"
+P0214,Senior Business Analyst,"sql, Excel, Jira"
+P0215,Senior Data Analyst,"Snowflake, Tableau, SQL, Python"
+P0216,People Analytics Analyst,"Excel, Looker, SQL, power bi"
+P0217,Data Analyst II,
+P0218,Senior Product Analyst,"SQL, Python"
+P0219,Junior Data Analyst,"Tableau, sql"
+P0220,BI Analyst,"Tableau, Excel, Alteryx, SQL, Power BI"
+P0221,Junior Data Analyst,"Python, python, Excel, Tableau, R"
+P0222,Senior Business Intelligence Analyst,"POWER BI, Excel"
+P0223,BUSINESS ANALYST,"sql, Excel, Tableau, Python"
+P0224,Growth Product Analyst,"sql, Excel"
+P0225,People Analytics Analyst,
+P0226,Senior Business Intelligence Analyst,"Tableau, Looker, Excel, SQL, power bi"
+P0227,Data Analyst II,
+P0228,Financial Analyst,"sql, Excel"
+P0229,Power BI Analyst,
+P0230,data analyst,"Excel, POWER BI, SQL"
+P0231,Business Systems Analyst,Excel
+P0232,Supply Chain Analyst,Excel
+P0233,Data Analyst,
+P0234,Data Analyst,"R, Snowflake, Excel"
+P0235,Credit Risk Analyst,"POWER BI, Excel, SQL"
+P0236,Business Intelligence Analyst,"Tableau, Excel, Alteryx, dbt, POWER BI"
+P0237,Data Analyst,
+P0238,BI Analyst,"DBT, Looker, sql, Python"
+P0239,Business Analyst,"Python, sql, Excel"
+P0240,data analyst,"SQL, Excel, Python"
+P0241,Business Intelligence Analyst II,"Tableau, sql, Python"
+P0242,data analyst,"Python, Tableau, sql"
+P0243,Senior Data Analyst,"Looker, sql, Excel"
+P0244,Data Analyst II,
+P0245,Senior Business Intelligence Analyst,"sql, power bi"
+P0246,Product Data Analyst,"sql, Python, Power BI"
+P0247,Product Analyst,Looker
+P0248,Data Analyst II,"Python, SQL"
+P0249,Business Analyst,Excel
+P0250,BUSINESS ANALYST,Excel
+P0251,BI Reporting Analyst,"POWER BI, sql, Excel, Tableau"
+P0252,Business Intelligence Analyst II,"Looker, Tableau, sql, power bi"
+P0253,IT Business Analyst,sql
+P0254,Senior Business Intelligence Analyst,"Excel, SQL, POWER BI"
+P0255,People Analytics Analyst,"Python, sql, Excel, Snowflake"
+P0256,Credit Risk Analyst,"Excel, Python, sql"
+P0257,Senior Business Intelligence Analyst,"power bi, sql, Tableau"
+P0258,BUSINESS ANALYST,"Excel, Jira"
+P0259,Business Intelligence Analyst,"Tableau, Excel, SQL, sql, Power BI"
+P0260,Business Analyst,
+P0261,Senior Data Analyst,"R, Python, SQL, Excel"
+P0262,Financial Analyst,"Tableau, Excel"
+P0263,IT Business Analyst,Excel
+P0264,People Analytics Analyst,"Excel, POWER BI, Python, sql"
+P0265,Business Systems Analyst,Jira
+P0266,Senior Business Analyst,"Excel, SQL"
+P0267,Business Analyst,
+P0268,Junior Data Analyst,"SQL, Excel, Tableau, Looker, Snowflake, Python"
+P0269,Marketing Data Analyst,"Excel, Tableau, sql"
+P0270,Data Analyst II,"Tableau, Looker"
+P0271,BUSINESS ANALYST,"power bi, Tableau, Excel"
+P0272,Business Data Analyst,Excel
+P0273,BI Reporting Analyst,"sql, Tableau, POWER BI, Looker, sql"
+P0274,Junior Data Analyst,"Python, Tableau, SQL, Snowflake"
+P0275,Junior Data Analyst,sql
+P0276,People Analytics Analyst,"Excel, SQL, Python"
+P0277,data analyst,
+P0278,BUSINESS ANALYST,"Jira, Excel, Python"
+P0279,Data Analyst,"sql, DBT"
+P0280,data analyst,"SQL, Excel, Tableau"
+P0281,Senior Business Intelligence Analyst,"Power BI, Excel, SQL, Snowflake"
+P0282,Junior Data Analyst,"sql, power bi"
+P0283,Data Analyst II,"Tableau, SQL"
+P0284,Data Analyst,"R, SQL"
+P0285,BUSINESS ANALYST,Excel
+P0286,BUSINESS ANALYST,"Jira, SQL, Excel"
+P0287,IT Business Analyst,"Excel, SQL, Jira"
+P0288,Senior Business Analyst,"Jira, Excel"
+P0289,Product Analytics Analyst,SQL
+P0290,Data Analyst II,"Tableau, R, SQL"
+P0291,Product Data Analyst,"Tableau, SQL"
+P0292,Financial Analyst,"R, Excel"
+P0293,Senior Data Analyst,"SQL, Looker, Excel, Python"
+P0294,Business Intelligence Analyst,Power BI
+P0295,Senior Product Analyst,
+P0296,Business Systems Analyst,"Excel, sql"
+P0297,Data Analyst II,"Excel, SQL, power bi, Python"
+P0298,Business Intelligence Analyst II,"power bi, Python, Excel, Snowflake, SQL"
+P0299,BUSINESS ANALYST,"SQL, power bi, Excel"
+P0300,Marketing Data Analyst,
+P0301,Data Analyst II,"R, Python, Tableau, Excel, SQL, Power BI"
+P0302,Production Planning Analyst,"POWER BI, Excel"
+P0303,Business Data Analyst,"SAS, Excel, SQL"
+P0304,Senior Business Intelligence Analyst,"Alteryx, sql, Power BI, Excel"
+P0305,Growth Product Analyst,
+P0306,Business Intelligence Analyst II,POWER BI
+P0307,Business Systems Analyst,"Excel, SQL, POWER BI"
+P0308,Business Analyst,"Excel, Tableau"
+P0309,Data Analyst,
+P0310,Senior Data Analyst,"Tableau, Excel, Python, SQL"
+P0311,Senior Business Analyst,"Jira, SQL, power bi"
+P0312,Senior Business Intelligence Analyst,
+P0313,BI Analyst,
+P0314,Senior Business Analyst,"Excel, Python"
+P0315,Business Systems Analyst,"sql, Excel"
+P0316,Data Analyst,"R, Excel"
+P0317,IT Business Analyst,"sql, SQL, Jira"
+P0318,Marketing Data Analyst,
+P0319,Business Data Analyst,"SQL, SAS"
+P0320,People Analytics Analyst,"Python, Excel, Tableau, sql"
+P0321,Product Analyst,"Python, SQL"
+P0322,Business Analyst,"Excel, Tableau, Jira"
+P0323,Data Analyst II,"Tableau, Python, Excel, SQL"
+P0324,Product Analyst,"Python, sql, Snowflake, Excel"
+P0325,Data Analyst,"Excel, Python, R"
+P0326,People Analytics Analyst,SQL
+P0327,Financial Analyst,"Python, SQL, Excel, POWER BI"
+P0328,Senior Business Intelligence Analyst,sql
+P0329,BUSINESS ANALYST,
+P0330,Senior Business Analyst,Power BI
+P0331,Power BI Analyst,
+P0332,data analyst,"sql, power bi, R, Excel, Tableau, Snowflake"
+P0333,IT Business Analyst,Excel
+P0334,Data Analyst,
+P0335,Power BI Analyst,"SQL, Excel"
+P0336,Marketing Data Analyst,"sql, DBT, Python, Power BI"
+P0337,Business Analyst,
+P0338,Credit Risk Analyst,"Excel, sql, Tableau"
+P0339,data analyst,
+P0340,IT Business Analyst,
+P0341,People Analytics Analyst,"Python, SQL"
+P0342,Data Analyst II,"Power BI, Python, Excel, Tableau, sql"
+P0343,Product Analyst,sql
+P0344,People Analytics Analyst,"SQL, Excel, Tableau"
+P0345,Power BI Analyst,"Looker, Tableau, sql, POWER BI"
+P0346,Senior Data Analyst,"Python, Excel, Looker, Tableau, sql, POWER BI"
+P0347,BI Analyst,"Power BI, SQL, Python"
+P0348,Senior Business Intelligence Analyst,"power bi, Tableau, tableau"
+P0349,data analyst,sql
+P0350,Supply Chain Analyst,"Python, POWER BI, Excel"
+P0351,Business Data Analyst,SQL
+P0352,Junior Data Analyst,
+P0353,Business Intelligence Analyst II,"power bi, Snowflake, Tableau"
+P0354,Business Data Analyst,"Looker, Python, Excel"
+P0355,People Analytics Analyst,"sql, DBT, Tableau"
+P0356,Growth Product Analyst,"Looker, Tableau, sql"
+P0357,BI Analyst,
+P0358,BI Reporting Analyst,"Python, Tableau, Power BI, Looker, SQL, dbt, Alteryx"
+P0359,Data Analyst,"Python, R, sql"
+P0360,People Analytics Analyst,"R, SQL"
+P0361,Product Analyst,"Python, R"
+P0362,BI Analyst,
+P0363,BUSINESS ANALYST,Jira
+P0364,Senior Data Analyst,"SQL, Python, R"
+P0365,People Analytics Analyst,"sql, Tableau, Python"
+P0366,Product Analytics Analyst,"Looker, SQL"
+P0367,Financial Analyst,Excel
+P0368,People Analytics Analyst,"SQL, Python, POWER BI, Excel, Looker"
+P0369,Business Intelligence Analyst II,"dbt, Tableau, Python, Power BI, sql"
+P0370,BI Reporting Analyst,
+P0371,BUSINESS ANALYST,"SQL, Power BI, Excel, Python"
+P0372,data analyst,"Python, Excel"
+P0373,data analyst,"sql, R, POWER BI"
+P0374,Product Data Analyst,"Excel, Looker, Spark, Tableau"
+P0375,Senior Business Intelligence Analyst,
+P0376,Business Systems Analyst,"Jira, power bi, Excel"
+P0377,IT Business Analyst,Excel
+P0378,Business Intelligence Analyst II,"power bi, Tableau, SQL, Excel"
+P0379,Data Analyst,
+P0380,BUSINESS ANALYST,"Excel, Python, sql, power bi"
+P0381,Production Planning Analyst,Excel
+P0382,Junior Data Analyst,"SQL, power bi, sql, DBT"
+P0383,Data Analyst,"Excel, Python, SQL"
+P0384,BUSINESS ANALYST,"power bi, sql, Excel"
+P0385,Senior Product Analyst,"Excel, Python, Tableau"
+P0386,Senior Product Analyst,"Looker, sql, sql"
+P0387,Senior Product Analyst,"sql, Python"
+P0388,People Analytics Analyst,"SQL, Tableau, Excel"
+P0389,People Analytics Analyst,"Python, SQL, Tableau, dbt, R"
+P0390,Junior Data Analyst,SQL
+P0391,Senior Data Analyst,"power bi, R, SQL, Python"
+P0392,Data Analyst II,"SQL, Python, Tableau, Snowflake"
+P0393,Marketing Data Analyst,"sql, POWER BI"
+P0394,Data Analyst,
+P0395,BI Analyst,Excel
+P0396,Senior Business Analyst,
+P0397,Growth Product Analyst,"Tableau, SQL, sql, R"
+P0398,Business Intelligence Analyst,"Tableau, SQL, power bi, Alteryx, Looker"
+P0399,Junior Data Analyst,"dbt, Excel, SQL"
+P0400,BI Reporting Analyst,
+P0401,BI Analyst,"SQL, Snowflake, Tableau, Python, POWER BI, Excel"
+P0402,Business Data Analyst,"Excel, SAS"
+P0403,Product Analyst,"SQL, Tableau, Excel"
+P0404,Product Analytics Analyst,"Tableau, SQL, Python"
+P0405,Senior Business Intelligence Analyst,"Alteryx, Excel, sql, POWER BI"
+P0406,Marketing Data Analyst,
+P0407,Data Analyst II,"Tableau, Power BI, Excel"
+P0408,Senior Business Analyst,"Excel, Jira, sql"
+P0409,Growth Product Analyst,Looker
+P0410,Business Data Analyst,"Python, R, sql, Jira, Excel"
+P0411,Data Analyst II,
+P0412,Business Intelligence Analyst II,"SQL, Looker, POWER BI"
+P0413,Senior Business Analyst,Jira
+P0414,Junior Data Analyst,"Excel, Power BI, SQL"
+P0415,Senior Business Analyst,"Looker, Jira, Excel"
+P0416,Junior Data Analyst,"Excel, Python, SQL"
+P0417,Business Data Analyst,Excel
+P0418,BUSINESS ANALYST,"Excel, SQL"
+P0419,Business Analyst,"power bi, Jira, Tableau, Excel, SQL"
+P0420,Senior Business Intelligence Analyst,"Tableau, Power BI, sql, Excel"
+P0421,Financial Analyst,"sql, Excel, power bi"
+P0422,Marketing Data Analyst,
+P0423,Financial Analyst,
+P0424,BI Reporting Analyst,"DBT, SQL"
+P0425,Data Analyst II,"Tableau, sql, Excel"
+P0426,BUSINESS ANALYST,"Jira, Python"
+P0427,Marketing Data Analyst,"DBT, sql"
+P0428,Data Analyst II,"Python, sql, DBT, power bi"
+P0429,BI Reporting Analyst,"sql, Python, Tableau, Excel"
+P0430,Product Data Analyst,"Spark, sql, Python"
+P0431,Senior Data Analyst,"Snowflake, Excel, excel, Looker"
+P0432,IT Business Analyst,"Excel, Jira"
+P0433,IT Business Analyst,"SQL, Power BI"
+P0434,Data Analyst II,R
+P0435,People Analytics Analyst,"Excel, R, Python, SQL"
+P0436,Business Intelligence Analyst II,"sql, Excel"
+P0437,Business Intelligence Analyst II,power bi
+P0438,Business Intelligence Analyst II,"Tableau, POWER BI, sql, sql, Excel"
+P0439,Senior Business Intelligence Analyst,
+P0440,Senior Data Analyst,"sql, Python"
+P0441,Junior Data Analyst,"Excel, power bi, sql"
+P0442,Business Data Analyst,
+P0443,Business Analyst,"SQL, Excel, Python, Jira"
+P0444,Business Intelligence Analyst II,"SQL, Excel, Power BI"
+P0445,Senior Business Intelligence Analyst,"power bi, dbt, sql, R"
+P0446,Marketing Data Analyst,"Tableau, SQL"
+P0447,Junior Data Analyst,
+P0448,Marketing Data Analyst,
+P0449,Marketing Data Analyst,"Tableau, Excel"
+P0450,Growth Product Analyst,"power bi, sql"
+P0451,Business Intelligence Analyst,"Excel, sql, SQL, dbt, Tableau, Looker"
+P0452,Power BI Analyst,"Alteryx, Excel, Power BI, Python, Tableau, SQL"
+P0453,Business Systems Analyst,
+P0454,Business Intelligence Analyst,"SQL, Tableau, Excel, Power BI"
+P0455,People Analytics Analyst,"power bi, SQL, Excel"
+P0456,Financial Analyst,"python, Python, Excel"
+P0457,Financial Analyst,Excel
+P0458,Business Analyst,
+P0459,Data Analyst,"Python, sql, Tableau, SQL"
+P0460,Product Analyst,
+P0461,Product Analytics Analyst,"Tableau, DBT, Python"
+P0462,Data Analyst,power bi
+P0463,BUSINESS ANALYST,"POWER BI, Excel"
+P0464,Marketing Data Analyst,"Tableau, POWER BI, SQL"
+P0465,Marketing Data Analyst,"DBT, sql"
+P0466,Marketing Data Analyst,"Excel, RStudio, Python, SQL"
+P0467,data analyst,
+P0468,Senior Data Analyst,sql
+P0469,Product Data Analyst,
+P0470,data analyst,
+P0471,Senior Product Analyst,sql
+P0472,Business Analyst,"Jira, power bi"
+P0473,Junior Data Analyst,"Tableau, SQL, Excel, Python"
+P0474,Business Intelligence Analyst II,"SQL, Tableau, Python, Excel"
+P0475,Credit Risk Analyst,Excel
+P0476,Supply Chain Analyst,Excel
+P0477,Marketing Data Analyst,
+P0478,Business Analyst,Excel
+P0479,Junior Data Analyst,"SQL, R, Power BI"
+P0480,Senior Product Analyst,"Excel, Looker, sql, R"
+P0481,Business Intelligence Analyst II,"POWER BI, Excel, SQL"
+P0482,Production Planning Analyst,"SAS, Excel, sql, Power BI"
+P0483,Business Intelligence Analyst,"SQL, Excel, Power BI"
+P0484,Data Analyst,"Excel, SQL, R"
+P0485,Business Analyst,power bi
+P0486,Data Analyst II,"Excel, Python, SQL"
+P0487,Senior Business Analyst,"Excel, Looker"
+P0488,IT Business Analyst,"Jira, Excel"
+P0489,Data Analyst,"Python, Power BI, SQL"
+P0490,Marketing Data Analyst,"Excel, Python"
+P0491,BI Reporting Analyst,"SQL, POWER BI"
+P0492,Senior Business Analyst,"Excel, Jira"
+P0493,Senior Business Analyst,
+P0494,Data Analyst II,"POWER BI, SQL, Excel"
+P0495,Supply Chain Analyst,SAS
+P0496,Business Analyst,"sql, Excel"
+P0497,BI Analyst,Power BI
+P0498,Power BI Analyst,"SQL, Tableau, Excel"
+P0499,data analyst,Snowflake
+P0500,Marketing Data Analyst,
+P0501,Product Analyst,"Python, SQL"
+P0502,Business Intelligence Analyst,"sql, power bi, Excel, Python"
+P0503,data analyst,sql
+P0504,BUSINESS ANALYST,"Python, Excel"
+P0505,Data Analyst,"power bi, sql, R"
+P0506,IT Business Analyst,
+P0507,Power BI Analyst,"Power BI, Excel"
+P0508,Data Analyst II,sql
+P0509,Junior Data Analyst,"Tableau, Excel"
+P0510,IT Business Analyst,"Excel, Python"
+P0511,Senior Product Analyst,"DBT, SQL"
+P0512,Marketing Data Analyst,"Looker, Python, SQL"
+P0513,BUSINESS ANALYST,"Excel, Jira"
+P0514,Production Planning Analyst,
+P0515,Credit Risk Analyst,"SQL, Excel"
+P0516,Power BI Analyst,"Alteryx, SQL"
+P0517,Senior Product Analyst,"Python, Tableau, SQL"
+P0518,Junior Data Analyst,"Python, SQL, Tableau"
+P0519,Senior Business Analyst,"Python, Excel, sql, POWER BI"
+P0520,BI Reporting Analyst,"Tableau, Python, sql"
+P0521,Senior Business Analyst,Excel
+P0522,Senior Data Analyst,SQL
+P0523,Marketing Data Analyst,SQL
+P0524,Senior Data Analyst,"sql, Power BI, Python"
+P0525,BI Analyst,"power bi, Tableau, Excel"
+P0526,Product Data Analyst,"dbt, sql"
+P0527,data analyst,power bi
+P0528,Product Analytics Analyst,"Python, sql, Looker"
+P0529,Senior Business Analyst,"SQL, Power BI"
+P0530,Senior Data Analyst,"Looker, R, Python"
+P0531,Production Planning Analyst,"Excel, SQL"
+P0532,Financial Analyst,
+P0533,Marketing Data Analyst,
+P0534,Junior Data Analyst,"POWER BI, R, sql, Tableau"
+P0535,Business Intelligence Analyst,"Tableau, power bi, sql"
+P0536,Product Analyst,"Python, Snowflake, Tableau"
+P0537,Senior Business Intelligence Analyst,"Tableau, power bi, Excel"
+P0538,Senior Business Analyst,
+P0539,Senior Business Intelligence Analyst,"Snowflake, Excel"
+P0540,Production Planning Analyst,Excel
+P0541,IT Business Analyst,Excel
+P0542,Production Planning Analyst,"Excel, R"
+P0543,Senior Data Analyst,"sql, Power BI, Excel, Python"
+P0544,Product Analytics Analyst,"DBT, sql"
+P0545,Data Analyst,"sql, Python, DBT, Power BI"
+P0546,IT Business Analyst,SQL
+P0547,Production Planning Analyst,
+P0548,Data Analyst,
+P0549,Data Analyst II,
+P0550,Marketing Data Analyst,
+P0551,Business Data Analyst,"Jira, sql, Tableau, Excel"
+P0552,Junior Data Analyst,"Tableau, Python"
+P0553,Marketing Data Analyst,"Excel, sql"
+P0554,Business Data Analyst,"Excel, Jira, sql"
+P0555,Junior Data Analyst,"Excel, Python"
+P0556,Production Planning Analyst,"Tableau, SAS, Excel, Power BI"
+P0557,Data Analyst II,"Excel, sql, Python"
+P0558,Senior Business Analyst,"Python, Excel, sql"
+P0559,Product Analyst,"R, sql"
+P0560,Junior Data Analyst,"SQL, R"
+P0561,Business Systems Analyst,
+P0562,IT Business Analyst,Python
+P0563,Business Systems Analyst,"Excel, Python, Jira"
+P0564,Marketing Data Analyst,"Python, python, Excel"
+P0565,Junior Data Analyst,
+P0566,Financial Analyst,Python
+P0567,Business Intelligence Analyst,"Alteryx, SQL, Excel, Power BI, Looker"
+P0568,Business Data Analyst,Excel
+P0569,Senior Business Intelligence Analyst,"POWER BI, Excel, SQL"
+P0570,Product Analytics Analyst,"R, Excel, sql, DBT"
+P0571,Business Systems Analyst,"Excel, sql"
+P0572,Senior Data Analyst,"Excel, Python, Tableau"
+P0573,Data Analyst,"Python, SQL, Excel"
+P0574,Business Data Analyst,
+P0575,Business Data Analyst,Excel
+P0576,Senior Product Analyst,"dbt, Looker, Python"
+P0577,Data Analyst,"POWER BI, sql, Python, dbt"
+P0578,Senior Data Analyst,"POWER BI, sql"
+P0579,Business Analyst,
+P0580,Business Intelligence Analyst,"sql, Alteryx, POWER BI, Python"
+P0581,Senior Data Analyst,"R, Excel"
+P0582,Senior Business Intelligence Analyst,"SQL, dbt, R, Excel, Tableau"
+P0583,Data Analyst,SQL
+P0584,Business Analyst,"Excel, SQL, power bi"
+P0585,BI Reporting Analyst,"sql, Excel"
+P0586,BI Analyst,"SQL, power bi, Tableau"
+P0587,Marketing Data Analyst,
+P0588,Senior Data Analyst,"Python, SQL"
+P0589,Senior Data Analyst,"R, sql, POWER BI"
+P0590,People Analytics Analyst,
+P0591,People Analytics Analyst,"Excel, Python, power bi, sql"
+P0592,Junior Data Analyst,
+P0593,Business Data Analyst,"Excel, sql, SAS, Jira"
+P0594,Business Systems Analyst,
+P0595,Product Analyst,"sql, Python"
+P0596,data analyst,"Tableau, Excel, Python"
+P0597,Senior Business Analyst,"Excel, sql"
+P0598,Data Analyst II,
+P0599,Data Analyst,
+P0600,Senior Product Analyst,"Python, R, Looker"

@@ -1,0 +1,201 @@
+ticket_id,text,gold_label
+T0001,"Hello, the export button does nothing on the inbox page?",bug
+T0002,"Hello, where can I download all my invoices from May. Thanks",other
+T0003,"Hello, please update the card on my account before the July renewal",billing
+T0004,"Hi, you charged me $49 instead of $29 for the starter plan. Thanks",billing
+T0005,"Hello, the exports page takes a minute to load, is that normal",bug
+T0006,"Hi, can I pay for the annual plan by bank transfer",billing
+T0007,I want my money back for order 96696. Thanks,refund
+T0008,"Where can I download all my invoices from August, account A1206",other
+T0009,"Hi team, the app crashes when I open exports?",bug
+T0010,"Hi team, please update the card on my account before the August renewal",billing
+T0011,How do I invite a teammate to reports,other
+T0012,"Hello, the app crashes when I open exports, account A7337",bug
+T0013,"Hi team, please update the card on my account before the January renewal, account A9439",billing
+T0014,Where can I download all my invoices from October,other
+T0015,"Hi team, how do I invite a teammate to exports, account A7821",other
+T0016,"Please refund the pro plan I bought by mistake, account A8241",refund
+T0017,"Hi team, how do I invite a teammate to dashboard. Thanks",other
+T0018,"Hi, please refund the team plan I bought by mistake?",refund
+T0019,"Hi team, the exports page takes a minute to load, is that normal?",bug
+T0020,"Hi, the reports page takes a minute to load, is that normal, account A1863",bug
+T0021,"Hello, do you have a student discount on the starter plan. Thanks",other
+T0022,"Hi team, why did my invoice go up in September. Thanks",billing
+T0023,"Hello, you charged me $49 instead of $39 for the starter plan",billing
+T0024,"Hi team, the exports page takes a minute to load, is that normal. Thanks",bug
+T0025,"Hello, order 56637 never arrived and I want a refund. Thanks",refund
+T0026,"Hello, the export button does nothing on the settings page?",bug
+T0027,"Hi, I cancelled in September but you still charged me $199, I want it back. Thanks",refund
+T0028,"Hi, why did my invoice go up in July?",billing
+T0029,"Hello, please update the card on my account before the August renewal, account A6713",billing
+T0030,"Hello, why did my invoice go up in January, account A1142",billing
+T0031,"Hi, where can I download all my invoices from October, account A2117",other
+T0032,"Hi team, why did my invoice go up in March, account A9091",billing
+T0033,"Hello, where can I download all my invoices from April?",other
+T0034,"Hello, the reports page takes a minute to load, is that normal. Thanks",bug
+T0035,"Hi team, I cancelled in July but you still charged me $29, I want it back, account A4420",refund
+T0036,"Hi, I cancelled in September but you still charged me $199, I want it back?",refund
+T0037,"Hello, can I pay for the starter plan by bank transfer?",billing
+T0038,"Hello, the app crashes when I open dashboard?",bug
+T0039,How do I invite a teammate to dashboard. Thanks,other
+T0040,"Hi, do you have a student discount on the annual plan, account A3613",other
+T0041,Why did my invoice go up in September?,billing
+T0042,"Hi team, I want my money back for order 35983",refund
+T0043,"Can I pay for the team plan by bank transfer, account A2640",billing
+T0044,I want my money back for order 68612?,refund
+T0045,"Hi, where can I download all my invoices from July",other
+T0046,"Hi, the dashboard page takes a minute to load, is that normal",bug
+T0047,"Hi, do you have a student discount on the starter plan. Thanks",other
+T0048,Can I pay for the pro plan by bank transfer,billing
+T0049,Why did my invoice go up in August,billing
+T0050,"Hello, please refund the team plan I bought by mistake. Thanks",refund
+T0051,How do I invite a teammate to settings. Thanks,other
+T0052,"Hi, the export button does nothing on the exports page. Thanks",bug
+T0053,Please update the card on my account before the July renewal?,billing
+T0054,"Hi, where can I download all my invoices from June. Thanks",other
+T0055,Where can I download all my invoices from September?,other
+T0056,"Hi team, how do I invite a teammate to inbox",other
+T0057,"Hi, you charged me $49 instead of $39 for the annual plan. Thanks",billing
+T0058,"Hello, do you have a student discount on the annual plan, account A8885",other
+T0059,The app crashes when I open exports. Thanks,bug
+T0060,"Hi, how do I invite a teammate to dashboard?",other
+T0061,"Hi, I want my money back for order 89262. Thanks",refund
+T0062,"Hi, how do I invite a teammate to exports. Thanks",other
+T0063,"Hi, you charged me $29 instead of $9 for the annual plan. Thanks",billing
+T0064,"Hello, you charged me $149 instead of $129 for the annual plan, account A8371",billing
+T0065,"Hello, I cancelled in September but you still charged me $249, I want it back",refund
+T0066,"Hi team, please update the card on my account before the April renewal?",billing
+T0067,Can I pay for the starter plan by bank transfer,billing
+T0068,"Hello, do you have a student discount on the team plan",other
+T0069,"Hi, how do I invite a teammate to inbox?",other
+T0070,"Hi team, the app crashes when I open dashboard?",bug
+T0071,"Hi, please refund the pro plan I bought by mistake",refund
+T0072,"Hi team, the app crashes when I open dashboard, account A5538",bug
+T0073,"Hi team, the export button does nothing on the exports page. Thanks",bug
+T0074,Please refund the team plan I bought by mistake,refund
+T0075,"Hello, the export button does nothing on the inbox page",bug
+T0076,"Hello, the app crashes when I open dashboard. Thanks",bug
+T0077,"Hi, the export button does nothing on the reports page?",bug
+T0078,"Hello, I want my money back for order 16354?",refund
+T0079,"Hello, the export button does nothing on the dashboard page, account A1742",bug
+T0080,"Hi, I want my money back for order 44041, account A2645",refund
+T0081,"Hi, do you have a student discount on the team plan, account A7921",other
+T0082,"Hi team, the app crashes when I open settings",bug
+T0083,"Hi team, the app crashes when I open dashboard, account A2394",bug
+T0084,"Hi team, please refund the annual plan I bought by mistake. Thanks",refund
+T0085,"Hello, where can I download all my invoices from March?",other
+T0086,"The dashboard page takes a minute to load, is that normal, account A5865",bug
+T0087,"Hi team, the export button does nothing on the reports page?",bug
+T0088,"The settings page takes a minute to load, is that normal. Thanks",bug
+T0089,"Hi, why did my invoice go up in October. Thanks",billing
+T0090,"Hello, why did my invoice go up in July",billing
+T0091,"Hello, please update the card on my account before the January renewal, account A7407",billing
+T0092,The app crashes when I open dashboard,bug
+T0093,"Hi team, how do I invite a teammate to dashboard. Thanks",other
+T0094,"I want my money back for order 85321, account A4910",refund
+T0095,"Hi team, I was charged twice in September, please reverse one of them",billing
+T0096,"Hello, the app crashes when I open settings",bug
+T0097,Can I pay for the starter plan by bank transfer?,billing
+T0098,"Hello, please refund the starter plan I bought by mistake",refund
+T0099,"Hi team, do you have a student discount on the team plan, account A8764",other
+T0100,"Hi, where can I download all my invoices from January. Thanks",other
+T0101,"Hi team, I was charged twice in September, please reverse one of them?",billing
+T0102,"Hello, where can I download all my invoices from May, account A2385",other
+T0103,"Hi, how do I invite a teammate to dashboard, account A4685",other
+T0104,"Hello, how do I invite a teammate to inbox, account A8981",other
+T0105,"Hi team, the reports page takes a minute to load, is that normal",bug
+T0106,"Hi team, how do I invite a teammate to settings, account A5167",other
+T0107,"Hello, I cancelled in July but you still charged me $149, I want it back?",refund
+T0108,"The app crashes when I open exports, account A9673",bug
+T0109,"Hello, please refund the starter plan I bought by mistake. Thanks",refund
+T0110,"The inbox page takes a minute to load, is that normal?",bug
+T0111,"The inbox page takes a minute to load, is that normal, account A3812",bug
+T0112,"Hello, I cancelled in August but you still charged me $29, I want it back. Thanks",refund
+T0113,"Hello, you charged me $199 instead of $189 for the pro plan?",billing
+T0114,"Hi team, I was charged twice in May, please reverse one of them. Thanks",billing
+T0115,"Hello, I want my money back for order 98137, account A5244",refund
+T0116,"Hi, can I pay for the team plan by bank transfer, account A5052",billing
+T0117,"Hello, please refund the annual plan I bought by mistake?",refund
+T0118,"Hi team, where can I download all my invoices from April?",other
+T0119,"Hi team, the app crashes when I open settings",bug
+T0120,"Hi team, the app crashes when I open inbox. Thanks",bug
+T0121,"Hi, the export button does nothing on the dashboard page",bug
+T0122,"Hi, the app crashes when I open settings. Thanks",bug
+T0123,"Hi team, where can I download all my invoices from January?",other
+T0124,"Hello, the dashboard page takes a minute to load, is that normal",bug
+T0125,"Hello, the app crashes when I open inbox?",bug
+T0126,"Hi team, do you have a student discount on the starter plan",other
+T0127,"Hello, where can I download all my invoices from October, account A3788",other
+T0128,Where can I download all my invoices from October,other
+T0129,"Hi team, where can I download all my invoices from September. Thanks",other
+T0130,Do you have a student discount on the annual plan,other
+T0131,"Hi, how do I invite a teammate to reports. Thanks",other
+T0132,"Hi, where can I download all my invoices from February",other
+T0133,"Hi, I cancelled in April but you still charged me $249, I want it back?",refund
+T0134,"Hello, why did my invoice go up in April?",billing
+T0135,"Hello, I was charged twice in January, please reverse one of them?",billing
+T0136,Please update the card on my account before the June renewal. Thanks,billing
+T0137,"Hello, the app crashes when I open dashboard. Thanks",bug
+T0138,"Hello, the export button does nothing on the reports page. Thanks",bug
+T0139,"Hi, the dashboard page takes a minute to load, is that normal",bug
+T0140,"Hi team, do you have a student discount on the team plan?",other
+T0141,How do I invite a teammate to dashboard?,other
+T0142,"Hi team, please update the card on my account before the April renewal?",billing
+T0143,"Hi, please update the card on my account before the January renewal. Thanks",billing
+T0144,"I was charged twice in October, please reverse one of them. Thanks",billing
+T0145,"Hi team, you charged me $199 instead of $179 for the starter plan. Thanks",billing
+T0146,"Hi, why did my invoice go up in February?",billing
+T0147,"You charged me $249 instead of $229 for the team plan, account A7544",billing
+T0148,"Hi, you charged me $79 instead of $59 for the pro plan?",billing
+T0149,"Hi, can I pay for the pro plan by bank transfer?",billing
+T0150,"Hi team, can I pay for the starter plan by bank transfer. Thanks",billing
+T0151,"Hello, the dashboard page takes a minute to load, is that normal",bug
+T0152,"Hello, where can I download all my invoices from August?",other
+T0153,"Hello, I want my money back for order 60964. Thanks",refund
+T0154,"Hello, where can I download all my invoices from June. Thanks",other
+T0155,"Hi, please refund the team plan I bought by mistake?",refund
+T0156,"Hi team, I was charged twice in March, please reverse one of them. Thanks",billing
+T0157,Why did my invoice go up in May,billing
+T0158,"Hello, I was charged twice in June, please reverse one of them?",billing
+T0159,"Hello, where can I download all my invoices from April",other
+T0160,"Hi team, order 99526 never arrived and I want a refund. Thanks",refund
+T0161,Where can I download all my invoices from January. Thanks,other
+T0162,The app crashes when I open inbox?,bug
+T0163,"Hi, do you have a student discount on the starter plan?",other
+T0164,"Hi, I cancelled in September but you still charged me $99, I want it back",refund
+T0165,"Hi team, I cancelled in March but you still charged me $49, I want it back",refund
+T0166,"Hi, please update the card on my account before the March renewal, account A8248",billing
+T0167,"Hi, you charged me $99 instead of $79 for the annual plan?",billing
+T0168,"Hello, I want my money back for order 92856. Thanks",refund
+T0169,Why did my invoice go up in January. Thanks,billing
+T0170,"Hello, please update the card on my account before the January renewal",billing
+T0171,"Hi team, please refund the pro plan I bought by mistake. Thanks",refund
+T0172,You charged me $49 instead of $39 for the team plan,billing
+T0173,"Hello, I cancelled in February but you still charged me $29, I want it back",refund
+T0174,"Hi team, I cancelled in July but you still charged me $79, I want it back?",refund
+T0175,"Hi team, where can I download all my invoices from January",other
+T0176,"Hi, I cancelled in August but you still charged me $29, I want it back?",refund
+T0177,"Do you have a student discount on the team plan, account A3584",other
+T0178,"Hi, I want my money back for order 90086",refund
+T0179,"Hi team, why did my invoice go up in February",billing
+T0180,"Hi team, please update the card on my account before the October renewal",billing
+T0181,Please refund the team plan I bought by mistake,refund
+T0182,"Hi, the app crashes when I open dashboard, account A1861",bug
+T0183,"Why did my invoice go up in August, account A1160",billing
+T0184,"Hi team, please refund the team plan I bought by mistake?",refund
+T0185,"Hello, can I pay for the pro plan by bank transfer. Thanks",billing
+T0186,"Hello, can I pay for the pro plan by bank transfer. Thanks",billing
+T0187,"Hello, the export button does nothing on the exports page?",bug
+T0188,"Hi, please refund the starter plan I bought by mistake, account A8406",refund
+T0189,"Hi, how do I invite a teammate to settings",other
+T0190,"Hi, I was charged twice in June, please reverse one of them. Thanks",billing
+T0191,"Hello, the dashboard page takes a minute to load, is that normal",bug
+T0192,How do I invite a teammate to exports?,other
+T0193,"Hi, the app crashes when I open inbox, account A1132",bug
+T0194,"Hi, the reports page takes a minute to load, is that normal",bug
+T0195,"Hi team, why did my invoice go up in March?",billing
+T0196,"Hello, the export button does nothing on the exports page. Thanks",bug
+T0197,"I want my money back for order 83503, account A7231",refund
+T0198,"Hi, please refund the pro plan I bought by mistake, account A2990",refund
+T0199,"Hello, can I pay for the starter plan by bank transfer. Thanks",billing
+T0200,"Hi team, do you have a student discount on the pro plan. Thanks",other

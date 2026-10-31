@@ -1,0 +1,12 @@
+project,metric,unit,from_value,to_value,source
+lumen-freight,depot managers using the dashboard,number,,30,"dashboard viewer log, September 2026"
+lumen-freight,hours to build the weekly report,number,6.5,4.25,"time sheet, 4 weeks before and after"
+lumen-freight,"on-time payment rate, old email to new email",pct,61.0,64.2,A/B test write-up
+pantrybox-churn,customers analysed,number,,1400,"lesson 07-03, data/subscriptions.csv"
+pantrybox-churn,trial starters with the whole trial,number,,779,"lesson 07-03 write-up, Result"
+pantrybox-churn,trial starters who never paid,number,,224,"lesson 07-03 write-up, Result"
+pantrybox-churn,never paid rate,pct,,28.8,"lesson 07-03 write-up, Result"
+pantrybox-churn,"90 day paid churn, paid starters to trial converters",pct,18.3,22.9,"lesson 07-03 write-up, Result"
+pantrybox-churn,90 day churn window in days,number,,90,"lesson 07-03 write-up, Method"
+tiffinbell-dispatch,"on-time rate, current rule to new rule",pct,80.5,84.5,lesson 07-06 data/results.csv
+tiffinbell-dispatch,orders in the test,number,,1771,lesson 07-06 data/orders.csv

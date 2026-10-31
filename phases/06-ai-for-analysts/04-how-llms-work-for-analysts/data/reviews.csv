@@ -1,0 +1,301 @@
+review_id,text,summary
+R0001,"Loved the chicken thali, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the chicken thali was hot and fresh and the delivery was quick.
+R0002,Wrong item. I ordered masala dosa and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the masala dosa.
+R0003,Paisa wasool! The rajma chawal from the Nagpur kitchen.,The customer wrote in Hinglish about the rajma chawal from the Nagpur kitchen; the main point is: paisa wasool.
+R0004,The paneer tikka arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the paneer tikka arrived cold and 50 minutes late.
+R0005,Wrong item. I ordered poha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the poha.
+R0006,Paisa wasool! The paneer tikka from the Pune kitchen.,The customer wrote in Hinglish about the paneer tikka from the Pune kitchen; the main point is: paisa wasool.
+R0007,"Ordered chicken thali for lunch, it came on time and was still warm. Good service.",The customer is happy: the chicken thali came on time and was still warm.
+R0008,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0009,Thoda kam tha! The aloo paratha from the Mumbai kitchen.,The customer wrote in Hinglish about the aloo paratha from the Mumbai kitchen; the main point is: thoda kam tha.
+R0010,The poha arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the poha arrived cold and 35 minutes late.
+R0011,The paneer tikka was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the paneer tikka was too spicy and the raita was missing, although delivery was fast."
+R0012,Wrong item. I ordered masala dosa and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the masala dosa.
+R0013,My order was missing the chicken thali. I paid Rs 249 and want my money back.,The customer is unhappy because the chicken thali was missing and wants a refund of Rs 249.
+R0014,My order was missing the chicken thali. I paid Rs 449 and want my money back.,The customer is unhappy because the chicken thali was missing and wants a refund of Rs 449.
+R0015,My order was missing the aloo paratha. I paid Rs 249 and want my money back.,The customer is unhappy because the aloo paratha was missing and wants a refund of Rs 249.
+R0016,Great taste but the portion of curd rice was too small for Rs 329.,The customer liked the taste but is unhappy that the curd rice portion was small for Rs 329.
+R0017,"Ordered masala dosa for lunch, it came on time and was still warm. Good service.",The customer is happy: the masala dosa came on time and was still warm.
+R0018,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0019,The chicken thali was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the chicken thali was too spicy and the raita was missing, although delivery was fast."
+R0020,Great taste but the portion of dal makhani was too small for Rs 199.,The customer liked the taste but is unhappy that the dal makhani portion was small for Rs 199.
+R0021,Thoda kam tha! The rajma chawal from the Nagpur kitchen.,The customer wrote in Hinglish about the rajma chawal from the Nagpur kitchen; the main point is: thoda kam tha.
+R0022,"Ordered dal makhani for lunch, it came on time and was still warm. Good service.",The customer is happy: the dal makhani came on time and was still warm.
+R0023,The misal pav arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the misal pav arrived cold and 40 minutes late.
+R0024,My order was missing the dal makhani. I paid Rs 149 and want my money back.,The customer is unhappy because the dal makhani was missing and wants a refund of Rs 149.
+R0025,The masala dosa arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 50 minutes late.
+R0026,The veg biryani arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the veg biryani arrived cold and 35 minutes late.
+R0027,Great taste but the portion of dal makhani was too small for Rs 449.,The customer liked the taste but is unhappy that the dal makhani portion was small for Rs 449.
+R0028,The masala dosa was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the masala dosa was too spicy and the raita was missing, although delivery was fast."
+R0029,The rajma chawal arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the rajma chawal arrived cold and 35 minutes late.
+R0030,Khana thanda tha! The poha from the Mumbai kitchen.,The customer wrote in Hinglish about the poha from the Mumbai kitchen; the main point is: khana thanda tha.
+R0031,My order was missing the paneer tikka. I paid Rs 449 and want my money back.,The customer is unhappy because the paneer tikka was missing and wants a refund of Rs 449.
+R0032,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0033,The dal makhani was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0034,Thoda kam tha! The paneer tikka from the Pune kitchen.,The customer wrote in Hinglish about the paneer tikka from the Pune kitchen; the main point is: thoda kam tha.
+R0035,The dal makhani was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0036,The masala dosa arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 70 minutes late.
+R0037,The dal makhani was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0038,"Loved the aloo paratha, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the aloo paratha was hot and fresh and the delivery was quick.
+R0039,Wrong item. I ordered chicken thali and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the chicken thali.
+R0040,The aloo paratha arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the aloo paratha arrived cold and 35 minutes late.
+R0041,Wrong item. I ordered chicken thali and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the chicken thali.
+R0042,The misal pav was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the misal pav was too spicy and the raita was missing, although delivery was fast."
+R0043,Great taste but the portion of rajma chawal was too small for Rs 249.,The customer liked the taste but is unhappy that the rajma chawal portion was small for Rs 249.
+R0044,Thoda kam tha! The curd rice from the Mumbai kitchen.,The customer wrote in Hinglish about the curd rice from the Mumbai kitchen; the main point is: thoda kam tha.
+R0045,The masala dosa arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 40 minutes late.
+R0046,Paisa wasool! The curd rice from the Mumbai kitchen.,The customer wrote in Hinglish about the curd rice from the Mumbai kitchen; the main point is: paisa wasool.
+R0047,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0048,"Ordered aloo paratha for lunch, it came on time and was still warm. Good service.",The customer is happy: the aloo paratha came on time and was still warm.
+R0049,The chicken thali was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the chicken thali was too spicy and the raita was missing, although delivery was fast."
+R0050,"Loved the rajma chawal, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the rajma chawal was hot and fresh and the delivery was quick.
+R0051,"Loved the curd rice, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the curd rice was hot and fresh and the delivery was quick.
+R0052,Great taste but the portion of masala dosa was too small for Rs 329.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 329.
+R0053,Great taste but the portion of masala dosa was too small for Rs 329.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 329.
+R0054,"Ordered masala dosa for lunch, it came on time and was still warm. Good service.",The customer is happy: the masala dosa came on time and was still warm.
+R0055,The bag leaked and the chicken thali spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the chicken thali spilled; they ask for better packing.
+R0056,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0057,The rajma chawal was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the rajma chawal was too spicy and the raita was missing, although delivery was fast."
+R0058,"Ordered aloo paratha for lunch, it came on time and was still warm. Good service.",The customer is happy: the aloo paratha came on time and was still warm.
+R0059,Wrong item. I ordered dal makhani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the dal makhani.
+R0060,The aloo paratha arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the aloo paratha arrived cold and 50 minutes late.
+R0061,"Loved the chicken thali, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the chicken thali was hot and fresh and the delivery was quick.
+R0062,Wrong item. I ordered aloo paratha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the aloo paratha.
+R0063,The dal makhani arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the dal makhani arrived cold and 35 minutes late.
+R0064,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0065,My order was missing the misal pav. I paid Rs 149 and want my money back.,The customer is unhappy because the misal pav was missing and wants a refund of Rs 149.
+R0066,The aloo paratha was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the aloo paratha was too spicy and the raita was missing, although delivery was fast."
+R0067,Great taste but the portion of poha was too small for Rs 199.,The customer liked the taste but is unhappy that the poha portion was small for Rs 199.
+R0068,Bahut late aaya! The veg biryani from the Mumbai kitchen.,The customer wrote in Hinglish about the veg biryani from the Mumbai kitchen; the main point is: bahut late aaya.
+R0069,"Ordered dal makhani for lunch, it came on time and was still warm. Good service.",The customer is happy: the dal makhani came on time and was still warm.
+R0070,The misal pav arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the misal pav arrived cold and 70 minutes late.
+R0071,My order was missing the misal pav. I paid Rs 449 and want my money back.,The customer is unhappy because the misal pav was missing and wants a refund of Rs 449.
+R0072,The bag leaked and the misal pav spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the misal pav spilled; they ask for better packing.
+R0073,"Loved the poha, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the poha was hot and fresh and the delivery was quick.
+R0074,Great taste but the portion of rajma chawal was too small for Rs 449.,The customer liked the taste but is unhappy that the rajma chawal portion was small for Rs 449.
+R0075,The chicken thali was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the chicken thali was too spicy and the raita was missing, although delivery was fast."
+R0076,The dal makhani was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0077,"Loved the poha, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the poha was hot and fresh and the delivery was quick.
+R0078,Great taste but the portion of poha was too small for Rs 249.,The customer liked the taste but is unhappy that the poha portion was small for Rs 249.
+R0079,"Loved the dal makhani, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the dal makhani was hot and fresh and the delivery was quick.
+R0080,Wrong item. I ordered veg biryani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the veg biryani.
+R0081,"Loved the rajma chawal, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the rajma chawal was hot and fresh and the delivery was quick.
+R0082,My order was missing the poha. I paid Rs 449 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 449.
+R0083,The curd rice was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the curd rice was too spicy and the raita was missing, although delivery was fast."
+R0084,The bag leaked and the dal makhani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the dal makhani spilled; they ask for better packing.
+R0085,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0086,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0087,Wrong item. I ordered chicken thali and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the chicken thali.
+R0088,Wrong item. I ordered aloo paratha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the aloo paratha.
+R0089,The masala dosa was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the masala dosa was too spicy and the raita was missing, although delivery was fast."
+R0090,The bag leaked and the poha spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the poha spilled; they ask for better packing.
+R0091,Wrong item. I ordered rajma chawal and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the rajma chawal.
+R0092,My order was missing the paneer tikka. I paid Rs 249 and want my money back.,The customer is unhappy because the paneer tikka was missing and wants a refund of Rs 249.
+R0093,The veg biryani arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the veg biryani arrived cold and 70 minutes late.
+R0094,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0095,The curd rice was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the curd rice was too spicy and the raita was missing, although delivery was fast."
+R0096,Great taste but the portion of masala dosa was too small for Rs 149.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 149.
+R0097,Paisa wasool! The aloo paratha from the Mumbai kitchen.,The customer wrote in Hinglish about the aloo paratha from the Mumbai kitchen; the main point is: paisa wasool.
+R0098,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0099,Great taste but the portion of misal pav was too small for Rs 329.,The customer liked the taste but is unhappy that the misal pav portion was small for Rs 329.
+R0100,Wrong item. I ordered rajma chawal and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the rajma chawal.
+R0101,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0102,Paisa wasool! The poha from the Nagpur kitchen.,The customer wrote in Hinglish about the poha from the Nagpur kitchen; the main point is: paisa wasool.
+R0103,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0104,The bag leaked and the chicken thali spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the chicken thali spilled; they ask for better packing.
+R0105,Great taste but the portion of masala dosa was too small for Rs 249.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 249.
+R0106,"Ordered paneer tikka for lunch, it came on time and was still warm. Good service.",The customer is happy: the paneer tikka came on time and was still warm.
+R0107,The veg biryani arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the veg biryani arrived cold and 35 minutes late.
+R0108,"Loved the misal pav, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the misal pav was hot and fresh and the delivery was quick.
+R0109,Great taste but the portion of rajma chawal was too small for Rs 199.,The customer liked the taste but is unhappy that the rajma chawal portion was small for Rs 199.
+R0110,My order was missing the paneer tikka. I paid Rs 199 and want my money back.,The customer is unhappy because the paneer tikka was missing and wants a refund of Rs 199.
+R0111,Thoda kam tha! The masala dosa from the Mumbai kitchen.,The customer wrote in Hinglish about the masala dosa from the Mumbai kitchen; the main point is: thoda kam tha.
+R0112,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0113,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0114,The bag leaked and the misal pav spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the misal pav spilled; they ask for better packing.
+R0115,Great taste but the portion of curd rice was too small for Rs 149.,The customer liked the taste but is unhappy that the curd rice portion was small for Rs 149.
+R0116,Wrong item. I ordered chicken thali and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the chicken thali.
+R0117,My order was missing the rajma chawal. I paid Rs 329 and want my money back.,The customer is unhappy because the rajma chawal was missing and wants a refund of Rs 329.
+R0118,The bag leaked and the dal makhani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the dal makhani spilled; they ask for better packing.
+R0119,"Loved the misal pav, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the misal pav was hot and fresh and the delivery was quick.
+R0120,"Loved the curd rice, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the curd rice was hot and fresh and the delivery was quick.
+R0121,"Ordered paneer tikka for lunch, it came on time and was still warm. Good service.",The customer is happy: the paneer tikka came on time and was still warm.
+R0122,The dal makhani arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the dal makhani arrived cold and 70 minutes late.
+R0123,The rajma chawal arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the rajma chawal arrived cold and 40 minutes late.
+R0124,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0125,Ekdum mast tha! The rajma chawal from the Pune kitchen.,The customer wrote in Hinglish about the rajma chawal from the Pune kitchen; the main point is: ekdum mast tha.
+R0126,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0127,The curd rice arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the curd rice arrived cold and 40 minutes late.
+R0128,The bag leaked and the veg biryani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the veg biryani spilled; they ask for better packing.
+R0129,"Loved the paneer tikka, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the paneer tikka was hot and fresh and the delivery was quick.
+R0130,"Loved the paneer tikka, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the paneer tikka was hot and fresh and the delivery was quick.
+R0131,Great taste but the portion of chicken thali was too small for Rs 199.,The customer liked the taste but is unhappy that the chicken thali portion was small for Rs 199.
+R0132,My order was missing the curd rice. I paid Rs 249 and want my money back.,The customer is unhappy because the curd rice was missing and wants a refund of Rs 249.
+R0133,The curd rice arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the curd rice arrived cold and 35 minutes late.
+R0134,Bahut late aaya! The poha from the Nagpur kitchen.,The customer wrote in Hinglish about the poha from the Nagpur kitchen; the main point is: bahut late aaya.
+R0135,Great taste but the portion of aloo paratha was too small for Rs 249.,The customer liked the taste but is unhappy that the aloo paratha portion was small for Rs 249.
+R0136,Wrong item. I ordered poha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the poha.
+R0137,The masala dosa was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the masala dosa was too spicy and the raita was missing, although delivery was fast."
+R0138,The curd rice was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the curd rice was too spicy and the raita was missing, although delivery was fast."
+R0139,The misal pav was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the misal pav was too spicy and the raita was missing, although delivery was fast."
+R0140,Great taste but the portion of aloo paratha was too small for Rs 449.,The customer liked the taste but is unhappy that the aloo paratha portion was small for Rs 449.
+R0141,Wrong item. I ordered veg biryani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the veg biryani.
+R0142,The rajma chawal was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the rajma chawal was too spicy and the raita was missing, although delivery was fast."
+R0143,The chicken thali arrived cold and 25 minutes late. Not happy at all.,The customer is unhappy because the chicken thali arrived cold and 25 minutes late.
+R0144,"Loved the curd rice, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the curd rice was hot and fresh and the delivery was quick.
+R0145,The bag leaked and the paneer tikka spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the paneer tikka spilled; they ask for better packing.
+R0146,The masala dosa was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the masala dosa was too spicy and the raita was missing, although delivery was fast."
+R0147,The poha arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the poha arrived cold and 40 minutes late.
+R0148,Ekdum mast tha! The aloo paratha from the Nagpur kitchen.,The customer wrote in Hinglish about the aloo paratha from the Nagpur kitchen; the main point is: ekdum mast tha.
+R0149,The dal makhani was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0150,Great taste but the portion of dal makhani was too small for Rs 149.,The customer liked the taste but is unhappy that the dal makhani portion was small for Rs 149.
+R0151,The bag leaked and the paneer tikka spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the paneer tikka spilled; they ask for better packing.
+R0152,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0153,The rajma chawal was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the rajma chawal was too spicy and the raita was missing, although delivery was fast."
+R0154,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0155,The misal pav was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the misal pav was too spicy and the raita was missing, although delivery was fast."
+R0156,My order was missing the masala dosa. I paid Rs 199 and want my money back.,The customer is unhappy because the masala dosa was missing and wants a refund of Rs 199.
+R0157,"Loved the curd rice, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the curd rice was hot and fresh and the delivery was quick.
+R0158,Wrong item. I ordered rajma chawal and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the rajma chawal.
+R0159,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0160,The bag leaked and the dal makhani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the dal makhani spilled; they ask for better packing.
+R0161,My order was missing the poha. I paid Rs 449 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 449.
+R0162,The bag leaked and the masala dosa spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the masala dosa spilled; they ask for better packing.
+R0163,The misal pav was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the misal pav was too spicy and the raita was missing, although delivery was fast."
+R0164,"Ordered dal makhani for lunch, it came on time and was still warm. Good service.",The customer is happy: the dal makhani came on time and was still warm.
+R0165,Thoda kam tha! The paneer tikka from the Mumbai kitchen.,The customer wrote in Hinglish about the paneer tikka from the Mumbai kitchen; the main point is: thoda kam tha.
+R0166,Wrong item. I ordered poha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the poha.
+R0167,"Loved the chicken thali, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the chicken thali was hot and fresh and the delivery was quick.
+R0168,"Loved the paneer tikka, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the paneer tikka was hot and fresh and the delivery was quick.
+R0169,Wrong item. I ordered dal makhani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the dal makhani.
+R0170,Paisa wasool! The veg biryani from the Pune kitchen.,The customer wrote in Hinglish about the veg biryani from the Pune kitchen; the main point is: paisa wasool.
+R0171,"Loved the paneer tikka, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the paneer tikka was hot and fresh and the delivery was quick.
+R0172,Great taste but the portion of masala dosa was too small for Rs 199.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 199.
+R0173,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0174,Wrong item. I ordered aloo paratha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the aloo paratha.
+R0175,My order was missing the chicken thali. I paid Rs 249 and want my money back.,The customer is unhappy because the chicken thali was missing and wants a refund of Rs 249.
+R0176,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0177,The aloo paratha was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the aloo paratha was too spicy and the raita was missing, although delivery was fast."
+R0178,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0179,The masala dosa arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 40 minutes late.
+R0180,The bag leaked and the misal pav spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the misal pav spilled; they ask for better packing.
+R0181,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0182,The bag leaked and the misal pav spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the misal pav spilled; they ask for better packing.
+R0183,Great taste but the portion of aloo paratha was too small for Rs 149.,The customer liked the taste but is unhappy that the aloo paratha portion was small for Rs 149.
+R0184,Great taste but the portion of aloo paratha was too small for Rs 329.,The customer liked the taste but is unhappy that the aloo paratha portion was small for Rs 329.
+R0185,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0186,My order was missing the aloo paratha. I paid Rs 329 and want my money back.,The customer is unhappy because the aloo paratha was missing and wants a refund of Rs 329.
+R0187,The bag leaked and the veg biryani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the veg biryani spilled; they ask for better packing.
+R0188,My order was missing the poha. I paid Rs 249 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 249.
+R0189,My order was missing the rajma chawal. I paid Rs 449 and want my money back.,The customer is unhappy because the rajma chawal was missing and wants a refund of Rs 449.
+R0190,Wrong item. I ordered veg biryani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the veg biryani.
+R0191,Great taste but the portion of dal makhani was too small for Rs 149.,The customer liked the taste but is unhappy that the dal makhani portion was small for Rs 149.
+R0192,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0193,Wrong item. I ordered curd rice and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the curd rice.
+R0194,The bag leaked and the chicken thali spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the chicken thali spilled; they ask for better packing.
+R0195,Wrong item. I ordered masala dosa and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the masala dosa.
+R0196,The bag leaked and the poha spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the poha spilled; they ask for better packing.
+R0197,"Tiffinbell app crashed twice while I was paying Rs 249, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0198,"Loved the aloo paratha, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the aloo paratha was hot and fresh and the delivery was quick.
+R0199,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0200,Paisa wasool! The poha from the Mumbai kitchen.,The customer wrote in Hinglish about the poha from the Mumbai kitchen; the main point is: paisa wasool.
+R0201,The masala dosa arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 70 minutes late.
+R0202,Wrong item. I ordered rajma chawal and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the rajma chawal.
+R0203,Wrong item. I ordered dal makhani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the dal makhani.
+R0204,"Ordered misal pav for lunch, it came on time and was still warm. Good service.",The customer is happy: the misal pav came on time and was still warm.
+R0205,"Loved the curd rice, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the curd rice was hot and fresh and the delivery was quick.
+R0206,The bag leaked and the dal makhani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the dal makhani spilled; they ask for better packing.
+R0207,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0208,My order was missing the poha. I paid Rs 249 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 249.
+R0209,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0210,The rajma chawal arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the rajma chawal arrived cold and 35 minutes late.
+R0211,"Ordered rajma chawal for lunch, it came on time and was still warm. Good service.",The customer is happy: the rajma chawal came on time and was still warm.
+R0212,The paneer tikka was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the paneer tikka was too spicy and the raita was missing, although delivery was fast."
+R0213,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0214,My order was missing the curd rice. I paid Rs 149 and want my money back.,The customer is unhappy because the curd rice was missing and wants a refund of Rs 149.
+R0215,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0216,"Loved the paneer tikka, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the paneer tikka was hot and fresh and the delivery was quick.
+R0217,The bag leaked and the chicken thali spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the chicken thali spilled; they ask for better packing.
+R0218,Wrong item. I ordered poha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the poha.
+R0219,"Ordered misal pav for lunch, it came on time and was still warm. Good service.",The customer is happy: the misal pav came on time and was still warm.
+R0220,The masala dosa arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 70 minutes late.
+R0221,Great taste but the portion of veg biryani was too small for Rs 199.,The customer liked the taste but is unhappy that the veg biryani portion was small for Rs 199.
+R0222,The veg biryani was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the veg biryani was too spicy and the raita was missing, although delivery was fast."
+R0223,The poha arrived cold and 25 minutes late. Not happy at all.,The customer is unhappy because the poha arrived cold and 25 minutes late.
+R0224,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0225,Great taste but the portion of poha was too small for Rs 199.,The customer liked the taste but is unhappy that the poha portion was small for Rs 199.
+R0226,"Tiffinbell app crashed twice while I was paying Rs 449, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0227,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0228,"Ordered masala dosa for lunch, it came on time and was still warm. Good service.",The customer is happy: the masala dosa came on time and was still warm.
+R0229,Paisa wasool! The paneer tikka from the Nashik kitchen.,The customer wrote in Hinglish about the paneer tikka from the Nashik kitchen; the main point is: paisa wasool.
+R0230,My order was missing the chicken thali. I paid Rs 329 and want my money back.,The customer is unhappy because the chicken thali was missing and wants a refund of Rs 329.
+R0231,Great taste but the portion of masala dosa was too small for Rs 149.,The customer liked the taste but is unhappy that the masala dosa portion was small for Rs 149.
+R0232,My order was missing the rajma chawal. I paid Rs 199 and want my money back.,The customer is unhappy because the rajma chawal was missing and wants a refund of Rs 199.
+R0233,The dal makhani was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the dal makhani was too spicy and the raita was missing, although delivery was fast."
+R0234,The bag leaked and the masala dosa spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the masala dosa spilled; they ask for better packing.
+R0235,"Ordered misal pav for lunch, it came on time and was still warm. Good service.",The customer is happy: the misal pav came on time and was still warm.
+R0236,Wrong item. I ordered aloo paratha and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the aloo paratha.
+R0237,"Tiffinbell app crashed twice while I was paying Rs 249, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0238,The poha was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the poha was too spicy and the raita was missing, although delivery was fast."
+R0239,Great taste but the portion of veg biryani was too small for Rs 329.,The customer liked the taste but is unhappy that the veg biryani portion was small for Rs 329.
+R0240,"Tiffinbell app crashed twice while I was paying Rs 249, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0241,The curd rice arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the curd rice arrived cold and 50 minutes late.
+R0242,Great taste but the portion of poha was too small for Rs 249.,The customer liked the taste but is unhappy that the poha portion was small for Rs 249.
+R0243,My order was missing the poha. I paid Rs 249 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 249.
+R0244,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0245,"Ordered paneer tikka for lunch, it came on time and was still warm. Good service.",The customer is happy: the paneer tikka came on time and was still warm.
+R0246,"Tiffinbell app crashed twice while I was paying Rs 149, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0247,The bag leaked and the veg biryani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the veg biryani spilled; they ask for better packing.
+R0248,"Ordered poha for lunch, it came on time and was still warm. Good service.",The customer is happy: the poha came on time and was still warm.
+R0249,Khana thanda tha! The curd rice from the Pune kitchen.,The customer wrote in Hinglish about the curd rice from the Pune kitchen; the main point is: khana thanda tha.
+R0250,The masala dosa arrived cold and 25 minutes late. Not happy at all.,The customer is unhappy because the masala dosa arrived cold and 25 minutes late.
+R0251,"Ordered chicken thali for lunch, it came on time and was still warm. Good service.",The customer is happy: the chicken thali came on time and was still warm.
+R0252,The chicken thali arrived cold and 35 minutes late. Not happy at all.,The customer is unhappy because the chicken thali arrived cold and 35 minutes late.
+R0253,Paisa wasool! The poha from the Nashik kitchen.,The customer wrote in Hinglish about the poha from the Nashik kitchen; the main point is: paisa wasool.
+R0254,The bag leaked and the dal makhani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the dal makhani spilled; they ask for better packing.
+R0255,The chicken thali arrived cold and 25 minutes late. Not happy at all.,The customer is unhappy because the chicken thali arrived cold and 25 minutes late.
+R0256,"Ordered chicken thali for lunch, it came on time and was still warm. Good service.",The customer is happy: the chicken thali came on time and was still warm.
+R0257,The curd rice was far too spicy and the raita was missing. Delivery in Pune was fast though.,"The customer is unhappy that the curd rice was too spicy and the raita was missing, although delivery was fast."
+R0258,"Loved the rajma chawal, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the rajma chawal was hot and fresh and the delivery was quick.
+R0259,The paneer tikka arrived cold and 40 minutes late. Not happy at all.,The customer is unhappy because the paneer tikka arrived cold and 40 minutes late.
+R0260,The rajma chawal was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the rajma chawal was too spicy and the raita was missing, although delivery was fast."
+R0261,The bag leaked and the chicken thali spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the chicken thali spilled; they ask for better packing.
+R0262,"Loved the rajma chawal, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the rajma chawal was hot and fresh and the delivery was quick.
+R0263,"Ordered veg biryani for lunch, it came on time and was still warm. Good service.",The customer is happy: the veg biryani came on time and was still warm.
+R0264,Great taste but the portion of rajma chawal was too small for Rs 329.,The customer liked the taste but is unhappy that the rajma chawal portion was small for Rs 329.
+R0265,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0266,"Ordered chicken thali for lunch, it came on time and was still warm. Good service.",The customer is happy: the chicken thali came on time and was still warm.
+R0267,Great taste but the portion of aloo paratha was too small for Rs 149.,The customer liked the taste but is unhappy that the aloo paratha portion was small for Rs 149.
+R0268,"Ordered curd rice for lunch, it came on time and was still warm. Good service.",The customer is happy: the curd rice came on time and was still warm.
+R0269,Ekdum mast tha! The veg biryani from the Pune kitchen.,The customer wrote in Hinglish about the veg biryani from the Pune kitchen; the main point is: ekdum mast tha.
+R0270,"Loved the rajma chawal, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the rajma chawal was hot and fresh and the delivery was quick.
+R0271,Wrong item. I ordered misal pav and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the misal pav.
+R0272,My order was missing the curd rice. I paid Rs 449 and want my money back.,The customer is unhappy because the curd rice was missing and wants a refund of Rs 449.
+R0273,"Ordered aloo paratha for lunch, it came on time and was still warm. Good service.",The customer is happy: the aloo paratha came on time and was still warm.
+R0274,"Ordered curd rice for lunch, it came on time and was still warm. Good service.",The customer is happy: the curd rice came on time and was still warm.
+R0275,The misal pav was far too spicy and the raita was missing. Delivery in Nashik was fast though.,"The customer is unhappy that the misal pav was too spicy and the raita was missing, although delivery was fast."
+R0276,The misal pav arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the misal pav arrived cold and 70 minutes late.
+R0277,Wrong item. I ordered rajma chawal and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the rajma chawal.
+R0278,The bag leaked and the misal pav spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the misal pav spilled; they ask for better packing.
+R0279,Great taste but the portion of misal pav was too small for Rs 329.,The customer liked the taste but is unhappy that the misal pav portion was small for Rs 329.
+R0280,Wrong item. I ordered veg biryani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the veg biryani.
+R0281,"Ordered paneer tikka for lunch, it came on time and was still warm. Good service.",The customer is happy: the paneer tikka came on time and was still warm.
+R0282,The misal pav arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the misal pav arrived cold and 50 minutes late.
+R0283,The rajma chawal was far too spicy and the raita was missing. Delivery in Nagpur was fast though.,"The customer is unhappy that the rajma chawal was too spicy and the raita was missing, although delivery was fast."
+R0284,The veg biryani was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the veg biryani was too spicy and the raita was missing, although delivery was fast."
+R0285,"Loved the masala dosa, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the masala dosa was hot and fresh and the delivery was quick.
+R0286,"Loved the aloo paratha, it was hot and fresh. The rider was quick and polite. Thank you!",The customer is happy: the aloo paratha was hot and fresh and the delivery was quick.
+R0287,Wrong item. I ordered dal makhani and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the dal makhani.
+R0288,"Ordered paneer tikka for lunch, it came on time and was still warm. Good service.",The customer is happy: the paneer tikka came on time and was still warm.
+R0289,The dal makhani arrived cold and 70 minutes late. Not happy at all.,The customer is unhappy because the dal makhani arrived cold and 70 minutes late.
+R0290,The bag leaked and the rajma chawal spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the rajma chawal spilled; they ask for better packing.
+R0291,My order was missing the poha. I paid Rs 249 and want my money back.,The customer is unhappy because the poha was missing and wants a refund of Rs 249.
+R0292,The dal makhani arrived cold and 50 minutes late. Not happy at all.,The customer is unhappy because the dal makhani arrived cold and 50 minutes late.
+R0293,"Tiffinbell app crashed twice while I was paying Rs 329, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."
+R0294,"Ordered chicken thali for lunch, it came on time and was still warm. Good service.",The customer is happy: the chicken thali came on time and was still warm.
+R0295,The masala dosa was far too spicy and the raita was missing. Delivery in Mumbai was fast though.,"The customer is unhappy that the masala dosa was too spicy and the raita was missing, although delivery was fast."
+R0296,Great taste but the portion of misal pav was too small for Rs 199.,The customer liked the taste but is unhappy that the misal pav portion was small for Rs 199.
+R0297,Wrong item. I ordered chicken thali and got something else. The rider said to call support.,The customer is unhappy because they got the wrong item instead of the chicken thali.
+R0298,"Ordered veg biryani for lunch, it came on time and was still warm. Good service.",The customer is happy: the veg biryani came on time and was still warm.
+R0299,The bag leaked and the veg biryani spilled everywhere. Please pack it better.,The customer is unhappy because the bag leaked and the veg biryani spilled; they ask for better packing.
+R0300,"Tiffinbell app crashed twice while I was paying Rs 199, then the order went through.","The customer is unhappy that the app crashed twice during payment, but the order went through."

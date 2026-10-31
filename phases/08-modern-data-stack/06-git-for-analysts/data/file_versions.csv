@@ -1,0 +1,57 @@
+commit_id,path,line_no,line
+6f6c592,revenue.sql,1,-- Monthly revenue for the finance dashboard.
+6f6c592,revenue.sql,2,-- One row per calendar month.
+6f6c592,revenue.sql,3,SELECT
+6f6c592,revenue.sql,4,"  strftime('%Y-%m', order_date) AS month,"
+6f6c592,revenue.sql,5,"  ROUND(SUM(amount), 2) AS revenue"
+6f6c592,revenue.sql,6,FROM orders
+6f6c592,revenue.sql,7,WHERE is_test = 0
+6f6c592,revenue.sql,8,  AND status = 'delivered'
+6f6c592,revenue.sql,9,GROUP BY month
+6f6c592,revenue.sql,10,ORDER BY month;
+1eb3650,orders_by_month.sql,1,-- Orders per month for the operations review.
+1eb3650,orders_by_month.sql,2,"SELECT strftime('%Y-%m', order_date) AS month, COUNT(*) AS orders"
+1eb3650,orders_by_month.sql,3,FROM orders
+1eb3650,orders_by_month.sql,4,WHERE is_test = 0
+1eb3650,orders_by_month.sql,5,GROUP BY month
+1eb3650,orders_by_month.sql,6,ORDER BY month;
+eb27082,revenue.sql,1,-- Monthly revenue for the finance dashboard.
+eb27082,revenue.sql,2,-- One row per calendar month.
+eb27082,revenue.sql,3,SELECT
+eb27082,revenue.sql,4,"  strftime('%Y-%m', order_date) AS month,"
+eb27082,revenue.sql,5,"  ROUND(SUM(amount), 2) AS revenue"
+eb27082,revenue.sql,6,FROM orders
+eb27082,revenue.sql,7,WHERE is_test = 0
+eb27082,revenue.sql,8,"  AND status IN ('delivered', 'refunded')"
+eb27082,revenue.sql,9,GROUP BY month
+eb27082,revenue.sql,10,ORDER BY month;
+39261e4,orders_by_month.sql,1,-- Orders per month for the operations review.
+39261e4,orders_by_month.sql,2,"SELECT strftime('%Y-%m', order_date) AS month, COUNT(*) AS orders"
+39261e4,orders_by_month.sql,3,FROM orders
+39261e4,orders_by_month.sql,4,WHERE is_test = 0
+39261e4,orders_by_month.sql,5,  AND status <> 'cancelled'
+39261e4,orders_by_month.sql,6,GROUP BY month
+39261e4,orders_by_month.sql,7,ORDER BY month;
+37f14eb,README.md,1,# Brightcart analytics queries
+37f14eb,README.md,2,Each .sql file feeds one dashboard tile.
+37f14eb,README.md,3,"Change a query in a commit of its own, with a message that says why."
+bbe6b52,revenue.sql,1,-- Monthly revenue for the finance dashboard.
+bbe6b52,revenue.sql,2,-- One row per calendar month.
+bbe6b52,revenue.sql,3,SELECT
+bbe6b52,revenue.sql,4,"  strftime('%Y-%m', order_date) AS month,"
+bbe6b52,revenue.sql,5,"  ROUND(SUM(amount - discount), 2) AS revenue"
+bbe6b52,revenue.sql,6,FROM orders
+bbe6b52,revenue.sql,7,WHERE is_test = 0
+bbe6b52,revenue.sql,8,"  AND status IN ('delivered', 'refunded')"
+bbe6b52,revenue.sql,9,GROUP BY month
+bbe6b52,revenue.sql,10,ORDER BY month;
+fff30f3,revenue.sql,1,-- Monthly revenue for the finance dashboard. Owner: analytics.
+fff30f3,revenue.sql,2,-- One row per calendar month.
+fff30f3,revenue.sql,3,SELECT
+fff30f3,revenue.sql,4,"  strftime('%Y-%m', order_date) AS month,"
+fff30f3,revenue.sql,5,"  ROUND(SUM(amount - discount), 2) AS revenue"
+fff30f3,revenue.sql,6,FROM orders
+fff30f3,revenue.sql,7,WHERE is_test = 0
+fff30f3,revenue.sql,8,"  AND status IN ('delivered', 'refunded')"
+fff30f3,revenue.sql,9,GROUP BY month
+fff30f3,revenue.sql,10,ORDER BY month;

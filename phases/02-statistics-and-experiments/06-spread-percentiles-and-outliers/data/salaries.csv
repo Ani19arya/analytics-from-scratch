@@ -1,0 +1,241 @@
+response_id,title,years_experience,base_pay
+1,Senior Data Analyst,6,113000
+2,Business Analyst,7,81000
+3,Data Analyst,0,72000
+4,Data Analyst,3,72000
+5,Business Analyst,6,68000
+6,Senior Data Analyst,5,105000
+7,Data Analyst,2,77000
+8,Lead Analyst,13,214000
+9,Data Analyst,1,81500
+10,Data Analyst,5,75000
+11,Data Analyst,4,77000
+12,Senior Data Analyst,6,93000
+13,Senior Data Analyst,10,81000
+14,Senior Data Analyst,9,99500
+15,Data Analyst,4,77500
+16,Data Analyst,3,79500
+17,Data Analyst,4,84000
+18,Business Analyst,4,61000
+19,Lead Analyst,10,202000
+20,Data Analyst,2,74500
+21,Data Analyst,3,64000
+22,Data Analyst,4,97000
+23,Data Analyst,3,71000
+24,Business Analyst,1,77500
+25,Data Analyst,4,62000
+26,Business Analyst,1,65500
+27,Business Analyst,7,63500
+28,Business Analyst,4,79000
+29,Data Analyst,3,94500
+30,Data Analyst,4,97000
+31,Senior Data Analyst,5,93000
+32,Senior Data Analyst,9,85500
+33,Business Analyst,6,105
+34,Business Analyst,7,68000
+35,Senior Data Analyst,7,109500
+36,Data Analyst,4,68500
+37,Business Analyst,3,80500
+38,Data Analyst,4,84500
+39,Senior Data Analyst,6,123000
+40,Senior Data Analyst,7,98500
+41,Data Analyst,2,92500
+42,Data Analyst,4,68
+43,Data Analyst,3,105000
+44,Senior Data Analyst,10,113000
+45,Data Analyst,3,77500
+46,Business Analyst,1,63000
+47,Data Analyst,2,76000
+48,Business Analyst,2,72000
+49,Data Analyst,5,61500
+50,Business Analyst,7,103500
+51,Data Analyst,5,77500
+52,Business Analyst,7,68500
+53,Business Analyst,4,73500
+54,Business Analyst,6,85000
+55,Data Analyst,3,82000
+56,Data Analyst,4,92500
+57,Senior Data Analyst,6,109500
+58,Business Analyst,6,90000
+59,Business Analyst,2,78500
+60,Senior Data Analyst,5,92500
+61,Business Analyst,1,78500
+62,Business Analyst,7,59500
+63,Data Analyst,4,79500
+64,Data Analyst,2,66000
+65,Senior Data Analyst,7,74500
+66,Data Analyst,3,84500
+67,Data Analyst,0,67000
+68,Senior Data Analyst,9,88000
+69,Senior Data Analyst,9,82500
+70,Business Analyst,1,88000
+71,Data Analyst,5,78500
+72,Data Analyst,3,86500
+73,Data Analyst,0,61000
+74,Data Analyst,1,68000
+75,Senior Data Analyst,8,123500
+76,Business Analyst,1,69500
+77,Data Analyst,0,84000
+78,Data Analyst,0,67500
+79,Data Analyst,1,75000
+80,Business Analyst,2,68000
+81,Senior Data Analyst,7,96500
+82,Data Analyst,3,65500
+83,Senior Data Analyst,8,92500
+84,Business Analyst,3,70000
+85,Data Analyst,2,79000
+86,Business Analyst,6,86000
+87,Data Analyst,0,94500
+88,Lead Analyst,18,205500
+89,Data Analyst,4,82000
+90,Business Analyst,3,67500
+91,Data Analyst,4,86000
+92,Business Analyst,3,79000
+93,Senior Data Analyst,8,101000
+94,Data Analyst,0,65000
+95,Senior Data Analyst,8,92000
+96,Business Analyst,4,80000
+97,Business Analyst,5,87500
+98,Senior Data Analyst,7,94500
+99,Senior Data Analyst,6,116500
+100,Senior Data Analyst,6,96000
+101,Data Analyst,5,66000
+102,Data Analyst,1,64500
+103,Data Analyst,0,74500
+104,Lead Analyst,10,197000
+105,Senior Data Analyst,4,103500
+106,Senior Data Analyst,4,107500
+107,Business Analyst,7,79000
+108,Data Analyst,3,53500
+109,Data Analyst,5,56500
+110,Data Analyst,0,100000
+111,Business Analyst,1,78000
+112,Data Analyst,0,81000
+113,Data Analyst,3,79000
+114,Senior Data Analyst,10,94500
+115,Data Analyst,3,72500
+116,Senior Data Analyst,8,94000
+117,Data Analyst,5,64000
+118,Senior Data Analyst,8,97000
+119,Data Analyst,5,60000
+120,Data Analyst,2,71500
+121,Business Analyst,6,70500
+122,Senior Data Analyst,6,97000
+123,Data Analyst,5,65000
+124,Senior Data Analyst,6,77500
+125,Lead Analyst,15,191500
+126,Senior Data Analyst,10,102500
+127,Business Analyst,7,85500
+128,Data Analyst,0,50000
+129,Business Analyst,3,75500
+130,Senior Data Analyst,6,93500
+131,Business Analyst,7,57500
+132,Data Analyst,2,63000
+133,Senior Data Analyst,6,111000
+134,Business Analyst,5,77500
+135,Senior Data Analyst,9,102500
+136,Data Analyst,4,75500
+137,Business Analyst,1,73000
+138,Business Analyst,6,77500
+139,Business Analyst,2,94000
+140,Data Analyst,5,55000
+141,Data Analyst,3,96000
+142,Senior Data Analyst,8,93500
+143,Business Analyst,2,116500
+144,Business Analyst,6,59500
+145,Data Analyst,1,59500
+146,Business Analyst,3,65500
+147,Data Analyst,0,66500
+148,Business Analyst,2,67500
+149,Business Analyst,4,74500
+150,Data Analyst,0,88000
+151,Senior Data Analyst,9,75500
+152,Business Analyst,7,90000
+153,Data Analyst,3,70000
+154,Data Analyst,1,70000
+155,Senior Data Analyst,6,87500
+156,Senior Data Analyst,5,82500
+157,Business Analyst,2,55000
+158,Business Analyst,2,75000
+159,Data Analyst,3,78000
+160,Senior Data Analyst,8,107500
+161,Business Analyst,5,81000
+162,Data Analyst,2,63500
+163,Data Analyst,0,63500
+164,Data Analyst,0,61000
+165,Business Analyst,7,73500
+166,Business Analyst,6,82500
+167,Senior Data Analyst,5,104000
+168,Data Analyst,0,73000
+169,Data Analyst,3,59000
+170,Data Analyst,1,90500
+171,Senior Data Analyst,5,85000
+172,Business Analyst,1,78000
+173,Senior Data Analyst,8,121500
+174,Senior Data Analyst,9,94500
+175,Data Analyst,0,60000
+176,Data Analyst,2,77500
+177,Data Analyst,5,69000
+178,Business Analyst,1,88000
+179,Data Analyst,2,59500
+180,Senior Data Analyst,5,106500
+181,Data Analyst,4,63500
+182,Data Analyst,1,69500
+183,Business Analyst,4,100500
+184,Data Analyst,0,60500
+185,Senior Data Analyst,8,88000
+186,Data Analyst,5,64500
+187,Data Analyst,1,68000
+188,Data Analyst,3,62000
+189,Data Analyst,0,67500
+190,Data Analyst,5,79000
+191,Data Analyst,4,73500
+192,Data Analyst,2,73500
+193,Senior Data Analyst,8,103000
+194,Business Analyst,7,76000
+195,Business Analyst,1,59000
+196,Data Analyst,3,63000
+197,Business Analyst,2,80500
+198,Lead Analyst,11,206500
+199,Data Analyst,4,81500
+200,Business Analyst,4,60500
+201,Data Analyst,3,74500
+202,Business Analyst,5,87000
+203,Business Analyst,2,77500
+204,Data Analyst,4,57000
+205,Business Analyst,3,58000
+206,Data Analyst,0,84000
+207,Senior Data Analyst,4,97000
+208,Senior Data Analyst,7,147000
+209,Data Analyst,2,71000
+210,Business Analyst,6,78000
+211,Business Analyst,5,90000
+212,Business Analyst,2,83000
+213,Business Analyst,5,87000
+214,Business Analyst,5,60500
+215,Data Analyst,3,58000
+216,Data Analyst,0,92500
+217,Data Analyst,3,68000
+218,Business Analyst,5,72000
+219,Senior Data Analyst,10,97500
+220,Senior Data Analyst,5,82500
+221,Senior Data Analyst,9,100000
+222,Data Analyst,5,67500
+223,Business Analyst,5,67000
+224,Business Analyst,2,76500
+225,Data Analyst,2,63000
+226,Senior Data Analyst,8,100000
+227,Senior Data Analyst,4,90500
+228,Data Analyst,4,76500
+229,Business Analyst,2,81
+230,Business Analyst,1,88500
+231,Business Analyst,7,68500
+232,Senior Data Analyst,7,102000
+233,Data Analyst,2,55500
+234,Data Analyst,4,51000
+235,Business Analyst,6,65000
+236,Data Analyst,5,82500
+237,Business Analyst,7,80000
+238,Senior Data Analyst,7,96500
+239,Business Analyst,4,100500
+240,Business Analyst,1,61000

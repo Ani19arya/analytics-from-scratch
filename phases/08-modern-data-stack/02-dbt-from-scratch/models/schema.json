@@ -1,0 +1,15 @@
+{
+  "_note": "The same tests a dbt schema.yml would declare, written as JSON so the Python standard library can read it. See the README for the YAML version.",
+  "tests": [
+    {"model": "stg_customers", "column": "customer_id", "test": "unique"},
+    {"model": "stg_customers", "column": "customer_id", "test": "not_null"},
+    {"model": "stg_orders", "column": "order_id", "test": "unique"},
+    {"model": "stg_orders", "column": "order_id", "test": "not_null"},
+    {"model": "stg_orders", "column": "status", "test": "accepted_values", "values": ["delivered", "cancelled", "refunded", "pending"]},
+    {"model": "stg_payments", "column": "payment_id", "test": "unique"},
+    {"model": "stg_payments", "column": "order_id", "test": "relationships", "to": "stg_orders", "field": "order_id"},
+    {"model": "fct_orders", "column": "order_id", "test": "unique"},
+    {"model": "fct_orders", "column": "customer_id", "test": "relationships", "to": "stg_customers", "field": "customer_id"},
+    {"model": "mart_revenue_by_city", "column": "city", "test": "unique"}
+  ]
+}

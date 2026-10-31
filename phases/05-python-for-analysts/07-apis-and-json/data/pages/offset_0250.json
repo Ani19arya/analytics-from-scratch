@@ -1,0 +1,232 @@
+{
+ "jobs": [
+  {
+   "company": {
+    "name": "Freight Co 23",
+    "website": null
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "marketing-analyst-freight-co-23-0014",
+   "title": "Marketing Analyst",
+   "tools": [
+    "R"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 09",
+    "website": "https://example.com/travel-co-09"
+   },
+   "location": {
+    "city": "Berlin",
+    "country": "DE"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "junior-data-analyst-travel-co-09-0042",
+   "title": "Junior Data Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Health Co 07",
+    "website": "https://example.com/health-co-07"
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": null,
+   "salary": {
+    "currency": "USD",
+    "max": 125000,
+    "min": 102000
+   },
+   "slug": "marketing-analyst-health-co-07-0102",
+   "title": "Marketing Analyst",
+   "tools": [
+    "Power BI"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 18",
+    "website": null
+   },
+   "location": {
+    "city": "Manchester",
+    "country": "GB"
+   },
+   "postedAt": null,
+   "salary": {
+    "currency": "USD",
+    "max": 102000,
+    "min": 74000
+   },
+   "slug": "data-analyst-bank-co-18-0103",
+   "title": "Data Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Software Co 16",
+    "website": null
+   },
+   "location": {
+    "city": "Hyderabad",
+    "country": "IN"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "senior-data-analyst-software-co-16-0120",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "R",
+    "Looker",
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 21",
+    "website": "https://example.com/freight-co-21"
+   },
+   "location": {
+    "city": "Berlin",
+    "country": "DE"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "junior-data-analyst-freight-co-21-0142",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "dbt",
+    "Looker",
+    "Tableau",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 31",
+    "website": "https://example.com/energy-co-31"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "product-analyst-energy-co-31-0161",
+   "title": "Product Analyst",
+   "tools": [
+    "Power BI",
+    "SQL",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Software Co 23",
+    "website": "https://example.com/software-co-23"
+   },
+   "location": null,
+   "postedAt": null,
+   "salary": null,
+   "slug": "senior-data-analyst-software-co-23-0178",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "Excel",
+    "Power BI",
+    "Python"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 08",
+    "website": "https://example.com/retail-co-08"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "marketing-analyst-retail-co-08-0181",
+   "title": "Marketing Analyst",
+   "tools": [
+    "R",
+    "Looker",
+    "Power BI",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 38",
+    "website": "https://example.com/energy-co-38"
+   },
+   "location": {
+    "city": "Bengaluru",
+    "country": "IN"
+   },
+   "postedAt": null,
+   "salary": {
+    "currency": "USD",
+    "max": 98000,
+    "min": 67000
+   },
+   "slug": "senior-data-analyst-energy-co-38-0202",
+   "title": "Senior Data Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Health Co 22",
+    "website": "https://example.com/health-co-22"
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": null,
+   "salary": null,
+   "slug": "junior-data-analyst-health-co-22-0251",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "Excel",
+    "Looker"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 25",
+    "website": "https://example.com/energy-co-25"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": null,
+   "salary": {
+    "currency": "USD",
+    "max": 118000,
+    "min": 93000
+   },
+   "slug": "product-analyst-energy-co-25-0252",
+   "title": "Product Analyst",
+   "tools": [
+    "Python",
+    "Power BI"
+   ]
+  }
+ ],
+ "limit": 50,
+ "offset": 250,
+ "total": 262
+}

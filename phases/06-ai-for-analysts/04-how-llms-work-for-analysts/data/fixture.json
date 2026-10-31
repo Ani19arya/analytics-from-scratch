@@ -1,0 +1,12 @@
+{
+  "file": "reviews.csv",
+  "summary_source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "Summarise this customer review in one sentence. Say if the customer is happy or unhappy, and name the main problem if there is one.",
+  "prompt_version": "v1",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "make_data.py writes each summary from the same template and slot values as its review.",
+  "rate_card": "rate_card.csv holds fictional example prices, not any real provider's prices",
+  "seed": 604
+}

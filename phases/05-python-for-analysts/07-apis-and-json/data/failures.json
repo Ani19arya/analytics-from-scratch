@@ -1,0 +1,29 @@
+{
+ "100": [
+  {
+   "body": {
+    "error": "rate limited"
+   },
+   "headers": {
+    "Retry-After": "2"
+   },
+   "status": 429
+  }
+ ],
+ "200": [
+  {
+   "body": {
+    "error": "service unavailable"
+   },
+   "headers": {},
+   "status": 503
+  },
+  {
+   "body": {
+    "error": "service unavailable"
+   },
+   "headers": {},
+   "status": 503
+  }
+ ]
+}

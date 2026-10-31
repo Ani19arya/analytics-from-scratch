@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="238" viewBox="0 0 960 238" font-family="Helvetica, Arial, sans-serif">
+<rect width="960" height="238" fill="#ffffff"/>
+<text class="title" x="16" y="28" font-size="18" font-weight="bold">Nashik kitchen, October so far</text>
+<text class="subtitle" x="16" y="48" font-size="12" fill="#5f6368">1-20 Oct 2026 compared with 1-20 Sep 2026. Data to the end of 20 October 2026.</text>
+<rect class="card" data-kpi="revenue" x="16" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="16" y="64" width="6" height="150" fill="#5f6368"/>
+<text class="card-label" x="34" y="90" font-size="13" fill="#3c4043">Revenue</text>
+<text class="card-value" x="34" y="128" font-size="28" font-weight="bold">Rs 11,514</text>
+<text class="card-change" x="34" y="154" font-size="12">+43.2% vs 1-20 Sep 2026</text>
+<text class="card-target" x="34" y="174" font-size="12" fill="#5f6368">no target</text>
+<text class="card-small-n" x="34" y="198" font-size="11" fill="#b06000">only 29 orders: read with care</text>
+<rect class="card" data-kpi="orders" x="252" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="252" y="64" width="6" height="150" fill="#5f6368"/>
+<text class="card-label" x="270" y="90" font-size="13" fill="#3c4043">Orders</text>
+<text class="card-value" x="270" y="128" font-size="28" font-weight="bold">29</text>
+<text class="card-change" x="270" y="154" font-size="12">+45.0% vs 1-20 Sep 2026</text>
+<text class="card-target" x="270" y="174" font-size="12" fill="#5f6368">no target</text>
+<text class="card-small-n" x="270" y="198" font-size="11" fill="#b06000">only 29 orders: read with care</text>
+<rect class="card" data-kpi="aov" x="488" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="488" y="64" width="6" height="150" fill="#5f6368"/>
+<text class="card-label" x="506" y="90" font-size="13" fill="#3c4043">Average order value</text>
+<text class="card-value" x="506" y="128" font-size="28" font-weight="bold">Rs 426</text>
+<text class="card-change" x="506" y="154" font-size="12">+0.8% vs 1-20 Sep 2026</text>
+<text class="card-target" x="506" y="174" font-size="12" fill="#5f6368">no target</text>
+<text class="card-small-n" x="506" y="198" font-size="11" fill="#b06000">only 29 orders: read with care</text>
+<rect class="card" data-kpi="refund_rate" x="724" y="64" width="220" height="150" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+<rect x="724" y="64" width="6" height="150" fill="#5f6368"/>
+<text class="card-label" x="742" y="90" font-size="13" fill="#3c4043">Refund rate</text>
+<text class="card-value" x="742" y="128" font-size="28" font-weight="bold">6.9%</text>
+<text class="card-change" x="742" y="154" font-size="12">+1.9 pts vs 1-20 Sep 2026</text>
+<text class="card-target" x="742" y="174" font-size="12" fill="#5f6368">no target</text>
+<text class="card-small-n" x="742" y="198" font-size="11" fill="#b06000">only 29 orders: read with care</text>
+</svg>

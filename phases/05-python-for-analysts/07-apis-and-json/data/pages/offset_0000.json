@@ -1,0 +1,944 @@
+{
+ "jobs": [
+  {
+   "company": {
+    "name": "Travel Co 31",
+    "website": "https://example.com/travel-co-31"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-25T05:19:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 103000,
+    "min": 71000
+   },
+   "slug": "product-analyst-travel-co-31-0147",
+   "title": "Product Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Retail Co 05",
+    "website": "https://example.com/retail-co-05"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-25T04:40:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-retail-co-05-0229",
+   "title": "Analytics Engineer",
+   "tools": [
+    "R",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 16",
+    "website": "https://example.com/travel-co-16"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T23:52:00Z",
+   "salary": null,
+   "slug": "marketing-analyst-travel-co-16-0223",
+   "title": "Marketing Analyst",
+   "tools": [
+    "Looker",
+    "R"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 19",
+    "website": "https://example.com/health-co-19"
+   },
+   "location": {
+    "city": "New York",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T21:41:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-health-co-19-0209",
+   "title": "Senior Data Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Retail Co 34",
+    "website": "https://example.com/retail-co-34"
+   },
+   "location": null,
+   "postedAt": "2026-10-24T16:52:00Z",
+   "salary": null,
+   "slug": "junior-data-analyst-retail-co-34-0249",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "Tableau",
+    "Excel",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 31",
+    "website": null
+   },
+   "location": {
+    "city": "Berlin",
+    "country": "DE"
+   },
+   "postedAt": "2026-10-24T12:22:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 131000,
+    "min": 93000
+   },
+   "slug": "product-analyst-energy-co-31-0021",
+   "title": "Product Analyst",
+   "tools": [
+    "SQL",
+    "Tableau",
+    "R",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 01",
+    "website": "https://example.com/travel-co-01"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T11:11:00Z",
+   "salary": null,
+   "slug": "business-analyst-travel-co-01-0051",
+   "title": "Business Analyst",
+   "tools": [
+    "Power BI"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 09",
+    "website": null
+   },
+   "location": {
+    "city": "Chicago",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T10:44:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 96000,
+    "min": 77000
+   },
+   "slug": "business-analyst-bank-co-09-0133",
+   "title": "Business Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Media Co 35",
+    "website": "https://example.com/media-co-35"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-24T10:09:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-media-co-35-0200",
+   "title": "Analytics Engineer",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Software Co 11",
+    "website": "https://example.com/software-co-11"
+   },
+   "location": {
+    "city": "Bengaluru",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-24T09:26:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-software-co-11-0203",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "Looker",
+    "Tableau",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 12",
+    "website": "https://example.com/retail-co-12"
+   },
+   "location": {
+    "city": "Manchester",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-24T08:29:00Z",
+   "salary": null,
+   "slug": "bi-analyst-retail-co-12-0199",
+   "title": "BI Analyst",
+   "tools": [
+    "Python",
+    "Excel",
+    "Looker"
+   ]
+  },
+  {
+   "company": {
+    "name": "Media Co 08",
+    "website": "https://example.com/media-co-08"
+   },
+   "location": {
+    "city": "New York",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T05:17:00Z",
+   "salary": null,
+   "slug": "junior-data-analyst-media-co-08-0205",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "R"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 06",
+    "website": "https://example.com/freight-co-06"
+   },
+   "location": {
+    "city": "Bengaluru",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-24T04:30:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 96000,
+    "min": 74000
+   },
+   "slug": "product-analyst-freight-co-06-0149",
+   "title": "Product Analyst",
+   "tools": [
+    "Looker",
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 14",
+    "website": "https://example.com/bank-co-14"
+   },
+   "location": {
+    "city": "Austin",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T03:21:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-bank-co-14-0044",
+   "title": "Analytics Engineer",
+   "tools": [
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Software Co 03",
+    "website": "https://example.com/software-co-03"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T03:18:00Z",
+   "salary": null,
+   "slug": "bi-analyst-software-co-03-0111",
+   "title": "BI Analyst",
+   "tools": [
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 03",
+    "website": "https://example.com/travel-co-03"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-24T00:13:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-travel-co-03-0073",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "Excel",
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 06",
+    "website": "https://example.com/freight-co-06"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-23T20:40:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 138000,
+    "min": 114000
+   },
+   "slug": "marketing-analyst-freight-co-06-0119",
+   "title": "Marketing Analyst",
+   "tools": [
+    "dbt",
+    "Looker",
+    "R",
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 28",
+    "website": "https://example.com/retail-co-28"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-23T16:01:00Z",
+   "salary": null,
+   "slug": "data-analyst-retail-co-28-0158",
+   "title": "Data Analyst",
+   "tools": [
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 08",
+    "website": "https://example.com/health-co-08"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-23T13:28:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-health-co-08-0206",
+   "title": "Analytics Engineer",
+   "tools": [
+    "Looker"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 08",
+    "website": "https://example.com/health-co-08"
+   },
+   "location": {
+    "city": "New York",
+    "country": "US"
+   },
+   "postedAt": "2026-10-23T13:25:00Z",
+   "salary": null,
+   "slug": "product-analyst-health-co-08-0066",
+   "title": "Product Analyst",
+   "tools": [
+    "R",
+    "Power BI",
+    "Python"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 39",
+    "website": "https://example.com/retail-co-39"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-23T13:16:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 90000,
+    "min": 80000
+   },
+   "slug": "bi-analyst-retail-co-39-0034",
+   "title": "BI Analyst",
+   "tools": [
+    "Power BI",
+    "R",
+    "Looker",
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 09",
+    "website": null
+   },
+   "location": {
+    "city": "New York",
+    "country": "US"
+   },
+   "postedAt": "2026-10-23T11:10:00Z",
+   "salary": null,
+   "slug": "data-analyst-energy-co-09-0078",
+   "title": "Data Analyst",
+   "tools": [
+    "R",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 34",
+    "website": "https://example.com/travel-co-34"
+   },
+   "location": {
+    "city": "Chicago",
+    "country": "US"
+   },
+   "postedAt": "2026-10-23T07:12:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-travel-co-34-0227",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "Looker",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 12",
+    "website": "https://example.com/health-co-12"
+   },
+   "location": {
+    "city": "Chicago",
+    "country": "US"
+   },
+   "postedAt": "2026-10-23T07:07:00Z",
+   "salary": null,
+   "slug": "junior-data-analyst-health-co-12-0055",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "Excel",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 23",
+    "website": null
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": "2026-10-23T04:32:00Z",
+   "salary": null,
+   "slug": "bi-analyst-bank-co-23-0201",
+   "title": "BI Analyst",
+   "tools": [
+    "Python",
+    "dbt"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 15",
+    "website": "https://example.com/freight-co-15"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-22T23:16:00Z",
+   "salary": null,
+   "slug": "product-analyst-freight-co-15-0207",
+   "title": "Product Analyst",
+   "tools": [
+    "Power BI"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 32",
+    "website": "https://example.com/health-co-32"
+   },
+   "location": {
+    "city": "Berlin",
+    "country": "DE"
+   },
+   "postedAt": "2026-10-22T20:11:00Z",
+   "salary": null,
+   "slug": "product-analyst-health-co-32-0067",
+   "title": "Product Analyst",
+   "tools": [
+    "Python",
+    "SQL",
+    "dbt",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 35",
+    "website": "https://example.com/freight-co-35"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-22T18:30:00Z",
+   "salary": null,
+   "slug": "marketing-analyst-freight-co-35-0236",
+   "title": "Marketing Analyst",
+   "tools": [
+    "Tableau",
+    "Power BI",
+    "Python"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 04",
+    "website": "https://example.com/bank-co-04"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-22T17:42:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 110000,
+    "min": 88000
+   },
+   "slug": "senior-data-analyst-bank-co-04-0077",
+   "title": "Senior Data Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Media Co 02",
+    "website": "https://example.com/media-co-02"
+   },
+   "location": {
+    "city": "Manchester",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-22T13:54:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 141000,
+    "min": 128000
+   },
+   "slug": "marketing-analyst-media-co-02-0118",
+   "title": "Marketing Analyst",
+   "tools": [
+    "R",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 10",
+    "website": "https://example.com/health-co-10"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-22T13:52:00Z",
+   "salary": null,
+   "slug": "product-analyst-health-co-10-0182",
+   "title": "Product Analyst",
+   "tools": [
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 04",
+    "website": "https://example.com/bank-co-04"
+   },
+   "location": {
+    "city": "Manchester",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-22T08:13:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-bank-co-04-0079",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "SQL",
+    "Looker",
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 11",
+    "website": null
+   },
+   "location": {
+    "city": "New York",
+    "country": "US"
+   },
+   "postedAt": "2026-10-22T04:54:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 101000,
+    "min": 72000
+   },
+   "slug": "bi-analyst-retail-co-11-0004",
+   "title": "BI Analyst",
+   "tools": [
+    "R"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 01",
+    "website": "https://example.com/freight-co-01"
+   },
+   "location": {
+    "city": "Bengaluru",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-22T01:47:00Z",
+   "salary": null,
+   "slug": "product-analyst-freight-co-01-0128",
+   "title": "Product Analyst",
+   "tools": [
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 38",
+    "website": "https://example.com/health-co-38"
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": "2026-10-22T00:23:00Z",
+   "salary": null,
+   "slug": "business-analyst-health-co-38-0069",
+   "title": "Business Analyst",
+   "tools": []
+  },
+  {
+   "company": {
+    "name": "Software Co 29",
+    "website": null
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": "2026-10-21T16:15:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 113000,
+    "min": 96000
+   },
+   "slug": "junior-data-analyst-software-co-29-0028",
+   "title": "Junior Data Analyst",
+   "tools": [
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Software Co 03",
+    "website": "https://example.com/software-co-03"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-21T14:15:00Z",
+   "salary": null,
+   "slug": "business-analyst-software-co-03-0198",
+   "title": "Business Analyst",
+   "tools": [
+    "Python"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 05",
+    "website": "https://example.com/health-co-05"
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-21T12:08:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-health-co-05-0132",
+   "title": "Analytics Engineer",
+   "tools": [
+    "Excel",
+    "dbt",
+    "Power BI"
+   ]
+  },
+  {
+   "company": {
+    "name": "Travel Co 25",
+    "website": "https://example.com/travel-co-25"
+   },
+   "location": {
+    "city": null,
+    "country": null
+   },
+   "postedAt": "2026-10-21T11:40:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-travel-co-25-0018",
+   "title": "Analytics Engineer",
+   "tools": [
+    "dbt",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Bank Co 23",
+    "website": "https://example.com/bank-co-23"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-21T04:46:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-bank-co-23-0165",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "Power BI",
+    "Python",
+    "SQL",
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 21",
+    "website": "https://example.com/retail-co-21"
+   },
+   "location": {
+    "city": "Chicago",
+    "country": "US"
+   },
+   "postedAt": "2026-10-21T02:48:00Z",
+   "salary": null,
+   "slug": "product-analyst-retail-co-21-0150",
+   "title": "Product Analyst",
+   "tools": [
+    "Python",
+    "Looker",
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 05",
+    "website": "https://example.com/freight-co-05"
+   },
+   "location": null,
+   "postedAt": "2026-10-21T02:11:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 102000,
+    "min": 70000
+   },
+   "slug": "data-analyst-freight-co-05-0020",
+   "title": "Data Analyst",
+   "tools": [
+    "SQL",
+    "Tableau"
+   ]
+  },
+  {
+   "company": {
+    "name": "Freight Co 36",
+    "website": "https://example.com/freight-co-36"
+   },
+   "location": {
+    "city": "Seattle",
+    "country": "US"
+   },
+   "postedAt": "2026-10-20T21:46:00Z",
+   "salary": null,
+   "slug": "product-analyst-freight-co-36-0064",
+   "title": "Product Analyst",
+   "tools": [
+    "Power BI",
+    "SQL"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 07",
+    "website": null
+   },
+   "location": {
+    "city": "Toronto",
+    "country": "CA"
+   },
+   "postedAt": "2026-10-20T20:31:00Z",
+   "salary": null,
+   "slug": "bi-analyst-health-co-07-0140",
+   "title": "BI Analyst",
+   "tools": [
+    "Power BI"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 23",
+    "website": "https://example.com/health-co-23"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-20T19:13:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 81000,
+    "min": 71000
+   },
+   "slug": "analytics-engineer-health-co-23-0007",
+   "title": "Analytics Engineer",
+   "tools": [
+    "Power BI",
+    "R",
+    "Excel",
+    "Python"
+   ]
+  },
+  {
+   "company": {
+    "name": "Software Co 29",
+    "website": "https://example.com/software-co-29"
+   },
+   "location": {
+    "city": "Austin",
+    "country": "US"
+   },
+   "postedAt": "2026-10-20T19:06:00Z",
+   "salary": null,
+   "slug": "business-analyst-software-co-29-0212",
+   "title": "Business Analyst",
+   "tools": [
+    "Excel"
+   ]
+  },
+  {
+   "company": {
+    "name": "Energy Co 36",
+    "website": "https://example.com/energy-co-36"
+   },
+   "location": {
+    "city": "London",
+    "country": "GB"
+   },
+   "postedAt": "2026-10-20T18:07:00Z",
+   "salary": null,
+   "slug": "bi-analyst-energy-co-36-0160",
+   "title": "BI Analyst",
+   "tools": [
+    "Excel",
+    "dbt",
+    "Looker"
+   ]
+  },
+  {
+   "company": {
+    "name": "Retail Co 02",
+    "website": "https://example.com/retail-co-02"
+   },
+   "location": {
+    "city": "Austin",
+    "country": "US"
+   },
+   "postedAt": "2026-10-20T12:15:00Z",
+   "salary": {
+    "currency": "USD",
+    "max": 88000,
+    "min": 53000
+   },
+   "slug": "analytics-engineer-retail-co-02-0061",
+   "title": "Analytics Engineer",
+   "tools": [
+    "SQL",
+    "R",
+    "Tableau",
+    "Looker"
+   ]
+  },
+  {
+   "company": {
+    "name": "Software Co 08",
+    "website": "https://example.com/software-co-08"
+   },
+   "location": {
+    "city": "Chicago",
+    "country": "US"
+   },
+   "postedAt": "2026-10-20T11:20:00Z",
+   "salary": null,
+   "slug": "senior-data-analyst-software-co-08-0250",
+   "title": "Senior Data Analyst",
+   "tools": [
+    "SQL",
+    "R"
+   ]
+  },
+  {
+   "company": {
+    "name": "Health Co 32",
+    "website": "https://example.com/health-co-32"
+   },
+   "location": {
+    "city": "Pune",
+    "country": "IN"
+   },
+   "postedAt": "2026-10-20T11:03:00Z",
+   "salary": null,
+   "slug": "analytics-engineer-health-co-32-0145",
+   "title": "Analytics Engineer",
+   "tools": [
+    "Python",
+    "Power BI"
+   ]
+  }
+ ],
+ "limit": 50,
+ "offset": 0,
+ "total": 255
+}

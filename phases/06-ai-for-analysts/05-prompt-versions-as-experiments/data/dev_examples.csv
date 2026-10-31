@@ -1,0 +1,11 @@
+ticket_id,text,gold_label,v1_label,v2_label
+D01,"Hi team, I was charged twice in March, please reverse one of them",billing,refund,billing
+D02,"Hi, you charged me $99 instead of $79 for the annual plan",billing,billing,billing
+D03,"Hi, you charged me $199 instead of $189 for the team plan?",billing,billing,billing
+D04,"I was charged twice in July, please reverse one of them. Thanks",billing,billing,billing
+D05,"Hi, I was charged twice in April, please reverse one of them, account A5006",billing,refund,billing
+D06,"Hi team, you charged me $79 instead of $69 for the team plan?",billing,billing,billing
+D07,"Hi, you charged me $79 instead of $59 for the pro plan. Thanks",billing,billing,billing
+D08,"Hi, I was charged twice in January, please reverse one of them?",billing,refund,billing
+D09,"Hello, I was charged twice in June, please reverse one of them",billing,refund,billing
+D10,"Hi, you charged me $99 instead of $89 for the pro plan, account A3555",billing,refund,billing

@@ -1,0 +1,19 @@
+{
+  "file": "labelled_tickets.csv",
+  "label_source": "simulated",
+  "model": "none: no model was called",
+  "prompt_versions": [
+    "v2",
+    "v3"
+  ],
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "one seeded draw per ticket picks both right (0.81), only v2 right (0.05), only v3 right (0.07) or both wrong (0.07). A wrong label is a random other label.",
+  "true_accuracy": {
+    "v2": 0.86,
+    "v3": 0.88
+  },
+  "gold_label_source": "simulated single human labeller, treated as the truth",
+  "pilot": "the first 50 rows are the tickets Sam scored first",
+  "seed": 672
+}

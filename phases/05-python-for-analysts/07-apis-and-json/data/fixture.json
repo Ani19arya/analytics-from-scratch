@@ -1,0 +1,8 @@
+{
+ "limit": 50,
+ "pages": 6,
+ "recorded_at": "2026-10-26T07:00:00Z",
+ "shape_note": "Shaped like a typical JSON feed. The public feed at https://realanalystjobs.com/api/job-feed is flatter; this one is nested on purpose.",
+ "source": "synthetic: built by make_data.py with seed 507. No request was made to any real API.",
+ "what": "A recorded response from a job-feed API, paged with limit and offset."
+}

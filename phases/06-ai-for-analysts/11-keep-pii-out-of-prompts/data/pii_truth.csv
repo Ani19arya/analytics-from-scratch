@@ -1,0 +1,217 @@
+message_id,kind,value,norm
+M0001,email,kabir.l45@example.org,kabir.l45@example.org
+M0001,phone,+91-7803148648,7803148648
+M0002,email,sanah45@example.net,sanah45@example.net
+M0005,phone,+1 206 555 0143,2065550143
+M0005,email,jay.e47@example.com,jay.e47@example.com
+M0006,email,zoya_l46@example.org,zoya_l46@example.org
+M0008,email,dev.j96@example.com,dev.j96@example.com
+M0008,phone,0091 97281 38703,9728138703
+M0009,spelled_email,imran dot p76 at example dot com,imran dot p76 at example dot com
+M0010,email,meera_t54@example.org,meera_t54@example.org
+M0010,phone,09692865365,9692865365
+M0011,email,jay.r28%40example.net,jay.r28@example.net
+M0013,email,rohan.a70@example.net,rohan.a70@example.net
+M0014,email,Vikram.f54@Example.org,vikram.f54@example.org
+M0014,phone,+91-8273687930,8273687930
+M0016,card,4760-7029-6800-7156,4760702968007156
+M0017,email,taraj78@example.net,taraj78@example.net
+M0018,phone,+1 415 555 0120,4155550120
+M0019,email,maya.b15@example.org,maya.b15@example.org
+M0019,phone,6342949503,6342949503
+M0020,card,5300-8049-0097-7530,5300804900977530
+M0021,phone,07803148648,7803148648
+M0024,spelled_email,rohan dot h75 at example dot com,rohan dot h75 at example dot com
+M0025,spelled_email,meera dot k86 at example dot com,meera dot k86 at example dot com
+M0026,spelled_email,ruth dot t75 at example dot com,ruth dot t75 at example dot com
+M0027,phone,07188642536,7188642536
+M0028,phone,95870 75132,9587075132
+M0029,phone,0091 93545 94550,9354594550
+M0030,phone,63348 38616,6334838616
+M0032,card,4067976583289973,4067976583289973
+M0034,phone,+91-6324995861,6324995861
+M0035,card,4899-0199-0938-2174,4899019909382174
+M0037,phone,+16175550108,6175550108
+M0037,email,zoya_w73@example.org,zoya_w73@example.org
+M0038,email,rohan.h75@example.com,rohan.h75@example.com
+M0040,card,4611 1673 4730 8140,4611167347308140
+M0042,email,nishad58@example.org,nishad58@example.org
+M0042,phone,0091 71839 89261,7183989261
+M0044,email,asha.r28%40example.net,asha.r28@example.net
+M0047,phone,646.555.0178,6465550178
+M0047,email,tara.c62@example.net,tara.c62@example.net
+M0049,email,Vikrams32@Example.com,vikrams32@example.com
+M0049,phone,0091 71574 34783,7157434783
+M0052,phone,+916358866987,6358866987
+M0053,email,kabir.w34@example.com,kabir.w34@example.com
+M0054,email,nishad58%40example.org,nishad58@example.org
+M0056,email,rohan.h75@example.com,rohan.h75@example.com
+M0058,email,arjun.m56@example.com,arjun.m56@example.com
+M0058,phone,0091 67485 77849,6748577849
+M0060,phone,(415) 555-0120,4155550120
+M0060,email,ruth_j1@example.com,ruth_j1@example.com
+M0061,phone,+12065550143,2065550143
+M0061,email,zoya_l46@example.org,zoya_l46@example.org
+M0062,phone,312.555.0146,3125550146
+M0063,spelled_email,rohan dot h75 at example dot com,rohan dot h75 at example dot com
+M0064,email,ashal81%40example.com,ashal81@example.com
+M0066,spelled_email,neelp12 at example dot com,neelp12 at example dot com
+M0068,phone,63565 85651,6356585651
+M0070,email,imranr61@example.net,imranr61@example.net
+M0071,phone,0091 82736 87930,8273687930
+M0073,email,meerab1@example.org,meerab1@example.org
+M0074,phone,646.555.0178,6465550178
+M0076,email,ruth.t75@example.com,ruth.t75@example.com
+M0077,phone,+12065550143,2065550143
+M0078,phone,+917816091349,7816091349
+M0079,card,5484075448476925,5484075448476925
+M0080,email,imranr61@example.net,imranr61@example.net
+M0080,phone,63565 85651,6356585651
+M0081,email,tara.h77%40example.org,tara.h77@example.org
+M0082,email,neel_n61@example.org,neel_n61@example.org
+M0084,phone,415.555.0120,4155550120
+M0085,phone,646-555-0121,6465550121
+M0085,email,meera_t54@example.org,meera_t54@example.org
+M0086,phone,+16175550108,6175550108
+M0087,email,maya_n40@example.net,maya_n40@example.net
+M0087,phone,+13125550146,3125550146
+M0088,phone,+916334838616,6334838616
+M0089,card,5638 5048 0631 2922,5638504806312922
+M0090,card,5258964421696548,5258964421696548
+M0091,phone,+1 646 555 0182,6465550182
+M0092,spelled_email,kabir_t31 at example dot com,kabir_t31 at example dot com
+M0093,phone,+916748577849,6748577849
+M0094,phone,(312) 555-0138,3125550138
+M0095,email,kabir.l45@example.org,kabir.l45@example.org
+M0097,card,5561-1923-1174-9225,5561192311749225
+M0098,card,4044 6459 8399 1821,4044645983991821
+M0099,card,4532-3984-1283-3813,4532398412833813
+M0101,phone,+916358866987,6358866987
+M0103,phone,+16465550182,6465550182
+M0103,email,kabir.l45@example.org,kabir.l45@example.org
+M0105,phone,6093585498,6093585498
+M0106,email,devb96@example.org,devb96@example.org
+M0107,phone,+91-6342949503,6342949503
+M0109,spelled_email,maya_n40 at example dot net,maya_n40 at example dot net
+M0110,phone,(312) 555-0153,3125550153
+M0111,email,kabir.w34@example.com,kabir.w34@example.com
+M0111,phone,+919468141418,9468141418
+M0113,email,zoya.n95@example.net,zoya.n95@example.net
+M0113,phone,+91-7889296218,7889296218
+M0115,spelled_email,leela_g1 at example dot com,leela_g1 at example dot com
+M0117,phone,212-555-0117,2125550117
+M0117,email,imran.c93@example.org,imran.c93@example.org
+M0119,email,leela_k40@example.net,leela_k40@example.net
+M0120,phone,212.555.0172,2125550172
+M0120,email,arjunb59@example.net,arjunb59@example.net
+M0121,phone,+91-8809737889,8809737889
+M0126,email,jay.e47@example.com,jay.e47@example.com
+M0127,phone,+918799435386,8799435386
+M0128,phone,646.555.0119,6465550119
+M0128,email,meera_t54@example.org,meera_t54@example.org
+M0129,email,vikrams32@example.com,vikrams32@example.com
+M0130,email,ira.g97@example.com,ira.g97@example.com
+M0130,phone,7777207773,7777207773
+M0131,phone,+91-7157434783,7157434783
+M0132,email,ruth.t75@example.com,ruth.t75@example.com
+M0133,spelled_email,ira dot l90 at example dot com,ira dot l90 at example dot com
+M0135,card,4288307558140376,4288307558140376
+M0136,email,tara.h77@example.org,tara.h77@example.org
+M0136,phone,+91 61737 74097,6173774097
+M0138,email,zoya.n95@example.net,zoya.n95@example.net
+M0138,phone,7889296218,7889296218
+M0139,spelled_email,mayae31 at example dot com,mayae31 at example dot com
+M0140,email,Leela_g1@Example.com,leela_g1@example.com
+M0140,phone,646.555.0182,6465550182
+M0142,card,4896041510302154,4896041510302154
+M0143,phone,(206) 555-0143,2065550143
+M0143,email,kabir.w34@example.com,kabir.w34@example.com
+M0146,email,samh31@example.com,samh31@example.com
+M0147,email,ruth.r41%40example.net,ruth.r41@example.net
+M0148,phone,+14155550120,4155550120
+M0148,email,sana_m67@example.org,sana_m67@example.org
+M0151,card,4638311344832905,4638311344832905
+M0152,phone,6342949503,6342949503
+M0153,email,tara.h77@example.org,tara.h77@example.org
+M0153,phone,0091 61737 74097,6173774097
+M0155,spelled_email,neelp12 at example dot com,neelp12 at example dot com
+M0158,email,omar.r35@example.net,omar.r35@example.net
+M0158,phone,0091 96680 27471,9668027471
+M0159,phone,+1 312 555 0146,3125550146
+M0160,phone,(646) 555-0178,6465550178
+M0161,email,asha.r28@example.net,asha.r28@example.net
+M0161,phone,0091 86778 38688,8677838688
+M0162,phone,77772 07773,7777207773
+M0163,card,5974 5563 4701 0532,5974556347010532
+M0164,phone,212-555-0117,2125550117
+M0164,email,zoya_w73@example.org,zoya_w73@example.org
+M0165,email,sana.g19@example.org,sana.g19@example.org
+M0169,email,nishad58@example.org,nishad58@example.org
+M0169,phone,07183989261,7183989261
+M0172,spelled_email,arjunb59 at example dot net,arjunb59 at example dot net
+M0173,spelled_email,meera dot k86 at example dot com,meera dot k86 at example dot com
+M0174,phone,9980286107,9980286107
+M0175,spelled_email,imran dot c93 at example dot org,imran dot c93 at example dot org
+M0176,card,4551011876788219,4551011876788219
+M0177,card,5649-0079-4519-7631,5649007945197631
+M0178,phone,0091 94681 41418,9468141418
+M0179,email,Sana_m67@Example.org,sana_m67@example.org
+M0179,phone,60276 44421,6027644421
+M0181,phone,+917816091349,7816091349
+M0183,phone,(312) 555-0146,3125550146
+M0184,email,ira.l90@example.com,ira.l90@example.com
+M0184,phone,(646) 555-0119,6465550119
+M0186,email,leelar24@example.com,leelar24@example.com
+M0187,phone,0091 71886 42536,7188642536
+M0188,email,meerab1@example.org,meerab1@example.org
+M0188,phone,95203 30341,9520330341
+M0189,phone,312.555.0138,3125550138
+M0189,email,arjun.j41@example.org,arjun.j41@example.org
+M0190,phone,6358866987,6358866987
+M0191,spelled_email,imran dot p76 at example dot com,imran dot p76 at example dot com
+M0193,phone,63588 66987,6358866987
+M0194,email,taraj78@example.net,taraj78@example.net
+M0195,spelled_email,meera dot k86 at example dot com,meera dot k86 at example dot com
+M0196,phone,+1 312 555 0153,3125550153
+M0196,email,vikramg83@example.net,vikramg83@example.net
+M0198,email,meera_t54@example.org,meera_t54@example.org
+M0198,phone,+919692865365,9692865365
+M0199,phone,646-555-0121,6465550121
+M0199,email,Leelar24@Example.com,leelar24@example.com
+M0200,card,5262825597312893,5262825597312893
+M0202,email,arjunb59@example.net,arjunb59@example.net
+M0202,phone,73717 60002,7371760002
+M0203,email,rohan_v77%40example.net,rohan_v77@example.net
+M0204,phone,(646) 555-0107,6465550107
+M0204,email,rohan_v77@example.net,rohan_v77@example.net
+M0205,phone,646.555.0178,6465550178
+M0205,email,Zoya_l46@Example.org,zoya_l46@example.org
+M0207,email,zoya.n95@example.net,zoya.n95@example.net
+M0208,phone,07371760002,7371760002
+M0209,email,meerab1@example.org,meerab1@example.org
+M0209,phone,+91 95203 30341,9520330341
+M0210,card,5851277370038518,5851277370038518
+M0211,card,4248498152075107,4248498152075107
+M0213,phone,+91-8799435386,8799435386
+M0214,phone,+16465550178,6465550178
+M0214,email,rohan.h75@example.com,rohan.h75@example.com
+M0215,email,asha_j44@example.com,asha_j44@example.com
+M0216,email,tara.h77%40example.org,tara.h77@example.org
+M0218,email,sam_e6@example.com,sam_e6@example.com
+M0220,spelled_email,tara dot c62 at example dot net,tara dot c62 at example dot net
+M0221,card,4145814503435598,4145814503435598
+M0224,phone,+13125550146,3125550146
+M0224,email,neel_n61@example.org,neel_n61@example.org
+M0225,email,taraj78@example.net,taraj78@example.net
+M0226,phone,+91 67343 33774,6734333774
+M0229,email,meera.k86@example.com,meera.k86@example.com
+M0232,email,sam_h56%40example.com,sam_h56@example.com
+M0233,phone,63348 38616,6334838616
+M0235,spelled_email,meera_t54 at example dot org,meera_t54 at example dot org
+M0236,email,Leela_g1@Example.com,leela_g1@example.com
+M0237,email,Rohan.a70@Example.net,rohan.a70@example.net
+M0237,phone,212.555.0117,2125550117
+M0238,phone,+16465550178,6465550178
+M0238,email,ira.g97@example.com,ira.g97@example.com
+M0239,spelled_email,imran dot p76 at example dot com,imran dot p76 at example dot com
+M0240,card,4637 3173 6242 4120,4637317362424120

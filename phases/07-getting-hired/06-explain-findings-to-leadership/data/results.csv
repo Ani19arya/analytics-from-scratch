@@ -1,0 +1,20 @@
+name,value
+metric,on-time delivery rate
+city,Pune
+period,5 October to 1 November 2026
+weeks,4
+interval,95% interval
+decision,whether all four cities switch to the new rule
+decide_by,13 November
+caveat,this is Pune in ordinary weeks; the other cities and the festival peak may differ
+control_orders,868
+control_on_time,699
+control_rate_pct,80.5
+pilot_orders,903
+pilot_on_time,763
+pilot_rate_pct,84.5
+change_pts,4.0
+ci_low_pts,0.4
+ci_high_pts,7.5
+verdict,better
+recommendation,switch all four cities

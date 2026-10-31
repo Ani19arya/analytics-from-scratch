@@ -1,0 +1,201 @@
+ticket_id,text,gold_label,label
+W0001,Order 67594 never arrived and I want a refund. Thanks,refund,refund
+W0002,"Hello, do you have a student discount on the starter plan",other,other
+W0003,"Please refund the pro plan I bought by mistake, account A4003",refund,refund
+W0004,"Hello, can I pay for the team plan by bank transfer?",billing,billing
+W0005,"The export button does nothing on the reports page, account A3134",bug,bug
+W0006,"Hi team, please refund the annual plan I bought by mistake?",refund,refund
+W0007,"Hi, why did my invoice go up in March?",billing,billing
+W0008,"Hi team, do you have a student discount on the starter plan. Thanks",other,other
+W0009,"Hello, the app crashes when I open exports?",bug,bug
+W0010,"Hi, I was charged twice in May, please reverse one of them",billing,billing
+W0011,"Hi team, do you have a student discount on the annual plan",other,other
+W0012,"Hello, do you have a student discount on the team plan?",other,other
+W0013,"Hi, how do I invite a teammate to settings",other,other
+W0014,"Hi, can I pay for the starter plan by bank transfer",billing,billing
+W0015,"Hi team, can I pay for the starter plan by bank transfer",billing,billing
+W0016,"Hi team, where can I download all my invoices from June, account A5755",other,other
+W0017,The export button does nothing on the settings page?,bug,bug
+W0018,"Hi, I want my money back for order 54801?",refund,refund
+W0019,"Hi team, please refund the team plan I bought by mistake, account A6953",refund,refund
+W0020,"Hi, I was charged twice in April, please reverse one of them. Thanks",billing,billing
+W0021,"Hello, the exports page takes a minute to load, is that normal, account A5514",bug,bug
+W0022,"Hi, how do I invite a teammate to dashboard",other,bug
+W0023,"Hi, the app crashes when I open reports. Thanks",bug,bug
+W0024,"Hello, why did my invoice go up in October, account A4963",billing,billing
+W0025,"Hello, do you have a student discount on the team plan. Thanks",other,other
+W0026,"Hello, please refund the annual plan I bought by mistake",refund,refund
+W0027,"Hi team, do you have a student discount on the annual plan, account A1493",other,other
+W0028,"Hi, I want my money back for order 74084",refund,refund
+W0029,"Hi, can I pay for the annual plan by bank transfer",billing,billing
+W0030,"Hi team, the app crashes when I open inbox",bug,bug
+W0031,"Hi team, do you have a student discount on the team plan. Thanks",other,other
+W0032,"Hi, order 14685 never arrived and I want a refund. Thanks",refund,refund
+W0033,"Hi team, please update the card on my account before the March renewal, account A5339",billing,billing
+W0034,"Hello, can I pay for the starter plan by bank transfer",billing,billing
+W0035,"Please update the card on my account before the May renewal, account A2009",billing,billing
+W0036,"Hi, the app crashes when I open reports?",bug,bug
+W0037,"The app crashes when I open reports, account A6749",bug,bug
+W0038,Where can I download all my invoices from January. Thanks,other,billing
+W0039,"Hi, do you have a student discount on the starter plan?",other,billing
+W0040,"Hi team, the export button does nothing on the exports page",bug,bug
+W0041,"I cancelled in May but you still charged me $249, I want it back, account A8617",refund,billing
+W0042,"I want my money back for order 43365, account A2414",refund,refund
+W0043,"Hello, the export button does nothing on the reports page. Thanks",bug,bug
+W0044,"Hi, please update the card on my account before the April renewal?",billing,billing
+W0045,"Hello, how do I invite a teammate to exports, account A2840",other,other
+W0046,"Hello, how do I invite a teammate to settings. Thanks",other,other
+W0047,"Hi, please refund the annual plan I bought by mistake?",refund,refund
+W0048,"Hi, please update the card on my account before the June renewal",billing,billing
+W0049,"Please update the card on my account before the February renewal, account A5316",billing,billing
+W0050,"Hi, can I pay for the pro plan by bank transfer?",billing,billing
+W0051,"Hello, why did my invoice go up in June",billing,billing
+W0052,"Hi team, the export button does nothing on the reports page, account A8151",bug,bug
+W0053,"Hi, the app crashes when I open reports. Thanks",bug,bug
+W0054,"Hello, where can I download all my invoices from June",other,other
+W0055,"Hello, how do I invite a teammate to exports, account A8153",other,other
+W0056,"Hi team, please refund the pro plan I bought by mistake?",refund,refund
+W0057,"Hi, how do I invite a teammate to inbox?",other,other
+W0058,"Hi team, the app crashes when I open reports. Thanks",bug,bug
+W0059,"I was charged twice in October, please reverse one of them?",billing,billing
+W0060,"Hi team, do you have a student discount on the starter plan, account A6841",other,other
+W0061,"Hi, do you have a student discount on the team plan, account A7878",other,other
+W0062,The export button does nothing on the inbox page?,bug,bug
+W0063,"Hi team, why did my invoice go up in August",billing,billing
+W0064,How do I invite a teammate to exports?,other,other
+W0065,"Do you have a student discount on the starter plan, account A6568",other,other
+W0066,"Hello, the exports page takes a minute to load, is that normal, account A5271",bug,bug
+W0067,"Please refund the annual plan I bought by mistake, account A3357",refund,refund
+W0068,The app crashes when I open exports?,bug,bug
+W0069,"Hi, please update the card on my account before the January renewal",billing,billing
+W0070,"Hi team, I was charged twice in July, please reverse one of them",billing,billing
+W0071,"Hi, why did my invoice go up in September?",billing,billing
+W0072,"Hi team, how do I invite a teammate to inbox",other,other
+W0073,"Hi, order 20688 never arrived and I want a refund, account A3430",refund,refund
+W0074,"Hi, please refund the starter plan I bought by mistake, account A3862",refund,refund
+W0075,How do I invite a teammate to reports. Thanks,other,other
+W0076,"Hi, you charged me $249 instead of $239 for the annual plan. Thanks",billing,refund
+W0077,Why did my invoice go up in January,billing,billing
+W0078,"Hello, do you have a student discount on the pro plan",other,other
+W0079,Why did my invoice go up in January. Thanks,billing,billing
+W0080,"Hello, the export button does nothing on the inbox page?",bug,other
+W0081,"Hi, I want my money back for order 44074",refund,refund
+W0082,"Hi team, I want my money back for order 73162",refund,refund
+W0083,"Hello, how do I invite a teammate to inbox, account A4131",other,other
+W0084,"Hi, the export button does nothing on the settings page, account A1404",bug,bug
+W0085,"Hello, order 27305 never arrived and I want a refund",refund,refund
+W0086,"Hi team, please refund the team plan I bought by mistake?",refund,refund
+W0087,"Hi team, I want my money back for order 71879. Thanks",refund,refund
+W0088,"Hi, please refund the pro plan I bought by mistake?",refund,refund
+W0089,"Hi team, please update the card on my account before the February renewal?",billing,billing
+W0090,Can I pay for the annual plan by bank transfer?,billing,billing
+W0091,"Hello, can I pay for the annual plan by bank transfer. Thanks",billing,billing
+W0092,"Hi team, I was charged twice in February, please reverse one of them. Thanks",billing,billing
+W0093,"Hi, why did my invoice go up in July, account A3017",billing,billing
+W0094,"I was charged twice in January, please reverse one of them?",billing,billing
+W0095,How do I invite a teammate to reports?,other,other
+W0096,"Hi, please update the card on my account before the February renewal",billing,billing
+W0097,"Hello, the export button does nothing on the settings page. Thanks",bug,bug
+W0098,"Hi team, please update the card on my account before the February renewal?",billing,billing
+W0099,"Hi, I want my money back for order 20372?",refund,refund
+W0100,"Hi team, the export button does nothing on the inbox page. Thanks",bug,bug
+W0101,"Hi team, I was charged twice in January, please reverse one of them",billing,billing
+W0102,"Hello, the app crashes when I open dashboard",bug,bug
+W0103,"Hello, please refund the team plan I bought by mistake",refund,refund
+W0104,"Hello, the export button does nothing on the inbox page. Thanks",bug,bug
+W0105,The app crashes when I open dashboard?,bug,bug
+W0106,"Hello, the export button does nothing on the dashboard page?",bug,bug
+W0107,"Hi, the app crashes when I open dashboard, account A6306",bug,bug
+W0108,"Hello, how do I invite a teammate to exports",other,other
+W0109,"Hi, please update the card on my account before the October renewal",billing,billing
+W0110,The export button does nothing on the reports page. Thanks,bug,bug
+W0111,"Hi team, do you have a student discount on the annual plan. Thanks",other,other
+W0112,How do I invite a teammate to reports,other,other
+W0113,"Hi, the export button does nothing on the settings page?",bug,bug
+W0114,"Can I pay for the starter plan by bank transfer, account A6218",billing,billing
+W0115,"Hi, please refund the starter plan I bought by mistake?",refund,refund
+W0116,"Hi team, where can I download all my invoices from June?",other,billing
+W0117,"Hello, the export button does nothing on the settings page, account A5621",bug,bug
+W0118,"Hi team, please refund the pro plan I bought by mistake, account A7041",refund,refund
+W0119,The app crashes when I open inbox. Thanks,bug,bug
+W0120,"The app crashes when I open inbox, account A9391",bug,bug
+W0121,"Hi, do you have a student discount on the starter plan. Thanks",other,other
+W0122,Can I pay for the annual plan by bank transfer,billing,billing
+W0123,"Hi team, you charged me $29 instead of $9 for the starter plan. Thanks",billing,billing
+W0124,"Hi, do you have a student discount on the starter plan. Thanks",other,other
+W0125,"Hi, the export button does nothing on the settings page",bug,bug
+W0126,Can I pay for the annual plan by bank transfer,billing,billing
+W0127,"Hello, why did my invoice go up in October. Thanks",billing,billing
+W0128,"How do I invite a teammate to reports, account A7833",other,other
+W0129,"Hi, why did my invoice go up in June. Thanks",billing,billing
+W0130,"Hi, the app crashes when I open dashboard?",bug,bug
+W0131,"Hello, the settings page takes a minute to load, is that normal. Thanks",bug,bug
+W0132,"Hi, where can I download all my invoices from January?",other,billing
+W0133,"Hello, do you have a student discount on the annual plan, account A4362",other,other
+W0134,"Hello, I want my money back for order 51222",refund,refund
+W0135,"Order 26112 never arrived and I want a refund, account A3013",refund,refund
+W0136,"Hi team, the app crashes when I open settings",bug,bug
+W0137,Why did my invoice go up in August,billing,billing
+W0138,"Hello, I was charged twice in August, please reverse one of them. Thanks",billing,billing
+W0139,"Hello, I cancelled in September but you still charged me $249, I want it back, account A5026",refund,billing
+W0140,Why did my invoice go up in February. Thanks,billing,billing
+W0141,Please update the card on my account before the February renewal,billing,billing
+W0142,Why did my invoice go up in April,billing,billing
+W0143,"Hello, the reports page takes a minute to load, is that normal. Thanks",bug,bug
+W0144,Please refund the pro plan I bought by mistake?,refund,refund
+W0145,"Can I pay for the pro plan by bank transfer, account A2827",billing,billing
+W0146,"Hello, please update the card on my account before the October renewal?",billing,billing
+W0147,"Hi team, please update the card on my account before the March renewal?",billing,billing
+W0148,"Hi, how do I invite a teammate to inbox. Thanks",other,other
+W0149,"How do I invite a teammate to inbox, account A3077",other,other
+W0150,"Hello, order 68497 never arrived and I want a refund. Thanks",refund,refund
+W0151,Order 85912 never arrived and I want a refund?,refund,other
+W0152,"Hi, the export button does nothing on the dashboard page",bug,bug
+W0153,"Hi team, please refund the annual plan I bought by mistake",refund,refund
+W0154,"Hi team, order 45507 never arrived and I want a refund, account A3834",refund,refund
+W0155,Order 65843 never arrived and I want a refund. Thanks,refund,refund
+W0156,The export button does nothing on the inbox page?,bug,bug
+W0157,"Hi, order 81667 never arrived and I want a refund?",refund,refund
+W0158,"Hi, the export button does nothing on the dashboard page?",bug,bug
+W0159,Can I pay for the annual plan by bank transfer,billing,billing
+W0160,Do you have a student discount on the annual plan,other,other
+W0161,"Hello, I want my money back for order 41637",refund,refund
+W0162,"Hi, please update the card on my account before the February renewal. Thanks",billing,billing
+W0163,"Hi team, the app crashes when I open dashboard",bug,bug
+W0164,"Hi, order 68756 never arrived and I want a refund?",refund,refund
+W0165,Can I pay for the pro plan by bank transfer. Thanks,billing,other
+W0166,"Hi, please update the card on my account before the January renewal, account A5457",billing,billing
+W0167,"Hi, how do I invite a teammate to exports, account A2471",other,other
+W0168,The export button does nothing on the settings page?,bug,bug
+W0169,"Hi, why did my invoice go up in March?",billing,billing
+W0170,"Hi, the app crashes when I open reports. Thanks",bug,bug
+W0171,"Hi, how do I invite a teammate to dashboard, account A2783",other,other
+W0172,"Hello, can I pay for the starter plan by bank transfer. Thanks",billing,billing
+W0173,"Hi, please update the card on my account before the October renewal. Thanks",billing,billing
+W0174,"The inbox page takes a minute to load, is that normal?",bug,other
+W0175,"Hi, the export button does nothing on the reports page?",bug,bug
+W0176,"Why did my invoice go up in June, account A6983",billing,billing
+W0177,Do you have a student discount on the annual plan?,other,other
+W0178,"Hello, please update the card on my account before the September renewal?",billing,billing
+W0179,"Hi team, can I pay for the team plan by bank transfer. Thanks",billing,billing
+W0180,Order 13478 never arrived and I want a refund,refund,refund
+W0181,"Hi team, please update the card on my account before the May renewal. Thanks",billing,billing
+W0182,"Hello, I want my money back for order 87396, account A2501",refund,refund
+W0183,"Hi team, the app crashes when I open reports?",bug,bug
+W0184,The app crashes when I open reports?,bug,bug
+W0185,Do you have a student discount on the starter plan,other,other
+W0186,"Hello, order 23224 never arrived and I want a refund, account A8042",refund,refund
+W0187,"Hi team, how do I invite a teammate to exports?",other,other
+W0188,"Hi, the app crashes when I open dashboard",bug,bug
+W0189,"Hi, why did my invoice go up in March. Thanks",billing,billing
+W0190,"Hi, order 87095 never arrived and I want a refund?",refund,refund
+W0191,"Hi team, do you have a student discount on the annual plan",other,other
+W0192,"Hello, can I pay for the pro plan by bank transfer, account A7713",billing,billing
+W0193,Can I pay for the pro plan by bank transfer?,billing,billing
+W0194,Do you have a student discount on the starter plan?,other,other
+W0195,"Hi team, you charged me $199 instead of $179 for the starter plan?",billing,billing
+W0196,"Hi team, please update the card on my account before the October renewal",billing,other
+W0197,"Hi, how do I invite a teammate to settings?",other,other
+W0198,"Hello, the reports page takes a minute to load, is that normal. Thanks",bug,bug
+W0199,"Hello, please update the card on my account before the October renewal?",billing,billing
+W0200,Why did my invoice go up in June,billing,billing
