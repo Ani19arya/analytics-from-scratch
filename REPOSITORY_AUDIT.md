@@ -112,3 +112,14 @@ Little, because the course is a week old. Two framing updates:
 | 7. AI era | Phase 06 expansion: structured output, eval sizing, human in the loop, LLM as judge, safe NL-to-SQL, PII, RAG, agent audit, MCP | |
 | 8. Business and projects | Phase 09 industry case studies, phase 10 capstones with rubrics, phase 07 interview rounds and role roadmaps | |
 | 9. Quality | Full re-audit, link check, style lint, test run; refresh job-market evidence monthly | |
+
+## 8. Progress
+
+| Date | Wave | Result |
+|---|---|---|
+| 31 Oct 2026 | 1. Correctness | Every high-severity defect in section 3 is fixed, plus the medium and low items in the appendices. All 27 original lessons now test a second seeded dataset and hand-made edge cases. Job-market numbers now come from the 25 Oct data drop |
+| 31 Oct 2026 | 2. Foundation | README, roadmap, skills evidence, contributing guide, lesson template v2, curriculum.json, lint, docs builder and CI are in place |
+| 31 Oct 2026 | 3. On-ramp | Phase 00 is live: six Level 1 lessons and `tools/query.py` |
+| 31 Oct 2026 | 4. Visuals | Every live lesson has at least one diagram (Mermaid or an SVG its own code draws) |
+
+State after these waves: 33 live lessons, 88 planned. `python3 tools/run_all_tests.py --exercise` reports 0 problems and `python3 tools/lint.py --strict` reports 0 errors and 0 warnings. Next: wave 5, core depth, in the order of LEARNING_ROADMAP.md Level 1, starting with the lessons that are prerequisites for live ones (02-05 probability and 02-07 sampling before 02-02 intervals; 01-05 dates before 01-04 cohorts).
