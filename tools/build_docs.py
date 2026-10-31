@@ -14,8 +14,8 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LEVEL_NAME = {"beginner": "Level 1", "intermediate": "Level 2", "advanced": "Level 3"}
-LEVEL_ORDER = ["beginner", "intermediate", "advanced"]
+LEVEL_NAME = {"beginner": "Level 1", "intermediate": "Level 2", "advanced": "Level 3", "land-the-job": "Level 4"}
+LEVEL_ORDER = ["beginner", "intermediate", "advanced", "land-the-job"]
 
 
 def load():

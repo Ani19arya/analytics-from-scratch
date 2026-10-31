@@ -4,7 +4,8 @@
  "levels": {
   "beginner": "Level 1: understand the concept and solve a guided problem",
   "intermediate": "Level 2: solve realistic problems independently",
-  "advanced": "Level 3: handle ambiguous problems, optimise, and recommend"
+  "advanced": "Level 3: handle ambiguous problems, optimise, and recommend",
+  "land-the-job": "Level 4: land the job: target, search, apply and track like an analyst"
  },
  "phases": [
   {
@@ -1841,6 +1842,127 @@
       "capstone",
       "genai",
       "agents"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "11-land-the-job",
+   "title": "Land the job",
+   "summary": "Turn your skills into offers: build a target list from real postings, search by the titles companies really use, filter for visa and remote eligibility, apply where it counts, and track your search as a funnel.",
+   "lessons": [
+    {
+     "id": "11-01",
+     "slug": "01-build-a-target-list",
+     "path": "phases/11-land-the-job/01-build-a-target-list",
+     "title": "Build a target list from real postings",
+     "question": "Where are the analyst roles you can actually get, and which 30 companies go on your list?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 3,
+     "skills": [
+      "career",
+      "sql"
+     ]
+    },
+    {
+     "id": "11-02",
+     "slug": "02-titles-and-synonyms",
+     "path": "phases/11-land-the-job/02-titles-and-synonyms",
+     "title": "Search smarter: titles and synonyms",
+     "question": "Why does a search for data analyst miss most of the analyst roles at a company like Amazon?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 2,
+     "skills": [
+      "career"
+     ]
+    },
+    {
+     "id": "11-03",
+     "slug": "03-visa-aware-search",
+     "path": "phases/11-land-the-job/03-visa-aware-search",
+     "title": "Visa-aware search: H-1B, OPT and UK sponsors",
+     "question": "Which employers on your list have sponsored before, and which postings rule you out in their own words?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 2,
+     "skills": [
+      "career"
+     ]
+    },
+    {
+     "id": "11-04",
+     "slug": "04-remote-where-you-can-be-hired",
+     "path": "phases/11-land-the-job/04-remote-where-you-can-be-hired",
+     "title": "Remote, really: where can you be hired from?",
+     "question": "Of the remote roles you found, which ones can actually hire someone where you live?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 2,
+     "skills": [
+      "career"
+     ]
+    },
+    {
+     "id": "11-05",
+     "slug": "05-apply-where-it-counts",
+     "path": "phases/11-land-the-job/05-apply-where-it-counts",
+     "title": "Apply where it counts",
+     "question": "With 40 postings in front of you and 10 hours this week, which ones are worth an application?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 2,
+     "skills": [
+      "career"
+     ]
+    },
+    {
+     "id": "11-06",
+     "slug": "06-track-your-search-as-a-funnel",
+     "path": "phases/11-land-the-job/06-track-your-search-as-a-funnel",
+     "title": "Track your search as a funnel",
+     "question": "Out of 60 applications, where is your search leaking, and which channel deserves more time?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 2,
+     "skills": [
+      "career",
+      "metrics"
+     ]
+    },
+    {
+     "id": "11-07",
+     "slug": "07-using-real-analyst-jobs",
+     "path": "phases/11-land-the-job/07-using-real-analyst-jobs",
+     "title": "Using Real Analyst Jobs in your search",
+     "question": "What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better?",
+     "level": "land-the-job",
+     "kind": "guide",
+     "status": "planned",
+     "hours": 1,
+     "skills": [
+      "career"
+     ]
+    },
+    {
+     "id": "11-08",
+     "slug": "08-capstone-30-day-search-plan",
+     "path": "phases/11-land-the-job/08-capstone-30-day-search-plan",
+     "title": "Capstone: a 30-day job search plan",
+     "question": "Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify?",
+     "level": "land-the-job",
+     "kind": "tested",
+     "status": "planned",
+     "hours": 6,
+     "skills": [
+      "career"
      ]
     }
    ]

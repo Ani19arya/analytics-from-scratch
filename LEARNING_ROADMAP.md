@@ -11,8 +11,9 @@ Lessons live in **phases** by subject (SQL, statistics, Python and so on). Insid
 | Level 1, beginner | Understand the concept and solve a guided problem | Answer a clear question from clean data, and explain your number |
 | Level 2, intermediate | Solve realistic problems on your own | Take a vague request, find the right data, check it, and recommend |
 | Level 3, advanced | Handle ambiguous problems, optimise, and defend a recommendation | Own an analysis end to end, including its limits |
+| Level 4, land the job | Run your job search with the same methods: data, filters, a funnel and a plan | Know which roles you can get, apply where it counts, and track what works |
 
-You do not finish one subject before starting the next. You climb **all subjects one level at a time**: Level 1 across every phase, then Level 2, then Level 3. Analysts use SQL, statistics and business sense together from the first week, so the course does too.
+You do not finish one subject before starting the next. You climb **all subjects one level at a time**: Level 1 across every phase, then Level 2, then Level 3. Level 4 turns the same skills on your own job search, and you can start it alongside Level 2 or 3. Analysts use SQL, statistics and business sense together from the first week, so the course does too.
 
 ```mermaid
 flowchart LR
@@ -22,11 +23,12 @@ flowchart LR
     L2 --> M2{{"Milestone 2<br/>own a realistic analysis"}}
     M2 --> L3["Level 3<br/>query plans, causal methods,<br/>agents and MCP, orchestration"]
     L3 --> C["10 Capstone projects<br/>and 07 Getting hired"]
+    C --> L4["Level 4<br/>land the job: targets, titles,<br/>visa and remote filters, a funnel"]
 ```
 
 ## Time
 
-About 330 hours across all 121 lessons. At 10 to 12 focused hours a week that is 6 to 9 months. A lesson takes about 2 hours, a case study about 4 and a capstone 10 to 14. The course builds competence you can demonstrate; it cannot promise a job.
+About 348 hours across all 129 lessons. At 10 to 12 focused hours a week that is 6 to 9 months. A lesson takes about 2 hours, a case study about 4 and a capstone 10 to 14. The course builds competence you can demonstrate; it cannot promise a job.
 
 ## Every lesson works the same way
 
@@ -70,6 +72,13 @@ Each milestone is a set of things you can show, not a set of pages you have read
 - [ ] Explain a warehouse pipeline from raw data to a dashboard, and what breaks at each step
 - [ ] Ship two capstone projects a stranger can run in one command
 - [ ] Pass the SQL, statistics, metrics-case and take-home rounds in [phase 07](phases/07-getting-hired)
+
+### Milestone 4: land the job (end of Level 4)
+
+- [ ] Build a target list of companies and titles from real postings, with dates
+- [ ] Search by the titles employers actually use, and filter for visa and remote eligibility honestly
+- [ ] Track your applications as a funnel and move your time to the channel that converts
+- [ ] Follow a 30-day search plan and review it each week
 
 ## Tracks by role
 
@@ -301,6 +310,23 @@ Level total: about 144 hours of focused work.
 
 Level total: about 108 hours of focused work.
 <!-- /generated:level-advanced -->
+
+## Level 4: land the job
+
+<!-- generated:level-land-the-job -->
+**11 Land the job**
+
+- [ ] 11-01 Build a target list from real postings *(planned)*: Where are the analyst roles you can actually get, and which 30 companies go on your list? About 3 h.
+- [ ] 11-02 Search smarter: titles and synonyms *(planned)*: Why does a search for data analyst miss most of the analyst roles at a company like Amazon? About 2 h.
+- [ ] 11-03 Visa-aware search: H-1B, OPT and UK sponsors *(planned)*: Which employers on your list have sponsored before, and which postings rule you out in their own words? About 2 h.
+- [ ] 11-04 Remote, really: where can you be hired from? *(planned)*: Of the remote roles you found, which ones can actually hire someone where you live? About 2 h.
+- [ ] 11-05 Apply where it counts *(planned)*: With 40 postings in front of you and 10 hours this week, which ones are worth an application? About 2 h.
+- [ ] 11-06 Track your search as a funnel *(planned)*: Out of 60 applications, where is your search leaking, and which channel deserves more time? About 2 h.
+- [ ] 11-07 Using Real Analyst Jobs in your search *(planned)*: What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. About 1 h.
+- [ ] 11-08 Capstone: a 30-day job search plan *(planned)*: Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? About 6 h.
+
+Level total: about 20 hours of focused work.
+<!-- /generated:level-land-the-job -->
 
 ## Stay current
 

@@ -66,9 +66,9 @@ flowchart LR
     CP --> H["07 Getting hired"]
 ```
 
-You climb every subject one level at a time: Level 1 (understand and solve guided problems), Level 2 (solve realistic problems on your own), Level 3 (ambiguous problems and recommendations). The [learning roadmap](LEARNING_ROADMAP.md) gives the order, the milestones, a checklist to track your progress, and tracks for data, business, product, BI, growth and AI-enabled analyst roles.
+You climb every subject one level at a time: Level 1 (understand and solve guided problems), Level 2 (solve realistic problems on your own), Level 3 (ambiguous problems and recommendations), then Level 4 (land the job: run your own search with the same methods). The [learning roadmap](LEARNING_ROADMAP.md) gives the order, the milestones, a checklist to track your progress, and tracks for data, business, product, BI, growth and AI-enabled analyst roles.
 
-**Time:** about 330 hours in all, or 6 to 9 months at 10 to 12 hours a week. The course builds skills you can demonstrate. It cannot promise a job, and it does not pretend to.
+**Time:** about 350 hours in all, or 6 to 9 months at 10 to 12 hours a week. The course builds skills you can demonstrate. It cannot promise a job, and it does not pretend to.
 
 ## Curriculum
 
@@ -86,7 +86,8 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 8 | 0 |
-| **All** | | **121** | **0** |
+| [11 Land the job](phases/11-land-the-job) | Turn your skills into offers: build a target list from real postings, search by the titles companies really use, filter for visa and remote eligibility, apply where it counts, and track your search as a funnel. | 0 | 8 |
+| **All** | | **121** | **8** |
 <!-- /generated:phase-table -->
 
 Every lesson listed is live. A lesson is only listed as live when its test passes.
@@ -245,6 +246,17 @@ Every lesson listed is live. A lesson is only listed as live when its test passe
 6. 10-06 [Automated analytics reporting](phases/10-capstone-projects/06-automated-reporting-pipeline): Make the weekly business review build, test and send itself. (Level 3)
 7. 10-07 [A natural-language-to-SQL assistant](phases/10-capstone-projects/07-nl-to-sql-assistant): Build, evaluate and guard an assistant that answers questions from a database. (Level 3)
 8. 10-08 [A multi-agent analytics copilot](phases/10-capstone-projects/08-analytics-copilot): Agents that plan, query, check and recommend, with a human approving each step. (Level 3)
+
+### 11 Land the job
+
+1. 11-01 Build a target list from real postings *(planned)*: Where are the analyst roles you can actually get, and which 30 companies go on your list? (Level 4)
+2. 11-02 Search smarter: titles and synonyms *(planned)*: Why does a search for data analyst miss most of the analyst roles at a company like Amazon? (Level 4)
+3. 11-03 Visa-aware search: H-1B, OPT and UK sponsors *(planned)*: Which employers on your list have sponsored before, and which postings rule you out in their own words? (Level 4)
+4. 11-04 Remote, really: where can you be hired from? *(planned)*: Of the remote roles you found, which ones can actually hire someone where you live? (Level 4)
+5. 11-05 Apply where it counts *(planned)*: With 40 postings in front of you and 10 hours this week, which ones are worth an application? (Level 4)
+6. 11-06 Track your search as a funnel *(planned)*: Out of 60 applications, where is your search leaking, and which channel deserves more time? (Level 4)
+7. 11-07 Using Real Analyst Jobs in your search *(planned)*: What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. (Level 4)
+8. 11-08 Capstone: a 30-day job search plan *(planned)*: Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? (Level 4)
 <!-- /generated:phase-lessons -->
 
 ## Learn with your coding agent
