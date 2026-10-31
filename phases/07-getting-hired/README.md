@@ -1,6 +1,6 @@
 # Getting hired
 
-This phase turns the skills from the rest of the course on the job search itself. You read 300 job postings as data to decide what to learn next, practise the six SQL questions that come up again and again in analyst interviews, build one small portfolio project from question to one page write-up with a chart, and score your resume against postings to see what is missing. Every lesson runs on Python 3.9 or later with the standard library only, and every dataset is synthetic.
+This phase gets you ready to be hired. You read job postings as data to decide what to learn next, build and publish a portfolio project, write resume bullets that are true, and practise every interview round: SQL questions, the metrics case, the statistics round, the take-home and behavioural answers. Every lesson runs on Python 3.9 or later with the standard library only, and every dataset is synthetic.
 
 Lessons in order. Levels: 1 beginner, 2 intermediate, 3 advanced (see the [learning roadmap](../../LEARNING_ROADMAP.md)).
 
@@ -17,4 +17,4 @@ Lessons in order. Levels: 1 beginner, 2 intermediate, 3 advanced (see the [learn
 11. [Behavioural answers that show analysis](11-behavioural-answers/) (level 1, guide)
 12. [Publish your portfolio](12-publish-your-portfolio/) (level 1)
 
-Planned lessons are listed in [curriculum.json](../../curriculum.json) and appear here as links once they exist and pass their tests.
+When you are ready to search, [phase 11, Land the job](../11-land-the-job/) turns these skills on the search itself: a target list from real postings, the titles employers use, visa and remote filters, and your applications tracked as a funnel.

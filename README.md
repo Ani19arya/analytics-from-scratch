@@ -1,6 +1,6 @@
 # Analytics from Scratch
 
-**Become an analyst who can be trusted with the number.** A free, open course that takes you from your first SQL query to experiments, dashboards, Python, AI agents and a portfolio, by building every method yourself and checking it with a test.
+**Become an analyst who can be trusted with the number.** A free, open course that takes you from your first SQL query to experiments, dashboards, Python, AI agents, a portfolio and a job search you run like an analysis, by building every method yourself and checking it with a test.
 
 [Start here](phases/00-start-here) · [Learning roadmap](LEARNING_ROADMAP.md) · [Skills employers ask for in 2026](2026-2027-ANALYTICS-SKILLS.md) · [Read it online](https://realanalystjobs.com/learn) · [Contribute](CONTRIBUTING.md)
 
@@ -22,6 +22,7 @@ Most courses teach you where to click. This one teaches you what the tool is doi
 | **Built from scratch, then checked** | You write the GROUP BY, the z-test, the DAX filter context, the agent's guard rails. A test tells you when you are right, and runs on a second dataset so a pasted answer fails |
 | **Ready for AI-era work** | The course teaches you to review a query, grade a model, size an eval set, guard natural-language-to-SQL and audit an agent, because the scarce skill is now checking, not typing |
 | **Grounded in real hiring data** | What to learn is set by 9,044 live analyst postings, not guesswork. See [2026-2027-ANALYTICS-SKILLS.md](2026-2027-ANALYTICS-SKILLS.md) |
+| **Four levels, ending with the job search** | 129 lessons across Level 1 (guided), Level 2 (realistic problems), Level 3 (ambiguous problems and capstones) and Level 4 (land the job: target lists, titles, visa and remote filters, and your search as a funnel) |
 | **Runs anywhere** | Python 3.9+ standard library and SQLite. Offline. No installs, no accounts, no API keys |
 
 ## Quick start
@@ -64,6 +65,7 @@ flowchart LR
     DS --> CP
     CS --> CP
     CP --> H["07 Getting hired"]
+    H --> LJ["11 Land the job"]
 ```
 
 You climb every subject one level at a time: Level 1 (understand and solve guided problems), Level 2 (solve realistic problems on your own), Level 3 (ambiguous problems and recommendations), then Level 4 (land the job: run your own search with the same methods). The [learning roadmap](LEARNING_ROADMAP.md) gives the order, the milestones, a checklist to track your progress, and tracks for data, business, product, BI, growth and AI-enabled analyst roles.
@@ -291,11 +293,11 @@ Every lesson is a folder with a stable link. Send a friend `github.com/Ani19arya
 
 ## Contributing
 
-Corrections come first, then new lessons. [CONTRIBUTING.md](CONTRIBUTING.md) explains the lesson format, the checks to run before a pull request, and how to claim a planned lesson so two people do not write the same one.
+Corrections come first, then new lessons. [CONTRIBUTING.md](CONTRIBUTING.md) explains the lesson format, the checks to run before a pull request, and how to propose a new lesson so two people do not write the same one.
 
 ## Built by Real Analyst Jobs
 
-This course is made by [Real Analyst Jobs](https://realanalystjobs.com), a job board for data and business analyst roles collected from company career pages. Each lesson ends with what real job postings ask for, with a dated number from the open data drop, so you can see how the skill you just built shows up in hiring.
+This course is made by [Real Analyst Jobs](https://realanalystjobs.com), a job board for data and business analyst roles collected from company career pages. Each lesson ends with what real job postings ask for, with a dated number from the open data drop, so you can see how the skill you just built shows up in hiring. [Phase 11](phases/11-land-the-job) shows how to use the site in a job search alongside LinkedIn, Indeed and company careers pages, and says plainly what it does not do.
 
 ## License
 

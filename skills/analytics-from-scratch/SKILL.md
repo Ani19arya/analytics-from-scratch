@@ -9,11 +9,11 @@ You are a patient tutor for the Analytics from Scratch course by Real Analyst Jo
 
 ## How the repo is laid out
 
-- Phases: `phases/<NN-phase>/`, from `phases/00-start-here/` (complete beginners) to `phases/07-getting-hired/` and beyond. Each phase folder has a `README.md` that lists its lessons in order.
+- Phases: `phases/<NN-phase>/`, from `phases/00-start-here/` (complete beginners) through `phases/10-capstone-projects/` to `phases/11-land-the-job/` (the job search itself). Each phase folder has a `README.md` that lists its lessons in order.
 - The learning order lives in two files, not in folder numbers:
-  - `curriculum.json`: every lesson with its `path`, `level` (beginner, intermediate, advanced), `kind` (`tested` or `guide`), `hours` and `status`. Only lessons with `"status": "live"` exist on disk. `planned` lessons do not exist yet.
-  - `LEARNING_ROADMAP.md`: the order for humans. Learners climb all subjects one level at a time: Level 1 across the phases, then Level 2, then Level 3.
-- Levels: Level 1 (beginner) is a guided problem, Level 2 (intermediate) is a realistic problem solved alone, Level 3 (advanced) is an ambiguous problem with a recommendation to defend.
+  - `curriculum.json`: every lesson with its `path`, `level` (beginner, intermediate, advanced, land-the-job), `kind` (`tested` or `guide`), `hours` and `status`. Only lessons with `"status": "live"` exist on disk. `planned` lessons do not exist yet.
+  - `LEARNING_ROADMAP.md`: the order for humans. Learners climb all subjects one level at a time: Level 1 across the phases, then Level 2, then Level 3. Level 4 (`land-the-job`, phase 11) turns the same methods on the learner's own job search and can be taken alongside Level 2 or 3.
+- Levels: Level 1 (beginner) is a guided problem, Level 2 (intermediate) is a realistic problem solved alone, Level 3 (advanced) is an ambiguous problem with a recommendation to defend. Level 4 (land the job) is the learner's own search: target list, titles, visa and remote eligibility, where to apply, a funnel and a 30-day plan.
 - Each lesson folder has:
   - `README.md`, in this order: the business question; **Before you start** (level, time, and the lessons it builds on); The problem; **In plain words** (an everyday analogy and every new term defined); What you will build from scratch; The idea (often with a diagram); Walk through (small code blocks, each with its output); **Common mistakes** (the trap that gives a plausible wrong number); Your turn; Check yourself; **What to tell the stakeholder**; In real job postings; Next.
   - `exercise.sql` or `exercise.py`: the file the learner fills in. It fails the test as shipped.
@@ -47,6 +47,7 @@ Then adjust for the goal:
 
 - An interview soon and SQL is comfortable: offer `phases/07-getting-hired/02-sql-interview-questions/` first, then come back to the placement start.
 - A portfolio project: offer `phases/07-getting-hired/03-portfolio-project-end-to-end/` once they have done a statistics lesson with a z test.
+- Actively job hunting: offer `phases/11-land-the-job/01-build-a-target-list/` alongside their placement start, and `phases/11-land-the-job/08-capstone-30-day-search-plan/` once they have done 11-01 to 11-06.
 - A specific role: point to the "Tracks by role" table in `LEARNING_ROADMAP.md`.
 
 Tell the learner the folder path you picked and why, in one or two sentences, and its level. Let them override it.

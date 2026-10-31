@@ -9,7 +9,7 @@ Thank you for helping. This course is only useful if every number in it is right
 | A wrong statement, a wrong number, or code that does not run | Open an issue with the lesson path, the line, and what you expected. These are fixed first |
 | A sentence a beginner would not understand | Open an issue or a pull request with a plainer version |
 | A missing diagram | Add a Mermaid block to the lesson README (see below) |
-| A planned lesson you want to write | Open an issue first saying which one (see `"status": "planned"` in [curriculum.json](curriculum.json)) so two people do not write the same lesson |
+| A planned lesson you want to write | Every lesson in [curriculum.json](curriculum.json) is live today. If a planned one is added later, open an issue first saying which one so two people do not write the same lesson |
 | A new lesson idea | Open an issue with the business question, the level, and the job-posting evidence that analysts need it |
 
 ## Writing a lesson
