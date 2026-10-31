@@ -1,7 +1,9 @@
 sentence_id,metrics,sentence
-S1,total_revenue;order_count,"Across the half year the team booked $156,142 of revenue from 240 orders."
+S1,total_revenue;order_count,"In H1 2026 the team booked $156,142 of revenue from 240 orders."
 S2,avg_order_value,The average order was worth $650.59.
 S3,north_revenue;north_share_pct,"North was the largest region at $54,809, or 41.1% of revenue."
-S4,south_revenue;west_revenue,"South brought in $50,014 and West $52,000."
+S4,south_revenue;west_revenue,"South brought in $50k and West $52,000."
 S5,jan_revenue;jun_revenue;growth_pct,"Monthly revenue grew from $21,215 in January to $27,704 in June, a 25.0% increase."
-S6,region_count,All 3 regions grew over the period.
+S6,q2_revenue;q2_vs_q1_pct,"Q2 revenue was $77.9k, a change of -0.5% on Q1."
+S7,apr_revenue;apr_vs_mar_pct,"April revenue was $25.7k, -17.5% on March."
+S8,region_count,All 3 regions grew over the period.

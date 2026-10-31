@@ -1,401 +1,401 @@
 ticket_id,text,human_label,llm_label
-T0001,I was charged twice this month,billing,billing
-T0002,I need a copy of last month's invoice,billing,billing
-T0003,Why did my invoice go up,billing,billing
-T0004,Dashboard shows a blank page,bug,bug
-T0005,Please refund the annual plan I bought by mistake,refund,refund
-T0006,Dashboard shows a blank page,bug,bug
-T0007,App crashes when I open settings,bug,bug
-T0008,Do you have a student discount,other,other
-T0009,Do you have a student discount,other,other
-T0010,Why did my invoice go up,billing,billing
-T0011,Dashboard shows a blank page,bug,bug
-T0012,App crashes when I open settings,bug,bug
-T0013,Why did my invoice go up,billing,billing
-T0014,The export button does nothing,bug,bug
-T0015,How do I invite a teammate,other,other
-T0016,Login loops back to the start,bug,other
-T0017,I was charged twice this month,billing,billing
-T0018,I want my money back for this order,refund,refund
-T0019,Why did my invoice go up,billing,billing
-T0020,How do I invite a teammate,other,other
-T0021,"The product never arrived, I want a refund",refund,refund
-T0022,Where is your office located,other,other
-T0023,Please update the card on my account,billing,billing
-T0024,App crashes when I open settings,bug,bug
-T0025,The export button does nothing,bug,bug
-T0026,App crashes when I open settings,bug,bug
-T0027,The export button does nothing,bug,bug
-T0028,The export button does nothing,bug,bug
-T0029,Please update the card on my account,billing,billing
-T0030,Why did my invoice go up,billing,billing
-T0031,The export button does nothing,bug,bug
-T0032,Dashboard shows a blank page,bug,bug
-T0033,Please update the card on my account,billing,billing
-T0034,How do I invite a teammate,other,other
-T0035,Can I change my username,other,other
-T0036,I need a copy of last month's invoice,billing,billing
-T0037,Please update the card on my account,billing,billing
-T0038,Why did my invoice go up,billing,billing
-T0039,Cancel and refund my last payment,refund,refund
-T0040,Do you have a student discount,other,other
-T0041,Login loops back to the start,bug,bug
-T0042,Login loops back to the start,bug,bug
-T0043,Please update the card on my account,billing,billing
-T0044,Why did my invoice go up,billing,billing
-T0045,Please refund the annual plan I bought by mistake,refund,refund
-T0046,Can I change my username,other,billing
-T0047,"The product never arrived, I want a refund",refund,refund
-T0048,I was charged twice this month,billing,billing
-T0049,Dashboard shows a blank page,bug,bug
-T0050,Login loops back to the start,bug,bug
-T0051,Cancel and refund my last payment,refund,refund
-T0052,Why did my invoice go up,billing,billing
-T0053,I need a copy of last month's invoice,billing,billing
-T0054,I was charged twice this month,billing,billing
-T0055,The export button does nothing,bug,bug
-T0056,Please update the card on my account,billing,billing
-T0057,Login loops back to the start,bug,bug
-T0058,"The product never arrived, I want a refund",refund,refund
-T0059,Please update the card on my account,billing,billing
-T0060,Please refund the annual plan I bought by mistake,refund,refund
-T0061,I want my money back for this order,refund,refund
-T0062,Where is your office located,other,other
-T0063,How do I invite a teammate,other,refund
-T0064,Dashboard shows a blank page,bug,bug
-T0065,The export button does nothing,bug,bug
-T0066,Do you have a student discount,other,other
-T0067,Login loops back to the start,bug,bug
-T0068,Please refund the annual plan I bought by mistake,refund,refund
-T0069,Please update the card on my account,billing,other
-T0070,Please update the card on my account,billing,billing
-T0071,Why did my invoice go up,billing,billing
-T0072,"The product never arrived, I want a refund",refund,billing
-T0073,App crashes when I open settings,bug,bug
-T0074,Login loops back to the start,bug,bug
-T0075,Where is your office located,other,other
-T0076,App crashes when I open settings,bug,bug
-T0077,Login loops back to the start,bug,bug
-T0078,Can I change my username,other,other
-T0079,How do I invite a teammate,other,other
-T0080,The export button does nothing,bug,bug
-T0081,I need a copy of last month's invoice,billing,billing
-T0082,Please refund the annual plan I bought by mistake,refund,refund
-T0083,I was charged twice this month,billing,billing
-T0084,App crashes when I open settings,bug,bug
-T0085,Please update the card on my account,billing,billing
-T0086,"The product never arrived, I want a refund",refund,refund
-T0087,Dashboard shows a blank page,bug,bug
-T0088,Please update the card on my account,billing,billing
-T0089,I want my money back for this order,refund,refund
-T0090,How do I invite a teammate,other,billing
-T0091,Where is your office located,other,other
-T0092,Dashboard shows a blank page,bug,bug
-T0093,Please update the card on my account,billing,billing
-T0094,Please update the card on my account,billing,billing
-T0095,Dashboard shows a blank page,bug,bug
-T0096,Please update the card on my account,billing,billing
-T0097,Do you have a student discount,other,other
-T0098,Do you have a student discount,other,other
-T0099,Where is your office located,other,bug
-T0100,Why did my invoice go up,billing,billing
-T0101,Do you have a student discount,other,other
-T0102,I need a copy of last month's invoice,billing,billing
-T0103,I need a copy of last month's invoice,billing,refund
-T0104,Please refund the annual plan I bought by mistake,refund,refund
-T0105,Please update the card on my account,billing,other
-T0106,Please update the card on my account,billing,billing
-T0107,App crashes when I open settings,bug,bug
-T0108,Please refund the annual plan I bought by mistake,refund,billing
-T0109,Dashboard shows a blank page,bug,bug
-T0110,Why did my invoice go up,billing,refund
-T0111,Please refund the annual plan I bought by mistake,refund,refund
-T0112,Please refund the annual plan I bought by mistake,refund,refund
-T0113,Do you have a student discount,other,other
-T0114,Login loops back to the start,bug,bug
-T0115,The export button does nothing,bug,bug
-T0116,Why did my invoice go up,billing,billing
-T0117,Login loops back to the start,bug,bug
-T0118,Do you have a student discount,other,other
-T0119,I want my money back for this order,refund,refund
-T0120,I need a copy of last month's invoice,billing,billing
-T0121,Cancel and refund my last payment,refund,refund
-T0122,Login loops back to the start,bug,bug
-T0123,Why did my invoice go up,billing,billing
-T0124,Please update the card on my account,billing,billing
-T0125,I need a copy of last month's invoice,billing,billing
-T0126,Do you have a student discount,other,bug
-T0127,Dashboard shows a blank page,bug,bug
-T0128,Please refund the annual plan I bought by mistake,refund,refund
-T0129,Dashboard shows a blank page,bug,bug
-T0130,Where is your office located,other,other
-T0131,How do I invite a teammate,other,bug
-T0132,The export button does nothing,bug,bug
-T0133,Dashboard shows a blank page,bug,bug
-T0134,I need a copy of last month's invoice,billing,billing
-T0135,Cancel and refund my last payment,refund,refund
-T0136,Please update the card on my account,billing,other
-T0137,Cancel and refund my last payment,refund,refund
-T0138,The export button does nothing,bug,other
-T0139,Please refund the annual plan I bought by mistake,refund,refund
-T0140,Please update the card on my account,billing,refund
-T0141,Login loops back to the start,bug,bug
-T0142,The export button does nothing,bug,bug
-T0143,Dashboard shows a blank page,bug,bug
-T0144,Can I change my username,other,other
-T0145,Can I change my username,other,other
-T0146,The export button does nothing,bug,bug
-T0147,I need a copy of last month's invoice,billing,refund
-T0148,I want my money back for this order,refund,billing
-T0149,I was charged twice this month,billing,billing
-T0150,The export button does nothing,bug,bug
-T0151,The export button does nothing,bug,bug
-T0152,Dashboard shows a blank page,bug,bug
-T0153,Cancel and refund my last payment,refund,refund
-T0154,I want my money back for this order,refund,refund
-T0155,Please update the card on my account,billing,billing
-T0156,App crashes when I open settings,bug,bug
-T0157,I was charged twice this month,billing,billing
-T0158,Where is your office located,other,other
-T0159,I want my money back for this order,refund,refund
-T0160,Dashboard shows a blank page,bug,other
-T0161,I was charged twice this month,billing,billing
-T0162,How do I invite a teammate,other,other
-T0163,Please update the card on my account,billing,billing
-T0164,Please update the card on my account,billing,billing
-T0165,Dashboard shows a blank page,bug,bug
-T0166,I need a copy of last month's invoice,billing,billing
-T0167,Why did my invoice go up,billing,billing
-T0168,Please update the card on my account,billing,billing
-T0169,How do I invite a teammate,other,other
-T0170,I need a copy of last month's invoice,billing,other
-T0171,Dashboard shows a blank page,bug,bug
-T0172,Login loops back to the start,bug,bug
-T0173,I need a copy of last month's invoice,billing,billing
-T0174,I want my money back for this order,refund,refund
-T0175,"The product never arrived, I want a refund",refund,billing
-T0176,I was charged twice this month,billing,billing
-T0177,Cancel and refund my last payment,refund,refund
-T0178,Where is your office located,other,bug
-T0179,Do you have a student discount,other,other
-T0180,Cancel and refund my last payment,refund,billing
-T0181,Why did my invoice go up,billing,billing
-T0182,Login loops back to the start,bug,bug
-T0183,Can I change my username,other,bug
-T0184,The export button does nothing,bug,bug
-T0185,Dashboard shows a blank page,bug,bug
-T0186,Can I change my username,other,other
-T0187,Please update the card on my account,billing,refund
-T0188,Login loops back to the start,bug,bug
-T0189,Dashboard shows a blank page,bug,bug
-T0190,I want my money back for this order,refund,refund
-T0191,The export button does nothing,bug,bug
-T0192,The export button does nothing,bug,bug
-T0193,Why did my invoice go up,billing,billing
-T0194,Login loops back to the start,bug,bug
-T0195,Login loops back to the start,bug,bug
-T0196,Where is your office located,other,other
-T0197,Why did my invoice go up,billing,refund
-T0198,Why did my invoice go up,billing,billing
-T0199,Please refund the annual plan I bought by mistake,refund,refund
-T0200,Please update the card on my account,billing,billing
-T0201,Why did my invoice go up,billing,billing
-T0202,Where is your office located,other,other
-T0203,I was charged twice this month,billing,billing
-T0204,Login loops back to the start,bug,bug
-T0205,I was charged twice this month,billing,billing
-T0206,Can I change my username,other,other
-T0207,Where is your office located,other,other
-T0208,App crashes when I open settings,bug,bug
-T0209,Dashboard shows a blank page,bug,bug
-T0210,Why did my invoice go up,billing,billing
-T0211,Please update the card on my account,billing,other
-T0212,Why did my invoice go up,billing,billing
-T0213,I need a copy of last month's invoice,billing,billing
-T0214,The export button does nothing,bug,other
-T0215,Where is your office located,other,other
-T0216,Can I change my username,other,other
-T0217,Login loops back to the start,bug,bug
-T0218,Please refund the annual plan I bought by mistake,refund,refund
-T0219,Where is your office located,other,other
-T0220,Dashboard shows a blank page,bug,bug
-T0221,Cancel and refund my last payment,refund,refund
-T0222,Can I change my username,other,billing
-T0223,Please update the card on my account,billing,billing
-T0224,I need a copy of last month's invoice,billing,billing
-T0225,The export button does nothing,bug,bug
-T0226,The export button does nothing,bug,bug
-T0227,Please update the card on my account,billing,billing
-T0228,Dashboard shows a blank page,bug,other
-T0229,Why did my invoice go up,billing,billing
-T0230,Where is your office located,other,other
-T0231,Why did my invoice go up,billing,billing
-T0232,Can I change my username,other,other
-T0233,Why did my invoice go up,billing,billing
-T0234,Please update the card on my account,billing,billing
-T0235,App crashes when I open settings,bug,bug
-T0236,I was charged twice this month,billing,billing
-T0237,"The product never arrived, I want a refund",refund,billing
-T0238,Dashboard shows a blank page,bug,bug
-T0239,Cancel and refund my last payment,refund,refund
-T0240,Do you have a student discount,other,other
-T0241,I was charged twice this month,billing,refund
-T0242,Can I change my username,other,other
-T0243,Why did my invoice go up,billing,other
-T0244,Please update the card on my account,billing,billing
-T0245,The export button does nothing,bug,bug
-T0246,Please update the card on my account,billing,other
-T0247,How do I invite a teammate,other,other
-T0248,Dashboard shows a blank page,bug,bug
-T0249,"The product never arrived, I want a refund",refund,refund
-T0250,The export button does nothing,bug,bug
-T0251,I need a copy of last month's invoice,billing,billing
-T0252,I was charged twice this month,billing,billing
-T0253,Please refund the annual plan I bought by mistake,refund,refund
-T0254,I need a copy of last month's invoice,billing,billing
-T0255,How do I invite a teammate,other,other
-T0256,Why did my invoice go up,billing,refund
-T0257,I want my money back for this order,refund,refund
-T0258,App crashes when I open settings,bug,bug
-T0259,I was charged twice this month,billing,billing
-T0260,I want my money back for this order,refund,refund
-T0261,Why did my invoice go up,billing,billing
-T0262,Do you have a student discount,other,other
-T0263,Please refund the annual plan I bought by mistake,refund,refund
-T0264,App crashes when I open settings,bug,bug
-T0265,Can I change my username,other,other
-T0266,App crashes when I open settings,bug,bug
-T0267,Login loops back to the start,bug,bug
-T0268,Dashboard shows a blank page,bug,bug
-T0269,Dashboard shows a blank page,bug,bug
-T0270,I need a copy of last month's invoice,billing,billing
-T0271,Please update the card on my account,billing,billing
-T0272,The export button does nothing,bug,bug
-T0273,The export button does nothing,bug,bug
-T0274,"The product never arrived, I want a refund",refund,refund
-T0275,App crashes when I open settings,bug,bug
-T0276,I was charged twice this month,billing,billing
-T0277,How do I invite a teammate,other,bug
-T0278,Please refund the annual plan I bought by mistake,refund,refund
-T0279,How do I invite a teammate,other,other
-T0280,Login loops back to the start,bug,bug
-T0281,App crashes when I open settings,bug,bug
-T0282,"The product never arrived, I want a refund",refund,refund
-T0283,Please refund the annual plan I bought by mistake,refund,refund
-T0284,Please update the card on my account,billing,other
-T0285,I was charged twice this month,billing,billing
-T0286,I was charged twice this month,billing,billing
-T0287,I need a copy of last month's invoice,billing,billing
-T0288,I was charged twice this month,billing,billing
-T0289,The export button does nothing,bug,bug
-T0290,Please update the card on my account,billing,refund
-T0291,Please refund the annual plan I bought by mistake,refund,other
-T0292,Why did my invoice go up,billing,billing
-T0293,Please update the card on my account,billing,billing
-T0294,Please refund the annual plan I bought by mistake,refund,refund
-T0295,I need a copy of last month's invoice,billing,billing
-T0296,Please update the card on my account,billing,billing
-T0297,Login loops back to the start,bug,bug
-T0298,Login loops back to the start,bug,bug
-T0299,Why did my invoice go up,billing,billing
-T0300,I need a copy of last month's invoice,billing,billing
-T0301,I want my money back for this order,refund,refund
-T0302,Please update the card on my account,billing,billing
-T0303,I want my money back for this order,refund,refund
-T0304,Please refund the annual plan I bought by mistake,refund,refund
-T0305,Please update the card on my account,billing,other
-T0306,App crashes when I open settings,bug,other
-T0307,The export button does nothing,bug,bug
-T0308,The export button does nothing,bug,bug
-T0309,Where is your office located,other,other
-T0310,I was charged twice this month,billing,billing
-T0311,Do you have a student discount,other,other
-T0312,I was charged twice this month,billing,billing
-T0313,Dashboard shows a blank page,bug,bug
-T0314,I was charged twice this month,billing,billing
-T0315,Login loops back to the start,bug,bug
-T0316,I was charged twice this month,billing,billing
-T0317,Please refund the annual plan I bought by mistake,refund,refund
-T0318,"The product never arrived, I want a refund",refund,refund
-T0319,Dashboard shows a blank page,bug,bug
-T0320,Can I change my username,other,other
-T0321,How do I invite a teammate,other,other
-T0322,Login loops back to the start,bug,bug
-T0323,I need a copy of last month's invoice,billing,billing
-T0324,Can I change my username,other,other
-T0325,App crashes when I open settings,bug,bug
-T0326,I want my money back for this order,refund,billing
-T0327,Login loops back to the start,bug,bug
-T0328,Please update the card on my account,billing,billing
-T0329,I was charged twice this month,billing,billing
-T0330,I need a copy of last month's invoice,billing,refund
-T0331,Can I change my username,other,other
-T0332,"The product never arrived, I want a refund",refund,refund
-T0333,The export button does nothing,bug,bug
-T0334,How do I invite a teammate,other,other
-T0335,Why did my invoice go up,billing,refund
-T0336,Cancel and refund my last payment,refund,refund
-T0337,Cancel and refund my last payment,refund,other
-T0338,Can I change my username,other,other
-T0339,Login loops back to the start,bug,bug
-T0340,Why did my invoice go up,billing,billing
-T0341,Dashboard shows a blank page,bug,bug
-T0342,I need a copy of last month's invoice,billing,billing
-T0343,Do you have a student discount,other,other
-T0344,Can I change my username,other,other
-T0345,Dashboard shows a blank page,bug,bug
-T0346,Login loops back to the start,bug,bug
-T0347,I want my money back for this order,refund,refund
-T0348,I want my money back for this order,refund,refund
-T0349,Why did my invoice go up,billing,billing
-T0350,I want my money back for this order,refund,refund
-T0351,Please update the card on my account,billing,billing
-T0352,Where is your office located,other,bug
-T0353,Please update the card on my account,billing,billing
-T0354,I want my money back for this order,refund,refund
-T0355,App crashes when I open settings,bug,bug
-T0356,Do you have a student discount,other,other
-T0357,Dashboard shows a blank page,bug,bug
-T0358,Do you have a student discount,other,other
-T0359,I was charged twice this month,billing,billing
-T0360,How do I invite a teammate,other,other
-T0361,App crashes when I open settings,bug,bug
-T0362,Please update the card on my account,billing,billing
-T0363,Dashboard shows a blank page,bug,bug
-T0364,I was charged twice this month,billing,billing
-T0365,Where is your office located,other,billing
-T0366,Where is your office located,other,other
-T0367,Login loops back to the start,bug,bug
-T0368,Why did my invoice go up,billing,other
-T0369,Dashboard shows a blank page,bug,bug
-T0370,Do you have a student discount,other,bug
-T0371,How do I invite a teammate,other,other
-T0372,The export button does nothing,bug,bug
-T0373,I need a copy of last month's invoice,billing,billing
-T0374,Why did my invoice go up,billing,billing
-T0375,Why did my invoice go up,billing,refund
-T0376,Can I change my username,other,other
-T0377,Please update the card on my account,billing,refund
-T0378,I need a copy of last month's invoice,billing,billing
-T0379,Cancel and refund my last payment,refund,refund
-T0380,I need a copy of last month's invoice,billing,billing
-T0381,App crashes when I open settings,bug,bug
-T0382,Where is your office located,other,other
-T0383,I was charged twice this month,billing,billing
-T0384,I want my money back for this order,refund,refund
-T0385,Do you have a student discount,other,other
-T0386,"The product never arrived, I want a refund",refund,refund
-T0387,I was charged twice this month,billing,billing
-T0388,App crashes when I open settings,bug,bug
-T0389,I was charged twice this month,billing,billing
-T0390,Cancel and refund my last payment,refund,refund
-T0391,Do you have a student discount,other,other
-T0392,Cancel and refund my last payment,refund,other
-T0393,I was charged twice this month,billing,billing
-T0394,The export button does nothing,bug,bug
-T0395,Please refund the annual plan I bought by mistake,refund,billing
-T0396,Please refund the annual plan I bought by mistake,refund,refund
-T0397,Can I change my username,other,other
-T0398,Cancel and refund my last payment,refund,refund
-T0399,Dashboard shows a blank page,bug,bug
-T0400,I want my money back for this order,refund,refund
+T0001,My card was declined when I renewed the starter plan?,billing,billing
+T0002,"Hi team, the app crashes when I open exports. Thank you",bug,bug
+T0003,"The dashboard page takes a minute to load, is that normal",bug,bug
+T0004,The export button does nothing on the exports page. Thank you,bug,bug
+T0005,The app crashes when I open billing?,bug,bug
+T0006,"Hello, the inbox page takes a minute to load, is that normal, account A9159",bug,bug
+T0007,"Hi, my card was declined when I renewed the team plan, account A4324",billing,billing
+T0008,How do I invite a teammate to inbox. Thank you,other,other
+T0009,Urgent: how do I invite a teammate to settings. Thank you,other,other
+T0010,"Hello, can I change my username before July. Thanks",other,other
+T0011,"Hi team, the app crashes when I open settings?",bug,bug
+T0012,"Hi, order 64830 never arrived and I want a refund. Thanks",refund,refund
+T0013,I need a copy of the May invoice for invoice INV-40780. Thank you,billing,billing
+T0014,"Hi team, the dashboard page is blank since the April update?",bug,bug
+T0015,Urgent: login loops back to the start when I open reports,bug,bug
+T0016,"Urgent: please refund the starter plan I bought by mistake, account A7225",refund,refund
+T0017,Urgent: can I change my username before October?,other,other
+T0018,"Hi team, do you have a student discount on the starter plan, account A3509",other,billing
+T0019,"Urgent: I cancelled in March but you still charged me $49, I want it back. Thank you",refund,billing
+T0020,"Hi team, where can I download all my invoices from March",other,other
+T0021,"Hi, my card was declined when I renewed the team plan, account A8991",billing,billing
+T0022,"Hi team, the app crashes when I open exports?",bug,bug
+T0023,"Hi team, do you have an office in Austin, account A7279",other,other
+T0024,"Hi, how do I invite a teammate to reports?",other,other
+T0025,Urgent: please return the $79 you took after I cancelled the team plan. Thanks,refund,refund
+T0026,"My card was declined when I renewed the starter plan, account A6820",billing,billing
+T0027,"Urgent: you charged me $49 instead of $29 for the annual plan, account A7215",billing,billing
+T0028,How do I invite a teammate to reports?,other,other
+T0029,"Hi, you charged me $99 instead of $89 for the team plan?",billing,billing
+T0030,"Hello, login loops back to the start when I open dashboard. Thank you",bug,bug
+T0031,Login loops back to the start when I open billing?,bug,bug
+T0032,"Hi team, order 50060 never arrived and I want a refund. Thanks",refund,refund
+T0033,"Hi, can I change my username before June, account A8257",other,other
+T0034,Can I pay for the annual plan by bank transfer?,billing,billing
+T0035,"Hi team, please return the $99 you took after I cancelled the starter plan, account A5053",refund,refund
+T0036,"Hi, why did my invoice go up in January?",billing,billing
+T0037,"Hi, I want my money back for order 21218. Thanks",refund,refund
+T0038,Urgent: do you have a student discount on the pro plan. Thank you,other,other
+T0039,Urgent: the app crashes when I open settings?,bug,bug
+T0040,Urgent: can I change my username before March?,other,other
+T0041,Urgent: can I change my username before September,other,other
+T0042,Urgent: how do I invite a teammate to exports,other,other
+T0043,I need a copy of the June invoice for invoice INV-59702. Thank you,billing,billing
+T0044,"Hi team, do you have an office in Pune",other,other
+T0045,Urgent: please update the card on my account before the February renewal. Thank you,billing,billing
+T0046,The app crashes when I open reports?,bug,bug
+T0047,Urgent: the export button does nothing on the inbox page,bug,bug
+T0048,"Hi team, the app crashes when I open inbox",bug,bug
+T0049,Please update the card on my account before the June renewal. Thanks,billing,billing
+T0050,The export button does nothing on the dashboard page,bug,bug
+T0051,"Urgent: I cancelled in June but you still charged me $199, I want it back, account A8188",refund,refund
+T0052,Cancel the annual plan and refund the $19?,refund,refund
+T0053,"Hello, can I pay for the team plan by bank transfer",billing,billing
+T0054,"Hi, you charged me $199 instead of $169 for the team plan?",billing,refund
+T0055,Urgent: cancel the team plan and refund the $79. Thank you,refund,refund
+T0056,"Hi, where can I download all my invoices from July",other,billing
+T0057,"Hi team, please refund the pro plan I bought by mistake. Thank you",refund,refund
+T0058,"Hello, login loops back to the start when I open billing?",bug,bug
+T0059,Urgent: please return the $49 you took after I cancelled the starter plan. Thanks,refund,refund
+T0060,"Hi team, can I change my username before October",other,other
+T0061,Where can I download all my invoices from September. Thank you,other,other
+T0062,"Hello, do you have an office in Perth?",other,other
+T0063,Urgent: the settings page is blank since the March update. Thanks,bug,bug
+T0064,"The dashboard page takes a minute to load, is that normal?",bug,other
+T0065,"Hi, do you have a student discount on the team plan, account A5870",other,other
+T0066,"Hello, can I change my username before April. Thanks",other,other
+T0067,The app crashes when I open reports. Thank you,bug,bug
+T0068,"Urgent: why did my invoice go up in May, account A7459",billing,billing
+T0069,Urgent: can I pay for the pro plan by bank transfer. Thank you,billing,billing
+T0070,Do you have an office in Lyon,other,other
+T0071,"Hello, the settings page takes a minute to load, is that normal, account A8072",bug,other
+T0072,The inbox page is blank since the June update?,bug,bug
+T0073,Please return the $19 you took after I cancelled the team plan. Thank you,refund,refund
+T0074,"Hello, where can I download all my invoices from July?",other,billing
+T0075,Where can I download all my invoices from April. Thanks,other,other
+T0076,"Hello, I want my money back for order 29587",refund,refund
+T0077,"Hi, do you have a student discount on the annual plan. Thank you",other,other
+T0078,"Urgent: how do I invite a teammate to dashboard, account A2294",other,other
+T0079,"The app crashes when I open billing, account A2425",bug,bug
+T0080,Urgent: please refund the starter plan I bought by mistake. Thanks,refund,billing
+T0081,Do you have an office in Perth. Thanks,other,other
+T0082,"Hi, where can I download all my invoices from March. Thank you",other,other
+T0083,"Hi, the dashboard page takes a minute to load, is that normal. Thank you",bug,bug
+T0084,My card was declined when I renewed the pro plan,billing,billing
+T0085,"Hi, can I pay for the annual plan by bank transfer, account A5277",billing,billing
+T0086,"Why did my invoice go up in October, account A4005",billing,billing
+T0087,"Hi team, why did my invoice go up in January",billing,billing
+T0088,"Hi, I need a copy of the May invoice for invoice INV-85309?",billing,billing
+T0089,The export button does nothing on the inbox page?,bug,bug
+T0090,"Hello, I cancelled in October but you still charged me $49, I want it back. Thanks",refund,billing
+T0091,I want my money back for order 83449,refund,refund
+T0092,"Where can I download all my invoices from January, account A7905",other,billing
+T0093,"Hi, can I change my username before September",other,other
+T0094,"Hello, I was charged twice in October, please reverse one of them. Thanks",billing,refund
+T0095,Urgent: the export button does nothing on the exports page. Thanks,bug,bug
+T0096,"I was charged twice in January, please reverse one of them?",billing,refund
+T0097,Please refund the starter plan I bought by mistake. Thank you,refund,refund
+T0098,"Hi, can I pay for the starter plan by bank transfer?",billing,billing
+T0099,"Hello, please return the $199 you took after I cancelled the annual plan. Thanks",refund,billing
+T0100,"Hi team, I need a copy of the May invoice for invoice INV-13035. Thank you",billing,billing
+T0101,"Urgent: order 72606 never arrived and I want a refund, account A7522",refund,refund
+T0102,"Hello, how do I invite a teammate to billing?",other,other
+T0103,"Hello, do you have a student discount on the pro plan. Thanks",other,other
+T0104,"The billing page takes a minute to load, is that normal",bug,bug
+T0105,Urgent: where can I download all my invoices from October,other,other
+T0106,"Hello, do you have a student discount on the annual plan. Thank you",other,other
+T0107,"Hello, how do I invite a teammate to exports?",other,other
+T0108,My card was declined when I renewed the annual plan?,billing,billing
+T0109,"Hello, login loops back to the start when I open reports, account A3791",bug,bug
+T0110,Do you have an office in Lyon. Thanks,other,other
+T0111,I need a copy of the January invoice for invoice INV-25120. Thank you,billing,billing
+T0112,How do I invite a teammate to dashboard. Thanks,other,other
+T0113,Urgent: do you have an office in Pune,other,other
+T0114,"Hi, please return the $199 you took after I cancelled the annual plan. Thank you",refund,billing
+T0115,"Hello, please refund the pro plan I bought by mistake. Thanks",refund,refund
+T0116,Please update the card on my account before the January renewal?,billing,billing
+T0117,"Urgent: the exports page takes a minute to load, is that normal. Thank you",bug,bug
+T0118,"Hi team, you charged me $29 instead of $39 for the team plan?",billing,billing
+T0119,"Hello, please return the $19 you took after I cancelled the starter plan. Thank you",refund,billing
+T0120,"Hi, you charged me $49 instead of $29 for the annual plan. Thank you",billing,refund
+T0121,"Hi, the export button does nothing on the inbox page. Thanks",bug,bug
+T0122,I need a copy of the June invoice for invoice INV-45350. Thanks,billing,billing
+T0123,"Hi team, why did my invoice go up in August?",billing,billing
+T0124,"Hi team, please refund the annual plan I bought by mistake, account A4704",refund,refund
+T0125,"Hi team, the billing page takes a minute to load, is that normal. Thank you",bug,other
+T0126,Urgent: please return the $29 you took after I cancelled the team plan?,refund,refund
+T0127,Do you have an office in Austin,other,other
+T0128,"Urgent: I cancelled in September but you still charged me $19, I want it back",refund,refund
+T0129,"Hello, please return the $79 you took after I cancelled the starter plan. Thanks",refund,billing
+T0130,"Hi team, my card was declined when I renewed the starter plan. Thanks",billing,billing
+T0131,"Hi team, the reports page is blank since the June update. Thanks",bug,bug
+T0132,"Hello, where can I download all my invoices from February",other,other
+T0133,Urgent: where can I download all my invoices from June. Thanks,other,other
+T0134,"Hello, I cancelled in May but you still charged me $199, I want it back, account A8014",refund,billing
+T0135,"Hi team, do you have an office in Leeds",other,other
+T0136,Cancel the starter plan and refund the $249. Thank you,refund,refund
+T0137,"Hi team, I want my money back for order 92164?",refund,refund
+T0138,"Hi, I want my money back for order 72394?",refund,refund
+T0139,"Hi team, do you have a student discount on the team plan. Thanks",other,other
+T0140,Login loops back to the start when I open inbox. Thank you,bug,bug
+T0141,"Hi team, please refund the starter plan I bought by mistake. Thanks",refund,refund
+T0142,"Hello, please return the $29 you took after I cancelled the team plan. Thanks",refund,billing
+T0143,"Hi, I cancelled in June but you still charged me $149, I want it back",refund,refund
+T0144,"Hello, how do I invite a teammate to billing. Thank you",other,other
+T0145,"Hello, you charged me $149 instead of $119 for the team plan. Thanks",billing,refund
+T0146,"Hi team, the app crashes when I open dashboard. Thanks",bug,bug
+T0147,"Hi, do you have an office in Pune",other,other
+T0148,"Hello, I want my money back for order 23494",refund,refund
+T0149,"Hi, I need a copy of the August invoice for invoice INV-78279",billing,billing
+T0150,"Hi team, login loops back to the start when I open inbox",bug,bug
+T0151,"Urgent: I cancelled in October but you still charged me $49, I want it back?",refund,refund
+T0152,Urgent: can I pay for the starter plan by bank transfer. Thank you,billing,billing
+T0153,The export button does nothing on the reports page?,bug,bug
+T0154,"Hi team, please return the $249 you took after I cancelled the annual plan, account A2853",refund,refund
+T0155,"Hi team, can I pay for the annual plan by bank transfer, account A9870",billing,billing
+T0156,"Hello, do you have a student discount on the pro plan?",other,other
+T0157,Login loops back to the start when I open reports. Thanks,bug,bug
+T0158,"Hi, where can I download all my invoices from September. Thanks",other,other
+T0159,"Hi, can I pay for the pro plan by bank transfer",billing,billing
+T0160,"Hi, the inbox page takes a minute to load, is that normal",bug,bug
+T0161,"The settings page takes a minute to load, is that normal?",bug,other
+T0162,Do you have an office in Leeds,other,other
+T0163,"Hello, the app crashes when I open inbox. Thank you",bug,bug
+T0164,"Urgent: order 18393 never arrived and I want a refund, account A8644",refund,refund
+T0165,"Urgent: do you have a student discount on the annual plan, account A8352",other,other
+T0166,"Hello, can I change my username before April. Thank you",other,other
+T0167,"Hi team, I want my money back for order 99762. Thanks",refund,refund
+T0168,"Hello, where can I download all my invoices from January. Thank you",other,other
+T0169,"Hi team, you charged me $149 instead of $129 for the annual plan. Thanks",billing,billing
+T0170,Urgent: the export button does nothing on the settings page. Thanks,bug,bug
+T0171,"Hi team, how do I invite a teammate to billing?",other,other
+T0172,Urgent: order 24924 never arrived and I want a refund. Thank you,refund,refund
+T0173,The app crashes when I open exports. Thank you,bug,bug
+T0174,"Hello, how do I invite a teammate to dashboard. Thank you",other,other
+T0175,"Hi team, login loops back to the start when I open settings?",bug,bug
+T0176,"Hi team, please update the card on my account before the June renewal",billing,billing
+T0177,"Hi, the billing page takes a minute to load, is that normal",bug,bug
+T0178,Urgent: the reports page is blank since the April update,bug,bug
+T0179,"Hello, the app crashes when I open inbox?",bug,bug
+T0180,"Urgent: the reports page takes a minute to load, is that normal?",bug,other
+T0181,"Hi team, the settings page is blank since the June update, account A6784",bug,bug
+T0182,"Hello, my card was declined when I renewed the pro plan. Thanks",billing,billing
+T0183,"Hi team, the billing page takes a minute to load, is that normal. Thanks",bug,other
+T0184,"Urgent: I was charged twice in October, please reverse one of them?",billing,refund
+T0185,"I was charged twice in February, please reverse one of them. Thank you",billing,refund
+T0186,"Urgent: the settings page takes a minute to load, is that normal?",bug,bug
+T0187,Urgent: please update the card on my account before the September renewal?,billing,billing
+T0188,"Hello, I need a copy of the August invoice for invoice INV-79353. Thank you",billing,billing
+T0189,"Hi, the settings page takes a minute to load, is that normal. Thanks",bug,other
+T0190,"Hi team, can I change my username before September",other,other
+T0191,"Hi team, the app crashes when I open settings, account A6924",bug,bug
+T0192,"Hi, can I pay for the pro plan by bank transfer",billing,billing
+T0193,"Hi, login loops back to the start when I open exports",bug,bug
+T0194,"Hi team, please refund the starter plan I bought by mistake?",refund,refund
+T0195,"Hello, please update the card on my account before the September renewal. Thank you",billing,billing
+T0196,Urgent: the billing page is blank since the March update,bug,bug
+T0197,"Hi, the inbox page is blank since the January update?",bug,bug
+T0198,"Hi, login loops back to the start when I open reports. Thank you",bug,bug
+T0199,"Hi, please update the card on my account before the October renewal, account A8632",billing,billing
+T0200,"Hi, the settings page takes a minute to load, is that normal. Thanks",bug,other
+T0201,"Hello, do you have an office in Perth?",other,other
+T0202,"Hi team, do you have an office in Leeds?",other,other
+T0203,"Hi, the app crashes when I open settings. Thanks",bug,bug
+T0204,"How do I invite a teammate to inbox, account A4889",other,other
+T0205,"Hello, where can I download all my invoices from May",other,billing
+T0206,I want my money back for order 92782. Thanks,refund,refund
+T0207,"Hi, you charged me $199 instead of $179 for the annual plan",billing,refund
+T0208,"Hi team, I want my money back for order 63085?",refund,billing
+T0209,"Hi, the app crashes when I open reports?",bug,bug
+T0210,"Hi team, the exports page takes a minute to load, is that normal. Thank you",bug,bug
+T0211,"Urgent: do you have a student discount on the team plan, account A9000",other,other
+T0212,"Hi team, where can I download all my invoices from April. Thanks",other,other
+T0213,Login loops back to the start when I open billing,bug,bug
+T0214,"Order 24849 never arrived and I want a refund, account A3786",refund,refund
+T0215,"Hi, login loops back to the start when I open billing. Thank you",bug,bug
+T0216,"Hi team, login loops back to the start when I open exports",bug,bug
+T0217,"Hi team, why did my invoice go up in June, account A9771",billing,billing
+T0218,"Hello, cancel the annual plan and refund the $49, account A5300",refund,refund
+T0219,Do you have an office in Lyon?,other,other
+T0220,"Hi team, the export button does nothing on the exports page. Thank you",bug,bug
+T0221,"Hi, where can I download all my invoices from July, account A2403",other,billing
+T0222,"Hi, I cancelled in August but you still charged me $29, I want it back. Thank you",refund,refund
+T0223,"Hi, can I change my username before August. Thanks",other,other
+T0224,Urgent: please return the $29 you took after I cancelled the team plan. Thank you,refund,refund
+T0225,"Hello, do you have a student discount on the team plan?",other,other
+T0226,"I need a copy of the August invoice for invoice INV-44662, account A7234",billing,billing
+T0227,"Hello, why did my invoice go up in July",billing,billing
+T0228,How do I invite a teammate to exports?,other,other
+T0229,"Urgent: please return the $149 you took after I cancelled the team plan, account A8075",refund,billing
+T0230,Urgent: why did my invoice go up in February?,billing,billing
+T0231,Urgent: why did my invoice go up in July,billing,billing
+T0232,"Hi team, do you have an office in Lyon",other,other
+T0233,"Hello, the settings page is blank since the May update. Thanks",bug,bug
+T0234,"Hi team, my card was declined when I renewed the annual plan. Thanks",billing,billing
+T0235,"Hi, where can I download all my invoices from February",other,other
+T0236,"Urgent: the settings page takes a minute to load, is that normal. Thanks",bug,bug
+T0237,"I need a copy of the May invoice for invoice INV-45811, account A9707",billing,billing
+T0238,"Hi team, the app crashes when I open billing",bug,bug
+T0239,"Hi, do you have a student discount on the starter plan. Thank you",other,other
+T0240,"Hello, do you have a student discount on the starter plan, account A5774",other,other
+T0241,"Hi, cancel the team plan and refund the $79",refund,refund
+T0242,"I was charged twice in May, please reverse one of them. Thanks",billing,billing
+T0243,"Hello, I cancelled in July but you still charged me $29, I want it back, account A6254",refund,refund
+T0244,"Hello, how do I invite a teammate to settings. Thanks",other,other
+T0245,"Hello, the billing page takes a minute to load, is that normal?",bug,bug
+T0246,Urgent: order 11479 never arrived and I want a refund. Thanks,refund,refund
+T0247,Urgent: order 83110 never arrived and I want a refund. Thanks,refund,refund
+T0248,"Hello, cancel the annual plan and refund the $29. Thanks",refund,refund
+T0249,"Hi, the export button does nothing on the billing page. Thanks",bug,bug
+T0250,"Hello, my card was declined when I renewed the annual plan. Thanks",billing,billing
+T0251,"Hello, you charged me $79 instead of $59 for the team plan. Thanks",billing,billing
+T0252,"Hi, please update the card on my account before the August renewal. Thanks",billing,billing
+T0253,"Hello, cancel the pro plan and refund the $19. Thanks",refund,refund
+T0254,"Hi team, where can I download all my invoices from July?",other,other
+T0255,"Hello, please update the card on my account before the January renewal. Thanks",billing,billing
+T0256,"Hello, do you have an office in Perth. Thank you",other,other
+T0257,"Hello, order 71990 never arrived and I want a refund, account A6698",refund,refund
+T0258,"Hello, I want my money back for order 95857",refund,refund
+T0259,Do you have an office in Perth. Thanks,other,other
+T0260,"Hi team, can I pay for the annual plan by bank transfer. Thanks",billing,billing
+T0261,"Hi team, cancel the team plan and refund the $249",refund,billing
+T0262,Urgent: how do I invite a teammate to billing. Thank you,other,other
+T0263,"Hi team, order 32988 never arrived and I want a refund. Thank you",refund,refund
+T0264,"Hello, the app crashes when I open dashboard. Thanks",bug,bug
+T0265,"Hi team, the billing page takes a minute to load, is that normal",bug,other
+T0266,Urgent: how do I invite a teammate to dashboard?,other,other
+T0267,How do I invite a teammate to settings,other,other
+T0268,How do I invite a teammate to inbox. Thank you,other,other
+T0269,"Hi team, how do I invite a teammate to settings?",other,other
+T0270,"Hello, the export button does nothing on the dashboard page. Thanks",bug,bug
+T0271,"Hello, can I change my username before August, account A7944",other,other
+T0272,"Urgent: do you have an office in Lyon, account A7968",other,other
+T0273,"Hi, I want my money back for order 28778?",refund,refund
+T0274,"Hi, the export button does nothing on the billing page",bug,bug
+T0275,"Hi team, how do I invite a teammate to dashboard. Thanks",other,other
+T0276,"Hi, can I change my username before October",other,other
+T0277,"Hi, the export button does nothing on the settings page",bug,bug
+T0278,"Hi team, where can I download all my invoices from January?",other,other
+T0279,"Hello, my card was declined when I renewed the annual plan",billing,billing
+T0280,"Urgent: login loops back to the start when I open settings, account A3339",bug,bug
+T0281,"Hello, please return the $149 you took after I cancelled the annual plan. Thanks",refund,billing
+T0282,"Hello, I need a copy of the October invoice for invoice INV-34985?",billing,billing
+T0283,"Urgent: the reports page is blank since the October update, account A9591",bug,bug
+T0284,"Hi, the settings page is blank since the September update?",bug,bug
+T0285,Urgent: why did my invoice go up in September,billing,billing
+T0286,Do you have an office in Austin. Thanks,other,other
+T0287,Urgent: please refund the pro plan I bought by mistake. Thank you,refund,refund
+T0288,"Hello, do you have an office in Lyon",other,other
+T0289,Urgent: how do I invite a teammate to inbox?,other,other
+T0290,"Hello, can I pay for the starter plan by bank transfer, account A2947",billing,billing
+T0291,Urgent: order 77417 never arrived and I want a refund. Thanks,refund,refund
+T0292,"Urgent: the export button does nothing on the exports page, account A3958",bug,bug
+T0293,Urgent: can I change my username before July?,other,other
+T0294,"Hello, why did my invoice go up in August. Thank you",billing,billing
+T0295,"Hello, do you have a student discount on the pro plan, account A5091",other,other
+T0296,Do you have a student discount on the pro plan. Thanks,other,other
+T0297,"Hi team, can I pay for the team plan by bank transfer, account A9694",billing,billing
+T0298,Urgent: login loops back to the start when I open reports. Thank you,bug,bug
+T0299,"Hi team, why did my invoice go up in March?",billing,billing
+T0300,How do I invite a teammate to dashboard. Thanks,other,other
+T0301,"Hi team, the app crashes when I open reports. Thanks",bug,bug
+T0302,"Hi, my card was declined when I renewed the pro plan?",billing,billing
+T0303,"Urgent: I was charged twice in April, please reverse one of them",billing,refund
+T0304,Urgent: the export button does nothing on the dashboard page?,bug,bug
+T0305,"Hi, my card was declined when I renewed the annual plan. Thanks",billing,billing
+T0306,"Hi, do you have an office in Pune. Thank you",other,other
+T0307,"Hi, I need a copy of the June invoice for invoice INV-86243, account A1183",billing,billing
+T0308,"Urgent: the billing page takes a minute to load, is that normal. Thank you",bug,bug
+T0309,"Urgent: the reports page takes a minute to load, is that normal, account A8788",bug,bug
+T0310,"Hi team, the exports page takes a minute to load, is that normal?",bug,bug
+T0311,Why did my invoice go up in January. Thanks,billing,billing
+T0312,"Hi, do you have an office in Perth. Thank you",other,other
+T0313,Urgent: the exports page is blank since the April update?,bug,bug
+T0314,"Hi, please update the card on my account before the February renewal. Thanks",billing,billing
+T0315,"Hi, can I pay for the annual plan by bank transfer. Thanks",billing,billing
+T0316,"Hi team, I cancelled in October but you still charged me $249, I want it back. Thanks",refund,refund
+T0317,Urgent: please return the $29 you took after I cancelled the team plan?,refund,refund
+T0318,Please refund the team plan I bought by mistake?,refund,refund
+T0319,Urgent: please refund the starter plan I bought by mistake,refund,refund
+T0320,"Hi, cancel the team plan and refund the $149, account A1905",refund,refund
+T0321,"Hi team, the export button does nothing on the reports page. Thank you",bug,bug
+T0322,"Hi, my card was declined when I renewed the pro plan. Thanks",billing,billing
+T0323,"Hi, you charged me $249 instead of $219 for the team plan",billing,billing
+T0324,"Hi team, I was charged twice in August, please reverse one of them",billing,refund
+T0325,Where can I download all my invoices from August,other,other
+T0326,Urgent: login loops back to the start when I open dashboard. Thanks,bug,bug
+T0327,"Urgent: why did my invoice go up in April, account A3885",billing,billing
+T0328,"Hi, can I change my username before October. Thanks",other,other
+T0329,"Hi team, the inbox page is blank since the September update?",bug,bug
+T0330,Urgent: do you have an office in Pune?,other,other
+T0331,"Hello, my card was declined when I renewed the team plan, account A2313",billing,billing
+T0332,"I cancelled in February but you still charged me $49, I want it back. Thank you",refund,refund
+T0333,Please update the card on my account before the February renewal. Thank you,billing,billing
+T0334,Where can I download all my invoices from June?,other,other
+T0335,"The settings page takes a minute to load, is that normal, account A6752",bug,bug
+T0336,"Hi, do you have an office in Lyon, account A3985",other,other
+T0337,Please return the $149 you took after I cancelled the team plan?,refund,refund
+T0338,Urgent: the app crashes when I open exports,bug,bug
+T0339,"The billing page is blank since the September update, account A8588",bug,bug
+T0340,"Urgent: the settings page takes a minute to load, is that normal",bug,bug
+T0341,"The inbox page takes a minute to load, is that normal. Thanks",bug,bug
+T0342,"I was charged twice in January, please reverse one of them, account A8631",billing,billing
+T0343,"Hi, where can I download all my invoices from June, account A8846",other,billing
+T0344,How do I invite a teammate to billing. Thank you,other,other
+T0345,"Hi, I was charged twice in September, please reverse one of them",billing,refund
+T0346,"Hi team, please update the card on my account before the May renewal, account A7770",billing,billing
+T0347,"Hi, why did my invoice go up in April?",billing,billing
+T0348,"Hi team, order 65438 never arrived and I want a refund?",refund,refund
+T0349,"Hi, please update the card on my account before the July renewal. Thank you",billing,billing
+T0350,"Hello, the reports page takes a minute to load, is that normal?",bug,bug
+T0351,"Hello, do you have an office in Perth, account A1455",other,other
+T0352,Urgent: where can I download all my invoices from June,other,other
+T0353,I need a copy of the April invoice for invoice INV-56859. Thanks,billing,other
+T0354,"Hello, where can I download all my invoices from June, account A9371",other,billing
+T0355,The export button does nothing on the exports page. Thanks,bug,other
+T0356,"Hi team, please refund the team plan I bought by mistake. Thank you",refund,refund
+T0357,"Hi, login loops back to the start when I open inbox?",bug,bug
+T0358,"Hello, please update the card on my account before the September renewal",billing,billing
+T0359,"Hello, I need a copy of the September invoice for invoice INV-17472, account A5329",billing,billing
+T0360,"Hi, my card was declined when I renewed the annual plan. Thank you",billing,billing
+T0361,"Hello, can I pay for the annual plan by bank transfer, account A5415",billing,billing
+T0362,Urgent: can I change my username before May. Thanks,other,other
+T0363,Urgent: you charged me $79 instead of $59 for the team plan?,billing,billing
+T0364,"Hi team, I want my money back for order 51884. Thank you",refund,refund
+T0365,You charged me $249 instead of $219 for the pro plan,billing,billing
+T0366,"Hello, where can I download all my invoices from August",other,other
+T0367,"Hi, please return the $49 you took after I cancelled the annual plan. Thanks",refund,refund
+T0368,"Hello, you charged me $249 instead of $219 for the annual plan",billing,refund
+T0369,"Hi team, do you have an office in Perth. Thanks",other,other
+T0370,"Hi team, please update the card on my account before the October renewal",billing,billing
+T0371,"Hi team, can I change my username before August. Thanks",other,other
+T0372,"Hi team, where can I download all my invoices from October. Thanks",other,other
+T0373,"Hi team, my card was declined when I renewed the team plan?",billing,billing
+T0374,"Hi, I need a copy of the June invoice for invoice INV-94575. Thanks",billing,billing
+T0375,"Urgent: I was charged twice in April, please reverse one of them. Thanks",billing,refund
+T0376,"Hi, I need a copy of the August invoice for invoice INV-25071",billing,billing
+T0377,How do I invite a teammate to reports. Thanks,other,other
+T0378,"Hi team, you charged me $149 instead of $139 for the pro plan. Thank you",billing,billing
+T0379,"Hi team, do you have an office in Leeds?",other,other
+T0380,Urgent: order 16396 never arrived and I want a refund,refund,refund
+T0381,"Hi team, order 16158 never arrived and I want a refund?",refund,refund
+T0382,"Urgent: how do I invite a teammate to reports, account A1825",other,other
+T0383,"Urgent: the app crashes when I open reports, account A6607",bug,bug
+T0384,"Urgent: please return the $99 you took after I cancelled the pro plan, account A7362",refund,billing
+T0385,"Hi team, where can I download all my invoices from May, account A9819",other,billing
+T0386,Urgent: how do I invite a teammate to dashboard. Thank you,other,other
+T0387,"Hi, why did my invoice go up in April. Thank you",billing,billing
+T0388,"Hi team, the exports page takes a minute to load, is that normal, account A5179",bug,other
+T0389,"Hi team, do you have a student discount on the starter plan. Thanks",other,other
+T0390,"Hello, the billing page is blank since the October update",bug,bug
+T0391,"Hi, I need a copy of the October invoice for invoice INV-21299. Thanks",billing,billing
+T0392,"Hello, I need a copy of the February invoice for invoice INV-62613, account A5311",billing,billing
+T0393,Can I change my username before June. Thank you,other,other
+T0394,"Hi, the settings page takes a minute to load, is that normal. Thanks",bug,other
+T0395,"Urgent: the reports page takes a minute to load, is that normal. Thank you",bug,bug
+T0396,"Hi team, the inbox page takes a minute to load, is that normal. Thank you",bug,other
+T0397,Cancel the pro plan and refund the $249,refund,refund
+T0398,Urgent: you charged me $79 instead of $59 for the starter plan?,billing,billing
+T0399,"Hello, where can I download all my invoices from March. Thanks",other,billing
+T0400,"Hi team, the settings page takes a minute to load, is that normal. Thanks",bug,other

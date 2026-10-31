@@ -1,0 +1,11 @@
+{
+  "file": "tickets.csv",
+  "llm_label_source": "simulated",
+  "model": "none: no model was called",
+  "prompt_version": "none",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "make_data.py draws each distinct text's label once, seeded by (seed, text), from error rates set per wording template. Ambiguous wording carries most errors.",
+  "human_label_source": "simulated single human labeller, treated as the truth",
+  "seed": 601
+}
