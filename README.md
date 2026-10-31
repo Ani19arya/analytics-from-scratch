@@ -27,15 +27,32 @@ Most courses teach you where to click. This one teaches you what the tool is doi
 | **Four levels, ending with the job search** | 129 lessons across Level 1 (guided), Level 2 (realistic problems), Level 3 (ambiguous problems and capstones) and Level 4 (land the job: target lists, titles, visa and remote filters, and your search as a funnel) |
 | **Runs anywhere** | Python 3.9+ standard library and SQLite. Offline. No installs, no accounts, no API keys |
 
+## Your first hour
+
+Pick the row that fits you. Each one ends with a test you have passed, which is the point: you leave the first hour with proof, not just reading.
+
+| You are | Do this first (about 60 minutes) | You have a win when |
+|---|---|---|
+| New to data, or never used a terminal | [00-01 Run your first lesson](phases/00-start-here/01-run-your-first-lesson): check Python, run a test, read the failure, fix it | The test prints `OK` |
+| Comfortable with spreadsheets, new to SQL | 00-01 (15 minutes, to learn the test loop), then [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query) | Your first query passes its test |
+| Already work with data | Run the placement check below (about 10 minutes), open the [join fan-out explorer](visuals/join-fanout.html) and find the planted mistake (10 minutes), then start the lesson the check recommends | Your first recommended lesson passes, and `python3 tools/progress.py status` shows it |
+| Preparing for interviews | The placement check with the interview track, then [07-02 SQL interview questions](phases/07-getting-hired/02-sql-interview-questions) | Two of the six interview questions pass |
+
+**Which placement check?** There are two, and you only need one. `python3 tools/placement.py` is the full check: 13 questions plus follow-ups, graded automatically, about 10 to 15 minutes, with a start lesson and skips for your role. Use it if you can already read a little SQL or Python. The tutor skill also asks a few quick questions in conversation; that is for complete beginners and for when you are working with a coding agent and do not want to leave the chat. Either way, record the result with `python3 tools/progress.py` so the next step is suggested for you.
+
 ## Quick start
 
 ```
 git clone https://github.com/Ani19arya/analytics-from-scratch
-cd analytics-from-scratch/phases/01-sql/01-group-by-from-raw-rows
+cd analytics-from-scratch/phases/00-start-here/01-run-your-first-lesson
 python3 test_lesson.py
 ```
 
-The test fails until you complete `exercise.sql`. Read the lesson's `README.md`, fill in the exercise, and run the test again. New to all of this? Begin with [phase 00](phases/00-start-here), which shows you how to install Python and run your first test.
+The test fails until you complete the exercise. Read the lesson's `README.md`, fill in the exercise, and run the test again. [Phase 00](phases/00-start-here) shows you how to install Python if `python3` is not found. Already know the basics? Run the placement check from the repo root instead:
+
+```
+python3 tools/placement.py
+```
 
 Run any SQL against a lesson's data, from the repo root:
 
