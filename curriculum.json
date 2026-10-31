@@ -622,7 +622,7 @@
      "question": "Where did this month's MAU change come from: new, retained, resurrected or churned users?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",
@@ -637,7 +637,7 @@
      "question": "What share of users are still here on day 7 and day 30, and which retention definition fits?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",
@@ -652,7 +652,7 @@
      "question": "Did conversion fall, or did the traffic mix change?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics"
@@ -666,7 +666,7 @@
      "question": "DAU fell 20% overnight. Tracking bug, holiday, segment, or real?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",
@@ -681,7 +681,7 @@
      "question": "Which channel gets credit for the sale, and how much does the answer depend on the model?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",
@@ -696,7 +696,7 @@
      "question": "Is paid social acquisition profitable once churn is included?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics",

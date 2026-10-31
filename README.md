@@ -78,7 +78,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 12 | 2 |
 | [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
-| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 6 | 8 |
+| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 12 | 2 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 7 | 5 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 6 | 4 |
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
@@ -86,7 +86,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 1 | 5 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **65** | **56** |
+| **All** | | **71** | **50** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -144,12 +144,12 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 4. 03-04 [North star and guardrails](phases/03-metrics-and-product-analytics/04-north-star-and-guardrails): The new feature moved our main metric up, so should we launch it? (Level 2)
 5. 03-05 [Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): What exactly counts as an active customer, and what goes in the metric spec? (Level 1)
 6. 03-06 [Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): Did conversion rise 2% or 2 points, and why do two dashboards disagree? (Level 1)
-7. 03-07 Growth accounting *(planned)*: Where did this month's MAU change come from: new, retained, resurrected or churned users? (Level 2)
-8. 03-08 Retention curves and churn *(planned)*: What share of users are still here on day 7 and day 30, and which retention definition fits? (Level 2)
-9. 03-09 Segmentation and mix effects *(planned)*: Did conversion fall, or did the traffic mix change? (Level 2)
-10. 03-10 Diagnose a metric drop *(planned)*: DAU fell 20% overnight. Tracking bug, holiday, segment, or real? (Level 2)
-11. 03-11 Attribution: first touch, last touch, linear *(planned)*: Which channel gets credit for the sale, and how much does the answer depend on the model? (Level 2)
-12. 03-12 Unit economics: LTV, CAC and payback *(planned)*: Is paid social acquisition profitable once churn is included? (Level 2)
+7. 03-07 [Growth accounting](phases/03-metrics-and-product-analytics/07-growth-accounting): Where did this month's MAU change come from: new, retained, resurrected or churned users? (Level 2)
+8. 03-08 [Retention curves and churn](phases/03-metrics-and-product-analytics/08-retention-curves-and-churn): What share of users are still here on day 7 and day 30, and which retention definition fits? (Level 2)
+9. 03-09 [Segmentation and mix effects](phases/03-metrics-and-product-analytics/09-segmentation-and-mix-effects): Did conversion fall, or did the traffic mix change? (Level 2)
+10. 03-10 [Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): DAU fell 20% overnight. Tracking bug, holiday, segment, or real? (Level 2)
+11. 03-11 [Attribution: first touch, last touch, linear](phases/03-metrics-and-product-analytics/11-attribution-models): Which channel gets credit for the sale, and how much does the answer depend on the model? (Level 2)
+12. 03-12 [Unit economics: LTV, CAC and payback](phases/03-metrics-and-product-analytics/12-ltv-cac-and-payback): Is paid social acquisition profitable once churn is included? (Level 2)
 13. 03-13 Marketplace metrics and liquidity *(planned)*: What share of job posts get an application within 48 hours, and which side is the constraint? (Level 3)
 14. 03-14 Causal impact without an experiment: difference in differences *(planned)*: We launched in one city and not the others. Did it work? (Level 3)
 

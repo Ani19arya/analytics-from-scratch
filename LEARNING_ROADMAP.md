@@ -190,12 +190,12 @@ Level total: about 76.5 hours of focused work.
 
 - [x] 03-01 [Metric trees](phases/03-metrics-and-product-analytics/01-metric-trees): Revenue fell this week, so which part of the business made it fall? About 2 h.
 - [x] 03-04 [North star and guardrails](phases/03-metrics-and-product-analytics/04-north-star-and-guardrails): The new feature moved our main metric up, so should we launch it? About 2 h.
-- [ ] 03-07 Growth accounting *(planned)*: Where did this month's MAU change come from: new, retained, resurrected or churned users? About 2 h.
-- [ ] 03-08 Retention curves and churn *(planned)*: What share of users are still here on day 7 and day 30, and which retention definition fits? About 2 h.
-- [ ] 03-09 Segmentation and mix effects *(planned)*: Did conversion fall, or did the traffic mix change? About 2 h.
-- [ ] 03-10 Diagnose a metric drop *(planned)*: DAU fell 20% overnight. Tracking bug, holiday, segment, or real? About 2 h.
-- [ ] 03-11 Attribution: first touch, last touch, linear *(planned)*: Which channel gets credit for the sale, and how much does the answer depend on the model? About 2 h.
-- [ ] 03-12 Unit economics: LTV, CAC and payback *(planned)*: Is paid social acquisition profitable once churn is included? About 2 h.
+- [x] 03-07 [Growth accounting](phases/03-metrics-and-product-analytics/07-growth-accounting): Where did this month's MAU change come from: new, retained, resurrected or churned users? About 2 h.
+- [x] 03-08 [Retention curves and churn](phases/03-metrics-and-product-analytics/08-retention-curves-and-churn): What share of users are still here on day 7 and day 30, and which retention definition fits? About 2 h.
+- [x] 03-09 [Segmentation and mix effects](phases/03-metrics-and-product-analytics/09-segmentation-and-mix-effects): Did conversion fall, or did the traffic mix change? About 2 h.
+- [x] 03-10 [Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): DAU fell 20% overnight. Tracking bug, holiday, segment, or real? About 2 h.
+- [x] 03-11 [Attribution: first touch, last touch, linear](phases/03-metrics-and-product-analytics/11-attribution-models): Which channel gets credit for the sale, and how much does the answer depend on the model? About 2 h.
+- [x] 03-12 [Unit economics: LTV, CAC and payback](phases/03-metrics-and-product-analytics/12-ltv-cac-and-payback): Is paid social acquisition profitable once churn is included? About 2 h.
 
 **04 Dashboards and spreadsheets**
 

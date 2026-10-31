@@ -14,12 +14,12 @@ This phase is about the numbers a product team runs on: how to break a top-line 
 4. [North star and guardrails](04-north-star-and-guardrails/) (level 2): compute a north star and two guardrails from a test, and apply a pre-registered, noise-aware launch rule with a guardrail veto.
 5. [Define a metric precisely](05-define-a-metric-precisely/) (level 1): what exactly counts as an active customer, and what goes in the metric spec?
 6. [Percent vs points, ratio of sums vs average of ratios](06-percent-points-and-averages-of-ratios/) (level 1): did conversion rise 2% or 2 points, and why do two dashboards disagree?
-7. Growth accounting (planned): where did this month's MAU change come from: new, retained, resurrected or churned users?
-8. Retention curves and churn (planned): what share of users are still here on day 7 and day 30, and which retention definition fits?
-9. Segmentation and mix effects (planned): did conversion fall, or did the traffic mix change?
-10. Diagnose a metric drop (planned): DAU fell 20% overnight. Tracking bug, holiday, segment, or real?
-11. Attribution: first touch, last touch, linear (planned): which channel gets credit for the sale, and how much does the answer depend on the model?
-12. Unit economics: LTV, CAC and payback (planned): is paid social acquisition profitable once churn is included?
+7. [Growth accounting](07-growth-accounting/) (level 2): where did this month's MAU change come from: new, retained, resurrected or churned users?
+8. [Retention curves and churn](08-retention-curves-and-churn/) (level 2): what share of users are still here on day 7 and day 30, and which retention definition fits?
+9. [Segmentation and mix effects](09-segmentation-and-mix-effects/) (level 2): did conversion fall, or did the traffic mix change?
+10. [Diagnose a metric drop](10-diagnose-a-metric-drop/) (level 2): DAU fell 20% overnight. Tracking bug, holiday, segment, or real?
+11. [Attribution: first touch, last touch, linear](11-attribution-models/) (level 2): which channel gets credit for the sale, and how much does the answer depend on the model?
+12. [Unit economics: LTV, CAC and payback](12-ltv-cac-and-payback/) (level 2): is paid social acquisition profitable once churn is included?
 13. Marketplace metrics and liquidity (planned): what share of job posts get an application within 48 hours, and which side is the constraint?
 14. Causal impact without an experiment: difference in differences (planned): we launched in one city and not the others. Did it work?
 

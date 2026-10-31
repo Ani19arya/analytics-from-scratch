@@ -228,4 +228,4 @@ In the Real Analyst Jobs data drop of 25 October 2026, 860 of the 2,056 US analy
 
 ## Next
 
-[Phase 03: Metrics and product analytics](../README.md). The next lesson in this phase, growth accounting, is planned.
+[07: Growth accounting](../07-growth-accounting/)

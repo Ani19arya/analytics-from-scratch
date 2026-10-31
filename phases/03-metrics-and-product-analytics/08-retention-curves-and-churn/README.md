@@ -140,7 +140,7 @@ classic retention by signup week (- = cohort too young)
 2026-09-28  14 users d1  0.29   d7  0.14   d14 0.00   d30 0.18 
 2026-10-05  14 users d1  0.21   d7  0.14   d14 0.21   d30   -  
 2026-10-12  18 users d1  0.33   d7  0.28   d14 0.12   d30   -  
-2026-10-19  19 users d1  0.13   d7  0.20   d14   -    d30   -  
+2026-10-19  15 users d1  0.13   d7  0.20   d14   -    d30   -  
 ```
 
 Two things to read. The eligible count shrinks as N grows (191, 191, 175, 141). And the classic cohort cells jump around: 0.00, 0.20, 0.06 for neighbouring weeks on day 14. With 15 users a cohort, one person is 7 points. Classic day N on small cohorts is mostly noise, which is one reason a job board should use unbounded retention.
@@ -163,7 +163,7 @@ for name, group in groups.items():
     for n in (1, 7, 14, 30):
         kept, elig = unbounded_retention(group, offsets, n, as_of)
         cells.append("d%d %s (n=%d)" % (n, "-" if not elig else "%.2f" % (kept / elig), elig))
-        # naive: everyone in the group in the denominator
+    # naive: everyone in the group in the denominator
     naive30 = sum(1 for u in group if any(d >= 30 for d in offsets[u])) / len(group)
     print(name, len(group), "users  ", "  ".join(cells), "  naive d30 %.2f" % naive30)
 ```
