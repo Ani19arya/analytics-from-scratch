@@ -8,13 +8,14 @@ data/orders.csv     order_id, order_date, amount   (no orders at all in April 20
 Fernhill Software is fictional. All names and emails are invented (example.com).
 The data is synthetic and deterministic (fixed seed).
 Run from the lesson folder: python3 make_data.py
+In code: build(seed) returns {table name: list of rows} without writing files.
 """
 import csv
 import datetime
 import os
 import random
 
-random.seed(2026)
+SEED = 2026
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIRST = ["Ana", "Ben", "Chen", "Dara", "Eli", "Farah", "Gus", "Hana", "Ivo", "Jaya", "Kofi", "Lena",
@@ -30,7 +31,7 @@ def write(name, header, rows):
         w.writerows(rows)
 
 
-def employees():
+def employees(random):
     rows, used = [], set()
     for i in range(1, 37):
         while True:
@@ -50,7 +51,7 @@ def employees():
     return rows
 
 
-def signups():
+def signups(random):
     rows, emails = [], []
     for i in range(1, 141):
         e = "%s.%s%d@example.com" % (random.choice(FIRST).lower(), random.choice(LAST).lower(), random.randrange(10, 99))
@@ -71,7 +72,7 @@ def signups():
     return rows
 
 
-def logins():
+def logins(random):
     rows = []
     start = datetime.date(2026, 10, 1)
     for user in range(1, 41):
@@ -86,7 +87,7 @@ def logins():
     return rows
 
 
-def orders():
+def orders(random):
     rows, oid = [], 1
     d = datetime.date(2026, 1, 1)
     while d <= datetime.date(2026, 9, 30):
@@ -98,12 +99,25 @@ def orders():
     return rows
 
 
+HEADERS = {
+    "employees": ["emp_id", "name", "department", "salary"],
+    "signups": ["signup_id", "email", "signed_up_at"],
+    "logins": ["user_id", "login_date"],
+    "orders": ["order_id", "order_date", "amount"],
+}
+
+
+def build(seed=SEED):
+    """{table name: list of rows}. The same seed always gives the same rows.
+    Each function takes the random generator as its argument, named random."""
+    rng = random.Random(seed)
+    return {"employees": employees(rng), "signups": signups(rng), "logins": logins(rng), "orders": orders(rng)}
+
+
 def main():
     os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
-    write("employees.csv", ["emp_id", "name", "department", "salary"], employees())
-    write("signups.csv", ["signup_id", "email", "signed_up_at"], signups())
-    write("logins.csv", ["user_id", "login_date"], logins())
-    write("orders.csv", ["order_id", "order_date", "amount"], orders())
+    for table, rows in build().items():
+        write(table + ".csv", HEADERS[table], rows)
     print("done")
 
 

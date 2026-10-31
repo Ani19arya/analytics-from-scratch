@@ -18,12 +18,19 @@ TOOL_PATTERNS = {
     "dbt": re.compile(r"\bdbt\b", re.I),
 }
 
-# "3+ years", "2-4 years", "0 to 2 years", "At least 3 years"
-YEARS = re.compile(r"(\d+)\s*(?:(?:-|to)\s*(\d+))?\s*\+?\s*years?", re.I)
+# A number written as digits or as a word from zero to ten.
+NUMBER_WORDS = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+NUM = r"(\d+|zero|one|two|three|four|five|six|seven|eight|nine|ten)"
+# "3+ years", "2-4 years", "0 to 2 years", "3-5 yrs", "two years". Not "a 2 year contract".
+YEARS = re.compile(r"\b" + NUM + r"\s*(?:(?:-|to)\s*" + NUM + r")?\s*\+?\s*(?:years?|yrs?)\b"
+                   r"(?![\s-]*(?:contract|old))", re.I)
 
-VISA_NO = re.compile(r"\b(?:unable to|cannot|can't|will not|won't|does not|do not|not able to)\s+sponsor"
-                     r"|without (?:visa )?sponsorship|no (?:visa )?sponsorship", re.I)
-VISA_YES = re.compile(r"\bsponsor", re.I)
+# Visa, sentence by sentence. A sentence that mentions sponsoring and has any negation is a
+# refusal. A sentence that mentions sponsoring, names a visa and has no negation is a yes.
+SPONSOR = re.compile(r"\bsponsor", re.I)
+NEGATION = re.compile(r"\b(?:not|no|never|nor|unable|cannot|without|unavailable)\b|n't\b", re.I)
+VISA_WORD = re.compile(r"\b(?:visas?|h-?1b|work permits?|immigration|green cards?)\b", re.I)
 
 
 def load_postings(data_dir=DATA):
@@ -37,10 +44,31 @@ def role_text(text):
     return text if i < 0 else text[i:]
 
 
+def sentences(text):
+    """Split text into sentences at '.', '!' or '?' followed by a space."""
+    return [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+
 def extract_tools(text):
-    """Sorted list of tool names the role text asks for."""
+    """Sorted list of tool names the role text names anywhere."""
     body = role_text(text)
     return sorted(name for name, pat in TOOL_PATTERNS.items() if pat.search(body))
+
+
+def extract_asks(text):
+    """(required, nice): sorted tool lists from the 'Requirements:' and 'Nice to have:' sentences.
+    A tool named in both counts as required only."""
+    required, nice = set(), set()
+    for s in sentences(role_text(text)):
+        if "Requirements:" in s:
+            required |= set(extract_tools(s.split("Requirements:", 1)[1]))
+        elif "Nice to have:" in s:
+            nice |= set(extract_tools(s.split("Nice to have:", 1)[1]))
+    return sorted(required), sorted(nice - required)
+
+
+def to_int(word):
+    return int(word) if word.isdigit() else NUMBER_WORDS[word.lower()]
 
 
 def extract_years(text):
@@ -48,25 +76,32 @@ def extract_years(text):
     m = YEARS.search(role_text(text))
     if not m:
         return None
-    lo = int(m.group(1))
-    hi = int(m.group(2)) if m.group(2) else None
+    lo = to_int(m.group(1))
+    hi = to_int(m.group(2)) if m.group(2) else None
     return (lo, hi)
 
 
 def visa_status(text):
-    """'no' if it refuses sponsorship, 'yes' if it mentions sponsoring, else 'silent'. Check 'no' first."""
-    if VISA_NO.search(text):
+    """'no', 'yes' or 'silent', from the role text only. Refusals are checked first."""
+    about = [s for s in sentences(role_text(text)) if SPONSOR.search(s)]
+    if any(NEGATION.search(s) for s in about):
         return "no"
-    if VISA_YES.search(text):
+    if any(VISA_WORD.search(s) for s in about):
         return "yes"
     return "silent"
 
 
-def skill_counts(postings):
-    """{tool: number of postings that name it}. A posting counts once per tool."""
+def skill_counts(postings, part="required"):
+    """{tool: number of postings that ask for it}. part is 'required', 'nice' or 'any'.
+    A posting counts once per tool."""
     counts = {}
     for p in postings:
-        for t in extract_tools(p["text"]):
+        if part == "any":
+            tools = extract_tools(p["text"])
+        else:
+            required, nice = extract_asks(p["text"])
+            tools = required if part == "required" else nice
+        for t in tools:
             counts[t] = counts.get(t, 0) + 1
     return counts
 
@@ -98,18 +133,20 @@ def learn_next(counts, known, n=2):
 
 def main():
     postings = load_postings()
-    counts = skill_counts(postings)
     total = len(postings)
+    req, nice = skill_counts(postings, "required"), skill_counts(postings, "nice")
     print("postings:", total)
-    for t, c in sorted(counts.items(), key=lambda x: -x[1]):
-        print("%-9s %4d  %5.1f%%" % (t, c, 100.0 * c / total))
+    print("tool      required        nice")
+    for t in sorted(req, key=lambda t: (-req[t], t)):
+        print("%-9s %4d %5.1f%%  %4d %5.1f%%" % (t, req[t], 100.0 * req[t] / total,
+                                               nice.get(t, 0), 100.0 * nice.get(t, 0) / total))
     print(experience_buckets(postings))
     visa = {}
     for p in postings:
         s = visa_status(p["text"])
         visa[s] = visa.get(s, 0) + 1
     print(visa)
-    print("learn next if you know SQL and Excel:", learn_next(counts, {"SQL", "Excel"}))
+    print("learn next if you know SQL and Excel:", learn_next(req, {"SQL", "Excel"}))
 
 
 if __name__ == "__main__":

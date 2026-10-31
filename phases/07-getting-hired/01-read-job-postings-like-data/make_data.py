@@ -1,22 +1,23 @@
 """Build data/postings.csv and data/labels.csv: synthetic analyst job postings.
 
 postings.csv: posting_id, company, title, country, text
-labels.csv:   posting_id, tools, min_years, max_years, visa
-  tools is a ';' separated list of what the generator put in the role text.
+labels.csv:   posting_id, tools, required, nice, min_years, max_years, visa
+  tools is a ';' separated list of every tool the generator put in the role text.
+  required and nice split the same tools into the Requirements and Nice to have lines.
   min_years and max_years are blank when the posting states no experience.
-  visa is one of yes, no, silent.
+  visa is one of yes, no, silent (silent: no clear yes or no).
 
 Every company, title and sentence is invented. No real posting was copied.
 The labels exist only because we generated the text; a real feed has none,
 which is why you build the extractor. The data is synthetic and deterministic.
 Run from the lesson folder: python3 make_data.py
+In code: build(seed) returns (postings, labels) as lists of rows, without writing files.
 """
 import csv
 import os
 import random
 
-random.seed(707)
-
+SEED = 707
 HERE = os.path.dirname(os.path.abspath(__file__))
 N = 300
 
@@ -56,6 +57,14 @@ VISA = {
             "We sponsor H-1B visas for this position.",
             "We will consider visa sponsorship."],
 }
+# Harder refusals, used for every second "no" posting. They contain no "unable to" or
+# "will not", so a short list of refusal phrases misses them. {country} is US or India.
+VISA_NO_MORE = ["Sponsorship is not available for this role.",
+                "We are not in a position to sponsor visas.",
+                "Candidates must be authorized to work in {country} without the need for sponsorship.",
+                "We do not offer sponsorship."]
+# A blurb line that says sponsor but is not about visas, used for every seventh posting.
+BLURB_SPONSOR = " We proudly sponsor the city marathon every spring."
 
 
 def pick_tools(rng):
@@ -65,8 +74,9 @@ def pick_tools(rng):
     return chosen
 
 
-def build():
-    rng = random
+def build(seed=SEED):
+    """(postings, labels): two lists of rows. The same seed always gives the same rows."""
+    rng = random.Random(seed)
     postings, labels = [], []
     for i in range(1, N + 1):
         company = "%s %s" % (rng.choice(PREFIX), rng.choice(SUFFIX))
@@ -80,6 +90,8 @@ def build():
         nice = [t for t in tools if t not in required]
 
         parts = [rng.choice(BOILERPLATE).format(company=company, age=rng.choice([12, 15, 20, 25, 40]))]
+        if i % 7 == 0:
+            parts[0] += BLURB_SPONSOR
         parts.append("About the role: We are hiring a %s to build reports and answer questions for our %s team."
                      % (title, rng.choice(["R&D", "finance", "sales", "growth", "supply chain"])))
 
@@ -112,11 +124,16 @@ def build():
         elif v < 0.20:
             visa = "yes"
         if visa != "silent":
-            parts.append(rng.choice(VISA[visa]))
+            sentence = rng.choice(VISA[visa])
+            if visa == "no" and i % 2 == 0:
+                where = "the US" if country == "US" else "India"
+                sentence = VISA_NO_MORE[(i // 2) % len(VISA_NO_MORE)].format(country=where)
+            parts.append(sentence)
         parts.append("Benefits: health cover, learning budget, flexible hours.")
 
         postings.append([i, company, title, country, " ".join(parts)])
-        labels.append([i, ";".join(sorted(tools)), "" if lo is None else lo, "" if hi is None else hi, visa])
+        labels.append([i, ";".join(sorted(tools)), ";".join(sorted(required)), ";".join(sorted(nice)),
+                       "" if lo is None else lo, "" if hi is None else hi, visa])
     return postings, labels
 
 
@@ -129,7 +146,7 @@ def main():
         w.writerows(postings)
     with open(os.path.join(HERE, "data", "labels.csv"), "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["posting_id", "tools", "min_years", "max_years", "visa"])
+        w.writerow(["posting_id", "tools", "required", "nice", "min_years", "max_years", "visa"])
         w.writerows(labels)
     print("wrote %d postings" % len(postings))
 

@@ -1,7 +1,7 @@
 """Exercise: read job postings like data, with regex and counting.
 
-load_postings, role_text and main are done for you. Fill in everything marked TODO.
-Then run: python3 test_lesson.py
+load_postings, role_text, sentences, to_int and main are done for you.
+Fill in everything marked TODO. Then run: python3 test_lesson.py
 """
 import csv
 import os
@@ -25,14 +25,25 @@ TOOL_PATTERNS = {
     "dbt": None,
 }
 
-# TODO: match "3+ years", "2-4 years", "0 to 2 years" and "At least 3 years".
-# Group 1 is the low number, group 2 the high number (absent for open ended).
+# A number written as digits or as a word from zero to ten. Done for you.
+NUMBER_WORDS = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+NUM = r"(\d+|zero|one|two|three|four|five|six|seven|eight|nine|ten)"
+
+# TODO: match "3+ years", "2-4 years", "0 to 2 years", "At least 3 years", "3-5 yrs" and
+# "two years", but not "a 2 year contract". Group 1 is the low number, group 2 the high
+# number (absent for open ended). Build it from NUM, compile it with re.I.
+# Hint: (?:years?|yrs?)\b for the unit, and a negative lookahead (?!...) for "contract".
 YEARS = None
 
-# TODO: VISA_NO matches refusals ("unable to sponsor", "will not sponsor",
-# "without visa sponsorship"). VISA_YES matches any other mention of sponsoring.
-VISA_NO = None
-VISA_YES = None
+# TODO: three patterns for visa_status.
+# SPONSOR finds any form of the word: sponsor, sponsors, sponsorship, sponsoring.
+# NEGATION finds a negation word: not, no, never, nor, unable, cannot, without,
+#   unavailable, and any word ending in n't (don't, can't, won't).
+# VISA_WORD finds a visa word: visa, visas, H-1B, H1B, work permit, immigration, green card.
+SPONSOR = None
+NEGATION = None
+VISA_WORD = None
 
 
 def load_postings(data_dir=DATA):
@@ -46,27 +57,46 @@ def role_text(text):
     return text if i < 0 else text[i:]
 
 
+def sentences(text):
+    """Split text into sentences at '.', '!' or '?' followed by a space."""
+    return [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+
+def to_int(word):
+    return int(word) if word.isdigit() else NUMBER_WORDS[word.lower()]
+
+
 def extract_tools(text):
-    """Sorted list of tool names the role text asks for."""
+    """Sorted list of tool names the role text names anywhere."""
     # TODO: search role_text(text) with each pattern in TOOL_PATTERNS.
+    raise NotImplementedError
+
+
+def extract_asks(text):
+    """(required, nice): sorted tool lists from the 'Requirements:' and 'Nice to have:' sentences.
+    A tool named in both counts as required only."""
+    # TODO: loop over sentences(role_text(text)). A sentence that contains "Requirements:"
+    # adds the tools after that marker to required; one with "Nice to have:" adds to nice.
     raise NotImplementedError
 
 
 def extract_years(text):
     """(min_years, max_years) from the first experience phrase, max None if open ended. None if absent."""
-    # TODO: search role_text(text) with YEARS, return ints.
+    # TODO: search role_text(text) with YEARS, turn the groups into ints with to_int.
     raise NotImplementedError
 
 
 def visa_status(text):
-    """'no' if it refuses sponsorship, 'yes' if it mentions sponsoring, else 'silent'."""
-    # TODO: check VISA_NO before VISA_YES. "will not sponsor" contains "sponsor".
+    """'no', 'yes' or 'silent', from the role text only. Refusals are checked first."""
+    # TODO: keep the sentences of role_text(text) that mention sponsoring.
+    # Any of them has a negation: "no". Else any of them names a visa: "yes". Else "silent".
     raise NotImplementedError
 
 
-def skill_counts(postings):
-    """{tool: number of postings that name it}. A posting counts once per tool."""
-    # TODO
+def skill_counts(postings, part="required"):
+    """{tool: number of postings that ask for it}. part is 'required', 'nice' or 'any'.
+    A posting counts once per tool."""
+    # TODO: 'any' uses extract_tools; 'required' and 'nice' use extract_asks.
     raise NotImplementedError
 
 
@@ -84,13 +114,20 @@ def learn_next(counts, known, n=2):
 
 def main():
     postings = load_postings()
-    counts = skill_counts(postings)
     total = len(postings)
+    req, nice = skill_counts(postings, "required"), skill_counts(postings, "nice")
     print("postings:", total)
-    for t, c in sorted(counts.items(), key=lambda x: -x[1]):
-        print("%-9s %4d  %5.1f%%" % (t, c, 100.0 * c / total))
+    print("tool      required        nice")
+    for t in sorted(req, key=lambda t: (-req[t], t)):
+        print("%-9s %4d %5.1f%%  %4d %5.1f%%" % (t, req[t], 100.0 * req[t] / total,
+                                               nice.get(t, 0), 100.0 * nice.get(t, 0) / total))
     print(experience_buckets(postings))
-    print("learn next if you know SQL and Excel:", learn_next(counts, {"SQL", "Excel"}))
+    visa = {}
+    for p in postings:
+        s = visa_status(p["text"])
+        visa[s] = visa.get(s, 0) + 1
+    print(visa)
+    print("learn next if you know SQL and Excel:", learn_next(req, {"SQL", "Excel"}))
 
 
 if __name__ == "__main__":
