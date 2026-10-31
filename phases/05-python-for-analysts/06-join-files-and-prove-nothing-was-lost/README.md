@@ -321,4 +321,4 @@ Joining files and checking that the totals survive is daily work in SQL and in P
 
 ## Next
 
-That is the last lesson in this phase written so far. Go back to the [phase 05 overview](../README.md) for the lessons planned next.
+[07 APIs and JSON](../07-apis-and-json/): how many analyst roles did the feed return this week?

@@ -10,7 +10,7 @@ How many analyst roles did the feed return this week?
 
 ## The problem
 
-Jobnest, a fictional job marketplace, sends a newsletter every Monday that opens with "This week: N new analyst roles". The roles come from a partner's job feed, an API that returns JSON 50 roles at a time. Last Monday the newsletter said 50, and a reader replied that the partner's own site showed far more. Sana, the editor, wants the real number for the week of Monday 19 to Sunday 25 October 2026, split by country, before this Monday's issue goes out at 10:00.
+Pellwick, a fictional job board, sends a newsletter every Monday that opens with "This week: N new analyst roles". The roles come from a partner's job feed, an API that returns JSON 50 roles at a time. Last Monday the newsletter said 50, and a reader replied that the partner's own site showed far more. Sana, the editor, wants the real number for the week of Monday 19 to Sunday 25 October 2026, split by country, before this Monday's issue goes out at 10:00.
 
 The feed was recorded on Monday 26 October at 07:00 UTC into `data/pages/` (six pages) and `data/failures.json` (two requests that failed the first time). It is synthetic, built by `make_data.py` with a fixed seed: no real API was called and every company is invented. `data/fixture.json` says so.
 

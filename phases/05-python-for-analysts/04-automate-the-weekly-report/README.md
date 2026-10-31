@@ -247,4 +247,4 @@ Automating recurring reports is one of the first places an analyst's Python pays
 
 ## Next
 
-That ends the live lessons in phase 05. Go on to [06 AI for analysts](../../06-ai-for-analysts/), or back to the [phase 05 overview](../) to see the lessons planned next.
+[05: Profile a table before you trust it](../05-profile-a-table/): check a new table's rows, blanks and odd values before you report on it.

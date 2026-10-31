@@ -162,8 +162,13 @@ def scatter_svg(xs, ys, title, x_label="distance (km)", y_label="minutes"):
     return frame(title, x_label, y_label, y_lo, y_hi, body)
 
 
-def line_svg(values, title, x_label="day", y_label="deliveries"):
-    """One <polyline class="line">: point i at x for index i, y for values[i]."""
+def line_svg(values, title, x_labels=None, x_label="day", y_label="deliveries"):
+    """One <polyline class="line">: point i at x for index i, y for values[i].
+    x_labels, if given, has one string per value; a non-empty one becomes a <text class="xtick">."""
+    if not values:
+        raise ValueError("nothing to draw")
+    if x_labels is not None and len(x_labels) != len(values):
+        raise ValueError("x_labels must have one entry per value")
     y_lo, y_hi = value_domain(values, "line")
     y = linear_scale(y_lo, y_hi, BASELINE, TOP)
     if len(values) == 1:
@@ -173,6 +178,10 @@ def line_svg(values, title, x_label="day", y_label="deliveries"):
         xs = [x(i) for i in range(len(values))]
     points = " ".join("%.2f,%.2f" % (a, y(v)) for a, v in zip(xs, values))
     body = ['<polyline class="line" points="%s" fill="none" stroke="#4a7ab5" stroke-width="2"/>' % points]
+    for a, label in zip(xs, x_labels or []):
+        if label:
+            body.append('<text class="xtick" x="%.2f" y="%d" text-anchor="middle">%s</text>'
+                        % (a, BASELINE + 16, escape(label)))
     return frame(title, x_label, y_label, y_lo, y_hi, body)
 
 

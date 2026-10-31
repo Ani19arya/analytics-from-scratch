@@ -10,7 +10,7 @@ Every phase page lists its lessons in order. The full learning order across phas
 | 02 | [Statistics and experiments](02-statistics-and-experiments) | 12 | 3 |
 | 03 | [Metrics and product analytics](03-metrics-and-product-analytics) | 12 | 2 |
 | 04 | [Dashboards and spreadsheets](04-dashboards) | 12 | 0 |
-| 05 | [Python for analysts](05-python-for-analysts) | 6 | 4 |
+| 05 | [Python for analysts](05-python-for-analysts) | 10 | 0 |
 | 06 | [AI for analysts](06-ai-for-analysts) | 6 | 9 |
 | 07 | [Getting hired](07-getting-hired) | 9 | 3 |
 | 08 | [Modern data stack](08-modern-data-stack) | 5 | 1 |

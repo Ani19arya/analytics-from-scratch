@@ -212,10 +212,10 @@ Level total: about 76.5 hours of focused work.
 
 - [x] 05-03 [Dates, weeks and time zones](phases/05-python-for-analysts/03-dates-weeks-and-time-zones): How many people signed up each week over the new year, counted on the clock the team actually works on? About 2 h.
 - [x] 05-04 [Automate the weekly report](phases/05-python-for-analysts/04-automate-the-weekly-report): Can the Monday KPI report write itself, with the same numbers every time it runs? About 2 h.
-- [ ] 05-07 APIs and JSON *(planned)*: How many analyst roles did the feed return this week? About 2 h.
-- [ ] 05-08 More charts from scratch *(planned)*: Histogram, scatter or line: which shows the answer, and how do bins and scales mislead? About 2 h.
-- [ ] 05-09 Data quality tests as code *(planned)*: Would we have caught last week's broken load? About 2 h.
-- [ ] 05-10 From standard library to pandas *(planned)*: Which pandas call does each function you wrote correspond to? About 2 h.
+- [x] 05-07 [APIs and JSON](phases/05-python-for-analysts/07-apis-and-json): How many analyst roles did the feed return this week? About 2 h.
+- [x] 05-08 [More charts from scratch](phases/05-python-for-analysts/08-more-charts-from-scratch): Histogram, scatter or line: which shows the answer, and how do bins and scales mislead? About 2 h.
+- [x] 05-09 [Data quality tests as code](phases/05-python-for-analysts/09-data-quality-tests-as-code): Would we have caught last week's broken load? About 2 h.
+- [x] 05-10 [From standard library to pandas](phases/05-python-for-analysts/10-from-stdlib-to-pandas): Which pandas call does each function you wrote correspond to? About 2 h.
 
 **06 AI for analysts**
 

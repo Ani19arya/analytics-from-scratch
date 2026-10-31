@@ -14,9 +14,9 @@ This phase uses only the Python standard library: `csv`, `datetime`, `re`, `zone
 4. [Automate the weekly report](04-automate-the-weekly-report/) (level 2)
 5. [Profile a table before you trust it](05-profile-a-table/) (level 1)
 6. [Join two files and prove nothing was lost](06-join-files-and-prove-nothing-was-lost/) (level 1)
-7. APIs and JSON (planned)
-8. More charts from scratch (planned)
-9. Data quality tests as code (planned)
-10. From standard library to pandas (planned)
+7. [APIs and JSON](07-apis-and-json/) (level 2)
+8. [More charts from scratch](08-more-charts-from-scratch/) (level 2)
+9. [Data quality tests as code](09-data-quality-tests-as-code/) (level 2)
+10. [From standard library to pandas](10-from-stdlib-to-pandas/) (level 2)
 
 Each live lesson has a `README.md` to read, an `exercise.py` to fill in, and a `test_lesson.py` that checks your work on the lesson's data and on a second dataset built in memory. Run `python3 test_lesson.py` from the lesson folder.

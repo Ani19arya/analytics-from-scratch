@@ -14,8 +14,12 @@
 <line x1="60" x2="580" y1="40.00" y2="40.00" stroke="#e5e5e5"/>
 <text class="ytick" x="54" y="44.00" text-anchor="end">50</text>
 <polyline class="line" points="60.00,256.00 79.26,340.00 98.52,244.00 117.78,316.00 137.04,256.00 156.30,112.00 175.56,196.00 194.81,292.00 214.07,292.00 233.33,268.00 252.59,280.00 271.85,280.00 291.11,148.00 310.37,100.00 329.63,280.00 348.89,328.00 368.15,244.00 387.41,232.00 406.67,316.00 425.93,184.00 445.19,172.00 464.44,244.00 483.70,292.00 502.96,256.00 522.22,304.00 541.48,304.00 560.74,172.00 580.00,88.00" fill="none" stroke="#4a7ab5" stroke-width="2"/>
+<text class="xtick" x="60.00" y="356" text-anchor="middle">28 Sep</text>
+<text class="xtick" x="194.81" y="356" text-anchor="middle">5 Oct</text>
+<text class="xtick" x="329.63" y="356" text-anchor="middle">12 Oct</text>
+<text class="xtick" x="464.44" y="356" text-anchor="middle">19 Oct</text>
 <line class="axis" x1="60" x2="580" y1="340" y2="340" stroke="#333333"/>
 <line class="axis" x1="60" x2="60" y1="40" y2="340" stroke="#333333"/>
-<text x="320" y="388" text-anchor="middle">day</text>
+<text x="320" y="388" text-anchor="middle">day (labels on Mondays)</text>
 <text x="14" y="190" transform="rotate(-90 14 190)" text-anchor="middle">deliveries</text>
 </svg>

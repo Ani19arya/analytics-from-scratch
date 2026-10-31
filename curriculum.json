@@ -1011,7 +1011,7 @@
      "question": "How many analyst roles did the feed return this week?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
@@ -1026,7 +1026,7 @@
      "question": "Histogram, scatter or line: which shows the answer, and how do bins and scales mislead?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
@@ -1041,7 +1041,7 @@
      "question": "Would we have caught last week's broken load?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
@@ -1056,7 +1056,7 @@
      "question": "Which pandas call does each function you wrote correspond to?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
