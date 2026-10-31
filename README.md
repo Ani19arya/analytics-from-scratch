@@ -70,6 +70,15 @@ flowchart LR
 
 You climb every subject one level at a time: Level 1 (understand and solve guided problems), Level 2 (solve realistic problems on your own), Level 3 (ambiguous problems and recommendations), then Level 4 (land the job: run your own search with the same methods). The [learning roadmap](LEARNING_ROADMAP.md) gives the order, the milestones, a checklist to track your progress, and tracks for data, business, product, BI, growth and AI-enabled analyst roles.
 
+<!-- Fast track: printed by python3 tools/placement.py --markdown from its FAST_TRACK table. Edit the table, then paste. tools/test_placement.py checks they match. -->
+
+**Fast track.** Already working with data, or preparing for interviews? Run `python3 tools/placement.py` from the repo root. It asks your goal and 13 short questions, then prints where to start and what you can skip. The full paths are in the [learning roadmap](LEARNING_ROADMAP.md#fast-track). Skip a lesson only if the placement check or the lesson's own Check yourself is easy for you.
+
+- **Working data analyst**: the path opens with [01-03 Window functions](phases/01-sql/03-window-functions). Safe to skip if easy for you: 00-04, 01-01, 01-07, 02-01, 00-06, 05-01, 04-05, 04-06.
+- **BI analyst**: the path opens with [00-03 Tables, rows and grain](phases/00-start-here/03-tables-rows-and-grain). Safe to skip if easy for you: 04-04, 04-05, 04-06, 04-07, 00-04, 01-01.
+- **Business analyst**: the path opens with [00-05 NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce). Safe to skip if easy for you: 00-04, 01-01, 04-05, 04-06, 00-06, 06-04.
+- **Interview prep**: the path opens with [01-02 Joins without losing rows](phases/01-sql/02-joins-without-losing-rows). Safe to skip if easy for you: 00-04, 01-01, 02-01, 03-02, 05-01, 04-05.
+
 **Time:** about 350 hours in all, or 6 to 9 months at 10 to 12 hours a week. The course builds skills you can demonstrate. It cannot promise a job, and it does not pretend to.
 
 ## Curriculum

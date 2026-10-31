@@ -1,6 +1,6 @@
 # Learning roadmap
 
-This page tells you what to learn, in what order, and how you will know you have learned it. If you have never written a query, start at [phase 00](phases/00-start-here) and follow Level 1 below.
+This page tells you what to learn, in what order, and how you will know you have learned it. If you have never written a query, start at [phase 00](phases/00-start-here) and follow Level 1 below. Already working with data or preparing for interviews? Take the [Fast track](#fast-track).
 
 ## How the course is organised
 
@@ -99,6 +99,134 @@ Everyone does the shared core. Then weight your time by the role you want. The s
 | 10 Capstone projects | 01, 02, 06 | 01, 05 | 02, 04 | 05, 06 | 03, 01 | 07, 08 |
 
 An **analytics manager** track adds the Level 3 statistics and causal lessons, the semantic layer, data quality, AI governance (phase 06 lessons 07, 08, 11 and 14) and phase 07 lesson 06 on explaining findings to leadership.
+
+<!-- Fast track: printed by python3 tools/placement.py --markdown from its FAST_TRACK table. Edit the table, then paste. tools/test_placement.py checks they match. -->
+
+## Fast track
+
+Already working with data, or preparing for interviews? You do not have to start at phase 00. Run the placement check from the repo root first. It asks your goal and 13 short questions, then prints a start lesson and the lessons you can skip:
+
+```
+python3 tools/placement.py
+```
+
+Be honest with yourself: skip a lesson only if the placement check or the lesson's own **Check yourself** questions are easy for you. If you are unsure, do the lesson; a skipped gap costs more later than two hours now. Everyone should run [00-01 Run your first lesson](phases/00-start-here/01-run-your-first-lesson) once to check that Python works.
+
+These paths come from one table in `tools/placement.py`, so the script and this page always agree.
+
+### Working data analyst
+
+You write SQL at work and want experiments, metric judgment, data quality and AI checks.
+
+Do these, in order:
+
+1. [01-03 Window functions](phases/01-sql/03-window-functions): Windows are the most asked SQL skill after joins.
+2. [01-08 Duplicates and reconciliation](phases/01-sql/08-duplicates-and-reconciliation): Find duplicates and reconcile two sources before you trust a total.
+3. [01-12 Review a query someone else wrote](phases/01-sql/12-review-a-query-someone-else-wrote): The daily job now that AI writes much of the SQL.
+4. [02-03 A/B test from scratch](phases/02-statistics-and-experiments/03-ab-test-from-scratch): Run an A/B test from raw counts and make the call.
+5. [02-04 Sample size before you test](phases/02-statistics-and-experiments/04-sample-size-before-you-test): Size a test before it starts.
+6. [03-06 Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): Percent vs points and ratio of sums, the most common metric slip.
+7. [03-10 Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): Diagnose a metric drop in a fixed order.
+8. [05-05 Profile a table before you trust it](phases/05-python-for-analysts/05-profile-a-table): Row counts, keys and NULLs before any analysis.
+9. [05-09 Data quality tests as code](phases/05-python-for-analysts/09-data-quality-tests-as-code): Turn your checks into data quality tests.
+10. [06-01 Grade an LLM classifier](phases/06-ai-for-analysts/01-grade-an-llm-classifier): Grade an LLM classifier with precision and recall.
+11. [06-10 Natural language to SQL, safely](phases/06-ai-for-analysts/10-safe-nl-to-sql): Guard natural-language-to-SQL with code, not prompts.
+12. [10-01 E-commerce performance review](phases/10-capstone-projects/01-ecommerce-performance-review): A capstone you can show.
+
+Safe to skip, if the Check yourself is easy for you:
+
+- [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query): You write SELECT, WHERE and ORDER BY every day.
+- [01-01 GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): GROUP BY and HAVING are routine for you.
+- [01-07 Subqueries and CTEs](phases/01-sql/07-subqueries-and-ctes): You already use subqueries and CTEs.
+- [02-01 Mean, median and skew](phases/02-statistics-and-experiments/01-mean-median-and-skew): You already pick median over mean for skewed numbers.
+- [00-06 Python for spreadsheet people](phases/00-start-here/06-python-for-spreadsheet-people): You already read files and loop in Python.
+- [05-01 Clean a messy CSV](phases/05-python-for-analysts/01-clean-a-messy-csv): You already clean CSVs in code.
+- [04-05 Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Lookups and SUMIFS are spreadsheet basics you know.
+- [04-06 Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): You already build pivots.
+
+### BI analyst
+
+You build dashboards and want the model, the measures and the SQL behind them right.
+
+Do these, in order:
+
+1. [00-03 Tables, rows and grain](phases/00-start-here/03-tables-rows-and-grain): Grain decides every count on a dashboard.
+2. [04-01 Model the data a dashboard needs](phases/04-dashboards/01-model-the-data-a-dashboard-needs): Model the star schema a dashboard needs.
+3. [04-02 DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): DAX filter context, built from scratch.
+4. [04-03 Tableau LOD expressions in SQL](phases/04-dashboards/03-tableau-lod-expressions-in-sql): Tableau LOD expressions, rebuilt in SQL.
+5. [04-08 Relationships, role-playing dates and many-to-many](phases/04-dashboards/08-relationships-and-role-playing-dates): Dates and many-to-many without double counting.
+6. [04-09 One metric, one definition: the semantic layer](phases/04-dashboards/09-the-semantic-layer): Define each metric once so dashboards agree.
+7. [04-11 Row-level security](phases/04-dashboards/11-row-level-security): Row-level security that holds.
+8. [01-03 Window functions](phases/01-sql/03-window-functions): Window functions behind running totals and ranks.
+9. [01-08 Duplicates and reconciliation](phases/01-sql/08-duplicates-and-reconciliation): Reconcile the dashboard to the source.
+10. [03-05 Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): Write a metric definition people cannot misread.
+11. [03-06 Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): Percent vs points on every KPI card.
+12. [08-01 Warehouse layers: raw, staging and marts](phases/08-modern-data-stack/01-warehouse-layers): Where the tables you report on come from.
+13. [10-05 Executive dashboard](phases/10-capstone-projects/05-executive-dashboard): An executive dashboard capstone.
+
+Safe to skip, if the Check yourself is easy for you:
+
+- [04-04 Draw a chart from scratch](phases/04-dashboards/04-draw-a-chart-from-scratch): You build charts every day; drawing one from scratch is optional.
+- [04-05 Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): You already use lookups and SUMIFS.
+- [04-06 Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): You already build pivots and Power Query steps.
+- [04-07 Dashboard design and KPI cards](phases/04-dashboards/07-dashboard-design-and-kpi-cards): You already design KPI cards.
+- [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query): You already write basic SELECT queries.
+- [01-01 GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): GROUP BY and HAVING are routine for you.
+
+### Business analyst
+
+You work in spreadsheets and with stakeholders and want SQL, sharper metrics and clear answers.
+
+Do these, in order:
+
+1. [00-05 NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce): Why a blank is not a zero.
+2. [01-02 Joins without losing rows](phases/01-sql/02-joins-without-losing-rows): Joins without losing or doubling rows.
+3. [01-07 Subqueries and CTEs](phases/01-sql/07-subqueries-and-ctes): Subqueries and CTEs for multi-step questions.
+4. [03-05 Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): Numerator, denominator, window and exclusions, written down.
+5. [03-06 Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): The two slips behind most wrong KPI numbers.
+6. [03-09 Segmentation and mix effects](phases/03-metrics-and-product-analytics/09-segmentation-and-mix-effects): Mix effects: when every segment rises and the total falls.
+7. [03-10 Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): A fixed order of checks when a number falls.
+8. [02-01 Mean, median and skew](phases/02-statistics-and-experiments/01-mean-median-and-skew): Pick the number that describes a typical value.
+9. [06-03 Catch made-up numbers](phases/06-ai-for-analysts/03-catch-made-up-numbers): Catch made-up numbers in AI summaries.
+10. [07-06 Explain findings to leadership](phases/07-getting-hired/06-explain-findings-to-leadership): Lead with the decision, not the method.
+11. [09-09 Operations: why are deliveries late?](phases/09-business-case-studies/09-operations-late-deliveries): A process-heavy case study.
+
+Safe to skip, if the Check yourself is easy for you:
+
+- [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query): You already write basic SELECT queries.
+- [01-01 GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): GROUP BY and HAVING are routine for you.
+- [04-05 Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Lookups and SUMIFS are your daily tools.
+- [04-06 Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): You already build pivots.
+- [00-06 Python for spreadsheet people](phases/00-start-here/06-python-for-spreadsheet-people): You already read files and loop in Python.
+- [06-04 How LLMs work, for analysts](phases/06-ai-for-analysts/04-how-llms-work-for-analysts): You already know what tokens and temperature do.
+
+### Interview prep
+
+You have an analyst interview soon and want the rounds they actually run.
+
+Do these, in order:
+
+1. [01-02 Joins without losing rows](phases/01-sql/02-joins-without-losing-rows): Joins and fan-out, the first SQL screen question.
+2. [01-03 Window functions](phases/01-sql/03-window-functions): Window functions, the second.
+3. [01-11 Gaps and islands: streaks](phases/01-sql/11-gaps-and-islands): Gaps and islands, the classic hard question.
+4. [07-02 SQL interview questions](phases/07-getting-hired/02-sql-interview-questions): SQL interview questions under time.
+5. [02-03 A/B test from scratch](phases/02-statistics-and-experiments/03-ab-test-from-scratch): The experiment question in most statistics rounds.
+6. [02-10 Correlation, causation and Simpson's paradox](phases/02-statistics-and-experiments/10-correlation-causation-and-simpson): The causation trap interviewers love.
+7. [07-09 The statistics interview round](phases/07-getting-hired/09-statistics-interview-round): Practise the statistics round.
+8. [03-01 Metric trees](phases/03-metrics-and-product-analytics/01-metric-trees): Metric trees, the frame for every case.
+9. [03-10 Diagnose a metric drop](phases/03-metrics-and-product-analytics/10-diagnose-a-metric-drop): Diagnose a metric drop, the most common case.
+10. [07-08 The metrics case interview](phases/07-getting-hired/08-metrics-case-interview): Practise the case out loud.
+11. [07-10 The take-home assignment](phases/07-getting-hired/10-the-take-home-assignment): Scope, check and present a take-home.
+12. [07-11 Behavioural answers that show analysis](phases/07-getting-hired/11-behavioural-answers): Stories with a number and a decision.
+
+Safe to skip, if the Check yourself is easy for you:
+
+- [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query): You already write basic SELECT queries.
+- [01-01 GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): GROUP BY and HAVING are routine for you.
+- [02-01 Mean, median and skew](phases/02-statistics-and-experiments/01-mean-median-and-skew): You already pick median over mean for skewed numbers.
+- [03-02 Funnel conversion](phases/03-metrics-and-product-analytics/02-funnel-conversion): You can already compute a funnel.
+- [05-01 Clean a messy CSV](phases/05-python-for-analysts/01-clean-a-messy-csv): Interviews rarely ask you to clean a CSV.
+- [04-05 Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Interviews rarely test spreadsheet lookups.
 
 ## Level 1: understand and solve guided problems
 
