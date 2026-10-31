@@ -121,5 +121,7 @@ Little, because the course is a week old. Two framing updates:
 | 31 Oct 2026 | 2. Foundation | README, roadmap, skills evidence, contributing guide, lesson template v2, curriculum.json, lint, docs builder and CI are in place |
 | 31 Oct 2026 | 3. On-ramp | Phase 00 is live: six Level 1 lessons and `tools/query.py` |
 | 31 Oct 2026 | 4. Visuals | Every live lesson has at least one diagram (Mermaid or an SVG its own code draws) |
+| 31 Oct 2026 | 5. Core depth | 22 more Level 1 lessons live (01-05 to 01-07, 02-05 to 02-07, 03-05, 03-06, 04-05 to 04-07, 05-05, 05-06, 06-04, 06-05, 06-11, 07-05 to 07-07, 07-11, 07-12, 08-06): Level 1 is complete |
+| 31 Oct 2026 | 6. Level 2 | All 47 intermediate lessons live across SQL, statistics, metrics, dashboards, Python, AI, interviews, the modern data stack and nine business case studies. Each solution passes on Python 3.9 and 3.13, each exercise fails as shipped, and each dataset rebuilds byte for byte |
 
-State after these waves: 33 live lessons, 88 planned. `python3 tools/run_all_tests.py --exercise` reports 0 problems and `python3 tools/lint.py --strict` reports 0 errors and 0 warnings. Next: wave 5, core depth, in the order of LEARNING_ROADMAP.md Level 1, starting with the lessons that are prerequisites for live ones (02-05 probability and 02-07 sampling before 02-02 intervals; 01-05 dates before 01-04 cohorts).
+State after these waves: 102 live lessons, 19 planned (all Level 3: the advanced lessons and the capstones). `python3 tools/run_all_tests.py --exercise` reports 0 problems and `python3 tools/lint.py --strict` reports 0 errors and 0 warnings. Next: wave 7, Level 3, in the order of LEARNING_ROADMAP.md.
