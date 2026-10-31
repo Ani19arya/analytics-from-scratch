@@ -1,5 +1,7 @@
 # Analytics from Scratch
 
+[![course checks](https://github.com/Ani19arya/analytics-from-scratch/actions/workflows/course.yml/badge.svg?branch=main)](https://github.com/Ani19arya/analytics-from-scratch/actions/workflows/course.yml)
+
 **Become an analyst who can be trusted with the number.** A free, open course that takes you from your first SQL query to experiments, dashboards, Python, AI agents, a portfolio and a job search you run like an analysis, by building every method yourself and checking it with a test.
 
 [Start here](phases/00-start-here) · [Learning roadmap](LEARNING_ROADMAP.md) · [Skills employers ask for in 2026](2026-2027-ANALYTICS-SKILLS.md) · [Read it online](https://realanalystjobs.com/learn) · [Contribute](CONTRIBUTING.md)
