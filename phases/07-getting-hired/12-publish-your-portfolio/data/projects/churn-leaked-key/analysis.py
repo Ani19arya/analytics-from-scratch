@@ -3,7 +3,7 @@ import csv
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-API_KEY = "demoe4qv371rbanw9tye8tw311dm"  # pasted while testing, never removed
+API_KEY = "FAKE_not_a_real_key_e4qv371rbanw9tye8tw311dm"  # pasted while testing, never removed
 
 
 def main():

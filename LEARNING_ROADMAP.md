@@ -107,58 +107,58 @@ An **analytics manager** track adds the Level 3 statistics and causal lessons, t
 
 - [x] 01-01 [GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): How much did each city bring in last quarter, and which cities are big enough to matter? About 2 h.
 - [x] 01-02 [Joins without losing rows](phases/01-sql/02-joins-without-losing-rows): Which customers have never ordered, and what is revenue by city without counting any order twice? About 2 h.
-- [ ] 01-05 Dates and the date spine *(planned)*: What were signups per day, including the days with zero? About 2 h.
-- [ ] 01-06 Anti-joins, self-joins and UNION *(planned)*: Which customers ordered in March but not in April? About 2 h.
-- [ ] 01-07 Subqueries and CTEs *(planned)*: Which customers spent more than their city's average? About 2 h.
+- [x] 01-05 [Dates and the date spine](phases/01-sql/05-dates-and-the-date-spine): What were signups per day, including the days with zero? About 2 h.
+- [x] 01-06 [Anti-joins, self-joins and UNION](phases/01-sql/06-anti-joins-self-joins-and-union): Which customers ordered in March but not in April? About 2 h.
+- [x] 01-07 [Subqueries and CTEs](phases/01-sql/07-subqueries-and-ctes): Which customers spent more than their city's average? About 2 h.
 
 **02 Statistics and experiments**
 
 - [x] 02-01 [Mean, median and skew](phases/02-statistics-and-experiments/01-mean-median-and-skew): What is the typical posted pay for an analyst role, and which number should we put on the slide? About 2 h.
 - [x] 02-02 [Confidence interval by hand](phases/02-statistics-and-experiments/02-confidence-interval-by-hand): How sure are we about an average or a rate measured on a sample? About 2 h.
-- [ ] 02-05 Probability and distributions by simulation *(planned)*: If 10% of visitors buy, how many of 200 should buy, and how unusual is 30? About 2 h.
-- [ ] 02-06 Outliers, box plots and robust summaries *(planned)*: Which salaries are real outliers, and which summary survives them? About 2 h.
-- [ ] 02-07 Sampling and the central limit theorem *(planned)*: Why does the average of 18 orders wobble, and by how much? About 2 h.
+- [x] 02-05 [Probability and distributions by simulation](phases/02-statistics-and-experiments/05-probability-by-simulation): If 10% of visitors buy, how many of 200 should buy, and how unusual is 30? About 2 h.
+- [x] 02-06 [Outliers, box plots and robust summaries](phases/02-statistics-and-experiments/06-spread-percentiles-and-outliers): Which salaries are real outliers, and which summary survives them? About 2 h.
+- [x] 02-07 [Sampling and the central limit theorem](phases/02-statistics-and-experiments/07-sampling-and-the-clt): Why does the average of 18 orders wobble, and by how much? About 2 h.
 
 **03 Metrics and product analytics**
 
 - [x] 03-02 [Funnel conversion](phases/03-metrics-and-product-analytics/02-funnel-conversion): Of the people who look at a course, how many buy it, and at which step do we lose the most of them? About 2 h.
 - [x] 03-03 [Active users and stickiness](phases/03-metrics-and-product-analytics/03-active-users-and-stickiness): How many people really use the app, and how often do they come back? About 2 h.
-- [ ] 03-05 Define a metric precisely *(planned)*: What exactly counts as an active customer, and what goes in the metric spec? About 2 h.
-- [ ] 03-06 Percent vs points, ratio of sums vs average of ratios *(planned)*: Did conversion rise 2% or 2 points, and why do two dashboards disagree? About 2 h.
+- [x] 03-05 [Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): What exactly counts as an active customer, and what goes in the metric spec? About 2 h.
+- [x] 03-06 [Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): Did conversion rise 2% or 2 points, and why do two dashboards disagree? About 2 h.
 
 **04 Dashboards and spreadsheets**
 
 - [x] 04-04 [Draw a chart from scratch](phases/04-dashboards/04-draw-a-chart-from-scratch): What does a dashboard tool do when it turns a table into a bar chart, and which chart should you pick in the first place? About 2 h.
-- [ ] 04-05 Lookups and SUMIFS like Excel *(planned)*: Why does the VLOOKUP total not match finance? About 2 h.
-- [ ] 04-06 Pivot tables and Power Query steps *(planned)*: Can next month's file be cleaned and merged with one click? About 2 h.
-- [ ] 04-07 Dashboard design and KPI cards *(planned)*: What should the CEO see in five seconds? About 2 h.
+- [x] 04-05 [Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Why does the VLOOKUP total not match finance? About 2 h.
+- [x] 04-06 [Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): Can next month's file be cleaned and merged with one click? About 2 h.
+- [x] 04-07 [Dashboard design and KPI cards](phases/04-dashboards/07-dashboard-design-and-kpi-cards): What should the CEO see in five seconds? About 2 h.
 
 **05 Python for analysts**
 
 - [x] 05-01 [Clean a messy CSV](phases/05-python-for-analysts/01-clean-a-messy-csv): Which rows of this export can we trust, and what did we change to get there? About 2 h.
 - [x] 05-02 [Reshape wide and long](phases/05-python-for-analysts/02-reshape-wide-and-long): The data has one row per region and month. The manager wants one row per region. How do you move between the two without losing anything? About 2 h.
-- [ ] 05-05 Profile a table before you trust it *(planned)*: Is this table fit for the board number? About 2 h.
-- [ ] 05-06 Join two files and prove nothing was lost *(planned)*: After the merge, are the totals still the totals? About 2 h.
+- [x] 05-05 [Profile a table before you trust it](phases/05-python-for-analysts/05-profile-a-table): Is this table fit for the board number? About 2 h.
+- [x] 05-06 [Join two files and prove nothing was lost](phases/05-python-for-analysts/06-join-files-and-prove-nothing-was-lost): After the merge, are the totals still the totals? About 2 h.
 
 **06 AI for analysts**
 
-- [ ] 06-04 How LLMs work, for analysts *(planned)*: What is a token, what does a run cost, and why does the same prompt give different answers? About 2 h.
-- [ ] 06-05 Prompt versions as experiments *(planned)*: Is prompt v2 better than v1 on the same 200 tickets? About 2 h.
-- [ ] 06-11 Keep personal data out of prompts *(planned)*: Is any customer's email or phone number about to leave the building? About 2 h.
+- [x] 06-04 [How LLMs work, for analysts](phases/06-ai-for-analysts/04-how-llms-work-for-analysts): What is a token, what does a run cost, and why does the same prompt give different answers? About 2 h.
+- [x] 06-05 [Prompt versions as experiments](phases/06-ai-for-analysts/05-prompt-versions-as-experiments): Is prompt v2 better than v1 on the same 200 tickets? About 2 h.
+- [x] 06-11 [Keep personal data out of prompts](phases/06-ai-for-analysts/11-keep-pii-out-of-prompts): Is any customer's email or phone number about to leave the building? About 2 h.
 
 **07 Getting hired**
 
 - [x] 07-01 [Read job postings like data](phases/07-getting-hired/01-read-job-postings-like-data): Across 300 analyst job postings, which tools are required most, how much experience do they want, and what do they say about visa sponsorship? About 2 h.
 - [x] 07-04 [Match your resume to a posting](phases/07-getting-hired/04-match-your-resume-to-a-posting): Of five open roles, which ones fit this resume best, and which missing skills stand between the candidate and the rest? About 2 h.
-- [ ] 07-05 Role roadmaps from postings *(planned)*: Data, business, product or BI analyst: which skills differ? About 2 h.
-- [ ] 07-06 Explain findings to leadership *(planned)*: Can the VP act on your summary after reading only the first two lines? About 2 h.
-- [ ] 07-07 Resume bullets that are true *(planned)*: Does every number on your resume come from work you can show? About 2 h.
-- [ ] 07-11 Behavioural answers that show analysis *(planned)*: Tell me about a time your analysis changed a decision. Guide, no test. About 1 h.
-- [ ] 07-12 Publish your portfolio *(planned)*: Can a hiring manager run your project in one command? About 2 h.
+- [x] 07-05 [Role roadmaps from postings](phases/07-getting-hired/05-role-roadmaps-from-postings): Data, business, product or BI analyst: which skills differ? About 2 h.
+- [x] 07-06 [Explain findings to leadership](phases/07-getting-hired/06-explain-findings-to-leadership): Can the VP act on your summary after reading only the first two lines? About 2 h.
+- [x] 07-07 [Resume bullets that are true](phases/07-getting-hired/07-resume-bullets-that-are-true): Does every number on your resume come from work you can show? About 2 h.
+- [x] 07-11 [Behavioural answers that show analysis](phases/07-getting-hired/11-behavioural-answers): Tell me about a time your analysis changed a decision. Guide, no test. About 1 h.
+- [x] 07-12 [Publish your portfolio](phases/07-getting-hired/12-publish-your-portfolio): Can a hiring manager run your project in one command? About 2 h.
 
 **08 Modern data stack**
 
-- [ ] 08-06 Git for analysts *(planned)*: Who changed the revenue query, and can we undo it? About 2 h.
+- [x] 08-06 [Git for analysts](phases/08-modern-data-stack/06-git-for-analysts): Who changed the revenue query, and can we undo it? About 2 h.
 
 Level total: about 76.5 hours of focused work.
 <!-- /generated:level-beginner -->

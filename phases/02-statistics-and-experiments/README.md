@@ -10,10 +10,10 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 
 **Level 1: beginner**
 
-1. 05 Probability and distributions by simulation (planned): if 10% of visitors buy, how many of 200 should buy, and how unusual is 30?
+1. [05 Probability and distributions by simulation](05-probability-by-simulation/): if 10% of visitors buy, how many of 200 should buy, and how unusual is 30?
 2. [01 Mean, median and skew](01-mean-median-and-skew/): what is the typical posted pay for an analyst role, and which number goes on the slide? Adds spread (SD, P25 and P75) and a histogram.
-3. 06 Spread, percentiles and outliers (planned): most analyst roles pay between what and what?
-4. 07 Sampling and the central limit theorem (planned): why does the average of 18 orders wobble, and by how much?
+3. [06 Spread, percentiles and outliers](06-spread-percentiles-and-outliers/): most analyst roles pay between what and what?
+4. [07 Sampling and the central limit theorem](07-sampling-and-the-clt/): why does the average of 18 orders wobble, and by how much?
 5. [02 Confidence interval by hand](02-confidence-interval-by-hand/): how sure are we about an average or a rate measured on a sample?
 
 **Level 2: intermediate**

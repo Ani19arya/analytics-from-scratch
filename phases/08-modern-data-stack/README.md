@@ -40,7 +40,7 @@ In the Real Analyst Jobs data from 29 October 2026, Snowflake appears in 8.7% of
 3. Incremental models and backfills *(planned)*. Can yesterday's numbers be fixed without rebuilding three years of data?
 4. Orchestration: a tiny DAG runner *(planned)*. What happens at 6 am when the 5 am job failed?
 5. Query cost in a cloud warehouse *(planned)*. Why did one dashboard cost 400 dollars, and how do partitions fix it?
-6. Git for analysts *(planned)*. Who changed the revenue query, and can we undo it?
+6. [Git for analysts](06-git-for-analysts/). Who changed the revenue query, and can we undo it?
 
 Every lesson runs offline: dbt's dependency order is rebuilt with Python's `graphlib`, the warehouse is SQLite, and the Git lesson's test skips if Git is not installed.
 

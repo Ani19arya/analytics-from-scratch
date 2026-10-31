@@ -41,7 +41,7 @@ if __name__ == "__main__":
 '''
 GOOD_PATH = 'os.path.join(HERE, "data", "customers.csv")'
 LOCAL_PATH = '"/Users/maya/Downloads/customers.csv"'
-SECRET_LINE = 'API_KEY = "demo{key}"  # pasted while testing, never removed'
+SECRET_LINE = 'API_KEY = "FAKE_not_a_real_key_{key}"  # pasted while testing, never removed'
 NETWORK_CODE = '''
 
 def fetch_holidays():
@@ -115,7 +115,7 @@ def project(rng, breaks):
         "data/customers.csv": "customer_id,start_type,churned\n" + "".join("%d,%s,%d\n" % r for r in rows),
     }
     if "secret" in breaks:
-        files[".env"] = "API_KEY=demo%s\n" % key
+        files[".env"] = "API_KEY=FAKE_not_a_real_key_%s\n" % key
     if "unpinned" in breaks:
         files["requirements.txt"] = "pandas\nmatplotlib>=3.0\n"
     if "large_file" in breaks:

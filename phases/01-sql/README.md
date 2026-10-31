@@ -8,7 +8,7 @@ This phase teaches the SQL an analyst writes every day, starting from one raw ta
 - Spreadsheet users who already think in filters and pivot tables and want the same in SQL.
 - Anyone preparing for an analyst interview: the Common mistakes and Check yourself sections are the questions interviewers ask.
 
-You need Python 3.9 or later. SQLite comes with Python, so there is nothing to install and nothing to connect to. The two start-here lessons that will come before this phase, 00-04 Your first SQL query (planned) and 00-05 NULLs, CASE and COALESCE (planned), are not written yet; lessons 01 and 02 cover what you need from them.
+You need Python 3.9 or later. SQLite comes with Python, so there is nothing to install and nothing to connect to. If SQL is new to you, take the start-here lessons [Your first SQL query](../00-start-here/04-your-first-sql-query/) and [NULLs, CASE and COALESCE](../00-start-here/05-nulls-case-and-coalesce/) first.
 
 ## Lessons, in learning order
 
@@ -17,10 +17,10 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 **Level 1: beginner**
 
 1. [01 GROUP BY from raw rows](01-group-by-from-raw-rows/): completed revenue by city with COUNT, SUM and AVG, HAVING versus WHERE, and the logical order a query runs in.
-2. 05 Dates and the date spine (planned): signups per day, including the days with zero.
+2. [05 Dates and the date spine](05-dates-and-the-date-spine/): signups per day, including the days with zero.
 3. [02 Joins without losing rows](02-joins-without-losing-rows/): predict a join's row count, find customers who never ordered (LEFT JOIN and NOT EXISTS), and fix a fan-out that overstated revenue.
-4. 06 Anti-joins, self-joins and UNION (planned): which customers ordered in March but not in April?
-5. 07 Subqueries and CTEs (planned): which customers spent more than their city's average?
+4. [06 Anti-joins, self-joins and UNION](06-anti-joins-self-joins-and-union/): which customers ordered in March but not in April?
+5. [07 Subqueries and CTEs](07-subqueries-and-ctes/): which customers spent more than their city's average?
 
 **Level 2: intermediate**
 
@@ -80,4 +80,4 @@ Four behaviours that differ and can change a number without an error:
 - **Lenient SQLite.** SQLite accepts a SELECT alias in WHERE (Snowflake does too; Postgres, SQL Server and BigQuery do not) and a column that is neither grouped nor aggregated in a GROUP BY query (Postgres, SQL Server, BigQuery and Snowflake all reject it). See lesson 01.
 - **RIGHT and FULL OUTER JOIN** need SQLite 3.39 or later. The exercises do not use them.
 
-Previous: start here, phase 00 (planned). Next phase: [02 Statistics and experiments](../02-statistics-and-experiments/).
+Previous: [00 Start here](../00-start-here/). Next phase: [02 Statistics and experiments](../02-statistics-and-experiments/).

@@ -7,7 +7,7 @@ How sure are we about an average or a rate measured on a sample?
 - Level: 1 (beginner).
 - Time: about 2 hours.
 - Builds on [Mean, median and skew](../01-mean-median-and-skew/) (the mean and the standard deviation).
-- Two lessons are planned to come before this one: probability and distributions by simulation, and sampling and the central limit theorem. Until they exist, the section "The idea" below gives you the short version of both, with a simulation you can run.
+- Helps to have done [Probability by simulation](../05-probability-by-simulation/) and [Sampling and the central limit theorem](../07-sampling-and-the-clt/). If you skipped them, the section "The idea" below gives you the short version of both, with a simulation you can run.
 
 ## The problem
 

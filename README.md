@@ -76,17 +76,17 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | Phase | What you learn | Lessons live | Planned |
 |---|---|---|---|
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
-| [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 4 | 10 |
-| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 4 | 11 |
-| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 4 | 10 |
-| [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 4 | 8 |
-| [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 4 | 6 |
-| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 3 | 12 |
-| [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 4 | 8 |
-| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 0 | 6 |
+| [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 7 | 7 |
+| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 7 | 8 |
+| [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 6 | 8 |
+| [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 7 | 5 |
+| [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 6 | 4 |
+| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
+| [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 9 | 3 |
+| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 1 | 5 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **33** | **88** |
+| **All** | | **55** | **66** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -107,9 +107,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 01-02 [Joins without losing rows](phases/01-sql/02-joins-without-losing-rows): Which customers have never ordered, and what is revenue by city without counting any order twice? (Level 1)
 3. 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its fiscal year to date, who are the top reps, and did revenue go up or down from last month? (Level 2)
 4. 01-04 [Cohort retention](phases/01-sql/04-cohort-retention): Of the users who signed up in each month, what share were still active one, two and three months later? (Level 2)
-5. 01-05 Dates and the date spine *(planned)*: What were signups per day, including the days with zero? (Level 1)
-6. 01-06 Anti-joins, self-joins and UNION *(planned)*: Which customers ordered in March but not in April? (Level 1)
-7. 01-07 Subqueries and CTEs *(planned)*: Which customers spent more than their city's average? (Level 1)
+5. 01-05 [Dates and the date spine](phases/01-sql/05-dates-and-the-date-spine): What were signups per day, including the days with zero? (Level 1)
+6. 01-06 [Anti-joins, self-joins and UNION](phases/01-sql/06-anti-joins-self-joins-and-union): Which customers ordered in March but not in April? (Level 1)
+7. 01-07 [Subqueries and CTEs](phases/01-sql/07-subqueries-and-ctes): Which customers spent more than their city's average? (Level 1)
 8. 01-08 Duplicates and reconciliation *(planned)*: After the CRM import doubled some rows, how many unique customers really signed up? (Level 2)
 9. 01-09 Rolling averages and percent of total *(planned)*: What is the 7-day moving average of orders, and each region's share of revenue? (Level 2)
 10. 01-10 Sessionization from raw events *(planned)*: How many sessions does each user have with a 30-minute timeout, and how long is a session? (Level 2)
@@ -124,9 +124,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 02-02 [Confidence interval by hand](phases/02-statistics-and-experiments/02-confidence-interval-by-hand): How sure are we about an average or a rate measured on a sample? (Level 1)
 3. 02-03 [A/B test from scratch](phases/02-statistics-and-experiments/03-ab-test-from-scratch): Did the new checkout page really convert better, or did we get lucky? (Level 2)
 4. 02-04 [Sample size before you test](phases/02-statistics-and-experiments/04-sample-size-before-you-test): How many users, and how many weeks, do we need before an A/B test can answer the question we care about? (Level 2)
-5. 02-05 Probability and distributions by simulation *(planned)*: If 10% of visitors buy, how many of 200 should buy, and how unusual is 30? (Level 1)
-6. 02-06 Outliers, box plots and robust summaries *(planned)*: Which salaries are real outliers, and which summary survives them? (Level 1)
-7. 02-07 Sampling and the central limit theorem *(planned)*: Why does the average of 18 orders wobble, and by how much? (Level 1)
+5. 02-05 [Probability and distributions by simulation](phases/02-statistics-and-experiments/05-probability-by-simulation): If 10% of visitors buy, how many of 200 should buy, and how unusual is 30? (Level 1)
+6. 02-06 [Outliers, box plots and robust summaries](phases/02-statistics-and-experiments/06-spread-percentiles-and-outliers): Which salaries are real outliers, and which summary survives them? (Level 1)
+7. 02-07 [Sampling and the central limit theorem](phases/02-statistics-and-experiments/07-sampling-and-the-clt): Why does the average of 18 orders wobble, and by how much? (Level 1)
 8. 02-08 Hypothesis testing by permutation *(planned)*: Could this gap appear just by shuffling the labels? (Level 2)
 9. 02-09 Comparing categories: the chi-square test *(planned)*: Do the three signup flows differ in completion rate? (Level 2)
 10. 02-10 Correlation, causation and Simpson's paradox *(planned)*: Users who get more notifications work out more. Should we send more? (Level 2)
@@ -142,8 +142,8 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 03-02 [Funnel conversion](phases/03-metrics-and-product-analytics/02-funnel-conversion): Of the people who look at a course, how many buy it, and at which step do we lose the most of them? (Level 1)
 3. 03-03 [Active users and stickiness](phases/03-metrics-and-product-analytics/03-active-users-and-stickiness): How many people really use the app, and how often do they come back? (Level 1)
 4. 03-04 [North star and guardrails](phases/03-metrics-and-product-analytics/04-north-star-and-guardrails): The new feature moved our main metric up, so should we launch it? (Level 2)
-5. 03-05 Define a metric precisely *(planned)*: What exactly counts as an active customer, and what goes in the metric spec? (Level 1)
-6. 03-06 Percent vs points, ratio of sums vs average of ratios *(planned)*: Did conversion rise 2% or 2 points, and why do two dashboards disagree? (Level 1)
+5. 03-05 [Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): What exactly counts as an active customer, and what goes in the metric spec? (Level 1)
+6. 03-06 [Percent vs points, ratio of sums vs average of ratios](phases/03-metrics-and-product-analytics/06-percent-points-and-averages-of-ratios): Did conversion rise 2% or 2 points, and why do two dashboards disagree? (Level 1)
 7. 03-07 Growth accounting *(planned)*: Where did this month's MAU change come from: new, retained, resurrected or churned users? (Level 2)
 8. 03-08 Retention curves and churn *(planned)*: What share of users are still here on day 7 and day 30, and which retention definition fits? (Level 2)
 9. 03-09 Segmentation and mix effects *(planned)*: Did conversion fall, or did the traffic mix change? (Level 2)
@@ -159,9 +159,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, share, year to date and growth on last year numbers without Power BI? (Level 2)
 3. 04-03 [Tableau LOD expressions in SQL](phases/04-dashboards/03-tableau-lod-expressions-in-sql): How do you compute a number at a different level of detail from the chart it sits in, such as each customer's first order month in a chart by month, or a region's total in a chart by customer? (Level 2)
 4. 04-04 [Draw a chart from scratch](phases/04-dashboards/04-draw-a-chart-from-scratch): What does a dashboard tool do when it turns a table into a bar chart, and which chart should you pick in the first place? (Level 1)
-5. 04-05 Lookups and SUMIFS like Excel *(planned)*: Why does the VLOOKUP total not match finance? (Level 1)
-6. 04-06 Pivot tables and Power Query steps *(planned)*: Can next month's file be cleaned and merged with one click? (Level 1)
-7. 04-07 Dashboard design and KPI cards *(planned)*: What should the CEO see in five seconds? (Level 1)
+5. 04-05 [Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Why does the VLOOKUP total not match finance? (Level 1)
+6. 04-06 [Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): Can next month's file be cleaned and merged with one click? (Level 1)
+7. 04-07 [Dashboard design and KPI cards](phases/04-dashboards/07-dashboard-design-and-kpi-cards): What should the CEO see in five seconds? (Level 1)
 8. 04-08 Relationships, role-playing dates and many-to-many *(planned)*: Why does revenue by ship month differ from revenue by order month? (Level 2)
 9. 04-09 One metric, one definition: the semantic layer *(planned)*: Why do two dashboards show different active users? (Level 2)
 10. 04-10 Slowly changing dimensions *(planned)*: Which region was this customer in when they ordered? (Level 2)
@@ -174,8 +174,8 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 05-02 [Reshape wide and long](phases/05-python-for-analysts/02-reshape-wide-and-long): The data has one row per region and month. The manager wants one row per region. How do you move between the two without losing anything? (Level 1)
 3. 05-03 [Dates, weeks and time zones](phases/05-python-for-analysts/03-dates-weeks-and-time-zones): How many people signed up each week over the new year, counted on the clock the team actually works on? (Level 2)
 4. 05-04 [Automate the weekly report](phases/05-python-for-analysts/04-automate-the-weekly-report): Can the Monday KPI report write itself, with the same numbers every time it runs? (Level 2)
-5. 05-05 Profile a table before you trust it *(planned)*: Is this table fit for the board number? (Level 1)
-6. 05-06 Join two files and prove nothing was lost *(planned)*: After the merge, are the totals still the totals? (Level 1)
+5. 05-05 [Profile a table before you trust it](phases/05-python-for-analysts/05-profile-a-table): Is this table fit for the board number? (Level 1)
+6. 05-06 [Join two files and prove nothing was lost](phases/05-python-for-analysts/06-join-files-and-prove-nothing-was-lost): After the merge, are the totals still the totals? (Level 1)
 7. 05-07 APIs and JSON *(planned)*: How many analyst roles did the feed return this week? (Level 2)
 8. 05-08 More charts from scratch *(planned)*: Histogram, scatter or line: which shows the answer, and how do bins and scales mislead? (Level 2)
 9. 05-09 Data quality tests as code *(planned)*: Would we have caught last week's broken load? (Level 2)
@@ -186,14 +186,14 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 1. 06-01 [Grade an LLM classifier](phases/06-ai-for-analysts/01-grade-an-llm-classifier): Is the LLM good enough at spotting refund tickets that we can route them automatically? (Level 2)
 2. 06-02 [Check LLM-written SQL](phases/06-ai-for-analysts/02-check-llm-written-sql): Which of the queries the LLM wrote can we trust, and which ones would have put a wrong number in the report? (Level 2)
 3. 06-03 [Catch made-up numbers](phases/06-ai-for-analysts/03-catch-made-up-numbers): Every number in the AI-written summary: is it actually in the data? (Level 2)
-4. 06-04 How LLMs work, for analysts *(planned)*: What is a token, what does a run cost, and why does the same prompt give different answers? (Level 1)
-5. 06-05 Prompt versions as experiments *(planned)*: Is prompt v2 better than v1 on the same 200 tickets? (Level 1)
+4. 06-04 [How LLMs work, for analysts](phases/06-ai-for-analysts/04-how-llms-work-for-analysts): What is a token, what does a run cost, and why does the same prompt give different answers? (Level 1)
+5. 06-05 [Prompt versions as experiments](phases/06-ai-for-analysts/05-prompt-versions-as-experiments): Is prompt v2 better than v1 on the same 200 tickets? (Level 1)
 6. 06-06 Structured output you can load *(planned)*: Can we put the model's JSON straight into a table? (Level 2)
 7. 06-07 How big must an eval set be? *(planned)*: How many labelled examples do we need before we trust the score? (Level 2)
 8. 06-08 Human in the loop: confidence thresholds *(planned)*: How many tickets can we auto-route at 95% precision, and who reviews the rest? (Level 2)
 9. 06-09 LLM as judge, and judging the judge *(planned)*: Can a model grade answers, and does its grading agree with people? (Level 2)
 10. 06-10 Natural language to SQL, safely *(planned)*: Can we let people ask the database questions in English without breaking anything? (Level 2)
-11. 06-11 Keep personal data out of prompts *(planned)*: Is any customer's email or phone number about to leave the building? (Level 1)
+11. 06-11 [Keep personal data out of prompts](phases/06-ai-for-analysts/11-keep-pii-out-of-prompts): Is any customer's email or phone number about to leave the building? (Level 1)
 12. 06-12 RAG over the metrics glossary *(planned)*: Which definition of active user did the bot cite, and was it the right one? (Level 2)
 13. 06-13 An analytics agent loop from scratch *(planned)*: What does an agent actually do between your question and its answer? (Level 3)
 14. 06-14 Audit an agent's work *(planned)*: The agent says revenue grew 12%. Which step should we check, and was it right? (Level 3)
@@ -205,14 +205,14 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 2. 07-02 [SQL interview questions](phases/07-getting-hired/02-sql-interview-questions): Can you answer the six SQL questions that come up again and again in analyst interviews, and explain why the obvious answer is wrong? (Level 2)
 3. 07-03 [Portfolio project end to end](phases/07-getting-hired/03-portfolio-project-end-to-end): Do customers who start on a free trial cancel within 90 days more often than customers who pay from day one? (Level 2)
 4. 07-04 [Match your resume to a posting](phases/07-getting-hired/04-match-your-resume-to-a-posting): Of five open roles, which ones fit this resume best, and which missing skills stand between the candidate and the rest? (Level 1)
-5. 07-05 Role roadmaps from postings *(planned)*: Data, business, product or BI analyst: which skills differ? (Level 1)
-6. 07-06 Explain findings to leadership *(planned)*: Can the VP act on your summary after reading only the first two lines? (Level 1)
-7. 07-07 Resume bullets that are true *(planned)*: Does every number on your resume come from work you can show? (Level 1)
+5. 07-05 [Role roadmaps from postings](phases/07-getting-hired/05-role-roadmaps-from-postings): Data, business, product or BI analyst: which skills differ? (Level 1)
+6. 07-06 [Explain findings to leadership](phases/07-getting-hired/06-explain-findings-to-leadership): Can the VP act on your summary after reading only the first two lines? (Level 1)
+7. 07-07 [Resume bullets that are true](phases/07-getting-hired/07-resume-bullets-that-are-true): Does every number on your resume come from work you can show? (Level 1)
 8. 07-08 The metrics case interview *(planned)*: Signups fell 20%. Walk me through it. (Level 2)
 9. 07-09 The statistics interview round *(planned)*: Can you explain power, p-values and Simpson's paradox on real numbers? (Level 2)
 10. 07-10 The take-home assignment *(planned)*: Four hours, one dataset: what does a strong submission contain? (Level 2)
-11. 07-11 Behavioural answers that show analysis *(planned)*: Tell me about a time your analysis changed a decision. Guide, no test. (Level 1)
-12. 07-12 Publish your portfolio *(planned)*: Can a hiring manager run your project in one command? (Level 1)
+11. 07-11 [Behavioural answers that show analysis](phases/07-getting-hired/11-behavioural-answers): Tell me about a time your analysis changed a decision. Guide, no test. (Level 1)
+12. 07-12 [Publish your portfolio](phases/07-getting-hired/12-publish-your-portfolio): Can a hiring manager run your project in one command? (Level 1)
 
 ### 08 Modern data stack
 
@@ -221,7 +221,7 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 3. 08-03 Incremental models and backfills *(planned)*: Can yesterday's numbers be fixed without rebuilding three years of data? (Level 2)
 4. 08-04 Orchestration: a tiny DAG runner *(planned)*: What happens at 6 am when the 5 am job failed? (Level 3)
 5. 08-05 Query cost in a cloud warehouse *(planned)*: Why did one dashboard cost 400 dollars, and how do partitions fix it? (Level 2)
-6. 08-06 Git for analysts *(planned)*: Who changed the revenue query, and can we undo it? (Level 1)
+6. 08-06 [Git for analysts](phases/08-modern-data-stack/06-git-for-analysts): Who changed the revenue query, and can we undo it? (Level 1)
 
 ### 09 Business case studies
 

@@ -10,9 +10,9 @@ What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus ho
 2. [DAX measures from scratch](02-dax-measures-from-scratch/) (level 2): SUM, CALCULATE (which replaces a filter on the same column) and KEEPFILTERS (which intersects), a share that removes only the category filter, year to date and growth on the same period last year.
 3. [Tableau LOD expressions in SQL](03-tableau-lod-expressions-in-sql/) (level 2): FIXED, INCLUDE and EXCLUDE rebuilt with GROUP BY and window functions, and Tableau's order of operations.
 4. [Draw a chart from scratch](04-draw-a-chart-from-scratch/) (level 1): an SVG bar chart in plain Python, the truncated axis trap, and a first-pass rule set for choosing a chart.
-5. Lookups and SUMIFS like Excel (level 1, planned)
-6. Pivot tables and Power Query steps (level 1, planned)
-7. Dashboard design and KPI cards (level 1, planned)
+5. [Lookups and SUMIFS like Excel](05-lookups-and-sumifs/) (level 1)
+6. [Pivot tables and Power Query steps](06-pivot-tables-and-power-query/) (level 1)
+7. [Dashboard design and KPI cards](07-dashboard-design-and-kpi-cards/) (level 1)
 8. Relationships, role-playing dates and many-to-many (level 2, planned)
 9. One metric, one definition: the semantic layer (level 2, planned)
 10. Slowly changing dimensions (level 2, planned)

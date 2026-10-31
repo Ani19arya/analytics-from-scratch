@@ -36,14 +36,14 @@ flowchart LR
 1. [Grade an LLM classifier](01-grade-an-llm-classifier/). Is the LLM good enough at spotting refund tickets that we can route them automatically? A confusion matrix, precision and recall, and a Wilson interval so the yes or no carries its margin of error.
 2. [Check LLM-written SQL](02-check-llm-written-sql/). Which of the queries the LLM wrote can we trust? A read-only guard, then run and compare on two databases, so a query that is right by luck is caught.
 3. [Catch made-up numbers](03-catch-made-up-numbers/). Every number in the AI-written summary: is it actually in the data? Extract, link to a metric, recompute and compare at the stated precision.
-4. How LLMs work, for analysts *(planned)*. What is a token, what does a run cost, and why does the same prompt give different answers?
-5. Prompt versions as experiments *(planned)*. Is prompt v2 better than v1 on the same 200 tickets?
+4. [How LLMs work, for analysts](04-how-llms-work-for-analysts/). What is a token, what does a run cost, and why does the same prompt give different answers?
+5. [Prompt versions as experiments](05-prompt-versions-as-experiments/). Is prompt v2 better than v1 on the same 200 tickets?
 6. Structured output you can load *(planned)*. Can we put the model's JSON straight into a table?
 7. How big must an eval set be? *(planned)*. How many labelled examples do we need before we trust the score?
 8. Human in the loop: confidence thresholds *(planned)*. How many tickets can we auto-route at 95% precision, and who reviews the rest?
 9. LLM as judge, and judging the judge *(planned)*. Can a model grade answers, and does its grading agree with people?
 10. Natural language to SQL, safely *(planned)*. Can we let people ask the database questions in English without breaking anything?
-11. Keep personal data out of prompts *(planned)*. Is any customer's email or phone number about to leave the building?
+11. [Keep personal data out of prompts](11-keep-pii-out-of-prompts/). Is any customer's email or phone number about to leave the building?
 12. RAG over the metrics glossary *(planned)*. Which definition of active user did the bot cite, and was it the right one?
 13. An analytics agent loop from scratch *(planned)*. What does an agent actually do between your question and its answer?
 14. Audit an agent's work *(planned)*. The agent says revenue grew 12%. Which step should we check, and was it right?

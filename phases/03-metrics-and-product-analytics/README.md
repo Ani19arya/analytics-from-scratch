@@ -12,8 +12,8 @@ This phase is about the numbers a product team runs on: how to break a top-line 
 2. [Funnel conversion](02-funnel-conversion/) (level 1): build a step by step funnel from raw events in SQL, count users not events, and choose which step to work on.
 3. [Active users and stickiness](03-active-users-and-stickiness/) (level 1): compute DAU, WAU, MAU and DAU/MAU, and see how the definition of active changes the number.
 4. [North star and guardrails](04-north-star-and-guardrails/) (level 2): compute a north star and two guardrails from a test, and apply a pre-registered, noise-aware launch rule with a guardrail veto.
-5. Define a metric precisely (planned): what exactly counts as an active customer, and what goes in the metric spec?
-6. Percent vs points, ratio of sums vs average of ratios (planned): did conversion rise 2% or 2 points, and why do two dashboards disagree?
+5. [Define a metric precisely](05-define-a-metric-precisely/) (level 1): what exactly counts as an active customer, and what goes in the metric spec?
+6. [Percent vs points, ratio of sums vs average of ratios](06-percent-points-and-averages-of-ratios/) (level 1): did conversion rise 2% or 2 points, and why do two dashboards disagree?
 7. Growth accounting (planned): where did this month's MAU change come from: new, retained, resurrected or churned users?
 8. Retention curves and churn (planned): what share of users are still here on day 7 and day 30, and which retention definition fits?
 9. Segmentation and mix effects (planned): did conversion fall, or did the traffic mix change?

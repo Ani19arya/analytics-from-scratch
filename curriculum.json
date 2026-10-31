@@ -167,7 +167,7 @@
      "question": "What were signups per day, including the days with zero?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -181,7 +181,7 @@
      "question": "Which customers ordered in March but not in April?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -195,7 +195,7 @@
      "question": "Which customers spent more than their city's average?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -375,7 +375,7 @@
      "question": "If 10% of visitors buy, how many of 200 should buy, and how unusual is 30?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"
@@ -389,7 +389,7 @@
      "question": "Which salaries are real outliers, and which summary survives them?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"
@@ -403,7 +403,7 @@
      "question": "Why does the average of 18 orders wobble, and by how much?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"
@@ -594,7 +594,7 @@
      "question": "What exactly counts as an active customer, and what goes in the metric spec?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics"
@@ -608,7 +608,7 @@
      "question": "Did conversion rise 2% or 2 points, and why do two dashboards disagree?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "metrics"
@@ -803,7 +803,7 @@
      "question": "Why does the VLOOKUP total not match finance?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "excel"
@@ -817,7 +817,7 @@
      "question": "Can next month's file be cleaned and merged with one click?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "excel"
@@ -831,7 +831,7 @@
      "question": "What should the CEO see in five seconds?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "bi",
@@ -981,7 +981,7 @@
      "question": "Is this table fit for the board number?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
@@ -996,7 +996,7 @@
      "question": "After the merge, are the totals still the totals?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "python",
@@ -1123,7 +1123,7 @@
      "question": "What is a token, what does a run cost, and why does the same prompt give different answers?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai"
@@ -1137,7 +1137,7 @@
      "question": "Is prompt v2 better than v1 on the same 200 tickets?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1228,7 +1228,7 @@
      "question": "Is any customer's email or phone number about to leave the building?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1367,7 +1367,7 @@
      "question": "Data, business, product or BI analyst: which skills differ?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1381,7 +1381,7 @@
      "question": "Can the VP act on your summary after reading only the first two lines?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "communication"
@@ -1395,7 +1395,7 @@
      "question": "Does every number on your resume come from work you can show?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1453,7 +1453,7 @@
      "question": "Tell me about a time your analysis changed a decision.",
      "level": "beginner",
      "kind": "guide",
-     "status": "planned",
+     "status": "live",
      "hours": 1,
      "skills": [
       "career",
@@ -1468,7 +1468,7 @@
      "question": "Can a hiring manager run your project in one command?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1562,7 +1562,7 @@
      "question": "Who changed the revenue query, and can we undo it?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "git"
