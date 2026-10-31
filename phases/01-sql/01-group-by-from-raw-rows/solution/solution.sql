@@ -27,4 +27,4 @@ FROM orders
 WHERE status = 'completed'
 GROUP BY city
 HAVING COUNT(*) >= 70
-ORDER BY revenue DESC;
+ORDER BY revenue DESC, city;

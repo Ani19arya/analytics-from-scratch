@@ -4,10 +4,13 @@
 --   rep_sales(rep, region, sales)
 -- Write one query under each "-- query:" marker. Keep the markers.
 -- Run from this folder: python3 test_lesson.py
+-- Try a query on its own first: python3 ../query.py "SELECT * FROM rep_sales"
 
 -- query: running_total
 -- TODO: every row of monthly_revenue plus running_total, the cumulative
--- revenue of that region from its first month up to this month.
+-- revenue of that region from its first month up to this month
+-- (fiscal year to date: the data is one October to September year).
+-- A month with no revenue figure (NULL) adds nothing.
 -- Columns: region, month, revenue, running_total. Order by region, month.
 
 
@@ -28,4 +31,13 @@
 -- Columns: region, month, revenue, prev_revenue, change (revenue - prev_revenue).
 -- The first month of each region has NULL for prev_revenue and change.
 -- Order by region, month.
+
+
+-- query: rep_cumulative
+-- TODO: within each region, go down the reps from the highest sales to the
+-- lowest (ties broken by rep name) and keep a running total of sales.
+-- Each rep gets their own value: two tied reps must NOT get the same total.
+-- Columns: region, rep, sales, cumulative_sales.
+-- Order by region, sales (highest first), rep.
+
 

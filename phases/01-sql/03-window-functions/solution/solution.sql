@@ -4,6 +4,8 @@
 --   rep_sales(rep, region, sales)
 
 -- query: running_total
+-- Fiscal year to date: the data is one financial year (October to September),
+-- so the total runs from each region's first month and never restarts in January.
 SELECT
   region,
   month,
@@ -44,3 +46,18 @@ SELECT
   revenue - LAG(revenue) OVER (PARTITION BY region ORDER BY month) AS change
 FROM monthly_revenue
 ORDER BY region, month;
+
+-- query: rep_cumulative
+-- The tie breaker (rep) and the ROWS frame give each rep their own running value.
+-- With ORDER BY sales DESC alone, the default RANGE frame adds tied reps together.
+SELECT
+  region,
+  rep,
+  sales,
+  SUM(sales) OVER (
+    PARTITION BY region
+    ORDER BY sales DESC, rep
+    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+  ) AS cumulative_sales
+FROM rep_sales
+ORDER BY region, sales DESC, rep;
