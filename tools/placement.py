@@ -1,20 +1,33 @@
 #!/usr/bin/env python3
 """Placement check: a short quiz that tells you where to start in the course.
 
-    python3 tools/placement.py                        # interactive: asks your goal, then 13 short questions
+    python3 tools/placement.py                        # interactive: your goal, 13 base questions, a few follow-ups
     python3 tools/placement.py --answers answers.json # grade answers saved in a file
     python3 tools/placement.py --answers answers.json --json   # machine-readable result
     python3 tools/placement.py --track bi-analyst     # skip the goal question
     python3 tools/placement.py --template             # print an answers file to fill in
     python3 tools/placement.py --markdown             # print the Fast track section of LEARNING_ROADMAP.md
 
-An answers file looks like this (missing answers count as wrong):
+The check is adaptive. Everyone gets the 13 base questions (QUESTIONS). When an
+area has exactly one miss, one follow-up on the same idea is asked in that area;
+if that follow-up is also missed, a second, slightly harder one is asked. At most
+MAX_QUESTIONS (20) questions are asked in all. next_question() makes that choice
+and is a pure function of the answers so far. judge_area() turns an area's answers
+into a level (strong, mixed or weak) and a confidence (high, medium or low).
+
+An answers file looks like this:
 
     {"track": "data-analyst", "answers": {"q01": "6", "q02": "SELECT ...", "q03": "b"}}
 
-Nothing is shown as right or wrong until the end. Then you get a score per area,
-every answer with a one-line explanation, a start lesson and the lessons you can
-skip for your role.
+In a file, a missing or blank base question (q01 to q13) counts as wrong. Follow-ups
+(ids ending in b, and the h- ids) are graded only if they are filled in AND the
+adaptive rule would have asked them, replayed in the same order as the interactive
+check. --template lists every question, base and follow-up, so you can fill in all
+of them; the ones the rule does not call for are ignored.
+
+Nothing is shown as right or wrong until the end. Then you get a level per area
+with the reason, every answer with a one-line explanation, a start lesson and the
+lessons you can skip (strong areas) or skim (mixed areas) for your role.
 
 FAST_TRACK below is the one table behind both this script's recommendation and the
 "Fast track" sections in LEARNING_ROADMAP.md and README.md. Those sections are the
@@ -74,6 +87,56 @@ for r in rows:
     if r["sales"]:
         totals[key] = totals.get(key, 0) + int(r["sales"])
 print(len(totals), totals.get("Oslo"))"""
+
+# Follow-up data. Every number below is recomputed in test_placement.py.
+FANOUT_SETUP = [
+    "CREATE TABLE customers (customer_id INTEGER, name TEXT, credit INTEGER)",
+    "INSERT INTO customers VALUES (1, 'Ana', 100), (2, 'Ben', 50), (3, 'Cy', 20), (4, 'Dee', 10)",
+    "CREATE TABLE orders (order_id INTEGER, customer_id INTEGER)",
+    "INSERT INTO orders VALUES (10, 1), (11, 1), (12, 1), (13, 2), (14, 3)",
+]
+FANOUT_SQL = "SELECT SUM(c.credit) FROM customers c JOIN orders o ON o.customer_id = c.customer_id"
+MAX_SQL = "SELECT region, MAX(amount) FROM sales GROUP BY region HAVING MAX(amount) >= 60"
+AVG_SQL = ("SELECT region, AVG(COALESCE(amount, 0)) FROM sales GROUP BY region "
+           "HAVING AVG(COALESCE(amount, 0)) > 25")
+
+DELIVERY_MINUTES = [12, 14, 15, 15, 16, 18, 95]
+AB_COUNTS = {"control": (200, 4000), "variant": (250, 4000)}   # (conversions, visitors)
+CAMPAIGNS = [("A", 9, 10), ("B", 40, 990)]                      # (name, signups, clicks)
+# (month, segment, visits, orders): both segments improve, the total falls.
+MIX_TABLE = [(1, "Desktop", 600, 60), (1, "Mobile", 400, 8), (2, "Desktop", 200, 22), (2, "Mobile", 800, 20)]
+REGION_SALES = [("North", 40), ("North", 20), ("South", 30), ("South", 60), ("East", 50)]
+GRAIN_SETUP = [
+    "CREATE TABLE orders (order_id INTEGER, amount REAL)",
+    "INSERT INTO orders VALUES (1, 100), (2, 50), (3, 30)",
+    "CREATE TABLE order_lines (order_id INTEGER, product TEXT)",
+    "INSERT INTO order_lines VALUES (1, 'tea'), (1, 'cup'), (1, 'pot'), (2, 'tea'), (3, 'cup')",
+]
+GRAIN_SQL = "SELECT AVG(o.amount) FROM orders o JOIN order_lines l ON l.order_id = o.order_id"
+FRAUD = {"flagged": 40, "flagged_and_real": 30, "real": 50}
+THRESHOLD = {"flagged": 40, "flagged_and_real": 24, "real": 30}
+
+PYTHON_SNIPPET_B = """rows = [("Lima", "3"), ("lima", "4"), ("Cusco ", "x"), ("Cusco", "2")]
+counts = {}
+for city, qty in rows:
+    if qty.isdigit():
+        key = city.strip().lower()
+        counts[key] = counts.get(key, 0) + int(qty)
+print(len(counts), counts["lima"], counts["cusco"])"""
+
+PYTHON_SNIPPET_H = """rows = [{"id": "3", "amt": "10"}, {"id": "10", "amt": "5"},
+        {"id": "3", "amt": "10"}, {"id": "2", "amt": ""}]
+seen, total = set(), 0
+for r in rows:
+    if r["id"] in seen:
+        continue
+    seen.add(r["id"])
+    total += float(r["amt"] or 0)
+print(len(seen), total, max(seen))"""
+
+
+def _indent(code):
+    return "\n".join("    " + line for line in code.splitlines())
 
 
 def _sales_text():
@@ -212,6 +275,212 @@ QUESTIONS = [
     },
 ]
 
+# Follow-ups. role "reframe": the same idea as one base question ("follows"), framed
+# differently; asked when that base question is an area's only miss. role "harder":
+# one per area, slightly harder; asked when the reframe was missed too.
+FOLLOW_UPS = [
+    {
+        "id": "q01b", "area": "sql", "role": "reframe", "follows": "q01", "kind": "number", "tolerance": 0,
+        "prompt": "customers(customer_id, name, credit): Ana 100, Ben 50, Cy 20, Dee 10.\n"
+                  "orders: Ana has 3 orders, Ben 1, Cy 1, Dee none.\n"
+                  "What does this return?\n  " + FANOUT_SQL,
+        "answer": 370,
+        "explanation": "The join repeats Ana's row once per order: 3 x 100 + 50 + 20 = 370, not 180. "
+                       "Dee has no orders, so the inner join drops her.",
+        "lessons": ["01-02", "00-03"],
+    },
+    {
+        "id": "q02b", "area": "sql", "role": "reframe", "follows": "q02", "kind": "sql",
+        "prompt": "Same table sales(region, rep, amount):\n" + _sales_text() + "\n"
+                  "Type one SQL query, on one line, that returns each region and its largest single amount,\n"
+                  "keeping only regions whose largest amount is 60 or more. Names and order do not matter.",
+        "answer": MAX_SQL,
+        "explanation": "GROUP BY region, then HAVING MAX(amount) >= 60: North 60, South 60, West 120. "
+                       "With > 60 you lose North and South.",
+        "lessons": ["01-01", "01-07"],
+    },
+    {
+        "id": "h-sql", "area": "sql", "role": "harder", "follows": None, "kind": "sql",
+        "prompt": "Same table sales(region, rep, amount):\n" + _sales_text() + "\n"
+                  "Type one SQL query, on one line, that returns each region and its average amount per rep,\n"
+                  "counting a NULL amount as 0, keeping only regions whose average is above 25.",
+        "answer": AVG_SQL,
+        "explanation": "AVG skips NULLs, so East would average 30 over one rep. Counting Fay as 0 gives "
+                       "(30 + 0) / 2 = 15, so East is out: North 55, South 50, West 120.",
+        "lessons": ["00-05", "01-01"],
+    },
+    {
+        "id": "q03b", "area": "statistics", "role": "reframe", "follows": "q03", "kind": "choice",
+        "prompt": "Delivery times in minutes: 12, 14, 15, 15, 16, 18 and 95 (a van broke down).\n"
+                  "Which number describes a typical delivery?\n"
+                  "  a) The mean, 26.4\n  b) The median, 15\n  c) The midrange, (12 + 95) / 2 = 53.5\n"
+                  "  d) The mean without the 12, 28.8",
+        "answer": "b",
+        "explanation": "One 95 minute delivery pulls the mean to 26.4, longer than six of the seven. The median, 15, is typical.",
+        "lessons": ["02-01", "02-06"],
+    },
+    {
+        "id": "q04b", "area": "statistics", "role": "reframe", "follows": "q04", "kind": "choice",
+        "prompt": "A pricing test ends with p = 0.20 for the gap in revenue per user. Which reading is right?\n"
+                  "  a) The two prices make no difference\n"
+                  "  b) A gap this big would be common even with no real difference, so this test cannot tell;\n"
+                  "     a small real effect is still possible\n"
+                  "  c) There is an 80% chance the new price is better\n"
+                  "  d) The gap in revenue is 20%",
+        "answer": "b",
+        "explanation": "A large p-value means the data is not surprising under no difference. "
+                       "It does not prove there is no difference.",
+        "lessons": ["02-03", "02-08"],
+    },
+    {
+        "id": "h-statistics", "area": "statistics", "role": "harder", "follows": None, "kind": "number",
+        "tolerance": 0.06,
+        "prompt": "An A/B test. Control: 200 of 4,000 visitors convert. Variant: 250 of 4,000 convert.\n"
+                  "What is the z statistic of a two-proportion test, to two decimals? A calculator is fine.",
+        "answer": 2.43,
+        "explanation": "Pooled rate 450 / 8,000 = 5.625%. SE = sqrt(p(1 - p)(1/4000 + 1/4000)) = 0.00515. "
+                       "z = 1.25 points / 0.515 points = 2.43, above 1.96, so significant at 5%.",
+        "lessons": ["02-03", "02-02"],
+    },
+    {
+        "id": "q05b", "area": "metrics", "role": "reframe", "follows": "q05", "kind": "number",
+        "tolerance": 0.1, "percent": True,
+        "prompt": "Two ad campaigns:\n"
+                  "  campaign | clicks | signups\n  A        |     10 |       9\n  B        |    990 |      40\n"
+                  "What is the overall signup rate (signups / clicks), in percent?",
+        "answer": 4.9,
+        "explanation": "Ratio of sums: 49 / 1,000 = 4.9%. The average of 90% and 4.0% is 47%, "
+                       "because 10 clicks get the same weight as 990.",
+        "lessons": ["03-06", "03-05"],
+    },
+    {
+        "id": "q06b", "area": "metrics", "role": "reframe", "follows": "q06", "kind": "choice",
+        "prompt": "Monthly churn fell from 10% to 8%. Which sentence is right?\n"
+                  "  a) Churn fell 2%\n  b) Churn fell 2 percentage points, a 20% relative drop\n"
+                  "  c) Churn fell 20 percentage points\n  d) Churn fell 8%",
+        "answer": "b",
+        "explanation": "10 - 8 = 2 points; 2 / 10 = 20% relative.",
+        "lessons": ["03-06"],
+    },
+    {
+        "id": "h-metrics", "area": "metrics", "role": "harder", "follows": None, "kind": "number",
+        "tolerance": 0.1, "percent": True,
+        "prompt": "Conversion by device:\n"
+                  "  month | device  | visits | orders\n"
+                  + "\n".join("  %d     | %-7s | %6d | %6d" % row for row in MIX_TABLE) + "\n"
+                  "Both devices convert better in month 2. What is the overall conversion in month 2, in percent?",
+        "answer": 4.2,
+        "explanation": "42 / 1,000 = 4.2%, down from 68 / 1,000 = 6.8%. Traffic moved to Mobile, which converts "
+                       "less: a mix effect. The average of the two device rates, 6.75%, hides it.",
+        "lessons": ["03-09", "03-06"],
+    },
+    {
+        "id": "q07b", "area": "dashboards", "role": "reframe", "follows": "q07", "kind": "choice",
+        "prompt": "page_views has one row per page view, with a user_id. A KPI card labelled Users counts rows.\n"
+                  "  a) That is right: each row is a user\n"
+                  "  b) It overcounts: count distinct user_id instead\n"
+                  "  c) It undercounts: count sessions instead\n"
+                  "  d) It is right if the card covers a single day",
+        "answer": "b",
+        "explanation": "The grain is page view. A user with 5 views counts 5 times, even within one day.",
+        "lessons": ["00-03", "04-01"],
+    },
+    {
+        "id": "q08b", "area": "dashboards", "role": "reframe", "follows": "q08", "kind": "number",
+        "tolerance": 0.1, "percent": True,
+        "prompt": "Table sales(region, amount): North 40, North 20, South 30, South 60, East 50.\n"
+                  "A table visual has one row per region and this measure:\n"
+                  "  DAX:     Share = SUM(sales[amount]) / CALCULATE(SUM(sales[amount]), ALL(sales))\n"
+                  "  Tableau: SUM([amount]) / SUM({FIXED : SUM([amount])})\n"
+                  "What does the East row show, in percent?",
+        "answer": 25.0,
+        "explanation": "Each row filters the top to its region (East 50). ALL and FIXED ignore that below (200): 25%.",
+        "lessons": ["04-02", "04-03"],
+    },
+    {
+        "id": "h-dashboards", "area": "dashboards", "role": "harder", "follows": None, "kind": "number",
+        "tolerance": 0.5,
+        "prompt": "orders(order_id, amount): order 1 is 100, order 2 is 50, order 3 is 30.\n"
+                  "order_lines has one row per product: order 1 has 3 lines, orders 2 and 3 have 1 each.\n"
+                  "An Average order value card runs:\n  " + GRAIN_SQL + "\n"
+                  "What does the card show?",
+        "answer": 76,
+        "explanation": "The join repeats order 1 three times: (3 x 100 + 50 + 30) / 5 = 76. "
+                       "The true average order value is 180 / 3 = 60.",
+        "lessons": ["04-01", "04-08"],
+    },
+    {
+        "id": "q09b", "area": "python", "role": "reframe", "follows": "q09", "kind": "text",
+        "prompt": "What does this print?\n\n" + _indent(PYTHON_SNIPPET_B),
+        "answer": "2 7 2",
+        "explanation": "strip and lower merge the two Lima rows (3 + 4); 'x' is not a digit, so only Cusco's 2 counts.",
+        "lessons": ["00-06", "05-01"],
+    },
+    {
+        "id": "q10b", "area": "python", "role": "reframe", "follows": "q10", "kind": "choice",
+        "prompt": "csv.DictReader gives row[\"qty\"] = \"7\" and row[\"price\"] = \"3\".\n"
+                  "What does row[\"qty\"] * 2 + row[\"price\"] return?\n"
+                  "  a) 17\n  b) '773'\n  c) An error\n  d) '143'",
+        "answer": "b",
+        "explanation": "Both are text: '7' * 2 repeats it to '77', and + glues on '3'. Convert with int() first.",
+        "lessons": ["05-01", "05-05"],
+    },
+    {
+        "id": "h-python", "area": "python", "role": "harder", "follows": None, "kind": "text",
+        "prompt": "What does this print?\n\n" + _indent(PYTHON_SNIPPET_H),
+        "answer": "3 15.0 3",
+        "explanation": "The second id 3 is skipped, the blank amount adds 0.0, and max of text ids '3', '10', '2' is '3'.",
+        "lessons": ["05-01", "05-09"],
+    },
+    {
+        "id": "q11b", "area": "ai", "role": "reframe", "follows": "q11", "kind": "number",
+        "tolerance": 0.5, "percent": True,
+        "prompt": "There are 50 real fraud cases. A model catches 30 of them and also flags 10 clean\n"
+                  "transactions by mistake. What is the recall, in percent?",
+        "answer": 60.0,
+        "explanation": "Recall = caught / all real = 30 / 50 = 60%. Precision is 30 / 40 = 75%.",
+        "lessons": ["06-01", "06-08"],
+    },
+    {
+        "id": "q12b", "area": "ai", "role": "reframe", "follows": "q12", "kind": "choice",
+        "prompt": "On the same 20 cases, prompt v1 gets 18 right (90%) and prompt v2 gets 19 right (95%).\n"
+                  "  a) v2 is 5 points better: ship it\n"
+                  "  b) One case apart on 20 cases. The margin is about 13 points, so you cannot tell yet\n"
+                  "  c) v1 is better because it was written first\n"
+                  "  d) Run v2 on the same 20 again and keep the better run",
+        "answer": "b",
+        "explanation": "With 20 cases one case is 5 points. Grow the eval set, and read the cases where the two disagree.",
+        "lessons": ["06-07", "06-05"],
+    },
+    {
+        "id": "q13b", "area": "ai", "role": "reframe", "follows": "q13", "kind": "choice",
+        "prompt": "An LLM writes the weekly sales summary, with numbers. Which check actually catches a made-up number?\n"
+                  "  a) Ask the model to double-check its numbers\n"
+                  "  b) Recompute every number in the summary from the table in code and flag any that differ\n"
+                  "  c) Use a bigger model\n"
+                  "  d) Set the temperature to 0",
+        "answer": "b",
+        "explanation": "Only a check outside the model, against the source table, catches a wrong number every time.",
+        "lessons": ["06-03", "06-10"],
+    },
+    {
+        "id": "h-ai", "area": "ai", "role": "harder", "follows": None, "kind": "number",
+        "tolerance": 0.5, "percent": True,
+        "prompt": "At a lower threshold an LLM flags 40 tickets as urgent; 24 of them really are.\n"
+                  "There are 30 really urgent tickets in all. What is the F1 score, in percent?",
+        "answer": 68.6,
+        "explanation": "Precision 24 / 40 = 0.6, recall 24 / 30 = 0.8. F1 = 2 x 0.6 x 0.8 / (0.6 + 0.8) = 0.686.",
+        "lessons": ["06-01", "06-08"],
+    },
+]
+
+for _q in QUESTIONS:
+    _q.setdefault("role", "base")
+    _q.setdefault("follows", None)
+ALL_QUESTIONS = QUESTIONS + FOLLOW_UPS
+BY_ID = dict((x["id"], x) for x in ALL_QUESTIONS)
+MAX_QUESTIONS = 20
+
 # --------------------------------------------------------------------------
 # The Fast track table: one source for the recommendation and the docs
 # --------------------------------------------------------------------------
@@ -329,9 +598,18 @@ FAST_TRACK = {
 TRACK_ORDER = ["data-analyst", "bi-analyst", "business-analyst", "interview-prep"]
 BEGINNER_START = "00-01"
 
-# Thresholds, as integer ratios so the boundaries are exact.
-STRONG_NUM, STRONG_DEN = 2, 3     # an area is strong at 2/3 correct or more
-BEGINNER_NUM, BEGINNER_DEN = 2, 5  # below 40% overall, start at the beginning
+# Below 40% on the 13 base questions, start at the beginning (integer ratio: exact boundary).
+BEGINNER_NUM, BEGINNER_DEN = 2, 5
+
+LEVELS = ["strong", "mixed", "weak"]
+LEVEL_RULE = [
+    "strong: at least 2 right and no miss, or at least 2 right and one miss followed by a correct follow-up.",
+    "weak: fewer than half right.",
+    "mixed: anything else.",
+    "confidence high: 2+ answers that all agree with the level, or 4+ with one that disagrees;"
+    " medium: 3 with one that disagrees, or a mixed area probed with 4+ questions; low: otherwise.",
+]
+SKIM_WHY = "skim: do the lesson's Check yourself first, skip if easy."
 
 
 # --------------------------------------------------------------------------
@@ -346,7 +624,7 @@ def load_curriculum(root=ROOT):
 
 def referenced_ids():
     ids = {BEGINNER_START}
-    for q in QUESTIONS:
+    for q in ALL_QUESTIONS:
         ids.update(q["lessons"])
     for track in FAST_TRACK.values():
         ids.update(i for i, _, _ in track["do"])
@@ -374,9 +652,14 @@ def validate(lessons, root=ROOT):
         for area in [a for _, a, _ in track["do"] + track["skip"] if a is not None]:
             if area not in AREAS:
                 problems.append("%s uses unknown area %s" % (key, area))
-    for q in QUESTIONS:
+    if len(BY_ID) != len(ALL_QUESTIONS):
+        problems.append("question ids are not unique")
+    for q in ALL_QUESTIONS:
         if q["area"] not in AREAS:
             problems.append("%s uses unknown area %s" % (q["id"], q["area"]))
+        if q["role"] == "reframe" and (q["follows"] not in BY_ID or BY_ID[q["follows"]]["role"] != "base"
+                                        or BY_ID[q["follows"]]["area"] != q["area"]):
+            problems.append("%s follows %s, which is not a base question in its area" % (q["id"], q["follows"]))
     if problems:
         raise ValueError("placement.py references bad lessons:\n  " + "\n  ".join(problems))
 
@@ -453,28 +736,174 @@ def check_answer(question, given):
     raise ValueError("unknown question kind %s" % kind)
 
 
-def grade(answers):
-    """answers: {question id: answer}. Return {"areas": {area: {correct, total}}, "correct", "total", "results"}."""
-    areas = dict((a, {"correct": 0, "total": 0}) for a in AREAS)
-    results = []
+def _blank(value):
+    return value is None or not str(value).strip()
+
+
+def _area_questions(area, role=None):
+    return [x for x in ALL_QUESTIONS if x["area"] == area and (role is None or x["role"] == role)]
+
+
+def next_question(answers, available=None, max_questions=MAX_QUESTIONS):
+    """Pure: the id of the next question to ask, or None when the check is over.
+
+    answers holds the questions asked so far, {id: given answer}; a key means the
+    question was asked, so a blank answer is an asked question answered wrong.
+    available, if given, limits which follow-ups may be asked (used to replay a file).
+
+    The rule:
+      1. Ask every base question, in order.
+      2. Stop once max_questions have been asked.
+      3. Round 1: for each area, in AREAS order, with exactly one missed base question
+         and no follow-up yet, ask the reframe of the missed question (or, if it is not
+         available, the area's harder follow-up).
+      4. Round 2: for each area whose base had exactly one miss and whose single
+         follow-up was missed too (results still mixed), ask the next follow-up,
+         the harder one.
+      5. Otherwise stop.
+    Round 1 finishes for every area before round 2 starts, so the cap cuts the
+    harder second follow-ups first.
+    """
     for q in QUESTIONS:
-        given = answers.get(q["id"])
-        ok = check_answer(q, given)
-        areas[q["area"]]["total"] += 1
-        areas[q["area"]]["correct"] += 1 if ok else 0
-        results.append({"id": q["id"], "area": q["area"], "correct": ok, "given": given,
-                        "answer": q["answer"], "explanation": q["explanation"], "lessons": list(q["lessons"])})
-    correct = sum(a["correct"] for a in areas.values())
-    total = sum(a["total"] for a in areas.values())
-    return {"areas": areas, "correct": correct, "total": total, "results": results}
+        if q["id"] not in answers:
+            return q["id"]
+    if sum(1 for qid in answers if qid in BY_ID) >= max_questions:
+        return None
+
+    def ok(qid):
+        return check_answer(BY_ID[qid], answers.get(qid))
+
+    def can_ask(x):
+        return x["id"] not in answers and (available is None or x["id"] in available)
+
+    state = {}
+    for area in AREAS:
+        misses = [x["id"] for x in _area_questions(area, "base") if not ok(x["id"])]
+        asked_fu = [x["id"] for x in _area_questions(area) if x["role"] != "base" and x["id"] in answers]
+        state[area] = (misses, asked_fu)
+    for area in AREAS:
+        misses, asked_fu = state[area]
+        if len(misses) == 1 and not asked_fu:
+            pool = [x for x in _area_questions(area, "reframe") if x["follows"] == misses[0]]
+            pool += _area_questions(area, "harder")
+            nxt = next((x["id"] for x in pool if can_ask(x)), None)
+            if nxt:
+                return nxt
+    for area in AREAS:
+        misses, asked_fu = state[area]
+        if len(misses) == 1 and len(asked_fu) == 1 and not ok(asked_fu[0]):
+            nxt = next((x["id"] for x in _area_questions(area, "harder") if can_ask(x)), None)
+            if nxt:
+                return nxt
+    return None
+
+
+def asked_sequence(answers, max_questions=MAX_QUESTIONS):
+    """Pure: replay the adaptive check on a full answers file and return the ids asked, in order.
+
+    Base questions are always asked (missing ones are graded wrong). A follow-up is
+    asked only if the rule calls for it and the file has a non-blank answer for it.
+    """
+    available = set(x["id"] for x in FOLLOW_UPS if not _blank(answers.get(x["id"])))
+    so_far, order = {}, []
+    while True:
+        nid = next_question(so_far, available, max_questions)
+        if nid is None:
+            return order
+        so_far[nid] = answers.get(nid)
+        order.append(nid)
+
+
+def judge_area(items):
+    """Pure: items are one area's graded answers in the order asked, each {"role", "correct"}.
+
+    Returns (level, confidence, why). With c right, w wrong and n = c + w asked:
+      strong  c >= 2 and w == 0; or c >= 2, w == 1 and the last follow-up asked was right
+              (the one miss was followed by a correct follow-up on the same idea, so it
+              looks like a slip).
+      weak    2c < n: fewer than half right.
+      mixed   anything else.
+    Confidence:
+      strong or weak: high if n >= 2 and every answer agrees with the level, or
+              n >= 4 with exactly one that disagrees; medium if n == 3 with one that
+              disagrees; low otherwise.
+      mixed:  medium if n >= 4 (follow-ups were asked and the answers really are split);
+              low otherwise.
+    """
+    n = len(items)
+    c = sum(1 for i in items if i["correct"])
+    w = n - c
+    follow = [i for i in items if i["role"] != "base"]
+    head = "%d of %d right" % (c, n)
+    if n == 0:
+        return "mixed", "low", "No questions were asked in this area."
+    if c >= 2 and w == 0:
+        level, reason = "strong", "no misses"
+    elif c >= 2 and w == 1 and follow and follow[-1]["correct"]:
+        level, reason = "strong", "one miss, then the follow-up on the same idea was right, so it looks like a slip"
+    elif c * 2 < n:
+        level, reason = "weak", "fewer than half right"
+    else:
+        level = "mixed"
+        if not follow:
+            reason = "one miss and no follow-up answered, so not enough evidence for strong"
+        else:
+            reason = "the follow-ups did not settle it (not clearly strong, not mostly wrong)"
+    minority = min(c, w)
+    if level == "mixed":
+        confidence = "medium" if n >= 4 else "low"
+    elif minority == 0 and n >= 2:
+        confidence = "high"
+    elif minority == 1 and n >= 4:
+        confidence = "high"
+    elif minority == 1 and n == 3:
+        confidence = "medium"
+    else:
+        confidence = "low"
+    plural = "" if n == 1 else "s"
+    return level, confidence, "%s: %s. Confidence %s from %d answer%s." % (head, reason, confidence, n, plural)
+
+
+def grade(answers, asked=None):
+    """Pure: grade the questions asked and judge each area.
+
+    answers: {question id: answer}. asked: the ids asked, in order (the interactive
+    check passes these); when None, asked_sequence(answers) replays the adaptive rule.
+    Returns {"areas": {area: {correct, total, level, confidence, why, asked}},
+    "correct", "total", "base_correct", "base_total", "asked", "max_questions",
+    "level_rule", "results"}.
+    """
+    if asked is None:
+        asked = asked_sequence(answers)
+    asked = [qid for qid in asked if qid in BY_ID]
+    results = []
+    for qid in asked:
+        q = BY_ID[qid]
+        given = answers.get(qid)
+        results.append({"id": qid, "area": q["area"], "role": q["role"], "follows": q["follows"],
+                        "correct": check_answer(q, given), "given": given, "answer": q["answer"],
+                        "explanation": q["explanation"], "lessons": list(q["lessons"])})
+    areas = {}
+    for a in AREAS:
+        items = [r for r in results if r["area"] == a]
+        level, confidence, why = judge_area(items)
+        areas[a] = {"correct": sum(1 for r in items if r["correct"]), "total": len(items),
+                    "level": level, "confidence": confidence, "why": why, "asked": [r["id"] for r in items]}
+    base = [r for r in results if r["role"] == "base"]
+    return {"areas": areas, "correct": sum(1 for r in results if r["correct"]), "total": len(results),
+            "base_correct": sum(1 for r in base if r["correct"]), "base_total": len(base),
+            "asked": asked, "max_questions": MAX_QUESTIONS, "level_rule": list(LEVEL_RULE), "results": results}
 
 
 def is_strong(area_score):
-    return area_score["total"] > 0 and area_score["correct"] * STRONG_DEN >= area_score["total"] * STRONG_NUM
+    return area_score.get("level") == "strong"
 
 
 def is_beginner(scores):
-    return scores["correct"] * BEGINNER_DEN < scores["total"] * BEGINNER_NUM
+    """Below 40% on the base questions (the fixed 13), so follow-ups never push you down."""
+    correct = scores.get("base_correct", scores["correct"])
+    total = scores.get("base_total", scores["total"])
+    return correct * BEGINNER_DEN < total * BEGINNER_NUM
 
 
 def _lesson_ref(lid, lessons, why=None, area=None):
@@ -487,31 +916,48 @@ def _lesson_ref(lid, lessons, why=None, area=None):
 
 
 def recommend(scores, track, lessons=None):
-    """Pure: scores from grade() (only "areas", "correct", "total" are read) and a track key -> dict."""
+    """Pure: scores from grade() and a track key -> dict.
+
+    Reads scores["areas"][area]["level"] and the base score. Skip a track's skip-list
+    lessons only in strong areas; skim them in mixed areas; do them in weak areas
+    (and everywhere for a beginner). The start lesson is the first lesson on the
+    path whose area is not strong (mixed counts as not strong).
+    """
     if track not in FAST_TRACK:
         raise ValueError("unknown track %s; pick one of %s" % (track, ", ".join(TRACK_ORDER)))
     if lessons is None:
         lessons = load_curriculum()
     t = FAST_TRACK[track]
-    strong = [a for a in AREAS if is_strong(scores["areas"][a])]
+    levels = dict((a, scores["areas"][a]["level"]) for a in AREAS)
+    strong = [a for a in AREAS if levels[a] == "strong"]
+    mixed = [a for a in AREAS if levels[a] == "mixed"]
+    weak = [a for a in AREAS if levels[a] == "weak"]
     path = []
     for lid, area, why in t["do"]:
         item = _lesson_ref(lid, lessons, why, area)
         item["strong_area"] = area in strong
+        item["level"] = levels.get(area)
         path.append(item)
     beginner = is_beginner(scores)
+    skip, skim, keep = [], [], []
     if beginner:
         start = _lesson_ref(BEGINNER_START, lessons)
         start["why"] = "Your score suggests the full path. Start at phase 00 and follow Level 1 in LEARNING_ROADMAP.md."
-        skip = []
+        keep = [_lesson_ref(lid, lessons, why, area) for lid, area, why in t["skip"]]
     else:
         first_gap = next((p for p in path if not p["strong_area"]), path[-1])
         start = {"id": first_gap["id"], "title": first_gap["title"], "path": first_gap["path"],
                  "why": first_gap["why"]}
-        skip = [_lesson_ref(lid, lessons, why, area) for lid, area, why in t["skip"] if area in strong]
-    keep = [_lesson_ref(lid, lessons, why, area) for lid, area, why in t["skip"] if area not in strong or beginner]
-    return {"track": track, "track_title": t["title"], "beginner": beginner, "strong_areas": strong,
-            "start": start, "path": path, "skip": skip, "do_not_skip_yet": keep}
+        for lid, area, why in t["skip"]:
+            if area in strong:
+                skip.append(_lesson_ref(lid, lessons, why, area))
+            elif area in mixed:
+                skim.append(_lesson_ref(lid, lessons, SKIM_WHY, area))
+            else:
+                keep.append(_lesson_ref(lid, lessons, why, area))
+    return {"track": track, "track_title": t["title"], "beginner": beginner, "levels": levels,
+            "strong_areas": strong, "mixed_areas": mixed, "weak_areas": weak,
+            "start": start, "path": path, "skip": skip, "skim": skim, "do_not_skip_yet": keep}
 
 
 # --------------------------------------------------------------------------
@@ -527,35 +973,45 @@ def _show(value):
 
 
 def format_report(scores, rec):
-    out = ["", "=" * 60, "Placement result (%s)" % rec["track_title"], "=" * 60, "", "Score per area:"]
+    out = ["", "=" * 60, "Placement result (%s)" % rec["track_title"], "=" * 60, "",
+           "Level per area (%d questions asked, at most %d):" % (scores["total"], scores["max_questions"])]
     for a in AREAS:
         s = scores["areas"][a]
-        mark = "strong" if a in rec["strong_areas"] else "work on it"
-        out.append("  %-16s %d / %d  %s" % (AREA_NAMES[a], s["correct"], s["total"], mark))
-    out.append("  %-16s %d / %d  (%d%%)" % ("Total", scores["correct"], scores["total"],
-                                           _pct(scores["correct"], scores["total"])))
+        out.append("  %-16s %d / %d  %-6s  confidence %s" % (AREA_NAMES[a], s["correct"], s["total"],
+                                                               s["level"], s["confidence"]))
+        out.append("      why this level: %s" % s["why"])
+    out.append("  %-16s %d / %d  (%d%%); base questions %d / %d" % (
+        "Total", scores["correct"], scores["total"], _pct(scores["correct"], scores["total"]),
+        scores["base_correct"], scores["base_total"]))
+    out += ["", "How levels work:"] + ["  " + line for line in scores["level_rule"]]
     out += ["", "Answers:"]
     for r in scores["results"]:
-        given = "(blank)" if r["given"] in (None, "") else str(r["given"])
+        given = "(blank)" if _blank(r["given"]) else str(r["given"])
         if len(given) > 50:
             given = given[:47] + "..."
-        out.append("  %s %-5s %s  you: %s  answer: %s" % (r["id"], "right" if r["correct"] else "wrong",
-                                                       AREA_NAMES[r["area"]], given, _show(r["answer"])))
+        tag = "" if r["role"] == "base" else " (follow-up)"
+        out.append("  %-12s %-5s %s%s  you: %s  answer: %s" % (r["id"], "right" if r["correct"] else "wrong",
+                                                            AREA_NAMES[r["area"]], tag, given, _show(r["answer"])))
         out.append("      %s Lessons: %s" % (r["explanation"], ", ".join(r["lessons"])))
     s = rec["start"]
     out += ["", "Start here: %s %s" % (s["id"], s["title"]), "  %s/" % s["path"], "  %s" % s["why"]]
     out += ["", "Your path, in order:"]
+    notes = {"strong": "  (strong here: skim it, do the Check yourself)",
+             "mixed": "  (mixed here: do the Check yourself first)"}
     for p in rec["path"]:
-        note = "  (you scored well here: skim it, do the Check yourself)" if p["strong_area"] else ""
-        out.append("  %s %s%s" % (p["id"], p["title"], note))
-    out += ["", "Safe to skip:"]
+        out.append("  %s %s%s" % (p["id"], p["title"], notes.get(p["level"], "")))
+    out += ["", "Safe to skip (strong areas):"]
     if rec["skip"]:
         for k in rec["skip"]:
             out.append("  %s %s: %s" % (k["id"], k["title"], k["why"]))
     else:
-        out.append("  Nothing yet. Skip a lesson only when its area scores strong here.")
+        out.append("  Nothing yet. Skip a lesson only when its area is strong here.")
+    if rec["skim"]:
+        out += ["", "Skim (mixed areas): do the lesson's Check yourself first, skip if easy:"]
+        for k in rec["skim"]:
+            out.append("  %s %s" % (k["id"], k["title"]))
     if rec["do_not_skip_yet"]:
-        out += ["", "Do not skip these yet (your score in their area was low):"]
+        out += ["", "Do these, do not skip yet (weak areas, or a beginner score):"]
         for k in rec["do_not_skip_yet"]:
             out.append("  %s %s" % (k["id"], k["title"]))
     out += ["", "Skip only if this check or the lesson's own Check yourself is easy for you.",
@@ -649,21 +1105,31 @@ def ask_track(read=input, write=print):
         write("Please type a number from 1 to %d." % len(TRACK_ORDER))
 
 
-def ask_questions(read=input, write=print):
-    answers = {}
-    write("\n%d questions. Answer each one; you see the results at the end." % len(QUESTIONS))
+def ask_questions(read=input, write=print, max_questions=MAX_QUESTIONS):
+    """Ask base questions, then the follow-ups next_question() picks. Return (answers, asked ids)."""
+    answers, asked = {}, []
+    write("\n%d base questions, then up to %d follow-ups where your first answers do not settle an area."
+          % (len(QUESTIONS), max_questions - len(QUESTIONS)))
+    write("You see the results only at the end. A follow-up just means an area needs one more answer.")
     write("Press Enter to skip a question you do not know (it counts as wrong).")
     hints = {"choice": "Your answer (a, b, c or d): ", "number": "Your answer (a number): ",
              "text": "Your answer (the printed line): ", "sql": "Your query: "}
-    for n, q in enumerate(QUESTIONS, 1):
-        write("\n[%d/%d] %s\n%s" % (n, len(QUESTIONS), AREA_NAMES[q["area"]], q["prompt"]))
-        answers[q["id"]] = _ask(hints[q["kind"]], read).strip()
+    while True:
+        qid = next_question(answers, None, max_questions)
+        if qid is None:
+            return answers, asked
+        q = BY_ID[qid]
+        write("\n[%d] %s\n%s" % (len(asked) + 1, AREA_NAMES[q["area"]], q["prompt"]))
+        answers[qid] = _ask(hints[q["kind"]], read).strip()
+        asked.append(qid)
         write("Recorded.")
-    return answers
 
 
 def template():
-    return {"track": TRACK_ORDER[0], "answers": dict((q["id"], "") for q in QUESTIONS)}
+    return {"track": TRACK_ORDER[0],
+            "note": "Lists every question. q01 to q13 are always graded (blank = wrong). Follow-ups "
+                    "(ids ending in b, and h- ids) are graded only if filled in and the adaptive rule calls for them.",
+            "answers": dict((q["id"], "") for q in ALL_QUESTIONS)}
 
 
 def main(argv=None):
@@ -696,16 +1162,17 @@ def main(argv=None):
         with open(args.answers, encoding="utf-8") as f:
             data = json.load(f)
         answers = data.get("answers", {})
+        asked = None  # replay the adaptive rule on the file
         track = args.track or data.get("track") or TRACK_ORDER[0]
         if track not in FAST_TRACK:
             sys.stderr.write("unknown track %s; pick one of %s\n" % (track, ", ".join(TRACK_ORDER)))
             return 2
     else:
-        print("Analytics from Scratch placement check. About 10 minutes, nothing to install.\n")
+        print("Analytics from Scratch placement check. About 10 to 15 minutes, nothing to install.\n")
         track = args.track or ask_track()
-        answers = ask_questions()
+        answers, asked = ask_questions()
 
-    scores = grade(answers)
+    scores = grade(answers, asked)
     rec = recommend(scores, track, lessons)
     print(to_json(scores, rec) if args.json else format_report(scores, rec))
     return 0
