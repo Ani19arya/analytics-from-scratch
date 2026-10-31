@@ -1,0 +1,60 @@
+name: I got stuck on a lesson
+description: You tried a lesson and could not get past a step. Tell us where, so we can make it clearer.
+title: "[stuck] "
+labels: ["stuck"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for writing this up. Being stuck is useful information for us, not a failure on your part.
+        Please do not paste your name, email or anything private. Lesson ids look like 01-02 (see curriculum.json).
+  - type: input
+    id: lesson
+    attributes:
+      label: Lesson id
+      description: The id from curriculum.json or the lesson folder, such as 01-02.
+      placeholder: "01-02"
+    validations:
+      required: true
+  - type: input
+    id: step
+    attributes:
+      label: Which step
+      description: The README section or the part of the exercise, such as "Your turn, question 2".
+      placeholder: "Walk through, second code block"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What you thought would happen, or what you were trying to do.
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: What you saw instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: time
+    attributes:
+      label: How long you had been on it
+      options:
+        - Less than 15 minutes
+        - 15 to 60 minutes
+        - 1 to 3 hours
+        - More than 3 hours
+        - Across more than one day
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Test output (optional)
+      description: Paste the output of python3 test_lesson.py or python3 tools/progress.py check. Remove any file paths that show your user name.
+      render: text
+    validations:
+      required: false

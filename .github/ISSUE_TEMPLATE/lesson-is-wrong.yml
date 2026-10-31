@@ -1,0 +1,39 @@
+name: Something in a lesson is wrong
+description: A fact, number, code block, test or link in a lesson looks wrong.
+title: "[wrong] "
+labels: ["content-fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking our work. A file and line number makes this fast to fix.
+  - type: input
+    id: lesson
+    attributes:
+      label: Lesson id
+      description: The id from curriculum.json or the lesson folder, such as 02-03.
+      placeholder: "02-03"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: File and line
+      description: The file in the lesson folder and the line number, if you know it.
+      placeholder: "README.md line 42"
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: What it says now, and what you think it should say.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (if it is a fact)
+      description: A link or reference that backs up the correction. Leave blank for code or typo fixes.
+    validations:
+      required: false

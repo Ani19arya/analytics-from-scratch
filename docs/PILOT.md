@@ -1,0 +1,74 @@
+# Running a pilot
+
+A plan for the course owner to run a pilot with 20 to 100 learners and learn whether the course works, without tracking anyone. Nothing in the course collects or sends data. Learners share only what they choose to, in two ways:
+
+1. `python3 tools/progress.py export`: an anonymous summary of their own progress. It prints exactly what it includes and writes nothing until they type `y` or pass `--yes`.
+2. The [Pilot check-in](../.github/ISSUE_TEMPLATE/pilot-check-in.yml) issue form: a short weekly form where they can paste that export and answer four questions.
+
+Stuck points also come in through [I got stuck on a lesson](../.github/ISSUE_TEMPLATE/stuck-on-a-lesson.yml) and errors through [Something in a lesson is wrong](../.github/ISSUE_TEMPLATE/lesson-is-wrong.yml).
+
+## Before you start
+
+- Decide the dates (for example four to six weeks) and the one question the pilot must answer, such as "do beginners get through phase 00 and pass a first SQL lesson?".
+- Write down now what result would make you change something. Without that, any number looks fine afterwards.
+- Pin the course version. Ask learners to work from one commit or tag, so you compare like with like. Every export records `course_version` (the git short sha, or `unknown`).
+- Tell learners, in plain words: what you will ask them to share, that it is optional, that issues on a public repo are public, and that they can make a new pilot id at any time with `progress.py export --new-id` (then their old and new exports no longer line up).
+- Ask every learner to run the placement check in week 1 (`python3 tools/progress.py placement`) and again at the end. The 13 base questions are the same every time; a few follow-up questions depend on earlier answers, so compare per-area percentages, not raw totals.
+
+## What learners do
+
+- Week 1: placement, then lessons as `progress.py status` suggests. Record each one with `progress.py check <lesson-id>`.
+- Each week: open a Pilot check-in issue. Pasting the export is optional.
+- When stuck for a while: open an "I got stuck on a lesson" issue.
+- At the end: placement again, then one last export.
+
+## What an export contains
+
+Only these keys, and `test_progress.py` fails if any other key appears: `schema`, `pilot_id` (random, stored in the learner's profile), `exported_on` (day), `course_version`, `track`, `placement` (count, then first and latest: day, correct, total, and per area correct, total and level), `lessons` (per lesson tried: id, day of first try, tries, passed, day passed, failed tries before the pass), `activity` (first day, latest day, days between) and `interviews` (day, 1 to 4 score per round, pass or not yet). No notes, names, emails, paths or typed text.
+
+## Collect and compute
+
+Save each export you receive as its own `.json` file in one folder (copy the JSON from a check-in issue into a file). Keep that folder out of the repo. Then run:
+
+```
+python3 tools/progress.py aggregate pilot-exports/
+python3 tools/progress.py aggregate pilot-exports/ --json
+```
+
+It reads every `*.json` file in the folder, skips files that are not exports, and keeps only the latest export per pilot id, so weekly exports from one learner count once. If you prefer to compute by hand, every metric below comes from a few fields, and this standard library snippet is a starting point:
+
+```python
+import glob, json
+rows = [json.load(open(p)) for p in glob.glob("pilot-exports/*.json")]
+rows = [r for r in rows if r.get("schema") == "afs-pilot-export-1"]
+print(sum(1 for r in rows if r["placement"]), "of", len(rows), "completed placement")
+```
+
+## What to measure, and what each one decides
+
+Report every metric as "k of n", with n stated. With 20 to 100 learners, a difference of a few people is noise; look for large, consistent patterns and read the issues alongside the numbers.
+
+| Metric | How it is computed from exports | What it informs |
+|---|---|---|
+| Placement completion | `placement` is not null | Is the placement check too long or unclear as a first step? |
+| First lesson pass | `lessons.passed` is at least 1; also the days from `activity.first_day` to the first `passed_on` | Is setup (Python, the first lesson) a wall? If few pass a first lesson, fix phase 00 before anything else. |
+| Day-7 return | `activity.latest_day` is 7 or more days after `activity.first_day`, counted only among learners whose `exported_on` is at least 7 days after their first day | Do people come back after the first sitting? Low return points to pacing, length or motivation, not content. |
+| Lessons passed per learner | median, min and max of `lessons.passed` | Overall progress. Compare against the pace you planned for the pilot dates. |
+| Placement before and after | for learners with `placement.count` of 2 or more: per area, latest percent correct minus first percent correct (median across learners) | Which areas the lessons actually move. An area that does not move is the first to rewrite. |
+| Capstone completion | at least one passed lesson whose id starts with `10-` | Do learners reach the work they would show an employer? |
+| Where people get stuck | per lesson: how many tried it, how many have not passed, median failed tries before a pass; plus "I got stuck" issues by lesson id and step | Which lessons to fix first. The issue text says why; the export says how many. |
+| Mock interviews (if used) | learners with any `interviews`, and how many passed their latest | Whether the getting-hired part is used at all. |
+| Clarity and recommend | count the answers in the check-in issues | A check on the numbers: a lesson can be passed and still feel confusing. |
+
+Keep in mind who is missing: learners who stop rarely send a last export. Count how many started (for example, people who sent any export or check-in) and say how many of them you have final data for. Do not read the pilot as a measure of job outcomes; it measures progress through the course.
+
+## Privacy notes
+
+- Default is no data. Learners who never run `export` or open an issue share nothing.
+- Exports carry no free text, but issue forms do. If someone pastes a name, email or a path with their user name, edit the issue to remove it.
+- The pilot id is random and can be changed by the learner. Do not ask learners to tell you which pilot id is theirs, and do not join exports to GitHub user names in your analysis.
+- Keep the folder of exports private and delete it when the pilot is over. Publish only the aggregate counts.
+
+## After the pilot
+
+Write down, for each metric, the number, the n, and the decision it led to (or "no change"). Fix the lessons named most often in "where people get stuck" and in stuck issues first, then run the same plan again on the new course version.

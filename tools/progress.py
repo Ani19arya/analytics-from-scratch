@@ -11,6 +11,8 @@
     python3 tools/progress.py interview --from card.json # record a mock interview scorecard
     python3 tools/progress.py note "Joins still feel slow"
     python3 tools/progress.py report [--json | --md]     # before and after, for you or a portfolio
+    python3 tools/progress.py export [--out FILE] [--yes] [--new-id]  # opt-in anonymous pilot summary
+    python3 tools/progress.py aggregate DIR [--json]     # pilot owner: metrics from many exports
 
 The profile lives in .learner/profile.json at the repo root. It is gitignored, so it
 stays on your computer. It is created the first time you run a command. Every command
@@ -18,6 +20,10 @@ takes --profile PATH to use another file (the tests use a temp folder). This scr
 writes only that profile (and, for `placement` with no options, an answers template
 next to it). `check` runs the lesson test with `python3 -B`, so it leaves no
 __pycache__ behind, and it always checks your exercise, never the solution.
+
+Nothing is collected or sent. `export` is opt-in: it prints exactly what it includes,
+waits for --yes or a typed y, then writes an anonymous summary (no notes, names, paths
+or free text) for you to share only if you want to. See docs/PILOT.md.
 
 How lessons map to skill areas. Each live lesson in curriculum.json belongs to one
 area, so the counts add up to the course total:
@@ -48,6 +54,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -622,6 +629,342 @@ def _table(rows, md):
 
 
 # --------------------------------------------------------------------------
+# Pilot export (opt-in) and aggregate
+# --------------------------------------------------------------------------
+#
+# Nothing here runs unless the learner types `export`. The export is built from an
+# allowlist: every value is a number, a day date, a lesson id, an area or round name,
+# a level word or the random pilot id. Notes, names, paths, scorecard text and any
+# other free text are never copied. EXPORT_KEYS is the full schema and
+# test_progress.py fails if a key outside it appears.
+
+EXPORT_SCHEMA = "afs-pilot-export-1"
+EXPORT_KEYS = {
+    "top": ["schema", "pilot_id", "exported_on", "course_version", "track", "placement", "lessons",
+            "activity", "interviews"],
+    "placement": ["count", "first", "latest"],
+    "placement_entry": ["date", "correct", "total", "areas"],
+    "placement_area": ["correct", "total", "level"],
+    "lessons": ["attempted", "passed", "items"],
+    "lesson_item": ["id", "first_attempt", "attempts", "passed", "passed_on", "attempts_before_pass"],
+    "activity": ["first_day", "latest_day", "days_between"],
+    "interview": ["date", "scores", "overall"],
+}
+EXPORT_NOTICE = """This makes an anonymous summary of your progress that you can choose to share
+(for example, paste it into a "Pilot check-in" issue). Nothing is sent anywhere.
+
+It includes ONLY:
+  - schema: the format name, %s
+  - pilot_id: a random id kept in your profile, not made from anything about you
+    (make a new one any time with: progress.py export --new-id)
+  - exported_on: today's date (day only)
+  - course_version: the git commit of this copy of the course, or "unknown"
+  - track: your goal, such as data-analyst, or null
+  - placement: how many placements, then the first and latest one: date (day only),
+    total correct and per area (sql, statistics, ...) correct, total and level
+  - lessons: for each lesson you tried: its id, the day of the first try, number of
+    tries, passed or not, the day it passed and the failed tries before the pass
+  - activity: your first and latest day of activity and the days between them
+  - interviews: for each mock interview: date (day only), the 1 to 4 score per round
+    and pass or not yet
+
+It never includes your notes, names, emails, file paths, placement answers,
+interview questions or comments, or any other text you typed.
+""" % EXPORT_SCHEMA
+
+_ID_RE = re.compile(r"^\d\d-\d\d$")
+_WORD_RE = re.compile(r"^[a-z][a-z0-9-]{0,39}$")
+_PILOT_RE = re.compile(r"^p-[0-9a-f]{16}$")
+_SHA_RE = re.compile(r"^[0-9a-f]{7,40}$")
+PLACEMENT_LEVELS = ["strong", "mixed", "weak"]
+
+
+def new_pilot_id():
+    import secrets
+    return "p-" + secrets.token_hex(8)
+
+
+def course_version(root=ROOT):
+    """The git short sha of this copy, or "unknown". Never raises."""
+    try:
+        proc = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=root, stdout=subprocess.PIPE,
+                              stderr=subprocess.DEVNULL, universal_newlines=True, timeout=10)
+        sha = proc.stdout.strip()
+        if proc.returncode == 0 and _SHA_RE.match(sha):
+            return sha
+    except Exception:
+        pass
+    return "unknown"
+
+
+def _day(value):
+    """A YYYY-MM-DD day, or None. Anything longer is cut to the day."""
+    if not isinstance(value, str):
+        return None
+    try:
+        return datetime.date.fromisoformat(value[:10]).isoformat()
+    except ValueError:
+        return None
+
+
+def _int(value):
+    return value if isinstance(value, int) and not isinstance(value, bool) and value >= 0 else None
+
+
+def _word(value, allowed=None):
+    if not isinstance(value, str) or not _WORD_RE.match(value):
+        return None
+    if allowed is not None and value not in allowed:
+        return None
+    return value
+
+
+def _export_placement(entry):
+    areas = {}
+    for name, s in sorted((entry.get("areas") or {}).items()):
+        if not _word(name) or not isinstance(s, dict):
+            continue
+        areas[name] = {"correct": _int(s.get("correct")), "total": _int(s.get("total")),
+                       "level": _word(s.get("level"), PLACEMENT_LEVELS)}
+    return {"date": _day(entry.get("date")), "correct": _int(entry.get("correct")),
+            "total": _int(entry.get("total")), "areas": areas}
+
+
+def export_summary(profile, lessons=None, version=None, on=None):
+    """The anonymous pilot summary. Builds every value from scratch (an allowlist)."""
+    live = set(l["id"] for l in lessons) if lessons else None
+    placements = [p for p in profile.get("placements") or [] if isinstance(p, dict)]
+    placement = None
+    if placements:
+        placement = {"count": len(placements), "first": _export_placement(placements[0]),
+                     "latest": _export_placement(placements[-1])}
+    per = {}
+    attempts = [a for a in profile.get("attempts") or [] if isinstance(a, dict)]
+    for a in sorted(attempts, key=lambda a: str(a.get("date"))):
+        lid, day = a.get("id"), _day(a.get("date"))
+        if a.get("target", "exercise") not in ("exercise", "guide") or not isinstance(lid, str) or not day:
+            continue
+        if not _ID_RE.match(lid) or (live is not None and lid not in live):
+            continue
+        it = per.setdefault(lid, {"id": lid, "first_attempt": day, "attempts": 0, "passed": False,
+                                  "passed_on": None, "attempts_before_pass": None})
+        it["attempts"] += 1
+        if a.get("passed") and not it["passed"]:
+            it["passed"], it["passed_on"], it["attempts_before_pass"] = True, day, it["attempts"] - 1
+    items = [per[k] for k in sorted(per)]
+    interviews = []
+    for i in profile.get("interviews") or []:
+        if not isinstance(i, dict):
+            continue
+        rounds = i.get("rounds") or {}
+        scores = dict((r, _int((rounds.get(r) or {}).get("score"))) for r in ROUNDS)
+        overall = i.get("overall") if i.get("overall") in ("pass", "not yet") else None
+        interviews.append({"date": _day(i.get("date")), "scores": scores, "overall": overall})
+    days = [_day(p.get("date")) for p in placements] + [x["date"] for x in interviews]
+    days += [_day(a.get("date")) for a in attempts if a.get("target", "exercise") != "solution"]
+    days = [d for d in days if d]
+    activity = {"first_day": None, "latest_day": None, "days_between": None}
+    if days:
+        lo, hi = min(days), max(days)
+        activity = {"first_day": lo, "latest_day": hi, "days_between": (datetime.date.fromisoformat(hi) -
+                                                                        datetime.date.fromisoformat(lo)).days}
+    pid = profile.get("pilot_id")
+    return {"schema": EXPORT_SCHEMA,
+            "pilot_id": pid if isinstance(pid, str) and _PILOT_RE.match(pid) else None,
+            "exported_on": _day(on) or today(),
+            "course_version": version if isinstance(version, str) and _SHA_RE.match(version) else "unknown",
+            "track": _word(profile.get("track")),
+            "placement": placement,
+            "lessons": {"attempted": len(items), "passed": sum(1 for x in items if x["passed"]), "items": items},
+            "activity": activity, "interviews": interviews}
+
+
+def _confirm(assume_yes, stdin=None):
+    """True with --yes, or after an interactive y. Never waits when stdin is not a terminal."""
+    if assume_yes:
+        return True
+    stdin = stdin or sys.stdin
+    try:
+        interactive = stdin.isatty()
+    except (AttributeError, ValueError):
+        interactive = False
+    if not interactive:
+        sys.stderr.write("Nothing written. Read the list above, then run again with --yes to confirm.\n")
+        return False
+    sys.stderr.write("Write this summary? Type y to confirm: ")
+    sys.stderr.flush()
+    answer = stdin.readline().strip().lower()
+    if answer not in ("y", "yes"):
+        sys.stderr.write("Nothing written.\n")
+        return False
+    return True
+
+
+def _median(values):
+    vals = sorted(values)
+    if not vals:
+        return None
+    mid = len(vals) // 2
+    return vals[mid] if len(vals) % 2 else (vals[mid - 1] + vals[mid]) / 2.0
+
+
+def _days(a, b):
+    return (datetime.date.fromisoformat(b) - datetime.date.fromisoformat(a)).days
+
+
+def load_exports(folder):
+    """Every pilot export (*.json) in a folder, one per pilot id (the latest export wins)."""
+    by_id, skipped = {}, []
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(folder, name), encoding="utf-8") as f:
+                data = json.load(f)
+        except (OSError, ValueError):
+            skipped.append(name)
+            continue
+        if not isinstance(data, dict) or data.get("schema") != EXPORT_SCHEMA:
+            skipped.append(name)
+            continue
+        key = data.get("pilot_id") or name
+        old = by_id.get(key)
+        if old is None or (data.get("exported_on") or "") >= (old.get("exported_on") or ""):
+            by_id[key] = data
+    return [by_id[k] for k in sorted(by_id)], skipped
+
+
+def aggregate(exports, day7=7):
+    """Pilot metrics from many exports. Each metric says what it is out of."""
+    n = len(exports)
+    placed = [e for e in exports if e.get("placement")]
+    passers = [e for e in exports if (e.get("lessons") or {}).get("passed")]
+    first_pass_days = []
+    for e in passers:
+        first = (e.get("activity") or {}).get("first_day")
+        days = [x["passed_on"] for x in e["lessons"]["items"] if x.get("passed_on")]
+        if first and days:
+            first_pass_days.append(_days(first, min(days)))
+    # Day-7 return: some activity on or after day 7, among learners whose export is at least 7 days
+    # after their first day (so the question can be answered).
+    eligible, returned = 0, 0
+    for e in exports:
+        act = e.get("activity") or {}
+        if not act.get("first_day") or not e.get("exported_on"):
+            continue
+        if _days(act["first_day"], e["exported_on"]) >= day7:
+            eligible += 1
+            if _days(act["first_day"], act["latest_day"]) >= day7:
+                returned += 1
+    per_learner = [(e.get("lessons") or {}).get("passed", 0) for e in exports]
+    before_after = {}
+    repeat = [e for e in placed if e["placement"].get("count", 0) >= 2]
+    for e in repeat:
+        f, l = e["placement"]["first"], e["placement"]["latest"]
+        for area in sorted(set(f.get("areas") or {}) & set(l.get("areas") or {})):
+            a, b = f["areas"][area], l["areas"][area]
+            if a.get("total") and b.get("total"):
+                change = 100.0 * b["correct"] / b["total"] - 100.0 * a["correct"] / a["total"]
+                before_after.setdefault(area, []).append(change)
+    capstone = [e for e in exports if any(x.get("passed") and str(x.get("id", "")).startswith("10-")
+                                          for x in (e.get("lessons") or {}).get("items", []))]
+    stuck = {}
+    for e in exports:
+        for x in (e.get("lessons") or {}).get("items", []):
+            s = stuck.setdefault(x["id"], {"id": x["id"], "tried": 0, "not_passed": 0, "failed_tries_before_pass": []})
+            s["tried"] += 1
+            if not x.get("passed"):
+                s["not_passed"] += 1
+            elif x.get("attempts_before_pass") is not None:
+                s["failed_tries_before_pass"].append(x["attempts_before_pass"])
+    stuck_rows = []
+    for s in stuck.values():
+        stuck_rows.append({"id": s["id"], "tried": s["tried"], "not_passed": s["not_passed"],
+                           "median_failed_tries_before_pass": _median(s["failed_tries_before_pass"])})
+    stuck_rows.sort(key=lambda r: (-r["not_passed"], -(r["median_failed_tries_before_pass"] or 0), r["id"]))
+    interviewed = [e for e in exports if e.get("interviews")]
+    return {
+        "learners": n,
+        "placement_completed": len(placed),
+        "first_lesson_passed": len(passers),
+        "median_days_to_first_pass": _median(first_pass_days),
+        "day7_return": {"returned": returned, "eligible": eligible},
+        "lessons_passed_per_learner": {"median": _median(per_learner), "min": min(per_learner) if n else None,
+                                       "max": max(per_learner) if n else None},
+        "placement_before_after": {"learners_with_two_or_more": len(repeat), "median_change_points_by_area":
+                                   dict((a, _median(v)) for a, v in sorted(before_after.items()))},
+        "capstone_passed": len(capstone),
+        "mock_interview": {"learners": len(interviewed),
+                           "latest_pass": sum(1 for e in interviewed if e["interviews"][-1].get("overall") == "pass")},
+        "where_stuck": stuck_rows[:10],
+    }
+
+
+def _dash(value):
+    return "-" if value is None else value
+
+
+def format_aggregate(agg, skipped):
+    n = agg["learners"]
+
+    def of(k):
+        return "%d of %d" % (k, n)
+
+    out = ["Pilot metrics from %d learner export%s" % (n, "" if n == 1 else "s")]
+    if skipped:
+        out.append("Skipped (not a pilot export): %s" % ", ".join(skipped))
+    if not n:
+        return "\n".join(out + ["No exports to count."])
+    d7 = agg["day7_return"]
+    lp = agg["lessons_passed_per_learner"]
+    ba = agg["placement_before_after"]
+    out += ["",
+            "Placement completed:        %s" % of(agg["placement_completed"]),
+            "Passed a first lesson:      %s (median days from first activity: %s)"
+            % (of(agg["first_lesson_passed"]), _dash(agg["median_days_to_first_pass"])),
+            "Day-7 return:               %d of %d (only learners whose export is 7+ days after their first day)"
+            % (d7["returned"], d7["eligible"]),
+            "Lessons passed per learner: median %s, min %s, max %s" % (_dash(lp["median"]), lp["min"], lp["max"]),
+            "Passed a capstone lesson:   %s" % of(agg["capstone_passed"]),
+            "Mock interviews:            %d learners, %d passed their latest"
+            % (agg["mock_interview"]["learners"], agg["mock_interview"]["latest_pass"]),
+            "",
+            "Placement first vs latest (%d learners with two or more placements), median change in points:"
+            % ba["learners_with_two_or_more"]]
+    for area, ch in ba["median_change_points_by_area"].items():
+        out.append("  %-12s %+.0f" % (area, ch))
+    out += ["", "Where people get stuck (lessons tried, not passed, median failed tries before a pass):"]
+    for r in agg["where_stuck"]:
+        m = r["median_failed_tries_before_pass"]
+        out.append("  %s  tried %d, not passed %d, median failed tries %s"
+                   % (r["id"], r["tried"], r["not_passed"], _dash(m)))
+    return "\n".join(out)
+
+
+def run_export(args, profile, path, lessons):
+    if args.new_id or not (isinstance(profile.get("pilot_id"), str) and _PILOT_RE.match(profile["pilot_id"])):
+        profile["pilot_id"] = new_pilot_id()
+    summary = export_summary(profile, lessons, version=course_version())
+    sys.stderr.write(EXPORT_NOTICE)
+    sys.stderr.write("\nYour summary: pilot id %s, %d placement(s), %d lesson(s) tried, %d passed, "
+                     "%d mock interview(s).\nIt will be written to %s.\n\n"
+                     % (summary["pilot_id"], (summary["placement"] or {}).get("count", 0),
+                        summary["lessons"]["attempted"], summary["lessons"]["passed"], len(summary["interviews"]),
+                        "the file you named" if args.out else "the screen (stdout)"))
+    if not _confirm(args.yes):
+        return 1
+    save_profile(profile, path)   # keeps the pilot id, so later exports from you line up
+    text = json.dumps(summary, indent=2, sort_keys=True) + "\n"
+    if args.out:
+        with open(args.out, "w", encoding="utf-8") as f:
+            f.write(text)
+        sys.stderr.write("Wrote %s. Look it over, then share it only if you want to.\n" % args.out)
+    else:
+        sys.stdout.write(text)
+    return 0
+
+
+# --------------------------------------------------------------------------
 # CLI
 # --------------------------------------------------------------------------
 
@@ -673,6 +1016,15 @@ def build_parser():
     fmt = r.add_mutually_exclusive_group()
     fmt.add_argument("--json", action="store_true")
     fmt.add_argument("--md", action="store_true", help="Markdown, for a portfolio")
+
+    e = sub.add_parser("export", help="opt-in: an anonymous summary you can choose to share with a pilot")
+    e.add_argument("--out", help="write to this file instead of the screen")
+    e.add_argument("--yes", action="store_true", help="confirm after reading the notice (needed when not typing)")
+    e.add_argument("--new-id", action="store_true", help="make a new random pilot id first")
+
+    ag = sub.add_parser("aggregate", help="for a pilot owner: metrics from a folder of export files")
+    ag.add_argument("folder")
+    ag.add_argument("--json", action="store_true")
     return parser
 
 
@@ -688,6 +1040,13 @@ def main(argv=None):
 
 
 def _run(args):
+    if args.command == "aggregate":
+        if not os.path.isdir(args.folder):
+            raise ProgressError("not a folder: %s" % args.folder)
+        exports, skipped = load_exports(args.folder)
+        agg = aggregate(exports)
+        print(json.dumps(dict(agg, skipped=skipped), indent=2) if args.json else format_aggregate(agg, skipped))
+        return 0
     path = os.path.abspath(args.profile)
     lessons = load_lessons()
     profile = load_profile(path)
@@ -780,6 +1139,9 @@ def _run(args):
         rep = report(profile, lessons)
         print(json.dumps(rep, indent=2) if args.json else format_report(rep, md=args.md).rstrip("\n"))
         return 0
+
+    if args.command == "export":
+        return run_export(args, profile, path, lessons)
     return 2
 
 

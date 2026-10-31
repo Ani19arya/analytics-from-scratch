@@ -1,0 +1,58 @@
+name: Pilot check-in
+description: A short weekly check-in for pilot learners. Every field except the lessons is optional.
+title: "[pilot] check-in"
+labels: ["pilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking part in the pilot. Share only what you are happy to share. Issues on a public repo are public.
+        To include your progress, run `python3 tools/progress.py export` from the repo root. It shows exactly what it
+        includes and asks before writing. It has no notes, names, emails or paths. Please do not add any of those below.
+  - type: textarea
+    id: export
+    attributes:
+      label: Anonymous progress export (optional)
+      description: Paste the JSON printed by python3 tools/progress.py export --yes, or leave blank.
+      render: json
+    validations:
+      required: false
+  - type: input
+    id: lessons
+    attributes:
+      label: Lessons done this week
+      description: Lesson ids, separated by commas. Write "none" if you did not get to any.
+      placeholder: "00-01, 00-02, 01-01"
+    validations:
+      required: true
+  - type: textarea
+    id: hardest
+    attributes:
+      label: Hardest point this week
+      description: The lesson and step where you slowed down most, and why, if you know.
+    validations:
+      required: false
+  - type: dropdown
+    id: clarity
+    attributes:
+      label: How clear were the lessons this week?
+      description: 1 is very confusing, 5 is very clear.
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    validations:
+      required: false
+  - type: dropdown
+    id: recommend
+    attributes:
+      label: Would you recommend the course to a friend who wants an analyst job?
+      options:
+        - "Yes"
+        - "Maybe"
+        - "No"
+        - "Not sure yet"
+    validations:
+      required: false

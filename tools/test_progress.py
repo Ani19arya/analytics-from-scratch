@@ -263,5 +263,208 @@ class TestReport(TempProfile):
         self.assertIn("No mock interviews recorded yet.", text)
 
 
+class FakeTty(io.StringIO):
+    def __init__(self, text, tty):
+        io.StringIO.__init__(self, text)
+        self._tty = tty
+
+    def isatty(self):
+        return self._tty
+
+
+SECRET_TEXT = ["Bob Example", "bob@example.com", "joins feel slow", "Senior analyst at Acme", "my strongest moment"]
+
+
+class TestExport(TempProfile):
+    def build(self):
+        p = pr.new_profile()
+        res = placement_result({"sql": (1, 2), "statistics": (0, 2)}, levels={"sql": "mixed", "statistics": "weak"})
+        res["scores"]["areas"]["sql"]["why"] = "Bob Example wrote this"
+        pr.record_placement(p, res, "2026-09-01")
+        pr.record_placement(p, placement_result({"sql": (2, 2), "statistics": (1, 2)},
+                                                levels={"sql": "strong", "statistics": "Bob Example"}), "2026-10-15")
+        pr.record_attempt(p, "01-01", False, "2026-09-02")
+        pr.record_attempt(p, "01-01", False, "2026-09-03")
+        pr.record_attempt(p, "01-01", True, "2026-09-03")
+        pr.record_attempt(p, "01-01", True, "2026-09-05")
+        pr.record_attempt(p, "01-02", False, "2026-09-10")
+        pr.record_attempt(p, "02-01", True, "2026-09-10", target="solution")   # never exported
+        pr.record_attempt(p, "bob@example.com", True, "2026-09-10")              # not a lesson id: dropped
+        c = card([3, 3, 3, 4], date="2026-10-20")
+        c["role"], c["strongest_moment"] = "Senior analyst at Acme", "my strongest moment"
+        c["rounds"]["sql"]["question"] = "Bob Example asked about joins"
+        p["interviews"].append(pr.interview_entry(c, LESSONS))
+        p["notes"] += [{"date": "2026-09-01", "text": "joins feel slow"}, {"date": "2026-09-02", "text": "Bob Example"}]
+        p["email"] = "bob@example.com"   # an unexpected field in the profile never leaks
+        pr.save_profile(p, self.path)
+        return p
+
+    def export(self, *args, stdin=None):
+        out, err = io.StringIO(), io.StringIO()
+        old = sys.stdin
+        sys.stdin = stdin if stdin is not None else FakeTty("", False)
+        try:
+            with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+                code = pr.main(["--profile", self.path, "export"] + list(args))
+        finally:
+            sys.stdin = old
+        return code, out.getvalue(), err.getvalue()
+
+    def check_keys(self, data):
+        K = pr.EXPORT_KEYS
+        self.assertEqual(sorted(data), sorted(K["top"]))
+        self.assertEqual(sorted(data["placement"]), sorted(K["placement"]))
+        for which in ("first", "latest"):
+            e = data["placement"][which]
+            self.assertEqual(sorted(e), sorted(K["placement_entry"]))
+            for area, v in e["areas"].items():
+                self.assertIn(area, pr.PLACEMENT_AREAS)
+                self.assertEqual(sorted(v), sorted(K["placement_area"]))
+        self.assertEqual(sorted(data["lessons"]), sorted(K["lessons"]))
+        for it in data["lessons"]["items"]:
+            self.assertEqual(sorted(it), sorted(K["lesson_item"]))
+        self.assertEqual(sorted(data["activity"]), sorted(K["activity"]))
+        for i in data["interviews"]:
+            self.assertEqual(sorted(i), sorted(K["interview"]))
+            self.assertEqual(sorted(i["scores"]), sorted(pr.ROUNDS))
+
+    def test_allowlist_schema_and_values(self):
+        self.build()
+        code, out, err = self.export("--yes")
+        self.assertEqual(code, 0, err)
+        data = json.loads(out)
+        self.check_keys(data)
+        self.assertEqual(data["schema"], pr.EXPORT_SCHEMA)
+        self.assertRegex(data["pilot_id"], r"^p-[0-9a-f]{16}$")
+        self.assertRegex(data["course_version"], r"^([0-9a-f]{7,40}|unknown)$")
+        self.assertEqual(data["placement"]["count"], 2)
+        self.assertEqual(data["placement"]["first"]["areas"]["sql"], {"correct": 1, "total": 2, "level": "mixed"})
+        self.assertIsNone(data["placement"]["latest"]["areas"]["statistics"]["level"])   # free text dropped
+        items = dict((x["id"], x) for x in data["lessons"]["items"])
+        self.assertEqual(sorted(items), ["01-01", "01-02"])
+        self.assertEqual(items["01-01"], {"id": "01-01", "first_attempt": "2026-09-02", "attempts": 4,
+                                          "passed": True, "passed_on": "2026-09-03", "attempts_before_pass": 2})
+        self.assertFalse(items["01-02"]["passed"])
+        self.assertEqual(data["activity"], {"first_day": "2026-09-01", "latest_day": "2026-10-20",
+                                            "days_between": 49})
+        self.assertEqual(data["interviews"], [{"date": "2026-10-20", "overall": "pass",
+                                               "scores": {"sql": 3, "statistics": 3, "metrics-case": 3,
+                                                          "behavioural": 4}}])
+
+    def test_notes_names_and_paths_never_exported(self):
+        self.build()
+        code, out, _ = self.export("--yes")
+        for text in SECRET_TEXT + ["notes", self.dir, os.path.expanduser("~"), "why", "role"]:
+            self.assertNotIn(text, out)
+
+    def test_dates_are_cut_to_the_day(self):
+        p = pr.new_profile()
+        pr.record_attempt(p, "01-01", True, "2026-09-02T13:45:10")
+        data = pr.export_summary(p, LESSONS, version="abc1234", on="2026-10-31T08:00:00")
+        self.assertEqual(data["lessons"]["items"][0]["passed_on"], "2026-09-02")
+        self.assertEqual(data["exported_on"], "2026-10-31")
+        self.assertEqual(pr.export_summary(p, LESSONS, version="not a sha")["course_version"], "unknown")
+
+    def test_notice_shown_and_yes_required_when_not_interactive(self):
+        self.build()
+        before = pr.load_profile(self.path)
+        code, out, err = self.export()
+        self.assertEqual(code, 1)
+        self.assertEqual(out, "")
+        self.assertIn("It includes ONLY", err)
+        self.assertIn("never includes your notes", err)
+        self.assertIn("--yes", err)
+        self.assertNotIn("pilot_id", pr.load_profile(self.path))
+        self.assertEqual(before, pr.load_profile(self.path))
+        code, out, err = self.export("--yes")
+        self.assertIn("It includes ONLY", err)   # shown even with --yes
+        self.assertEqual(code, 0)
+
+    def test_interactive_y_and_no(self):
+        self.build()
+        code, out, _ = self.export(stdin=FakeTty("n\n", True))
+        self.assertEqual((code, out), (1, ""))
+        code, out, _ = self.export(stdin=FakeTty("y\n", True))
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(out)["schema"], pr.EXPORT_SCHEMA)
+
+    def test_pilot_id_is_kept_and_can_be_regenerated(self):
+        self.build()
+        first = json.loads(self.export("--yes")[1])["pilot_id"]
+        self.assertEqual(json.loads(self.export("--yes")[1])["pilot_id"], first)
+        new = json.loads(self.export("--yes", "--new-id")[1])["pilot_id"]
+        self.assertNotEqual(new, first)
+        self.assertEqual(pr.load_profile(self.path)["pilot_id"], new)
+
+    def test_out_file(self):
+        self.build()
+        target = os.path.join(self.dir, "pilot.json")
+        code, out, _ = self.export("--yes", "--out", target)
+        self.assertEqual((code, out), (0, ""))
+        with open(target, encoding="utf-8") as f:
+            self.check_keys(json.load(f))
+
+    def test_course_version_never_fails(self):
+        self.assertEqual(pr.course_version(self.dir), "unknown")
+        self.assertEqual(pr.course_version(os.path.join(self.dir, "missing")), "unknown")
+
+
+class TestAggregate(TempProfile):
+    def learner(self, name, attempts, placements=(), interviews=(), on="2026-10-31"):
+        p = pr.new_profile()
+        p["pilot_id"] = pr.new_pilot_id()
+        for counts, date in placements:
+            pr.record_placement(p, placement_result(counts), date)
+        for lid, ok, date in attempts:
+            pr.record_attempt(p, lid, ok, date)
+        for scores, date in interviews:
+            p["interviews"].append(pr.interview_entry(card(scores, date=date), LESSONS))
+        self.write_json(name, pr.export_summary(p, LESSONS, version="abc1234", on=on))
+
+    def test_metrics(self):
+        self.learner("a.json", [("00-01", False, "2026-10-01"), ("00-01", True, "2026-10-02"),
+                                ("01-01", True, "2026-10-09"), ("10-01", True, "2026-10-20")],
+                     placements=[({"sql": (1, 4)}, "2026-10-01"), ({"sql": (3, 4)}, "2026-10-20")],
+                     interviews=[([3, 3, 3, 3], "2026-10-25")])
+        self.learner("b.json", [("00-01", False, "2026-10-01")], placements=[({"sql": (0, 4)}, "2026-10-01")])
+        self.learner("c.json", [("00-01", True, "2026-10-28")], on="2026-10-30")   # too new for day 7
+        self.write_json("junk.json", {"hello": 1})
+        code, out = self.cli("aggregate", self.dir, "--json")
+        self.assertEqual(code, 0, out)
+        agg = json.loads(out)
+        self.assertEqual(agg["learners"], 3)
+        self.assertEqual(agg["skipped"], ["junk.json"])
+        self.assertEqual(agg["placement_completed"], 2)
+        self.assertEqual(agg["first_lesson_passed"], 2)
+        self.assertEqual(agg["median_days_to_first_pass"], 0.5)
+        self.assertEqual(agg["day7_return"], {"returned": 1, "eligible": 2})
+        self.assertEqual(agg["lessons_passed_per_learner"], {"median": 1, "min": 0, "max": 3})
+        self.assertEqual(agg["placement_before_after"], {"learners_with_two_or_more": 1,
+                                                         "median_change_points_by_area": {"sql": 50.0}})
+        self.assertEqual(agg["capstone_passed"], 1)
+        self.assertEqual(agg["mock_interview"], {"learners": 1, "latest_pass": 1})
+        stuck = dict((r["id"], r) for r in agg["where_stuck"])
+        self.assertEqual(stuck["00-01"]["tried"], 3)
+        self.assertEqual(stuck["00-01"]["not_passed"], 1)
+        code, text = self.cli("aggregate", self.dir)
+        self.assertIn("Day-7 return:               1 of 2", text)
+
+    def test_latest_export_per_pilot_wins(self):
+        p = pr.new_profile()
+        p["pilot_id"] = "p-0123456789abcdef"
+        self.write_json("old.json", pr.export_summary(p, LESSONS, on="2026-10-01"))
+        pr.record_attempt(p, "00-01", True, "2026-10-02")
+        self.write_json("new.json", pr.export_summary(p, LESSONS, on="2026-10-10"))
+        exports, _ = pr.load_exports(self.dir)
+        self.assertEqual(len(exports), 1)
+        self.assertEqual(exports[0]["lessons"]["passed"], 1)
+
+    def test_empty_folder(self):
+        os.makedirs(os.path.join(self.dir, "empty"))
+        code, text = self.cli("aggregate", os.path.join(self.dir, "empty"))
+        self.assertEqual(code, 0)
+        self.assertIn("No exports to count.", text)
+
+
 if __name__ == "__main__":
     unittest.main()
