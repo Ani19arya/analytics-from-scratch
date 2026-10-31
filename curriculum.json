@@ -1659,7 +1659,7 @@
      "question": "Which products deserve more inventory next month, and which are tying up cash?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1674,7 +1674,7 @@
      "question": "CAC is up 35% this year. Channel saturation, pricing or tracking?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1689,7 +1689,7 @@
      "question": "Which customer segments earn more than they cost to serve?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",
@@ -1704,7 +1704,7 @@
      "question": "On-time delivery fell from 94% to 87%. Where in the chain is the delay?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 4,
      "skills": [
       "case",

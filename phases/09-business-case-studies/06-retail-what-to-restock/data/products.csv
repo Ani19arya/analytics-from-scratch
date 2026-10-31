@@ -1,0 +1,41 @@
+sku,name,category,unit_cost,unit_price,on_hand,lead_time_weeks
+Q101,Interior emulsion 5L,paint,16.78,35.82,75,3
+Q102,Gloss white 750ml,paint,30.23,48.32,2,2
+Q103,Masking tape 50m,paint,5.36,8.28,19,2
+Q104,Paint roller set,paint,28.21,54.34,93,2
+Q105,Wall filler 1kg,paint,28.27,52.72,1,1
+Q106,Dust sheet,paint,17.13,25.68,65,2
+Q107,Primer 2.5L,paint,28.00,48.82,102,2
+Q108,Brush set,paint,10.13,14.75,1,1
+Q109,Claw hammer,tools,3.93,6.02,34,2
+Q110,Cordless drill,tools,37.15,54.59,62,3
+Q111,Tape measure 8m,tools,28.89,51.85,89,3
+Q112,Screwdriver set,tools,14.15,21.31,6,1
+Q113,Spirit level 60cm,tools,3.09,4.46,63,2
+Q114,Utility knife,tools,4.00,6.75,15,1
+Q115,Hex key set,tools,24.26,45.69,45,1
+Q116,Pliers,tools,4.66,7.50,49,2
+Q117,Garden hose 30m,garden,3.30,7.28,43,2
+Q118,Pruning shears,garden,37.48,55.87,56,1
+Q119,Compost 50L,garden,10.49,22.00,55,3
+Q120,Leaf rake,garden,20.82,42.99,0,3
+Q121,Plant pots x10,garden,32.07,48.39,54,3
+Q122,Weed killer 1L,garden,2.58,4.86,93,1
+Q123,Garden gloves,garden,10.93,20.54,23,1
+Q124,Watering can,garden,8.14,12.00,111,2
+Q125,Silicone sealant,plumbing,9.41,13.65,55,1
+Q126,PTFE tape,plumbing,7.92,14.51,71,3
+Q127,Basin waste kit,plumbing,27.43,44.27,91,3
+Q128,Tap washer pack,plumbing,22.74,45.48,17,3
+Q129,Push-fit elbow x5,plumbing,15.30,27.04,95,1
+Q130,Sink plunger,plumbing,13.40,22.97,57,1
+Q131,Shower head,plumbing,16.06,25.44,73,1
+Q132,Drain unblocker,plumbing,19.07,34.02,15,2
+Q133,LED bulb B22 x4,electrical,7.80,15.31,25,3
+Q134,Extension lead 4-way,electrical,34.55,52.51,3,2
+Q135,Cable ties x100,electrical,23.83,51.85,4,1
+Q136,Fuse pack,electrical,4.19,8.94,37,2
+Q137,Smart plug,electrical,29.10,51.67,27,1
+Q138,Light switch,electrical,11.24,20.49,106,2
+Q139,Torch LED,electrical,30.63,43.76,73,2
+Q140,Batteries AA x8,electrical,28.65,46.56,95,2

@@ -251,10 +251,10 @@ Level total: about 76.5 hours of focused work.
 - [x] 09-03 [Marketing: is the campaign incremental?](phases/09-business-case-studies/03-marketing-is-the-campaign-incremental): The campaign got credit for 3,000 sales. How many would have happened anyway? About 4 h.
 - [x] 09-04 [Food delivery: why are cancellations rising?](phases/09-business-case-studies/04-food-delivery-cancellations): Cancellations doubled in six weeks. Restaurants, riders, customers or the app? About 4 h.
 - [x] 09-05 [Fintech: loan approvals and defaults](phases/09-business-case-studies/05-fintech-approvals-and-defaults): If we approve more applicants, how many more defaults do we buy? About 4 h.
-- [ ] 09-06 Retail: what to restock *(planned)*: Which products deserve more inventory next month, and which are tying up cash? About 4 h.
-- [ ] 09-07 Growth: why is acquisition cost rising? *(planned)*: CAC is up 35% this year. Channel saturation, pricing or tracking? About 4 h.
-- [ ] 09-08 Banking: which segments are profitable? *(planned)*: Which customer segments earn more than they cost to serve? About 4 h.
-- [ ] 09-09 Operations: why are deliveries late? *(planned)*: On-time delivery fell from 94% to 87%. Where in the chain is the delay? About 4 h.
+- [x] 09-06 [Retail: what to restock](phases/09-business-case-studies/06-retail-what-to-restock): Which products deserve more inventory next month, and which are tying up cash? About 4 h.
+- [x] 09-07 [Growth: why is acquisition cost rising?](phases/09-business-case-studies/07-growth-why-is-cac-rising): CAC is up 35% this year. Channel saturation, pricing or tracking? About 4 h.
+- [x] 09-08 [Banking: which segments are profitable?](phases/09-business-case-studies/08-banking-profitable-segments): Which customer segments earn more than they cost to serve? About 4 h.
+- [x] 09-09 [Operations: why are deliveries late?](phases/09-business-case-studies/09-operations-late-deliveries): On-time delivery fell from 94% to 87%. Where in the chain is the delay? About 4 h.
 
 Level total: about 144 hours of focused work.
 <!-- /generated:level-intermediate -->

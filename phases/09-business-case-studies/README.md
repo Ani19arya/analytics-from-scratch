@@ -30,10 +30,10 @@ The test checks the numbers in steps 7 to 9. A rubric in each case checks steps 
 3. [Marketing: is the campaign incremental?](03-marketing-is-the-campaign-incremental/) The campaign got credit for 3,000 sales. How many would have happened anyway?
 4. [Food delivery: why are cancellations rising?](04-food-delivery-cancellations/) Cancellations doubled in six weeks. Restaurants, riders, customers or the app?
 5. [Fintech: loan approvals and defaults](05-fintech-approvals-and-defaults/). If we approve more applicants, how many more defaults do we buy?
-6. Retail: what to restock *(planned)*. Which products deserve more inventory next month, and which are tying up cash?
-7. Growth: why is acquisition cost rising? *(planned)* CAC is up 35% this year. Channel saturation, pricing or tracking?
-8. Banking: which segments are profitable? *(planned)* Which customer segments earn more than they cost to serve?
-9. Operations: why are deliveries late? *(planned)* On-time delivery fell from 94% to 87%. Where in the chain is the delay?
+6. [Retail: what to restock](06-retail-what-to-restock/). Which products deserve more inventory next month, and which are tying up cash?
+7. [Growth: why is acquisition cost rising?](07-growth-why-is-cac-rising/) CAC is up 35% this year. Channel saturation, pricing or tracking?
+8. [Banking: which segments are profitable?](08-banking-profitable-segments/) Which customer segments earn more than they cost to serve?
+9. [Operations: why are deliveries late?](09-operations-late-deliveries/) On-time delivery fell from 94% to 87%. Where in the chain is the delay?
 
 The percentages in these questions describe the fictional case data, not real companies.
 
