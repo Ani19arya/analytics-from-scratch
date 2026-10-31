@@ -96,6 +96,8 @@ So North's December total is 36518 + 34453 + 40584 = 111555.
 
 **When windows run.** In the logical order from lesson 01, window functions are computed after FROM, WHERE, GROUP BY and HAVING, at the SELECT step, and before ORDER BY and LIMIT. That is why you cannot filter on them in the same query's WHERE clause. You wrap them in a subquery and filter outside it. Snowflake, BigQuery and Databricks also have `QUALIFY`, a clause that filters on a window result directly (`QUALIFY RANK() OVER (...) = 1`). SQLite, Postgres and SQL Server do not.
 
+Try it: the [window function playground](../../../visuals/window-functions.html) (one HTML file, opens offline) lets you pick the partition, order, frame and function and highlights the rows each value uses, including the R04 and R05 tie.
+
 ## Walk through
 
 Run any query below from this folder with `python3 ../query.py "<the query>"`, or save it in a file and run `python3 ../query.py file.sql`.

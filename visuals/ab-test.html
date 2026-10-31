@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A/B test calculator</title>
+<meta name="description" content="Move the visitors and conversions for each arm and watch the z-test, p-value and confidence interval update, then simulate peeking. Tidewater Outdoor data from lesson 02-03.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f6f2;--surface:#ffffff;--text:#1c1e22;--muted:#596070;--border:#d3d7df;--accent:#1f55c0;--accent-soft:#e3ebfb;--good:#17703f;--good-soft:#ddf2e5;--bad:#b0261d;--bad-soft:#fbe3e1;--hl:#fff0b8;--frame:#d3e2ff;--code:#eff0f3}
+@media (prefers-color-scheme: dark){:root{--bg:#131519;--surface:#1c1f25;--text:#e7e9ed;--muted:#a3aab7;--border:#3a3f4a;--accent:#8db0ff;--accent-soft:#24324e;--good:#72d59f;--good-soft:#173726;--bad:#ff8f87;--bad-soft:#47211e;--hl:#4c3f12;--frame:#243a62;--code:#252932}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
+nav.top{font-size:.92rem;display:flex;flex-wrap:wrap;gap:4px 16px}
+h1{font-size:1.65rem;line-height:1.25;margin:.5em 0 .25em}
+h2{font-size:1.2rem;margin:1.7em 0 .4em}
+h3{font-size:1.02rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end}
+.controls label{display:flex;flex-direction:column;gap:2px;font-size:.9rem}
+.check{display:flex;align-items:center;gap:8px;font-size:.95rem;min-height:40px}
+.check input{width:20px;height:20px}
+fieldset{border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0}
+legend{font-size:.9rem;color:var(--muted);padding:0 4px}
+select,input[type=number],button{font:inherit;color:inherit}
+select,input[type=number]{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-height:40px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent);border-radius:6px;padding:6px 12px;min-height:40px;cursor:pointer}
+button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:.88rem;color:var(--muted);font-weight:600}
+.num{text-align:right}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+.stat b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.good{color:var(--good)}
+.bad{color:var(--bad)}
+.okbox{background:var(--good-soft);border-radius:8px;padding:8px 12px}
+.badbox{background:var(--bad-soft);border-radius:8px;padding:8px 12px}
+.note{font-size:.92rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:0 8px;color:var(--muted)}
+tr.hl td{background:var(--hl)}
+tr.dup td{background:var(--bad-soft)}
+tr.frame td{background:var(--frame)}
+footer{margin-top:36px;padding-top:12px;border-top:1px solid var(--border);font-size:.88rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){h1{font-size:1.35rem}th,td{padding:5px 6px}.stat b{font-size:1.15rem}}
+.arms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.arm h3{margin-top:0}
+.pair{display:grid;grid-template-columns:1fr 6.5em;gap:8px;align-items:center;margin:6px 0}
+.pair input[type=number]{width:100%}
+svg{display:block;width:100%;height:auto}
+svg text{fill:var(--muted);font-size:17px;font-family:inherit}
+.axis{stroke:var(--border)}
+.curve{fill:none;stroke:var(--text);stroke-width:1.5}
+.tail{fill:var(--accent);opacity:.45}
+.ci{stroke:var(--accent);stroke-width:6;stroke-linecap:round}
+.zero{stroke:var(--bad);stroke-width:1.5;stroke-dasharray:4 3}
+.path{fill:none;stroke:var(--muted);stroke-width:1;opacity:.6}
+.path.hit{stroke:var(--bad);opacity:.9;stroke-width:1.5}
+.cut{stroke:var(--bad);stroke-dasharray:4 3}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Breadcrumb"><a href="index.html">All visual explainers</a><a href="../phases/02-statistics-and-experiments/03-ab-test-from-scratch/README.md">Lesson 02-03: A/B test from scratch</a><a href="../phases/02-statistics-and-experiments/13-ab-test-pitfalls/README.md">Lesson 02-13: A/B test pitfalls</a></nav>
+<h1>A/B test calculator</h1>
+<p class="lede">Tidewater Outdoor tested a shorter checkout page (B) against the current one (A). Dana wants to ship B. Move the numbers and see when a gap is bigger than luck, using the same formulas as the lesson.</p>
+
+<h2>1. The two arms</h2>
+<div class="card">
+<div class="controls" id="presets"></div>
+<div class="arms" style="margin-top:10px">
+<div class="arm"><h3>A, current page</h3>
+<div class="pair"><label for="naR">visitors</label><span></span><input type="range" id="naR" min="50" max="5000" step="1" aria-label="A visitors slider"><input type="number" id="na" min="1" max="100000" aria-label="A visitors"></div>
+<div class="pair"><label for="caR">conversions</label><span></span><input type="range" id="caR" min="0" max="5000" step="1" aria-label="A conversions slider"><input type="number" id="ca" min="0" max="100000" aria-label="A conversions"></div>
+</div>
+<div class="arm"><h3>B, new page</h3>
+<div class="pair"><label for="nbR">visitors</label><span></span><input type="range" id="nbR" min="50" max="5000" step="1" aria-label="B visitors slider"><input type="number" id="nb" min="1" max="100000" aria-label="B visitors"></div>
+<div class="pair"><label for="cbR">conversions</label><span></span><input type="range" id="cbR" min="0" max="5000" step="1" aria-label="B conversions slider"><input type="number" id="cb" min="0" max="100000" aria-label="B conversions"></div>
+</div>
+</div>
+<p id="inputErr" class="badbox" hidden></p>
+</div>
+
+<h2>2. The test</h2>
+<div class="card" aria-live="polite">
+<div class="stats">
+<div class="stat"><span>rate A</span><b id="o_pa"></b></div>
+<div class="stat"><span>rate B</span><b id="o_pb"></b></div>
+<div class="stat"><span>lift (B minus A)</span><b id="o_lift"></b></div>
+<div class="stat"><span>pooled rate</span><b id="o_pool"></b></div>
+<div class="stat"><span>standard error (pooled)</span><b id="o_se"></b></div>
+<div class="stat"><span>z</span><b id="o_z"></b></div>
+<div class="stat"><span>two-sided p-value</span><b id="o_p"></b></div>
+<div class="stat"><span>95% CI on the lift</span><b id="o_ci"></b></div>
+</div>
+<svg id="curve" viewBox="0 0 600 170" role="img" aria-label="Normal curve with the two tails beyond z shaded"></svg>
+<p class="note">The shaded tails are the p-value: the chance of a z at least this far from 0, either way, if the pages were equally good.</p>
+<svg id="ciPlot" viewBox="0 0 600 76" role="img" aria-label="95 percent confidence interval on the lift, against zero"></svg>
+<div class="stats">
+<div class="stat"><span>sample ratio check, chi-square</span><b id="o_chi"></b></div>
+<div class="stat"><span>sample ratio check, p</span><b id="o_srm"></b></div>
+</div>
+<p id="decision"></p>
+<details><summary>The formulas</summary>
+<pre>p_a = conv_a / n_a      p_b = conv_b / n_b      lift = p_b - p_a
+p_pool = (conv_a + conv_b) / (n_a + n_b)
+SE = sqrt( p_pool * (1 - p_pool) * (1/n_a + 1/n_b) )
+z = lift / SE
+Phi(z) = 0.5 * (1 + erf(z / sqrt(2)))
+p_value = 2 * (1 - Phi(|z|))
+SE_diff = sqrt( p_a(1 - p_a)/n_a + p_b(1 - p_b)/n_b )   (unpooled, for the interval)
+CI = lift +/- 1.96 * SE_diff
+SRM: chi2 = (n_a - E)^2/E + (n_b - E)^2/E with E = (n_a + n_b)/2, p = 2 * (1 - Phi(sqrt(chi2)))
+Ship only if p_value &lt; 0.05 and lift &gt; 0. Stop and fix the split if the SRM p is below 0.001.</pre>
+</details>
+</div>
+
+<h2>3. Peeking: why checking every day finds fake winners</h2>
+<div class="card">
+<p>Lesson 02-13 simulates A/A tests: both arms have the same true rate, so every "winner" is a false alarm. Each test runs 14 days with 280 users per arm per day at a 12% rate. Peeking means stopping the first day p drops below 0.05.</p>
+<div class="controls">
+<label>Tests to simulate<input type="number" id="sims" value="2000" min="10" max="5000"></label>
+<label>Seed<input type="number" id="seed" value="0" min="0" max="4294967295"></label>
+<button type="button" id="runSim">Run the simulation</button>
+</div>
+<div class="stats" aria-live="polite">
+<div class="stat"><span>below 0.05 on the last day</span><b id="s_last">-</b></div>
+<div class="stat"><span>below 0.05 on ANY day</span><b id="s_any">-</b></div>
+</div>
+<svg id="paths" viewBox="0 0 600 220" role="img" aria-label="p-value of the first 20 simulated A/A tests, day by day"></svg>
+<p id="simNote" class="note">The chart will show the p-value of the first 20 tests, day by day. Red lines dip below 0.05 at least once.</p>
+</div>
+
+<footer>
+<p>Tidewater Outdoor and its numbers are fictional (lesson 02-03 data). The simulation uses a Mersenne Twister seeded the same way as Python's <code>random.Random(seed)</code>, so seed 0 with 2000 tests should reproduce the lesson's own run. This page runs offline with no network calls.</p>
+<p id="selfcheck">Self check: running.</p>
+</footer>
+</main>
+
+<script type="application/json" id="fixtures">{"page":"ab-test","lesson":"phases/02-statistics-and-experiments/03-ab-test-from-scratch","normal_cdf":[[1.96,0.975],[0.0,0.5],[-1.0,0.1587],[2.5758,0.995]],"cases":[{"conv_a":107,"n_a":976,"conv_b":135,"n_b":924,"p_a":0.1096,"p_b":0.1461,"lift":0.0365,"p_pool":0.1274,"se":0.0153,"z":2.3835,"p_value":0.0172,"ci_low":0.0064,"ci_high":0.0665,"srm_chi2":1.4232,"srm_p":0.2329,"decision":"ship"},{"conv_a":200,"n_a":2000,"conv_b":260,"n_b":2000,"p_a":0.1,"p_b":0.13,"lift":0.03,"p_pool":0.115,"se":0.0101,"z":2.9737,"p_value":0.0029,"ci_low":0.0102,"ci_high":0.0498,"srm_chi2":0.0,"srm_p":1.0,"decision":"ship"},{"conv_a":50,"n_a":1000,"conv_b":50,"n_b":1000,"p_a":0.05,"p_b":0.05,"lift":0.0,"p_pool":0.05,"se":0.0097,"z":0.0,"p_value":1.0,"ci_low":-0.0191,"ci_high":0.0191,"srm_chi2":0.0,"srm_p":1.0,"decision":"do not ship"},{"conv_a":120,"n_a":1000,"conv_b":95,"n_b":1000,"p_a":0.12,"p_b":0.095,"lift":-0.025,"p_pool":0.1075,"se":0.0139,"z":-1.8047,"p_value":0.0711,"ci_low":-0.0521,"ci_high":0.0021,"srm_chi2":0.0,"srm_p":1.0,"decision":"do not ship"},{"conv_a":0,"n_a":500,"conv_b":0,"n_b":500,"p_a":0.0,"p_b":0.0,"lift":0.0,"p_pool":0.0,"se":0.0,"z":0.0,"p_value":1.0,"ci_low":0.0,"ci_high":0.0,"srm_chi2":0.0,"srm_p":1.0,"decision":"do not ship"},{"conv_a":30,"n_a":300,"conv_b":45,"n_b":310,"p_a":0.1,"p_b":0.1452,"lift":0.0452,"p_pool":0.123,"se":0.0266,"z":1.6981,"p_value":0.0895,"ci_low":-0.0067,"ci_high":0.097,"srm_chi2":0.1639,"srm_p":0.6856,"decision":"do not ship"}],"rng":{"seed":0,"first":[0.8444218515250481,0.7579544029403025,0.420571580830845]},"peeking":[{"sims":200,"days":14,"per_day":280,"rate":0.12,"alpha":0.05,"seed":0,"any_day":0.21,"last_day":0.055},{"sims":300,"days":14,"per_day":280,"rate":0.12,"alpha":0.05,"seed":7,"any_day":0.24333333333333335,"last_day":0.03333333333333333}],"lesson_peeking":{"sims":2000,"seed":0,"any_day":0.2185,"last_day":0.0455}}</script>
+<script>
+"use strict";
+var FX = JSON.parse(document.getElementById("fixtures").textContent);
+
+/* ---------- core calculations (checked by tools/test_visuals.py and the self check below) ---------- */
+
+// erf by its series erf(x) = 2/sqrt(pi) * exp(-x^2) * sum 2^n x^(2n+1) / (1*3*...*(2n+1)).
+// Every term is positive, so it is accurate to about 1e-15.
+function erf(x) {
+  if (x < 0) return -erf(-x);
+  if (x > 6) return 1;
+  var x2 = x * x, term = x, sum = x;
+  for (var n = 1; n < 1000; n++) {
+    term *= 2 * x2 / (2 * n + 1);
+    sum += term;
+    if (term < 1e-17 * sum) break;
+  }
+  return 2 / Math.sqrt(Math.PI) * Math.exp(-x2) * sum;
+}
+
+function normalCdf(z) { return 0.5 * (1 + erf(z / Math.SQRT2)); }
+
+function twoProportionZtest(ca, na, cb, nb) {
+  if (na <= 0 || nb <= 0) throw new Error("each group needs at least one user");
+  var pa = ca / na, pb = cb / nb, lift = pb - pa, pool = (ca + cb) / (na + nb);
+  var se = Math.sqrt(pool * (1 - pool) * (1 / na + 1 / nb));
+  var z = 0, p = 1;
+  if (se > 0) { z = lift / se; p = 2 * (1 - normalCdf(Math.abs(z))); }
+  return { p_a: pa, p_b: pb, lift: lift, p_pool: pool, se: se, z: z, p_value: p };
+}
+
+function diffCi(ca, na, cb, nb, zc) {
+  zc = zc || 1.96;
+  var pa = ca / na, pb = cb / nb;
+  var se = Math.sqrt(pa * (1 - pa) / na + pb * (1 - pb) / nb);
+  return [pb - pa - zc * se, pb - pa + zc * se];
+}
+
+function srmCheck(na, nb) {
+  var e = (na + nb) / 2;
+  var chi2 = Math.pow(na - e, 2) / e + Math.pow(nb - e, 2) / e;
+  return { chi2: chi2, p_value: 2 * (1 - normalCdf(Math.sqrt(chi2))) };
+}
+
+function decide(r, alpha, minLift) {
+  alpha = alpha === undefined ? 0.05 : alpha;
+  minLift = minLift || 0;
+  return r.p_value < alpha && r.lift > 0 && r.lift >= minLift ? "ship" : "do not ship";
+}
+
+// MT19937 seeded like CPython's random.Random(seed) for 0 <= seed < 2^32, with random() = genrand_res53.
+function MersenneTwister(seed) {
+  var N = 624, mt = new Array(N), idx = N + 1, i, j, k;
+  function initGenrand(s) {
+    mt[0] = s >>> 0;
+    for (var t = 1; t < N; t++) mt[t] = (Math.imul(1812433253, mt[t - 1] ^ (mt[t - 1] >>> 30)) + t) >>> 0;
+    idx = N;
+  }
+  initGenrand(19650218);
+  var key = [seed >>> 0];
+  i = 1; j = 0;
+  for (k = Math.max(N, key.length); k > 0; k--) {
+    mt[i] = ((mt[i] ^ Math.imul(mt[i - 1] ^ (mt[i - 1] >>> 30), 1664525)) + key[j] + j) >>> 0;
+    i++; j++;
+    if (i >= N) { mt[0] = mt[N - 1]; i = 1; }
+    if (j >= key.length) j = 0;
+  }
+  for (k = N - 1; k > 0; k--) {
+    mt[i] = ((mt[i] ^ Math.imul(mt[i - 1] ^ (mt[i - 1] >>> 30), 1566083941)) - i) >>> 0;
+    i++;
+    if (i >= N) { mt[0] = mt[N - 1]; i = 1; }
+  }
+  mt[0] = 0x80000000;
+  function next() {
+    var y;
+    if (idx >= N) {
+      for (var t = 0; t < N; t++) {
+        y = (mt[t] & 0x80000000) | (mt[(t + 1) % N] & 0x7fffffff);
+        mt[t] = (mt[(t + 397) % N] ^ (y >>> 1) ^ (y & 1 ? 0x9908b0df : 0)) >>> 0;
+      }
+      idx = 0;
+    }
+    y = mt[idx++];
+    y ^= y >>> 11;
+    y ^= (y << 7) & 0x9d2c5680;
+    y ^= (y << 15) & 0xefc60000;
+    y ^= y >>> 18;
+    return y >>> 0;
+  }
+  this.random = function () {
+    var a = next() >>> 5, b = next() >>> 6;
+    return (a * 67108864 + b) / 9007199254740992;
+  };
+}
+
+// Two-sided p of the pooled z-test, 1.0 when the pooled rate is 0 or 1 (lesson 02-13).
+function twoProportionP(ca, na, cb, nb) {
+  var pool = (ca + cb) / (na + nb);
+  if (pool === 0 || pool === 1) return 1;
+  var z = (cb / nb - ca / na) / Math.sqrt(pool * (1 - pool) * (1 / na + 1 / nb));
+  return Math.min(1, 2 * (1 - normalCdf(Math.abs(z))));
+}
+
+// The lesson 02-13 loop: share of A/A tests below alpha on ANY day, and on the LAST day.
+function simulatePeeking(sims, days, perDay, rate, alpha, seed, keepPaths) {
+  var rng = new MersenneTwister(seed), anyDay = 0, lastDay = 0, paths = [];
+  for (var s = 0; s < sims; s++) {
+    var a = 0, b = 0, n = 0, crossed = false, p = 1, path = [];
+    for (var d = 0; d < days; d++) {
+      n += perDay;
+      for (var u = 0; u < perDay; u++) if (rng.random() < rate) a++;
+      for (u = 0; u < perDay; u++) if (rng.random() < rate) b++;
+      p = twoProportionP(a, n, b, n);
+      if (p < alpha) crossed = true;
+      if (s < keepPaths) path.push(p);
+    }
+    if (crossed) anyDay++;
+    if (p < alpha) lastDay++;
+    if (s < keepPaths) paths.push({ p: path, hit: crossed });
+  }
+  return { any_day: anyDay / sims, last_day: lastDay / sims, paths: paths };
+}
+
+/* ---------- page ---------- */
+
+var PRESETS = [
+  ["Lesson data", [107, 976, 135, 924]],
+  ["Worked example", [200, 2000, 260, 2000]],
+  ["No real difference", [50, 1000, 50, 1000]],
+  ["B is worse", [120, 1000, 95, 1000]],
+  ["Logging bug (SRM)", [107, 976, 120, 824]]
+];
+var st = { ca: 107, na: 976, cb: 135, nb: 924 };
+function f4(x) { return x.toFixed(4); }
+function pct(x) { return (100 * x).toFixed(2) + "%"; }
+
+function drawCurve(z) {
+  var W = 600, H = 170, X = function (v) { return 30 + (v + 4) / 8 * (W - 60); }, Y = function (y) { return H - 25 - y / 0.42 * (H - 40); };
+  var pdf = function (v) { return Math.exp(-v * v / 2) / Math.sqrt(2 * Math.PI); };
+  var pts = [], v, d = "";
+  for (v = -4; v <= 4.0001; v += 0.05) pts.push(X(v).toFixed(1) + "," + Y(pdf(v)).toFixed(1));
+  var az = Math.min(Math.abs(z), 4);
+  function tail(from, to) {
+    var s = "M" + X(from).toFixed(1) + "," + Y(0).toFixed(1);
+    for (var t = from; t <= to + 1e-9; t += 0.05) s += " L" + X(t).toFixed(1) + "," + Y(pdf(t)).toFixed(1);
+    return s + " L" + X(to).toFixed(1) + "," + Y(0).toFixed(1) + " Z";
+  }
+  if (az < 4) d = "<path class='tail' d='" + tail(-4, -az) + "'/><path class='tail' d='" + tail(az, 4) + "'/>";
+  var ticks = "";
+  [-3, -1.96, 0, 1.96, 3].forEach(function (t) { ticks += "<text x='" + X(t) + "' y='" + (H - 8) + "' text-anchor='middle'>" + t + "</text>"; });
+  document.getElementById("curve").innerHTML = d + "<line class='axis' x1='30' x2='570' y1='" + Y(0) + "' y2='" + Y(0) + "'/><polyline class='curve' points='" + pts.join(" ") + "'/>" +
+    "<line class='zero' x1='" + X(Math.max(-4, Math.min(4, z))) + "' x2='" + X(Math.max(-4, Math.min(4, z))) + "' y1='10' y2='" + Y(0) + "'/><text x='" + X(Math.max(-3.6, Math.min(3.6, z))) + "' y='16' text-anchor='middle'>z = " + z.toFixed(2) + "</text>" + ticks;
+}
+
+function drawCi(lo, hi, lift) {
+  var m = Math.max(0.02, Math.abs(lo), Math.abs(hi)) * 1.15;
+  var X = function (v) { return 300 + v / m * 270; };
+  var ticks = [-m, -m / 2, 0, m / 2, m].map(function (t) { return "<text x='" + X(t) + "' y='72' text-anchor='middle'>" + (100 * t).toFixed(1) + "</text>"; }).join("");
+  document.getElementById("ciPlot").innerHTML = "<line class='axis' x1='30' x2='570' y1='30' y2='30'/><line class='zero' x1='" + X(0) + "' x2='" + X(0) + "' y1='5' y2='45'/>" +
+    "<line class='ci' x1='" + X(lo) + "' x2='" + X(hi) + "' y1='30' y2='30'/><circle cx='" + X(lift) + "' cy='30' r='6' fill='var(--text)'/>" + ticks +
+    "<text x='30' y='16'>lift, percentage points, with 95% CI</text>";
+}
+
+function sync() {
+  ["na", "ca", "nb", "cb"].forEach(function (k) {
+    document.getElementById(k).value = st[k];
+    document.getElementById(k + "R").value = Math.min(st[k], 5000);
+  });
+  document.getElementById("caR").max = Math.min(5000, st.na);
+  document.getElementById("cbR").max = Math.min(5000, st.nb);
+}
+
+function render() {
+  sync();
+  var err = document.getElementById("inputErr");
+  if (!(st.na > 0 && st.nb > 0) || st.ca < 0 || st.cb < 0 || st.ca > st.na || st.cb > st.nb) {
+    err.hidden = false;
+    err.textContent = "Each arm needs at least 1 visitor, and conversions must be between 0 and the visitors.";
+    return;
+  }
+  err.hidden = true;
+  var r = twoProportionZtest(st.ca, st.na, st.cb, st.nb), ci = diffCi(st.ca, st.na, st.cb, st.nb), s = srmCheck(st.na, st.nb);
+  document.getElementById("o_pa").textContent = pct(r.p_a);
+  document.getElementById("o_pb").textContent = pct(r.p_b);
+  document.getElementById("o_lift").textContent = (r.lift >= 0 ? "+" : "") + (100 * r.lift).toFixed(2) + " pts";
+  document.getElementById("o_pool").textContent = pct(r.p_pool);
+  document.getElementById("o_se").textContent = f4(r.se);
+  document.getElementById("o_z").textContent = f4(r.z);
+  var pEl = document.getElementById("o_p");
+  pEl.textContent = f4(r.p_value);
+  pEl.className = r.p_value < 0.05 ? "good" : "";
+  document.getElementById("o_ci").textContent = (100 * ci[0]).toFixed(2) + " to " + (100 * ci[1]).toFixed(2) + " pts";
+  document.getElementById("o_chi").textContent = f4(s.chi2);
+  var sEl = document.getElementById("o_srm");
+  sEl.textContent = s.p_value < 0.0001 ? s.p_value.toExponential(2) : f4(s.p_value);
+  sEl.className = s.p_value < 0.001 ? "bad" : "";
+  drawCurve(r.z);
+  drawCi(ci[0], ci[1], r.lift);
+  var dEl = document.getElementById("decision"), d = decide(r, 0.05, 0);
+  var rel = r.p_a > 0 ? " (" + (100 * r.lift / r.p_a).toFixed(0) + "% relative to A)" : "";
+  if (s.p_value < 0.001) {
+    dEl.className = "badbox";
+    dEl.textContent = "Stop: the sample ratio check fails (p below 0.001). A 50/50 split would almost never give " + st.na + " to " + st.nb + ". Find the assignment or logging bug before reading any result.";
+  } else if (d === "ship") {
+    dEl.className = "okbox";
+    dEl.textContent = "Ship B. The lift is " + (100 * r.lift).toFixed(2) + " points" + rel + ", p = " + f4(r.p_value) + ". The true lift is plausibly anywhere from " + (100 * ci[0]).toFixed(1) + " to " + (100 * ci[1]).toFixed(1) + " points. The p-value is not the chance that B is better.";
+  } else {
+    dEl.className = "badbox";
+    dEl.textContent = (r.p_value < 0.05 ? "Do not ship: B is significantly worse." : "Do not ship: a gap this large would show up " + (100 * r.p_value).toFixed(1) + "% of the time with no real difference. Not enough evidence.") + " The 95% CI on the lift runs from " + (100 * ci[0]).toFixed(1) + " to " + (100 * ci[1]).toFixed(1) + " points.";
+  }
+}
+
+function drawPaths(paths, days) {
+  var X = function (d) { return 40 + d / (days - 1) * 540; }, Y = function (p) { return 10 + (1 - p) * 180; };
+  var html = "<line class='axis' x1='40' x2='580' y1='190' y2='190'/><line class='axis' x1='40' x2='40' y1='10' y2='190'/>" +
+    "<line class='cut' x1='40' x2='580' y1='" + Y(0.05) + "' y2='" + Y(0.05) + "'/><text x='44' y='" + (Y(0.05) - 4) + "'>p = 0.05</text>" +
+    "<text x='36' y='14' text-anchor='end'>1</text><text x='36' y='194' text-anchor='end'>0</text><text x='310' y='212' text-anchor='middle'>day 1 to day " + days + "</text>";
+  paths.forEach(function (pp) {
+    html += "<polyline class='path" + (pp.hit ? " hit" : "") + "' points='" + pp.p.map(function (p, d) { return X(d).toFixed(1) + "," + Y(p).toFixed(1); }).join(" ") + "'/>";
+  });
+  document.getElementById("paths").innerHTML = html;
+}
+
+function runSim() {
+  var sims = Math.max(10, Math.min(5000, parseInt(document.getElementById("sims").value, 10) || 2000));
+  var seed = Math.max(0, parseInt(document.getElementById("seed").value, 10) || 0);
+  var r = simulatePeeking(sims, 14, 280, 0.12, 0.05, seed, 20);
+  document.getElementById("s_last").textContent = r.last_day.toFixed(4);
+  document.getElementById("s_any").textContent = r.any_day.toFixed(4);
+  document.getElementById("s_any").className = "bad";
+  drawPaths(r.paths, 14);
+  document.getElementById("simNote").textContent = "Read once, on the last day, the false alarm rate stays near the promised 5%. Stopping at the first dip, " + (100 * r.any_day).toFixed(1) +
+    "% of tests where nothing changed would have shipped a \"winner\". Red lines are the tests among the first 20 that dipped below 0.05 on some day.";
+}
+
+function selfCheck() {
+  var n = 0, ok = 0, bad = [];
+  function same(a, b, label) { n++; if (Math.abs(a - b) < 5e-5 + 1e-12) ok++; else bad.push(label); }
+  FX.normal_cdf.forEach(function (c) { same(normalCdf(c[0]), c[1], "cdf " + c[0]); });
+  FX.cases.forEach(function (c) {
+    var r = twoProportionZtest(c.conv_a, c.n_a, c.conv_b, c.n_b), ci = diffCi(c.conv_a, c.n_a, c.conv_b, c.n_b), s = srmCheck(c.n_a, c.n_b);
+    var tag = c.conv_a + "/" + c.n_a + " vs " + c.conv_b + "/" + c.n_b;
+    ["p_a", "p_b", "lift", "p_pool", "se", "z", "p_value"].forEach(function (k) { same(+r[k].toFixed(4), c[k], tag + " " + k); });
+    same(+ci[0].toFixed(4), c.ci_low, tag + " ci_low");
+    same(+ci[1].toFixed(4), c.ci_high, tag + " ci_high");
+    same(+s.chi2.toFixed(4), c.srm_chi2, tag + " srm_chi2");
+    same(+s.p_value.toFixed(4), c.srm_p, tag + " srm_p");
+    n++; if (decide(r) === c.decision) ok++; else bad.push(tag + " decision");
+  });
+  var rng = new MersenneTwister(FX.rng.seed);
+  FX.rng.first.forEach(function (v, i) { n++; if (rng.random() === v) ok++; else bad.push("rng " + i); });
+  FX.peeking.forEach(function (c) {
+    var r = simulatePeeking(c.sims, c.days, c.per_day, c.rate, c.alpha, c.seed, 0);
+    n++; if (r.any_day === c.any_day && r.last_day === c.last_day) ok++; else bad.push("peeking seed " + c.seed);
+  });
+  var el = document.getElementById("selfcheck");
+  el.textContent = "Self check: " + ok + " of " + n + " values match the lesson's Python solutions" + (bad.length ? ". Mismatch: " + bad.join("; ") : ".");
+  el.className = bad.length ? "bad" : "good";
+  el.dataset.ok = bad.length ? "false" : "true";
+}
+
+PRESETS.forEach(function (p) {
+  var b = document.createElement("button");
+  b.type = "button";
+  b.textContent = p[0];
+  b.addEventListener("click", function () { st.ca = p[1][0]; st.na = p[1][1]; st.cb = p[1][2]; st.nb = p[1][3]; render(); });
+  document.getElementById("presets").appendChild(b);
+});
+["na", "ca", "nb", "cb"].forEach(function (k) {
+  function upd(e) {
+    var v = parseInt(e.target.value, 10);
+    if (isNaN(v)) return;
+    st[k] = v;
+    if (k === "na" && st.ca > st.na) st.ca = st.na;
+    if (k === "nb" && st.cb > st.nb) st.cb = st.nb;
+    render();
+  }
+  document.getElementById(k).addEventListener("change", upd);
+  document.getElementById(k + "R").addEventListener("input", upd);
+});
+document.getElementById("runSim").addEventListener("click", runSim);
+render();
+selfCheck();
+</script>
+</body>
+</html>

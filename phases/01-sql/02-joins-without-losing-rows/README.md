@@ -97,6 +97,8 @@ Two other joins you will meet. A **RIGHT JOIN** is a LEFT JOIN with the tables s
 
 The analyst's habit: before you trust a join, compare the row count to what the key relationship says it should be.
 
+Try it: the [join fan-out explorer](../../../visuals/join-fanout.html) (one HTML file, opens offline) lets you give C005 a second address, watch the row count and SUM grow, and try each fix.
+
 ## Walk through
 
 Run any query below from this folder with `python3 ../query.py "<the query>"`, or save it in a file and run `python3 ../query.py file.sql`.

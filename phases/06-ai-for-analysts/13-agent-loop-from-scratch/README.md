@@ -83,6 +83,8 @@ tokens(text) = ceil(len(text) / 4)                      (a rough rule, not a rea
 
 **The model** is `ScriptedModel`: it returns the recorded turns in order, whatever it is shown. That makes every run repeatable and free. It also means the "model" cannot react to a result it did not expect, so the scripts were written for this database (see Honest limits).
 
+Try it: the [agent loop stepper](../../../visuals/agent-loop.html) (one HTML file, opens offline) steps through Q03, Q04, Q06, Q07 and Q08 one model call at a time, with the guard, the observations, the cost and the grounding check.
+
 ## Walk through
 
 Run these from the lesson folder. `sys.path.insert(0, "solution")` lets Python find the worked answer, and `import solution as s` loads it. The database is built in a temporary folder, so nothing in the lesson folder changes.

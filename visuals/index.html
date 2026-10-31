@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual explainers</title>
+<meta name="description" content="Five small interactive pages that go with lessons of Analytics from scratch. They open from a double-click and work offline.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f6f2;--surface:#ffffff;--text:#1c1e22;--muted:#596070;--border:#d3d7df;--accent:#1f55c0;--accent-soft:#e3ebfb;--good:#17703f;--good-soft:#ddf2e5;--bad:#b0261d;--bad-soft:#fbe3e1;--hl:#fff0b8;--frame:#d3e2ff;--code:#eff0f3}
+@media (prefers-color-scheme: dark){:root{--bg:#131519;--surface:#1c1f25;--text:#e7e9ed;--muted:#a3aab7;--border:#3a3f4a;--accent:#8db0ff;--accent-soft:#24324e;--good:#72d59f;--good-soft:#173726;--bad:#ff8f87;--bad-soft:#47211e;--hl:#4c3f12;--frame:#243a62;--code:#252932}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
+nav.top{font-size:.92rem;display:flex;flex-wrap:wrap;gap:4px 16px}
+h1{font-size:1.65rem;line-height:1.25;margin:.5em 0 .25em}
+h2{font-size:1.2rem;margin:1.7em 0 .4em}
+h3{font-size:1.02rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end}
+.controls label{display:flex;flex-direction:column;gap:2px;font-size:.9rem}
+.check{display:flex;align-items:center;gap:8px;font-size:.95rem;min-height:40px}
+.check input{width:20px;height:20px}
+fieldset{border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0}
+legend{font-size:.9rem;color:var(--muted);padding:0 4px}
+select,input[type=number],button{font:inherit;color:inherit}
+select,input[type=number]{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-height:40px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent);border-radius:6px;padding:6px 12px;min-height:40px;cursor:pointer}
+button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:.88rem;color:var(--muted);font-weight:600}
+.num{text-align:right}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+.stat b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.good{color:var(--good)}
+.bad{color:var(--bad)}
+.okbox{background:var(--good-soft);border-radius:8px;padding:8px 12px}
+.badbox{background:var(--bad-soft);border-radius:8px;padding:8px 12px}
+.note{font-size:.92rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:0 8px;color:var(--muted)}
+tr.hl td{background:var(--hl)}
+tr.dup td{background:var(--bad-soft)}
+tr.frame td{background:var(--frame)}
+footer{margin-top:36px;padding-top:12px;border-top:1px solid var(--border);font-size:.88rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){h1{font-size:1.35rem}th,td{padding:5px 6px}.stat b{font-size:1.15rem}}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{margin:0 0 12px}
+ul.list h2{margin:0 0 4px;font-size:1.1rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Visual explainers</h1>
+<p class="lede">Five small pages you can poke at. Each one goes with a lesson, uses that lesson's fictional company and data, and checks its own math against the lesson when it opens. They work offline: open a file by double-clicking it.</p>
+<ul class="list">
+<li class="card"><h2><a href="join-fanout.html">Join fan-out explorer</a></h2>
+<p>Give a customer a second address and watch the joined row count and SUM grow, then fix it four ways. Ends with a planted fan-out to find.</p>
+<p class="note">Lesson <a href="../phases/01-sql/02-joins-without-losing-rows/README.md">01-02 Joins without losing rows</a> (Brightcart)</p></li>
+<li class="card"><h2><a href="window-functions.html">Window function playground</a></h2>
+<p>Pick PARTITION BY, ORDER BY, the frame and the function, and see which rows each value is worked out from. Shows the RANK vs ROW_NUMBER tie and the default RANGE frame trap.</p>
+<p class="note">Lesson <a href="../phases/01-sql/03-window-functions/README.md">01-03 Window functions</a> (Fernhill Supply)</p></li>
+<li class="card"><h2><a href="cohort-triangle.html">Cohort triangle builder</a></h2>
+<p>Build the retention triangle from raw events, then switch unobserved months from blank to 0 and watch the averages fall. Ends with a planted mistake to click.</p>
+<p class="note">Lesson <a href="../phases/01-sql/04-cohort-retention/README.md">01-04 Cohort retention</a> (Tallyo)</p></li>
+<li class="card"><h2><a href="ab-test.html">A/B test calculator</a></h2>
+<p>Sliders for visitors and conversions, a live z-test, p-value, confidence interval on the lift and sample ratio check, plus a seeded peeking simulation that reproduces lesson 02-13.</p>
+<p class="note">Lessons <a href="../phases/02-statistics-and-experiments/03-ab-test-from-scratch/README.md">02-03 A/B test from scratch</a> and <a href="../phases/02-statistics-and-experiments/13-ab-test-pitfalls/README.md">02-13 A/B test pitfalls</a> (Tidewater Outdoor)</p></li>
+<li class="card"><h2><a href="agent-loop.html">Agent loop stepper</a></h2>
+<p>Step through recorded agent runs one model call at a time: the reply, the guard, the observation, the growing cost and the number grounding check. Then flag the ungrounded number yourself.</p>
+<p class="note">Lesson <a href="../phases/06-ai-for-analysts/13-agent-loop-from-scratch/README.md">06-13 An analytics agent loop from scratch</a> (Larkspur Goods, simulated fixture)</p></li>
+</ul>
+<footer>
+<p>Each page is one HTML file with its own CSS and JavaScript. No scripts, fonts or data are loaded from the internet. The tests in <code>tools/test_visuals.py</code> recompute every number the pages are checked against.</p>
+</footer>
+</main>
+</body>
+</html>

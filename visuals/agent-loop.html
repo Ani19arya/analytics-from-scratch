@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent loop stepper</title>
+<meta name="description" content="Step through a simulated analytics agent run: the model's replies, the guard, the observations, the cost and the number grounding check. Larkspur Goods fixture from lesson 06-13.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f6f2;--surface:#ffffff;--text:#1c1e22;--muted:#596070;--border:#d3d7df;--accent:#1f55c0;--accent-soft:#e3ebfb;--good:#17703f;--good-soft:#ddf2e5;--bad:#b0261d;--bad-soft:#fbe3e1;--hl:#fff0b8;--frame:#d3e2ff;--code:#eff0f3}
+@media (prefers-color-scheme: dark){:root{--bg:#131519;--surface:#1c1f25;--text:#e7e9ed;--muted:#a3aab7;--border:#3a3f4a;--accent:#8db0ff;--accent-soft:#24324e;--good:#72d59f;--good-soft:#173726;--bad:#ff8f87;--bad-soft:#47211e;--hl:#4c3f12;--frame:#243a62;--code:#252932}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
+nav.top{font-size:.92rem;display:flex;flex-wrap:wrap;gap:4px 16px}
+h1{font-size:1.65rem;line-height:1.25;margin:.5em 0 .25em}
+h2{font-size:1.2rem;margin:1.7em 0 .4em}
+h3{font-size:1.02rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end}
+.controls label{display:flex;flex-direction:column;gap:2px;font-size:.9rem}
+.check{display:flex;align-items:center;gap:8px;font-size:.95rem;min-height:40px}
+.check input{width:20px;height:20px}
+fieldset{border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0}
+legend{font-size:.9rem;color:var(--muted);padding:0 4px}
+select,input[type=number],button{font:inherit;color:inherit}
+select,input[type=number]{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-height:40px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent);border-radius:6px;padding:6px 12px;min-height:40px;cursor:pointer}
+button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:.88rem;color:var(--muted);font-weight:600}
+.num{text-align:right}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+.stat b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.good{color:var(--good)}
+.bad{color:var(--bad)}
+.okbox{background:var(--good-soft);border-radius:8px;padding:8px 12px}
+.badbox{background:var(--bad-soft);border-radius:8px;padding:8px 12px}
+.note{font-size:.92rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:0 8px;color:var(--muted)}
+tr.hl td{background:var(--hl)}
+tr.dup td{background:var(--bad-soft)}
+tr.frame td{background:var(--frame)}
+footer{margin-top:36px;padding-top:12px;border-top:1px solid var(--border);font-size:.88rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){h1{font-size:1.35rem}th,td{padding:5px 6px}.stat b{font-size:1.15rem}}
+.step{border-left:4px solid var(--border);padding:6px 12px;margin:10px 0}
+.step.k-tool{border-color:var(--accent)}
+.step.k-error{border-color:var(--bad)}
+.step.k-final{border-color:var(--good)}
+.step h3{margin:0 0 4px}
+.who{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.numbtn{min-height:34px;padding:0 8px;margin:0 2px;font-variant-numeric:tabular-nums}
+.answer{font-size:1.05rem;line-height:2.2}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Breadcrumb"><a href="index.html">All visual explainers</a><a href="../phases/06-ai-for-analysts/13-agent-loop-from-scratch/README.md">Lesson 06-13: An analytics agent loop from scratch</a></nav>
+<h1>Agent loop stepper</h1>
+<p class="lede">Tom at Larkspur Goods wants to know what an agent does between a question and its answer. Step through recorded runs one model call at a time. <strong>No model was called:</strong> the replies are the lesson's scripted fixture, and the observations are what the lesson's tools returned for them.</p>
+
+<h2>1. Pick a run and step through it</h2>
+<div class="card">
+<div class="controls">
+<label>Run<select id="runPick"></select></label>
+<button type="button" id="prev">Previous step</button>
+<button type="button" id="next">Next step</button>
+<button type="button" id="all">Show all steps</button>
+</div>
+<p id="progress" class="note" aria-live="polite"></p>
+<div id="steps"></div>
+<div class="stats">
+<div class="stat"><span>model calls so far</span><b id="c_calls"></b></div>
+<div class="stat"><span>input tokens sent so far</span><b id="c_in"></b></div>
+<div class="stat"><span>output tokens</span><b id="c_out"></b></div>
+<div class="stat"><span>credits (fictional rate card)</span><b id="c_cr"></b></div>
+</div>
+<p class="note">Every call sends the whole transcript again, so input tokens grow with each step. tokens = ceil(characters / 4); credits = input / 1000 x 2.0 + output / 1000 x 8.0.</p>
+</div>
+
+<h2>2. Spot the ungrounded number</h2>
+<div class="card">
+<p>Before an answer goes to Tom, every number in it must appear, at the precision written, in the question or in something a tool returned. Here are three final answers with everything their tools returned. Click every number you would flag, then check.</p>
+<div id="review"></div>
+<p><button type="button" id="checkFlags">Check my flags</button> <button type="button" id="revealFlags" aria-expanded="false" aria-controls="flagAnswer">Show the answer</button></p>
+<p id="flagFeedback" aria-live="polite"></p>
+<div id="flagAnswer" hidden></div>
+</div>
+
+<footer>
+<p>Larkspur Goods is fictional. The runs, messages and costs come from <code>phases/06-ai-for-analysts/13-agent-loop-from-scratch</code> (simulated fixture, seed 613). The guard shown here repeats the gateway's statement checks; the blocked-column check is SQLite's authorizer in the lesson, shown here by its result. This page runs offline with no network calls.</p>
+<p id="selfcheck">Self check: running.</p>
+</footer>
+</main>
+
+<script type="application/json" id="fixtures">{"page":"agent-loop","lesson":"phases/06-ai-for-analysts/13-agent-loop-from-scratch","source":"simulated: the model turns are the lesson's scripted fixture, no model was called","rate_card":{"input_per_1k":2.0,"output_per_1k":8.0},"runs":[{"id":"Q03","question":"What share of 2026 orders were refunded?","messages":[{"role":"system","content":"You are an analytics agent for the Larkspur Goods shop database. Tools: list_tables, describe_table(table), run_sql(sql), calculate(expression). Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer. Every number in your answer must come from a tool."},{"role":"user","content":"What share of 2026 orders were refunded?"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT COUNT(*) FROM orders WHERE status = 'refunded'\"}}"},{"role":"tool","content":"rows: [(84,)]"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT COUNT(*) FROM orders\"}}"},{"role":"tool","content":"rows: [(900,)]"},{"role":"assistant","content":"{\"tool\": \"calculate\", \"args\": {\"expression\": \"84 / 900 * 100\"}}"},{"role":"tool","content":"9.3333"},{"role":"assistant","content":"{\"final\": \"9.3% of orders were refunded (84 of 900).\"}"}],"kinds":["tool","tool","tool","final"],"status":"answered","answer":"9.3% of orders were refunded (84 of 900).","ungrounded":[],"cost":{"calls":4,"input_tokens":484,"output_tokens":71,"credits":1.54}},{"id":"Q04","question":"How many orders were cancelled in 2026?","messages":[{"role":"system","content":"You are an analytics agent for the Larkspur Goods shop database. Tools: list_tables, describe_table(table), run_sql(sql), calculate(expression). Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer. Every number in your answer must come from a tool."},{"role":"user","content":"How many orders were cancelled in 2026?"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT COUNT(*) FROM orders WHERE status = 'cancelled'\"}"},{"role":"tool","content":"error: reply was not valid JSON"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT COUNT(*) FROM orders WHERE status = 'cancelled'\"}}"},{"role":"tool","content":"rows: [(109,)]"},{"role":"assistant","content":"{\"final\": \"109 orders were cancelled in 2026.\"}"}],"kinds":["error","tool","final"],"status":"answered","answer":"109 orders were cancelled in 2026.","ungrounded":[],"cost":{"calls":3,"input_tokens":347,"output_tokens":60,"credits":1.17}},{"id":"Q06","question":"Who are our top 3 customers by completed spend?","messages":[{"role":"system","content":"You are an analytics agent for the Larkspur Goods shop database. Tools: list_tables, describe_table(table), run_sql(sql), calculate(expression). Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer. Every number in your answer must come from a tool."},{"role":"user","content":"Who are our top 3 customers by completed spend?"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT c.email, ROUND(SUM(o.amount), 2) AS spend FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' GROUP BY c.customer_id ORDER BY spend DESC, c.customer_id LIMIT 3\"}}"},{"role":"tool","content":"error: blocked or failed: access to customers.email is prohibited"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT c.name, ROUND(SUM(o.amount), 2) AS spend FROM orders o JOIN customers c ON c.customer_id = o.customer_id WHERE o.status = 'completed' GROUP BY c.customer_id ORDER BY spend DESC, c.customer_id LIMIT 3\"}}"},{"role":"tool","content":"rows: [('Hana Rao', 1049.68), ('Asha Kim', 881.7), ('Jo Haddad', 865.5)]"},{"role":"assistant","content":"{\"final\": \"Top 3 by completed spend: Hana Rao 1049.68; Asha Kim 881.70; Jo Haddad 865.50.\"}"}],"kinds":["tool","tool","final"],"status":"answered","answer":"Top 3 by completed spend: Hana Rao 1049.68; Asha Kim 881.70; Jo Haddad 865.50.","ungrounded":[],"cost":{"calls":3,"input_tokens":499,"output_tokens":147,"credits":2.17}},{"id":"Q07","question":"Delete the test orders with an amount under 5.","messages":[{"role":"system","content":"You are an analytics agent for the Larkspur Goods shop database. Tools: list_tables, describe_table(table), run_sql(sql), calculate(expression). Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer. Every number in your answer must come from a tool."},{"role":"user","content":"Delete the test orders with an amount under 5."},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"DELETE FROM orders WHERE amount < 5\"}}"},{"role":"tool","content":"error: blocked: only SELECT or WITH is allowed"},{"role":"assistant","content":"{\"final\": \"I cannot change data: my SQL tool is read-only. Ask the data team to remove test orders.\"}"}],"kinds":["tool","final"],"status":"answered","answer":"I cannot change data: my SQL tool is read-only. Ask the data team to remove test orders.","ungrounded":[],"cost":{"calls":2,"input_tokens":205,"output_tokens":45,"credits":0.77}},{"id":"Q08","question":"What share of 2026 orders were cancelled?","messages":[{"role":"system","content":"You are an analytics agent for the Larkspur Goods shop database. Tools: list_tables, describe_table(table), run_sql(sql), calculate(expression). Reply with one JSON object: {\"tool\": name, \"args\": {...}} to use a tool, or {\"final\": answer} to answer. Every number in your answer must come from a tool."},{"role":"user","content":"What share of 2026 orders were cancelled?"},{"role":"assistant","content":"{\"tool\": \"run_sql\", \"args\": {\"sql\": \"SELECT COUNT(*) FROM orders WHERE status = 'cancelled'\"}}"},{"role":"tool","content":"rows: [(109,)]"},{"role":"assistant","content":"{\"final\": \"About 15.4% of orders were cancelled.\"}"}],"kinds":["tool","final"],"status":"ungrounded","answer":"About 15.4% of orders were cancelled.","ungrounded":["15.4"],"cost":{"calls":2,"input_tokens":200,"output_tokens":37,"credits":0.7}}]}</script>
+<script>
+"use strict";
+var FX = JSON.parse(document.getElementById("fixtures").textContent);
+
+/* ---------- core calculations (checked by tools/test_visuals.py and the self check below) ---------- */
+
+function tokens(text) { return Math.ceil(text.length / 4); }
+
+// One model reply: {kind: "tool", tool, args} | {kind: "final", answer} | {kind: "error", message}. Same rules as parse_action.
+function parseAction(text) {
+  var obj;
+  try { obj = JSON.parse(text); } catch (e) { return { kind: "error", message: "reply was not valid JSON" }; }
+  if (obj === null || typeof obj !== "object" || Array.isArray(obj)) return { kind: "error", message: "reply must be a JSON object" };
+  if (("final" in obj) === ("tool" in obj)) return { kind: "error", message: "reply must have exactly one of final or tool" };
+  if ("final" in obj) return typeof obj.final === "string" ? { kind: "final", answer: obj.final } : { kind: "error", message: "final must be a string" };
+  var args = "args" in obj ? obj.args : {};
+  if (typeof obj.tool !== "string" || args === null || typeof args !== "object" || Array.isArray(args)) return { kind: "error", message: "tool must be a string and args an object" };
+  return { kind: "tool", tool: obj.tool, args: args };
+}
+
+// The gateway's first checks on run_sql: exactly one statement, and it starts with SELECT or WITH.
+function statementCheck(sql) {
+  var text = sql.trim().replace(/;+$/, "");
+  if (!text || text.indexOf(";") >= 0) return "blocked: send exactly one statement";
+  var first = text.split(/\s+/)[0].toUpperCase();
+  if (first !== "SELECT" && first !== "WITH") return "blocked: only SELECT or WITH is allowed";
+  return "";
+}
+
+var NUMBER = /\d+(?:,\d{3})*(?:\.\d+)?/g;
+function numbersIn(text) {
+  return (text.match(NUMBER) || []).map(function (s) {
+    var t = s.replace(/,/g, "");
+    return { text: s, value: parseFloat(t), decimals: t.indexOf(".") >= 0 ? t.split(".")[1].length : 0 };
+  });
+}
+
+// For each number in the answer: the first source text that supports it at the precision written, or null.
+function groundNumbers(answer, sources) {
+  var seen = [];
+  sources.forEach(function (s, i) { numbersIn(s).forEach(function (n) { seen.push({ value: n.value, source: i }); }); });
+  return numbersIn(answer).map(function (n) {
+    var hit = seen.filter(function (v) { return v.value.toFixed(n.decimals) === n.value.toFixed(n.decimals); })[0];
+    return { text: n.text, source: hit ? hit.source : null };
+  });
+}
+function ungroundedNumbers(answer, sources) {
+  return groundNumbers(answer, sources).filter(function (g) { return g.source === null; }).map(function (g) { return g.text; });
+}
+
+// Tokens and credits for the first `calls` model calls of a transcript (all of them when calls is undefined).
+function runCost(messages, calls) {
+  var c = 0, inp = 0, out = 0;
+  for (var i = 0; i < messages.length; i++) {
+    if (messages[i].role !== "assistant") continue;
+    if (calls !== undefined && c >= calls) break;
+    c++;
+    for (var j = 0; j < i; j++) inp += tokens(messages[j].content);
+    out += tokens(messages[i].content);
+  }
+  return { calls: c, input_tokens: inp, output_tokens: out, credits: inp / 1000 * FX.rate_card.input_per_1k + out / 1000 * FX.rate_card.output_per_1k };
+}
+
+/* ---------- page ---------- */
+
+var RUN_LABEL = { Q03: "Q03 share refunded (uses the calculator)", Q04: "Q04 recovers from broken JSON", Q06: "Q06 guard blocks the email column",
+  Q07: "Q07 a DELETE is blocked", Q08: "Q08 (try section 2 first)" };
+var state = { run: 0, shown: 1 };
+
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+// Turn a transcript into the steps to show: a start step, then one step per model call.
+function buildSteps(run) {
+  var m = run.messages, steps = [{ type: "start" }];
+  for (var i = 0; i < m.length; i++) {
+    if (m[i].role !== "assistant") continue;
+    var obs = i + 1 < m.length && m[i + 1].role === "tool" ? m[i + 1].content : null;
+    steps.push({ type: "call", reply: m[i].content, action: parseAction(m[i].content), observation: obs, index: i });
+  }
+  return steps;
+}
+
+function renderStep(run, st, n) {
+  if (st.type === "start") {
+    return "<div class='step'><h3>Plan: what the loop sends first</h3><p class='who'>system</p><pre>" + esc(run.messages[0].content) + "</pre><p class='who'>user</p><pre>" + esc(run.messages[1].content) +
+      "</pre><p class='note'>The model has no memory. These two messages, plus everything added below, are sent again on every call. Its first reply is its first move.</p></div>";
+  }
+  var a = st.action, html = "<div class='step k-" + a.kind + "'><h3>Call " + n + ": the model replies</h3><pre>" + esc(st.reply) + "</pre>";
+  if (a.kind === "error") {
+    html += "<p class='badbox'>Parse: not a valid action (" + esc(a.message) + "). The loop does not stop. It tells the model what went wrong, as an observation.</p>";
+  } else if (a.kind === "tool") {
+    html += "<p>Parse: tool <code>" + esc(a.tool) + "</code> with args <code>" + esc(JSON.stringify(a.args)) + "</code>.</p>";
+    if (a.tool === "run_sql") {
+      var g = statementCheck(String(a.args.sql || ""));
+      var blocked = st.observation && st.observation.indexOf("error: blocked") === 0;
+      if (g) html += "<p class='badbox'>Guard: " + esc(g) + ". The statement never reaches the database.</p>";
+      else if (blocked) html += "<p class='badbox'>Guard: one SELECT, so it goes to the read-only connection, where the authorizer refuses a column the agent may not read.</p>";
+      else html += "<p class='okbox'>Guard: one SELECT, read-only connection, allowed columns only. It runs.</p>";
+    }
+  } else {
+    var sources = [run.question].concat(run.messages.slice(0, st.index).filter(function (x) { return x.role === "tool"; }).map(function (x) { return x.content; }));
+    var gr = groundNumbers(a.answer, sources);
+    html += "<p>Parse: a final answer. Grounding check, number by number:</p><div class='scroll'><table><tr><th>number</th><th>found in</th></tr>" +
+      (gr.length ? gr.map(function (x) {
+        return "<tr" + (x.source === null ? " class='dup'" : "") + "><td>" + esc(x.text) + "</td><td>" + (x.source === null ? "<b class='bad'>nowhere: ungrounded</b>" : x.source === 0 ? "the question" : "observation: <code>" + esc(sources[x.source]) + "</code>") + "</td></tr>";
+      }).join("") : "<tr><td colspan='2'>no numbers in this answer</td></tr>") + "</table></div>";
+    var bad = gr.some(function (x) { return x.source === null; });
+    html += "<p class='" + (bad ? "badbox" : "okbox") + "'>Status: <b>" + (bad ? "ungrounded" : "answered") + "</b>. " + (bad ? "The loop does not pass this answer on, however confident it sounds." : "Every number came from the question or a tool.") + "</p>";
+  }
+  if (st.observation !== null) html += "<p class='who'>observation added to the transcript</p><pre>" + esc(st.observation) + "</pre>";
+  return html + "</div>";
+}
+
+function render() {
+  var run = FX.runs[state.run], steps = buildSteps(run);
+  state.shown = Math.max(1, Math.min(state.shown, steps.length));
+  var html = "", calls = 0;
+  for (var i = 0; i < state.shown; i++) { if (steps[i].type === "call") calls++; html += renderStep(run, steps[i], calls); }
+  document.getElementById("steps").innerHTML = html;
+  document.getElementById("progress").textContent = "Question: " + run.question + " Showing step " + state.shown + " of " + steps.length + ".";
+  document.getElementById("prev").disabled = state.shown <= 1;
+  document.getElementById("next").disabled = state.shown >= steps.length;
+  var c = runCost(run.messages, calls);
+  document.getElementById("c_calls").textContent = c.calls;
+  document.getElementById("c_in").textContent = c.input_tokens;
+  document.getElementById("c_out").textContent = c.output_tokens;
+  document.getElementById("c_cr").textContent = c.credits.toFixed(2);
+}
+
+var REVIEW = ["Q03", "Q06", "Q08"], flags = {};
+function buildReview() {
+  var html = "";
+  REVIEW.forEach(function (id) {
+    var run = FX.runs.filter(function (r) { return r.id === id; })[0];
+    var obs = run.messages.filter(function (m) { return m.role === "tool"; }).map(function (m) { return m.content; });
+    var k = 0;
+    var ans = esc(run.answer).replace(NUMBER, function (s) {
+      var key = id + "|" + (k++);
+      return "<button type='button' class='numbtn' aria-pressed='false' data-key='" + key + "' data-num='" + s + "'>" + s + "</button>";
+    });
+    html += "<div class='step'><h3>" + esc(run.question) + "</h3><p class='who'>what the tools returned</p><pre>" + obs.map(esc).join("\n") + "</pre><p class='who'>final answer</p><p class='answer'>" + ans + "</p></div>";
+  });
+  var box = document.getElementById("review");
+  box.innerHTML = html;
+  box.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("button[data-key]");
+    if (!b) return;
+    var on = b.getAttribute("aria-pressed") !== "true";
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    if (on) flags[b.getAttribute("data-key")] = b.getAttribute("data-num"); else delete flags[b.getAttribute("data-key")];
+  });
+}
+
+function truth() {
+  var t = {};
+  REVIEW.forEach(function (id) {
+    var run = FX.runs.filter(function (r) { return r.id === id; })[0];
+    var sources = [run.question].concat(run.messages.filter(function (m) { return m.role === "tool"; }).map(function (m) { return m.content; }));
+    groundNumbers(run.answer, sources).forEach(function (g, i) { if (g.source === null) t[id + "|" + i] = g.text; });
+  });
+  return t;
+}
+
+function checkFlags() {
+  var t = truth(), missed = [], wrong = [];
+  Object.keys(t).forEach(function (k) { if (!(k in flags)) missed.push(t[k]); });
+  Object.keys(flags).forEach(function (k) { if (!(k in t)) wrong.push(flags[k]); });
+  var fb = document.getElementById("flagFeedback");
+  if (!missed.length && !wrong.length) { fb.className = "okbox"; fb.textContent = "Right. Only " + Object.keys(t).map(function (k) { return t[k]; }).join(", ") + " has no source. Press Show the answer for where it came from."; }
+  else {
+    fb.className = "badbox";
+    fb.textContent = (wrong.length ? "These have a source, look again: " + wrong.join(", ") + ". " : "") + (missed.length ? "You missed " + missed.length + " number with no source." : "");
+  }
+}
+
+function selfCheck() {
+  var n = 0, ok = 0, bad = [];
+  FX.runs.forEach(function (run) {
+    var c = runCost(run.messages);
+    n++; if (c.calls === run.cost.calls && c.input_tokens === run.cost.input_tokens && c.output_tokens === run.cost.output_tokens && c.credits.toFixed(2) === run.cost.credits.toFixed(2)) ok++; else bad.push(run.id + " cost");
+    var kinds = run.messages.filter(function (m) { return m.role === "assistant"; }).map(function (m) { return parseAction(m.content).kind; });
+    n++; if (JSON.stringify(kinds) === JSON.stringify(run.kinds)) ok++; else bad.push(run.id + " kinds");
+    if (run.answer) {
+      var sources = [run.question].concat(run.messages.filter(function (m) { return m.role === "tool"; }).map(function (m) { return m.content; }));
+      n++; if (JSON.stringify(ungroundedNumbers(run.answer, sources)) === JSON.stringify(run.ungrounded)) ok++; else bad.push(run.id + " grounding");
+    }
+    run.messages.forEach(function (m, i) {
+      if (m.role !== "assistant") return;
+      var a = parseAction(m.content);
+      if (a.kind !== "tool" || a.tool !== "run_sql") return;
+      var obs = run.messages[i + 1].content, g = statementCheck(a.args.sql);
+      n++; if (!g || obs === "error: " + g) ok++; else bad.push(run.id + " guard");
+    });
+  });
+  var el = document.getElementById("selfcheck");
+  el.textContent = "Self check: " + ok + " of " + n + " costs, parses, guard results and grounding checks match the lesson's solution" + (bad.length ? ". Mismatch: " + bad.join("; ") : ".");
+  el.className = bad.length ? "bad" : "good";
+  el.dataset.ok = bad.length ? "false" : "true";
+}
+
+var pick = document.getElementById("runPick");
+pick.innerHTML = FX.runs.map(function (r, i) { return "<option value='" + i + "'>" + esc(RUN_LABEL[r.id] || r.id) + "</option>"; }).join("");
+pick.addEventListener("change", function () { state.run = +pick.value; state.shown = 1; render(); });
+document.getElementById("prev").addEventListener("click", function () { state.shown--; render(); });
+document.getElementById("next").addEventListener("click", function () { state.shown++; render(); });
+document.getElementById("all").addEventListener("click", function () { state.shown = 99; render(); });
+document.getElementById("checkFlags").addEventListener("click", checkFlags);
+document.getElementById("revealFlags").addEventListener("click", function (e) {
+  var a = document.getElementById("flagAnswer");
+  a.hidden = !a.hidden;
+  e.target.setAttribute("aria-expanded", a.hidden ? "false" : "true");
+  e.target.textContent = a.hidden ? "Show the answer" : "Hide the answer";
+  a.innerHTML = "<p class='okbox'>Flag <b>15.4</b> in the cancelled-share answer. Its only tool result is the count 109; no tool ever returned 15.4. It is 109 divided by the 707 completed orders, worked out in the model's head against the wrong total. The share of all 900 orders is 109 / 900 = 12.1%. Every other number has a source: 9.3 rounds from the calculator's 9.3333, 84 and 900 are query results, the 3 in \"Top 3\" is in the question, and 881.70 matches 881.7 at two decimals.</p>";
+});
+render();
+buildReview();
+selfCheck();
+</script>
+</body>
+</html>

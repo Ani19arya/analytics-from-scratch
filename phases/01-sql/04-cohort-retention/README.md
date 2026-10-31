@@ -87,6 +87,8 @@ Three traps decide whether the table is right:
 2. **Divide by the cohort size, not by last month's actives**, and not by the month 0 actives either. Retention compares each month to the starting group, counted from `users`. Every row of a cohort uses the same denominator.
 3. **Blank is not zero.** A month after the end of the data has no value. Showing it as 0.0 says everyone left, which nobody knows.
 
+Try it: the [cohort triangle builder](../../../visuals/cohort-triangle.html) (one HTML file, opens offline) builds this triangle from the raw events and shows how the averages drop when blanks become 0.
+
 ## Walk through
 
 Run any query below from this folder with `python3 ../query.py "<the query>"`. For the long ones, save the query in a file and run `python3 ../query.py file.sql`.

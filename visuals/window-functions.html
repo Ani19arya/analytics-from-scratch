@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Window function playground</title>
+<meta name="description" content="Pick PARTITION BY, ORDER BY, the frame and the function, and see each row's value and its frame. Fernhill Supply data from lesson 01-03.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f6f2;--surface:#ffffff;--text:#1c1e22;--muted:#596070;--border:#d3d7df;--accent:#1f55c0;--accent-soft:#e3ebfb;--good:#17703f;--good-soft:#ddf2e5;--bad:#b0261d;--bad-soft:#fbe3e1;--hl:#fff0b8;--frame:#d3e2ff;--code:#eff0f3}
+@media (prefers-color-scheme: dark){:root{--bg:#131519;--surface:#1c1f25;--text:#e7e9ed;--muted:#a3aab7;--border:#3a3f4a;--accent:#8db0ff;--accent-soft:#24324e;--good:#72d59f;--good-soft:#173726;--bad:#ff8f87;--bad-soft:#47211e;--hl:#4c3f12;--frame:#243a62;--code:#252932}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
+nav.top{font-size:.92rem;display:flex;flex-wrap:wrap;gap:4px 16px}
+h1{font-size:1.65rem;line-height:1.25;margin:.5em 0 .25em}
+h2{font-size:1.2rem;margin:1.7em 0 .4em}
+h3{font-size:1.02rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end}
+.controls label{display:flex;flex-direction:column;gap:2px;font-size:.9rem}
+.check{display:flex;align-items:center;gap:8px;font-size:.95rem;min-height:40px}
+.check input{width:20px;height:20px}
+fieldset{border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0}
+legend{font-size:.9rem;color:var(--muted);padding:0 4px}
+select,input[type=number],button{font:inherit;color:inherit}
+select,input[type=number]{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-height:40px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent);border-radius:6px;padding:6px 12px;min-height:40px;cursor:pointer}
+button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:.88rem;color:var(--muted);font-weight:600}
+.num{text-align:right}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+.stat b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.good{color:var(--good)}
+.bad{color:var(--bad)}
+.okbox{background:var(--good-soft);border-radius:8px;padding:8px 12px}
+.badbox{background:var(--bad-soft);border-radius:8px;padding:8px 12px}
+.note{font-size:.92rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:0 8px;color:var(--muted)}
+tr.hl td{background:var(--hl)}
+tr.dup td{background:var(--bad-soft)}
+tr.frame td{background:var(--frame)}
+footer{margin-top:36px;padding-top:12px;border-top:1px solid var(--border);font-size:.88rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){h1{font-size:1.35rem}th,td{padding:5px 6px}.stat b{font-size:1.15rem}}
+tr.cur td{background:var(--hl);font-weight:600}
+tr.sel{cursor:pointer}
+td.val{font-weight:600}
+.legend span{display:inline-block;padding:0 8px;border-radius:4px;margin-right:8px}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Breadcrumb"><a href="index.html">All visual explainers</a><a href="../phases/01-sql/03-window-functions/README.md">Lesson 01-03: Window functions</a></nav>
+<h1>Window function playground</h1>
+<p class="lede">Fernhill Supply sells wholesale in three regions, and its financial year starts in October. Build a window one part at a time and watch which rows each row's value is worked out from.</p>
+
+<h2>1. Build the window</h2>
+<div class="card">
+<p>Start from a preset, or set each part yourself.</p>
+<div class="controls" id="presets"></div>
+<div class="controls" style="margin-top:10px">
+<label>Table<select id="dataset"><option value="monthly">monthly_revenue (Oct to Jan)</option><option value="reps">rep_sales (15 reps)</option></select></label>
+<label>Function<select id="fn"><option value="sum">SUM (running total)</option><option value="rank">RANK()</option><option value="row_number">ROW_NUMBER()</option><option value="lag">LAG (previous row)</option></select></label>
+<label>PARTITION BY<select id="partition"><option value="region">region</option><option value="none">(none)</option></select></label>
+<label>ORDER BY<select id="order"></select></label>
+<label>Frame<select id="frame"><option value="rows">ROWS, start to current row</option><option value="range">RANGE, start to current row (the default)</option><option value="rows2">ROWS, 2 preceding to current row</option></select></label>
+</div>
+<pre id="sql"></pre>
+<p id="frameNote" class="note"></p>
+</div>
+
+<h2>2. Every row keeps its line</h2>
+<div class="card">
+<p class="legend note"><span style="background:var(--hl)">current row</span><span style="background:var(--frame)">rows used for it</span> Pick a row with a click, or Tab to the table and use the Up and Down arrow keys.</p>
+<div class="scroll"><table id="out" aria-label="Window result" tabindex="0"></table></div>
+<p id="explain" class="okbox" aria-live="polite"></p>
+</div>
+
+<h2>3. The tie case: RANK vs ROW_NUMBER</h2>
+<div class="card">
+<p>In North, R04 and R05 both sold 60,000. Last quarter someone picked the top rep with ROW_NUMBER, and one of them was left off the bonus list.</p>
+<div class="scroll"><table id="ties" aria-label="North reps with ties"></table></div>
+<p id="tieNote"></p>
+</div>
+
+<footer>
+<p>Data: <code>phases/01-sql/03-window-functions/data</code>, first four months of each region and all 15 reps. Fernhill Supply is fictional. Among tied rows, ROW_NUMBER here follows file order; a real database may pick either order unless you add a tie breaker. This page runs offline with no network calls.</p>
+<p id="selfcheck">Self check: running.</p>
+</footer>
+</main>
+
+<script type="application/json" id="fixtures">{"page":"window-functions","lesson":"phases/01-sql/03-window-functions","data":{"monthly":[["North","2025-10",36518],["North","2025-11",34453],["North","2025-12",40584],["North","2026-01",37777],["South","2025-10",35712],["South","2025-11",37459],["South","2025-12",44397],["South","2026-01",47944],["West","2025-10",46989],["West","2025-11",52375],["West","2025-12",52783],["West","2026-01",49046]],"reps":[["R01","North",50000],["R02","North",55000],["R03","North",55000],["R04","North",60000],["R05","North",60000],["R06","South",55000],["R07","South",55000],["R08","South",70000],["R09","South",60000],["R10","South",80000],["R11","West",50000],["R12","West",75000],["R13","West",55000],["R14","West",80000],["R15","West",75000]]},"cases":[{"dataset":"monthly","partition":"region","order":"month","frame":"rows","fn":"sum","values":{"North|2025-10":36518,"North|2025-11":70971,"North|2025-12":111555,"North|2026-01":149332,"South|2025-10":35712,"South|2025-11":73171,"South|2025-12":117568,"South|2026-01":165512,"West|2025-10":46989,"West|2025-11":99364,"West|2025-12":152147,"West|2026-01":201193}},{"dataset":"monthly","partition":"region","order":"month","frame":"range","fn":"sum","values":{"North|2025-10":36518,"North|2025-11":70971,"North|2025-12":111555,"North|2026-01":149332,"South|2025-10":35712,"South|2025-11":73171,"South|2025-12":117568,"South|2026-01":165512,"West|2025-10":46989,"West|2025-11":99364,"West|2025-12":152147,"West|2026-01":201193}},{"dataset":"monthly","partition":"region","order":"month","frame":"rows2","fn":"sum","values":{"North|2025-10":36518,"North|2025-11":70971,"North|2025-12":111555,"North|2026-01":112814,"South|2025-10":35712,"South|2025-11":73171,"South|2025-12":117568,"South|2026-01":129800,"West|2025-10":46989,"West|2025-11":99364,"West|2025-12":152147,"West|2026-01":154204}},{"dataset":"monthly","partition":"region","order":"month","frame":"rows","fn":"rank","values":{"North|2025-10":1,"North|2025-11":2,"North|2025-12":3,"North|2026-01":4,"South|2025-10":1,"South|2025-11":2,"South|2025-12":3,"South|2026-01":4,"West|2025-10":1,"West|2025-11":2,"West|2025-12":3,"West|2026-01":4}},{"dataset":"monthly","partition":"region","order":"month","frame":"rows","fn":"row_number","values":{"North|2025-10":1,"North|2025-11":2,"North|2025-12":3,"North|2026-01":4,"South|2025-10":1,"South|2025-11":2,"South|2025-12":3,"South|2026-01":4,"West|2025-10":1,"West|2025-11":2,"West|2025-12":3,"West|2026-01":4}},{"dataset":"monthly","partition":"region","order":"month","frame":"rows","fn":"lag","values":{"North|2025-10":null,"North|2025-11":36518,"North|2025-12":34453,"North|2026-01":40584,"South|2025-10":null,"South|2025-11":35712,"South|2025-12":37459,"South|2026-01":44397,"West|2025-10":null,"West|2025-11":46989,"West|2025-12":52375,"West|2026-01":52783}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"rows","fn":"sum","values":{"North|2025-10":114879,"North|2025-11":149332,"North|2025-12":40584,"North|2026-01":78361,"South|2025-10":165512,"South|2025-11":129800,"South|2025-12":92341,"South|2026-01":47944,"West|2025-10":201193,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"range","fn":"sum","values":{"North|2025-10":114879,"North|2025-11":149332,"North|2025-12":40584,"North|2026-01":78361,"South|2025-10":165512,"South|2025-11":129800,"South|2025-12":92341,"South|2026-01":47944,"West|2025-10":201193,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"rows2","fn":"sum","values":{"North|2025-10":114879,"North|2025-11":108748,"North|2025-12":40584,"North|2026-01":78361,"South|2025-10":117568,"South|2025-11":129800,"South|2025-12":92341,"South|2026-01":47944,"West|2025-10":148410,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"rows","fn":"rank","values":{"North|2025-10":3,"North|2025-11":4,"North|2025-12":1,"North|2026-01":2,"South|2025-10":4,"South|2025-11":3,"South|2025-12":2,"South|2026-01":1,"West|2025-10":4,"West|2025-11":2,"West|2025-12":1,"West|2026-01":3}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"rows","fn":"row_number","values":{"North|2025-10":3,"North|2025-11":4,"North|2025-12":1,"North|2026-01":2,"South|2025-10":4,"South|2025-11":3,"South|2025-12":2,"South|2026-01":1,"West|2025-10":4,"West|2025-11":2,"West|2025-12":1,"West|2026-01":3}},{"dataset":"monthly","partition":"region","order":"revenue_desc","frame":"rows","fn":"lag","values":{"North|2025-10":37777,"North|2025-11":36518,"North|2025-12":null,"North|2026-01":40584,"South|2025-10":37459,"South|2025-11":44397,"South|2025-12":47944,"South|2026-01":null,"West|2025-10":49046,"West|2025-11":52783,"West|2025-12":null,"West|2026-01":52375}},{"dataset":"monthly","partition":"region","order":"none","frame":"rows","fn":"sum","values":{"North|2025-10":149332,"North|2025-11":149332,"North|2025-12":149332,"North|2026-01":149332,"South|2025-10":165512,"South|2025-11":165512,"South|2025-12":165512,"South|2026-01":165512,"West|2025-10":201193,"West|2025-11":201193,"West|2025-12":201193,"West|2026-01":201193}},{"dataset":"monthly","partition":"region","order":"none","frame":"rows","fn":"rank","values":{"North|2025-10":1,"North|2025-11":1,"North|2025-12":1,"North|2026-01":1,"South|2025-10":1,"South|2025-11":1,"South|2025-12":1,"South|2026-01":1,"West|2025-10":1,"West|2025-11":1,"West|2025-12":1,"West|2026-01":1}},{"dataset":"monthly","partition":"region","order":"none","frame":"rows","fn":"row_number","values":{"North|2025-10":1,"North|2025-11":2,"North|2025-12":3,"North|2026-01":4,"South|2025-10":1,"South|2025-11":2,"South|2025-12":3,"South|2026-01":4,"West|2025-10":1,"West|2025-11":2,"West|2025-12":3,"West|2026-01":4}},{"dataset":"monthly","partition":"none","order":"month","frame":"rows","fn":"sum","values":{"North|2025-10":36518,"North|2025-11":153672,"North|2025-12":284090,"North|2026-01":419047,"South|2025-10":72230,"South|2025-11":191131,"South|2025-12":328487,"South|2026-01":466991,"West|2025-10":119219,"West|2025-11":243506,"West|2025-12":381270,"West|2026-01":516037}},{"dataset":"monthly","partition":"none","order":"month","frame":"range","fn":"sum","values":{"North|2025-10":119219,"North|2025-11":243506,"North|2025-12":381270,"North|2026-01":516037,"South|2025-10":119219,"South|2025-11":243506,"South|2025-12":381270,"South|2026-01":516037,"West|2025-10":119219,"West|2025-11":243506,"West|2025-12":381270,"West|2026-01":516037}},{"dataset":"monthly","partition":"none","order":"month","frame":"rows2","fn":"sum","values":{"North|2025-10":36518,"North|2025-11":117154,"North|2025-12":130418,"North|2026-01":134957,"South|2025-10":72230,"South|2025-11":118901,"South|2025-12":137356,"South|2026-01":138504,"West|2025-10":119219,"West|2025-11":124287,"West|2025-12":137764,"West|2026-01":134767}},{"dataset":"monthly","partition":"none","order":"month","frame":"rows","fn":"rank","values":{"North|2025-10":1,"North|2025-11":4,"North|2025-12":7,"North|2026-01":10,"South|2025-10":1,"South|2025-11":4,"South|2025-12":7,"South|2026-01":10,"West|2025-10":1,"West|2025-11":4,"West|2025-12":7,"West|2026-01":10}},{"dataset":"monthly","partition":"none","order":"month","frame":"rows","fn":"row_number","values":{"North|2025-10":1,"North|2025-11":4,"North|2025-12":7,"North|2026-01":10,"South|2025-10":2,"South|2025-11":5,"South|2025-12":8,"South|2026-01":11,"West|2025-10":3,"West|2025-11":6,"West|2025-12":9,"West|2026-01":12}},{"dataset":"monthly","partition":"none","order":"month","frame":"rows","fn":"lag","values":{"North|2025-10":null,"North|2025-11":46989,"North|2025-12":52375,"North|2026-01":52783,"South|2025-10":36518,"South|2025-11":34453,"South|2025-12":40584,"South|2026-01":37777,"West|2025-10":35712,"West|2025-11":37459,"West|2025-12":44397,"West|2026-01":47944}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"rows","fn":"sum","values":{"North|2025-10":445872,"North|2025-11":516037,"North|2025-12":334118,"North|2026-01":371895,"South|2025-10":481584,"South|2025-11":409354,"South|2025-12":293534,"South|2026-01":202148,"West|2025-10":249137,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"range","fn":"sum","values":{"North|2025-10":445872,"North|2025-11":516037,"North|2025-12":334118,"North|2026-01":371895,"South|2025-10":481584,"South|2025-11":409354,"South|2025-12":293534,"South|2026-01":202148,"West|2025-10":249137,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"rows2","fn":"sum","values":{"North|2025-10":111754,"North|2025-11":106683,"North|2025-12":131970,"North|2026-01":122758,"South|2025-10":109689,"South|2025-11":115820,"South|2025-12":139330,"South|2026-01":149365,"West|2025-10":143979,"West|2025-11":105158,"West|2025-12":52783,"West|2026-01":154204}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"rows","fn":"rank","values":{"North|2025-10":10,"North|2025-11":12,"North|2025-12":7,"North|2026-01":8,"South|2025-10":11,"South|2025-11":9,"South|2025-12":6,"South|2026-01":4,"West|2025-10":5,"West|2025-11":2,"West|2025-12":1,"West|2026-01":3}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"rows","fn":"row_number","values":{"North|2025-10":10,"North|2025-11":12,"North|2025-12":7,"North|2026-01":8,"South|2025-10":11,"South|2025-11":9,"South|2025-12":6,"South|2026-01":4,"West|2025-10":5,"West|2025-11":2,"West|2025-12":1,"West|2026-01":3}},{"dataset":"monthly","partition":"none","order":"revenue_desc","frame":"rows","fn":"lag","values":{"North|2025-10":37459,"North|2025-11":35712,"North|2025-12":44397,"North|2026-01":40584,"South|2025-10":36518,"South|2025-11":37777,"South|2025-12":46989,"South|2026-01":49046,"West|2025-10":47944,"West|2025-11":52783,"West|2025-12":null,"West|2026-01":52375}},{"dataset":"monthly","partition":"none","order":"none","frame":"rows","fn":"sum","values":{"North|2025-10":516037,"North|2025-11":516037,"North|2025-12":516037,"North|2026-01":516037,"South|2025-10":516037,"South|2025-11":516037,"South|2025-12":516037,"South|2026-01":516037,"West|2025-10":516037,"West|2025-11":516037,"West|2025-12":516037,"West|2026-01":516037}},{"dataset":"monthly","partition":"none","order":"none","frame":"rows","fn":"rank","values":{"North|2025-10":1,"North|2025-11":1,"North|2025-12":1,"North|2026-01":1,"South|2025-10":1,"South|2025-11":1,"South|2025-12":1,"South|2026-01":1,"West|2025-10":1,"West|2025-11":1,"West|2025-12":1,"West|2026-01":1}},{"dataset":"monthly","partition":"none","order":"none","frame":"rows","fn":"row_number","values":{"North|2025-10":1,"North|2025-11":2,"North|2025-12":3,"North|2026-01":4,"South|2025-10":5,"South|2025-11":6,"South|2025-12":7,"South|2026-01":8,"West|2025-10":9,"West|2025-11":10,"West|2025-12":11,"West|2026-01":12}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"rows","fn":"sum","values":{"North|R01":280000,"North|R02":175000,"North|R03":230000,"North|R04":60000,"North|R05":120000,"South|R06":265000,"South|R07":320000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":335000,"West|R12":155000,"West|R13":285000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"range","fn":"sum","values":{"North|R01":280000,"North|R02":230000,"North|R03":230000,"North|R04":120000,"North|R05":120000,"South|R06":320000,"South|R07":320000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":335000,"West|R12":230000,"West|R13":285000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"rows2","fn":"sum","values":{"North|R01":160000,"North|R02":175000,"North|R03":170000,"North|R04":60000,"North|R05":120000,"South|R06":185000,"South|R07":170000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":180000,"West|R12":155000,"West|R13":205000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"rows","fn":"rank","values":{"North|R01":5,"North|R02":3,"North|R03":3,"North|R04":1,"North|R05":1,"South|R06":4,"South|R07":4,"South|R08":2,"South|R09":3,"South|R10":1,"West|R11":5,"West|R12":2,"West|R13":4,"West|R14":1,"West|R15":2}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"rows","fn":"row_number","values":{"North|R01":5,"North|R02":3,"North|R03":4,"North|R04":1,"North|R05":2,"South|R06":4,"South|R07":5,"South|R08":2,"South|R09":3,"South|R10":1,"West|R11":5,"West|R12":2,"West|R13":4,"West|R14":1,"West|R15":3}},{"dataset":"reps","partition":"region","order":"sales_desc","frame":"rows","fn":"lag","values":{"North|R01":55000,"North|R02":60000,"North|R03":55000,"North|R04":null,"North|R05":60000,"South|R06":60000,"South|R07":55000,"South|R08":80000,"South|R09":70000,"South|R10":null,"West|R11":55000,"West|R12":80000,"West|R13":75000,"West|R14":null,"West|R15":75000}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"rows","fn":"sum","values":{"North|R01":280000,"North|R02":175000,"North|R03":230000,"North|R04":60000,"North|R05":120000,"South|R06":265000,"South|R07":320000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":335000,"West|R12":155000,"West|R13":285000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"range","fn":"sum","values":{"North|R01":280000,"North|R02":175000,"North|R03":230000,"North|R04":60000,"North|R05":120000,"South|R06":265000,"South|R07":320000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":335000,"West|R12":155000,"West|R13":285000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"rows2","fn":"sum","values":{"North|R01":160000,"North|R02":175000,"North|R03":170000,"North|R04":60000,"North|R05":120000,"South|R06":185000,"South|R07":170000,"South|R08":150000,"South|R09":210000,"South|R10":80000,"West|R11":180000,"West|R12":155000,"West|R13":205000,"West|R14":80000,"West|R15":230000}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"rows","fn":"rank","values":{"North|R01":5,"North|R02":3,"North|R03":4,"North|R04":1,"North|R05":2,"South|R06":4,"South|R07":5,"South|R08":2,"South|R09":3,"South|R10":1,"West|R11":5,"West|R12":2,"West|R13":4,"West|R14":1,"West|R15":3}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"rows","fn":"row_number","values":{"North|R01":5,"North|R02":3,"North|R03":4,"North|R04":1,"North|R05":2,"South|R06":4,"South|R07":5,"South|R08":2,"South|R09":3,"South|R10":1,"West|R11":5,"West|R12":2,"West|R13":4,"West|R14":1,"West|R15":3}},{"dataset":"reps","partition":"region","order":"sales_desc_rep","frame":"rows","fn":"lag","values":{"North|R01":55000,"North|R02":60000,"North|R03":55000,"North|R04":null,"North|R05":60000,"South|R06":60000,"South|R07":55000,"South|R08":80000,"South|R09":70000,"South|R10":null,"West|R11":55000,"West|R12":80000,"West|R13":75000,"West|R14":null,"West|R15":75000}},{"dataset":"reps","partition":"region","order":"none","frame":"rows","fn":"sum","values":{"North|R01":280000,"North|R02":280000,"North|R03":280000,"North|R04":280000,"North|R05":280000,"South|R06":320000,"South|R07":320000,"South|R08":320000,"South|R09":320000,"South|R10":320000,"West|R11":335000,"West|R12":335000,"West|R13":335000,"West|R14":335000,"West|R15":335000}},{"dataset":"reps","partition":"region","order":"none","frame":"rows","fn":"rank","values":{"North|R01":1,"North|R02":1,"North|R03":1,"North|R04":1,"North|R05":1,"South|R06":1,"South|R07":1,"South|R08":1,"South|R09":1,"South|R10":1,"West|R11":1,"West|R12":1,"West|R13":1,"West|R14":1,"West|R15":1}},{"dataset":"reps","partition":"region","order":"none","frame":"rows","fn":"row_number","values":{"North|R01":1,"North|R02":2,"North|R03":3,"North|R04":4,"North|R05":5,"South|R06":1,"South|R07":2,"South|R08":3,"South|R09":4,"South|R10":5,"West|R11":1,"West|R12":2,"West|R13":3,"West|R14":4,"West|R15":5}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"rows","fn":"sum","values":{"North|R01":885000,"North|R02":615000,"North|R03":670000,"North|R04":440000,"North|R05":500000,"South|R06":725000,"South|R07":780000,"South|R08":380000,"South|R09":560000,"South|R10":80000,"West|R11":935000,"West|R12":235000,"West|R13":835000,"West|R14":160000,"West|R15":310000}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"range","fn":"sum","values":{"North|R01":935000,"North|R02":835000,"North|R03":835000,"North|R04":560000,"North|R05":560000,"South|R06":835000,"South|R07":835000,"South|R08":380000,"South|R09":560000,"South|R10":160000,"West|R11":935000,"West|R12":310000,"West|R13":835000,"West|R14":160000,"West|R15":310000}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"rows2","fn":"sum","values":{"North|R01":160000,"North|R02":175000,"North|R03":170000,"North|R04":205000,"North|R05":190000,"South|R06":165000,"South|R07":165000,"South|R08":220000,"South|R09":180000,"South|R10":80000,"West|R11":155000,"West|R12":235000,"West|R13":165000,"West|R14":160000,"West|R15":230000}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"rows","fn":"rank","values":{"North|R01":14,"North|R02":9,"North|R03":9,"North|R04":6,"North|R05":6,"South|R06":9,"South|R07":9,"South|R08":5,"South|R09":6,"South|R10":1,"West|R11":14,"West|R12":3,"West|R13":9,"West|R14":1,"West|R15":3}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"rows","fn":"row_number","values":{"North|R01":14,"North|R02":9,"North|R03":10,"North|R04":6,"North|R05":7,"South|R06":11,"South|R07":12,"South|R08":5,"South|R09":8,"South|R10":1,"West|R11":15,"West|R12":3,"West|R13":13,"West|R14":2,"West|R15":4}},{"dataset":"reps","partition":"none","order":"sales_desc","frame":"rows","fn":"lag","values":{"North|R01":55000,"North|R02":60000,"North|R03":55000,"North|R04":70000,"North|R05":60000,"South|R06":55000,"South|R07":55000,"South|R08":75000,"South|R09":60000,"South|R10":null,"West|R11":50000,"West|R12":80000,"West|R13":55000,"West|R14":80000,"West|R15":75000}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"rows","fn":"sum","values":{"North|R01":885000,"North|R02":615000,"North|R03":670000,"North|R04":440000,"North|R05":500000,"South|R06":725000,"South|R07":780000,"South|R08":380000,"South|R09":560000,"South|R10":80000,"West|R11":935000,"West|R12":235000,"West|R13":835000,"West|R14":160000,"West|R15":310000}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"range","fn":"sum","values":{"North|R01":885000,"North|R02":615000,"North|R03":670000,"North|R04":440000,"North|R05":500000,"South|R06":725000,"South|R07":780000,"South|R08":380000,"South|R09":560000,"South|R10":80000,"West|R11":935000,"West|R12":235000,"West|R13":835000,"West|R14":160000,"West|R15":310000}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"rows2","fn":"sum","values":{"North|R01":160000,"North|R02":175000,"North|R03":170000,"North|R04":205000,"North|R05":190000,"South|R06":165000,"South|R07":165000,"South|R08":220000,"South|R09":180000,"South|R10":80000,"West|R11":155000,"West|R12":235000,"West|R13":165000,"West|R14":160000,"West|R15":230000}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"rows","fn":"rank","values":{"North|R01":14,"North|R02":9,"North|R03":10,"North|R04":6,"North|R05":7,"South|R06":11,"South|R07":12,"South|R08":5,"South|R09":8,"South|R10":1,"West|R11":15,"West|R12":3,"West|R13":13,"West|R14":2,"West|R15":4}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"rows","fn":"row_number","values":{"North|R01":14,"North|R02":9,"North|R03":10,"North|R04":6,"North|R05":7,"South|R06":11,"South|R07":12,"South|R08":5,"South|R09":8,"South|R10":1,"West|R11":15,"West|R12":3,"West|R13":13,"West|R14":2,"West|R15":4}},{"dataset":"reps","partition":"none","order":"sales_desc_rep","frame":"rows","fn":"lag","values":{"North|R01":55000,"North|R02":60000,"North|R03":55000,"North|R04":70000,"North|R05":60000,"South|R06":55000,"South|R07":55000,"South|R08":75000,"South|R09":60000,"South|R10":null,"West|R11":50000,"West|R12":80000,"West|R13":55000,"West|R14":80000,"West|R15":75000}},{"dataset":"reps","partition":"none","order":"none","frame":"rows","fn":"sum","values":{"North|R01":935000,"North|R02":935000,"North|R03":935000,"North|R04":935000,"North|R05":935000,"South|R06":935000,"South|R07":935000,"South|R08":935000,"South|R09":935000,"South|R10":935000,"West|R11":935000,"West|R12":935000,"West|R13":935000,"West|R14":935000,"West|R15":935000}},{"dataset":"reps","partition":"none","order":"none","frame":"rows","fn":"rank","values":{"North|R01":1,"North|R02":1,"North|R03":1,"North|R04":1,"North|R05":1,"South|R06":1,"South|R07":1,"South|R08":1,"South|R09":1,"South|R10":1,"West|R11":1,"West|R12":1,"West|R13":1,"West|R14":1,"West|R15":1}},{"dataset":"reps","partition":"none","order":"none","frame":"rows","fn":"row_number","values":{"North|R01":1,"North|R02":2,"North|R03":3,"North|R04":4,"North|R05":5,"South|R06":6,"South|R07":7,"South|R08":8,"South|R09":9,"South|R10":10,"West|R11":11,"West|R12":12,"West|R13":13,"West|R14":14,"West|R15":15}}]}</script>
+<script>
+"use strict";
+var FX = JSON.parse(document.getElementById("fixtures").textContent);
+
+/* ---------- core calculations (checked by tools/test_visuals.py and the self check below) ---------- */
+
+var ORDERS = {
+  month: [["month", 1]], revenue_desc: [["value", -1]], sales_desc: [["value", -1]],
+  sales_desc_rep: [["value", -1], ["key", 1]], none: []
+};
+
+function tableRows(dataset) {
+  return FX.data[dataset].map(function (r, i) {
+    return dataset === "monthly" ? { region: r[0], key: r[1], month: r[1], value: r[2], pos: i }
+      : { region: r[1], key: r[0], rep: r[0], value: r[2], pos: i };
+  });
+}
+
+function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
+
+// spec: {partition: "region"|"none", order: key of ORDERS, frame: "rows"|"range"|"rows2", fn: "sum"|"rank"|"row_number"|"lag"}
+// Returns the rows in partition and window order, each with .result and .frame (positions in that list).
+function computeWindow(rows, spec) {
+  var ob = ORDERS[spec.order];
+  var part = function (r) { return spec.partition === "region" ? r.region : ""; };
+  var sorted = rows.slice().sort(function (a, b) {
+    var c = cmp(part(a), part(b));
+    for (var i = 0; c === 0 && i < ob.length; i++) c = ob[i][1] * cmp(a[ob[i][0]], b[ob[i][0]]);
+    return c !== 0 ? c : a.pos - b.pos;
+  });
+  var peer = function (a, b) { return ob.every(function (o) { return a[o[0]] === b[o[0]]; }); };
+  var start = 0;
+  return sorted.map(function (r, i) {
+    if (i > 0 && part(sorted[i - 1]) !== part(r)) start = i;
+    var end = i;
+    while (end + 1 < sorted.length && part(sorted[end + 1]) === part(r)) end++;
+    var out = { row: r, result: null, frame: [] };
+    var j;
+    if (spec.fn === "sum") {
+      var lo = start, hi = i;
+      if (ob.length === 0) { hi = end; }
+      else if (spec.frame === "range") { while (hi + 1 <= end && peer(sorted[hi + 1], r)) hi++; }
+      else if (spec.frame === "rows2") { lo = Math.max(start, i - 2); }
+      var s = 0;
+      for (j = lo; j <= hi; j++) { s += sorted[j].value; out.frame.push(j); }
+      out.result = s;
+    } else if (spec.fn === "row_number") {
+      out.result = i - start + 1;
+      for (j = start; j <= i; j++) out.frame.push(j);
+    } else if (spec.fn === "rank") {
+      var first = i;
+      while (ob.length && first - 1 >= start && peer(sorted[first - 1], r)) first--;
+      if (!ob.length) first = start;
+      out.result = first - start + 1;
+      for (j = start; j <= end; j++) if (!ob.length || peer(sorted[j], r)) out.frame.push(j);
+    } else if (spec.fn === "lag") {
+      out.result = i > start ? sorted[i - 1].value : null;
+      if (i > start) out.frame.push(i - 1);
+    }
+    return out;
+  });
+}
+
+/* ---------- page ---------- */
+
+var ORDER_OPTS = {
+  monthly: [["month", "month"], ["revenue_desc", "revenue DESC"], ["none", "(none)"]],
+  reps: [["sales_desc", "sales DESC"], ["sales_desc_rep", "sales DESC, rep"], ["none", "(none)"]]
+};
+var PRESETS = [
+  ["Fiscal year to date", { dataset: "monthly", fn: "sum", partition: "region", order: "month", frame: "rows" }],
+  ["Tie trap: default frame", { dataset: "reps", fn: "sum", partition: "region", order: "sales_desc", frame: "range" }],
+  ["Running total with tie breaker", { dataset: "reps", fn: "sum", partition: "region", order: "sales_desc_rep", frame: "rows" }],
+  ["RANK with ties", { dataset: "reps", fn: "rank", partition: "region", order: "sales_desc", frame: "rows" }],
+  ["Month over month (LAG)", { dataset: "monthly", fn: "lag", partition: "region", order: "month", frame: "rows" }],
+  ["No partition", { dataset: "monthly", fn: "sum", partition: "none", order: "month", frame: "rows" }]
+];
+var state = { dataset: "monthly", fn: "sum", partition: "region", order: "month", frame: "rows", cur: 2 };
+var ids = ["dataset", "fn", "partition", "order", "frame"];
+
+function fillOrder() {
+  var sel = document.getElementById("order");
+  sel.innerHTML = ORDER_OPTS[state.dataset].map(function (o) { return "<option value='" + o[0] + "'>" + o[1] + "</option>"; }).join("");
+  if (!ORDER_OPTS[state.dataset].some(function (o) { return o[0] === state.order; })) state.order = ORDER_OPTS[state.dataset][0][0];
+  sel.value = state.order;
+}
+
+function sqlText() {
+  var value = state.dataset === "monthly" ? "revenue" : "sales";
+  var key = state.dataset === "monthly" ? "month" : "rep";
+  var fn = { sum: "SUM(" + value + ")", rank: "RANK()", row_number: "ROW_NUMBER()", lag: "LAG(" + value + ")" }[state.fn];
+  var parts = [];
+  if (state.partition === "region") parts.push("    PARTITION BY region");
+  var ob = ORDER_OPTS[state.dataset].filter(function (o) { return o[0] === state.order; })[0][1];
+  if (state.order !== "none") parts.push("    ORDER BY " + ob);
+  if (state.fn === "sum" && state.order !== "none") {
+    parts.push(state.frame === "rows" ? "    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW"
+      : state.frame === "rows2" ? "    ROWS BETWEEN 2 PRECEDING AND CURRENT ROW"
+      : "    -- no frame written: RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW");
+  }
+  return "SELECT region, " + key + ", " + value + ",\n  " + fn + " OVER (\n" + parts.join("\n") + (parts.length ? "\n" : "") + "  ) AS result\nFROM " + (state.dataset === "monthly" ? "monthly_revenue" : "rep_sales") + ";";
+}
+
+function render() {
+  ids.forEach(function (k) { document.getElementById(k).value = state[k]; });
+  fillOrder();
+  var frameSel = document.getElementById("frame");
+  frameSel.disabled = state.fn !== "sum" || state.order === "none";
+  var note = "";
+  if (state.fn === "lag" && state.order === "none") { state.order = ORDER_OPTS[state.dataset][0][0]; fillOrder(); note = "LAG needs an ORDER BY, so the first ORDER BY option was picked. "; }
+  if (state.fn !== "sum") note += "The frame only matters for SUM here: RANK, ROW_NUMBER and LAG ignore it.";
+  else if (state.order === "none") note += "With no ORDER BY the frame is the whole partition, so every row shows the partition total.";
+  else if (state.frame === "range") note += "RANGE treats rows with the same ORDER BY value (peers) as one step. With ties, they enter the frame together.";
+  else if (state.frame === "rows2") note += "A moving window: this row and up to two rows before it in the same partition.";
+  else note += "ROWS counts one physical row at a time, from the first row of the partition to this one.";
+  document.getElementById("frameNote").textContent = note;
+  document.getElementById("sql").textContent = sqlText();
+
+  var res = computeWindow(tableRows(state.dataset), state);
+  if (state.cur >= res.length) state.cur = 0;
+  var cur = res[state.cur];
+  var keyName = state.dataset === "monthly" ? "month" : "rep";
+  var valName = state.dataset === "monthly" ? "revenue" : "sales";
+  var html = "<tr><th>region</th><th>" + keyName + "</th><th class='num'>" + valName + "</th><th class='num'>result</th></tr>";
+  res.forEach(function (o, i) {
+    var cls = i === state.cur ? "cur" : cur.frame.indexOf(i) >= 0 ? "frame" : "";
+    html += "<tr class='sel " + cls + "' data-i='" + i + "'><td>" + o.row.region + "</td><td>" + o.row.key + "</td><td class='num'>" + o.row.value +
+      "</td><td class='num val'>" + (o.result === null ? "NULL" : o.result) + "</td></tr>";
+  });
+  document.getElementById("out").innerHTML = html;
+  document.getElementById("explain").textContent = explain(res, state.cur);
+  renderTies();
+}
+
+function explain(res, i) {
+  var o = res[i], label = o.row.region + " " + o.row.key;
+  var vals = o.frame.map(function (j) { return res[j].row.value; });
+  if (state.fn === "sum") return label + ": SUM over " + vals.length + " row" + (vals.length > 1 ? "s" : "") + " = " + vals.join(" + ") + " = " + o.result + ".";
+  if (state.fn === "lag") return o.result === null ? label + ": no earlier row in its partition, so LAG is NULL." : label + ": LAG reads the row before it, " + res[o.frame[0]].row.key + ", so it shows " + o.result + ".";
+  if (state.fn === "row_number") return label + ": row " + o.result + " of its partition. ROW_NUMBER never repeats, even for ties.";
+  var peers = o.frame.length;
+  return label + ": RANK " + o.result + (peers > 1 ? ", shared by " + peers + " rows with the same ORDER BY value. The next rank skips." : ". The rank is 1 + the number of rows in its partition that sort before it.");
+}
+
+function renderTies() {
+  var north = tableRows("reps").filter(function (r) { return r.region === "North"; });
+  var rank = computeWindow(north, { partition: "region", order: "sales_desc", fn: "rank", frame: "rows" });
+  var rn = computeWindow(north, { partition: "region", order: "sales_desc", fn: "row_number", frame: "rows" });
+  var rangeSum = computeWindow(north, { partition: "region", order: "sales_desc", fn: "sum", frame: "range" });
+  var rowsSum = computeWindow(north, { partition: "region", order: "sales_desc_rep", fn: "sum", frame: "rows" });
+  var html = "<tr><th>rep</th><th class='num'>sales</th><th class='num'>RANK</th><th class='num'>ROW_NUMBER</th><th class='num'>SUM default</th><th class='num'>SUM ROWS</th></tr>";
+  rank.forEach(function (o, i) {
+    var tie = rank.filter(function (p) { return p.result === o.result; }).length > 1;
+    html += "<tr" + (tie ? " class='hl'" : "") + "><td>" + o.row.rep + "</td><td class='num'>" + o.row.value + "</td><td class='num'>" + o.result + "</td><td class='num'>" + rn[i].result +
+      "</td><td class='num'>" + rangeSum[i].result + "</td><td class='num'>" + rowsSum[i].result + "</td></tr>";
+  });
+  document.getElementById("ties").innerHTML = html;
+  var byRank = rank.filter(function (o) { return o.result === 1; }).map(function (o) { return o.row.rep; });
+  var byRn = rn.filter(function (o) { return o.result === 1; }).map(function (o) { return o.row.rep; });
+  document.getElementById("tieNote").innerHTML = "Bonus list with <code>RANK() = 1</code>: <b>" + byRank.join(", ") + "</b>. With <code>ROW_NUMBER() = 1</code>: <b class='bad'>" + byRn.join(", ") +
+    "</b>, so " + byRank.filter(function (r) { return byRn.indexOf(r) < 0; }).join(", ") + " is left off. The default frame also says the top rep brings in " + rangeSum[0].result + ", double the truth, because RANGE puts both peers in the frame at once.";
+}
+
+function selfCheck() {
+  var n = 0, ok = 0, bad = [];
+  FX.cases.forEach(function (c) {
+    var res = computeWindow(tableRows(c.dataset), c);
+    n++;
+    var good = res.length === Object.keys(c.values).length && res.every(function (o) { return c.values[o.row.region + "|" + o.row.key] === o.result; });
+    if (good) ok++; else bad.push([c.dataset, c.partition, c.order, c.frame, c.fn].join("/"));
+  });
+  var el = document.getElementById("selfcheck");
+  el.textContent = "Self check: " + ok + " of " + n + " window settings match SQLite's own window functions" + (bad.length ? ". Mismatch: " + bad.join("; ") : ".");
+  el.className = bad.length ? "bad" : "good";
+  el.dataset.ok = bad.length ? "false" : "true";
+}
+
+PRESETS.forEach(function (p) {
+  var b = document.createElement("button");
+  b.type = "button";
+  b.textContent = p[0];
+  b.addEventListener("click", function () { Object.keys(p[1]).forEach(function (k) { state[k] = p[1][k]; }); state.cur = 1; render(); });
+  document.getElementById("presets").appendChild(b);
+});
+ids.forEach(function (k) {
+  document.getElementById(k).addEventListener("change", function (e) { state[k] = e.target.value; render(); });
+});
+var out = document.getElementById("out");
+out.addEventListener("click", function (e) {
+  var tr = e.target.closest && e.target.closest("tr[data-i]");
+  if (tr) { state.cur = +tr.getAttribute("data-i"); render(); }
+});
+out.addEventListener("keydown", function (e) {
+  var n = out.querySelectorAll("tr[data-i]").length;
+  if (e.key === "ArrowDown") state.cur = Math.min(n - 1, state.cur + 1);
+  else if (e.key === "ArrowUp") state.cur = Math.max(0, state.cur - 1);
+  else if (e.key === "Home") state.cur = 0;
+  else if (e.key === "End") state.cur = n - 1;
+  else return;
+  e.preventDefault();
+  render();
+});
+render();
+selfCheck();
+</script>
+</body>
+</html>

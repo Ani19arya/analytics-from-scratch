@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join fan-out explorer</title>
+<meta name="description" content="Watch a join grow the row count and the SUM when a key stops being one to one, then fix it. Brightcart data from lesson 01-02.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f6f2;--surface:#ffffff;--text:#1c1e22;--muted:#596070;--border:#d3d7df;--accent:#1f55c0;--accent-soft:#e3ebfb;--good:#17703f;--good-soft:#ddf2e5;--bad:#b0261d;--bad-soft:#fbe3e1;--hl:#fff0b8;--frame:#d3e2ff;--code:#eff0f3}
+@media (prefers-color-scheme: dark){:root{--bg:#131519;--surface:#1c1f25;--text:#e7e9ed;--muted:#a3aab7;--border:#3a3f4a;--accent:#8db0ff;--accent-soft:#24324e;--good:#72d59f;--good-soft:#173726;--bad:#ff8f87;--bad-soft:#47211e;--hl:#4c3f12;--frame:#243a62;--code:#252932}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
+nav.top{font-size:.92rem;display:flex;flex-wrap:wrap;gap:4px 16px}
+h1{font-size:1.65rem;line-height:1.25;margin:.5em 0 .25em}
+h2{font-size:1.2rem;margin:1.7em 0 .4em}
+h3{font-size:1.02rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end}
+.controls label{display:flex;flex-direction:column;gap:2px;font-size:.9rem}
+.check{display:flex;align-items:center;gap:8px;font-size:.95rem;min-height:40px}
+.check input{width:20px;height:20px}
+fieldset{border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:8px 0}
+legend{font-size:.9rem;color:var(--muted);padding:0 4px}
+select,input[type=number],button{font:inherit;color:inherit}
+select,input[type=number]{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;min-height:40px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{background:var(--accent-soft);color:var(--text);border:1px solid var(--accent);border-radius:6px;padding:6px 12px;min-height:40px;cursor:pointer}
+button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:.88rem;color:var(--muted);font-weight:600}
+.num{text-align:right}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+.stat b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.good{color:var(--good)}
+.bad{color:var(--bad)}
+.okbox{background:var(--good-soft);border-radius:8px;padding:8px 12px}
+.badbox{background:var(--bad-soft);border-radius:8px;padding:8px 12px}
+.note{font-size:.92rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--border);border-radius:999px;padding:0 8px;color:var(--muted)}
+tr.hl td{background:var(--hl)}
+tr.dup td{background:var(--bad-soft)}
+tr.frame td{background:var(--frame)}
+footer{margin-top:36px;padding-top:12px;border-top:1px solid var(--border);font-size:.88rem;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){h1{font-size:1.35rem}th,td{padding:5px 6px}.stat b{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Breadcrumb"><a href="index.html">All visual explainers</a><a href="../phases/01-sql/02-joins-without-losing-rows/README.md">Lesson 01-02: Joins without losing rows</a></nav>
+<h1>Join fan-out explorer</h1>
+<p class="lede">Brightcart, an online grocery, joined orders to saved addresses to get revenue by city. Last month's report came out too high. Here you can watch it happen on five real customers from the lesson data, then fix it.</p>
+
+<h2>1. The two tables</h2>
+<div class="card">
+<p>A join pairs every order with every address that has the same <code>customer_id</code>. If each customer has one address, the key is one to one on the address side and each order appears once. Tick a box to give a customer a second saved address, and the address side becomes one to many.</p>
+<fieldset>
+<legend>Second saved addresses (not primary)</legend>
+<div id="toggles"></div>
+</fieldset>
+<div class="stats">
+<div class="stat"><span>orders (left table)</span><b id="nOrders"></b></div>
+<div class="stat"><span>addresses (right table)</span><b id="nAddr"></b></div>
+<div class="stat"><span>real order total</span><b id="realTotal"></b></div>
+</div>
+<details>
+<summary>Show both tables</summary>
+<div class="scroll"><table id="ordersTable" aria-label="orders"></table></div>
+<div class="scroll"><table id="addrTable" aria-label="customer_addresses"></table></div>
+</details>
+</div>
+
+<h2>2. The join</h2>
+<div class="card">
+<fieldset>
+<legend>How to join</legend>
+<div class="controls" role="radiogroup" aria-label="How to join" id="modes"></div>
+</fieldset>
+<pre id="sql"></pre>
+<div class="stats" aria-live="polite">
+<div class="stat"><span>joined rows</span><b id="jRows"></b></div>
+<div class="stat"><span>SUM(amount)</span><b id="jSum"></b></div>
+<div class="stat"><span>gap to the real total</span><b id="jGap"></b></div>
+</div>
+<p id="verdict"></p>
+<h3>Predict the row count before you run it</h3>
+<p class="note">Rows from a join = for each key, (left rows with that key) x (right rows with that key). For the LEFT JOIN, a left row with no match still gives one row.</p>
+<div class="scroll"><table id="predict" aria-label="Row count by key"></table></div>
+<h3>The joined rows</h3>
+<p class="note">Red rows are orders that appear more than once.</p>
+<div class="scroll"><table id="joined" aria-label="Joined rows"></table></div>
+</div>
+
+<h2>3. The same join on all of Brightcart</h2>
+<div class="card">
+<p>The explorer uses 5 customers. Press the button to run the selected join on all 360 orders and 154 addresses from the lesson.</p>
+<button type="button" id="runFull">Run on all 360 orders</button>
+<p id="fullOut" aria-live="polite"></p>
+</div>
+
+<h2>4. Spot the mistake</h2>
+<div class="card">
+<p>Dev wants spend per customer for four customers and wrote this query. It runs with no error. One number in the result is wrong. Which one?</p>
+<pre id="spotSql"></pre>
+<div class="scroll"><table id="spotTable" aria-label="Query result"></table></div>
+<p id="spotFeedback" aria-live="polite"></p>
+<details>
+<summary>The raw orders and addresses for these four customers</summary>
+<div id="spotRaw"></div>
+</details>
+<p><button type="button" id="spotReveal" aria-expanded="false" aria-controls="spotAnswer">Show the answer</button></p>
+<div id="spotAnswer" hidden></div>
+</div>
+
+<footer>
+<p>All numbers come from the lesson's synthetic data in <code>phases/01-sql/02-joins-without-losing-rows/data</code>. Brightcart is fictional. This page runs offline with no network calls.</p>
+<p id="selfcheck">Self check: running.</p>
+</footer>
+</main>
+
+<script type="application/json" id="fixtures">{"page":"join-fanout","lesson":"phases/01-sql/02-joins-without-losing-rows","data":{"customers":["C001","C002","C003","C004","C005","C006","C007","C008","C009","C010","C011","C012","C013","C014","C015","C016","C017","C018","C019","C020","C021","C022","C023","C024","C025","C026","C027","C028","C029","C030","C031","C032","C033","C034","C035","C036","C037","C038","C039","C040","C041","C042","C043","C044","C045","C046","C047","C048","C049","C050","C051","C052","C053","C054","C055","C056","C057","C058","C059","C060","C061","C062","C063","C064","C065","C066","C067","C068","C069","C070","C071","C072","C073","C074","C075","C076","C077","C078","C079","C080","C081","C082","C083","C084","C085","C086","C087","C088","C089","C090","C091","C092","C093","C094","C095","C096","C097","C098","C099","C100","C101","C102","C103","C104","C105","C106","C107","C108","C109","C110","C111","C112","C113","C114","C115","C116","C117","C118","C119","C120"],"orders":[[1,"C027",138.96],[2,"C086",109.41],[3,"C008",76.34],[4,"C108",83.97],[5,"C082",64.89],[6,"C034",46.1],[7,"C062",103.25],[8,"C062",128.81],[9,"C002",91.41],[10,"C047",64.39],[11,"C056",22.92],[12,"C047",126.27],[13,"C119",11.11],[14,"C071",93.72],[15,"C110",99.61],[16,"C045",95.09],[17,"C032",13.23],[18,"C002",115.42],[19,"C049",147.78],[20,"C049",106.86],[21,"C109",101.83],[22,"C071",138.55],[23,"C069",15.95],[24,"C019",132.2],[25,"C056",88.51],[26,"C015",101.56],[27,"C031",41.66],[28,"C089",36.64],[29,"C004",38.86],[30,"C086",144.35],[31,"C069",34.94],[32,"C104",149.18],[33,"C032",94.54],[34,"C104",142.57],[35,"C016",145.79],[36,"C107",118.93],[37,"C071",26.14],[38,"C066",53.24],[39,"C002",118.3],[40,"C004",32.21],[41,"C099",117.99],[42,"C068",111.51],[43,"C089",90.63],[44,"C006",116.26],[45,"C025",139.77],[46,"C002",33.81],[47,"C077",144.88],[48,"C111",121.82],[49,"C077",53.35],[50,"C018",110.78],[51,"C041",86.37],[52,"C028",135.91],[53,"C034",117.07],[54,"C110",48.96],[55,"C037",31.93],[56,"C054",47.94],[57,"C088",96.74],[58,"C056",117.6],[59,"C111",103.76],[60,"C056",102.78],[61,"C105",75.79],[62,"C087",111.15],[63,"C085",122.49],[64,"C111",12.42],[65,"C005",20.81],[66,"C026",24.45],[67,"C076",92.67],[68,"C039",121.49],[69,"C010",108.64],[70,"C019",134.82],[71,"C104",112.7],[72,"C071",41.68],[73,"C010",41.98],[74,"C078",120.03],[75,"C063",36.44],[76,"C028",143.14],[77,"C046",14.33],[78,"C055",25.8],[79,"C087",131.31],[80,"C035",92.59],[81,"C107",42.32],[82,"C005",108.32],[83,"C012",133.83],[84,"C028",143.93],[85,"C027",65.87],[86,"C035",62.72],[87,"C065",44.61],[88,"C028",119.32],[89,"C061",18.45],[90,"C084",55.18],[91,"C018",13.17],[92,"C034",80.12],[93,"C041",114.31],[94,"C079",137.84],[95,"C013",144.56],[96,"C082",64.79],[97,"C062",124.67],[98,"C072",138.37],[99,"C076",145.09],[100,"C019",104.61],[101,"C107",24.13],[102,"C061",49.71],[103,"C062",78.58],[104,"C014",114.45],[105,"C069",75.55],[106,"C071",70.35],[107,"C043",142.61],[108,"C098",68.2],[109,"C059",72.45],[110,"C048",27.53],[111,"C005",85.58],[112,"C015",123.07],[113,"C117",112.08],[114,"C015",26.08],[115,"C083",122.78],[116,"C099",94.78],[117,"C095",89.11],[118,"C102",93.45],[119,"C018",72.78],[120,"C025",149.59],[121,"C099",39.99],[122,"C006",130.8],[123,"C085",83.45],[124,"C110",94.25],[125,"C092",105.81],[126,"C109",88.15],[127,"C081",89.86],[128,"C014",29.16],[129,"C107",50.33],[130,"C008",139.48],[131,"C090",71.82],[132,"C063",104.7],[133,"C081",12.26],[134,"C046",117.47],[135,"C113",128.25],[136,"C056",112.39],[137,"C055",55.61],[138,"C028",139.92],[139,"C013",121.14],[140,"C007",71.97],[141,"C090",57.0],[142,"C064",56.91],[143,"C109",37.72],[144,"C068",13.0],[145,"C113",88.84],[146,"C049",70.24],[147,"C107",66.4],[148,"C010",59.13],[149,"C089",89.58],[150,"C016",28.28],[151,"C015",111.47],[152,"C094",14.67],[153,"C056",38.81],[154,"C110",26.14],[155,"C056",72.89],[156,"C005",43.42],[157,"C085",63.46],[158,"C035",69.21],[159,"C080",117.72],[160,"C003",64.46],[161,"C095",70.78],[162,"C113",134.31],[163,"C103",66.77],[164,"C084",121.2],[165,"C108",23.36],[166,"C044",13.43],[167,"C083",131.67],[168,"C055",66.8],[169,"C104",89.86],[170,"C037",34.02],[171,"C119",149.68],[172,"C028",124.94],[173,"C100",48.65],[174,"C052",69.75],[175,"C028",49.21],[176,"C069",74.68],[177,"C078",55.72],[178,"C055",141.85],[179,"C088",113.5],[180,"C071",28.68],[181,"C070",76.2],[182,"C022",87.64],[183,"C028",134.85],[184,"C106",134.5],[185,"C065",117.43],[186,"C006",51.13],[187,"C095",47.12],[188,"C018",131.18],[189,"C072",147.26],[190,"C112",105.25],[191,"C045",73.72],[192,"C012",138.51],[193,"C120",42.36],[194,"C047",122.95],[195,"C117",145.14],[196,"C016",147.63],[197,"C076",133.52],[198,"C070",38.66],[199,"C112",87.79],[200,"C104",92.98],[201,"C059",116.68],[202,"C039",87.79],[203,"C113",41.57],[204,"C016",120.55],[205,"C019",64.6],[206,"C003",122.84],[207,"C064",129.36],[208,"C102",48.92],[209,"C095",14.03],[210,"C092",149.83],[211,"C046",127.39],[212,"C071",68.76],[213,"C065",121.09],[214,"C045",107.41],[215,"C095",61.59],[216,"C050",23.11],[217,"C002",23.92],[218,"C092",43.89],[219,"C071",132.43],[220,"C032",75.12],[221,"C019",45.39],[222,"C038",70.14],[223,"C087",96.12],[224,"C113",112.85],[225,"C098",145.19],[226,"C064",134.04],[227,"C084",52.34],[228,"C026",25.49],[229,"C072",32.26],[230,"C091",61.02],[231,"C049",147.19],[232,"C022",11.48],[233,"C064",26.58],[234,"C034",14.92],[235,"C059",53.98],[236,"C117",51.94],[237,"C026",88.97],[238,"C027",100.46],[239,"C048",51.49],[240,"C032",136.6],[241,"C107",47.21],[242,"C078",19.47],[243,"C039",72.16],[244,"C070",36.05],[245,"C083",34.3],[246,"C094",50.37],[247,"C113",52.3],[248,"C016",135.52],[249,"C002",80.91],[250,"C010",74.29],[251,"C061",98.57],[252,"C077",50.9],[253,"C040",96.1],[254,"C054",74.05],[255,"C012",134.31],[256,"C064",111.37],[257,"C090",26.68],[258,"C076",54.5],[259,"C027",68.3],[260,"C039",107.71],[261,"C076",64.92],[262,"C117",13.75],[263,"C046",129.73],[264,"C049",85.82],[265,"C034",66.22],[266,"C109",78.47],[267,"C081",94.75],[268,"C104",34.88],[269,"C055",93.08],[270,"C086",98.11],[271,"C089",33.29],[272,"C068",142.43],[273,"C059",128.25],[274,"C046",106.6],[275,"C050",79.46],[276,"C117",24.83],[277,"C112",71.01],[278,"C022",34.21],[279,"C099",32.34],[280,"C096",55.39],[281,"C031",53.27],[282,"C094",57.6],[283,"C039",28.1],[284,"C010",149.9],[285,"C103",31.86],[286,"C076",119.79],[287,"C099",68.08],[288,"C088",32.23],[289,"C092",84.21],[290,"C045",46.2],[291,"C038",147.03],[292,"C104",142.9],[293,"C043",146.8],[294,"C045",119.44],[295,"C107",57.39],[296,"C039",14.22],[297,"C050",114.93],[298,"C110",101.17],[299,"C023",21.36],[300,"C004",84.61],[301,"C048",40.52],[302,"C070",99.1],[303,"C076",91.97],[304,"C088",46.8],[305,"C014",92.69],[306,"C013",74.28],[307,"C047",143.27],[308,"C055",120.86],[309,"C026",10.01],[310,"C099",124.47],[311,"C061",26.2],[312,"C119",36.11],[313,"C106",88.96],[314,"C049",65.99],[315,"C065",21.41],[316,"C104",42.55],[317,"C003",19.52],[318,"C012",77.45],[319,"C120",109.37],[320,"C094",140.15],[321,"C046",131.43],[322,"C023",20.04],[323,"C018",99.51],[324,"C046",77.75],[325,"C103",79.09],[326,"C059",119.34],[327,"C117",24.98],[328,"C026",14.59],[329,"C045",10.28],[330,"C078",124.25],[331,"C003",59.02],[332,"C052",91.66],[333,"C080",77.65],[334,"C006",120.53],[335,"C015",39.09],[336,"C066",127.97],[337,"C055",109.37],[338,"C037",135.12],[339,"C106",56.71],[340,"C112",71.07],[341,"C008",72.18],[342,"C119",85.83],[343,"C026",69.59],[344,"C077",86.33],[345,"C013",41.22],[346,"C002",142.93],[347,"C066",142.09],[348,"C010",41.78],[349,"C090",46.15],[350,"C063",108.7],[351,"C050",110.94],[352,"C055",11.23],[353,"C038",73.99],[354,"C048",20.81],[355,"C092",139.22],[356,"C014",133.98],[357,"C018",110.56],[358,"C013",46.08],[359,"C095",125.82],[360,"C119",22.41]],"addresses":[["C001","Leeds",1],["C002","Denver",1],["C003","Leeds",1],["C004","Austin",1],["C005","Denver",1],["C005","Pune",0],["C006","Pune",1],["C007","Leeds",1],["C008","Austin",1],["C009","Leeds",1],["C010","Pune",1],["C011","Austin",1],["C011","Leeds",0],["C012","Denver",1],["C012","Pune",0],["C013","Pune",1],["C013","Denver",0],["C014","Denver",1],["C015","Pune",1],["C016","Denver",1],["C016","Leeds",0],["C017","Denver",1],["C018","Perth",1],["C018","Leeds",0],["C019","Perth",1],["C020","Pune",1],["C021","Perth",1],["C022","Austin",1],["C023","Pune",1],["C023","Perth",0],["C024","Pune",1],["C024","Denver",0],["C025","Perth",1],["C026","Denver",1],["C027","Perth",1],["C028","Austin",1],["C029","Pune",1],["C030","Leeds",1],["C031","Austin",1],["C032","Perth",1],["C033","Austin",1],["C034","Austin",1],["C035","Pune",1],["C035","Austin",0],["C036","Leeds",1],["C037","Perth",1],["C037","Leeds",0],["C038","Denver",1],["C039","Leeds",1],["C040","Austin",1],["C040","Perth",0],["C041","Denver",1],["C041","Pune",0],["C042","Austin",1],["C043","Pune",1],["C044","Perth",1],["C045","Leeds",1],["C046","Pune",1],["C046","Denver",0],["C047","Austin",1],["C048","Perth",1],["C049","Perth",1],["C050","Denver",1],["C051","Leeds",1],["C052","Perth",1],["C053","Denver",1],["C054","Perth",1],["C055","Perth",1],["C056","Leeds",1],["C057","Perth",1],["C058","Austin",1],["C059","Pune",1],["C060","Denver",1],["C060","Pune",0],["C061","Austin",1],["C062","Pune",1],["C063","Pune",1],["C063","Denver",0],["C064","Austin",1],["C064","Leeds",0],["C065","Leeds",1],["C065","Austin",0],["C066","Austin",1],["C067","Pune",1],["C068","Pune",1],["C068","Perth",0],["C069","Denver",1],["C070","Denver",1],["C071","Pune",1],["C072","Denver",1],["C072","Austin",0],["C073","Perth",1],["C074","Denver",1],["C075","Pune",1],["C076","Perth",1],["C077","Denver",1],["C078","Pune",1],["C079","Leeds",1],["C080","Pune",1],["C081","Perth",1],["C081","Denver",0],["C082","Austin",1],["C083","Denver",1],["C084","Denver",1],["C085","Leeds",1],["C086","Denver",1],["C086","Austin",0],["C087","Leeds",1],["C087","Austin",0],["C088","Pune",1],["C089","Pune",1],["C089","Leeds",0],["C090","Pune",1],["C091","Austin",1],["C091","Perth",0],["C092","Denver",1],["C093","Denver",1],["C094","Leeds",1],["C094","Denver",0],["C095","Austin",1],["C095","Pune",0],["C096","Leeds",1],["C097","Pune",1],["C098","Leeds",1],["C098","Austin",0],["C099","Pune",1],["C100","Denver",1],["C101","Leeds",1],["C101","Perth",0],["C102","Leeds",1],["C102","Denver",0],["C103","Leeds",1],["C104","Perth",1],["C105","Austin",1],["C106","Leeds",1],["C107","Denver",1],["C107","Austin",0],["C108","Pune",1],["C109","Austin",1],["C109","Leeds",0],["C110","Leeds",1],["C111","Leeds",1],["C112","Austin",1],["C113","Pune",1],["C113","Perth",0],["C114","Leeds",1],["C114","Denver",0],["C115","Perth",1],["C116","Austin",1],["C116","Pune",0],["C117","Pune",1],["C118","Pune",1],["C119","Pune",1],["C120","Perth",1]]},"explorer":{"customers":["C001","C005","C007","C008","C012"],"second_addresses":["C005","C012"]},"cases":[{"mode":"all","second":[],"rows":12,"sum":1102.2},{"mode":"primary","second":[],"rows":12,"sum":1102.2},{"mode":"preagg","second":[],"rows":4,"sum":1102.2},{"mode":"distinct","second":[],"rows":12,"sum":1102.2},{"mode":"all","second":["C005"],"rows":16,"sum":1360.33},{"mode":"primary","second":["C005"],"rows":12,"sum":1102.2},{"mode":"preagg","second":["C005"],"rows":4,"sum":1102.2},{"mode":"distinct","second":["C005"],"rows":12,"sum":1102.2},{"mode":"all","second":["C012"],"rows":16,"sum":1586.3},{"mode":"primary","second":["C012"],"rows":12,"sum":1102.2},{"mode":"preagg","second":["C012"],"rows":4,"sum":1102.2},{"mode":"distinct","second":["C012"],"rows":12,"sum":1102.2},{"mode":"all","second":["C005","C012"],"rows":20,"sum":1844.43},{"mode":"primary","second":["C005","C012"],"rows":12,"sum":1102.2},{"mode":"preagg","second":["C005","C012"],"rows":4,"sum":1102.2},{"mode":"distinct","second":["C005","C012"],"rows":12,"sum":1102.2}],"full":[{"mode":"all","rows":465,"sum":38399.54},{"mode":"primary","rows":360,"sum":29551.86},{"mode":"preagg","rows":92,"sum":29551.86},{"mode":"distinct","rows":360,"sum":29551.86}],"orders_total":{"rows":360,"sum":29551.86},"spot":{"customers":["C002","C003","C004","C016"],"result":[["C002",606.7],["C003",265.84],["C004",155.68],["C016",1155.54]],"true":[["C002",606.7],["C003",265.84],["C004",155.68],["C016",577.77]],"answer":"C016"}}</script>
+<script>
+"use strict";
+var FX = JSON.parse(document.getElementById("fixtures").textContent);
+var D = FX.data;
+
+/* ---------- core calculations (checked by tools/test_visuals.py and the self check below) ---------- */
+
+function round2(x) { return Math.round((x + (x >= 0 ? 1e-9 : -1e-9)) * 100) / 100; }
+
+// Orders and addresses for some customers. keepSecond: list of customers whose non-primary
+// address stays; null keeps every address.
+function subsetData(customers, keepSecond) {
+  var inSet = function (c) { return customers === null || customers.indexOf(c) >= 0; };
+  var orders = D.orders.filter(function (o) { return inSet(o[1]); })
+    .map(function (o) { return { order_id: o[0], customer_id: o[1], amount: o[2] }; });
+  var addresses = D.addresses.filter(function (a) {
+    return inSet(a[0]) && (a[2] === 1 || keepSecond === null || keepSecond.indexOf(a[0]) >= 0);
+  }).map(function (a) { return { customer_id: a[0], city: a[1], is_primary: a[2] }; });
+  return { orders: orders, addresses: addresses };
+}
+
+// mode: "all" (JOIN on customer_id only), "primary" (LEFT JOIN ... AND is_primary = 1),
+// "preagg" (sum orders per customer first, then LEFT JOIN the primary address),
+// "distinct" (JOIN to SELECT DISTINCT customer_id FROM customer_addresses).
+function runJoin(orders, addresses, mode) {
+  var rows = [];
+  if (mode === "all") {
+    orders.forEach(function (o) {
+      addresses.forEach(function (a) {
+        if (a.customer_id === o.customer_id) rows.push({ customer_id: o.customer_id, order_id: o.order_id, amount: o.amount, city: a.city });
+      });
+    });
+  } else if (mode === "primary") {
+    orders.forEach(function (o) {
+      var m = addresses.filter(function (a) { return a.customer_id === o.customer_id && a.is_primary === 1; });
+      if (m.length === 0) rows.push({ customer_id: o.customer_id, order_id: o.order_id, amount: o.amount, city: null });
+      m.forEach(function (a) { rows.push({ customer_id: o.customer_id, order_id: o.order_id, amount: o.amount, city: a.city }); });
+    });
+  } else if (mode === "preagg") {
+    var spend = {}, ids = [];
+    orders.forEach(function (o) {
+      if (!(o.customer_id in spend)) { spend[o.customer_id] = 0; ids.push(o.customer_id); }
+      spend[o.customer_id] += o.amount;
+    });
+    ids.sort().forEach(function (c) {
+      var m = addresses.filter(function (a) { return a.customer_id === c && a.is_primary === 1; });
+      if (m.length === 0) rows.push({ customer_id: c, order_id: null, amount: spend[c], city: null });
+      m.forEach(function (a) { rows.push({ customer_id: c, order_id: null, amount: spend[c], city: a.city }); });
+    });
+  } else if (mode === "distinct") {
+    var keys = {};
+    addresses.forEach(function (a) { keys[a.customer_id] = true; });
+    orders.forEach(function (o) {
+      if (keys[o.customer_id]) rows.push({ customer_id: o.customer_id, order_id: o.order_id, amount: o.amount, city: null });
+    });
+  }
+  var sum = 0;
+  rows.forEach(function (r) { sum += r.amount; });
+  return { rows: rows, count: rows.length, sum: round2(sum) };
+}
+
+// Predicted rows per key for the plain join: left rows x right rows.
+function predictRows(orders, addresses, customers) {
+  return customers.map(function (c) {
+    var l = orders.filter(function (o) { return o.customer_id === c; }).length;
+    var r = addresses.filter(function (a) { return a.customer_id === c; }).length;
+    return { customer_id: c, left: l, right: r, inner: l * r };
+  });
+}
+
+// Spend per customer after joining to every address (the planted mistake).
+function spendPerCustomer(orders, addresses, joinAddresses) {
+  var out = {};
+  orders.forEach(function (o) {
+    var k = joinAddresses ? addresses.filter(function (a) { return a.customer_id === o.customer_id; }).length : 1;
+    if (k > 0) out[o.customer_id] = (out[o.customer_id] || 0) + o.amount * k;
+  });
+  Object.keys(out).forEach(function (c) { out[c] = round2(out[c]); });
+  return out;
+}
+
+/* ---------- page ---------- */
+
+var SQL = {
+  all: "SELECT COUNT(*) AS joined_rows, ROUND(SUM(o.amount), 2) AS revenue\nFROM orders o\nJOIN customer_addresses a ON a.customer_id = o.customer_id;",
+  primary: "SELECT COUNT(*) AS joined_rows, ROUND(SUM(o.amount), 2) AS revenue\nFROM orders o\nLEFT JOIN customer_addresses a\n  ON a.customer_id = o.customer_id\n AND a.is_primary = 1;",
+  preagg: "SELECT COUNT(*) AS joined_rows, ROUND(SUM(t.spend), 2) AS revenue\nFROM (SELECT customer_id, SUM(amount) AS spend\n      FROM orders GROUP BY customer_id) t\nLEFT JOIN customer_addresses a\n  ON a.customer_id = t.customer_id\n AND a.is_primary = 1;",
+  distinct: "SELECT COUNT(*) AS joined_rows, ROUND(SUM(o.amount), 2) AS revenue\nFROM orders o\nJOIN (SELECT DISTINCT customer_id FROM customer_addresses) a\n  ON a.customer_id = o.customer_id;"
+};
+var MODES = [
+  ["all", "No fix: join on customer_id only"],
+  ["primary", "Fix: one address per key (is_primary = 1 in ON)"],
+  ["preagg", "Fix: aggregate orders first"],
+  ["distinct", "Fix: DISTINCT key (no city needed)"]
+];
+var NOTES = {
+  all: "This is last month's report. Every order of a customer with two addresses is paired with both.",
+  primary: "The lesson's step 4: the ON clause keeps at most one address per customer, so each order appears once.",
+  preagg: "One row per customer: orders are summed before the join, then joined to the primary address. The SUM is right and the row count is the number of buyers. Pre-aggregating alone does not save you from a second address: the right side still has to be one row per key.",
+  distinct: "When you only need to know that a customer has a saved address, join to the distinct keys. One row per key on the right means no fan-out, but you lose the city."
+};
+var EX = FX.explorer;
+var state = { keep: EX.second_addresses.slice(), mode: "all" };
+
+function fmt(x) { return x === null ? "NULL" : x.toFixed(2); }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+function buildToggles() {
+  var box = document.getElementById("toggles");
+  EX.second_addresses.forEach(function (c) {
+    var a = D.addresses.filter(function (x) { return x[0] === c && x[2] === 0; })[0];
+    var id = "keep_" + c;
+    var wrap = document.createElement("label");
+    wrap.className = "check";
+    wrap.innerHTML = '<input type="checkbox" id="' + id + '" checked> ' + c + " also saved " + esc(a[1]);
+    box.appendChild(wrap);
+    wrap.querySelector("input").addEventListener("change", function (e) {
+      var i = state.keep.indexOf(c);
+      if (e.target.checked && i < 0) state.keep.push(c);
+      if (!e.target.checked && i >= 0) state.keep.splice(i, 1);
+      render();
+    });
+  });
+  var modes = document.getElementById("modes");
+  MODES.forEach(function (m) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "radio");
+    b.dataset.mode = m[0];
+    b.textContent = m[1];
+    b.addEventListener("click", function () { state.mode = m[0]; render(); });
+    modes.appendChild(b);
+  });
+  modes.addEventListener("keydown", function (e) {
+    if (["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp"].indexOf(e.key) < 0) return;
+    var i = MODES.map(function (m) { return m[0]; }).indexOf(state.mode);
+    i = (i + (e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : MODES.length - 1)) % MODES.length;
+    state.mode = MODES[i][0];
+    render();
+    modes.querySelector('[data-mode="' + state.mode + '"]').focus();
+    e.preventDefault();
+  });
+}
+
+function render() {
+  var d = subsetData(EX.customers, state.keep);
+  var real = runJoin(d.orders, d.addresses, "primary");
+  var realSum = round2(d.orders.reduce(function (s, o) { return s + o.amount; }, 0));
+  document.getElementById("nOrders").textContent = d.orders.length;
+  document.getElementById("nAddr").textContent = d.addresses.length;
+  document.getElementById("realTotal").textContent = realSum.toFixed(2);
+  document.getElementById("ordersTable").innerHTML = "<caption class='note'>orders</caption><tr><th>order_id</th><th>customer_id</th><th class='num'>amount</th></tr>" +
+    d.orders.map(function (o) { return "<tr><td>" + o.order_id + "</td><td>" + o.customer_id + "</td><td class='num'>" + o.amount.toFixed(2) + "</td></tr>"; }).join("");
+  document.getElementById("addrTable").innerHTML = "<caption class='note'>customer_addresses</caption><tr><th>customer_id</th><th>city</th><th>is_primary</th></tr>" +
+    d.addresses.map(function (a) { return "<tr" + (a.is_primary ? "" : " class='hl'") + "><td>" + a.customer_id + "</td><td>" + esc(a.city) + "</td><td>" + a.is_primary + "</td></tr>"; }).join("");
+
+  Array.prototype.forEach.call(document.querySelectorAll("#modes button"), function (b) {
+    var on = b.dataset.mode === state.mode;
+    b.setAttribute("aria-checked", on ? "true" : "false");
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.tabIndex = on ? 0 : -1;
+  });
+  document.getElementById("sql").textContent = SQL[state.mode];
+  var r = runJoin(d.orders, d.addresses, state.mode);
+  var gap = round2(r.sum - realSum);
+  document.getElementById("jRows").textContent = r.count;
+  document.getElementById("jSum").textContent = r.sum.toFixed(2);
+  var g = document.getElementById("jGap");
+  g.textContent = (gap > 0 ? "+" : "") + gap.toFixed(2);
+  g.className = gap === 0 ? "good" : "bad";
+  var v = document.getElementById("verdict");
+  v.className = gap === 0 ? "okbox" : "badbox";
+  v.textContent = (gap === 0 ? "Totals match. " : "The total is " + gap.toFixed(2) + " too high and nothing errored. ") + NOTES[state.mode];
+
+  var pred = predictRows(d.orders, d.addresses, EX.customers);
+  var total = 0;
+  var html = "<tr><th>customer_id</th><th class='num'>orders</th><th class='num'>addresses</th><th class='num'>JOIN rows</th></tr>";
+  pred.forEach(function (p) {
+    total += p.inner;
+    html += "<tr" + (p.right > 1 && p.left > 0 ? " class='dup'" : "") + "><td>" + p.customer_id + "</td><td class='num'>" + p.left + "</td><td class='num'>" + p.right + "</td><td class='num'>" + p.left + " x " + p.right + " = " + p.inner + "</td></tr>";
+  });
+  html += "<tr><td><b>total</b></td><td></td><td></td><td class='num'><b>" + total + "</b></td></tr>";
+  document.getElementById("predict").innerHTML = html;
+
+  var seen = {};
+  r.rows.forEach(function (x) { if (x.order_id !== null) seen[x.order_id] = (seen[x.order_id] || 0) + 1; });
+  var head = state.mode === "preagg" ? "<tr><th>customer_id</th><th class='num'>spend</th><th>city</th></tr>"
+    : "<tr><th>order_id</th><th>customer_id</th><th class='num'>amount</th><th>city</th></tr>";
+  document.getElementById("joined").innerHTML = head + r.rows.map(function (x) {
+    var dup = x.order_id !== null && seen[x.order_id] > 1;
+    var city = state.mode === "distinct" ? "<span class='note'>not joined</span>" : (x.city === null ? "NULL" : esc(x.city));
+    if (state.mode === "preagg") return "<tr><td>" + x.customer_id + "</td><td class='num'>" + x.amount.toFixed(2) + "</td><td>" + city + "</td></tr>";
+    return "<tr" + (dup ? " class='dup'" : "") + "><td>" + x.order_id + "</td><td>" + x.customer_id + "</td><td class='num'>" + x.amount.toFixed(2) + "</td><td>" + city + "</td></tr>";
+  }).join("");
+  document.getElementById("fullOut").textContent = "";
+}
+
+function runFull() {
+  var d = subsetData(null, null);
+  var r = runJoin(d.orders, d.addresses, state.mode);
+  var real = round2(d.orders.reduce(function (s, o) { return s + o.amount; }, 0));
+  var gap = round2(r.sum - real);
+  document.getElementById("fullOut").textContent = "All of Brightcart, \"" + MODES.filter(function (m) { return m[0] === state.mode; })[0][1] + "\": " +
+    r.count + " joined rows, SUM(amount) " + r.sum.toFixed(2) + ". The orders table has " + d.orders.length + " orders worth " + real.toFixed(2) + ". " +
+    (gap === 0 ? "The totals match." : "The report is " + gap.toFixed(2) + " too high.");
+}
+
+function buildSpot() {
+  var S = FX.spot;
+  var list = S.customers.map(function (c) { return "'" + c + "'"; }).join(", ");
+  document.getElementById("spotSql").textContent = "SELECT o.customer_id, ROUND(SUM(o.amount), 2) AS spend\nFROM orders o\nJOIN customer_addresses a ON a.customer_id = o.customer_id\nWHERE o.customer_id IN (" + list + ")\nGROUP BY o.customer_id\nORDER BY o.customer_id;";
+  var d = subsetData(S.customers, null);
+  var res = spendPerCustomer(d.orders, d.addresses, true);
+  var t = document.getElementById("spotTable");
+  t.innerHTML = "<tr><th>customer_id</th><th class='num'>spend</th><th><span class='sr'>Pick</span></th></tr>" + S.customers.map(function (c) {
+    return "<tr id='spot_" + c + "'><td>" + c + "</td><td class='num'>" + res[c].toFixed(2) + "</td><td><button type='button' data-c='" + c + "'>This one is wrong</button></td></tr>";
+  }).join("");
+  t.addEventListener("click", function (e) {
+    var c = e.target && e.target.getAttribute && e.target.getAttribute("data-c");
+    if (!c) return;
+    var fb = document.getElementById("spotFeedback");
+    if (c === S.answer) {
+      fb.className = "okbox";
+      fb.textContent = "Yes. " + c + " has 2 saved addresses, so each of its orders is counted twice. Press Show the answer for the numbers.";
+    } else {
+      fb.className = "badbox";
+      fb.textContent = "Not that one: " + c + " has one saved address, so its spend equals the sum of its orders. Look for a customer with more than one address.";
+    }
+  });
+  var raw = "<div class='scroll'><table><caption class='note'>orders</caption><tr><th>order_id</th><th>customer_id</th><th class='num'>amount</th></tr>" +
+    d.orders.map(function (o) { return "<tr><td>" + o.order_id + "</td><td>" + o.customer_id + "</td><td class='num'>" + o.amount.toFixed(2) + "</td></tr>"; }).join("") + "</table></div>" +
+    "<div class='scroll'><table><caption class='note'>customer_addresses</caption><tr><th>customer_id</th><th>city</th><th>is_primary</th></tr>" +
+    d.addresses.map(function (a) { return "<tr><td>" + a.customer_id + "</td><td>" + esc(a.city) + "</td><td>" + a.is_primary + "</td></tr>"; }).join("") + "</table></div>";
+  document.getElementById("spotRaw").innerHTML = raw;
+  var truth = spendPerCustomer(d.orders, d.addresses, false);
+  document.getElementById("spotReveal").addEventListener("click", function (e) {
+    var a = document.getElementById("spotAnswer");
+    a.hidden = !a.hidden;
+    e.target.setAttribute("aria-expanded", a.hidden ? "false" : "true");
+    e.target.textContent = a.hidden ? "Show the answer" : "Hide the answer";
+    a.innerHTML = "<p class='okbox'>" + S.answer + " is wrong: " + res[S.answer].toFixed(2) + " should be " + truth[S.answer].toFixed(2) +
+      ". " + S.answer + " saved two addresses (Denver, which is primary, and Leeds), so the join pairs each of its 5 orders with both and the SUM doubles. " +
+      "The other three customers have one address each, so their rows are right. The join was not needed at all: the query selects nothing from the addresses table. " +
+      "Drop the join, or keep it with <code>AND a.is_primary = 1</code> in the ON clause.</p>";
+    document.getElementById("spot_" + S.answer).className = "dup";
+  });
+}
+
+function selfCheck() {
+  var n = 0, ok = 0, bad = [];
+  FX.cases.forEach(function (c) {
+    var d = subsetData(FX.explorer.customers, c.second);
+    var r = runJoin(d.orders, d.addresses, c.mode);
+    n++;
+    if (r.count === c.rows && Math.abs(r.sum - c.sum) < 0.005) ok++; else bad.push(c.mode + " " + c.second.join("+"));
+  });
+  FX.full.forEach(function (c) {
+    var d = subsetData(null, null);
+    var r = runJoin(d.orders, d.addresses, c.mode);
+    n++;
+    if (r.count === c.rows && Math.abs(r.sum - c.sum) < 0.005) ok++; else bad.push("full " + c.mode);
+  });
+  var d = subsetData(FX.spot.customers, null);
+  var res = spendPerCustomer(d.orders, d.addresses, true);
+  FX.spot.result.forEach(function (row) { n++; if (Math.abs(res[row[0]] - row[1]) < 0.005) ok++; else bad.push("spot " + row[0]); });
+  var el = document.getElementById("selfcheck");
+  el.textContent = "Self check: " + ok + " of " + n + " results match the lesson's SQL run in SQLite" + (bad.length ? ". Mismatch: " + bad.join(", ") : ".");
+  el.className = bad.length ? "bad" : "good";
+  el.dataset.ok = bad.length ? "false" : "true";
+}
+
+buildToggles();
+buildSpot();
+render();
+document.getElementById("runFull").addEventListener("click", runFull);
+selfCheck();
+</script>
+</body>
+</html>

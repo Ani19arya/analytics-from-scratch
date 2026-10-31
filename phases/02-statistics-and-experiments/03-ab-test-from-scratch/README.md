@@ -93,6 +93,8 @@ Step 7. Decide with the rule you wrote before you looked. Ship only if p_value <
 
 The test assumes users are assigned at random, each user counts once, and both groups are large enough that the normal approximation holds (a rough check: at least 10 conversions and 10 non-conversions in each group).
 
+Try it: the [A/B test calculator](../../../visuals/ab-test.html) (one HTML file, opens offline) runs these formulas live as you move the visitors and conversions, and simulates peeking from [lesson 13](../13-ab-test-pitfalls/).
+
 ## Walk through
 
 Run each block from this folder. The CDF from `erf`:
