@@ -316,14 +316,14 @@ Level total: about 108 hours of focused work.
 <!-- generated:level-land-the-job -->
 **11 Land the job**
 
-- [ ] 11-01 Build a target list from real postings *(planned)*: Where are the analyst roles you can actually get, and which 30 companies go on your list? About 3 h.
-- [ ] 11-02 Search smarter: titles and synonyms *(planned)*: Why does a search for data analyst miss most of the analyst roles at a company like Amazon? About 2 h.
-- [ ] 11-03 Visa-aware search: H-1B, OPT and UK sponsors *(planned)*: Which employers on your list have sponsored before, and which postings rule you out in their own words? About 2 h.
-- [ ] 11-04 Remote, really: where can you be hired from? *(planned)*: Of the remote roles you found, which ones can actually hire someone where you live? About 2 h.
-- [ ] 11-05 Apply where it counts *(planned)*: With 40 postings in front of you and 10 hours this week, which ones are worth an application? About 2 h.
-- [ ] 11-06 Track your search as a funnel *(planned)*: Out of 60 applications, where is your search leaking, and which channel deserves more time? About 2 h.
-- [ ] 11-07 Using Real Analyst Jobs in your search *(planned)*: What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. About 1 h.
-- [ ] 11-08 Capstone: a 30-day job search plan *(planned)*: Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? About 6 h.
+- [x] 11-01 [Build a target list from real postings](phases/11-land-the-job/01-build-a-target-list): Where are the analyst roles you can actually get, and which 30 companies go on your list? About 3 h.
+- [x] 11-02 [Search smarter: titles and synonyms](phases/11-land-the-job/02-titles-and-synonyms): Why does a search for data analyst miss most of the analyst roles at a company like Amazon? About 2 h.
+- [x] 11-03 [Visa-aware search: H-1B, OPT and UK sponsors](phases/11-land-the-job/03-visa-aware-search): Which employers on your list have sponsored before, and which postings rule you out in their own words? About 2 h.
+- [x] 11-04 [Remote, really: where can you be hired from?](phases/11-land-the-job/04-remote-where-you-can-be-hired): Of the remote roles you found, which ones can actually hire someone where you live? About 2 h.
+- [x] 11-05 [Apply where it counts](phases/11-land-the-job/05-apply-where-it-counts): With 40 postings in front of you and 10 hours this week, which ones are worth an application? About 2 h.
+- [x] 11-06 [Track your search as a funnel](phases/11-land-the-job/06-track-your-search-as-a-funnel): Out of 60 applications, where is your search leaking, and which channel deserves more time? About 2 h.
+- [x] 11-07 [Using Real Analyst Jobs in your search](phases/11-land-the-job/07-using-real-analyst-jobs): What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. About 1 h.
+- [x] 11-08 [Capstone: a 30-day job search plan](phases/11-land-the-job/08-capstone-30-day-search-plan): Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? About 6 h.
 
 Level total: about 20 hours of focused work.
 <!-- /generated:level-land-the-job -->

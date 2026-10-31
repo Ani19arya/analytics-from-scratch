@@ -1,0 +1,26 @@
+{
+  "provenance": {
+    "source": "Real Analyst Jobs (realanalystjobs.com): live analyst roles, checked daily against employers' own careers pages",
+    "tool": "Real Analyst Jobs MCP server, tools analyst_market_stats and search_analyst_jobs",
+    "date_retrieved": "2026-10-31",
+    "dataAsOf": "2026-10-31",
+    "note": "Real aggregates and one posting title copied by hand from the provider's responses. No personal data. The provider says the feed keeps only live roles and does not give salary averages."
+  },
+  "market": {
+    "liveRoles": 8952,
+    "postedLast7Days": 2458,
+    "postedLast30Days": 5813,
+    "seniority": {"Entry": 1103, "Mid": 2615, "Senior": 547, "Lead/Staff": 981, "Not Specified": 3706}
+  },
+  "entry_level_search": {
+    "filters": {"seniority": "entry", "posted_within_days": 7},
+    "totalMatches": 347,
+    "first_result": {
+      "title": "Senior Manager, Advanced Analytics",
+      "matched_filter": "seniority=entry",
+      "salary": "$156,915-180,000/year",
+      "salary_min_usd": 156915,
+      "salary_max_usd": 180000
+    }
+  }
+}

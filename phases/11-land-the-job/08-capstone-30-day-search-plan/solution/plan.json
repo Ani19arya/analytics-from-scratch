@@ -1,0 +1,348 @@
+{
+  "end": "2026-12-01",
+  "hours_per_week": 10,
+  "search_terms": [
+    "business intelligence",
+    "bi analyst",
+    "bi developer",
+    "product analyst",
+    "growth analyst",
+    "business analyst",
+    "operations analyst",
+    "data analyst",
+    "insights analyst",
+    "reporting analyst",
+    "analytics analyst"
+  ],
+  "seeker": "Kavya Menon",
+  "start": "2026-11-02",
+  "tasks": [
+    {
+      "date": "2026-11-02",
+      "hours": 0.5,
+      "kind": "search",
+      "note": "Refresh saved searches with every term; save new postings",
+      "week": 1
+    },
+    {
+      "date": "2026-11-02",
+      "funnel": {
+        "applications": 17,
+        "by_channel": {
+          "careers_page": {
+            "applications": 6,
+            "screen_rate": 0.16666666666666666,
+            "screens": 1
+          },
+          "job_board": {
+            "applications": 7,
+            "screen_rate": 0.2857142857142857,
+            "screens": 2
+          },
+          "referral": {
+            "applications": 4,
+            "screen_rate": 0.5,
+            "screens": 2
+          }
+        },
+        "interview_rate": 0.2,
+        "interviews": 1,
+        "no_reply": 11,
+        "offers": 0,
+        "rejections": 2,
+        "response_rate": 0.35294117647058826,
+        "responses": 6,
+        "screen_rate": 0.29411764705882354,
+        "screens": 5
+      },
+      "hours": 1.0,
+      "kind": "review",
+      "note": "Weekly review: last week's funnel, then adjust this week",
+      "week": 1
+    },
+    {
+      "date": "2026-11-03",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Business Analyst, Puddlestone Grocers (Remote)",
+      "posting_id": "P0219",
+      "week": 1
+    },
+    {
+      "date": "2026-11-03",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 1
+    },
+    {
+      "date": "2026-11-04",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Junior Business Analyst, Mintgrove Health (Mumbai)",
+      "posting_id": "P0142",
+      "week": 1
+    },
+    {
+      "date": "2026-11-05",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Umbergate Freight (Bengaluru)",
+      "posting_id": "P0072",
+      "week": 1
+    },
+    {
+      "date": "2026-11-05",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 1
+    },
+    {
+      "date": "2026-11-06",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Business Analyst, Mintgrove Health (Remote)",
+      "posting_id": "P0114",
+      "week": 1
+    },
+    {
+      "date": "2026-11-07",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Business Analyst, Wrenhollow Analytics (Bengaluru)",
+      "posting_id": "P0047",
+      "week": 1
+    },
+    {
+      "date": "2026-11-09",
+      "hours": 0.5,
+      "kind": "search",
+      "note": "Refresh saved searches with every term; save new postings",
+      "week": 2
+    },
+    {
+      "date": "2026-11-09",
+      "funnel": null,
+      "hours": 1.0,
+      "kind": "review",
+      "note": "Weekly review: last week's funnel, then adjust this week",
+      "week": 2
+    },
+    {
+      "date": "2026-11-10",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Dewmark Insurance (Mumbai)",
+      "posting_id": "P0004",
+      "week": 2
+    },
+    {
+      "date": "2026-11-10",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 2
+    },
+    {
+      "date": "2026-11-11",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Marketing Insights Analyst, Pebblequay Travel (Remote)",
+      "posting_id": "P0028",
+      "week": 2
+    },
+    {
+      "date": "2026-11-12",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Growth Analyst, Velvetfinch Studios (Pune)",
+      "posting_id": "P0031",
+      "week": 2
+    },
+    {
+      "date": "2026-11-12",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 2
+    },
+    {
+      "date": "2026-11-13",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Kettlebrook Energy (Singapore)",
+      "posting_id": "P0164",
+      "week": 2
+    },
+    {
+      "date": "2026-11-14",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Pebblequay Travel (Remote)",
+      "posting_id": "P0184",
+      "week": 2
+    },
+    {
+      "date": "2026-11-16",
+      "hours": 0.5,
+      "kind": "search",
+      "note": "Refresh saved searches with every term; save new postings",
+      "week": 3
+    },
+    {
+      "date": "2026-11-16",
+      "funnel": null,
+      "hours": 1.0,
+      "kind": "review",
+      "note": "Weekly review: last week's funnel, then adjust this week",
+      "week": 3
+    },
+    {
+      "date": "2026-11-17",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Business Intelligence Analyst, Moonwick Fashion (Austin)",
+      "posting_id": "P0002",
+      "week": 3
+    },
+    {
+      "date": "2026-11-17",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 3
+    },
+    {
+      "date": "2026-11-18",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Operations Analyst, Yarrowpeak Telecom (Bengaluru)",
+      "posting_id": "P0208",
+      "week": 3
+    },
+    {
+      "date": "2026-11-19",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "BI Analyst, Larkspin Games (Berlin)",
+      "posting_id": "P0020",
+      "week": 3
+    },
+    {
+      "date": "2026-11-19",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 3
+    },
+    {
+      "date": "2026-11-20",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Associate Marketing Insights Analyst, Pebblequay Travel (Pune)",
+      "posting_id": "P0060",
+      "week": 3
+    },
+    {
+      "date": "2026-11-21",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Associate Data Analyst, Kettlebrook Energy (Mumbai)",
+      "posting_id": "P0065",
+      "week": 3
+    },
+    {
+      "date": "2026-11-23",
+      "hours": 0.5,
+      "kind": "search",
+      "note": "Refresh saved searches with every term; save new postings",
+      "week": 4
+    },
+    {
+      "date": "2026-11-23",
+      "funnel": null,
+      "hours": 1.0,
+      "kind": "review",
+      "note": "Weekly review: last week's funnel, then adjust this week",
+      "week": 4
+    },
+    {
+      "date": "2026-11-24",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Wrenhollow Analytics (Mumbai)",
+      "posting_id": "P0239",
+      "week": 4
+    },
+    {
+      "date": "2026-11-24",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 4
+    },
+    {
+      "date": "2026-11-25",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Lanternway Courses (Remote)",
+      "posting_id": "P0014",
+      "week": 4
+    },
+    {
+      "date": "2026-11-26",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Operations Analyst, Silkhaven Hotels (Bengaluru)",
+      "posting_id": "P0185",
+      "week": 4
+    },
+    {
+      "date": "2026-11-26",
+      "hours": 0.5,
+      "kind": "network",
+      "note": "Ask one contact for a referral at a target company",
+      "week": 4
+    },
+    {
+      "date": "2026-11-27",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Data Analyst, Yarrowpeak Telecom (Bengaluru)",
+      "posting_id": "P0151",
+      "week": 4
+    },
+    {
+      "date": "2026-11-28",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Business Intelligence Analyst, Umbergate Freight (Bengaluru)",
+      "posting_id": "P0082",
+      "week": 4
+    },
+    {
+      "date": "2026-11-30",
+      "hours": 0.25,
+      "kind": "follow_up",
+      "note": "Follow up on applications with no reply after 14 days",
+      "week": 5
+    },
+    {
+      "date": "2026-11-30",
+      "funnel": null,
+      "hours": 1.0,
+      "kind": "review",
+      "note": "Final review: the 30-day funnel against the baseline",
+      "week": 5
+    },
+    {
+      "date": "2026-12-01",
+      "hours": 1.5,
+      "kind": "apply",
+      "note": "Reporting Analyst, Bluequarry Mining (Pune)",
+      "posting_id": "P0155",
+      "week": 5
+    }
+  ]
+}

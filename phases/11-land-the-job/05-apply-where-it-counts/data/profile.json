@@ -1,0 +1,14 @@
+{
+  "about": "SYNTHETIC skills profile of a fictional job seeker, built by make_data.py",
+  "as_of": "2026-10-31",
+  "target_seniority": "entry",
+  "skills": [
+    "SQL",
+    "Excel",
+    "Tableau",
+    "Python",
+    "statistics"
+  ],
+  "weekly_hours": 10,
+  "entry_salary_ceiling_usd": 110000
+}

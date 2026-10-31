@@ -1,0 +1,32 @@
+{
+  "home_country": "IN",
+  "home_regions": [
+    "IN",
+    "APAC",
+    "WORLDWIDE"
+  ],
+  "hours_per_week": 10,
+  "name": "Kavya Menon",
+  "needs_sponsorship_outside": "IN",
+  "onsite_cities": [
+    "Pune",
+    "Bengaluru",
+    "Mumbai"
+  ],
+  "plan_days": 30,
+  "plan_start": "2026-11-02",
+  "skills": [
+    "SQL",
+    "Excel",
+    "Tableau",
+    "Python"
+  ],
+  "stale_after_days": 30,
+  "synthetic": true,
+  "target_families": [
+    "data",
+    "business",
+    "product",
+    "bi"
+  ]
+}

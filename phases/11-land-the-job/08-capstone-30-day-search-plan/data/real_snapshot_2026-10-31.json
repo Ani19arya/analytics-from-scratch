@@ -1,0 +1,29 @@
+{
+  "provenance": {
+    "source": "Real Analyst Jobs data, retrieved 31 October 2026 through its MCP server",
+    "provider_says": "RealAnalystJobs.com: live analyst roles, checked daily against employers' own careers pages.",
+    "tools": ["remote_jobs_from_country", "analyst_market_stats"],
+    "date_retrieved": "2026-10-31",
+    "dataAsOf": "2026-10-31",
+    "note": "Aggregates only, copied by hand from the tool responses. No personal data. Not used by the test."
+  },
+  "remote_jobs_from_country": {
+    "country": "India",
+    "remote_analyst_roles_based_in_india": 18,
+    "naming_a_region_that_includes_india_apac": 1,
+    "worldwide_or_anywhere": 1,
+    "remote_with_no_country_stated": 136,
+    "remote_tied_to_other_places": 305,
+    "tied_to_other_places_top": {"US": 204, "UK": 15, "Canada": 14, "Germany": 9, "Mexico": 9, "Spain": 7},
+    "tool_rule": "A location line is not a hiring promise, and no role is described as open to the country unless its listing says so."
+  },
+  "analyst_market_stats": {
+    "filter": "none",
+    "liveRoles": 8952,
+    "topRoleFamilies": {"Business Analyst": 1818, "Data Analyst": 1299, "Financial Analyst": 686,
+                        "Operations Analyst": 425, "Business Intelligence": 264, "Product Analyst": 206,
+                        "Marketing Analyst": 85, "Other analyst titles": 4169},
+    "india_live_roles": 1375,
+    "notReported_trends": "The feed keeps only live roles (closed listings are removed, not archived), so there is no history to chart yet."
+  }
+}

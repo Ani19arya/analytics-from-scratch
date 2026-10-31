@@ -1,0 +1,247 @@
+posting_id,company,title,city,country,work_mode,remote_regions,posted_date,closes_on,source,tools,description
+P0001,Rivetlane Motors,Associate Business Analyst,Mumbai,IN,onsite,,2026-09-19,,careers_page,Looker;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0002,Moonwick Fashion,Business Intelligence Analyst,Austin,US,onsite,,2026-10-14,,careers_page,Python;Tableau,Own weekly reporting and work with product and operations teams. Visa sponsorship available for the right candidate.
+P0003,Larkspin Games,Junior Growth Analyst,Bengaluru,IN,onsite,,2026-10-14,,job_board,Power BI;SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0004,Dewmark Insurance,Data Analyst,Mumbai,IN,onsite,,2026-10-23,,careers_page,Python;SQL,Own weekly reporting and work with product and operations teams.
+P0005,Zinnialoop Retail,Senior Financial Analyst,Seattle,US,onsite,,2026-10-08,,job_board,SQL;R;Power BI;Python,Turn messy data into clear recommendations for leadership. You must have the right to work in this country.
+P0006,Quillfern Logistics,Senior Growth Analyst,Pune,IN,onsite,,2026-10-14,,job_board,Excel;Tableau;Power BI;SQL,You will build dashboards and answer questions from the business with data.
+P0007,Bluequarry Mining,Operations Analyst,Remote,IN,remote,IN,2026-10-18,,careers_page,Python;Power BI,You will build dashboards and answer questions from the business with data.
+P0008,Pebblequay Travel,Associate Financial Analyst,Remote,GB,remote,,2026-10-18,2026-11-19,careers_page,Power BI;Python,You will build dashboards and answer questions from the business with data.
+P0009,Silkhaven Hotels,Data Analyst,Bengaluru,IN,hybrid,,2026-09-11,2026-11-07,job_board,Excel;SQL;Power BI,Turn messy data into clear recommendations for leadership.
+P0010,Thistlecart,Associate Credit Risk Analyst,Remote,IN,remote,IN,2026-10-18,,job_board,SQL;Tableau;Python;Excel,Own weekly reporting and work with product and operations teams.
+P0011,Zinnialoop Retail,Senior Credit Risk Analyst,Seattle,US,hybrid,,2026-10-02,,job_board,Looker;SQL,Own weekly reporting and work with product and operations teams.
+P0012,Lanternway Courses,Senior Data Analyst,Chennai,IN,hybrid,,2026-09-22,2026-11-08,job_board,Excel;Power BI,Own weekly reporting and work with product and operations teams.
+P0013,Indigoflint Software,Business Analyst,Berlin,DE,hybrid,,2026-10-02,,job_board,Tableau;Excel;SQL,Turn messy data into clear recommendations for leadership. No visa sponsorship is offered.
+P0014,Lanternway Courses,Data Analyst,Remote,IN,remote,IN,2026-10-27,,job_board,Tableau;Power BI;Excel,Own weekly reporting and work with product and operations teams.
+P0015,Kettlebrook Energy,Product Analyst,Remote,GB,remote,,2026-10-17,,careers_page,Python;SQL,Turn messy data into clear recommendations for leadership.
+P0016,Puddlestone Grocers,Insights Analyst,Gurugram,IN,hybrid,,2026-10-09,,careers_page,R;SQL;Power BI,Own weekly reporting and work with product and operations teams.
+P0017,Puddlestone Grocers,Senior Business Intelligence Analyst,Bengaluru,IN,onsite,,2026-10-11,2026-11-19,job_board,Tableau;Excel;SQL,Own weekly reporting and work with product and operations teams.
+P0018,Bluequarry Mining,Senior Data Analyst,Remote,US,remote,US,2026-10-21,,job_board,Power BI;SQL;R,Turn messy data into clear recommendations for leadership.
+P0019,Juniperwell Pharma,Product Analyst,Singapore,SG,hybrid,,2026-08-25,2026-11-16,job_board,Python;Excel;Looker,Turn messy data into clear recommendations for leadership. You must have the right to work in this country.
+P0020,Larkspin Games,BI Analyst,Berlin,DE,onsite,,2026-10-22,,job_board,Excel;Power BI;SQL;Tableau,You will build dashboards and answer questions from the business with data. We sponsor visas for this role.
+P0021,Rivetlane Motors,Business Intelligence Analyst,Chennai,IN,hybrid,,2026-10-20,,careers_page,SQL;Excel;Tableau;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0022,Coralhatch Payments,Financial Analyst,Remote,IN,remote,IN,2026-11-01,,careers_page,Tableau;SQL;R,Turn messy data into clear recommendations for leadership.
+P0023,Larkspin Games,Product Analyst,Manchester,GB,hybrid,,2026-09-04,2026-11-18,careers_page,SQL;Excel;Python;R,Own weekly reporting and work with product and operations teams. Visa sponsorship available for the right candidate.
+P0024,Lanternway Courses,Insights Analyst,Gurugram,IN,onsite,,2026-10-08,,job_board,Looker;Python;Excel;Tableau,You will build dashboards and answer questions from the business with data.
+P0025,Ferncastle Media,Senior Insights Analyst,Chennai,IN,hybrid,,2026-11-01,2026-11-08,job_board,Excel;Tableau;SQL;dbt,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0026,Tiffinbell,Senior Credit Risk Analyst,Gurugram,IN,onsite,,2026-10-31,,job_board,Power BI;Excel;SQL,Own weekly reporting and work with product and operations teams.
+P0027,Larkspin Games,Operations Analyst,Gurugram,IN,hybrid,,2026-10-29,,job_board,Tableau;SQL,You will build dashboards and answer questions from the business with data. Contact us on WhatsApp only.
+P0028,Pebblequay Travel,Marketing Insights Analyst,Remote,IN,remote,IN,2026-10-23,,job_board,SQL;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0029,Ambersprout Fintech,Credit Risk Analyst,Remote,US,remote,,2026-10-24,2026-10-27,job_board,Looker;SQL;Power BI,Own weekly reporting and work with product and operations teams.
+P0030,Zinnialoop Retail,Marketing Insights Analyst,Remote,IN,remote,,2026-10-28,2026-11-23,job_board,SQL;Power BI,You will build dashboards and answer questions from the business with data.
+P0031,Velvetfinch Studios,Growth Analyst,Pune,IN,onsite,,2026-10-23,,careers_page,SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0032,Puddlestone Grocers,Credit Risk Analyst,Remote,IN,remote,IN,2026-09-14,,job_board,Tableau;SQL;Power BI,Own weekly reporting and work with product and operations teams.
+P0033,Orchidbay Bank,Senior Reporting Analyst,Remote,US,remote,US,2026-09-17,2026-11-05,careers_page,Power BI;Looker,Turn messy data into clear recommendations for leadership.
+P0034,Umbergate Freight,Junior Financial Analyst,Remote,US,remote,US,2026-11-01,,job_board,Python;Power BI,Turn messy data into clear recommendations for leadership.
+P0035,Bluequarry Mining,Insights Analyst,Hyderabad,IN,hybrid,,2026-10-31,,job_board,Python;SQL,Turn messy data into clear recommendations for leadership.
+P0036,Orchidbay Bank,Financial Analyst,Remote,SG,remote,APAC,2026-10-02,,careers_page,Tableau;dbt;Excel;Looker,You will build dashboards and answer questions from the business with data.
+P0037,Wrenhollow Analytics,Senior Operations Analyst,Bengaluru,IN,onsite,,2026-10-04,,job_board,SQL;Python;dbt;Power BI,You will build dashboards and answer questions from the business with data.
+P0038,Silkhaven Hotels,Business Analyst,Bengaluru,IN,hybrid,,2026-10-21,,job_board,SQL;dbt;Looker,Turn messy data into clear recommendations for leadership.
+P0039,Larkspin Games,Associate Product Analyst,Singapore,SG,onsite,,2026-10-03,,job_board,Python;dbt,Own weekly reporting and work with product and operations teams.
+P0040,Coralhatch Payments,Financial Analyst,Chennai,IN,onsite,,2026-10-27,,job_board,R;dbt;Power BI;Tableau,Turn messy data into clear recommendations for leadership.
+P0041,Tiffinbell,Data Scientist,Bengaluru,IN,hybrid,,2026-10-30,,careers_page,SQL;Power BI;Excel,Turn messy data into clear recommendations for leadership.
+P0042,Yarrowpeak Telecom,Associate Financial Analyst,Mumbai,IN,onsite,,2026-10-16,,job_board,Looker;SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0043,Ferncastle Media,Business Analyst,Hyderabad,IN,onsite,,2026-10-31,,job_board,Python;dbt;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0044,Pebblequay Travel,Junior Operations Analyst,Pune,IN,hybrid,,2026-10-23,2026-10-30,job_board,Python;R;SQL;Tableau,Turn messy data into clear recommendations for leadership. Guaranteed job after you pay for your training.
+P0045,Nimbletree Learning,Junior Business Analyst,Bengaluru,IN,hybrid,,2026-10-31,2026-11-12,job_board,R;SQL;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0046,Brasswick Retail,Data Analyst,Seattle,US,onsite,,2026-10-31,2026-11-24,careers_page,SQL;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find. No visa sponsorship is offered."
+P0047,Wrenhollow Analytics,Business Analyst,Bengaluru,IN,hybrid,,2026-10-24,,careers_page,Python;Tableau,Turn messy data into clear recommendations for leadership.
+P0048,Puddlestone Grocers,Insights Analyst,Hyderabad,IN,hybrid,,2026-10-19,,job_board,Excel;SQL;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find. A refundable Registration Fee applies before onboarding."
+P0049,Wrenhollow Analytics,Insights Analyst,Singapore,SG,hybrid,,2026-10-20,,careers_page,Looker;Python;Power BI;Excel,You will build dashboards and answer questions from the business with data. Visa sponsorship available for the right candidate.
+P0050,Puddlestone Grocers,Financial Analyst,Remote,IN,remote,,2026-10-29,2026-11-23,careers_page,SQL;Python;Looker;Excel,You will build dashboards and answer questions from the business with data.
+P0051,Wrenhollow Analytics,Data Analyst,Mumbai,IN,hybrid,,2026-10-30,,job_board,Tableau;SQL;Power BI,Turn messy data into clear recommendations for leadership.
+P0052,Larkspin Games,BI Analyst,Pune,IN,onsite,,2026-10-28,,careers_page,Excel;Looker;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0053,Umbergate Freight,Business Analyst,Pune,IN,onsite,,2026-09-23,,job_board,SQL;Excel,Turn messy data into clear recommendations for leadership.
+P0054,Pottlemere,Business Intelligence Analyst,Remote,IN,remote,IN,2026-10-28,,careers_page,Excel;Power BI;SQL;dbt,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0055,Orchidbay Bank,Senior Data Analyst,Remote,IN,remote,IN;SG,2026-10-18,,careers_page,SQL;Python;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0056,Quillfern Logistics,Data Engineer,Pune,IN,onsite,,2026-10-19,,careers_page,Tableau;SQL,Own weekly reporting and work with product and operations teams. A refundable Registration Fee applies before onboarding.
+P0057,Coralhatch Payments,Business Analyst,Gurugram,IN,hybrid,,2026-10-10,,job_board,Tableau;Python;Power BI;SQL,"Analyse funnels, cohorts and campaigns, and present what you find. Contact us on WhatsApp only."
+P0058,Ambersprout Fintech,Financial Analyst,New York,US,onsite,,2026-10-20,2026-11-25,careers_page,Tableau;Python;Excel,"Analyse funnels, cohorts and campaigns, and present what you find. Visa sponsorship available for the right candidate."
+P0059,Tiffinbell,Junior Growth Analyst,New York,US,hybrid,,2026-10-26,2026-10-31,job_board,SQL;Python,Turn messy data into clear recommendations for leadership. A refundable Registration Fee applies before onboarding.
+P0060,Pebblequay Travel,Associate Marketing Insights Analyst,Pune,IN,hybrid,,2026-10-22,,careers_page,Excel;Tableau;Python;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0061,Ottervale Telecom,Business Intelligence Analyst,Remote,IN,remote,IN,2026-10-01,,job_board,Python;Tableau,You will build dashboards and answer questions from the business with data.
+P0062,Moonwick Fashion,Insights Analyst,Seattle,US,onsite,,2026-08-25,,careers_page,Excel;Tableau,Turn messy data into clear recommendations for leadership. We sponsor visas for this role.
+P0063,Tiffinbell,Operations Analyst,Bengaluru,IN,onsite,,2026-10-26,,careers_page,Tableau;R,Own weekly reporting and work with product and operations teams.
+P0064,Ottervale Telecom,Financial Analyst,Bengaluru,IN,hybrid,,2026-10-24,2026-11-09,job_board,Python;Tableau;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0065,Kettlebrook Energy,Associate Data Analyst,Mumbai,IN,onsite,,2026-11-01,,job_board,SQL;R;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0066,Saffronlane Foods,Business Intelligence Analyst,Hyderabad,IN,onsite,,2026-10-06,2026-11-09,job_board,SQL;Excel;Tableau,You will build dashboards and answer questions from the business with data. A refundable Registration Fee applies before onboarding.
+P0067,Thistlecart,Product Analyst,Chennai,IN,hybrid,,2026-10-03,,job_board,Power BI;Excel;Tableau;Python,Turn messy data into clear recommendations for leadership. A refundable Registration Fee applies before onboarding.
+P0068,Ottervale Telecom,Associate Financial Analyst,Remote,IN,remote,IN;SG,2026-10-16,,careers_page,Power BI;Excel;R,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0069,Brasswick Retail,Junior Reporting Analyst,Pune,IN,hybrid,,2026-08-30,,job_board,SQL;Tableau;Python;Power BI,You will build dashboards and answer questions from the business with data.
+P0070,Tiffinbell,Senior Credit Risk Analyst,Remote,GB,remote,GB;IE,2026-10-20,,careers_page,SQL;Tableau;Power BI;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0071,Tiffinbell,Business Analyst,Hyderabad,IN,onsite,,2026-09-15,2026-10-30,careers_page,R;Excel,Turn messy data into clear recommendations for leadership.
+P0072,Umbergate Freight,Data Analyst,Bengaluru,IN,onsite,,2026-10-31,,job_board,SQL;Tableau,Turn messy data into clear recommendations for leadership.
+P0073,Kettlebrook Energy,Senior Insights Analyst,Remote,IN,remote,IN,2026-10-24,,job_board,Tableau;Looker;Python;Power BI,Own weekly reporting and work with product and operations teams.
+P0074,Larkspin Games,Product Analyst,Remote,US,remote,US,2026-08-25,,careers_page,Looker;Excel,Own weekly reporting and work with product and operations teams.
+P0075,Juniperwell Pharma,Associate Reporting Analyst,Hyderabad,IN,hybrid,,2026-10-06,,job_board,SQL;Python,You will build dashboards and answer questions from the business with data.
+P0076,Quillfern Logistics,Insights Analyst,Bengaluru,IN,onsite,,2026-10-17,,job_board,SQL;Looker;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0077,Bluequarry Mining,Operations Analyst,Chennai,IN,onsite,,2026-10-27,,careers_page,SQL;Tableau;Looker;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0078,Moonwick Fashion,Associate Data Analyst,Remote,US,remote,US,2026-10-27,2026-11-24,careers_page,Power BI;Python,Turn messy data into clear recommendations for leadership.
+P0079,Bluequarry Mining,Financial Analyst,Remote,GB,remote,GB;IE,2026-10-28,,job_board,Python;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0080,Wrenhollow Analytics,Senior Data Scientist,Singapore,SG,hybrid,,2026-08-27,,job_board,Python;Tableau;SQL;Excel,Own weekly reporting and work with product and operations teams. A refundable Registration Fee applies before onboarding.
+P0081,Yarrowpeak Telecom,Junior Business Intelligence Analyst,Remote,IN,remote,IN;SG,2026-08-24,2026-11-12,job_board,SQL;Looker,Turn messy data into clear recommendations for leadership.
+P0082,Umbergate Freight,Business Intelligence Analyst,Bengaluru,IN,onsite,,2026-10-19,,careers_page,Python;Looker;SQL,You will build dashboards and answer questions from the business with data.
+P0083,Yarrowpeak Telecom,Junior Data Analyst,Singapore,SG,hybrid,,2026-09-23,,careers_page,R;Python;Power BI;SQL,You will build dashboards and answer questions from the business with data. Visa sponsorship available for the right candidate.
+P0084,Mintgrove Health,Financial Analyst,Austin,US,onsite,,2026-10-02,2026-11-19,job_board,Tableau;Looker;Python;Excel,You will build dashboards and answer questions from the business with data.
+P0085,Velvetfinch Studios,Business Analyst,Pune,IN,onsite,,2026-10-22,2026-11-07,careers_page,Tableau;dbt,Turn messy data into clear recommendations for leadership.
+P0086,Quillfern Logistics,BI Analyst,Gurugram,IN,hybrid,,2026-10-20,,job_board,Python;Excel,Own weekly reporting and work with product and operations teams.
+P0087,Indigoflint Software,Financial Analyst,Bengaluru,IN,onsite,,2026-10-15,,job_board,SQL;Tableau;Python;Power BI,Turn messy data into clear recommendations for leadership. A small security deposit is collected at joining.
+P0088,Rivetlane Motors,Financial Analyst,Pune,IN,onsite,,2026-09-02,,careers_page,Excel;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0089,Silkhaven Hotels,Product Analyst,Mumbai,IN,hybrid,,2026-10-19,,careers_page,Python;R,Turn messy data into clear recommendations for leadership.
+P0090,Bluequarry Mining,Credit Risk Analyst,Bengaluru,IN,onsite,,2026-10-27,2026-11-01,job_board,Tableau;Excel,Own weekly reporting and work with product and operations teams.
+P0091,Wrenhollow Analytics,Product Analyst,Hyderabad,IN,onsite,,2026-10-25,,careers_page,SQL;Python;Tableau,Own weekly reporting and work with product and operations teams.
+P0092,Zinnialoop Retail,Business Intelligence Analyst,Mumbai,IN,onsite,,2026-10-26,,job_board,SQL;Power BI;dbt,Turn messy data into clear recommendations for leadership.
+P0093,Nimbletree Learning,Reporting Analyst,Hyderabad,IN,hybrid,,2026-09-14,,job_board,Power BI;Looker;Python,Turn messy data into clear recommendations for leadership.
+P0094,Tiffinbell,Business Analyst,Pune,IN,hybrid,,2026-10-19,2026-10-27,careers_page,Power BI;SQL;Excel,You will build dashboards and answer questions from the business with data.
+P0095,Brasswick Retail,Insights Analyst,Mumbai,IN,onsite,,2026-09-27,2026-11-09,careers_page,Excel;SQL,You will build dashboards and answer questions from the business with data.
+P0096,Rivetlane Motors,Business Intelligence Analyst,Bengaluru,IN,onsite,,2026-10-11,,job_board,Python;SQL;Looker,Own weekly reporting and work with product and operations teams.
+P0097,Indigoflint Software,Senior Business Analyst,Pune,IN,onsite,,2026-10-10,2026-10-28,careers_page,Python;Looker;SQL;Power BI,Own weekly reporting and work with product and operations teams. Guaranteed job after you pay for your training.
+P0098,Yarrowpeak Telecom,Associate Business Analyst,Gurugram,IN,hybrid,,2026-10-11,,careers_page,SQL;R,Turn messy data into clear recommendations for leadership.
+P0099,Saffronlane Foods,Insights Analyst,Remote,GB,remote,,2026-10-09,2026-11-12,careers_page,dbt;SQL;Excel;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0100,Ambersprout Fintech,Junior Operations Analyst,Bengaluru,IN,hybrid,,2026-10-14,,job_board,SQL;Tableau;Excel;Python,You will build dashboards and answer questions from the business with data.
+P0101,Ottervale Telecom,Junior Insights Analyst,Gurugram,IN,hybrid,,2026-10-04,,job_board,SQL;Python;Looker;Power BI,Turn messy data into clear recommendations for leadership.
+P0102,Brasswick Retail,BI Analyst,Remote,IN,remote,IN,2026-08-21,2026-10-31,job_board,Excel;SQL;R,Own weekly reporting and work with product and operations teams. A refundable Registration Fee applies before onboarding.
+P0103,Wrenhollow Analytics,Senior Data Analyst,Pune,IN,hybrid,,2026-09-25,2026-11-01,job_board,Excel;Power BI;SQL,Own weekly reporting and work with product and operations teams. A small security deposit is collected at joining.
+P0104,Nimbletree Learning,Associate Product Analyst,Remote,US,remote,US,2026-08-18,2026-10-28,job_board,SQL;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0105,Umbergate Freight,Senior BI Analyst,Remote,US,remote,US,2026-10-23,2026-11-18,careers_page,Looker;Excel;Python;SQL,Turn messy data into clear recommendations for leadership.
+P0106,Yarrowpeak Telecom,Data Engineer,Bengaluru,IN,hybrid,,2026-11-01,2026-10-30,job_board,SQL;Excel;Looker;Power BI,Own weekly reporting and work with product and operations teams.
+P0107,Rivetlane Motors,Senior Operations Analyst,Mumbai,IN,onsite,,2026-10-30,,job_board,Tableau;SQL,Turn messy data into clear recommendations for leadership.
+P0108,Quillfern Logistics,Junior Business Intelligence Analyst,Remote,US,remote,US,2026-10-08,2026-10-27,job_board,SQL;Excel;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0109,Wrenhollow Analytics,Financial Analyst,Mumbai,IN,hybrid,,2026-10-02,,job_board,Python;Excel;Tableau,Turn messy data into clear recommendations for leadership.
+P0110,Silkhaven Hotels,Data Engineer,Remote,US,remote,,2026-10-31,2026-11-25,careers_page,Power BI;Excel;Python,Turn messy data into clear recommendations for leadership.
+P0111,Nimbletree Learning,Reporting Analyst,Berlin,DE,onsite,,2026-10-17,,careers_page,Python;dbt,Own weekly reporting and work with product and operations teams. You must have the right to work in this country.
+P0112,Nimbletree Learning,Senior Insights Analyst,Remote,GB,remote,GB;IE,2026-10-22,,careers_page,Looker;Python;SQL,Turn messy data into clear recommendations for leadership.
+P0113,Orchidbay Bank,Senior Financial Analyst,Remote,US,remote,US,2026-10-26,,careers_page,Power BI;SQL;Looker;Python,You will build dashboards and answer questions from the business with data.
+P0114,Mintgrove Health,Business Analyst,Remote,SG,remote,APAC,2026-10-26,,careers_page,SQL;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0115,Dewmark Insurance,Operations Analyst,Mumbai,IN,hybrid,,2026-09-21,,careers_page,R;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0116,Pottlemere,Senior BI Analyst,Remote,US,remote,WORLDWIDE,2026-11-01,,careers_page,SQL;Power BI,Own weekly reporting and work with product and operations teams. Guaranteed job after you pay for your training.
+P0117,Saffronlane Foods,Junior Credit Risk Analyst,Gurugram,IN,onsite,,2026-10-03,2026-11-12,job_board,Tableau;Power BI;SQL;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0118,Quillfern Logistics,Marketing Insights Analyst,Bengaluru,IN,hybrid,,2026-10-02,,job_board,SQL;Power BI,Turn messy data into clear recommendations for leadership.
+P0119,Saffronlane Foods,Business Analyst,Bengaluru,IN,onsite,,2026-10-21,,careers_page,Power BI;R,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0120,Pebblequay Travel,BI Analyst,Bengaluru,IN,hybrid,,2026-10-31,2026-11-14,job_board,Power BI;Excel;SQL;R,Turn messy data into clear recommendations for leadership.
+P0121,Pebblequay Travel,Product Analyst,Remote,IN,remote,IN,2026-10-29,2026-11-18,job_board,Excel;R,Own weekly reporting and work with product and operations teams.
+P0122,Juniperwell Pharma,Senior Data Analyst,Pune,IN,hybrid,,2026-10-24,,careers_page,SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0123,Dewmark Insurance,Senior Data Engineer,Mumbai,IN,hybrid,,2026-10-27,,job_board,Excel;Tableau;Power BI;SQL,Turn messy data into clear recommendations for leadership.
+P0124,Indigoflint Software,Business Analyst,Chennai,IN,hybrid,,2026-10-19,,job_board,SQL;Python;Excel;Tableau,Turn messy data into clear recommendations for leadership.
+P0125,Ferncastle Media,Senior Data Analyst,Berlin,DE,hybrid,,2026-09-08,,job_board,Python;Power BI;SQL;Excel,Own weekly reporting and work with product and operations teams. You must have the right to work in this country.
+P0126,Moonwick Fashion,Junior Marketing Insights Analyst,Remote,US,remote,,2026-10-13,,careers_page,Tableau;dbt;Excel;SQL,Turn messy data into clear recommendations for leadership.
+P0127,Lanternway Courses,Senior Data Engineer,Chennai,IN,hybrid,,2026-10-08,2026-10-31,job_board,Power BI;Excel,Turn messy data into clear recommendations for leadership.
+P0128,Nimbletree Learning,Operations Analyst,Mumbai,IN,onsite,,2026-10-23,,job_board,Tableau;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0129,Umbergate Freight,Data Engineer,Pune,IN,hybrid,,2026-10-27,,job_board,R;Python;Tableau;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0130,Pebblequay Travel,Product Analyst,New York,US,onsite,,2026-10-18,2026-11-11,job_board,Tableau;Python;SQL;Excel,Turn messy data into clear recommendations for leadership.
+P0131,Moonwick Fashion,Analytics Analyst,Manchester,GB,onsite,,2026-10-20,2026-11-10,job_board,SQL;Python;Excel;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0132,Pebblequay Travel,Data Engineer,Bengaluru,IN,onsite,,2026-11-01,,careers_page,Tableau;Excel;Python,Own weekly reporting and work with product and operations teams.
+P0133,Velvetfinch Studios,Senior Credit Risk Analyst,Bengaluru,IN,hybrid,,2026-10-30,2026-11-09,careers_page,SQL;Python,Own weekly reporting and work with product and operations teams.
+P0134,Puddlestone Grocers,Business Analyst,Remote,US,remote,US,2026-10-24,,careers_page,Power BI;Excel;SQL;Looker,Own weekly reporting and work with product and operations teams.
+P0135,Puddlestone Grocers,Business Analyst,Remote,GB,remote,,2026-09-22,,careers_page,SQL;Power BI;Tableau;Python,You will build dashboards and answer questions from the business with data.
+P0136,Umbergate Freight,Junior Financial Analyst,Singapore,SG,onsite,,2026-10-30,2026-11-19,job_board,Python;SQL;Excel,Turn messy data into clear recommendations for leadership. No visa sponsorship is offered.
+P0137,Umbergate Freight,Junior Data Analyst,Chennai,IN,onsite,,2026-10-13,,job_board,Excel;Python,Turn messy data into clear recommendations for leadership.
+P0138,Rivetlane Motors,Growth Analyst,Remote,IN,remote,,2026-11-01,2026-11-15,careers_page,Tableau;Python,You will build dashboards and answer questions from the business with data. Guaranteed job after you pay for your training.
+P0139,Kettlebrook Energy,Business Analyst,Gurugram,IN,onsite,,2026-10-09,,job_board,dbt;Python;Excel,You will build dashboards and answer questions from the business with data.
+P0140,Tiffinbell,Business Analyst,Remote,IN,remote,IN,2026-08-20,2026-10-30,job_board,Excel;Tableau;SQL;Looker,"Analyse funnels, cohorts and campaigns, and present what you find. Guaranteed job after you pay for your training."
+P0141,Dewmark Insurance,Senior Operations Analyst,Mumbai,IN,hybrid,,2026-10-06,2026-10-28,careers_page,Python;Power BI,You will build dashboards and answer questions from the business with data.
+P0142,Mintgrove Health,Junior Business Analyst,Mumbai,IN,hybrid,,2026-10-17,2026-11-23,job_board,Python;Tableau,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0143,Brasswick Retail,Junior Growth Analyst,Gurugram,IN,hybrid,,2026-10-08,,careers_page,Tableau;Python;SQL,Own weekly reporting and work with product and operations teams.
+P0144,Juniperwell Pharma,Insights Analyst,Bengaluru,IN,onsite,,2026-10-13,2026-11-21,job_board,SQL;Looker,You will build dashboards and answer questions from the business with data.
+P0145,Rivetlane Motors,Business Analyst,Gurugram,IN,onsite,,2026-10-28,,careers_page,Python;dbt;Looker,You will build dashboards and answer questions from the business with data.
+P0146,Pottlemere,Senior Reporting Analyst,Remote,US,remote,US,2026-10-30,,job_board,SQL;Python;Excel;Tableau,You will build dashboards and answer questions from the business with data.
+P0147,Kettlebrook Energy,Analytics Analyst,Hyderabad,IN,hybrid,,2026-10-08,,careers_page,Power BI;Tableau;Excel,You will build dashboards and answer questions from the business with data. A refundable Registration Fee applies before onboarding.
+P0148,Quillfern Logistics,Associate Business Analyst,Chennai,IN,hybrid,,2026-10-08,,careers_page,SQL;Python;Looker,You will build dashboards and answer questions from the business with data.
+P0149,Puddlestone Grocers,Growth Analyst,Remote,GB,remote,GB;IE,2026-10-12,2026-11-24,job_board,SQL;Excel;Tableau,You will build dashboards and answer questions from the business with data.
+P0150,Kettlebrook Energy,Senior Data Analyst,Chennai,IN,onsite,,2026-10-22,,careers_page,Python;Tableau;SQL;Power BI,You will build dashboards and answer questions from the business with data.
+P0151,Yarrowpeak Telecom,Data Analyst,Bengaluru,IN,onsite,,2026-10-22,,job_board,Python;Power BI;SQL,Turn messy data into clear recommendations for leadership.
+P0152,Saffronlane Foods,Data Engineer,Hyderabad,IN,hybrid,,2026-10-24,,job_board,Power BI;Looker;Tableau;SQL,You will build dashboards and answer questions from the business with data.
+P0153,Orchidbay Bank,Business Analyst,Berlin,DE,onsite,,2026-09-23,,careers_page,Excel;SQL;dbt,Own weekly reporting and work with product and operations teams. No visa sponsorship is offered.
+P0154,Puddlestone Grocers,Senior Business Analyst,Bengaluru,IN,onsite,,2026-10-15,,careers_page,Excel;Python;SQL,Turn messy data into clear recommendations for leadership.
+P0155,Bluequarry Mining,Reporting Analyst,Pune,IN,hybrid,,2026-10-18,,job_board,SQL;Power BI;Tableau,Own weekly reporting and work with product and operations teams.
+P0156,Dewmark Insurance,"Program Manager, Analytics",Remote,US,remote,WORLDWIDE,2026-10-23,2026-10-30,job_board,Excel;SQL,Turn messy data into clear recommendations for leadership.
+P0157,Zinnialoop Retail,Senior Reporting Analyst,Berlin,DE,hybrid,,2026-10-30,,job_board,SQL;dbt,Turn messy data into clear recommendations for leadership. You must have the right to work in this country.
+P0158,Mintgrove Health,Marketing Insights Analyst,Remote,IN,remote,IN,2026-10-10,2026-10-30,careers_page,Tableau;SQL;dbt;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0159,Nimbletree Learning,Growth Analyst,Gurugram,IN,hybrid,,2026-10-19,,careers_page,Excel;SQL;Tableau;Power BI,You will build dashboards and answer questions from the business with data.
+P0160,Dewmark Insurance,Credit Risk Analyst,Remote,US,remote,US,2026-10-28,2026-11-27,careers_page,R;Excel;SQL,Turn messy data into clear recommendations for leadership.
+P0161,Thistlecart,Senior Business Analyst,Singapore,SG,onsite,,2026-09-10,,job_board,SQL;Python;Excel,You will build dashboards and answer questions from the business with data.
+P0162,Moonwick Fashion,Reporting Analyst,Remote,IN,remote,IN;SG,2026-10-31,2026-11-01,careers_page,SQL;Excel,Turn messy data into clear recommendations for leadership.
+P0163,Puddlestone Grocers,Data Engineer,Pune,IN,onsite,,2026-10-25,,careers_page,SQL;Tableau,Own weekly reporting and work with product and operations teams.
+P0164,Kettlebrook Energy,Data Analyst,Singapore,SG,onsite,,2026-10-22,,job_board,Excel;Python,Turn messy data into clear recommendations for leadership. We sponsor visas for this role.
+P0165,Coralhatch Payments,Senior Marketing Insights Analyst,Hyderabad,IN,hybrid,,2026-10-08,,careers_page,Power BI;SQL;Python;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0166,Pottlemere,Senior Data Analyst,Pune,IN,onsite,,2026-10-12,2026-11-10,careers_page,Excel;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0167,Saffronlane Foods,"Senior Program Manager, Analytics",Remote,US,remote,US,2026-10-19,2026-11-22,job_board,Tableau;Power BI;SQL;Python,Own weekly reporting and work with product and operations teams.
+P0168,Orchidbay Bank,Data Analyst,Remote,GB,remote,,2026-10-30,,careers_page,SQL;R,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0169,Velvetfinch Studios,Senior Business Intelligence Analyst,Mumbai,IN,hybrid,,2026-10-30,,careers_page,Power BI;Looker;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0170,Silkhaven Hotels,Growth Analyst,Remote,US,remote,WORLDWIDE,2026-10-24,2026-10-30,careers_page,Power BI;Looker;Python,Turn messy data into clear recommendations for leadership.
+P0171,Thistlecart,Business Analyst,Mumbai,IN,onsite,,2026-10-24,2026-11-06,job_board,dbt;Power BI,Turn messy data into clear recommendations for leadership.
+P0172,Zinnialoop Retail,"Junior Program Manager, Analytics",Remote,US,remote,,2026-10-19,,careers_page,Python;SQL;Looker,Own weekly reporting and work with product and operations teams.
+P0173,Juniperwell Pharma,Junior Business Intelligence Analyst,Chennai,IN,hybrid,,2026-10-21,,careers_page,Looker;Tableau,Own weekly reporting and work with product and operations teams.
+P0174,Orchidbay Bank,Senior Marketing Insights Analyst,London,GB,hybrid,,2026-10-24,,job_board,SQL;Tableau;Looker;Python,You will build dashboards and answer questions from the business with data. You must have the right to work in this country.
+P0175,Zinnialoop Retail,Business Intelligence Analyst,Remote,SG,remote,APAC,2026-10-25,,careers_page,R;dbt;SQL;Excel,Turn messy data into clear recommendations for leadership. Contact us on WhatsApp only.
+P0176,Juniperwell Pharma,Business Intelligence Analyst,Remote,GB,remote,GB;IE,2026-09-30,,careers_page,Python;Tableau,You will build dashboards and answer questions from the business with data.
+P0177,Ottervale Telecom,Data Scientist,Remote,IN,remote,IN,2026-10-22,,job_board,Power BI;SQL,You will build dashboards and answer questions from the business with data.
+P0178,Thistlecart,Data Analyst,Hyderabad,IN,onsite,,2026-10-23,2026-10-28,careers_page,Excel;Power BI;Python,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0179,Pebblequay Travel,Senior BI Analyst,Remote,US,remote,,2026-10-25,,job_board,SQL;Tableau;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0180,Larkspin Games,BI Analyst,Remote,US,remote,US,2026-10-15,2026-11-08,job_board,SQL;dbt,Own weekly reporting and work with product and operations teams.
+P0181,Puddlestone Grocers,Insights Analyst,Bengaluru,IN,hybrid,,2026-10-29,2026-10-30,careers_page,Looker;Tableau,Own weekly reporting and work with product and operations teams.
+P0182,Quillfern Logistics,Reporting Analyst,Chennai,IN,onsite,,2026-10-31,,careers_page,SQL;Tableau;Excel,Own weekly reporting and work with product and operations teams. A refundable Registration Fee applies before onboarding.
+P0183,Velvetfinch Studios,Growth Analyst,Manchester,GB,hybrid,,2026-08-31,2026-11-21,careers_page,SQL;Python;Tableau;dbt,Turn messy data into clear recommendations for leadership.
+P0184,Pebblequay Travel,Data Analyst,Remote,SG,remote,APAC,2026-10-15,,job_board,SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0185,Silkhaven Hotels,Operations Analyst,Bengaluru,IN,onsite,,2026-10-26,,job_board,SQL;Power BI;Tableau,You will build dashboards and answer questions from the business with data.
+P0186,Juniperwell Pharma,Business Analyst,Austin,US,onsite,,2026-10-16,,careers_page,Power BI;Python;dbt,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0187,Kettlebrook Energy,Associate Data Scientist,Remote,IN,remote,IN,2026-10-08,,job_board,Python;SQL;Tableau,You will build dashboards and answer questions from the business with data. Contact us on WhatsApp only.
+P0188,Thistlecart,Business Analyst,Remote,IN,remote,,2026-10-26,,careers_page,R;Excel;SQL,Own weekly reporting and work with product and operations teams.
+P0189,Moonwick Fashion,Senior Marketing Insights Analyst,Bengaluru,IN,onsite,,2026-10-03,2026-11-23,careers_page,Excel;Python;Power BI;Looker,You will build dashboards and answer questions from the business with data.
+P0190,Zinnialoop Retail,Credit Risk Analyst,Remote,IN,remote,IN,2026-10-13,,job_board,Python;Excel;R;SQL,Turn messy data into clear recommendations for leadership.
+P0191,Velvetfinch Studios,Senior Data Analyst,Singapore,SG,onsite,,2026-11-01,2026-11-20,careers_page,Excel;Tableau;Power BI;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0192,Lanternway Courses,BI Analyst,London,GB,onsite,,2026-10-28,,job_board,Excel;Python;Power BI;Tableau,Turn messy data into clear recommendations for leadership.
+P0193,Juniperwell Pharma,Senior Data Analyst,London,GB,hybrid,,2026-10-10,2026-11-22,careers_page,Power BI;SQL;Tableau;Python,"Analyse funnels, cohorts and campaigns, and present what you find. We are unable to sponsor visas."
+P0194,Moonwick Fashion,Financial Analyst,Mumbai,IN,hybrid,,2026-10-21,,job_board,Tableau;Python;SQL;Looker,Own weekly reporting and work with product and operations teams.
+P0195,Yarrowpeak Telecom,Senior Reporting Analyst,Chennai,IN,hybrid,,2026-10-10,2026-11-10,job_board,Tableau;SQL;Python;Excel,Turn messy data into clear recommendations for leadership.
+P0196,Yarrowpeak Telecom,Operations Analyst,Remote,SG,remote,APAC,2026-09-03,,job_board,Power BI;Excel;Python;SQL,You will build dashboards and answer questions from the business with data.
+P0197,Ambersprout Fintech,Credit Risk Analyst,Bengaluru,IN,hybrid,,2026-09-12,,job_board,Excel;SQL;dbt;Python,You will build dashboards and answer questions from the business with data.
+P0198,Tiffinbell,Senior Business Analyst,Remote,IN,remote,IN,2026-10-21,2026-10-30,job_board,R;Excel,Own weekly reporting and work with product and operations teams.
+P0199,Tiffinbell,Business Intelligence Analyst,Gurugram,IN,hybrid,,2026-10-13,,job_board,Excel;R;dbt;Power BI,You will build dashboards and answer questions from the business with data.
+P0200,Wrenhollow Analytics,Insights Analyst,Singapore,SG,onsite,,2026-11-01,2026-11-25,job_board,Tableau;R;Python;SQL,Own weekly reporting and work with product and operations teams.
+P0201,Moonwick Fashion,Financial Analyst,Berlin,DE,onsite,,2026-10-31,,job_board,Excel;Tableau;SQL,You will build dashboards and answer questions from the business with data.
+P0202,Brasswick Retail,Growth Analyst,Manchester,GB,hybrid,,2026-11-01,,job_board,Power BI;Excel;SQL;dbt,Own weekly reporting and work with product and operations teams. You must have the right to work in this country.
+P0203,Juniperwell Pharma,Data Analyst,Singapore,SG,onsite,,2026-10-06,2026-10-29,careers_page,SQL;Python;Tableau;Excel,Turn messy data into clear recommendations for leadership. Visa sponsorship available for the right candidate. A small security deposit is collected at joining.
+P0204,Quillfern Logistics,Junior Data Analyst,Berlin,DE,hybrid,,2026-09-07,,careers_page,Python;Power BI;Tableau,Own weekly reporting and work with product and operations teams. Visa sponsorship available for the right candidate.
+P0205,Moonwick Fashion,Business Analyst,Gurugram,IN,hybrid,,2026-10-25,,careers_page,Python;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0206,Larkspin Games,Data Analyst,Mumbai,IN,onsite,,2026-10-14,,job_board,Tableau;Python;Looker;SQL,Turn messy data into clear recommendations for leadership.
+P0207,Kettlebrook Energy,Senior Data Engineer,Bengaluru,IN,hybrid,,2026-10-30,,careers_page,Looker;Power BI;SQL,You will build dashboards and answer questions from the business with data.
+P0208,Yarrowpeak Telecom,Operations Analyst,Bengaluru,IN,onsite,,2026-10-24,,job_board,Tableau;Looker;SQL;Python,Own weekly reporting and work with product and operations teams.
+P0209,Zinnialoop Retail,Data Analyst,Mumbai,IN,hybrid,,2026-10-07,2026-11-10,careers_page,Power BI;Python;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0210,Saffronlane Foods,Senior Business Analyst,Manchester,GB,hybrid,,2026-09-06,2026-11-08,job_board,Tableau;Looker;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0211,Thistlecart,Business Intelligence Analyst,New York,US,onsite,,2026-10-19,,careers_page,Tableau;Looker;Power BI;dbt,You will build dashboards and answer questions from the business with data. We sponsor visas for this role.
+P0212,Pottlemere,Business Analyst,Pune,IN,onsite,,2026-10-21,2026-11-05,careers_page,Excel;Power BI;Python;Looker,You will build dashboards and answer questions from the business with data.
+P0213,Thistlecart,Business Analyst,New York,US,hybrid,,2026-10-07,2026-11-06,careers_page,Power BI;Excel,Turn messy data into clear recommendations for leadership.
+P0214,Tiffinbell,Reporting Analyst,Hyderabad,IN,onsite,,2026-10-06,,job_board,Python;Tableau;Power BI;SQL,You will build dashboards and answer questions from the business with data.
+P0215,Bluequarry Mining,Senior Financial Analyst,Mumbai,IN,hybrid,,2026-10-05,2026-11-20,careers_page,Power BI;Excel;Python;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0216,Wrenhollow Analytics,Data Scientist,Remote,GB,remote,GB;IE,2026-10-31,,job_board,Looker;Python;SQL;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0217,Pottlemere,Business Intelligence Analyst,Gurugram,IN,onsite,,2026-10-17,2026-11-15,job_board,SQL;Excel;Power BI;Looker,Own weekly reporting and work with product and operations teams.
+P0218,Puddlestone Grocers,Senior Data Analyst,Mumbai,IN,hybrid,,2026-10-10,,careers_page,Python;Power BI,Turn messy data into clear recommendations for leadership.
+P0219,Puddlestone Grocers,Business Analyst,Remote,IN,remote,IN,2026-10-04,2026-11-08,job_board,Python;SQL,Turn messy data into clear recommendations for leadership.
+P0220,Zinnialoop Retail,Business Intelligence Analyst,Remote,US,remote,,2026-10-28,,careers_page,SQL;Tableau;dbt,Turn messy data into clear recommendations for leadership.
+P0221,Silkhaven Hotels,Junior Insights Analyst,Singapore,SG,onsite,,2026-10-10,2026-11-09,job_board,Python;SQL;Tableau;Excel,Turn messy data into clear recommendations for leadership.
+P0222,Pebblequay Travel,Senior Business Analyst,Berlin,DE,onsite,,2026-11-01,,careers_page,Excel;Tableau;SQL;dbt,Own weekly reporting and work with product and operations teams. We sponsor visas for this role.
+P0223,Saffronlane Foods,Financial Analyst,Gurugram,IN,hybrid,,2026-10-27,2026-11-15,careers_page,Excel;SQL;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0224,Dewmark Insurance,Senior Data Analyst,Remote,US,remote,US,2026-10-05,,careers_page,SQL;Python,You will build dashboards and answer questions from the business with data.
+P0225,Larkspin Games,Data Analyst,Singapore,SG,onsite,,2026-10-24,,job_board,Power BI;Excel;SQL,Own weekly reporting and work with product and operations teams. You must have the right to work in this country. Contact us on WhatsApp only.
+P0226,Brasswick Retail,Financial Analyst,New York,US,hybrid,,2026-09-13,,job_board,Python;SQL;Excel;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find. You must have the right to work in this country."
+P0227,Indigoflint Software,Business Analyst,Gurugram,IN,hybrid,,2026-09-12,,job_board,Python;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0228,Ottervale Telecom,Growth Analyst,Hyderabad,IN,hybrid,,2026-10-17,,careers_page,Power BI;Tableau,Turn messy data into clear recommendations for leadership.
+P0229,Bluequarry Mining,"Junior Program Manager, Analytics",Hyderabad,IN,hybrid,,2026-10-28,2026-11-24,job_board,Python;SQL;Excel;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0230,Yarrowpeak Telecom,Financial Analyst,Mumbai,IN,onsite,,2026-09-19,,careers_page,SQL;Python;Tableau,Own weekly reporting and work with product and operations teams.
+P0231,Nimbletree Learning,Junior Business Analyst,Bengaluru,IN,hybrid,,2026-11-01,2026-11-12,careers_page,R;SQL;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0232,Dewmark Insurance,Senior Operations Analyst,Mumbai,IN,hybrid,,2026-10-11,2026-10-28,job_board,Python;Power BI,You will build dashboards and answer questions from the business with data.
+P0233,Saffronlane Foods,Insights Analyst,Remote,GB,remote,,2026-10-13,2026-11-12,job_board,dbt;SQL;Excel;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0234,Umbergate Freight,Data Engineer,Pune,IN,hybrid,,2026-10-29,,careers_page,R;Python;Tableau;Looker,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0235,Pottlemere,Senior Reporting Analyst,Remote,US,remote,US,2026-11-01,,careers_page,SQL;Python;Excel;Tableau,You will build dashboards and answer questions from the business with data.
+P0236,Yarrowpeak Telecom,Junior Data Analyst,Singapore,SG,hybrid,,2026-09-30,,job_board,R;Python;Power BI;SQL,You will build dashboards and answer questions from the business with data. Visa sponsorship available for the right candidate.
+P0237,Saffronlane Foods,Senior Business Analyst,Manchester,GB,hybrid,,2026-09-07,2026-11-08,careers_page,Tableau;Looker;Power BI,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0238,Pottlemere,Senior BI Analyst,Remote,US,remote,WORLDWIDE,2026-11-01,,job_board,SQL;Power BI,Own weekly reporting and work with product and operations teams. Guaranteed job after you pay for your training.
+P0239,Wrenhollow Analytics,Data Analyst,Mumbai,IN,hybrid,,2026-11-01,,careers_page,Tableau;SQL;Power BI,Turn messy data into clear recommendations for leadership.
+P0240,Ottervale Telecom,Growth Analyst,Hyderabad,IN,hybrid,,2026-10-18,,job_board,Power BI;Tableau,Turn messy data into clear recommendations for leadership.
+P0241,Silkhaven Hotels,Junior Insights Analyst,Singapore,SG,onsite,,2026-10-16,2026-11-09,careers_page,Python;SQL;Tableau;Excel,Turn messy data into clear recommendations for leadership.
+P0242,Velvetfinch Studios,Senior Data Analyst,Singapore,SG,onsite,,2026-11-01,2026-11-20,job_board,Excel;Tableau;Power BI;SQL,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0243,Silkhaven Hotels,Product Analyst,Mumbai,IN,hybrid,,2026-10-21,,job_board,Python;R,Turn messy data into clear recommendations for leadership.
+P0244,Bluequarry Mining,Financial Analyst,Remote,GB,remote,GB;IE,2026-11-01,,careers_page,Python;Excel,"Analyse funnels, cohorts and campaigns, and present what you find."
+P0245,Larkspin Games,Junior Growth Analyst,Bengaluru,IN,onsite,,2026-11-01,,job_board,Power BI;SQL;Excel,Own weekly reporting and work with product and operations teams.
+P0246,Ambersprout Fintech,Junior Operations Analyst,Bengaluru,IN,hybrid,,2026-11-01,,job_board,SQL;Tableau;Excel;Python,You will build dashboards and answer questions from the business with data.

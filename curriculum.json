@@ -1859,7 +1859,7 @@
      "question": "Where are the analyst roles you can actually get, and which 30 companies go on your list?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 3,
      "skills": [
       "career",
@@ -1874,7 +1874,7 @@
      "question": "Why does a search for data analyst miss most of the analyst roles at a company like Amazon?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1888,7 +1888,7 @@
      "question": "Which employers on your list have sponsored before, and which postings rule you out in their own words?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1902,7 +1902,7 @@
      "question": "Of the remote roles you found, which ones can actually hire someone where you live?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1916,7 +1916,7 @@
      "question": "With 40 postings in front of you and 10 hours this week, which ones are worth an application?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career"
@@ -1930,7 +1930,7 @@
      "question": "Out of 60 applications, where is your search leaking, and which channel deserves more time?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "career",
@@ -1945,7 +1945,7 @@
      "question": "What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better?",
      "level": "land-the-job",
      "kind": "guide",
-     "status": "planned",
+     "status": "live",
      "hours": 1,
      "skills": [
       "career"
@@ -1959,7 +1959,7 @@
      "question": "Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify?",
      "level": "land-the-job",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 6,
      "skills": [
       "career"

@@ -1,0 +1,49 @@
+{
+  "provenance": {
+    "source": "Real Analyst Jobs (realanalystjobs.com): live analyst roles, checked daily against employers' own careers pages",
+    "tool": "Real Analyst Jobs MCP server, tools analyst_market_stats, company_analyst_hiring and search_analyst_jobs",
+    "retrieved": "2026-10-31",
+    "dataAsOf": "2026-10-31",
+    "note": "Real aggregates and job titles only, copied from the tool responses. No personal data. The role families are the provider's own classification."
+  },
+  "market_role_families": {
+    "live_roles": 8952,
+    "counts": {
+      "Business Analyst": 1818,
+      "Data Analyst": 1299,
+      "Financial Analyst": 686,
+      "Operations Analyst": 425,
+      "Business Intelligence": 264,
+      "Product Analyst": 206,
+      "Marketing Analyst": 85,
+      "Other analyst titles": 4169
+    }
+  },
+  "amazon": {
+    "open_roles": 570,
+    "newest_posted": "2026-10-30",
+    "top_titles": [
+      {"title": "Senior Financial Analyst, NACF", "count": 6},
+      {"title": "Business Analyst, Global Solutions & Risk Compliance (GSRC)", "count": 5},
+      {"title": "Operations Analyst, RI Operations", "count": 4},
+      {"title": "Program Manager I, Last Mile Analytics & Quality (LMAQ)", "count": 4},
+      {"title": "Senior Financial Analyst, Amazon Leo", "count": 4},
+      {"title": "Business Analyst, NCC- Hercules", "count": 3},
+      {"title": "Business Analyst, ROC", "count": 3},
+      {"title": "Business Intelligence Engineer II", "count": 3}
+    ],
+    "newest_titles": [
+      "Network planning Analyst",
+      "Financial Analyst, GFS FP&A",
+      "Business Analyst II, GSRC Analytics",
+      "Senior Financial Analyst, AWS Regions Finance",
+      "Procurement Category Manager",
+      "Senior Business Intelligence Engineer",
+      "Supply Chain Manager II",
+      "Supply Chain Manager II",
+      "Senior Financial Analyst, Inbound Finance Insights, Analytics & Automation",
+      "Tririga Solution Architect"
+    ]
+  },
+  "search_business_intelligence_engineer_total_matches": 88
+}

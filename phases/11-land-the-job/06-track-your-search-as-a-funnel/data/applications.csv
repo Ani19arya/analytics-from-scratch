@@ -1,0 +1,61 @@
+app_id,company,channel,applied_on,reply_on,interview_on,offer_on,rejected_on,hours_spent
+A01,Learnhaven,job_board,2026-08-24,,,,,0.5
+A02,Wrenloom,job_board,2026-08-24,2026-09-10,2026-09-18,2026-09-26,,0.5
+A03,Brightloom,job_board,2026-08-25,,,,,0.5
+A04,Brackenbee,job_board,2026-08-26,2026-09-08,,,2026-09-08,0.5
+A05,Fernhill Software,referral,2026-08-27,2026-09-06,2026-09-09,,2026-09-16,3.0
+A06,Northwind Desk,careers_page,2026-08-28,,,,,1.5
+A07,Fernhill Software,careers_page,2026-08-29,2026-09-15,2026-09-21,,2026-09-25,1.5
+A08,Larkspur Goods,referral,2026-08-30,2026-09-03,,,2026-09-03,2.0
+A09,Fernhill Software,job_board,2026-08-31,,,,,1.0
+A10,Kestrel Home,job_board,2026-08-31,2026-09-02,,,2026-09-02,0.5
+A11,Learnhaven,job_board,2026-08-31,,,,,0.5
+A12,Ledgerlark,job_board,2026-08-31,,,,,0.5
+A13,Tidewater Outdoor,recruiter,2026-08-31,2026-09-24,2026-09-28,,2026-10-05,0.5
+A14,Pantrywren,recruiter,2026-09-02,2026-09-26,,,2026-09-26,0.5
+A15,Fernhill Software,careers_page,2026-09-03,,,,,2.0
+A16,Copperwren Grocery,job_board,2026-09-03,2026-09-13,,,2026-09-13,0.5
+A17,Brightloom,recruiter,2026-09-06,2026-09-12,2026-09-17,,,0.5
+A18,Harbor Mealkits,job_board,2026-09-07,,,,,0.5
+A19,Bramblequay Bikes,job_board,2026-09-09,,,,,0.5
+A20,Harbor Mealkits,job_board,2026-09-10,,,,,0.5
+A21,Brightloom,careers_page,2026-09-11,2026-09-13,2026-09-16,,2026-09-20,2.0
+A22,Tiffinbell,job_board,2026-09-14,,,,,1.0
+A23,Kettlemoor,job_board,2026-09-15,,,,,0.5
+A24,Tiffinbell,job_board,2026-09-16,2026-10-10,,,2026-10-10,1.0
+A25,Larkspur Goods,recruiter,2026-09-17,,,,,1.0
+A26,Harbor Mealkits,job_board,2026-09-18,2026-09-20,,,2026-09-20,1.0
+A27,Bramblequay Bikes,recruiter,2026-09-18,2026-10-01,2026-10-04,,,0.5
+A28,Fitloop,referral,2026-09-18,2026-09-20,2026-09-25,,2026-10-03,2.0
+A29,Tiffinbell,job_board,2026-09-20,,,,,0.5
+A30,Learnhaven,job_board,2026-09-25,2026-09-28,,,2026-09-28,0.5
+A31,Larkspur Coffee,referral,2026-09-27,2026-10-10,2026-10-13,2026-10-27,,2.0
+A32,Tiffinbell,careers_page,2026-09-30,,,,,1.0
+A33,Ledgerlark,recruiter,2026-10-02,2026-10-10,,,2026-10-10,1.0
+A34,Brackenbee,job_board,2026-10-03,,,,,0.5
+A35,Wrenloom,job_board,2026-10-03,2026-10-06,,,2026-10-06,0.5
+A36,Northwind Desk,job_board,2026-10-08,,,,,1.0
+A37,Copperwren Grocery,recruiter,2026-10-10,,,,,1.0
+A38,Wrenloom,careers_page,2026-10-11,2026-10-28,,,2026-10-28,2.0
+A39,Ledgerlark,job_board,2026-10-11,,,,,0.5
+A40,Parcelwick,job_board,2026-10-11,2026-10-24,,,2026-10-24,0.5
+A41,Larkspur Goods,referral,2026-10-11,2026-10-12,,,2026-10-12,2.5
+A42,Ledgerlark,careers_page,2026-10-14,,,,,1.5
+A43,Tidewater Outdoor,careers_page,2026-10-16,,,,,2.0
+A44,Fitloop,careers_page,2026-10-18,,,,,1.5
+A45,Tiffinbell,referral,2026-10-18,,,,,3.0
+A46,Fitloop,recruiter,2026-10-19,2026-10-23,,,2026-10-23,1.0
+A47,Parcelwick,careers_page,2026-10-20,,,,,1.0
+A48,Kestrel Home,referral,2026-10-20,2026-10-26,,,2026-10-26,2.0
+A49,Brackenbee,careers_page,2026-10-21,,,,,1.5
+A50,Larkspur Coffee,job_board,2026-10-21,,,,,0.5
+A51,Parcelwick,careers_page,2026-10-22,,,,,1.0
+A52,Wrenloom,job_board,2026-10-22,,,,,0.5
+A53,Learnhaven,careers_page,2026-10-23,,,,,1.5
+A54,Ledgerlark,recruiter,2026-10-23,,,,,1.0
+A55,Copperwren Grocery,job_board,2026-10-25,,,,,1.0
+A56,Brackenbee,careers_page,2026-10-26,,,,,1.5
+A57,Larkspur Goods,careers_page,2026-10-27,,,,,1.0
+A58,Pantrywren,careers_page,2026-10-27,,,,,1.5
+A59,Larkspur Goods,careers_page,2026-10-29,,,,,1.5
+A60,Pantrywren,careers_page,2026-10-29,,,,,2.0

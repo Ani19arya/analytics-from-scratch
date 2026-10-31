@@ -1,0 +1,451 @@
+posting_id,core_title,family,relevant
+T0001,risk analyst,other_analyst,1
+T0002,business intelligence engineer,bi,1
+T0003,insights analyst,data,1
+T0004,business analyst,business,1
+T0005,risk analyst,other_analyst,1
+T0006,business intelligence engineer,bi,1
+T0007,operations analyst,operations,1
+T0008,financial planning and analysis analyst,finance,1
+T0009,security operations analyst,not_analyst,0
+T0010,business systems analyst,business,1
+T0011,data entry specialist,not_analyst,0
+T0012,marketing analyst,marketing,1
+T0013,risk analyst,other_analyst,1
+T0014,data analyst,data,1
+T0015,business analyst,business,1
+T0016,financial analyst,finance,1
+T0017,business systems analyst,business,1
+T0018,supply chain analyst,operations,1
+T0019,network planning analyst,operations,1
+T0020,product analyst,product,1
+T0021,business intelligence analyst,bi,1
+T0022,business analyst,business,1
+T0023,financial analyst,finance,1
+T0024,business analyst,business,1
+T0025,reporting analyst,bi,1
+T0026,financial planning and analysis analyst,finance,1
+T0027,pricing analyst,other_analyst,1
+T0028,risk analyst,other_analyst,1
+T0029,finance analyst,finance,1
+T0030,business systems analyst,business,1
+T0031,financial planning and analysis analyst,finance,1
+T0032,security analyst,not_analyst,0
+T0033,business intelligence engineer,bi,1
+T0034,financial analyst,finance,1
+T0035,business analyst,business,1
+T0036,security operations analyst,not_analyst,0
+T0037,financial analyst,finance,1
+T0038,supply chain manager,not_analyst,0
+T0039,business systems analyst,business,1
+T0040,business analyst,business,1
+T0041,financial planning and analysis analyst,finance,1
+T0042,supply chain analyst,operations,1
+T0043,business intelligence engineer,bi,1
+T0044,pricing analyst,other_analyst,1
+T0045,reporting analyst,bi,1
+T0046,product analyst,product,1
+T0047,demand planning analyst,operations,1
+T0048,business systems analyst,business,1
+T0049,financial analyst,finance,1
+T0050,security analyst,not_analyst,0
+T0051,business analyst,business,1
+T0052,business analyst,business,1
+T0053,account executive,not_analyst,0
+T0054,product analyst,product,1
+T0055,data entry specialist,not_analyst,0
+T0056,data analyst,data,1
+T0057,security operations analyst,not_analyst,0
+T0058,risk analyst,other_analyst,1
+T0059,risk analyst,other_analyst,1
+T0060,finance analyst,finance,1
+T0061,data analyst,data,1
+T0062,product analyst,product,1
+T0063,data analyst,data,1
+T0064,data entry specialist,not_analyst,0
+T0065,supply chain analyst,operations,1
+T0066,financial analyst,finance,1
+T0067,demand planning analyst,operations,1
+T0068,risk analyst,other_analyst,1
+T0069,operations analyst,operations,1
+T0070,category analyst,other_analyst,1
+T0071,data center technician,not_analyst,0
+T0072,business systems analyst,business,1
+T0073,supply chain manager,not_analyst,0
+T0074,data analyst,data,1
+T0075,business analyst,business,1
+T0076,operations analyst,operations,1
+T0077,finance analyst,finance,1
+T0078,risk analyst,other_analyst,1
+T0079,supply chain manager,not_analyst,0
+T0080,network planning analyst,operations,1
+T0081,supply chain manager,not_analyst,0
+T0082,marketing analyst,marketing,1
+T0083,account executive,not_analyst,0
+T0084,quantitative analyst,other_analyst,1
+T0085,supply chain analyst,operations,1
+T0086,pricing analyst,other_analyst,1
+T0087,marketing analyst,marketing,1
+T0088,finance analyst,finance,1
+T0089,business analyst,business,1
+T0090,business analyst,business,1
+T0091,operations analyst,operations,1
+T0092,financial analyst,finance,1
+T0093,operations analyst,operations,1
+T0094,risk analyst,other_analyst,1
+T0095,financial analyst,finance,1
+T0096,business intelligence engineer,bi,1
+T0097,pricing analyst,other_analyst,1
+T0098,financial analyst,finance,1
+T0099,data entry specialist,not_analyst,0
+T0100,insights analyst,data,1
+T0101,reporting analyst,bi,1
+T0102,financial planning and analysis analyst,finance,1
+T0103,pricing analyst,other_analyst,1
+T0104,business analyst,business,1
+T0105,demand planning analyst,operations,1
+T0106,insights analyst,data,1
+T0107,marketing analyst,marketing,1
+T0108,reporting analyst,bi,1
+T0109,business systems analyst,business,1
+T0110,financial analyst,finance,1
+T0111,network planning analyst,operations,1
+T0112,financial analyst,finance,1
+T0113,supply chain analyst,operations,1
+T0114,account executive,not_analyst,0
+T0115,business analyst,business,1
+T0116,data engineer,not_analyst,0
+T0117,financial planning and analysis analyst,finance,1
+T0118,financial planning and analysis analyst,finance,1
+T0119,supply chain manager,not_analyst,0
+T0120,financial planning and analysis analyst,finance,1
+T0121,data engineer,not_analyst,0
+T0122,data engineer,not_analyst,0
+T0123,business analyst,business,1
+T0124,operations analyst,operations,1
+T0125,marketing analyst,marketing,1
+T0126,operations analyst,operations,1
+T0127,supply chain manager,not_analyst,0
+T0128,category analyst,other_analyst,1
+T0129,business systems analyst,business,1
+T0130,business intelligence engineer,bi,1
+T0131,data center technician,not_analyst,0
+T0132,program manager,not_analyst,0
+T0133,finance analyst,finance,1
+T0134,operations analyst,operations,1
+T0135,business intelligence analyst,bi,1
+T0136,reporting analyst,bi,1
+T0137,finance analyst,finance,1
+T0138,account executive,not_analyst,0
+T0139,financial planning and analysis analyst,finance,1
+T0140,business systems analyst,business,1
+T0141,operations analyst,operations,1
+T0142,financial analyst,finance,1
+T0143,data center technician,not_analyst,0
+T0144,data center technician,not_analyst,0
+T0145,security operations analyst,not_analyst,0
+T0146,security analyst,not_analyst,0
+T0147,business analyst,business,1
+T0148,data analyst,data,1
+T0149,network planning analyst,operations,1
+T0150,network planning analyst,operations,1
+T0151,quantitative analyst,other_analyst,1
+T0152,financial planning and analysis analyst,finance,1
+T0153,marketing analyst,marketing,1
+T0154,risk analyst,other_analyst,1
+T0155,business intelligence analyst,bi,1
+T0156,business analyst,business,1
+T0157,financial planning and analysis analyst,finance,1
+T0158,program manager,not_analyst,0
+T0159,financial analyst,finance,1
+T0160,account executive,not_analyst,0
+T0161,insights analyst,data,1
+T0162,business analyst,business,1
+T0163,finance analyst,finance,1
+T0164,business analyst,business,1
+T0165,product analyst,product,1
+T0166,business systems analyst,business,1
+T0167,reporting analyst,bi,1
+T0168,data entry specialist,not_analyst,0
+T0169,supply chain manager,not_analyst,0
+T0170,security analyst,not_analyst,0
+T0171,program manager,not_analyst,0
+T0172,business systems analyst,business,1
+T0173,business intelligence analyst,bi,1
+T0174,program manager,not_analyst,0
+T0175,supply chain manager,not_analyst,0
+T0176,operations analyst,operations,1
+T0177,operations analyst,operations,1
+T0178,finance analyst,finance,1
+T0179,security analyst,not_analyst,0
+T0180,data entry specialist,not_analyst,0
+T0181,product analyst,product,1
+T0182,financial planning and analysis analyst,finance,1
+T0183,operations analyst,operations,1
+T0184,operations analyst,operations,1
+T0185,data engineer,not_analyst,0
+T0186,data analyst,data,1
+T0187,financial analyst,finance,1
+T0188,data center technician,not_analyst,0
+T0189,business analyst,business,1
+T0190,business intelligence analyst,bi,1
+T0191,business intelligence engineer,bi,1
+T0192,data center technician,not_analyst,0
+T0193,operations analyst,operations,1
+T0194,product analyst,product,1
+T0195,data center technician,not_analyst,0
+T0196,supply chain manager,not_analyst,0
+T0197,insights analyst,data,1
+T0198,financial planning and analysis analyst,finance,1
+T0199,demand planning analyst,operations,1
+T0200,business intelligence engineer,bi,1
+T0201,business intelligence engineer,bi,1
+T0202,operations analyst,operations,1
+T0203,business intelligence engineer,bi,1
+T0204,marketing analyst,marketing,1
+T0205,supply chain manager,not_analyst,0
+T0206,operations analyst,operations,1
+T0207,account executive,not_analyst,0
+T0208,financial analyst,finance,1
+T0209,insights analyst,data,1
+T0210,business systems analyst,business,1
+T0211,insights analyst,data,1
+T0212,financial planning and analysis analyst,finance,1
+T0213,financial analyst,finance,1
+T0214,business intelligence engineer,bi,1
+T0215,data engineer,not_analyst,0
+T0216,business analyst,business,1
+T0217,account executive,not_analyst,0
+T0218,financial analyst,finance,1
+T0219,data analyst,data,1
+T0220,financial planning and analysis analyst,finance,1
+T0221,account executive,not_analyst,0
+T0222,supply chain analyst,operations,1
+T0223,business systems analyst,business,1
+T0224,financial planning and analysis analyst,finance,1
+T0225,business analyst,business,1
+T0226,data entry specialist,not_analyst,0
+T0227,demand planning analyst,operations,1
+T0228,financial analyst,finance,1
+T0229,product analyst,product,1
+T0230,category analyst,other_analyst,1
+T0231,financial planning and analysis analyst,finance,1
+T0232,financial planning and analysis analyst,finance,1
+T0233,data analyst,data,1
+T0234,supply chain manager,not_analyst,0
+T0235,risk analyst,other_analyst,1
+T0236,marketing analyst,marketing,1
+T0237,finance analyst,finance,1
+T0238,supply chain analyst,operations,1
+T0239,finance analyst,finance,1
+T0240,data analyst,data,1
+T0241,data analyst,data,1
+T0242,business systems analyst,business,1
+T0243,data engineer,not_analyst,0
+T0244,supply chain analyst,operations,1
+T0245,business analyst,business,1
+T0246,insights analyst,data,1
+T0247,business analyst,business,1
+T0248,product analyst,product,1
+T0249,data center technician,not_analyst,0
+T0250,business intelligence engineer,bi,1
+T0251,business systems analyst,business,1
+T0252,finance analyst,finance,1
+T0253,security analyst,not_analyst,0
+T0254,operations analyst,operations,1
+T0255,financial planning and analysis analyst,finance,1
+T0256,security operations analyst,not_analyst,0
+T0257,operations analyst,operations,1
+T0258,financial analyst,finance,1
+T0259,finance analyst,finance,1
+T0260,network planning analyst,operations,1
+T0261,financial analyst,finance,1
+T0262,financial planning and analysis analyst,finance,1
+T0263,business analyst,business,1
+T0264,security analyst,not_analyst,0
+T0265,data engineer,not_analyst,0
+T0266,insights analyst,data,1
+T0267,finance analyst,finance,1
+T0268,data engineer,not_analyst,0
+T0269,risk analyst,other_analyst,1
+T0270,marketing analyst,marketing,1
+T0271,risk analyst,other_analyst,1
+T0272,network planning analyst,operations,1
+T0273,marketing analyst,marketing,1
+T0274,finance analyst,finance,1
+T0275,marketing analyst,marketing,1
+T0276,network planning analyst,operations,1
+T0277,product analyst,product,1
+T0278,data analyst,data,1
+T0279,account executive,not_analyst,0
+T0280,reporting analyst,bi,1
+T0281,program manager,not_analyst,0
+T0282,data entry specialist,not_analyst,0
+T0283,security operations analyst,not_analyst,0
+T0284,financial analyst,finance,1
+T0285,business systems analyst,business,1
+T0286,financial planning and analysis analyst,finance,1
+T0287,finance analyst,finance,1
+T0288,risk analyst,other_analyst,1
+T0289,operations analyst,operations,1
+T0290,data analyst,data,1
+T0291,supply chain analyst,operations,1
+T0292,finance analyst,finance,1
+T0293,account executive,not_analyst,0
+T0294,business analyst,business,1
+T0295,account executive,not_analyst,0
+T0296,finance analyst,finance,1
+T0297,pricing analyst,other_analyst,1
+T0298,finance analyst,finance,1
+T0299,business systems analyst,business,1
+T0300,financial analyst,finance,1
+T0301,data engineer,not_analyst,0
+T0302,business systems analyst,business,1
+T0303,supply chain manager,not_analyst,0
+T0304,security analyst,not_analyst,0
+T0305,financial planning and analysis analyst,finance,1
+T0306,program manager,not_analyst,0
+T0307,business analyst,business,1
+T0308,business intelligence engineer,bi,1
+T0309,finance analyst,finance,1
+T0310,security operations analyst,not_analyst,0
+T0311,product analyst,product,1
+T0312,data analyst,data,1
+T0313,finance analyst,finance,1
+T0314,business analyst,business,1
+T0315,security operations analyst,not_analyst,0
+T0316,finance analyst,finance,1
+T0317,quantitative analyst,other_analyst,1
+T0318,supply chain analyst,operations,1
+T0319,operations analyst,operations,1
+T0320,business intelligence engineer,bi,1
+T0321,supply chain manager,not_analyst,0
+T0322,operations analyst,operations,1
+T0323,finance analyst,finance,1
+T0324,insights analyst,data,1
+T0325,financial analyst,finance,1
+T0326,data analyst,data,1
+T0327,data engineer,not_analyst,0
+T0328,risk analyst,other_analyst,1
+T0329,financial analyst,finance,1
+T0330,marketing analyst,marketing,1
+T0331,product analyst,product,1
+T0332,business analyst,business,1
+T0333,financial planning and analysis analyst,finance,1
+T0334,financial analyst,finance,1
+T0335,data center technician,not_analyst,0
+T0336,operations analyst,operations,1
+T0337,reporting analyst,bi,1
+T0338,financial planning and analysis analyst,finance,1
+T0339,operations analyst,operations,1
+T0340,financial analyst,finance,1
+T0341,business systems analyst,business,1
+T0342,quantitative analyst,other_analyst,1
+T0343,business intelligence engineer,bi,1
+T0344,data engineer,not_analyst,0
+T0345,data entry specialist,not_analyst,0
+T0346,business systems analyst,business,1
+T0347,financial analyst,finance,1
+T0348,data analyst,data,1
+T0349,product analyst,product,1
+T0350,business systems analyst,business,1
+T0351,business analyst,business,1
+T0352,account executive,not_analyst,0
+T0353,network planning analyst,operations,1
+T0354,business analyst,business,1
+T0355,supply chain manager,not_analyst,0
+T0356,data engineer,not_analyst,0
+T0357,financial analyst,finance,1
+T0358,financial planning and analysis analyst,finance,1
+T0359,financial analyst,finance,1
+T0360,business intelligence engineer,bi,1
+T0361,business intelligence engineer,bi,1
+T0362,financial analyst,finance,1
+T0363,operations analyst,operations,1
+T0364,network planning analyst,operations,1
+T0365,finance analyst,finance,1
+T0366,business systems analyst,business,1
+T0367,business analyst,business,1
+T0368,program manager,not_analyst,0
+T0369,insights analyst,data,1
+T0370,business systems analyst,business,1
+T0371,business analyst,business,1
+T0372,quantitative analyst,other_analyst,1
+T0373,financial analyst,finance,1
+T0374,security analyst,not_analyst,0
+T0375,business intelligence engineer,bi,1
+T0376,data entry specialist,not_analyst,0
+T0377,data engineer,not_analyst,0
+T0378,supply chain manager,not_analyst,0
+T0379,financial planning and analysis analyst,finance,1
+T0380,finance analyst,finance,1
+T0381,demand planning analyst,operations,1
+T0382,security operations analyst,not_analyst,0
+T0383,supply chain analyst,operations,1
+T0384,business systems analyst,business,1
+T0385,operations analyst,operations,1
+T0386,risk analyst,other_analyst,1
+T0387,network planning analyst,operations,1
+T0388,reporting analyst,bi,1
+T0389,product analyst,product,1
+T0390,business intelligence engineer,bi,1
+T0391,data analyst,data,1
+T0392,data entry specialist,not_analyst,0
+T0393,business intelligence engineer,bi,1
+T0394,account executive,not_analyst,0
+T0395,network planning analyst,operations,1
+T0396,business intelligence engineer,bi,1
+T0397,financial planning and analysis analyst,finance,1
+T0398,financial planning and analysis analyst,finance,1
+T0399,risk analyst,other_analyst,1
+T0400,business systems analyst,business,1
+T0401,financial planning and analysis analyst,finance,1
+T0402,business intelligence engineer,bi,1
+T0403,pricing analyst,other_analyst,1
+T0404,financial analyst,finance,1
+T0405,business systems analyst,business,1
+T0406,network planning analyst,operations,1
+T0407,network planning analyst,operations,1
+T0408,operations analyst,operations,1
+T0409,operations analyst,operations,1
+T0410,business intelligence engineer,bi,1
+T0411,program manager,not_analyst,0
+T0412,business intelligence analyst,bi,1
+T0413,marketing analyst,marketing,1
+T0414,business intelligence engineer,bi,1
+T0415,financial analyst,finance,1
+T0416,marketing analyst,marketing,1
+T0417,finance analyst,finance,1
+T0418,finance analyst,finance,1
+T0419,supply chain analyst,operations,1
+T0420,security operations analyst,not_analyst,0
+T0421,network planning analyst,operations,1
+T0422,finance analyst,finance,1
+T0423,finance analyst,finance,1
+T0424,supply chain analyst,operations,1
+T0425,financial planning and analysis analyst,finance,1
+T0426,data engineer,not_analyst,0
+T0427,pricing analyst,other_analyst,1
+T0428,supply chain analyst,operations,1
+T0429,quantitative analyst,other_analyst,1
+T0430,finance analyst,finance,1
+T0431,category analyst,other_analyst,1
+T0432,network planning analyst,operations,1
+T0433,financial analyst,finance,1
+T0434,data entry specialist,not_analyst,0
+T0435,product analyst,product,1
+T0436,program manager,not_analyst,0
+T0437,insights analyst,data,1
+T0438,product analyst,product,1
+T0439,finance analyst,finance,1
+T0440,data entry specialist,not_analyst,0
+T0441,finance analyst,finance,1
+T0442,data engineer,not_analyst,0
+T0443,supply chain manager,not_analyst,0
+T0444,network planning analyst,operations,1
+T0445,data center technician,not_analyst,0
+T0446,data entry specialist,not_analyst,0
+T0447,program manager,not_analyst,0
+T0448,business analyst,business,1
+T0449,supply chain analyst,operations,1
+T0450,marketing analyst,marketing,1

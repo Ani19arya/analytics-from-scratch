@@ -1,0 +1,28 @@
+{
+  "provenance": {
+    "source": "Real Analyst Jobs data, retrieved 31 October 2026 through its MCP server",
+    "tool": "remote_jobs_from_country (country=India)",
+    "date_retrieved": "2026-10-31",
+    "dataAsOf": "2026-10-31",
+    "tool_rule": "A location line is not a hiring promise, and no role is described as open to the country unless its listing says so."
+  },
+  "home": "India",
+  "remote_analyst_titled_roles": {
+    "based_in_country": 18,
+    "region_includes": 1,
+    "region_note": "a region that includes India (APAC)",
+    "worldwide": 1,
+    "no_country": 136,
+    "no_country_note": "check the posting for where the employer hires",
+    "other_country": 305
+  },
+  "other_country_named": {
+    "United States": 204,
+    "United Kingdom": 15,
+    "Canada": 14,
+    "Germany": 9,
+    "Mexico": 9,
+    "Spain": 7
+  },
+  "other_country_named_note": "the six largest only; the provider did not list the rest"
+}

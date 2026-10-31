@@ -1,0 +1,31 @@
+{
+  "provenance": {
+    "source": "Real Analyst Jobs data, retrieved 31 October 2026 through its MCP server",
+    "tool": "h1b_sponsor_check (company=Amazon)",
+    "date_retrieved": "2026-10-31",
+    "dataAsOf": "2026-10-31",
+    "uscis_source_named_by_tool": "USCIS H-1B Employer Data Hub, https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub",
+    "uscis_dataAsOf": "2026-06-30",
+    "provider_note": "USCIS counts are employer-wide, every occupation and not only analysts, and they are history: not a promise that a given role will sponsor.",
+    "not_in_data_rule": "A company not in the data is reported as not in our data, with the USCIS link, never as a company that does not sponsor."
+  },
+  "company": "Amazon",
+  "uscis_employer_names": [
+    "AMAZON COM SERVICES LLC",
+    "AMAZON.COM SERVICES LLC",
+    "AMAZON.COM SERVICES LLC FKA AMAZON.COM SERVICES INC"
+  ],
+  "fiscal_years": [
+    {"fiscal_year": 2023, "period": "full year", "approvals": 11323, "new": 3769, "continuing": 7554, "denied": 265},
+    {"fiscal_year": 2024, "period": "full year", "approvals": 10590, "new": 3821, "continuing": 6769, "denied": 198},
+    {"fiscal_year": 2025, "period": "full year", "approvals": 13266, "new": 4999, "continuing": 8267, "denied": 190},
+    {"fiscal_year": 2026, "period": "partial, October 2025 to June 2026", "approvals": 9337, "new": 3801, "continuing": 5536, "denied": 82}
+  ],
+  "us_analyst_postings": {
+    "total": 285,
+    "say_they_sponsor": 0,
+    "say_no_sponsorship": 11,
+    "not_stated": 274,
+    "note": "not_stated is the provider's 'the rest', computed here as 285 - 0 - 11"
+  }
+}

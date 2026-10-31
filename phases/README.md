@@ -16,7 +16,7 @@ Every phase page lists its lessons in order. The full learning order across phas
 | 08 | [Modern data stack](08-modern-data-stack) | 6 | 0 |
 | 09 | [Business case studies](09-business-case-studies) | 9 | 0 |
 | 10 | [Capstone projects](10-capstone-projects) | 8 | 0 |
-| 11 | [Land the job](11-land-the-job) | 0 | 8 |
+| 11 | [Land the job](11-land-the-job) | 8 | 0 |
 <!-- /generated:phase-index -->
 
 To write or claim a lesson, see [CONTRIBUTING.md](../CONTRIBUTING.md) and [LESSON_TEMPLATE.md](../LESSON_TEMPLATE.md).

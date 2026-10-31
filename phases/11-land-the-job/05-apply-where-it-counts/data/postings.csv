@@ -1,0 +1,41 @@
+posting_id,company,title,seniority_label,source,first_seen,salary_min_usd,salary_max_usd,must_have,nice_to_have,notes,est_hours
+J01,Ledgerlark (via Relistly),Data Analyst,Entry Level,repost,2026-10-30,,,Power BI,Python;Excel,"Hybrid, 3 days a week in the office.",2.5
+J02,Tiffinbell,Product Analyst,Not Specified,careers_page,2026-10-21,58000,70000,sql;Tableau,Python;Excel,,0.5
+J03,Northwind Desk (via Relistly),Junior Data Analyst,Entry Level,repost,2026-09-20,64000,88000,Looker;Power BI;Tableau,Python,Remote within the country of the posting.,1.5
+J04,Bramblequay Bikes,Reporting Analyst,Not Specified,careers_page,2026-10-26,70000,94000,Excel;SQL,,Remote within the country of the posting.,3.0
+J05,Larkspur Coffee,Junior Data Analyst,Entry Level,careers_page,2026-10-26,,,A/B testing;power bi;SQL,Tableau,"Short take-home task, paid at our contractor rate.",1.0
+J06,Tallyfern,"Associate Analyst, Insights",Entry Level,careers_page,2026-10-29,52000,70000,SQL;Excel,statistics,Remote within the country of the posting.,1.0
+J07,Wrenloom (via Relistly),BI Analyst,Mid Level,repost,2026-10-16,76000,88000,SQL;Python,Looker;Tableau;Power BI,Remote within the country of the posting.,1.5
+J08,Larkspur Coffee,Operations Analyst,Not Specified,job_board,2026-10-29,64000,82000,Tableau;SQL,dbt;Looker,"Hybrid, 3 days a week in the office.",1.5
+J09,Northwind Desk,Data Analyst,Not Specified,careers_page,2026-10-28,58000,76000,Tableau;Power BI,dbt;Looker,"Hybrid, 3 days a week in the office.",1.5
+J10,Learnhaven,Data Analyst I,Mid Level,careers_page,2026-10-21,52000,70000,Python;SQL,,We never charge an application fee.,1.0
+J11,Bramblequay Bikes,Product Analyst,Not Specified,careers_page,2026-10-19,,,SQL;Excel;Power BI,Tableau,Interview includes a 45-minute SQL exercise.,3.0
+J12,Larkspur Coffee,BI Analyst,Entry Level,careers_page,,156000,168000,Python;SQL;Tableau,Excel;A/B testing,Interview includes a 45-minute SQL exercise.,0.5
+J13,Wrenloom,Product Analyst,Entry Level,careers_page,2026-10-30,76000,94000,Excel;SQL;Python,,"Hybrid, 3 days a week in the office.",3.0
+J14,Learnhaven,Marketing Analyst,Mid Level,careers_page,2026-10-12,84000,102000,SQL;Excel;Power BI,A/B testing;statistics,Candidates complete an unpaid test project of about 20 hours.,1.0
+J15,Fitloop,Junior Data Analyst,Mid Level,careers_page,2026-10-30,70000,78000,Excel;Power BI,SQL,Remote within the country of the posting.,2.0
+J16,Tidewater Outdoor,Data Analyst I,Entry Level,careers_page,2026-10-29,70000,82000,Tableau;statistics,,We never charge an application fee.,3.0
+J17,Northwind Desk,Business Analyst,Entry Level,job_board,2026-10-23,76000,100000,excel,,We never charge an application fee.,1.0
+J18,Northwind Desk,Operations Analyst,Entry Level,careers_page,2026-10-27,52000,70000,Power BI;Excel;Tableau,R;dbt,,0.5
+J19,Ledgerlark,Reporting Analyst,Mid Level,careers_page,2026-10-23,,,SQL,statistics;R,"Short take-home task, paid at our contractor rate.",2.0
+J20,Northwind Desk,Business Analyst,Not Specified,job_board,2026-10-30,70000,94000,SQL;Power BI,Tableau;dbt,,1.0
+J21,Fitloop,Junior Data Analyst,Entry Level,careers_page,2026-10-21,,,Tableau;python;Power BI,R,"Hybrid, 3 days a week in the office.",2.5
+J22,Harbor Mealkits,Reporting Analyst,Not Specified,careers_page,2026-10-29,64000,82000,SQL;Tableau,statistics;Excel,Fully on-site.,2.0
+J23,Fitloop,Marketing Analyst,Mid Level,careers_page,2026-09-28,,,R;SQL,,Candidates complete an unpaid test project of about 20 hours.,1.0
+J24,Northwind Desk,Principal Analyst,Entry Level,job_board,2026-10-12,70000,94000,SQL,A/B testing;statistics,Remote within the country of the posting.,2.0
+J25,Harbor Mealkits,Operations Analyst,Entry Level,job_board,2026-10-26,,,SQL;dbt;python,Tableau,"Short take-home task, paid at our contractor rate.",1.5
+J26,Brightloom,Data Analyst I,Not Specified,careers_page,2026-10-29,,,Excel;R,Python;Tableau,"Short take-home task, paid at our contractor rate.",2.5
+J27,Tiffinbell,Business Analyst,Entry Level,careers_page,2026-10-12,64000,72000,Tableau;SQL,dbt,,2.0
+J28,Larkspur Coffee,Product Analyst,Entry Level,careers_page,2026-10-19,,,Tableau;Excel,Power BI,We never charge an application fee.,0.5
+J29,Copperwren Grocery,Product Analyst,Entry Level,careers_page,2026-10-27,84000,108000,R,dbt;A/B testing,,2.0
+J30,Kettlemoor,Product Analyst,Entry Level,careers_page,2026-10-25,84000,92000,sql,Python;dbt,"Hybrid, 3 days a week in the office.",1.0
+J31,Kettlemoor,Marketing Analyst,Entry Level,careers_page,,64000,76000,excel;statistics,dbt,"Short take-home task, paid at our contractor rate.",0.5
+J32,Tidewater Outdoor,Marketing Analyst,Entry Level,careers_page,2026-10-12,,,Power BI;sql,,We never charge an application fee.,1.5
+J33,Northwind Desk,Business Analyst,Not Specified,careers_page,2026-10-25,,,SQL;R;Power BI,,Remote within the country of the posting.,1.5
+J34,Bramblequay Bikes (via Relistly),"Associate Analyst, Insights",Mid Level,repost,2026-10-26,84000,92000,Python;Tableau,,,1.0
+J35,Tallyfern,"Associate Analyst, Insights",Not Specified,careers_page,2026-10-25,76000,100000,Power BI;SQL;Tableau,statistics;Python,Shortlisted candidates pay a registration fee for onboarding.,2.0
+J36,Larkspur Coffee (via Relistly),Junior Data Analyst,Not Specified,repost,2026-10-12,64000,88000,Tableau;looker,A/B testing;Excel,Remote within the country of the posting.,0.5
+J37,Tiffinbell,BI Analyst,Entry Level,job_board,2026-09-28,,,sql;Power BI,R,,1.5
+J38,Larkspur Goods,Business Analyst,Entry Level,careers_page,2026-09-28,52000,64000,Python;SQL;Power BI,Tableau,Remote within the country of the posting.,1.5
+J39,Tidewater Outdoor,"Senior Manager, Analytics",Entry Level,job_board,2026-10-19,64000,72000,sql,,"Hybrid, 3 days a week in the office.",1.5
+J40,Ledgerlark,Product Analyst,Mid Level,careers_page,2026-10-25,64000,76000,Python;SQL;power bi,A/B testing;Looker;dbt,A 30 USD processing fee is due with your application.,2.5

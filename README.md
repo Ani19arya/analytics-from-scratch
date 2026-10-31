@@ -86,8 +86,8 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 8 | 0 |
-| [11 Land the job](phases/11-land-the-job) | Turn your skills into offers: build a target list from real postings, search by the titles companies really use, filter for visa and remote eligibility, apply where it counts, and track your search as a funnel. | 0 | 8 |
-| **All** | | **121** | **8** |
+| [11 Land the job](phases/11-land-the-job) | Turn your skills into offers: build a target list from real postings, search by the titles companies really use, filter for visa and remote eligibility, apply where it counts, and track your search as a funnel. | 8 | 0 |
+| **All** | | **129** | **0** |
 <!-- /generated:phase-table -->
 
 Every lesson listed is live. A lesson is only listed as live when its test passes.
@@ -249,14 +249,14 @@ Every lesson listed is live. A lesson is only listed as live when its test passe
 
 ### 11 Land the job
 
-1. 11-01 Build a target list from real postings *(planned)*: Where are the analyst roles you can actually get, and which 30 companies go on your list? (Level 4)
-2. 11-02 Search smarter: titles and synonyms *(planned)*: Why does a search for data analyst miss most of the analyst roles at a company like Amazon? (Level 4)
-3. 11-03 Visa-aware search: H-1B, OPT and UK sponsors *(planned)*: Which employers on your list have sponsored before, and which postings rule you out in their own words? (Level 4)
-4. 11-04 Remote, really: where can you be hired from? *(planned)*: Of the remote roles you found, which ones can actually hire someone where you live? (Level 4)
-5. 11-05 Apply where it counts *(planned)*: With 40 postings in front of you and 10 hours this week, which ones are worth an application? (Level 4)
-6. 11-06 Track your search as a funnel *(planned)*: Out of 60 applications, where is your search leaking, and which channel deserves more time? (Level 4)
-7. 11-07 Using Real Analyst Jobs in your search *(planned)*: What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. (Level 4)
-8. 11-08 Capstone: a 30-day job search plan *(planned)*: Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? (Level 4)
+1. 11-01 [Build a target list from real postings](phases/11-land-the-job/01-build-a-target-list): Where are the analyst roles you can actually get, and which 30 companies go on your list? (Level 4)
+2. 11-02 [Search smarter: titles and synonyms](phases/11-land-the-job/02-titles-and-synonyms): Why does a search for data analyst miss most of the analyst roles at a company like Amazon? (Level 4)
+3. 11-03 [Visa-aware search: H-1B, OPT and UK sponsors](phases/11-land-the-job/03-visa-aware-search): Which employers on your list have sponsored before, and which postings rule you out in their own words? (Level 4)
+4. 11-04 [Remote, really: where can you be hired from?](phases/11-land-the-job/04-remote-where-you-can-be-hired): Of the remote roles you found, which ones can actually hire someone where you live? (Level 4)
+5. 11-05 [Apply where it counts](phases/11-land-the-job/05-apply-where-it-counts): With 40 postings in front of you and 10 hours this week, which ones are worth an application? (Level 4)
+6. 11-06 [Track your search as a funnel](phases/11-land-the-job/06-track-your-search-as-a-funnel): Out of 60 applications, where is your search leaking, and which channel deserves more time? (Level 4)
+7. 11-07 [Using Real Analyst Jobs in your search](phases/11-land-the-job/07-using-real-analyst-jobs): What does Real Analyst Jobs show you, how is its data collected, and where are LinkedIn, Indeed or a company's own careers page better? Guide, no test. (Level 4)
+8. 11-08 [Capstone: a 30-day job search plan](phases/11-land-the-job/08-capstone-30-day-search-plan): Can you turn your targets, filters and funnel into a 30-day plan that a checker can verify? (Level 4)
 <!-- /generated:phase-lessons -->
 
 ## Learn with your coding agent

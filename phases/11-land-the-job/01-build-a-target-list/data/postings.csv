@@ -1,0 +1,639 @@
+posting_id,company,title,country,seniority,skills,posted_date,source
+J0001,Glenmarrow Games,BI Analyst,GB,Not Specified,,2026-09-16,careers_page
+J0002,Wrenhaven Retail,Financial Analyst,IN,Entry Level,Jira,2026-09-04,careers_page
+J0003,Saltbrae Lending,Senior Financial Analyst,NL,Senior,"Tableau, power bi",2026-09-22,careers_page
+J0004,Ivelstone Insurance,Financial Analyst,GB,Mid Level,"Tableau, R, Power BI, SQL",2026-09-05,careers_page
+J0005,Quillary Travel,Financial Analyst,DE,Entry Level,"Tableau, sql, Jira",2026-09-25,careers_page
+J0006,Rookmere Travel,Marketing Analyst,GB,Not Specified,"Power BI, Python, SQL",2026-09-08,careers_page
+J0007,Harrowfield Energy,Senior Operations Analyst ,GB,Senior,Python,2026-09-28,reposter
+J0008,Elmswick Games,Operations Analyst ,GB,Mid Level,"Python, SQL, excel, Tableau",2026-10-29,reposter
+J0009,Ostravel Insurance,Senior Commercial Analyst,IN,Senior,sql,2026-09-01,careers_page
+J0010,Umberlane Foods,Marketing Analyst,NL,Mid Level,"Tableau, Jira, SQL, excel",2026-08-17,careers_page
+J0011,Marrowby Travel,Senior Reporting Analyst,GB,Senior,"R, power bi, Tableau, excel",2026-10-28,careers_page
+J0012,Vantorre Insurance,Insights Analyst,IE,Mid Level,"dbt, sql, power bi",2026-08-28,careers_page
+J0013,Cindervale Telecom,Marketing Analyst,GB,Not Specified,"Excel, sql, power bi",2026-08-18,careers_page
+J0014,Mirefield Energy,Operations Analyst ,IN,Not Specified,"Excel, Python, Snowflake",2026-10-29,reposter
+J0015,Brackenly Foods,Reporting Analyst,NL,Mid Level,"Snowflake, SQL, Python",2026-10-30,careers_page
+J0016,Cindervale Telecom,Senior Commercial Analyst,GB,Senior,sql,2026-10-16,careers_page
+J0017,Ostravel Logistics,Business Analyst,IN,Not Specified,,2026-09-16,careers_page
+J0018,Zelvane Health,Supply Chain Analyst,US,Not Specified,"SAS, sql",2026-10-01,careers_page
+J0019,Kestrelwood Telecom,Business Analyst,IE,Not Specified,"sql, power bi",2026-08-20,careers_page
+J0020,Brackenly Retail,Lead Supply Chain Analyst,US,Lead / Staff,"excel, Snowflake, Tableau, R, sql",2026-08-29,careers_page
+J0021,Ivelstone Insurance,Lead Data Analyst,NL,Lead / Staff,"Power BI, Python",2026-09-21,careers_page
+J0022,Cindervale Telecom,Operations Analyst,GB,Not Specified,"SQL, Python, power bi",2026-09-26,careers_page
+J0023,Umberlane Insurance,Product Analyst,IN,Mid Level,"Excel, SQL",2026-10-18,careers_page
+J0024,Yarrowick Telecom,Product Analyst,DE,Not Specified,"Tableau, Looker, Python",2026-10-30,careers_page
+J0025,Umberlane Insurance,Financial Analyst,IN,Not Specified,"Python, Excel, SAS",2026-10-13,careers_page
+J0026,Corrowen Retail,Pricing Analyst,IN,Entry Level,"Tableau, SQL, excel, Looker",2026-09-20,careers_page
+J0027,Brackenly Telecom,Business Analyst,US,Mid Level,"sql, R",2026-08-24,careers_page
+J0028,Cindervale Travel,Business Analyst,IE,Not Specified,"SQL, R",2026-09-21,careers_page
+J0029,Pellinor Logistics,Lead Product Analyst,DE,Lead / Staff,"SQL, Python, Excel, Tableau",2026-10-17,careers_page
+J0030,Kestrelwood Telecom,BUSINESS ANALYST,IE,Not Specified,"sql, power bi",2026-09-03,reposter
+J0031,Wrenhaven Insurance,Marketing Analyst,IN,Mid Level,"sql, Tableau, Python, dbt, R",2026-10-24,careers_page
+J0032,Saltbrae Lending,Reporting Analyst,NL,Mid Level,"SQL, Tableau, Excel",2026-09-25,careers_page
+J0033,Brackenly Foods,BI Analyst,GB,Mid Level,"sql, Excel",2026-10-04,careers_page
+J0034,Quillary Travel,Senior Reporting Analyst,DE,Senior,"Looker, Python, Tableau, power bi",2026-09-29,careers_page
+J0035,Kestrelwood Telecom,Financial Analyst,GB,Not Specified,"sql, power bi, Python, excel",2026-10-22,careers_page
+J0036,Zelvane Telecom,Business Analyst,DE,Mid Level,"Excel, Tableau, sql, Power BI",2026-09-09,careers_page
+J0037,Wrenhaven Foods,Commercial Analyst,IE,Not Specified,"sql, Tableau, excel",2026-10-25,careers_page
+J0038,Brackenly Retail,LEAD OPERATIONS ANALYST,DE,Lead / Staff,"R, Snowflake, dbt, Looker, Python, Tableau",2026-10-31,reposter
+J0039,Ivelstone Foods,Business Analyst,US,Not Specified,excel,2026-08-23,careers_page
+J0040,Glenmarrow Logistics,Lead Marketing Analyst,NL,Lead / Staff,"Python, Tableau, sql, Snowflake",2026-09-18,careers_page
+J0041,Ivelstone Lending,BI Analyst,IN,Entry Level,,2026-10-29,careers_page
+J0042,Zelvane Travel,Financial Analyst,GB,Mid Level,"Python, sql, excel",2026-08-28,careers_page
+J0043,Rookmere Travel,Pricing Analyst,GB,Mid Level,"excel, SQL",2026-09-24,careers_page
+J0044,Kestrelwood Insurance,Reporting Analyst,GB,Mid Level,"Python, SQL",2026-10-09,careers_page
+J0045,Brackenly Health,Pricing Analyst,GB,Not Specified,SQL,2026-09-23,careers_page
+J0046,Brisketon Games,Marketing Analyst,US,Not Specified,"sql, SAS, excel",2026-08-31,careers_page
+J0047,Thistlemoor Energy,Commercial Analyst,IN,Not Specified,"excel, Tableau, power bi, Python",2026-10-18,careers_page
+J0048,Larkspire Health,Insights Analyst,IE,Mid Level,"sql, Python",2026-09-05,careers_page
+J0049,Glenmarrow Logistics,Commercial Analyst,IN,Not Specified,"Python, SQL, Tableau",2026-10-25,careers_page
+J0050,Ambergate Retail,FINANCIAL ANALYST,GB,Entry Level,"SAS, R, power bi",2026-09-20,reposter
+J0051,Juniperhay Telecom,Data Analyst,GB,Not Specified,"R, sql, power bi, excel, Python",2026-09-19,careers_page
+J0052,Wrenhaven Telecom,Senior Data Analyst,NL,Senior,,2026-10-16,careers_page
+J0053,Quillary Travel,Data Analyst ,DE,Entry Level,"R, power bi, Excel, SQL",2026-10-31,reposter
+J0054,Yarrowick Health,Data Analyst,NL,Entry Level,,2026-09-02,careers_page
+J0055,Juniperhay Insurance,Senior Operations Analyst,GB,Senior,,2026-09-11,careers_page
+J0056,Brackenly Retail,Lead Operations Analyst,DE,Lead / Staff,"R, Snowflake, dbt, Looker, Python, Tableau",2026-10-17,careers_page
+J0057,Brackenly Retail,Senior Commercial Analyst,US,Senior,"Python, SQL",2026-09-16,careers_page
+J0058,Brisketon Travel,Lead BI Analyst,GB,Lead / Staff,"Tableau, excel",2026-08-29,careers_page
+J0059,Yarrowick Health,Product Analyst ,DE,Mid Level,,2026-10-31,reposter
+J0060,Glenmarrow Energy,Data Analyst,GB,Not Specified,SQL,2026-09-12,careers_page
+J0061,Kestrelwood Foods,Financial Analyst,IE,Not Specified,"Excel, dbt",2026-10-31,careers_page
+J0062,Ambergate Insurance,Business Analyst,IE,Not Specified,,2026-08-21,careers_page
+J0063,Saltbrae Logistics,Reporting Analyst,US,Not Specified,"Python, excel, power bi, Tableau, R",2026-10-05,careers_page
+J0064,Elmswick Travel,Lead Operations Analyst,GB,Lead / Staff,,2026-08-31,careers_page
+J0065,Glenmarrow Energy,Operations Analyst,GB,Not Specified,"Python, sql, excel",2026-09-30,careers_page
+J0066,Saltbrae Energy,Insights Analyst,US,Entry Level,"power bi, excel, Python",2026-10-04,careers_page
+J0067,Saltbrae Games,Senior Pricing Analyst,IE,Senior,"Python, Looker, Excel",2026-09-10,careers_page
+J0068,Wrenhaven Foods,Senior Pricing Analyst,IE,Senior,,2026-08-27,careers_page
+J0069,Juniperhay Telecom,Supply Chain Analyst,DE,Mid Level,excel,2026-09-05,careers_page
+J0070,Kestrelwood Retail,Insights Analyst,NL,Entry Level,"Jira, SQL",2026-10-28,careers_page
+J0071,Saltbrae Logistics,Lead Reporting Analyst,US,Lead / Staff,,2026-10-17,careers_page
+J0072,Quillary Travel,BI Analyst,DE,Not Specified,"Tableau, sql",2026-09-22,careers_page
+J0073,Umberlane Lending,Marketing Analyst,GB,Mid Level,"Power BI, Excel, SQL",2026-09-01,careers_page
+J0074,Ivelstone Lending,Operations Analyst,NL,Not Specified,"Excel, Python, SQL",2026-08-26,careers_page
+J0075,Corrowen Travel,Data Analyst,US,Entry Level,,2026-09-17,careers_page
+J0076,Harrowfield Logistics,Supply Chain Analyst,IE,Not Specified,"Tableau, SQL",2026-09-23,careers_page
+J0077,Vantorre Foods,Marketing Analyst,NL,Mid Level,"Looker, sql, Python",2026-08-18,careers_page
+J0078,Nettlecombe Games,Product Analyst,DE,Not Specified,"power bi, SQL, Python, excel, Snowflake, R",2026-10-31,careers_page
+J0079,Brackenly Retail,Lead Operations Analyst,GB,Lead / Staff,"Excel, Looker, Python, dbt, R",2026-10-10,careers_page
+J0080,Cindervale Telecom,Marketing Analyst,DE,Not Specified,"dbt, Jira, Python, SQL",2026-09-19,careers_page
+J0081,Vantorre Lending,Insights Analyst,IN,Not Specified,excel,2026-08-21,careers_page
+J0082,Wrenhaven Retail,Lead Marketing Analyst,DE,Lead / Staff,"sql, Tableau",2026-08-19,careers_page
+J0083,Marrowby Retail,Commercial Analyst,GB,Mid Level,,2026-09-26,careers_page
+J0084,Elmswick Games,Supply Chain Analyst,GB,Mid Level,Looker,2026-10-28,careers_page
+J0085,Hollowmint Foods,Business Analyst,GB,Not Specified,"sql, R, Looker, Excel",2026-09-13,careers_page
+J0086,Nettlecombe Health,Business Analyst,IN,Entry Level,"Python, power bi",2026-10-10,careers_page
+J0087,Corrowen Travel,Financial Analyst,US,Mid Level,"Excel, R, Tableau",2026-10-19,careers_page
+J0088,Marrowby Travel,Pricing Analyst,DE,Not Specified,"Excel, Python, sql",2026-08-19,careers_page
+J0089,Brackenly Retail,Operations Analyst,IN,Not Specified,"Excel, Python, Tableau, Snowflake",2026-08-19,careers_page
+J0090,Yarrowick Retail,Pricing Analyst,GB,Entry Level,"SQL, Snowflake, R",2026-09-19,careers_page
+J0091,Dovecrest Games,Reporting Analyst,GB,Not Specified,"SQL, Tableau, power bi, Python, Snowflake",2026-10-27,careers_page
+J0092,Mirefield Insurance,Product Analyst,US,Mid Level,"Python, power bi, Tableau, sql",2026-10-20,careers_page
+J0093,Pellinor Lending,Senior Business Analyst,IE,Senior,"sql, excel",2026-09-04,careers_page
+J0094,Dovecrest Health,Business Analyst,US,Not Specified,"excel, Python, SQL",2026-09-12,careers_page
+J0095,Tallowmere Travel,Senior Supply Chain Analyst,IN,Senior,Python,2026-10-15,careers_page
+J0096,Juniperhay Foods,Commercial Analyst,DE,Not Specified,"Tableau, excel, power bi, Python",2026-08-20,careers_page
+J0097,Vantorre Telecom,Business Analyst,IN,Not Specified,power bi,2026-08-23,careers_page
+J0098,Pellinor Logistics,Operations Analyst,DE,Not Specified,"SQL, Python, excel",2026-09-07,careers_page
+J0099,Fernhallow Games,Product Analyst,IE,Entry Level,"R, sql",2026-10-14,careers_page
+J0100,Saltbrae Energy,Lead Marketing Analyst,NL,Lead / Staff,,2026-09-23,careers_page
+J0101,Larkspire Foods,Commercial Analyst,GB,Not Specified,power bi,2026-10-21,careers_page
+J0102,Ivelstone Lending,Insights Analyst,IN,Mid Level,"Jira, SAS, Power BI",2026-10-28,careers_page
+J0103,Kestrelwood Retail,Commercial Analyst,IE,Mid Level,"excel, SQL, Tableau",2026-10-19,careers_page
+J0104,Cindervale Travel,Insights Analyst,GB,Mid Level,"SQL, dbt, Tableau, excel",2026-09-18,careers_page
+J0105,Brackenly Retail,Insights Analyst,US,Entry Level,"excel, sql",2026-10-10,careers_page
+J0106,Brackenly Retail,Lead Insights Analyst,GB,Lead / Staff,"sql, Python, R, Tableau",2026-10-31,careers_page
+J0107,Corrowen Retail,Business Analyst,IN,Mid Level,"Tableau, R",2026-09-02,careers_page
+J0108,Zelvane Telecom,Business Analyst,DE,Entry Level,"Jira, Tableau, SQL",2026-10-28,careers_page
+J0109,Wrenhaven Insurance,Senior Business Analyst,GB,Senior,"excel, Tableau",2026-10-29,careers_page
+J0110,Juniperhay Telecom,Marketing Analyst,NL,Mid Level,SQL,2026-09-11,careers_page
+J0111,Brackenly Retail,Business Analyst,IN,Mid Level,"sql, excel",2026-09-13,careers_page
+J0112,Kestrelwood Foods,Commercial Analyst,GB,Not Specified,sql,2026-10-24,careers_page
+J0113,Brackenly Retail,Senior Financial Analyst,US,Senior,"Python, SQL, R, Excel",2026-09-16,careers_page
+J0114,Mirefield Insurance,Senior BI Analyst,US,Senior,"Python, sql, Power BI",2026-09-13,careers_page
+J0115,Vantorre Insurance,Business Analyst,IE,Not Specified,"Python, SQL",2026-10-26,careers_page
+J0116,Tallowmere Logistics,Senior Marketing Analyst,GB,Senior,"Tableau, excel, Snowflake, SQL",2026-10-03,careers_page
+J0117,Marrowby Travel,Supply Chain Analyst,GB,Entry Level,"Excel, Power BI, SQL, R, Snowflake",2026-10-28,careers_page
+J0118,Yarrowick Retail,Operations Analyst,US,Not Specified,"Looker, Power BI",2026-10-16,careers_page
+J0119,Saltbrae Energy,Lead Commercial Analyst,DE,Lead / Staff,"Jira, R, sql, Python, excel",2026-10-16,careers_page
+J0120,Larkspire Health,Business Analyst,DE,Entry Level,"Snowflake, sql, Tableau, Python",2026-08-19,careers_page
+J0121,Marrowby Travel,Marketing Analyst,GB,Not Specified,"sql, Tableau, Excel",2026-09-18,careers_page
+J0122,Juniperhay Telecom,Lead Marketing Analyst,GB,Lead / Staff,"sql, R, Tableau",2026-09-25,careers_page
+J0123,Tallowmere Energy,BI Analyst,US,Entry Level,"Power BI, Python, Excel",2026-10-25,careers_page
+J0124,Marrowby Health,Pricing Analyst,IN,Not Specified,,2026-09-23,careers_page
+J0125,Brackenly Retail,Lead Business Analyst,US,Lead / Staff,"Python, Tableau, Looker, sql, SAS",2026-10-07,careers_page
+J0126,Dovecrest Travel,BI Analyst,NL,Mid Level,SQL,2026-10-06,careers_page
+J0127,Cindervale Health,Supply Chain Analyst,IE,Not Specified,"SQL, R",2026-09-02,careers_page
+J0128,Ostravel Lending,Pricing Analyst,NL,Not Specified,"Tableau, Python, Excel, Power BI",2026-09-12,careers_page
+J0129,Quillary Logistics,Pricing Analyst,GB,Mid Level,"sql, Tableau, excel, Python",2026-10-31,careers_page
+J0130,Corrowen Games,Lead Reporting Analyst,GB,Lead / Staff,sql,2026-08-25,careers_page
+J0131,Rookmere Travel,Insights Analyst,US,Not Specified,"Excel, Python",2026-09-15,careers_page
+J0132,Umberlane Foods,Reporting Analyst,NL,Mid Level,,2026-09-01,careers_page
+J0133,Thistlemoor Energy,BI Analyst ,IN,Not Specified,"sql, excel, Looker, dbt",2026-09-28,reposter
+J0134,Vantorre Insurance,Insights Analyst,IE,Not Specified,SQL,2026-08-22,careers_page
+J0135,Cindervale Telecom,Operations Analyst,DE,Entry Level,excel,2026-09-15,careers_page
+J0136,Hollowmint Foods,Product Analyst,GB,Not Specified,"SQL, Python",2026-09-29,careers_page
+J0137,Harrowfield Logistics,Senior Marketing Analyst,IE,Senior,"Looker, SQL, Tableau, excel, Python",2026-10-19,careers_page
+J0138,Cindervale Travel,Pricing Analyst,GB,Entry Level,"excel, Python, SQL, Power BI",2026-08-29,careers_page
+J0139,Zelvane Retail,Marketing Analyst,DE,Mid Level,"Jira, SQL",2026-10-29,careers_page
+J0140,Wrenhaven Insurance,Business Analyst,GB,Not Specified,"excel, SQL, Tableau",2026-09-02,careers_page
+J0141,Elmswick Travel,Lead Pricing Analyst ,IN,Lead / Staff,"sql, excel, R",2026-10-03,reposter
+J0142,Vantorre Lending,Senior Data Analyst,IN,Senior,SQL,2026-10-07,careers_page
+J0143,Larkspire Health,Senior Commercial Analyst,DE,Senior,"sql, Python, Tableau",2026-09-09,careers_page
+J0144,Harrowfield Energy,Business Analyst,GB,Entry Level,"SQL, Python, Power BI",2026-10-04,careers_page
+J0145,Harrowfield Lending,BI Analyst,NL,Entry Level,"Tableau, sql",2026-10-08,careers_page
+J0146,Ivelstone Foods,Commercial Analyst,US,Mid Level,"Tableau, Power BI, SQL, excel",2026-09-29,careers_page
+J0147,Pellinor Games,Marketing Analyst,US,Not Specified,"Excel, R, SQL, Python",2026-10-25,careers_page
+J0148,Harrowfield Logistics,Marketing Analyst,IE,Entry Level,sql,2026-08-22,careers_page
+J0149,Juniperhay Insurance,Business Analyst,GB,Mid Level,"Excel, Power BI, SQL, Tableau",2026-09-10,careers_page
+J0150,Brackenly Foods,Business Analyst,IN,Mid Level,"Power BI, Tableau, SQL, Python",2026-09-13,careers_page
+J0151,Brackenly Retail,Senior Data Analyst,US,Senior,"dbt, R, sql, Tableau",2026-10-28,careers_page
+J0152,Hollowmint Lending,Financial Analyst,DE,Not Specified,Tableau,2026-10-30,careers_page
+J0153,Brackenly Foods,Product Analyst,GB,Entry Level,"SQL, Python, Tableau, Power BI",2026-09-16,careers_page
+J0154,Brackenly Retail,Senior Financial Analyst,IN,Senior,"Python, sql",2026-10-29,careers_page
+J0155,Juniperhay Telecom,Supply Chain Analyst,GB,Entry Level,SQL,2026-10-14,careers_page
+J0156,Umberlane Insurance,Product Analyst,IN,Not Specified,"Excel, SQL, Python",2026-09-14,careers_page
+J0157,Larkspire Retail,Commercial Analyst,IN,Mid Level,"sql, Power BI, R",2026-10-25,careers_page
+J0158,Vantorre Lending,Senior Commercial Analyst,IN,Senior,Tableau,2026-09-28,careers_page
+J0159,Brisketon Games,Data Analyst,US,Entry Level,"Tableau, Python",2026-08-19,careers_page
+J0160,Nettlecombe Health,Financial Analyst ,DE,Mid Level,"Python, SQL, Excel",2026-09-14,reposter
+J0161,Corrowen Games,BI Analyst,GB,Mid Level,"Power BI, excel, SQL",2026-09-30,careers_page
+J0162,Ambergate Foods,Financial Analyst,IE,Not Specified,"Excel, R, Snowflake, Tableau",2026-10-28,careers_page
+J0163,Brackenly Retail,Senior Reporting Analyst,US,Senior,"dbt, Looker, Python, Snowflake, sql",2026-10-09,careers_page
+J0164,Brackenly Retail,Lead Supply Chain Analyst,IN,Lead / Staff,"sql, dbt",2026-10-21,careers_page
+J0165,Brackenly Retail,Senior Marketing Analyst,DE,Senior,"Power BI, Tableau, sql, excel, Looker, dbt",2026-10-11,careers_page
+J0166,Nettlecombe Games,Insights Analyst,GB,Mid Level,"sql, Python",2026-10-25,careers_page
+J0167,Juniperhay Insurance,Product Analyst,DE,Not Specified,"Excel, Python, sql, Power BI",2026-10-08,careers_page
+J0168,Brackenly Retail,Senior Business Analyst,US,Senior,"sql, Python, R",2026-08-29,careers_page
+J0169,Wrenhaven Telecom,Insights Analyst,NL,Mid Level,"Tableau, Python, SQL",2026-09-14,careers_page
+J0170,Fernhallow Logistics,Pricing Analyst,US,Not Specified,,2026-09-30,careers_page
+J0171,Harrowfield Lending,BI Analyst ,NL,Entry Level,"Tableau, sql",2026-10-31,reposter
+J0172,Tallowmere Games,Senior Operations Analyst,IE,Senior,Power BI,2026-10-12,careers_page
+J0173,Larkspire Health,Insights Analyst,DE,Not Specified,Snowflake,2026-09-07,careers_page
+J0174,Hollowmint Lending,Reporting Analyst,GB,Entry Level,,2026-09-19,careers_page
+J0175,Brisketon Travel,Pricing Analyst,GB,Not Specified,"sql, Python",2026-10-07,careers_page
+J0176,Hollowmint Telecom,Data Analyst,IE,Entry Level,"SQL, excel, SAS, R",2026-09-26,careers_page
+J0177,Ambergate Telecom,Operations Analyst,IN,Entry Level,"SQL, R, excel",2026-10-01,careers_page
+J0178,Elmswick Games,Insights Analyst,GB,Entry Level,,2026-09-14,careers_page
+J0179,Zelvane Health,Business Analyst,US,Mid Level,"Power BI, R, SQL",2026-08-18,careers_page
+J0180,Larkspire Retail,BUSINESS ANALYST,IN,Entry Level,"sql, Python, power bi, Tableau",2026-09-27,reposter
+J0181,Rookmere Games,Data Analyst,IN,Mid Level,Excel,2026-09-09,careers_page
+J0182,Elmswick Travel,Lead Product Analyst,IN,Lead / Staff,"Python, SQL, Power BI",2026-09-29,careers_page
+J0183,Nettlecombe Health,Business Analyst,IN,Entry Level,,2026-10-20,careers_page
+J0184,Brisketon Health,Product Analyst,US,Not Specified,"Looker, Tableau, Snowflake",2026-09-04,careers_page
+J0185,Tallowmere Logistics,Business Analyst,GB,Mid Level,"Tableau, Jira",2026-10-14,careers_page
+J0186,Elmswick Travel,Lead Pricing Analyst,IN,Lead / Staff,"sql, excel, R",2026-08-24,careers_page
+J0187,Dovecrest Travel,Supply Chain Analyst,GB,Not Specified,"Excel, Jira, SQL",2026-09-11,careers_page
+J0188,Fernhallow Energy,Insights Analyst,IN,Not Specified,"SQL, Python",2026-10-24,careers_page
+J0189,Umberlane Lending,BI Analyst,IE,Mid Level,Python,2026-08-28,careers_page
+J0190,Marrowby Health,Data Analyst ,GB,Mid Level,"power bi, Looker, sql",2026-09-16,reposter
+J0191,Tallowmere Energy,BI Analyst,GB,Not Specified,,2026-10-07,careers_page
+J0192,Kestrelwood Retail,Supply Chain Analyst,IE,Not Specified,"power bi, Python, SQL",2026-08-18,careers_page
+J0193,Ambergate Foods,Product Analyst ,IE,Not Specified,"Snowflake, Jira, Excel, Python, SQL",2026-10-09,reposter
+J0194,Mirefield Insurance,Commercial Analyst,US,Entry Level,"excel, SQL",2026-10-29,careers_page
+J0195,Kestrelwood Foods,BI Analyst,GB,Not Specified,power bi,2026-08-17,careers_page
+J0196,Brackenly Retail,Senior Data Analyst,IN,Senior,"Tableau, SQL, Python",2026-09-13,careers_page
+J0197,Brackenly Retail,Lead Insights Analyst,US,Lead / Staff,"Tableau, sql",2026-08-20,careers_page
+J0198,Wrenhaven Insurance,Pricing Analyst,IN,Not Specified,"sql, Looker",2026-10-31,careers_page
+J0199,Harrowfield Insurance,Reporting Analyst,IE,Mid Level,"excel, SQL, Tableau",2026-09-15,careers_page
+J0200,Corrowen Health,Marketing Analyst,DE,Not Specified,"sql, Python",2026-09-01,careers_page
+J0201,Ambergate Retail,Product Analyst,GB,Mid Level,"power bi, SQL",2026-10-24,careers_page
+J0202,Tallowmere Energy,Supply Chain Analyst,US,Mid Level,"Tableau, Jira, SQL, excel, Python",2026-10-11,careers_page
+J0203,Brackenly Retail,Lead Data Analyst,US,Lead / Staff,"Python, dbt, SQL",2026-08-17,careers_page
+J0204,Kestrelwood Retail,Business Analyst,GB,Not Specified,"Snowflake, Tableau, Excel",2026-09-28,careers_page
+J0205,Cindervale Retail,Business Analyst,GB,Not Specified,"Tableau, excel, SQL, Python",2026-09-09,careers_page
+J0206,Brisketon Games,Operations Analyst,US,Mid Level,"Tableau, sql, R, Power BI",2026-10-31,careers_page
+J0207,Elmswick Travel,BI Analyst,IN,Mid Level,Python,2026-09-04,careers_page
+J0208,Ostravel Logistics,Lead Reporting Analyst,IN,Lead / Staff,"Looker, sql, power bi",2026-09-25,careers_page
+J0209,Rookmere Logistics,Operations Analyst,IN,Not Specified,"sql, Excel",2026-10-27,careers_page
+J0210,Ivelstone Insurance,Business Analyst,GB,Mid Level,"Snowflake, Jira, SQL, power bi",2026-10-17,careers_page
+J0211,Elmswick Games,BI Analyst,GB,Not Specified,"Tableau, excel, Python",2026-09-27,careers_page
+J0212,Brackenly Retail,SENIOR DATA ANALYST,US,Senior,"dbt, R, sql, Tableau",2026-10-31,reposter
+J0213,Hollowmint Insurance,Operations Analyst,GB,Not Specified,"Python, Power BI, sql",2026-09-08,careers_page
+J0214,Ambergate Foods,Financial Analyst,GB,Entry Level,"Python, dbt, SQL, Excel",2026-10-10,careers_page
+J0215,Elmswick Games,Pricing Analyst,GB,Mid Level,"power bi, SQL, Tableau",2026-09-25,careers_page
+J0216,Ambergate Retail,Financial Analyst,GB,Entry Level,"SAS, R, power bi",2026-09-01,careers_page
+J0217,Nettlecombe Games,Pricing Analyst,GB,Not Specified,"Tableau, Power BI, Jira",2026-10-14,careers_page
+J0218,Nettlecombe Travel,Product Analyst,GB,Entry Level,"power bi, Python, excel, sql",2026-08-28,careers_page
+J0219,Elmswick Games,Marketing Analyst,GB,Mid Level,,2026-10-12,careers_page
+J0220,Kestrelwood Retail,Reporting Analyst,IE,Mid Level,"Tableau, sql, Python, Power BI, R",2026-10-26,careers_page
+J0221,Brisketon Travel,Lead BI Analyst ,GB,Lead / Staff,"Tableau, excel",2026-09-29,reposter
+J0222,Saltbrae Games,Commercial Analyst,IE,Mid Level,"Excel, sql, dbt, power bi",2026-09-08,careers_page
+J0223,Quillary Games,Insights Analyst,IN,Not Specified,"dbt, power bi, Tableau, sql, Python",2026-10-19,careers_page
+J0224,Mirefield Insurance,Lead Commercial Analyst,US,Lead / Staff,"Jira, Looker, SQL, excel, Tableau",2026-08-26,careers_page
+J0225,Zelvane Health,BI Analyst,US,Mid Level,"Looker, SAS, Python, R, Snowflake",2026-10-07,careers_page
+J0226,Kestrelwood Telecom,Marketing Analyst,GB,Not Specified,"excel, Python, Tableau, Looker, sql",2026-08-27,careers_page
+J0227,Hollowmint Lending,Supply Chain Analyst,DE,Not Specified,"Looker, SQL",2026-10-29,careers_page
+J0228,Hollowmint Lending,Lead Supply Chain Analyst,DE,Lead / Staff,"sql, Power BI, Tableau",2026-08-20,careers_page
+J0229,Rookmere Travel,Marketing Analyst ,GB,Not Specified,"Power BI, Python, SQL",2026-10-09,reposter
+J0230,Vantorre Insurance,Lead Financial Analyst,IE,Lead / Staff,"excel, Tableau",2026-10-29,careers_page
+J0231,Brackenly Retail,Lead Pricing Analyst,US,Lead / Staff,"Excel, Looker, Snowflake, sql, power bi, Python",2026-10-11,careers_page
+J0232,Pellinor Logistics,Marketing Analyst,NL,Not Specified,"Excel, SQL, R",2026-09-03,careers_page
+J0233,Saltbrae Games,Supply Chain Analyst,DE,Mid Level,excel,2026-10-17,careers_page
+J0234,Harrowfield Energy,Data Analyst,GB,Mid Level,SQL,2026-08-25,careers_page
+J0235,Pellinor Games,Product Analyst,US,Mid Level,"Python, sql, excel, Tableau",2026-10-12,careers_page
+J0236,Vantorre Telecom,Pricing Analyst,NL,Not Specified,"Tableau, dbt, excel, sql",2026-09-09,careers_page
+J0237,Tallowmere Games,Insights Analyst ,IE,Not Specified,"sql, excel, Python",2026-10-27,reposter
+J0238,Harrowfield Insurance,Commercial Analyst,IE,Not Specified,"Python, Excel",2026-09-14,careers_page
+J0239,Marrowby Health,Operations Analyst,GB,Not Specified,"sql, Python, SAS, excel",2026-08-18,careers_page
+J0240,Mirefield Energy,Pricing Analyst,IN,Mid Level,"Excel, Python",2026-10-13,careers_page
+J0241,Yarrowick Telecom,BI Analyst,DE,Mid Level,"sql, Excel, Tableau",2026-10-29,careers_page
+J0242,Dovecrest Travel,BI Analyst,DE,Not Specified,"SQL, power bi",2026-10-26,careers_page
+J0243,Brackenly Retail,BI Analyst,IN,Mid Level,"Snowflake, SAS, dbt, excel",2026-09-23,careers_page
+J0244,Juniperhay Telecom,BI Analyst,IN,Mid Level,"Excel, Python, Jira, Tableau",2026-09-19,careers_page
+J0245,Nettlecombe Games,PRODUCT ANALYST,DE,Not Specified,"power bi, SQL, Python, excel, Snowflake, R",2026-10-31,reposter
+J0246,Juniperhay Telecom,Lead Supply Chain Analyst,GB,Lead / Staff,"SQL, excel",2026-08-31,careers_page
+J0247,Umberlane Energy,Marketing Analyst,GB,Not Specified,"Tableau, SQL, excel",2026-09-27,careers_page
+J0248,Thistlemoor Logistics,Business Analyst,DE,Entry Level,"Jira, SQL, Python, Tableau",2026-09-21,careers_page
+J0249,Glenmarrow Energy,Commercial Analyst,GB,Mid Level,"Tableau, Python",2026-10-04,careers_page
+J0250,Mirefield Energy,Operations Analyst,IN,Not Specified,"Excel, Python, Snowflake",2026-10-05,careers_page
+J0251,Nettlecombe Health,Product Analyst,IN,Not Specified,"Python, sql",2026-10-10,careers_page
+J0252,Zelvane Health,Lead Reporting Analyst,US,Lead / Staff,"Looker, Excel, Python",2026-08-28,careers_page
+J0253,Tallowmere Games,Senior Operations Analyst,IE,Senior,"Power BI, sql, Excel, R, Jira, Python",2026-09-10,careers_page
+J0254,Fernhallow Logistics,Senior Pricing Analyst,IN,Senior,"Python, sql, Power BI, Tableau",2026-09-21,careers_page
+J0255,Kestrelwood Insurance,Data Analyst,GB,Mid Level,"R, Tableau, power bi",2026-09-07,careers_page
+J0256,Harrowfield Insurance,Insights Analyst,IE,Not Specified,"Tableau, Power BI, Excel, R",2026-09-28,careers_page
+J0257,Nettlecombe Travel,Senior Financial Analyst,DE,Senior,"Python, SQL",2026-10-27,careers_page
+J0258,Mirefield Energy,Operations Analyst,IE,Mid Level,"Tableau, excel",2026-10-22,careers_page
+J0259,Quillary Travel,BI Analyst ,DE,Not Specified,"Tableau, sql",2026-10-25,reposter
+J0260,Glenmarrow Energy,Senior Marketing Analyst,GB,Senior,"sql, excel, Python",2026-10-26,careers_page
+J0261,Larkspire Health,Marketing Analyst,GB,Entry Level,Python,2026-09-07,careers_page
+J0262,Brackenly Retail,Senior Commercial Analyst,US,Senior,"Snowflake, SQL",2026-08-22,careers_page
+J0263,Quillary Games,Business Analyst,IE,Mid Level,"excel, SQL, power bi, Python",2026-10-18,careers_page
+J0264,Harrowfield Energy,Operations Analyst ,NL,Not Specified,"Excel, Tableau, SQL, Power BI, Python",2026-10-10,reposter
+J0265,Brackenly Retail,Lead Supply Chain Analyst,US,Lead / Staff,"excel, Python, Tableau, SQL",2026-09-29,careers_page
+J0266,Pellinor Energy,Senior Data Analyst,GB,Senior,"R, Looker, Python, Excel, Power BI",2026-09-28,careers_page
+J0267,Brisketon Logistics,Product Analyst,IN,Not Specified,,2026-09-26,careers_page
+J0268,Yarrowick Foods,Marketing Analyst,IN,Not Specified,,2026-09-19,careers_page
+J0269,Rookmere Energy,Lead Commercial Analyst,US,Lead / Staff,"Tableau, sql",2026-09-26,careers_page
+J0270,Mirefield Lending,Senior Marketing Analyst,IN,Senior,"sql, Tableau, Jira",2026-09-27,careers_page
+J0271,Cindervale Telecom,Marketing Analyst,GB,Mid Level,"Python, SQL, Power BI",2026-09-02,careers_page
+J0272,Larkspire Telecom,Reporting Analyst,GB,Mid Level,"SAS, excel, Tableau",2026-10-05,careers_page
+J0273,Kestrelwood Insurance,Commercial Analyst,GB,Entry Level,"sql, Tableau, Python",2026-10-11,careers_page
+J0274,Vantorre Insurance,Pricing Analyst,IE,Mid Level,"Tableau, Power BI, excel",2026-09-20,careers_page
+J0275,Brackenly Foods,Business Analyst,GB,Not Specified,"Python, Snowflake",2026-08-22,careers_page
+J0276,Glenmarrow Lending,Reporting Analyst,US,Not Specified,"Excel, R",2026-08-22,careers_page
+J0277,Yarrowick Retail,BI Analyst,GB,Entry Level,"SQL, Python",2026-09-13,careers_page
+J0278,Brisketon Games,Operations Analyst,US,Entry Level,"Snowflake, Tableau",2026-10-07,careers_page
+J0279,Glenmarrow Energy,Pricing Analyst,GB,Entry Level,,2026-10-14,careers_page
+J0280,Marrowby Retail,Business Analyst,GB,Not Specified,"R, Python, Power BI",2026-09-30,careers_page
+J0281,Rookmere Energy,BI Analyst,US,Entry Level,"Power BI, Tableau, Snowflake",2026-10-18,careers_page
+J0282,Brackenly Retail,Commercial Analyst,US,Mid Level,"SQL, dbt, Python, R",2026-10-11,careers_page
+J0283,Ostravel Insurance,Supply Chain Analyst,IE,Entry Level,"sql, R, excel, Python",2026-09-26,careers_page
+J0284,Ivelstone Insurance,Lead Commercial Analyst,GB,Lead / Staff,"Excel, sql",2026-09-13,careers_page
+J0285,Brackenly Retail,Lead Marketing Analyst,DE,Lead / Staff,"Snowflake, Tableau, Python, dbt, SQL, SAS, R",2026-10-05,careers_page
+J0286,Vantorre Telecom,Data Analyst,IN,Mid Level,"SQL, Power BI, excel",2026-08-24,careers_page
+J0287,Quillary Games,Data Analyst,IN,Not Specified,"SQL, power bi, excel",2026-10-10,careers_page
+J0288,Thistlemoor Energy,Pricing Analyst,IN,Not Specified,Python,2026-10-08,careers_page
+J0289,Cindervale Telecom,Pricing Analyst,GB,Entry Level,"excel, Power BI, Python",2026-08-18,careers_page
+J0290,Quillary Travel,Reporting Analyst,DE,Entry Level,sql,2026-10-14,careers_page
+J0291,Rookmere Energy,Insights Analyst,GB,Not Specified,,2026-09-25,careers_page
+J0292,Yarrowick Telecom,Reporting Analyst,DE,Not Specified,"excel, R, power bi, SQL, Python",2026-10-05,careers_page
+J0293,Mirefield Energy,Commercial Analyst,IN,Mid Level,"sql, power bi, Excel",2026-09-28,careers_page
+J0294,Ostravel Lending,Insights Analyst,NL,Mid Level,"SQL, Python, Power BI, Looker, excel",2026-10-07,careers_page
+J0295,Cindervale Retail,Commercial Analyst,GB,Not Specified,"Tableau, sql, Power BI, Python",2026-10-28,careers_page
+J0296,Zelvane Travel,Pricing Analyst,GB,Entry Level,"SQL, Snowflake",2026-09-05,careers_page
+J0297,Quillary Travel,Pricing Analyst,DE,Mid Level,"sql, power bi",2026-08-26,careers_page
+J0298,Elmswick Travel,LEAD PRODUCT ANALYST,IN,Lead / Staff,"Python, SQL, Power BI",2026-10-17,reposter
+J0299,Larkspire Health,Pricing Analyst,US,Mid Level,"dbt, sql, Excel",2026-08-28,careers_page
+J0300,Ambergate Retail,BI Analyst,GB,Not Specified,"SQL, Excel, Power BI",2026-08-20,careers_page
+J0301,Wrenhaven Foods,COMMERCIAL ANALYST,IE,Not Specified,"sql, Tableau, excel",2026-10-31,reposter
+J0302,Ambergate Foods,Supply Chain Analyst,GB,Mid Level,"Excel, Power BI, Python, sql, Tableau",2026-10-11,careers_page
+J0303,Hollowmint Lending,BI Analyst,DE,Not Specified,"Python, SQL",2026-10-03,careers_page
+J0304,Ostravel Energy,BI Analyst,GB,Mid Level,"excel, SQL, Tableau",2026-09-29,careers_page
+J0305,Brisketon Travel,Financial Analyst,GB,Mid Level,"SQL, Python, power bi",2026-09-05,careers_page
+J0306,Nettlecombe Retail,Financial Analyst,IE,Mid Level,sql,2026-09-18,careers_page
+J0307,Ivelstone Energy,Insights Analyst,DE,Not Specified,"excel, sql",2026-09-18,careers_page
+J0308,Fernhallow Logistics,Commercial Analyst,GB,Mid Level,"Excel, sql, R, Tableau",2026-10-09,careers_page
+J0309,Kestrelwood Retail,Lead BI Analyst,IE,Lead / Staff,"SQL, power bi, Python",2026-09-18,careers_page
+J0310,Kestrelwood Insurance,Marketing Analyst,GB,Mid Level,"SQL, Python",2026-10-23,careers_page
+J0311,Nettlecombe Health,Reporting Analyst,IN,Not Specified,,2026-10-28,careers_page
+J0312,Ambergate Foods,Senior Product Analyst,DE,Senior,"Python, excel, Jira",2026-08-17,careers_page
+J0313,Saltbrae Games,Lead Insights Analyst ,IE,Lead / Staff,,2026-10-31,reposter
+J0314,Brackenly Retail,Senior Commercial Analyst,US,Senior,"sql, Excel, Python, R",2026-10-02,careers_page
+J0315,Brisketon Logistics,Operations Analyst,IN,Entry Level,"R, sql, Power BI",2026-10-27,careers_page
+J0316,Juniperhay Insurance,Senior Operations Analyst ,GB,Senior,,2026-10-01,reposter
+J0317,Corrowen Games,Senior Data Analyst,GB,Senior,Python,2026-09-18,careers_page
+J0318,Saltbrae Energy,Data Analyst,US,Mid Level,"Tableau, Python, sql",2026-09-28,careers_page
+J0319,Brackenly Retail,Senior Product Analyst,US,Senior,,2026-08-18,careers_page
+J0320,Mirefield Foods,Pricing Analyst,IN,Not Specified,Excel,2026-10-14,careers_page
+J0321,Brackenly Retail,Senior Financial Analyst,US,Senior,"SQL, R, Excel, Python",2026-09-10,careers_page
+J0322,Vantorre Insurance,Business Analyst ,IE,Not Specified,"Python, SQL",2026-10-31,reposter
+J0323,Cindervale Health,Product Analyst,IN,Not Specified,"Excel, SQL",2026-09-18,careers_page
+J0324,Wrenhaven Insurance,Insights Analyst,IN,Not Specified,"SAS, Jira",2026-09-18,careers_page
+J0325,Tallowmere Games,Insights Analyst,IE,Not Specified,"sql, excel, Python",2026-10-16,careers_page
+J0326,Corrowen Retail,Marketing Analyst,IN,Mid Level,power bi,2026-09-19,careers_page
+J0327,Brackenly Foods,BI Analyst,GB,Mid Level,"R, SQL, Power BI, Tableau",2026-09-09,careers_page
+J0328,Corrowen Games,Reporting Analyst,GB,Not Specified,"power bi, SQL",2026-09-10,careers_page
+J0329,Pellinor Logistics,Lead Financial Analyst,DE,Lead / Staff,"SAS, dbt, Excel, sql, Jira, Looker",2026-09-06,careers_page
+J0330,Mirefield Foods,Lead Insights Analyst,IN,Lead / Staff,"Excel, Python, Power BI",2026-10-06,careers_page
+J0331,Nettlecombe Health,Supply Chain Analyst,IN,Not Specified,,2026-08-18,careers_page
+J0332,Juniperhay Insurance,Operations Analyst,IE,Mid Level,"sql, Python",2026-08-19,careers_page
+J0333,Wrenhaven Retail,Senior Commercial Analyst,IN,Senior,"Power BI, SQL, Tableau",2026-10-03,careers_page
+J0334,Corrowen Health,Financial Analyst,NL,Not Specified,"excel, R, Python",2026-08-24,careers_page
+J0335,Thistlemoor Energy,Marketing Analyst,IN,Not Specified,"Excel, Python",2026-10-03,careers_page
+J0336,Wrenhaven Foods,Insights Analyst,IE,Entry Level,"Looker, Tableau, Power BI, excel, sql",2026-08-18,careers_page
+J0337,Quillary Travel,Product Analyst,DE,Mid Level,power bi,2026-08-28,careers_page
+J0338,Brackenly Retail,Lead Supply Chain Analyst,GB,Lead / Staff,"R, Python, dbt, Snowflake, excel",2026-10-25,careers_page
+J0339,Kestrelwood Foods,Supply Chain Analyst,GB,Mid Level,"Jira, sql",2026-09-20,careers_page
+J0340,Wrenhaven Telecom,Pricing Analyst,NL,Entry Level,"sql, Python",2026-09-10,careers_page
+J0341,Wrenhaven Foods,Business Analyst,IE,Mid Level,excel,2026-09-22,careers_page
+J0342,Dovecrest Retail,Marketing Analyst,GB,Entry Level,"sql, Excel, Python",2026-10-06,careers_page
+J0343,Quillary Health,Insights Analyst,IE,Entry Level,,2026-08-31,careers_page
+J0344,Nettlecombe Travel,Lead Pricing Analyst,GB,Lead / Staff,"power bi, R",2026-09-04,careers_page
+J0345,Kestrelwood Retail,Supply Chain Analyst ,IE,Not Specified,"power bi, Python, SQL",2026-09-25,reposter
+J0346,Quillary Logistics,Business Analyst,GB,Not Specified,Tableau,2026-08-25,careers_page
+J0347,Brackenly Foods,Marketing Analyst,GB,Not Specified,"power bi, Python, sql",2026-09-27,careers_page
+J0348,Rookmere Travel,Lead Data Analyst,GB,Lead / Staff,"Power BI, Python, excel, Tableau",2026-08-18,careers_page
+J0349,Brackenly Retail,Lead BI Analyst,US,Lead / Staff,"Python, SAS, sql, Looker, Tableau",2026-08-24,careers_page
+J0350,Zelvane Telecom,Commercial Analyst,DE,Not Specified,"excel, sql, power bi, Tableau, Python",2026-09-03,careers_page
+J0351,Kestrelwood Insurance,Senior Financial Analyst,GB,Senior,"excel, SQL, power bi",2026-10-28,careers_page
+J0352,Brackenly Retail,Senior Supply Chain Analyst,DE,Senior,"Python, Snowflake, sql, Looker, dbt",2026-08-17,careers_page
+J0353,Nettlecombe Travel,Senior Reporting Analyst,GB,Senior,Python,2026-10-07,careers_page
+J0354,Quillary Travel,Data Analyst,DE,Entry Level,"R, power bi, Excel, SQL",2026-10-30,careers_page
+J0355,Vantorre Foods,Senior Marketing Analyst,NL,Senior,,2026-08-21,careers_page
+J0356,Corrowen Retail,Reporting Analyst,IN,Entry Level,"SQL, Excel, Tableau, Looker",2026-10-27,careers_page
+J0357,Brackenly Retail,Commercial Analyst,US,Not Specified,"Looker, sql, Snowflake, Python",2026-09-07,careers_page
+J0358,Yarrowick Health,Marketing Analyst,IE,Mid Level,,2026-09-04,careers_page
+J0359,Kestrelwood Insurance,Lead Insights Analyst,GB,Lead / Staff,"Python, Tableau, dbt, Power BI",2026-10-12,careers_page
+J0360,Brackenly Retail,Lead Product Analyst,US,Lead / Staff,"Snowflake, SQL, dbt",2026-09-03,careers_page
+J0361,Brisketon Travel,Lead Insights Analyst,GB,Lead / Staff,"Python, sql",2026-09-20,careers_page
+J0362,Ivelstone Foods,Supply Chain Analyst,US,Mid Level,"sql, power bi",2026-08-22,careers_page
+J0363,Yarrowick Health,Product Analyst,DE,Mid Level,,2026-10-18,careers_page
+J0364,Harrowfield Energy,Senior Operations Analyst,GB,Senior,Python,2026-09-01,careers_page
+J0365,Cindervale Travel,BI Analyst,GB,Not Specified,"SQL, Tableau, Power BI, Excel",2026-10-26,careers_page
+J0366,Yarrowick Telecom,Lead Supply Chain Analyst,DE,Lead / Staff,"Python, excel, R",2026-08-17,careers_page
+J0367,Juniperhay Lending,Business Analyst,GB,Not Specified,SQL,2026-08-26,careers_page
+J0368,Larkspire Foods,Commercial Analyst,NL,Mid Level,"Excel, Power BI, sql",2026-08-31,careers_page
+J0369,Vantorre Telecom,Senior Pricing Analyst,GB,Senior,"Looker, power bi, sql, R, SAS, Python, excel, Tableau",2026-09-23,careers_page
+J0370,Pellinor Logistics,Data Analyst,DE,Mid Level,"Power BI, Looker, sql",2026-09-14,careers_page
+J0371,Brackenly Retail,Senior BI Analyst,US,Senior,"SQL, Python",2026-10-19,careers_page
+J0372,Tallowmere Games,Lead Supply Chain Analyst,IE,Lead / Staff,"sql, SAS, Looker, Tableau, excel, Python",2026-09-27,careers_page
+J0373,Ambergate Foods,Product Analyst,IE,Not Specified,"Snowflake, Jira, Excel, Python, SQL",2026-09-04,careers_page
+J0374,Brackenly Retail,Senior Pricing Analyst,IN,Senior,"dbt, SQL",2026-10-26,careers_page
+J0375,Wrenhaven Foods,BI Analyst,IE,Mid Level,,2026-09-20,careers_page
+J0376,Vantorre Insurance,Commercial Analyst,IE,Not Specified,"excel, SQL",2026-09-06,careers_page
+J0377,Brisketon Games,Financial Analyst,US,Not Specified,"R, Tableau, excel, sql",2026-09-30,careers_page
+J0378,Ostravel Logistics,Financial Analyst,IN,Mid Level,"sql, Python, Excel",2026-09-13,careers_page
+J0379,Elmswick Travel,Reporting Analyst,DE,Not Specified,"Python, power bi, excel",2026-08-24,careers_page
+J0380,Zelvane Health,Operations Analyst,US,Not Specified,SQL,2026-10-31,careers_page
+J0381,Glenmarrow Energy,SENIOR MARKETING ANALYST,GB,Senior,"sql, excel, Python",2026-10-31,reposter
+J0382,Larkspire Telecom,Senior Insights Analyst,GB,Senior,"excel, SQL, power bi, SAS, Python",2026-10-01,careers_page
+J0383,Nettlecombe Health,Senior Commercial Analyst,IN,Senior,"Python, Snowflake, sql, Tableau",2026-10-29,careers_page
+J0384,Corrowen Retail,Business Analyst,DE,Not Specified,,2026-10-28,careers_page
+J0385,Nettlecombe Health,Financial Analyst,DE,Mid Level,"Python, SQL, Excel",2026-08-31,careers_page
+J0386,Harrowfield Logistics,Product Analyst,IE,Entry Level,"power bi, sql",2026-10-06,careers_page
+J0387,Dovecrest Travel,Senior Commercial Analyst,IE,Senior,"power bi, Excel",2026-10-24,careers_page
+J0388,Brackenly Retail,Lead Product Analyst,US,Lead / Staff,"sql, R, Excel, Snowflake",2026-10-08,careers_page
+J0389,Rookmere Logistics,Pricing Analyst,IN,Mid Level,"sql, Python, Tableau, Power BI",2026-08-18,careers_page
+J0390,Dovecrest Health,Operations Analyst,US,Mid Level,"R, SQL",2026-09-01,careers_page
+J0391,Ambergate Foods,Senior Business Analyst,GB,Senior,SQL,2026-10-01,careers_page
+J0392,Brackenly Retail,Senior Marketing Analyst,US,Senior,"Snowflake, Excel, Tableau, SAS, R, SQL",2026-10-20,careers_page
+J0393,Brackenly Retail,Senior Pricing Analyst,GB,Senior,"R, Python, sql, Tableau, excel",2026-09-04,careers_page
+J0394,Larkspire Health,Supply Chain Analyst,DE,Not Specified,,2026-10-08,careers_page
+J0395,Mirefield Lending,Product Analyst,GB,Mid Level,"sql, Python",2026-10-11,careers_page
+J0396,Saltbrae Energy,Business Analyst,GB,Mid Level,"Python, Tableau, dbt, Jira, SQL, Excel",2026-09-21,careers_page
+J0397,Brisketon Games,Pricing Analyst,DE,Mid Level,"Excel, dbt, SQL",2026-10-21,careers_page
+J0398,Elmswick Games,Reporting Analyst,GB,Mid Level,"excel, SQL, Python, Jira, Power BI",2026-10-06,careers_page
+J0399,Hollowmint Lending,Senior Marketing Analyst,DE,Senior,"sql, Python, Power BI, R",2026-09-28,careers_page
+J0400,Larkspire Retail,Business Analyst,IN,Mid Level,"SQL, Python",2026-10-02,careers_page
+J0401,Elmswick Travel,Insights Analyst,IN,Not Specified,"Snowflake, SQL, Tableau, Python",2026-09-02,careers_page
+J0402,Hollowmint Foods,Supply Chain Analyst,GB,Entry Level,"SAS, sql",2026-08-31,careers_page
+J0403,Brackenly Retail,Lead Financial Analyst,GB,Lead / Staff,"sql, Snowflake, Python, excel",2026-08-30,careers_page
+J0404,Kestrelwood Foods,Financial Analyst,GB,Entry Level,Python,2026-10-21,careers_page
+J0405,Mirefield Energy,Product Analyst,IN,Mid Level,"SQL, Excel, Python, SAS",2026-10-03,careers_page
+J0406,Brackenly Retail,Senior Product Analyst,US,Senior,"sql, Python",2026-09-12,careers_page
+J0407,Vantorre Telecom,SENIOR PRICING ANALYST,GB,Senior,"Looker, power bi, sql, R, SAS, Python, excel, Tableau",2026-10-23,reposter
+J0408,Dovecrest Travel,Product Analyst,US,Mid Level,"excel, sql, Python",2026-08-23,careers_page
+J0409,Ambergate Insurance,Business Analyst ,IE,Not Specified,,2026-09-12,reposter
+J0410,Ambergate Foods,BI Analyst,GB,Mid Level,"Jira, Tableau, excel, SQL, Looker",2026-09-16,careers_page
+J0411,Nettlecombe Travel,Operations Analyst,GB,Not Specified,"SQL, Tableau, Excel, Python",2026-10-23,careers_page
+J0412,Dovecrest Health,Senior Insights Analyst,US,Senior,"Python, sql",2026-10-20,careers_page
+J0413,Saltbrae Games,Senior Operations Analyst,DE,Senior,Excel,2026-10-01,careers_page
+J0414,Elmswick Games,Operations Analyst,GB,Mid Level,"Python, SQL, excel, Tableau",2026-10-11,careers_page
+J0415,Brisketon Health,Product Analyst,US,Not Specified,Excel,2026-10-19,careers_page
+J0416,Dovecrest Travel,Reporting Analyst,US,Mid Level,"SQL, Tableau, power bi",2026-09-28,careers_page
+J0417,Nettlecombe Health,Product Analyst,NL,Not Specified,"Snowflake, power bi, Python, SQL, SAS",2026-09-08,careers_page
+J0418,Thistlemoor Logistics,Product Analyst,DE,Not Specified,"Looker, Tableau, Power BI, R, Excel, SQL",2026-09-12,careers_page
+J0419,Yarrowick Telecom,Senior Commercial Analyst,DE,Senior,"Excel, SQL",2026-10-19,careers_page
+J0420,Ambergate Retail,Marketing Analyst,GB,Not Specified,Python,2026-08-17,careers_page
+J0421,Fernhallow Travel,Financial Analyst,GB,Mid Level,SQL,2026-09-04,careers_page
+J0422,Larkspire Foods,COMMERCIAL ANALYST,GB,Not Specified,power bi,2026-10-31,reposter
+J0423,Hollowmint Lending,Senior Commercial Analyst,IN,Senior,"Python, Power BI, sql",2026-09-21,careers_page
+J0424,Pellinor Lending,Data Analyst,IE,Not Specified,,2026-09-07,careers_page
+J0425,Brackenly Foods,Commercial Analyst ,GB,Not Specified,"Snowflake, sql",2026-09-11,reposter
+J0426,Ivelstone Lending,Senior Insights Analyst,IN,Senior,"Excel, Python, sql",2026-09-14,careers_page
+J0427,Juniperhay Insurance,Insights Analyst,GB,Entry Level,"Python, SQL",2026-10-08,careers_page
+J0428,Quillary Games,Reporting Analyst ,IE,Not Specified,sql,2026-09-12,reposter
+J0429,Zelvane Telecom,Business Analyst,GB,Not Specified,,2026-09-02,careers_page
+J0430,Brackenly Retail,Reporting Analyst,IN,Mid Level,"R, SQL, Python, dbt",2026-10-18,careers_page
+J0431,Glenmarrow Lending,Data Analyst,US,Entry Level,"Python, Jira, SQL",2026-10-05,careers_page
+J0432,Juniperhay Foods,Marketing Analyst,DE,Mid Level,excel,2026-09-24,careers_page
+J0433,Yarrowick Telecom,Senior Operations Analyst,DE,Senior,"Python, excel",2026-10-14,careers_page
+J0434,Corrowen Games,Operations Analyst,GB,Not Specified,"Tableau, SQL, Python, Excel",2026-08-24,careers_page
+J0435,Brisketon Games,Operations Analyst,US,Mid Level,"sql, Excel",2026-09-20,careers_page
+J0436,Brackenly Retail,Lead Pricing Analyst,IN,Lead / Staff,"excel, SQL, Python",2026-08-30,careers_page
+J0437,Brisketon Logistics,Business Analyst,IN,Not Specified,"power bi, SQL",2026-09-11,careers_page
+J0438,Brisketon Health,BI Analyst,US,Not Specified,"SQL, Looker",2026-10-03,careers_page
+J0439,Brackenly Retail,Operations Analyst,US,Not Specified,"Python, Tableau, sql",2026-10-24,careers_page
+J0440,Marrowby Health,Operations Analyst ,GB,Not Specified,"sql, Python, SAS, excel",2026-08-29,reposter
+J0441,Larkspire Retail,Business Analyst,IN,Entry Level,"sql, Python, power bi, Tableau",2026-09-01,careers_page
+J0442,Brisketon Travel,BI Analyst,GB,Not Specified,"power bi, R, Python, SAS",2026-09-27,careers_page
+J0443,Brackenly Telecom,Senior Business Analyst,US,Senior,Excel,2026-10-07,careers_page
+J0444,Kestrelwood Telecom,Operations Analyst,IN,Not Specified,"excel, Python, dbt, R, SQL",2026-09-30,careers_page
+J0445,Thistlemoor Energy,BI Analyst,IN,Not Specified,"sql, excel, Looker, dbt",2026-09-02,careers_page
+J0446,Juniperhay Telecom,Insights Analyst,US,Not Specified,"Snowflake, Tableau, Python, Power BI",2026-10-29,careers_page
+J0447,Glenmarrow Logistics,Lead Marketing Analyst,IN,Lead / Staff,Python,2026-10-27,careers_page
+J0448,Vantorre Telecom,Senior Supply Chain Analyst,IN,Senior,Python,2026-10-02,careers_page
+J0449,Larkspire Health,BI Analyst,DE,Mid Level,"Looker, Tableau, sql, Python",2026-08-18,careers_page
+J0450,Ostravel Energy,Product Analyst,GB,Mid Level,"Excel, Snowflake, SQL, Tableau",2026-10-23,careers_page
+J0451,Brackenly Retail,Lead Reporting Analyst,GB,Lead / Staff,"SQL, Python",2026-10-04,careers_page
+J0452,Ambergate Foods,Pricing Analyst,GB,Not Specified,,2026-10-19,careers_page
+J0453,Wrenhaven Retail,BI Analyst,IE,Not Specified,"sql, Python",2026-10-16,careers_page
+J0454,Thistlemoor Energy,Supply Chain Analyst,IN,Not Specified,,2026-10-24,careers_page
+J0455,Harrowfield Logistics,Senior Data Analyst,DE,Senior,"excel, Looker, sql",2026-10-16,careers_page
+J0456,Thistlemoor Logistics,Marketing Analyst,DE,Entry Level,"Python, Excel, SQL",2026-10-20,careers_page
+J0457,Zelvane Telecom,Business Analyst,DE,Not Specified,Tableau,2026-08-28,careers_page
+J0458,Cindervale Travel,Pricing Analyst,GB,Not Specified,"SQL, Power BI, Tableau, Excel",2026-09-12,careers_page
+J0459,Ostravel Lending,Insights Analyst ,NL,Mid Level,"SQL, Python, Power BI, Looker, excel",2026-10-24,reposter
+J0460,Thistlemoor Energy,Pricing Analyst,IN,Entry Level,"Python, sql",2026-08-21,careers_page
+J0461,Elmswick Health,Marketing Analyst,GB,Not Specified,"Excel, dbt",2026-10-04,careers_page
+J0462,Tallowmere Energy,Marketing Analyst,DE,Not Specified,,2026-08-18,careers_page
+J0463,Yarrowick Retail,Lead Operations Analyst,GB,Lead / Staff,"Jira, sql, R, Excel, Power BI, Looker, Python",2026-10-10,careers_page
+J0464,Brackenly Retail,Senior Product Analyst,GB,Senior,"SQL, Jira, Python",2026-09-16,careers_page
+J0465,Kestrelwood Foods,Insights Analyst,US,Not Specified,,2026-09-11,careers_page
+J0466,Wrenhaven Insurance,Reporting Analyst,US,Mid Level,"Jira, sql, Tableau",2026-10-07,careers_page
+J0467,Umberlane Foods,BI Analyst,DE,Not Specified,"R, Excel, Python",2026-10-13,careers_page
+J0468,Brackenly Retail,Data Analyst,IN,Mid Level,Tableau,2026-09-25,careers_page
+J0469,Juniperhay Insurance,Supply Chain Analyst,GB,Mid Level,"Tableau, SQL, excel",2026-10-03,careers_page
+J0470,Nettlecombe Health,Business Analyst ,IN,Not Specified,Python,2026-10-31,reposter
+J0471,Fernhallow Games,Insights Analyst,IE,Mid Level,"excel, sql, Jira",2026-10-29,careers_page
+J0472,Kestrelwood Telecom,Insights Analyst,GB,Mid Level,"power bi, Snowflake, Excel, SQL",2026-10-29,careers_page
+J0473,Mirefield Energy,Financial Analyst,IN,Entry Level,,2026-09-09,careers_page
+J0474,Saltbrae Energy,Financial Analyst,US,Not Specified,"Python, Looker, Tableau",2026-10-24,careers_page
+J0475,Quillary Travel,Marketing Analyst,DE,Mid Level,"Power BI, excel, sql, Jira",2026-09-29,careers_page
+J0476,Tallowmere Logistics,Insights Analyst,GB,Entry Level,"Tableau, sql, Excel",2026-10-10,careers_page
+J0477,Tallowmere Games,Operations Analyst,IE,Not Specified,"Jira, SQL",2026-08-31,careers_page
+J0478,Kestrelwood Telecom,Marketing Analyst,GB,Not Specified,"Excel, sql",2026-09-07,careers_page
+J0479,Ivelstone Energy,Insights Analyst,GB,Not Specified,"Tableau, power bi, Snowflake, sql",2026-09-02,careers_page
+J0480,Brackenly Retail,Business Analyst,GB,Not Specified,"Excel, Snowflake, SAS, Python, Tableau",2026-08-17,careers_page
+J0481,Brackenly Retail,Senior BI Analyst,US,Senior,"Python, sql, Looker",2026-09-27,careers_page
+J0482,Kestrelwood Foods,Product Analyst,IE,Mid Level,SQL,2026-10-10,careers_page
+J0483,Saltbrae Energy,Business Analyst,IE,Entry Level,"Excel, R, SQL",2026-09-21,careers_page
+J0484,Nettlecombe Health,Business Analyst,IN,Not Specified,Python,2026-10-24,careers_page
+J0485,Saltbrae Logistics,Data Analyst,US,Not Specified,"R, power bi, Jira",2026-09-30,careers_page
+J0486,Ambergate Retail,LEAD PRICING ANALYST,GB,Lead / Staff,"power bi, Python, SQL, Excel",2026-08-30,reposter
+J0487,Mirefield Energy,Insights Analyst,IN,Mid Level,,2026-09-01,careers_page
+J0488,Quillary Logistics,Financial Analyst ,IN,Not Specified,"excel, Jira",2026-10-13,reposter
+J0489,Ivelstone Foods,Senior Reporting Analyst,US,Senior,,2026-09-16,careers_page
+J0490,Quillary Games,Reporting Analyst,IE,Not Specified,sql,2026-08-17,careers_page
+J0491,Mirefield Energy,Product Analyst,IN,Mid Level,"Tableau, sql, Power BI",2026-08-27,careers_page
+J0492,Brackenly Foods,Commercial Analyst,GB,Not Specified,"Snowflake, sql",2026-08-31,careers_page
+J0493,Ostravel Logistics,Operations Analyst,IN,Not Specified,"dbt, sql, power bi, Python",2026-09-26,careers_page
+J0494,Elmswick Travel,Insights Analyst,IN,Mid Level,"Tableau, Jira",2026-09-09,careers_page
+J0495,Brackenly Foods,Supply Chain Analyst,IE,Mid Level,"SAS, Python, Tableau, SQL",2026-09-12,careers_page
+J0496,Juniperhay Insurance,Insights Analyst ,GB,Entry Level,"Python, SQL",2026-10-29,reposter
+J0497,Tallowmere Games,Business Analyst,IE,Not Specified,"Tableau, excel, sql, Python",2026-10-15,careers_page
+J0498,Ivelstone Foods,Data Analyst,US,Mid Level,"power bi, Python, Jira, SQL, Excel, SAS",2026-10-02,careers_page
+J0499,Corrowen Games,BI Analyst,GB,Not Specified,"Power BI, Python, Tableau, SQL",2026-08-24,careers_page
+J0500,Ostravel Energy,Senior Business Analyst,GB,Senior,Python,2026-08-30,careers_page
+J0501,Brisketon Travel,Financial Analyst,DE,Entry Level,"SQL, dbt, Power BI",2026-08-17,careers_page
+J0502,Rookmere Games,Lead Data Analyst,GB,Lead / Staff,"Tableau, sql",2026-10-06,careers_page
+J0503,Zelvane Retail,Reporting Analyst,IN,Entry Level,Jira,2026-10-28,careers_page
+J0504,Vantorre Insurance,Operations Analyst,NL,Not Specified,"sql, excel",2026-10-04,careers_page
+J0505,Zelvane Health,Marketing Analyst,US,Mid Level,"Looker, sql, Python, Excel",2026-08-21,careers_page
+J0506,Quillary Health,Marketing Analyst,IE,Not Specified,"SQL, excel, Python",2026-10-31,careers_page
+J0507,Cindervale Health,Senior Reporting Analyst,IN,Senior,"Looker, Power BI, Tableau",2026-09-19,careers_page
+J0508,Vantorre Insurance,Data Analyst,IE,Mid Level,"SQL, Python, power bi",2026-08-21,careers_page
+J0509,Brackenly Retail,Senior Product Analyst,GB,Senior,"Python, sql",2026-09-15,careers_page
+J0510,Glenmarrow Games,BI ANALYST,GB,Not Specified,,2026-10-20,reposter
+J0511,Saltbrae Logistics,Lead Marketing Analyst,US,Lead / Staff,"Excel, sql",2026-10-29,careers_page
+J0512,Harrowfield Energy,Product Analyst ,GB,Not Specified,"Tableau, Excel, SQL, Python",2026-09-27,reposter
+J0513,Wrenhaven Retail,Lead Insights Analyst,IN,Lead / Staff,,2026-09-14,careers_page
+J0514,Rookmere Games,Senior Product Analyst,GB,Senior,"Python, Excel, SQL",2026-10-30,careers_page
+J0515,Elmswick Games,Commercial Analyst,GB,Mid Level,"sql, power bi, R, Excel",2026-09-12,careers_page
+J0516,Cindervale Telecom,Supply Chain Analyst ,GB,Mid Level,"sql, excel, Python",2026-10-31,reposter
+J0517,Thistlemoor Lending,Insights Analyst,NL,Entry Level,"Power BI, SQL",2026-09-23,careers_page
+J0518,Brackenly Retail,Senior Pricing Analyst,US,Senior,"Jira, SQL, R",2026-08-19,careers_page
+J0519,Vantorre Telecom,Marketing Analyst,IN,Mid Level,excel,2026-10-20,careers_page
+J0520,Umberlane Foods,Reporting Analyst,US,Mid Level,"Python, SQL",2026-08-22,careers_page
+J0521,Yarrowick Foods,Product Analyst,IN,Mid Level,"Python, excel, power bi",2026-10-31,careers_page
+J0522,Rookmere Travel,Reporting Analyst,GB,Not Specified,"R, Looker, Jira",2026-09-18,careers_page
+J0523,Cindervale Retail,Pricing Analyst,GB,Mid Level,excel,2026-09-01,careers_page
+J0524,Ambergate Retail,Lead Pricing Analyst,GB,Lead / Staff,"power bi, Python, SQL, Excel",2026-08-19,careers_page
+J0525,Ivelstone Insurance,Product Analyst,GB,Not Specified,,2026-10-09,careers_page
+J0526,Saltbrae Games,Lead Insights Analyst,IE,Lead / Staff,,2026-10-13,careers_page
+J0527,Fernhallow Travel,Operations Analyst,GB,Entry Level,"R, sql",2026-08-17,careers_page
+J0528,Hollowmint Lending,Data Analyst,DE,Mid Level,"Power BI, Jira, dbt, excel, SQL, Python",2026-10-11,careers_page
+J0529,Brisketon Games,Senior Product Analyst,US,Senior,"Tableau, excel, sql",2026-10-31,careers_page
+J0530,Dovecrest Health,Supply Chain Analyst,US,Mid Level,"SAS, Python",2026-10-07,careers_page
+J0531,Marrowby Telecom,Financial Analyst,IE,Mid Level,"R, sql",2026-09-20,careers_page
+J0532,Cindervale Telecom,Supply Chain Analyst,GB,Not Specified,"Jira, Excel, Power BI, Tableau",2026-09-29,careers_page
+J0533,Ivelstone Insurance,Supply Chain Analyst,GB,Mid Level,Looker,2026-09-20,careers_page
+J0534,Vantorre Insurance,Senior Insights Analyst,IE,Senior,"power bi, Python, excel",2026-09-06,careers_page
+J0535,Brackenly Foods,Supply Chain Analyst ,IE,Mid Level,"SAS, Python, Tableau, SQL",2026-09-30,reposter
+J0536,Corrowen Travel,Senior Reporting Analyst,US,Senior,"Tableau, Snowflake, SQL",2026-10-06,careers_page
+J0537,Pellinor Logistics,MARKETING ANALYST,NL,Not Specified,"Excel, SQL, R",2026-10-02,reposter
+J0538,Vantorre Lending,BI Analyst,IN,Mid Level,"excel, Looker",2026-10-13,careers_page
+J0539,Brackenly Retail,Senior Commercial Analyst,US,Senior,,2026-09-26,careers_page
+J0540,Wrenhaven Telecom,BI Analyst,US,Mid Level,"SAS, Tableau, Excel",2026-08-21,careers_page
+J0541,Wrenhaven Telecom,Marketing Analyst,NL,Mid Level,sql,2026-09-03,careers_page
+J0542,Cindervale Telecom,Senior Commercial Analyst,GB,Senior,,2026-10-30,careers_page
+J0543,Thistlemoor Energy,BI Analyst,IN,Not Specified,"excel, Snowflake",2026-10-16,careers_page
+J0544,Wrenhaven Retail,BI Analyst,GB,Entry Level,"Python, power bi, excel",2026-09-25,careers_page
+J0545,Cindervale Travel,Business Analyst ,IE,Not Specified,"SQL, R",2026-10-23,reposter
+J0546,Tallowmere Energy,BI Analyst,US,Mid Level,"Tableau, excel, SQL, power bi",2026-09-07,careers_page
+J0547,Pellinor Logistics,Business Analyst,DE,Not Specified,"power bi, Tableau, R, excel, sql",2026-10-24,careers_page
+J0548,Umberlane Energy,Marketing Analyst,IE,Not Specified,"sql, Looker, power bi, Python",2026-10-30,careers_page
+J0549,Kestrelwood Insurance,BI Analyst,GB,Not Specified,"excel, sql, Power BI",2026-08-17,careers_page
+J0550,Brackenly Retail,Senior Product Analyst,GB,Senior,"Excel, R, Tableau, Snowflake, sql",2026-08-27,careers_page
+J0551,Pellinor Energy,Reporting Analyst,IE,Not Specified,"Tableau, SQL",2026-10-31,careers_page
+J0552,Vantorre Foods,Financial Analyst,NL,Mid Level,"SQL, Snowflake, Jira",2026-09-02,careers_page
+J0553,Yarrowick Telecom,Data Analyst,DE,Not Specified,"Excel, SQL, R, Power BI",2026-09-27,careers_page
+J0554,Pellinor Lending,Data Analyst,IE,Entry Level,"sql, excel, Python",2026-10-02,careers_page
+J0555,Brackenly Retail,Operations Analyst,IN,Not Specified,,2026-09-20,careers_page
+J0556,Brackenly Retail,Lead Data Analyst,GB,Lead / Staff,"excel, Snowflake, sql, Tableau, Python",2026-10-01,careers_page
+J0557,Yarrowick Health,Marketing Analyst,NL,Entry Level,"Tableau, sql, Snowflake, excel",2026-09-05,careers_page
+J0558,Nettlecombe Games,Insights Analyst,GB,Not Specified,"SQL, Looker",2026-10-21,careers_page
+J0559,Nettlecombe Travel,Senior Financial Analyst,NL,Senior,,2026-10-27,careers_page
+J0560,Harrowfield Logistics,Supply Chain Analyst,GB,Entry Level,Jira,2026-08-29,careers_page
+J0561,Saltbrae Games,Operations Analyst,NL,Not Specified,excel,2026-10-30,careers_page
+J0562,Yarrowick Telecom,BI Analyst,NL,Not Specified,,2026-09-09,careers_page
+J0563,Hollowmint Lending,Commercial Analyst,DE,Not Specified,"sql, Excel, Jira, Python, Snowflake",2026-09-28,careers_page
+J0564,Elmswick Travel,Financial Analyst,IN,Not Specified,"Tableau, sql",2026-09-01,careers_page
+J0565,Nettlecombe Health,Data Analyst,IN,Mid Level,,2026-10-03,careers_page
+J0566,Brackenly Retail,Lead BI Analyst,IN,Lead / Staff,"R, SAS",2026-09-29,careers_page
+J0567,Umberlane Energy,Insights Analyst,GB,Mid Level,"Python, sql, Tableau, R",2026-09-25,careers_page
+J0568,Harrowfield Energy,Operations Analyst,NL,Not Specified,"Excel, Tableau, SQL, Power BI, Python",2026-09-22,careers_page
+J0569,Thistlemoor Logistics,Senior Pricing Analyst,DE,Senior,"SQL, Python, excel",2026-08-27,careers_page
+J0570,Dovecrest Health,Supply Chain Analyst,US,Not Specified,"Python, Tableau",2026-09-25,careers_page
+J0571,Yarrowick Foods,Operations Analyst,IN,Not Specified,"Snowflake, SQL, Power BI, Excel",2026-08-25,careers_page
+J0572,Brisketon Games,Marketing Analyst,US,Not Specified,"Tableau, sql, power bi, Python",2026-10-14,careers_page
+J0573,Kestrelwood Telecom,Commercial Analyst,GB,Mid Level,"Tableau, SQL",2026-09-13,careers_page
+J0574,Harrowfield Energy,Product Analyst,GB,Not Specified,"Tableau, Excel, SQL, Python",2026-09-15,careers_page
+J0575,Cindervale Health,Operations Analyst,IN,Entry Level,"Python, Excel, sql",2026-09-02,careers_page
+J0576,Brackenly Retail,SENIOR BI ANALYST,US,Senior,"Python, sql, Looker",2026-10-08,reposter
+J0577,Brackenly Retail,Senior Commercial Analyst,US,Senior,"Looker, Python, dbt",2026-10-27,careers_page
+J0578,Pellinor Lending,Data Analyst,IE,Not Specified,"excel, Python, SQL, Tableau",2026-09-26,careers_page
+J0579,Kestrelwood Telecom,Lead Product Analyst,GB,Lead / Staff,,2026-08-21,careers_page
+J0580,Hollowmint Telecom,Operations Analyst,IE,Mid Level,"R, Tableau, Jira",2026-10-05,careers_page
+J0581,Nettlecombe Retail,Reporting Analyst,IE,Mid Level,"excel, SQL, Jira",2026-08-24,careers_page
+J0582,Vantorre Insurance,Reporting Analyst,IE,Not Specified,"Tableau, Excel",2026-09-19,careers_page
+J0583,Brackenly Retail,Senior Business Analyst,IN,Senior,"Tableau, Python, R, Snowflake",2026-09-20,careers_page
+J0584,Zelvane Retail,Pricing Analyst,DE,Entry Level,"excel, Power BI",2026-09-09,careers_page
+J0585,Ivelstone Lending,Insights Analyst,US,Not Specified,"R, SQL, excel, Tableau",2026-10-14,careers_page
+J0586,Corrowen Retail,Reporting Analyst,IN,Mid Level,"Tableau, sql, Python",2026-10-22,careers_page
+J0587,Rookmere Energy,Marketing Analyst,US,Entry Level,"sql, power bi",2026-08-28,careers_page
+J0588,Kestrelwood Foods,Insights Analyst ,US,Not Specified,,2026-10-01,reposter
+J0589,Ostravel Logistics,Operations Analyst,IN,Not Specified,sql,2026-08-24,careers_page
+J0590,Quillary Logistics,Financial Analyst,IN,Not Specified,"excel, Jira",2026-09-18,careers_page
+J0591,Marrowby Health,Data Analyst,GB,Mid Level,"power bi, Looker, sql",2026-08-25,careers_page
+J0592,Wrenhaven Telecom,Reporting Analyst,NL,Not Specified,"excel, R, Looker",2026-08-26,careers_page
+J0593,Brackenly Retail,Marketing Analyst,US,Mid Level,"power bi, Python, Tableau, dbt",2026-09-07,careers_page
+J0594,Thistlemoor Insurance,Senior Commercial Analyst,US,Senior,"Python, R, SQL",2026-08-22,careers_page
+J0595,Pellinor Logistics,Business Analyst,DE,Mid Level,"Excel, SQL",2026-10-31,careers_page
+J0596,Umberlane Energy,Lead Product Analyst,GB,Lead / Staff,"SQL, R",2026-08-22,careers_page
+J0597,Corrowen Health,Supply Chain Analyst,GB,Mid Level,"Python, excel",2026-10-27,careers_page
+J0598,Hollowmint Foods,Senior Marketing Analyst,GB,Senior,,2026-10-04,careers_page
+J0599,Dovecrest Retail,Marketing Analyst,US,Not Specified,"sql, Tableau",2026-10-19,careers_page
+J0600,Brackenly Retail,Senior Operations Analyst,GB,Senior,"sql, Snowflake, Python",2026-10-15,careers_page
+J0601,Yarrowick Foods,PRODUCT ANALYST,IN,Mid Level,"Python, excel, power bi",2026-10-31,reposter
+J0602,Vantorre Telecom,Marketing Analyst ,IN,Mid Level,excel,2026-10-31,reposter
+J0603,Larkspire Health,BI Analyst,GB,Mid Level,sql,2026-08-20,careers_page
+J0604,Brackenly Retail,Lead BI Analyst ,US,Lead / Staff,"Python, SAS, sql, Looker, Tableau",2026-09-17,reposter
+J0605,Kestrelwood Foods,Data Analyst,GB,Not Specified,"Python, excel, SQL",2026-09-30,careers_page
+J0606,Yarrowick Telecom,Reporting Analyst,DE,Not Specified,"R, SQL, Power BI",2026-08-25,careers_page
+J0607,Thistlemoor Energy,Operations Analyst,IN,Mid Level,"R, SQL, excel",2026-10-21,careers_page
+J0608,Elmswick Logistics,Pricing Analyst,NL,Not Specified,sql,2026-08-31,careers_page
+J0609,Mirefield Lending,Pricing Analyst,GB,Not Specified,"Python, Power BI, sql",2026-10-31,careers_page
+J0610,Kestrelwood Retail,Financial Analyst,IE,Mid Level,Python,2026-10-26,careers_page
+J0611,Rookmere Games,Business Analyst,IE,Entry Level,"Snowflake, power bi, excel, Jira, sql",2026-08-30,careers_page
+J0612,Juniperhay Foods,Operations Analyst,US,Mid Level,"sql, Python, Looker, Tableau",2026-09-28,careers_page
+J0613,Wrenhaven Foods,Data Analyst,IE,Mid Level,"Looker, sql, dbt, Tableau, Python",2026-08-27,careers_page
+J0614,Pellinor Logistics,Data Analyst,DE,Mid Level,"Snowflake, SQL, excel",2026-10-16,careers_page
+J0615,Glenmarrow Games,Pricing Analyst,DE,Mid Level,"Tableau, sql, Python, R",2026-08-30,careers_page
+J0616,Wrenhaven Foods,Business Analyst,IE,Mid Level,"SAS, Python, sql",2026-08-24,careers_page
+J0617,Rookmere Energy,Reporting Analyst,US,Mid Level,"SQL, Jira, Python",2026-08-28,careers_page
+J0618,Ivelstone Foods,Product Analyst,US,Mid Level,"Python, Tableau, power bi",2026-10-07,careers_page
+J0619,Vantorre Telecom,Pricing Analyst,IN,Not Specified,"Excel, SQL, Python",2026-10-09,careers_page
+J0620,Brackenly Retail,Senior Commercial Analyst,US,Senior,"power bi, Snowflake, Tableau",2026-09-04,careers_page
+J0621,Dovecrest Health,SUPPLY CHAIN ANALYST,US,Mid Level,"SAS, Python",2026-10-23,reposter
+J0622,Saltbrae Energy,Lead Commercial Analyst,US,Lead / Staff,,2026-09-03,careers_page
+J0623,Vantorre Telecom,Supply Chain Analyst,IN,Not Specified,,2026-09-19,careers_page
+J0624,Rookmere Travel,Lead Product Analyst,GB,Lead / Staff,"Tableau, sql",2026-10-17,careers_page
+J0625,Nettlecombe Travel,Product Analyst ,GB,Entry Level,"power bi, Python, excel, sql",2026-09-18,reposter
+J0626,Kestrelwood Insurance,Product Analyst,NL,Not Specified,"dbt, Excel, sql",2026-09-14,careers_page
+J0627,Yarrowick Health,Commercial Analyst,IE,Not Specified,"excel, Jira, Tableau, sql",2026-09-05,careers_page
+J0628,Larkspire Health,BI Analyst,NL,Entry Level,"R, Tableau",2026-09-24,careers_page
+J0629,Brisketon Games,Insights Analyst,NL,Mid Level,,2026-09-06,careers_page
+J0630,Yarrowick Telecom,Pricing Analyst,DE,Entry Level,"SQL, Python, excel, power bi",2026-10-20,careers_page
+J0631,Hollowmint Lending,BI Analyst,US,Mid Level,power bi,2026-10-11,careers_page
+J0632,Cindervale Telecom,Supply Chain Analyst,GB,Mid Level,"sql, excel, Python",2026-10-24,careers_page
+J0633,Wrenhaven Foods,Commercial Analyst,IE,Mid Level,"Python, Power BI",2026-09-08,careers_page
+J0634,Ambergate Insurance,Financial Analyst,IE,Not Specified,"Jira, Snowflake, dbt, sql, Looker, Python",2026-08-23,careers_page
+J0635,Kestrelwood Retail,Business Analyst,IE,Not Specified,"R, sql, Python",2026-09-20,careers_page
+J0636,Brackenly Foods,Product Analyst,GB,Not Specified,power bi,2026-08-23,careers_page
+J0637,Mirefield Energy,Product Analyst ,IN,Mid Level,"Tableau, sql, Power BI",2026-09-11,reposter
+J0638,Cindervale Health,Data Analyst,US,Not Specified,,2026-10-02,careers_page

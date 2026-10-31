@@ -1,0 +1,23 @@
+posting_id,company,title,country,text
+V01,Kestrel Ledger,Data Analyst,US,Kestrel Ledger builds accounting software for small firms. About the role: you will own the weekly revenue report in SQL and Looker.
+V02,Kestrel Ledger,Product Analyst,US,About the role: run experiments on our invoicing flow. H-1B sponsorship is available for this role.
+V03,Kestrel Ledger,Business Analyst,US,About the role: map finance processes. Candidates must be authorized to work in the U.S.
+V04,Orrin Health,Healthcare Data Analyst,US,About the role: build clinic utilisation dashboards in Tableau.
+V05,Orrin Health,Operations Analyst,US,About the role: forecast nurse staffing with Python and Excel.
+V06,Pellow Freight,Supply Chain Analyst,US,About the role: measure on-time delivery across 12 depots.
+V07,Pellow Freight,Pricing Analyst,US,About the role: model lane prices. Sponsorship is not available for this role.
+V08,Saltmarsh Retail,Merchandise Analyst,US,About the role: analyse our clearance sale markdowns and weekly sell-through.
+V09,Saltmarsh Retail,Marketing Analyst,US,We proudly sponsor the city marathon every spring. About the role: measure campaign lift with SQL.
+V10,Tamsin Bank,Risk Analyst,US,About the role: monitor credit risk models. We will not sponsor employment visas for this position.
+V11,Tamsin Bank,Financial Analyst,US,About the role: build the branch profitability model.
+V12,Brindlecombe Aerospace,Data Analyst,US,About the role: analyse test flight telemetry. This role requires U.S. citizenship because of ITAR export rules.
+V13,Brindlecombe Aerospace,Business Analyst,US,About the role: support programme reporting. You must hold or be able to obtain a security clearance.
+V14,Quarry Lane Analytics,Junior Data Analyst,US,About the role: clean client data in SQL. We sponsor H-1B visas and welcome OPT candidates.
+V15,Larchmere Insurance,Claims Analyst,US,"About the role: track claim cycle times. OPT candidates are welcome, but we do not sponsor H-1B visas."
+V16,Ashgrove Mutual,Data Analyst,GB,About the role: build member retention reports in Power BI.
+V17,Ashgrove Mutual,Pricing Analyst,GB,About the role: price home insurance. We can sponsor a Skilled Worker visa for this role.
+V18,Thistledown Media,Audience Analyst,GB,About the role: report on podcast audiences each week.
+V19,Thistledown Media,Commercial Analyst,GB,About the role: forecast ad revenue. We are unable to offer visa sponsorship.
+V20,Fenmoor Defence,Data Analyst,GB,About the role: analyse maintenance logs. Applicants must hold active SC clearance.
+V21,Wrenfield Retail,Trading Analyst,GB,About the role: weekly trading packs in Excel and SQL.
+V22,Cobbold & Hart,Business Analyst,GB,About the role: support our audit analytics team.
