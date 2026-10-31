@@ -1489,7 +1489,7 @@
      "question": "Why do we never edit raw data, and where should a metric be computed?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "warehouse",
@@ -1504,7 +1504,7 @@
      "question": "In what order must these six models build, and what do their tests prove?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "dbt"
@@ -1518,7 +1518,7 @@
      "question": "Can yesterday's numbers be fixed without rebuilding three years of data?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "dbt",
@@ -1547,7 +1547,7 @@
      "question": "Why did one dashboard cost 400 dollars, and how do partitions fix it?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "warehouse",

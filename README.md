@@ -83,10 +83,10 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 6 | 4 |
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 9 | 3 |
-| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 1 | 5 |
+| [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **76** | **45** |
+| **All** | | **80** | **41** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -216,11 +216,11 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 
 ### 08 Modern data stack
 
-1. 08-01 Warehouse layers: raw, staging and marts *(planned)*: Why do we never edit raw data, and where should a metric be computed? (Level 2)
-2. 08-02 dbt from scratch *(planned)*: In what order must these six models build, and what do their tests prove? (Level 2)
-3. 08-03 Incremental models and backfills *(planned)*: Can yesterday's numbers be fixed without rebuilding three years of data? (Level 2)
+1. 08-01 [Warehouse layers: raw, staging and marts](phases/08-modern-data-stack/01-warehouse-layers): Why do we never edit raw data, and where should a metric be computed? (Level 2)
+2. 08-02 [dbt from scratch](phases/08-modern-data-stack/02-dbt-from-scratch): In what order must these six models build, and what do their tests prove? (Level 2)
+3. 08-03 [Incremental models and backfills](phases/08-modern-data-stack/03-incremental-models-and-backfills): Can yesterday's numbers be fixed without rebuilding three years of data? (Level 2)
 4. 08-04 Orchestration: a tiny DAG runner *(planned)*: What happens at 6 am when the 5 am job failed? (Level 3)
-5. 08-05 Query cost in a cloud warehouse *(planned)*: Why did one dashboard cost 400 dollars, and how do partitions fix it? (Level 2)
+5. 08-05 [Query cost in a cloud warehouse](phases/08-modern-data-stack/05-cloud-warehouse-cost): Why did one dashboard cost 400 dollars, and how do partitions fix it? (Level 2)
 6. 08-06 [Git for analysts](phases/08-modern-data-stack/06-git-for-analysts): Who changed the revenue query, and can we undo it? (Level 1)
 
 ### 09 Business case studies

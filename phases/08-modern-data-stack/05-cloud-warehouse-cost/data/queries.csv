@@ -1,0 +1,7 @@
+query_id,dashboard,tile,sql,columns,date_from,date_to,prunable,store_id,runs
+q1,Store live ops,Orders today by store,SELECT * FROM app_events WHERE DATE(event_time) = '2026-10-31',event_date;event_id;event_time;store_id;user_id;event_type;amount;payload,2026-10-31,2026-10-31,0,,372
+q2,Store live ops,Latest 100 events,SELECT * FROM app_events ORDER BY event_time DESC LIMIT 100,event_date;event_id;event_time;store_id;user_id;event_type;amount;payload,,,0,,31
+q3,Store live ops,Store 17 basket sizes,"SELECT store_id, event_type, amount FROM app_events WHERE event_date BETWEEN '2026-10-25' AND '2026-10-31' AND store_id = 17",store_id;event_type;amount,2026-10-25,2026-10-31,1,17,372
+q4,Weekly finance,Revenue last 7 days,"SELECT event_date, event_type, amount FROM app_events WHERE event_date BETWEEN '2026-10-25' AND '2026-10-31'",event_date;event_type;amount,2026-10-25,2026-10-31,1,,31
+q5,Marketing,Active users last 30 days,SELECT COUNT(DISTINCT user_id) FROM app_events WHERE event_date BETWEEN '2026-10-02' AND '2026-10-31' AND event_type = 'visit',user_id;event_type,2026-10-02,2026-10-31,1,,124
+q6,Marketing,Store 5 visitors by day,"SELECT event_date, COUNT(DISTINCT user_id) FROM app_events WHERE event_date >= '2026-08-01' AND store_id = 5 GROUP BY event_date",event_date;user_id;store_id,2026-08-01,2026-10-31,1,5,62

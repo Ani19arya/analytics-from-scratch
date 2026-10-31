@@ -239,10 +239,10 @@ Level total: about 76.5 hours of focused work.
 
 **08 Modern data stack**
 
-- [ ] 08-01 Warehouse layers: raw, staging and marts *(planned)*: Why do we never edit raw data, and where should a metric be computed? About 2 h.
-- [ ] 08-02 dbt from scratch *(planned)*: In what order must these six models build, and what do their tests prove? About 2 h.
-- [ ] 08-03 Incremental models and backfills *(planned)*: Can yesterday's numbers be fixed without rebuilding three years of data? About 2 h.
-- [ ] 08-05 Query cost in a cloud warehouse *(planned)*: Why did one dashboard cost 400 dollars, and how do partitions fix it? About 2 h.
+- [x] 08-01 [Warehouse layers: raw, staging and marts](phases/08-modern-data-stack/01-warehouse-layers): Why do we never edit raw data, and where should a metric be computed? About 2 h.
+- [x] 08-02 [dbt from scratch](phases/08-modern-data-stack/02-dbt-from-scratch): In what order must these six models build, and what do their tests prove? About 2 h.
+- [x] 08-03 [Incremental models and backfills](phases/08-modern-data-stack/03-incremental-models-and-backfills): Can yesterday's numbers be fixed without rebuilding three years of data? About 2 h.
+- [x] 08-05 [Query cost in a cloud warehouse](phases/08-modern-data-stack/05-cloud-warehouse-cost): Why did one dashboard cost 400 dollars, and how do partitions fix it? About 2 h.
 
 **09 Business case studies**
 

@@ -35,11 +35,11 @@ In the Real Analyst Jobs data from 29 October 2026, Snowflake appears in 8.7% of
 
 ## Lessons
 
-1. Warehouse layers: raw, staging and marts *(planned)*. Why do we never edit raw data, and where should a metric be computed?
-2. dbt from scratch *(planned)*. In what order must these six models build, and what do their tests prove?
-3. Incremental models and backfills *(planned)*. Can yesterday's numbers be fixed without rebuilding three years of data?
+1. [Warehouse layers: raw, staging and marts](01-warehouse-layers/). Why do we never edit raw data, and where should a metric be computed?
+2. [dbt from scratch](02-dbt-from-scratch/). In what order must these six models build, and what do their tests prove?
+3. [Incremental models and backfills](03-incremental-models-and-backfills/). Can yesterday's numbers be fixed without rebuilding three years of data?
 4. Orchestration: a tiny DAG runner *(planned)*. What happens at 6 am when the 5 am job failed?
-5. Query cost in a cloud warehouse *(planned)*. Why did one dashboard cost 400 dollars, and how do partitions fix it?
+5. [Query cost in a cloud warehouse](05-cloud-warehouse-cost/). Why did one dashboard cost 400 dollars, and how do partitions fix it?
 6. [Git for analysts](06-git-for-analysts/). Who changed the revenue query, and can we undo it?
 
 Every lesson runs offline: dbt's dependency order is rebuilt with Python's `graphlib`, the warehouse is SQLite, and the Git lesson's test skips if Git is not installed.
