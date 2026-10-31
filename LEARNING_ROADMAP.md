@@ -98,7 +98,7 @@ Everyone does the shared core. Then weight your time by the role you want. The s
 | 09 Business case studies | Pick 4 | Pick 4, process heavy | Pick 4, product heavy | Pick 3 | Marketing and growth cases | Pick 4 |
 | 10 Capstone projects | 01, 02, 06 | 01, 05 | 02, 04 | 05, 06 | 03, 01 | 07, 08 |
 
-### Analytics manager track
+### Analytics leadership track
 
 For someone who manages analysts or is moving into a lead role. You will not write most of the queries any more; you decide what gets measured, which results are trusted, what the team works on and what leadership hears. This path uses only existing live lessons. Do the exercises yourself: you review this work better once you have done it.
 
@@ -123,7 +123,7 @@ Do these, in order:
 17. Two case studies, reviewed as the lead: [09-03 Marketing: is the campaign incremental?](phases/09-business-case-studies/03-marketing-is-the-campaign-incremental) and [09-09 Operations: why are deliveries late?](phases/09-business-case-studies/09-operations-late-deliveries): Score your own answer with the case's RUBRIC.md as if an analyst had handed it to you.
 18. [10-05 Executive dashboard](phases/10-capstone-projects/05-executive-dashboard): The capstone for this track: one set of definitions the leadership team stops arguing about.
 
-**What the course does not cover for managers.** People management, hiring, performance reviews, career conversations, budgets and headcount planning are not taught here. For hiring, the tutor's [interview rubric](skills/analytics-from-scratch/INTERVIEW_RUBRIC.md) gives you a ready mock interview: rounds, a 1 to 4 scale with anchors, red flags and a question bank tied to lessons. Run it with your interviewers on each other first, so everyone scores the same answer the same way. It is practice material, not a validated hiring test: use it alongside your company's own process, not instead of it.
+**What this track does not cover.** It is an analytics leadership track, not a management programme. People management, hiring, performance reviews, career conversations, budgets and headcount planning are not taught here. For hiring, the tutor's [interview rubric](skills/analytics-from-scratch/INTERVIEW_RUBRIC.md) gives you a ready mock interview: rounds, a 1 to 4 scale with anchors, red flags and a question bank tied to lessons. Run it with your interviewers on each other first, so everyone scores the same answer the same way. It is practice material, not a validated hiring test: use it alongside your company's own process, not instead of it.
 
 <!-- Fast track: printed by python3 tools/placement.py --markdown from its FAST_TRACK table. Edit the table, then paste. tools/test_placement.py checks they match. -->
 

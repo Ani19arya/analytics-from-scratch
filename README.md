@@ -23,20 +23,20 @@ Most courses teach you where to click. This one teaches you what the tool is doi
 | **The trap first** | Each lesson shows the plausible wrong answer failing on real numbers: the join that counts 465 rows instead of 360, the funnel that reads 14.7% instead of 40.3% |
 | **Built from scratch, then checked** | You write the GROUP BY, the z-test, the DAX filter context, the agent's guard rails. A test tells you when you are right, and runs on a second dataset so a pasted answer fails |
 | **Ready for AI-era work** | The course teaches you to review a query, grade a model, size an eval set, guard natural-language-to-SQL and audit an agent, because the scarce skill is now checking, not typing |
-| **Grounded in real hiring data** | What to learn is set by 9,044 live analyst postings, not guesswork. See [2026-2027-ANALYTICS-SKILLS.md](2026-2027-ANALYTICS-SKILLS.md) |
+| **Grounded in real hiring data** | What to learn is set by 9,044 analyst postings on the Real Analyst Jobs feed (snapshot of 29 October 2026), not guesswork. Live counts change daily, so every number in the course carries its date. See [2026-2027-ANALYTICS-SKILLS.md](2026-2027-ANALYTICS-SKILLS.md) |
 | **Four levels, ending with the job search** | 129 lessons across Level 1 (guided), Level 2 (realistic problems), Level 3 (ambiguous problems and capstones) and Level 4 (land the job: target lists, titles, visa and remote filters, and your search as a funnel) |
 | **Runs anywhere** | Python 3.9+ standard library and SQLite. Offline. No installs, no accounts, no API keys |
 
 ## Your first hour
 
-Pick the row that fits you. Each one ends with a test you have passed, which is the point: you leave the first hour with proof, not just reading.
+Pick the row that fits you. Each row fits in about 60 minutes and ends with a small, real win: one test passed or one result recorded, one idea understood, and your next step clear. Most lessons take about 2 hours, so the first hour gets you started on one; it does not finish it.
 
 | You are | Do this first (about 60 minutes) | You have a win when |
 |---|---|---|
-| New to data, or never used a terminal | [00-01 Run your first lesson](phases/00-start-here/01-run-your-first-lesson): check Python, run a test, read the failure, fix it | The test prints `OK` |
-| Comfortable with spreadsheets, new to SQL | 00-01 (15 minutes, to learn the test loop), then [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query) | Your first query passes its test |
-| Already work with data | Run the placement check below (about 10 minutes), open the [join fan-out explorer](visuals/join-fanout.html) and find the planted mistake (10 minutes), then start the lesson the check recommends | Your first recommended lesson passes, and `python3 tools/progress.py status` shows it |
-| Preparing for interviews | The placement check with the interview track, then [07-02 SQL interview questions](phases/07-getting-hired/02-sql-interview-questions) | Two of the six interview questions pass |
+| New to data, or never used a terminal | [00-01 Run your first lesson](phases/00-start-here/01-run-your-first-lesson) (about 1 hour): check Python, run a test, read the failure, fix it | The 00-01 test prints `OK`, and you know the next lesson is 00-02 |
+| Comfortable with spreadsheets, new to SQL | 00-01 (about 1 hour; skim the parts on installing Python if it is already set up), then read the opening of [00-04 Your first SQL query](phases/00-start-here/04-your-first-sql-query) and run its first example query with `python3 tools/query.py` | The 00-01 test prints `OK` and your first SQL query returns rows. Finish 00-04 in your next session |
+| Already work with data | The placement check (about 15 minutes), the [join fan-out explorer](visuals/join-fanout.html) with its planted mistake (about 10 minutes), then the problem and the first Walk through step of the lesson the check recommends | Your placement is recorded with `python3 tools/progress.py placement --answers FILE`, and `python3 tools/progress.py status` names your next lesson |
+| Preparing for interviews | The placement check with the interview track (about 15 minutes), then write the first one or two queries in [07-02 SQL interview questions](phases/07-getting-hired/02-sql-interview-questions) and run its test | The 07-02 test shows your first query passing; the other questions are your next session |
 
 **Which placement check?** There are two, and you only need one. `python3 tools/placement.py` is the full check: 13 questions plus follow-ups, graded automatically, about 10 to 15 minutes, with a start lesson and skips for your role. Use it if you can already read a little SQL or Python. The tutor skill also asks a few quick questions in conversation; that is for complete beginners and for when you are working with a coding agent and do not want to leave the chat. Either way, record the result with `python3 tools/progress.py` so the next step is suggested for you.
 
@@ -98,7 +98,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 - **Business analyst**: the path opens with [00-05 NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce). Safe to skip if easy for you: 00-04, 01-01, 04-05, 04-06, 00-06, 06-04.
 - **Interview prep**: the path opens with [01-02 Joins without losing rows](phases/01-sql/02-joins-without-losing-rows). Safe to skip if easy for you: 00-04, 01-01, 02-01, 03-02, 05-01, 04-05.
 
-Leading a team? The [analytics manager track](LEARNING_ROADMAP.md#analytics-manager-track) is a path through existing lessons for leads who own metrics, experiments, data quality and AI governance. Capstone [10-07](phases/10-capstone-projects/07-nl-to-sql-assistant) also has an optional live mode for your own model API key, with retries, a cost cap, checked JSON replies and the read-only gateway; its tests never call a model.
+Leading a team? The [analytics leadership track](LEARNING_ROADMAP.md#analytics-leadership-track) is a path through existing lessons for leads who own metrics, experiments, data quality and AI governance. It is about leading the analytics work, not a people-management course. Capstone [10-07](phases/10-capstone-projects/07-nl-to-sql-assistant) also has an optional live mode for your own model API key, with retries, a cost cap, checked JSON replies and the read-only gateway; its tests never call a model.
 
 **Time:** about 350 hours in all, or 6 to 9 months at 10 to 12 hours a week. The course builds skills you can demonstrate. It cannot promise a job, and it does not pretend to.
 
