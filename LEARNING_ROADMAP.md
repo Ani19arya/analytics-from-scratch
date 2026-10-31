@@ -98,7 +98,32 @@ Everyone does the shared core. Then weight your time by the role you want. The s
 | 09 Business case studies | Pick 4 | Pick 4, process heavy | Pick 4, product heavy | Pick 3 | Marketing and growth cases | Pick 4 |
 | 10 Capstone projects | 01, 02, 06 | 01, 05 | 02, 04 | 05, 06 | 03, 01 | 07, 08 |
 
-An **analytics manager** track adds the Level 3 statistics and causal lessons, the semantic layer, data quality, AI governance (phase 06 lessons 07, 08, 11 and 14) and phase 07 lesson 06 on explaining findings to leadership.
+### Analytics manager track
+
+For someone who manages analysts or is moving into a lead role. You will not write most of the queries any more; you decide what gets measured, which results are trusted, what the team works on and what leadership hears. This path uses only existing live lessons. Do the exercises yourself: you review this work better once you have done it.
+
+Do these, in order:
+
+1. [03-05 Define a metric precisely](phases/03-metrics-and-product-analytics/05-define-a-metric-precisely): You own the metric spec; a vague definition becomes two teams arguing about two numbers.
+2. [04-09 One metric, one definition: the semantic layer](phases/04-dashboards/09-the-semantic-layer): Decide where each definition lives, so every dashboard shows the same number.
+3. [03-04 North star and guardrails](phases/03-metrics-and-product-analytics/04-north-star-and-guardrails): Set the guardrails before a launch, so a win on the main metric cannot hide damage elsewhere.
+4. [02-04 Sample size before you test](phases/02-statistics-and-experiments/04-sample-size-before-you-test): Approve or turn down a test plan on whether it can answer the question in the time asked.
+5. [02-13 A/B test pitfalls](phases/02-statistics-and-experiments/13-ab-test-pitfalls): Write the team's experiment rules: one primary metric, no peeking, and a correction when many variants are tested.
+6. [03-14 Causal impact without an experiment: difference in differences](phases/03-metrics-and-product-analytics/14-difference-in-differences): Know when "it worked" is a causal claim the data can support and when it is not.
+7. [08-01 Warehouse layers: raw, staging and marts](phases/08-modern-data-stack/01-warehouse-layers): Know where a metric should be computed, so fixes happen once and not in every report.
+8. [05-09 Data quality tests as code](phases/05-python-for-analysts/09-data-quality-tests-as-code): Ask for tests that catch a broken load before a stakeholder does.
+9. [08-04 Orchestration: a tiny DAG runner](phases/08-modern-data-stack/04-orchestration-dag-runner): Understand what fails downstream when one job fails, and who gets told.
+10. [08-05 Query cost in a cloud warehouse](phases/08-modern-data-stack/05-cloud-warehouse-cost): You answer for the warehouse bill; know what drives it and which fixes are cheap.
+11. [06-07 How big must an eval set be?](phases/06-ai-for-analysts/07-how-big-an-eval-set): Ask how many labelled examples sit behind an AI tool's score before you approve it.
+12. [06-08 Human in the loop: confidence thresholds](phases/06-ai-for-analysts/08-human-in-the-loop-thresholds): Set what the AI may do alone and what a person reviews, and staff the review.
+13. [06-11 Keep personal data out of prompts](phases/06-ai-for-analysts/11-keep-pii-out-of-prompts): Make the rule your team follows before customer data reaches a model.
+14. [06-14 Audit an agent's work](phases/06-ai-for-analysts/14-audit-an-agent-run): Check an AI agent's claim step by step before a number from it reaches leadership.
+15. [11-05 Apply where it counts](phases/11-land-the-job/05-apply-where-it-counts): The lesson picks job postings, but the same 0/1 knapsack picks a team backlog: value per request, analyst hours as the budget.
+16. [07-06 Explain findings to leadership](phases/07-getting-hired/06-explain-findings-to-leadership): Your team's work only counts if a VP can act on the first two lines.
+17. Two case studies, reviewed as the lead: [09-03 Marketing: is the campaign incremental?](phases/09-business-case-studies/03-marketing-is-the-campaign-incremental) and [09-09 Operations: why are deliveries late?](phases/09-business-case-studies/09-operations-late-deliveries): Score your own answer with the case's RUBRIC.md as if an analyst had handed it to you.
+18. [10-05 Executive dashboard](phases/10-capstone-projects/05-executive-dashboard): The capstone for this track: one set of definitions the leadership team stops arguing about.
+
+**What the course does not cover for managers.** People management, hiring, performance reviews, career conversations, budgets and headcount planning are not taught here. For hiring, the tutor's [interview rubric](skills/analytics-from-scratch/INTERVIEW_RUBRIC.md) gives you a ready mock interview: rounds, a 1 to 4 scale with anchors, red flags and a question bank tied to lessons. Run it with your interviewers on each other first, so everyone scores the same answer the same way. It is practice material, not a validated hiring test: use it alongside your company's own process, not instead of it.
 
 <!-- Fast track: printed by python3 tools/placement.py --markdown from its FAST_TRACK table. Edit the table, then paste. tools/test_placement.py checks they match. -->
 
