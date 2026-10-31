@@ -77,7 +77,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 |---|---|---|---|
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 7 | 7 |
-| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 7 | 8 |
+| [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 6 | 8 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 7 | 5 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 6 | 4 |
@@ -86,7 +86,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 1 | 5 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **55** | **66** |
+| **All** | | **60** | **61** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -127,11 +127,11 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 5. 02-05 [Probability and distributions by simulation](phases/02-statistics-and-experiments/05-probability-by-simulation): If 10% of visitors buy, how many of 200 should buy, and how unusual is 30? (Level 1)
 6. 02-06 [Outliers, box plots and robust summaries](phases/02-statistics-and-experiments/06-spread-percentiles-and-outliers): Which salaries are real outliers, and which summary survives them? (Level 1)
 7. 02-07 [Sampling and the central limit theorem](phases/02-statistics-and-experiments/07-sampling-and-the-clt): Why does the average of 18 orders wobble, and by how much? (Level 1)
-8. 02-08 Hypothesis testing by permutation *(planned)*: Could this gap appear just by shuffling the labels? (Level 2)
-9. 02-09 Comparing categories: the chi-square test *(planned)*: Do the three signup flows differ in completion rate? (Level 2)
-10. 02-10 Correlation, causation and Simpson's paradox *(planned)*: Users who get more notifications work out more. Should we send more? (Level 2)
-11. 02-11 Linear regression from scratch *(planned)*: How much does each extra visit add to monthly spend, and what does R squared really say? (Level 2)
-12. 02-12 Bootstrap confidence intervals *(planned)*: How sure are we about a median or a ratio when no simple formula exists? (Level 2)
+8. 02-08 [Hypothesis testing by permutation](phases/02-statistics-and-experiments/08-hypothesis-test-by-permutation): Could this gap appear just by shuffling the labels? (Level 2)
+9. 02-09 [Comparing categories: the chi-square test](phases/02-statistics-and-experiments/09-chi-square-test): Do the three signup flows differ in completion rate? (Level 2)
+10. 02-10 [Correlation, causation and Simpson's paradox](phases/02-statistics-and-experiments/10-correlation-causation-and-simpson): Users who get more notifications work out more. Should we send more? (Level 2)
+11. 02-11 [Linear regression from scratch](phases/02-statistics-and-experiments/11-linear-regression-from-scratch): How much does each extra visit add to monthly spend, and what does R squared really say? (Level 2)
+12. 02-12 [Bootstrap confidence intervals](phases/02-statistics-and-experiments/12-bootstrap-intervals): How sure are we about a median or a ratio when no simple formula exists? (Level 2)
 13. 02-13 A/B test pitfalls *(planned)*: We tested five variants on three metrics. Which wins are real? (Level 3)
 14. 02-14 Ratio metrics and the delta method *(planned)*: Is the drop in replies per application real when one user sends many? (Level 3)
 15. 02-15 Variance reduction with CUPED *(planned)*: Can pre-test behaviour make the test finish in half the time? (Level 3)

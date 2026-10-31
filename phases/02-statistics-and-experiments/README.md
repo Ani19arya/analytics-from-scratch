@@ -18,13 +18,13 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 
 **Level 2: intermediate**
 
-6. 08 Hypothesis testing by permutation (planned): could this gap appear just by shuffling the labels?
+6. [08 Hypothesis testing by permutation](08-hypothesis-test-by-permutation/): could this gap appear just by shuffling the labels?
 7. [03 A/B test from scratch](03-ab-test-from-scratch/): did the new checkout page really convert better, or did we get lucky? Includes a sample ratio mismatch check and a confidence interval on the lift.
 8. [04 Sample size before you test](04-sample-size-before-you-test/): how many users, and how many weeks, before a test can answer the question?
-9. 09 Comparing categories: the chi-square test (planned): do the three signup flows differ in completion rate?
-10. 10 Correlation, causation and Simpson's paradox (planned): users who get more notifications work out more. Should we send more?
-11. 11 Linear regression from scratch (planned): how much does each extra visit add to monthly spend, and what does R squared really say?
-12. 12 Bootstrap confidence intervals (planned): how sure are we about a median or a ratio when no simple formula exists?
+9. [09 Comparing categories: the chi-square test](09-chi-square-test/): do the three signup flows differ in completion rate?
+10. [10 Correlation, causation and Simpson's paradox](10-correlation-causation-and-simpson/): users who get more notifications work out more. Should we send more?
+11. [11 Linear regression from scratch](11-linear-regression-from-scratch/): how much does each extra visit add to monthly spend, and what does R squared really say?
+12. [12 Bootstrap confidence intervals](12-bootstrap-intervals/): how sure are we about a median or a ratio when no simple formula exists?
 
 **Level 3: advanced**
 

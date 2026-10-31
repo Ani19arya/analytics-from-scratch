@@ -6,7 +6,7 @@ Did the new checkout page really convert better, or did we get lucky?
 
 - Level: 2 (intermediate).
 - Time: about 2 hours.
-- Builds on [Confidence interval by hand](../02-confidence-interval-by-hand/): the standard error, the normal bell curve and the critical value 1.96. A lesson on hypothesis testing by permutation (shuffling the labels) is planned to come before this one; until it exists, "In plain words" below gives you the idea.
+- Builds on [Confidence interval by hand](../02-confidence-interval-by-hand/): the standard error, the normal bell curve and the critical value 1.96. [Hypothesis testing by permutation](../08-hypothesis-test-by-permutation/) builds the same idea by shuffling the labels, with no formula; if you have not done it, "In plain words" below gives you the idea.
 
 ## The problem
 

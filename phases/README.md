@@ -7,7 +7,7 @@ Every phase page lists its lessons in order. The full learning order across phas
 |---|---|---|---|
 | 00 | [Start here](00-start-here) | 6 | 0 |
 | 01 | [SQL from raw tables](01-sql) | 7 | 7 |
-| 02 | [Statistics and experiments](02-statistics-and-experiments) | 7 | 8 |
+| 02 | [Statistics and experiments](02-statistics-and-experiments) | 12 | 3 |
 | 03 | [Metrics and product analytics](03-metrics-and-product-analytics) | 6 | 8 |
 | 04 | [Dashboards and spreadsheets](04-dashboards) | 7 | 5 |
 | 05 | [Python for analysts](05-python-for-analysts) | 6 | 4 |

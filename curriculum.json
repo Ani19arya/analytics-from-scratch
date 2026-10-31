@@ -417,7 +417,7 @@
      "question": "Could this gap appear just by shuffling the labels?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics",
@@ -432,7 +432,7 @@
      "question": "Do the three signup flows differ in completion rate?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"
@@ -446,7 +446,7 @@
      "question": "Users who get more notifications work out more. Should we send more?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics",
@@ -461,7 +461,7 @@
      "question": "How much does each extra visit add to monthly spend, and what does R squared really say?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"
@@ -475,7 +475,7 @@
      "question": "How sure are we about a median or a ratio when no simple formula exists?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "statistics"

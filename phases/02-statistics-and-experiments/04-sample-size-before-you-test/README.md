@@ -245,4 +245,4 @@ In the Real Analyst Jobs data drop of 25 October 2026, India had 1,174 analyst p
 
 ## Next
 
-Phase 02's live lessons end here; see the [phase page](../) for the lessons planned next. Go on to [Phase 03: Metrics and product analytics](../../03-metrics-and-product-analytics/), starting with [Metric trees](../../03-metrics-and-product-analytics/01-metric-trees/).
+[09: Comparing categories, the chi-square test](../09-chi-square-test/): the same yes or no question when there are more than two groups.

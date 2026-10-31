@@ -180,11 +180,11 @@ Level total: about 76.5 hours of focused work.
 
 - [x] 02-03 [A/B test from scratch](phases/02-statistics-and-experiments/03-ab-test-from-scratch): Did the new checkout page really convert better, or did we get lucky? About 2 h.
 - [x] 02-04 [Sample size before you test](phases/02-statistics-and-experiments/04-sample-size-before-you-test): How many users, and how many weeks, do we need before an A/B test can answer the question we care about? About 2 h.
-- [ ] 02-08 Hypothesis testing by permutation *(planned)*: Could this gap appear just by shuffling the labels? About 2 h.
-- [ ] 02-09 Comparing categories: the chi-square test *(planned)*: Do the three signup flows differ in completion rate? About 2 h.
-- [ ] 02-10 Correlation, causation and Simpson's paradox *(planned)*: Users who get more notifications work out more. Should we send more? About 2 h.
-- [ ] 02-11 Linear regression from scratch *(planned)*: How much does each extra visit add to monthly spend, and what does R squared really say? About 2 h.
-- [ ] 02-12 Bootstrap confidence intervals *(planned)*: How sure are we about a median or a ratio when no simple formula exists? About 2 h.
+- [x] 02-08 [Hypothesis testing by permutation](phases/02-statistics-and-experiments/08-hypothesis-test-by-permutation): Could this gap appear just by shuffling the labels? About 2 h.
+- [x] 02-09 [Comparing categories: the chi-square test](phases/02-statistics-and-experiments/09-chi-square-test): Do the three signup flows differ in completion rate? About 2 h.
+- [x] 02-10 [Correlation, causation and Simpson's paradox](phases/02-statistics-and-experiments/10-correlation-causation-and-simpson): Users who get more notifications work out more. Should we send more? About 2 h.
+- [x] 02-11 [Linear regression from scratch](phases/02-statistics-and-experiments/11-linear-regression-from-scratch): How much does each extra visit add to monthly spend, and what does R squared really say? About 2 h.
+- [x] 02-12 [Bootstrap confidence intervals](phases/02-statistics-and-experiments/12-bootstrap-intervals): How sure are we about a median or a ratio when no simple formula exists? About 2 h.
 
 **03 Metrics and product analytics**
 
