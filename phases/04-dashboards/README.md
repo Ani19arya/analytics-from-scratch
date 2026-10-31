@@ -13,11 +13,11 @@ What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus ho
 5. [Lookups and SUMIFS like Excel](05-lookups-and-sumifs/) (level 1)
 6. [Pivot tables and Power Query steps](06-pivot-tables-and-power-query/) (level 1)
 7. [Dashboard design and KPI cards](07-dashboard-design-and-kpi-cards/) (level 1)
-8. Relationships, role-playing dates and many-to-many (level 2, planned)
-9. One metric, one definition: the semantic layer (level 2, planned)
-10. Slowly changing dimensions (level 2, planned)
-11. Row-level security (level 2, planned)
-12. Tableau table calculations vs LOD (level 2, planned)
+8. [Relationships, role-playing dates and many-to-many](08-relationships-and-role-playing-dates/) (level 2)
+9. [One metric, one definition: the semantic layer](09-the-semantic-layer/) (level 2)
+10. [Slowly changing dimensions](10-slowly-changing-dimensions/) (level 2)
+11. [Row-level security](11-row-level-security/) (level 2)
+12. [Tableau table calculations vs LOD](12-tableau-table-calculations/) (level 2)
 
 ## How this phase teaches tools that live in a GUI
 

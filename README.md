@@ -79,14 +79,14 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 12 | 2 |
 | [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 12 | 2 |
-| [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 7 | 5 |
+| [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 6 | 4 |
 | [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 9 | 3 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 1 | 5 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **71** | **50** |
+| **All** | | **76** | **45** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -162,11 +162,11 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 5. 04-05 [Lookups and SUMIFS like Excel](phases/04-dashboards/05-lookups-and-sumifs): Why does the VLOOKUP total not match finance? (Level 1)
 6. 04-06 [Pivot tables and Power Query steps](phases/04-dashboards/06-pivot-tables-and-power-query): Can next month's file be cleaned and merged with one click? (Level 1)
 7. 04-07 [Dashboard design and KPI cards](phases/04-dashboards/07-dashboard-design-and-kpi-cards): What should the CEO see in five seconds? (Level 1)
-8. 04-08 Relationships, role-playing dates and many-to-many *(planned)*: Why does revenue by ship month differ from revenue by order month? (Level 2)
-9. 04-09 One metric, one definition: the semantic layer *(planned)*: Why do two dashboards show different active users? (Level 2)
-10. 04-10 Slowly changing dimensions *(planned)*: Which region was this customer in when they ordered? (Level 2)
-11. 04-11 Row-level security *(planned)*: Can each regional manager see only their own region? (Level 2)
-12. 04-12 Tableau table calculations vs LOD *(planned)*: Running total, rank or percent of total: which should be computed where? (Level 2)
+8. 04-08 [Relationships, role-playing dates and many-to-many](phases/04-dashboards/08-relationships-and-role-playing-dates): Why does revenue by ship month differ from revenue by order month? (Level 2)
+9. 04-09 [One metric, one definition: the semantic layer](phases/04-dashboards/09-the-semantic-layer): Why do two dashboards show different active users? (Level 2)
+10. 04-10 [Slowly changing dimensions](phases/04-dashboards/10-slowly-changing-dimensions): Which region was this customer in when they ordered? (Level 2)
+11. 04-11 [Row-level security](phases/04-dashboards/11-row-level-security): Can each regional manager see only their own region? (Level 2)
+12. 04-12 [Tableau table calculations vs LOD](phases/04-dashboards/12-tableau-table-calculations): Running total, rank or percent of total: which should be computed where? (Level 2)
 
 ### 05 Python for analysts
 

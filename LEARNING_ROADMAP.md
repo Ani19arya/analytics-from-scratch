@@ -202,11 +202,11 @@ Level total: about 76.5 hours of focused work.
 - [x] 04-01 [Model the data a dashboard needs](phases/04-dashboards/01-model-the-data-a-dashboard-needs): How do you turn one flat export of order lines into tables a dashboard can slice by date, product and region without double counting? About 2 h.
 - [x] 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, share, year to date and growth on last year numbers without Power BI? About 2 h.
 - [x] 04-03 [Tableau LOD expressions in SQL](phases/04-dashboards/03-tableau-lod-expressions-in-sql): How do you compute a number at a different level of detail from the chart it sits in, such as each customer's first order month in a chart by month, or a region's total in a chart by customer? About 2 h.
-- [ ] 04-08 Relationships, role-playing dates and many-to-many *(planned)*: Why does revenue by ship month differ from revenue by order month? About 2 h.
-- [ ] 04-09 One metric, one definition: the semantic layer *(planned)*: Why do two dashboards show different active users? About 2 h.
-- [ ] 04-10 Slowly changing dimensions *(planned)*: Which region was this customer in when they ordered? About 2 h.
-- [ ] 04-11 Row-level security *(planned)*: Can each regional manager see only their own region? About 2 h.
-- [ ] 04-12 Tableau table calculations vs LOD *(planned)*: Running total, rank or percent of total: which should be computed where? About 2 h.
+- [x] 04-08 [Relationships, role-playing dates and many-to-many](phases/04-dashboards/08-relationships-and-role-playing-dates): Why does revenue by ship month differ from revenue by order month? About 2 h.
+- [x] 04-09 [One metric, one definition: the semantic layer](phases/04-dashboards/09-the-semantic-layer): Why do two dashboards show different active users? About 2 h.
+- [x] 04-10 [Slowly changing dimensions](phases/04-dashboards/10-slowly-changing-dimensions): Which region was this customer in when they ordered? About 2 h.
+- [x] 04-11 [Row-level security](phases/04-dashboards/11-row-level-security): Can each regional manager see only their own region? About 2 h.
+- [x] 04-12 [Tableau table calculations vs LOD](phases/04-dashboards/12-tableau-table-calculations): Running total, rank or percent of total: which should be computed where? About 2 h.
 
 **05 Python for analysts**
 

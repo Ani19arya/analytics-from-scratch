@@ -1,0 +1,9 @@
+user_email,city,active
+gauri@tiffinbell.example.com,Mumbai,1
+ Esha@Tiffinbell.example.com ,Pune,1
+farhan@tiffinbell.example.com,Nashik,1
+farhan@tiffinbell.example.com,Mumbai,1
+dev@tiffinbell.example.com,Pune,1
+bilal@tiffinbell.example.com,*,1
+farhan@tiffinbell.example.com,Nashik,1
+asha@tiffinbell.example.com,Nagpur,0

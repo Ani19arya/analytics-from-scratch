@@ -846,7 +846,7 @@
      "question": "Why does revenue by ship month differ from revenue by order month?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "bi",
@@ -861,7 +861,7 @@
      "question": "Why do two dashboards show different active users?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "bi",
@@ -876,7 +876,7 @@
      "question": "Which region was this customer in when they ordered?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "data-modeling"
@@ -890,7 +890,7 @@
      "question": "Can each regional manager see only their own region?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "bi"
@@ -904,7 +904,7 @@
      "question": "Running total, rank or percent of total: which should be computed where?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "bi"

@@ -318,4 +318,4 @@ In the Real Analyst Jobs data drop of 25 October 2026 ([data/job-market/2026-10]
 
 ## Next
 
-That is the last Level 1 lesson in this phase for now. Go back to the [phase 04 overview](../README.md) for the lessons planned next, or on to [05 Python for analysts](../../05-python-for-analysts/).
+[08 Relationships, role-playing dates and many-to-many](../08-relationships-and-role-playing-dates/), the first Level 2 lesson in this phase.
