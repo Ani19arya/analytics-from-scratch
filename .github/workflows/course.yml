@@ -26,6 +26,8 @@ jobs:
         run: python tools/lint.py --strict
       - name: Generated docs are current
         run: python tools/build_docs.py --check
+      - name: Tool tests (placement check)
+        run: python -B -m unittest discover -s tools -p "test_*.py"
       - name: Every dataset rebuilds byte for byte
         run: |
           for f in phases/*/*/make_data.py; do (cd "$(dirname "$f")" && python make_data.py > /dev/null); done
