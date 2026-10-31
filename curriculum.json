@@ -1772,7 +1772,7 @@
      "question": "Build the churn model the finance team can plan with.",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 10,
      "skills": [
       "capstone",
@@ -1788,7 +1788,7 @@
      "question": "Design, model and verify the CEO dashboard, in the tool of your choice.",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 10,
      "skills": [
       "capstone",
@@ -1803,7 +1803,7 @@
      "question": "Make the weekly business review build, test and send itself.",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 10,
      "skills": [
       "capstone",

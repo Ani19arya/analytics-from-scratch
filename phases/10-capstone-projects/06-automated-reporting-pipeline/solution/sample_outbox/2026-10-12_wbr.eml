@@ -1,0 +1,98 @@
+From: wbr-bot@parcelwick.example
+To: leadership@parcelwick.example
+Subject: Parcelwick WBR, week of 2026-10-12: on time 85.5%
+Date: Mon, 19 Oct 2026 07:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="wbr-boundary-ParcelwickWBRweekof20261012ontime855"
+
+--wbr-boundary-ParcelwickWBRweekof20261012ontime855
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+# Parcelwick weekly business review, week of 2026-10-12
+
+parcels: 179
+delivered: 175
+on_time_pct: 85.47
+failed: 1
+returned: 3
+revenue_gbp: 569.75
+
+## Against last week (week of 2026-10-05, as known today)
+
+| KPI | This week | Last week | Change |
+|---|---|---|---|
+| parcels | 179 | 178 | +0.6% |
+| delivered | 175 | 170 | +2.9% |
+| on_time_pct | 85.47% | 83.71% | +1.76 pts |
+| failed | 1 | 4 | -75.0% |
+| returned | 3 | 4 | -25.0% |
+| revenue_gbp | GBP 569.75 | GBP 562.30 | +1.3% |
+
+Rates change in percentage points (pts); counts and revenue in percent.
+
+## By site
+
+| Site | Parcels | On time | Revenue |
+|---|---|---|---|
+| PW01 Clifton | 44 | 86.36% | GBP 134.08 |
+| PW02 Bedminster | 39 | 82.05% | GBP 126.61 |
+| PW03 Redland | 28 | 92.86% | GBP 91.23 |
+| PW04 Easton | 44 | 86.36% | GBP 140.57 |
+| PW05 Southville | 24 | 79.17% | GBP 77.26 |
+
+## On time by site, last 4 weeks
+
+| Site | 09-21 | 09-28 | 10-05 | 10-12 |
+|---|---|---|---|---|
+| PW01 Clifton | 82.2 | 87.2 | 92.5 | 86.4 |
+| PW02 Bedminster | 77.5 | 85.7 | 63.4 | 82.0 |
+| PW03 Redland | 90.6 | 88.9 | 92.3 | 92.9 |
+| PW04 Easton | 76.3 | 87.8 | 83.3 | 86.4 |
+| PW05 Southville | 80.0 | 85.2 | 91.4 | 79.2 |
+
+A parcel counts in the week of its latest outcome. On time =3D delivered on o=
+r before the promised date. A week can still change when late rows arrive.
+Synthetic data. Built, checked and sent by the weekly pipeline; reply to anal=
+ytics with questions.
+
+--wbr-boundary-ParcelwickWBRweekof20261012ontime855
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="on_time_8_weeks.svg"
+MIME-Version: 1.0
+
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MjAiIGhlaWdo
+dD0iMTgwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ij4KPHJlY3Qgd2lk
+dGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZmZmZmZiIvPgo8dGV4dCB4PSI0MCIgeT0i
+MTQiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMyMjIiPk9uIHRpbWUsICUgb2YgcGFyY2VscywgYnkg
+d2VlayAoc3ludGhldGljIGRhdGEpPC90ZXh0Pgo8bGluZSB4MT0iNDAiIHgyPSI0MTAiIHkxPSIx
+NTAuMCIgeTI9IjE1MC4wIiBzdHJva2U9IiNkZGQiLz4KPHRleHQgeD0iMzYiIHk9IjE1My4wIiB0
+ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNjY2Ij4wPC90ZXh0Pgo8bGluZSB4MT0iNDAiIHgyPSI0
+MTAiIHkxPSI5MC4wIiB5Mj0iOTAuMCIgc3Ryb2tlPSIjZGRkIi8+Cjx0ZXh0IHg9IjM2IiB5PSI5
+My4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNjY2Ij41MDwvdGV4dD4KPGxpbmUgeDE9IjQw
+IiB4Mj0iNDEwIiB5MT0iMzAuMCIgeTI9IjMwLjAiIHN0cm9rZT0iI2RkZCIvPgo8dGV4dCB4PSIz
+NiIgeT0iMzMuMCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzY2NiI+MTAwPC90ZXh0Pgo8cmVj
+dCB4PSI0Mi4wIiB5PSI0Ny4wIiB3aWR0aD0iNDIuMiIgaGVpZ2h0PSIxMDMuMCIgZmlsbD0iIzMx
+ODJiZCIvPgo8dGV4dCB4PSI2My4xIiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9
+IiM2NjYiPjA4LTI0PC90ZXh0Pgo8cmVjdCB4PSI4OC4yIiB5PSI0Ni41IiB3aWR0aD0iNDIuMiIg
+aGVpZ2h0PSIxMDMuNSIgZmlsbD0iIzMxODJiZCIvPgo8dGV4dCB4PSIxMDkuNCIgeT0iMTYyIiB0
+ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij4wOC0zMTwvdGV4dD4KPHJlY3QgeD0iMTM0
+LjUiIHk9IjQxLjIiIHdpZHRoPSI0Mi4yIiBoZWlnaHQ9IjEwOC44IiBmaWxsPSIjMzE4MmJkIi8+
+Cjx0ZXh0IHg9IjE1NS42IiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2NjYi
+PjA5LTA3PC90ZXh0Pgo8cmVjdCB4PSIxODAuOCIgeT0iNDkuNSIgd2lkdGg9IjQyLjIiIGhlaWdo
+dD0iMTAwLjUiIGZpbGw9IiMzMTgyYmQiLz4KPHRleHQgeD0iMjAxLjkiIHk9IjE2MiIgdGV4dC1h
+bmNob3I9Im1pZGRsZSIgZmlsbD0iIzY2NiI+MDktMTQ8L3RleHQ+CjxyZWN0IHg9IjIyNy4wIiB5
+PSI1Mi43IiB3aWR0aD0iNDIuMiIgaGVpZ2h0PSI5Ny4zIiBmaWxsPSIjMzE4MmJkIi8+Cjx0ZXh0
+IHg9IjI0OC4xIiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2NjYiPjA5LTIx
+PC90ZXh0Pgo8cmVjdCB4PSIyNzMuMiIgeT0iNDUuNSIgd2lkdGg9IjQyLjIiIGhlaWdodD0iMTA0
+LjUiIGZpbGw9IiMzMTgyYmQiLz4KPHRleHQgeD0iMjk0LjQiIHk9IjE2MiIgdGV4dC1hbmNob3I9
+Im1pZGRsZSIgZmlsbD0iIzY2NiI+MDktMjg8L3RleHQ+CjxyZWN0IHg9IjMxOS41IiB5PSI0OS41
+IiB3aWR0aD0iNDIuMiIgaGVpZ2h0PSIxMDAuNSIgZmlsbD0iIzMxODJiZCIvPgo8dGV4dCB4PSIz
+NDAuNiIgeT0iMTYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij4xMC0wNTwvdGV4
+dD4KPHJlY3QgeD0iMzY1LjgiIHk9IjQ3LjQiIHdpZHRoPSI0Mi4yIiBoZWlnaHQ9IjEwMi42IiBm
+aWxsPSIjMzE4MmJkIi8+Cjx0ZXh0IHg9IjM4Ni45IiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRk
+bGUiIGZpbGw9IiM2NjYiPjEwLTEyPC90ZXh0Pgo8L3N2Zz4K
+
+--wbr-boundary-ParcelwickWBRweekof20261012ontime855--

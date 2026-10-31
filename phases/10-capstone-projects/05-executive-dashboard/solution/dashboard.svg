@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" font-family="sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="30" font-size="18" fill="#222">Kettlemoor, September 2026</text>
+<rect x="20" y="48" width="170" height="92" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+<text x="30" y="70" font-size="12" fill="#555">Net revenue</text>
+<text x="30" y="102" font-size="24" fill="#222">GBP 284.2k</text>
+<text x="30" y="126" font-size="10" fill="#c62828">93.0% of target (red)</text>
+<rect x="202" y="48" width="170" height="92" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+<text x="212" y="70" font-size="12" fill="#555">Like-for-like growth</text>
+<text x="212" y="102" font-size="24" fill="#222">-3.9%</text>
+<text x="212" y="126" font-size="10" fill="#555555">2 shops, vs same month last year</text>
+<rect x="384" y="48" width="170" height="92" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+<text x="394" y="70" font-size="12" fill="#555">Gross margin</text>
+<text x="394" y="102" font-size="24" fill="#222">68.3%</text>
+<text x="394" y="126" font-size="10" fill="#555555">net revenue minus cost of goods</text>
+<rect x="566" y="48" width="170" height="92" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+<text x="576" y="70" font-size="12" fill="#555">Average order</text>
+<text x="576" y="102" font-size="24" fill="#222">GBP 7.74</text>
+<text x="576" y="126" font-size="10" fill="#555555">36,713 orders</text>
+<text x="20" y="165" font-size="12" fill="#555">Net revenue by month, GBP (axis from zero)</text>
+<line x1="60" x2="502" y1="330.0" y2="330.0" stroke="#e0e0e0"/>
+<text x="56" y="333.0" font-size="9" text-anchor="end" fill="#777">0k</text>
+<line x1="60" x2="502" y1="255.0" y2="255.0" stroke="#e0e0e0"/>
+<text x="56" y="258.0" font-size="9" text-anchor="end" fill="#777">175k</text>
+<line x1="60" x2="502" y1="180.0" y2="180.0" stroke="#e0e0e0"/>
+<text x="56" y="183.0" font-size="9" text-anchor="end" fill="#777">350k</text>
+<rect x="63.0" y="231.0" width="28" height="99.0" fill="#9ecae1"/>
+<text x="77.0" y="343" font-size="9" text-anchor="middle" fill="#777">2025-09</text>
+<rect x="97.0" y="222.8" width="28" height="107.2" fill="#9ecae1"/>
+<rect x="131.0" y="221.9" width="28" height="108.1" fill="#9ecae1"/>
+<text x="145.0" y="343" font-size="9" text-anchor="middle" fill="#777">2025-11</text>
+<rect x="165.0" y="201.8" width="28" height="128.2" fill="#9ecae1"/>
+<rect x="199.0" y="235.5" width="28" height="94.5" fill="#9ecae1"/>
+<text x="213.0" y="343" font-size="9" text-anchor="middle" fill="#777">2026-01</text>
+<rect x="233.0" y="239.3" width="28" height="90.7" fill="#9ecae1"/>
+<rect x="267.0" y="208.9" width="28" height="121.1" fill="#9ecae1"/>
+<text x="281.0" y="343" font-size="9" text-anchor="middle" fill="#777">2026-03</text>
+<rect x="301.0" y="208.9" width="28" height="121.1" fill="#9ecae1"/>
+<rect x="335.0" y="198.6" width="28" height="131.4" fill="#9ecae1"/>
+<text x="349.0" y="343" font-size="9" text-anchor="middle" fill="#777">2026-05</text>
+<rect x="369.0" y="199.3" width="28" height="130.7" fill="#9ecae1"/>
+<rect x="403.0" y="189.2" width="28" height="140.8" fill="#9ecae1"/>
+<text x="417.0" y="343" font-size="9" text-anchor="middle" fill="#777">2026-07</text>
+<rect x="437.0" y="185.5" width="28" height="144.5" fill="#9ecae1"/>
+<rect x="471.0" y="208.2" width="28" height="121.8" fill="#1f77b4"/>
+<text x="485.0" y="343" font-size="9" text-anchor="middle" fill="#777">2026-09</text>
+<text x="530" y="165" font-size="12" fill="#555">Shops this month</text>
+<text x="530" y="190" font-size="11" fill="#c62828">KM01  GBP 101.1k  94.0% of target</text>
+<text x="530" y="212" font-size="11" fill="#c62828">KM02  GBP 68.6k  88.6% of target</text>
+<text x="530" y="234" font-size="11" fill="#c62828">KM03  GBP 71.8k  94.5% of target</text>
+<text x="530" y="256" font-size="11" fill="#b26a00">KM04  GBP 42.7k  96.0% of target</text>
+<text x="20" y="450" font-size="10" fill="#555">Synthetic data. Status: green 100%+ of target, amber 95 to 100%, red below 95%. 1 shop-day(s) of sales missing this month: totals are low by that much.</text>
+</svg>

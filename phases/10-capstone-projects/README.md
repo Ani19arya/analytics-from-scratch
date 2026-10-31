@@ -29,9 +29,9 @@ flowchart LR
 1. [E-commerce performance review](01-ecommerce-performance-review/). Prepare the quarterly business review for an online store.
 2. [Customer retention and cohort analysis](02-retention-and-cohorts/). Find where retention breaks and which cohort to study first.
 3. [Marketing attribution and campaign effectiveness](03-marketing-attribution/). Reallocate next quarter's budget across channels, and defend it.
-4. SaaS subscription and churn analysis *(planned)*. Build the churn model the finance team can plan with.
-5. Executive dashboard *(planned)*. Design, model and verify the CEO dashboard, in the tool of your choice.
-6. Automated analytics reporting *(planned)*. Make the weekly business review build, test and send itself.
+4. [SaaS subscription and churn analysis](04-saas-churn/). Build the churn model the finance team can plan with.
+5. [Executive dashboard](05-executive-dashboard/). Design, model and verify the CEO dashboard, in the tool of your choice.
+6. [Automated analytics reporting](06-automated-reporting-pipeline/). Make the weekly business review build, test and send itself.
 7. [A natural-language-to-SQL assistant](07-nl-to-sql-assistant/). Build, evaluate and guard an assistant that answers questions from a database.
 8. [A multi-agent analytics copilot](08-analytics-copilot/). Agents that plan, query, check and recommend, with a human approving each step.
 

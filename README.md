@@ -85,8 +85,8 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
-| [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 5 | 3 |
-| **All** | | **118** | **3** |
+| [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 8 | 0 |
+| **All** | | **121** | **0** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -240,9 +240,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 1. 10-01 [E-commerce performance review](phases/10-capstone-projects/01-ecommerce-performance-review): Prepare the quarterly business review for an online store. (Level 3)
 2. 10-02 [Customer retention and cohort analysis](phases/10-capstone-projects/02-retention-and-cohorts): Find where retention breaks and which cohort to study first. (Level 3)
 3. 10-03 [Marketing attribution and campaign effectiveness](phases/10-capstone-projects/03-marketing-attribution): Reallocate next quarter's budget across channels, and defend it. (Level 3)
-4. 10-04 SaaS subscription and churn analysis *(planned)*: Build the churn model the finance team can plan with. (Level 3)
-5. 10-05 Executive dashboard *(planned)*: Design, model and verify the CEO dashboard, in the tool of your choice. (Level 3)
-6. 10-06 Automated analytics reporting *(planned)*: Make the weekly business review build, test and send itself. (Level 3)
+4. 10-04 [SaaS subscription and churn analysis](phases/10-capstone-projects/04-saas-churn): Build the churn model the finance team can plan with. (Level 3)
+5. 10-05 [Executive dashboard](phases/10-capstone-projects/05-executive-dashboard): Design, model and verify the CEO dashboard, in the tool of your choice. (Level 3)
+6. 10-06 [Automated analytics reporting](phases/10-capstone-projects/06-automated-reporting-pipeline): Make the weekly business review build, test and send itself. (Level 3)
 7. 10-07 [A natural-language-to-SQL assistant](phases/10-capstone-projects/07-nl-to-sql-assistant): Build, evaluate and guard an assistant that answers questions from a database. (Level 3)
 8. 10-08 [A multi-agent analytics copilot](phases/10-capstone-projects/08-analytics-copilot): Agents that plan, query, check and recommend, with a human approving each step. (Level 3)
 <!-- /generated:phase-lessons -->

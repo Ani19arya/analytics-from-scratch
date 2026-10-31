@@ -1,0 +1,108 @@
+From: wbr-bot@parcelwick.example
+To: leadership@parcelwick.example
+Subject: Parcelwick WBR, week of 2026-10-19: on time 83.7%
+Date: Mon, 26 Oct 2026 07:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="wbr-boundary-ParcelwickWBRweekof20261019ontime837"
+
+--wbr-boundary-ParcelwickWBRweekof20261019ontime837
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+# Parcelwick weekly business review, week of 2026-10-19
+
+parcels: 135
+delivered: 125
+on_time_pct: 83.70
+failed: 5
+returned: 5
+revenue_gbp: 402.75
+
+## Against last week (week of 2026-10-12, as known today)
+
+| KPI | This week | Last week | Change |
+|---|---|---|---|
+| parcels | 135 | 186 | -27.4% |
+| delivered | 125 | 182 | -31.3% |
+| on_time_pct | 83.70% | 86.02% | -2.32 pts |
+| failed | 5 | 1 | +400.0% |
+| returned | 5 | 3 | +66.7% |
+| revenue_gbp | GBP 402.75 | GBP 593.68 | -32.2% |
+
+Rates change in percentage points (pts); counts and revenue in percent.
+
+## By site
+
+| Site | Parcels | On time | Revenue |
+|---|---|---|---|
+| PW01 Clifton | 43 | 88.37% | GBP 126.60 |
+| PW02 Bedminster | 37 | 72.97% | GBP 103.67 |
+| PW03 Redland | 22 | 81.82% | GBP 74.29 |
+| PW04 Easton | 33 | 90.91% | GBP 98.19 |
+
+## On time by site, last 4 weeks
+
+| Site | 09-28 | 10-05 | 10-12 | 10-19 |
+|---|---|---|---|---|
+| PW01 Clifton | 87.2 | 92.5 | 87.2 | 88.4 |
+| PW02 Bedminster | 85.7 | 63.4 | 82.5 | 73.0 |
+| PW03 Redland | 88.9 | 92.3 | 93.3 | 81.8 |
+| PW04 Easton | 87.8 | 83.3 | 86.7 | 90.9 |
+| PW05 Southville | 85.2 | 91.4 | 79.2 | n/a |
+
+## Restated
+
+Last week's email said 179 parcels and 85.47% on time. With late rows that ar=
+rived since, it is 186 parcels and 86.02% on time. The table above uses the r=
+estated numbers.
+
+## Data warnings
+
+- site_silent: site PW05 sent no parcels for the week of 2026-10-19; it did i=
+n each of the 4 weeks before
+
+A parcel counts in the week of its latest outcome. On time =3D delivered on o=
+r before the promised date. A week can still change when late rows arrive.
+Synthetic data. Built, checked and sent by the weekly pipeline; reply to anal=
+ytics with questions.
+
+--wbr-boundary-ParcelwickWBRweekof20261019ontime837
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="on_time_8_weeks.svg"
+MIME-Version: 1.0
+
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MjAiIGhlaWdo
+dD0iMTgwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ij4KPHJlY3Qgd2lk
+dGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZmZmZmZiIvPgo8dGV4dCB4PSI0MCIgeT0i
+MTQiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMyMjIiPk9uIHRpbWUsICUgb2YgcGFyY2VscywgYnkg
+d2VlayAoc3ludGhldGljIGRhdGEpPC90ZXh0Pgo8bGluZSB4MT0iNDAiIHgyPSI0MTAiIHkxPSIx
+NTAuMCIgeTI9IjE1MC4wIiBzdHJva2U9IiNkZGQiLz4KPHRleHQgeD0iMzYiIHk9IjE1My4wIiB0
+ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNjY2Ij4wPC90ZXh0Pgo8bGluZSB4MT0iNDAiIHgyPSI0
+MTAiIHkxPSI5MC4wIiB5Mj0iOTAuMCIgc3Ryb2tlPSIjZGRkIi8+Cjx0ZXh0IHg9IjM2IiB5PSI5
+My4wIiB0ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjNjY2Ij41MDwvdGV4dD4KPGxpbmUgeDE9IjQw
+IiB4Mj0iNDEwIiB5MT0iMzAuMCIgeTI9IjMwLjAiIHN0cm9rZT0iI2RkZCIvPgo8dGV4dCB4PSIz
+NiIgeT0iMzMuMCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iIzY2NiI+MTAwPC90ZXh0Pgo8cmVj
+dCB4PSI0Mi4wIiB5PSI0Ni41IiB3aWR0aD0iNDIuMiIgaGVpZ2h0PSIxMDMuNSIgZmlsbD0iIzMx
+ODJiZCIvPgo8dGV4dCB4PSI2My4xIiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9
+IiM2NjYiPjA4LTMxPC90ZXh0Pgo8cmVjdCB4PSI4OC4yIiB5PSI0MS4yIiB3aWR0aD0iNDIuMiIg
+aGVpZ2h0PSIxMDguOCIgZmlsbD0iIzMxODJiZCIvPgo8dGV4dCB4PSIxMDkuNCIgeT0iMTYyIiB0
+ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij4wOS0wNzwvdGV4dD4KPHJlY3QgeD0iMTM0
+LjUiIHk9IjQ5LjUiIHdpZHRoPSI0Mi4yIiBoZWlnaHQ9IjEwMC41IiBmaWxsPSIjMzE4MmJkIi8+
+Cjx0ZXh0IHg9IjE1NS42IiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2NjYi
+PjA5LTE0PC90ZXh0Pgo8cmVjdCB4PSIxODAuOCIgeT0iNTIuNyIgd2lkdGg9IjQyLjIiIGhlaWdo
+dD0iOTcuMyIgZmlsbD0iIzMxODJiZCIvPgo8dGV4dCB4PSIyMDEuOSIgeT0iMTYyIiB0ZXh0LWFu
+Y2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij4wOS0yMTwvdGV4dD4KPHJlY3QgeD0iMjI3LjAiIHk9
+IjQ1LjUiIHdpZHRoPSI0Mi4yIiBoZWlnaHQ9IjEwNC41IiBmaWxsPSIjMzE4MmJkIi8+Cjx0ZXh0
+IHg9IjI0OC4xIiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2NjYiPjA5LTI4
+PC90ZXh0Pgo8cmVjdCB4PSIyNzMuMiIgeT0iNDkuNSIgd2lkdGg9IjQyLjIiIGhlaWdodD0iMTAw
+LjUiIGZpbGw9IiMzMTgyYmQiLz4KPHRleHQgeD0iMjk0LjQiIHk9IjE2MiIgdGV4dC1hbmNob3I9
+Im1pZGRsZSIgZmlsbD0iIzY2NiI+MTAtMDU8L3RleHQ+CjxyZWN0IHg9IjMxOS41IiB5PSI0Ni44
+IiB3aWR0aD0iNDIuMiIgaGVpZ2h0PSIxMDMuMiIgZmlsbD0iIzMxODJiZCIvPgo8dGV4dCB4PSIz
+NDAuNiIgeT0iMTYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij4xMC0xMjwvdGV4
+dD4KPHJlY3QgeD0iMzY1LjgiIHk9IjQ5LjYiIHdpZHRoPSI0Mi4yIiBoZWlnaHQ9IjEwMC40IiBm
+aWxsPSIjMzE4MmJkIi8+Cjx0ZXh0IHg9IjM4Ni45IiB5PSIxNjIiIHRleHQtYW5jaG9yPSJtaWRk
+bGUiIGZpbGw9IiM2NjYiPjEwLTE5PC90ZXh0Pgo8L3N2Zz4K
+
+--wbr-boundary-ParcelwickWBRweekof20261019ontime837--

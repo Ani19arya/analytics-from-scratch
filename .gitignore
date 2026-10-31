@@ -10,3 +10,4 @@ my_chart*.svg
 my_region_totals.csv
 live_runs/
 live_session/
+phases/10-capstone-projects/06-automated-reporting-pipeline/outbox/

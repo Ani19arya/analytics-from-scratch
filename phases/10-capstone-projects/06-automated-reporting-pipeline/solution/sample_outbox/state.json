@@ -1,0 +1,26 @@
+{
+  "sent": {
+    "2026-10-12": {
+      "file": "2026-10-12_wbr.eml",
+      "kpis": {
+        "delivered": 175,
+        "failed": 1,
+        "on_time_pct": 85.47,
+        "parcels": 179,
+        "returned": 3,
+        "revenue_gbp": 569.75
+      }
+    },
+    "2026-10-19": {
+      "file": "2026-10-19_wbr.eml",
+      "kpis": {
+        "delivered": 125,
+        "failed": 5,
+        "on_time_pct": 83.7,
+        "parcels": 135,
+        "returned": 5,
+        "revenue_gbp": 402.75
+      }
+    }
+  }
+}
