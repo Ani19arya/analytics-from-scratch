@@ -287,7 +287,7 @@ A Rs 96.27 order comes first, because the text "96.27" starts with a 9. None of 
 
 **LIMIT without ORDER BY.** `LIMIT 10` on its own returns ten rows in whatever order the table is stored, not the ten biggest. Always sort before you limit.
 
-**SQLite and other databases.** The SQL in this lesson works almost everywhere. Two differences to know: SQL Server writes `SELECT TOP 10 ...` instead of `LIMIT 10`, and Oracle writes `FETCH FIRST 10 ROWS ONLY`. Other databases store dates as a real date type, written `DATE '2026-10-19'`; SQLite keeps them as text, which works because of the `YYYY-MM-DD` form.
+**SQLite and other databases.** The SQL in this lesson works almost everywhere. Two differences to know: SQL Server writes `SELECT TOP 10 ...` instead of `LIMIT 10`, and Oracle writes `FETCH FIRST 10 ROWS ONLY`. Most other databases have a real date type: PostgreSQL, MySQL and Oracle accept a date written `DATE '2026-10-19'`, while SQL Server takes the plain text `'2026-10-19'`. SQLite has no date type and keeps dates as text, which works because of the `YYYY-MM-DD` form.
 
 ## Your turn
 

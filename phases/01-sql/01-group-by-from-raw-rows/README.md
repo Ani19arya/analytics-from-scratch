@@ -5,7 +5,7 @@ How much did each city bring in last quarter, and which cities are big enough to
 ## Before you start
 
 - **Level 1** (beginner). About 2 hours.
-- **Builds on:** nothing. This is the first SQL lesson. If you have never written SQL, the short box in [In plain words](#in-plain-words) gives you the four words you need.
+- **Builds on:** [04 Your first SQL query](../../00-start-here/04-your-first-sql-query/) and [05 NULLs, CASE and COALESCE](../../00-start-here/05-nulls-case-and-coalesce/) in phase 00. If you skipped them, the short box in [In plain words](#in-plain-words) gives you the four words you need.
 - **You need:** Python 3.9 or later. Nothing to install. SQLite, the database used here, comes with Python.
 
 ## The problem

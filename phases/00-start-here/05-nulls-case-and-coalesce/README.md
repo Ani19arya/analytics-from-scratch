@@ -265,7 +265,7 @@ tips_recorded | avg_tip_recorded | avg_tip_blank_as_zero
 (1 row)
 ```
 
-`AVG(tip)` divides by the 132 recorded tips (zeros included). `AVG(COALESCE(tip, 0))` treats the 72 unrecorded tips as zero and divides by all 204 orders. A NULL here means "unknown", not "no tip", so Rs 12.16 understates tipping. Rs 18.79 is the average among orders where we know the tip.
+`AVG(tip)` divides by the 132 recorded tips (zeros included). `AVG(COALESCE(tip, 0))` treats the 72 NULL tips as zero and divides by all 204 orders. 40 of those NULLs are delivered orders from the old app, where the tip is unknown, not zero; the other 32 are cancelled or in-transit orders, which do not belong in a tip average at all. So Rs 12.16 understates tipping. Rs 18.79 is the average among orders where we know the tip.
 
 ## Common mistakes
 
@@ -339,7 +339,7 @@ large
 
 **Using COALESCE to hide a problem.** `COALESCE(amount, 0)` would make the 7 missing payments look like free orders. Replace NULL only when you know what the missing value really is.
 
-**SQLite and other databases.** NULL, `IS NULL`, `CASE` and `COALESCE` work the same in PostgreSQL, MySQL, SQL Server, BigQuery and Snowflake. Two differences: SQLite shows true and false as 1 and 0, and Oracle treats the empty text `''` as NULL, unlike the others.
+**SQLite and other databases.** NULL, `IS NULL`, `CASE` and `COALESCE` work the same in PostgreSQL, MySQL, SQL Server, BigQuery and Snowflake. Two differences: SQLite (like MySQL) shows true and false as 1 and 0, and Oracle treats the empty text `''` as NULL, unlike the others.
 
 ## Your turn
 

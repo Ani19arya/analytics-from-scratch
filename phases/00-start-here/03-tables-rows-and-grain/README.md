@@ -233,7 +233,7 @@ Stretch: write `dedupe(rows, key)` that keeps the first row for each key value, 
 <summary>Answers</summary>
 
 1. The grain is what one row stands for. A number such as a fee or a price belongs to one grain; adding it at a finer grain counts it once per row of that finer grain.
-2. Find the 20 repeats, look at them, and decide whether they are exact copies to remove or different records sharing an id (a bigger problem). Do not add anything up until rows equal distinct keys.
+2. Find the repeated ids (20 extra rows, which could be 20 ids twice or fewer ids many times), look at them, and decide whether they are exact copies to remove or different records sharing an id (a bigger problem). Do not add anything up until rows equal distinct keys.
 3. One column alone repeats: an order has several lines, and every order has a line 1. Only the pair identifies one row.
 4. No. One customer has many orders, so the join has one row per order. It becomes a problem if you then add up a customer-level column, such as a sign-up bonus, on the joined rows.
 

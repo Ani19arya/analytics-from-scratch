@@ -208,7 +208,7 @@ mean_all, mean_rest = sum(pay) / len(pay), sum(rest) / len(rest)
 print(len(pay) - len(rest), "director rows")
 print("below the mean:", sum(1 for p in pay if p < mean_all), "of", len(pay))
 print("mean without them:", round(mean_rest, 2))
-print("share of the 6,280 gap they explain:", round(mean_all - mean_rest, 2))
+print("part of the 6,280 gap they explain:", round(mean_all - mean_rest, 2))
 sd_rest = (sum((p - mean_rest) ** 2 for p in rest) / len(rest)) ** 0.5
 print("SD without them:", round(sd_rest, 2))
 ```
@@ -217,7 +217,7 @@ print("SD without them:", round(sd_rest, 2))
 8 director rows
 below the mean: 195 of 300
 mean without them: 84263.7
-share of the 6,280 gap they explain: 5016.3
+part of the 6,280 gap they explain: 5016.3
 SD without them: 19261.96
 ```
 
@@ -263,7 +263,7 @@ Stretch: compute the median and P25 to P75 separately for each title. Which titl
 
 ## In real job postings
 
-In the Real Analyst Jobs data drop of 25 October 2026, 528 of the 2,789 US analyst postings (18.9%) were senior or lead/staff roles and 375 (13.4%) were entry level. Mixing levels like this is what puts a long right tail on real pay data, so always say which levels a pay figure covers. Browse the [data analyst jobs in the USA](https://realanalystjobs.com/jobs/data-analyst-jobs-in-usa) or see the [analyst job market report](https://realanalystjobs.com/analyst-job-market).
+In the Real Analyst Jobs data drop of 25 October 2026, 528 of the 2,789 US analyst postings (18.9%) were senior or lead/staff roles and 375 (13.4%) were entry level. Mixing levels like this is one reason real pay data has a long right tail, so always say which levels a pay figure covers. Browse the [data analyst jobs in the USA](https://realanalystjobs.com/jobs/data-analyst-jobs-in-usa) or see the [analyst job market report](https://realanalystjobs.com/analyst-job-market).
 
 ## Next
 

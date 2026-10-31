@@ -263,7 +263,7 @@ print(round(veg, 2))
 
 Rs 13,446.52 instead of Rs 15,005.59. Compare `.strip().lower()` on both sides, which is what Excel's SUMIF does with case anyway.
 
-**Turning blanks into zero.** For a total, a blank adds nothing either way. For a count it matters: counting blanks as 0 would report 88 purchases with an amount instead of 84, and an average would be pulled down. Return `None` for "no value", as SQL does with NULL in [lesson 05](../05-nulls-case-and-coalesce/).
+**Turning blanks into zero.** For a total, a blank adds nothing either way. For a count it matters: turning the blanks, the `n/a` and the `92O` into 0 would report 88 purchases with an amount instead of 84, and an average would be pulled down. Return `None` for "no value", as SQL does with NULL in [lesson 05](../05-nulls-case-and-coalesce/).
 
 **Dropping the minus sign.** `-138.41` is a refund for green chillies. If the cleaning removed every `-`, the total would be Rs 276.82 too high (the refund counted as a purchase instead of taken off).
 

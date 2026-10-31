@@ -235,7 +235,7 @@ Stretch: write a function that returns the share of the total change each segmen
 
 ## What to tell the stakeholder
 
-"Completed sales from Monday to Thursday are down 10.4% on the same days last week (Rs 71,805 against Rs 80,116). The fall is in Nagpur, down 51.5%, while the other three cities grew. Both app and website orders fell in Nagpur, so before 4 pm it is worth asking the Nagpur manager what changed there this week. The data shows where the fall is, not why."
+"Completed sales from Monday to Thursday are down 10.4% on the same days last week (Rs 71,805 against Rs 80,116). The fall is in Nagpur, down 51.5%, while the other three cities together grew. Both app and website orders fell in Nagpur, so before 4 pm it is worth asking the Nagpur manager what changed there this week. The data shows where the fall is, not why."
 
 ## In real job postings
 
