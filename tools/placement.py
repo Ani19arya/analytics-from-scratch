@@ -1028,7 +1028,7 @@ def render_roadmap_markdown(lessons=None, prefix=""):
         "## Fast track",
         "",
         "Already working with data, or preparing for interviews? You do not have to start at phase 00. "
-        "Run the placement check from the repo root first. It asks your goal and 13 short questions, "
+        "Run the placement check from the repo root first. It asks your goal and 13 short questions (plus a follow-up or two where one answer looks like a slip), "
         "then prints a start lesson and the lessons you can skip:",
         "",
         "```",
@@ -1059,7 +1059,7 @@ def render_readme_markdown(lessons=None):
         lessons = load_curriculum()
     out = [
         "**Fast track.** Already working with data, or preparing for interviews? Run "
-        "`python3 tools/placement.py` from the repo root. It asks your goal and 13 short questions, "
+        "`python3 tools/placement.py` from the repo root. It asks your goal and 13 short questions (plus a follow-up or two where one answer looks like a slip), "
         "then prints where to start and what you can skip. The full paths are in the "
         "[learning roadmap](LEARNING_ROADMAP.md#fast-track). Skip a lesson only if the placement check "
         "or the lesson's own Check yourself is easy for you.",

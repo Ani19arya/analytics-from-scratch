@@ -74,14 +74,38 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 
 <!-- Fast track: printed by python3 tools/placement.py --markdown from its FAST_TRACK table. Edit the table, then paste. tools/test_placement.py checks they match. -->
 
-**Fast track.** Already working with data, or preparing for interviews? Run `python3 tools/placement.py` from the repo root. It asks your goal and 13 short questions, then prints where to start and what you can skip. The full paths are in the [learning roadmap](LEARNING_ROADMAP.md#fast-track). Skip a lesson only if the placement check or the lesson's own Check yourself is easy for you.
+**Fast track.** Already working with data, or preparing for interviews? Run `python3 tools/placement.py` from the repo root. It asks your goal and 13 short questions (plus a follow-up or two where one answer looks like a slip), then prints where to start and what you can skip. The full paths are in the [learning roadmap](LEARNING_ROADMAP.md#fast-track). Skip a lesson only if the placement check or the lesson's own Check yourself is easy for you.
 
 - **Working data analyst**: the path opens with [01-03 Window functions](phases/01-sql/03-window-functions). Safe to skip if easy for you: 00-04, 01-01, 01-07, 02-01, 00-06, 05-01, 04-05, 04-06.
 - **BI analyst**: the path opens with [00-03 Tables, rows and grain](phases/00-start-here/03-tables-rows-and-grain). Safe to skip if easy for you: 04-04, 04-05, 04-06, 04-07, 00-04, 01-01.
 - **Business analyst**: the path opens with [00-05 NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce). Safe to skip if easy for you: 00-04, 01-01, 04-05, 04-06, 00-06, 06-04.
 - **Interview prep**: the path opens with [01-02 Joins without losing rows](phases/01-sql/02-joins-without-losing-rows). Safe to skip if easy for you: 00-04, 01-01, 02-01, 03-02, 05-01, 04-05.
 
+Leading a team? The [analytics manager track](LEARNING_ROADMAP.md#analytics-manager-track) is a path through existing lessons for leads who own metrics, experiments, data quality and AI governance. Capstone [10-07](phases/10-capstone-projects/07-nl-to-sql-assistant) also has an optional live mode for your own model API key, with retries, a cost cap, checked JSON replies and the read-only gateway; its tests never call a model.
+
 **Time:** about 350 hours in all, or 6 to 9 months at 10 to 12 hours a week. The course builds skills you can demonstrate. It cannot promise a job, and it does not pretend to.
+
+## Visual explainers
+
+Five small interactive pages that go with lessons, in [visuals/](visuals/). Each is one HTML file that works offline: double-click it. They use the lesson's own fictional company and data, check their math against the lesson when they open, and plant one mistake for you to find.
+
+- [Join fan-out explorer](visuals/join-fanout.html): watch a one-to-many key inflate a join's row count and SUM, then fix it (lesson 01-02).
+- [Window function playground](visuals/window-functions.html): pick PARTITION BY, ORDER BY, the frame and the function, and see each row's frame (lesson 01-03).
+- [Cohort triangle builder](visuals/cohort-triangle.html): build retention from raw events and see why blank is not 0 (lesson 01-04).
+- [A/B test calculator](visuals/ab-test.html): live z-test, p-value and confidence interval, plus a seeded peeking simulation (lessons 02-03 and 02-13).
+- [Agent loop stepper](visuals/agent-loop.html): step through a simulated agent run, guard and grounding check included (lesson 06-13).
+
+## Track your progress
+
+One learner profile follows you across every tutor mode. It lives in `.learner/profile.json`, which is gitignored, so it stays on your computer.
+
+```
+python3 tools/progress.py status          # lessons passed per area, phase and level, and the next lesson
+python3 tools/progress.py check 01-02     # runs that lesson's test on your exercise and records the result
+python3 tools/progress.py report --md     # before and after: placement, lessons passed, mock interview scores
+```
+
+Record a placement with `python3 tools/progress.py placement --answers answers.json` and a mock interview scorecard with `python3 tools/progress.py interview --from card.json`. The report is evidence of what you can now do, not a certificate.
 
 ## Curriculum
 
@@ -273,6 +297,8 @@ Every lesson listed is live. A lesson is only listed as live when its test passe
 <!-- /generated:phase-lessons -->
 
 ## Learn with your coding agent
+
+The tutor has three modes: Beginner (analogy first, predict the output, hints before answers), Working analyst (starts from the placement check, workplace problems, challenges your recommendation) and Interviewer (a 45-minute mock interview scored against [a transparent rubric](skills/analytics-from-scratch/INTERVIEW_RUBRIC.md)). All three read and update the same learner profile.
 
 The repo ships a tutor skill for coding agents that read SKILL.md files (Claude Code, Cursor, Codex and others):
 

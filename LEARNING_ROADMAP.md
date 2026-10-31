@@ -129,7 +129,7 @@ Do these, in order:
 
 ## Fast track
 
-Already working with data, or preparing for interviews? You do not have to start at phase 00. Run the placement check from the repo root first. It asks your goal and 13 short questions, then prints a start lesson and the lessons you can skip:
+Already working with data, or preparing for interviews? You do not have to start at phase 00. Run the placement check from the repo root first. It asks your goal and 13 short questions (plus a follow-up or two where one answer looks like a slip), then prints a start lesson and the lessons you can skip:
 
 ```
 python3 tools/placement.py
