@@ -20,7 +20,7 @@
      "question": "Is Python ready on your computer, and how does a lesson tell you that your answer is right?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 1,
      "skills": [
       "setup"
@@ -34,7 +34,7 @@
      "question": "A manager says sales are down. What do you ask before you touch any data?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "framing"
@@ -48,7 +48,7 @@
      "question": "What does one row of this table mean, and which column identifies it?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 1.5,
      "skills": [
       "data-modeling"
@@ -62,7 +62,7 @@
      "question": "Which ten orders were the biggest last week, and from which city?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -76,7 +76,7 @@
      "question": "How many orders have no delivery date, and how do we bucket orders into small, medium and large?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -90,7 +90,7 @@
      "question": "Can you total a column of a CSV without opening Excel?",
      "level": "beginner",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 3,
      "skills": [
       "python"
@@ -136,7 +136,7 @@
      "slug": "03-window-functions",
      "path": "phases/01-sql/03-window-functions",
      "title": "Window functions",
-     "question": "How is each region tracking against its year to date, who are the top reps, and did revenue go up or down from last month?",
+     "question": "How is each region tracking against its fiscal year to date, who are the top reps, and did revenue go up or down from last month?",
      "level": "intermediate",
      "kind": "tested",
      "status": "live",
@@ -758,7 +758,7 @@
      "slug": "02-dax-measures-from-scratch",
      "path": "phases/04-dashboards/02-dax-measures-from-scratch",
      "title": "DAX measures from scratch",
-     "question": "What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, year to date and growth on last year numbers without Power BI?",
+     "question": "What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, share, year to date and growth on last year numbers without Power BI?",
      "level": "intermediate",
      "kind": "tested",
      "status": "live",
@@ -1308,7 +1308,7 @@
      "slug": "01-read-job-postings-like-data",
      "path": "phases/07-getting-hired/01-read-job-postings-like-data",
      "title": "Read job postings like data",
-     "question": "Across 300 analyst job postings, which tools are asked for most, how much experience do they want, and what do they say about visa sponsorship?",
+     "question": "Across 300 analyst job postings, which tools are required most, how much experience do they want, and what do they say about visa sponsorship?",
      "level": "beginner",
      "kind": "tested",
      "status": "live",

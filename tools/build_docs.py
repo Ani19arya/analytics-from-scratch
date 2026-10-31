@@ -1,4 +1,4 @@
-"""Render the lesson lists in README.md and LEARNING_ROADMAP.md from curriculum.json.
+"""Render the lesson lists in README.md, LEARNING_ROADMAP.md and phases/README.md from curriculum.json.
 
 curriculum.json is the single source of truth for lesson order, level and status.
 Each document marks a generated region with
@@ -70,8 +70,17 @@ def render_by_level(cur, level):
     return "\n".join(out)
 
 
+def render_phase_index(cur):
+    rows = ["| # | Phase | Lessons live | Planned |", "|---|---|---|---|"]
+    for p in cur["phases"]:
+        live = sum(1 for l in p["lessons"] if l["status"] == "live")
+        rows.append(f"| {p['slug'][:2]} | [{p['title']}]({p['slug']}) | {live} | {len(p['lessons']) - live} |")
+    return "\n".join(rows)
+
+
 def regions(cur):
-    r = {"phase-table": render_phase_table(cur), "phase-lessons": render_phase_lessons(cur)}
+    r = {"phase-table": render_phase_table(cur), "phase-lessons": render_phase_lessons(cur),
+         "phase-index": render_phase_index(cur)}
     for level in LEVEL_ORDER:
         r[f"level-{level}"] = render_by_level(cur, level)
     return r
@@ -90,7 +99,7 @@ def main():
     check = "--check" in sys.argv
     rendered = regions(load())
     stale = []
-    for name in ["README.md", "LEARNING_ROADMAP.md"]:
+    for name in ["README.md", "LEARNING_ROADMAP.md", "phases/README.md"]:
         path = os.path.join(ROOT, name)
         if not os.path.exists(path):
             continue

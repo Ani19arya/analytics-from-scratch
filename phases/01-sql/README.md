@@ -55,6 +55,8 @@ python3 ../query.py "SELECT status, COUNT(*) AS orders FROM orders GROUP BY stat
 python3 ../query.py scratch.sql
 ```
 
+`../query.py` is the shortcut for use inside a lesson folder. From the repo root, [tools/query.py](../../tools/query.py) does the same for any lesson: `python3 tools/query.py phases/01-sql/01-group-by-from-raw-rows "SELECT ..."`.
+
 Use the second form for a query longer than one line: save it in a file, then run the file. Empty cells print as `NULL`, so you can tell a missing value from a 0.
 
 ## SQLite and other databases

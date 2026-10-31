@@ -34,6 +34,12 @@ python3 test_lesson.py
 
 The test fails until you complete `exercise.sql`. Read the lesson's `README.md`, fill in the exercise, and run the test again. New to all of this? Begin with [phase 00](phases/00-start-here), which shows you how to install Python and run your first test.
 
+Run any SQL against a lesson's data, from the repo root:
+
+```
+python3 tools/query.py phases/00-start-here/04-your-first-sql-query "SELECT * FROM orders LIMIT 5"
+```
+
 Check every lesson from the repo root:
 
 ```
@@ -69,7 +75,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 <!-- generated:phase-table -->
 | Phase | What you learn | Lessons live | Planned |
 |---|---|---|---|
-| [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 0 | 6 |
+| [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
 | [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 4 | 10 |
 | [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 4 | 11 |
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 4 | 10 |
@@ -80,7 +86,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 0 | 6 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 0 | 9 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **27** | **94** |
+| **All** | | **33** | **88** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -88,18 +94,18 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 <!-- generated:phase-lessons -->
 ### 00 Start here
 
-1. 00-01 Run your first lesson *(planned)*: Is Python ready on your computer, and how does a lesson tell you that your answer is right? (Level 1)
-2. 00-02 Think like an analyst *(planned)*: A manager says sales are down. What do you ask before you touch any data? (Level 1)
-3. 00-03 Tables, rows and grain *(planned)*: What does one row of this table mean, and which column identifies it? (Level 1)
-4. 00-04 Your first SQL query *(planned)*: Which ten orders were the biggest last week, and from which city? (Level 1)
-5. 00-05 NULLs, CASE and COALESCE *(planned)*: How many orders have no delivery date, and how do we bucket orders into small, medium and large? (Level 1)
-6. 00-06 Python for spreadsheet people *(planned)*: Can you total a column of a CSV without opening Excel? (Level 1)
+1. 00-01 [Run your first lesson](phases/00-start-here/01-run-your-first-lesson): Is Python ready on your computer, and how does a lesson tell you that your answer is right? (Level 1)
+2. 00-02 [Think like an analyst](phases/00-start-here/02-think-like-an-analyst): A manager says sales are down. What do you ask before you touch any data? (Level 1)
+3. 00-03 [Tables, rows and grain](phases/00-start-here/03-tables-rows-and-grain): What does one row of this table mean, and which column identifies it? (Level 1)
+4. 00-04 [Your first SQL query](phases/00-start-here/04-your-first-sql-query): Which ten orders were the biggest last week, and from which city? (Level 1)
+5. 00-05 [NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce): How many orders have no delivery date, and how do we bucket orders into small, medium and large? (Level 1)
+6. 00-06 [Python for spreadsheet people](phases/00-start-here/06-python-for-spreadsheet-people): Can you total a column of a CSV without opening Excel? (Level 1)
 
 ### 01 SQL from raw tables
 
 1. 01-01 [GROUP BY from raw rows](phases/01-sql/01-group-by-from-raw-rows): How much did each city bring in last quarter, and which cities are big enough to matter? (Level 1)
 2. 01-02 [Joins without losing rows](phases/01-sql/02-joins-without-losing-rows): Which customers have never ordered, and what is revenue by city without counting any order twice? (Level 1)
-3. 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its year to date, who are the top reps, and did revenue go up or down from last month? (Level 2)
+3. 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its fiscal year to date, who are the top reps, and did revenue go up or down from last month? (Level 2)
 4. 01-04 [Cohort retention](phases/01-sql/04-cohort-retention): Of the users who signed up in each month, what share were still active one, two and three months later? (Level 2)
 5. 01-05 Dates and the date spine *(planned)*: What were signups per day, including the days with zero? (Level 1)
 6. 01-06 Anti-joins, self-joins and UNION *(planned)*: Which customers ordered in March but not in April? (Level 1)
@@ -150,7 +156,7 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 ### 04 Dashboards and spreadsheets
 
 1. 04-01 [Model the data a dashboard needs](phases/04-dashboards/01-model-the-data-a-dashboard-needs): How do you turn one flat export of order lines into tables a dashboard can slice by date, product and region without double counting? (Level 2)
-2. 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, year to date and growth on last year numbers without Power BI? (Level 2)
+2. 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, share, year to date and growth on last year numbers without Power BI? (Level 2)
 3. 04-03 [Tableau LOD expressions in SQL](phases/04-dashboards/03-tableau-lod-expressions-in-sql): How do you compute a number at a different level of detail from the chart it sits in, such as each customer's first order month in a chart by month, or a region's total in a chart by customer? (Level 2)
 4. 04-04 [Draw a chart from scratch](phases/04-dashboards/04-draw-a-chart-from-scratch): What does a dashboard tool do when it turns a table into a bar chart, and which chart should you pick in the first place? (Level 1)
 5. 04-05 Lookups and SUMIFS like Excel *(planned)*: Why does the VLOOKUP total not match finance? (Level 1)
@@ -195,7 +201,7 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 
 ### 07 Getting hired
 
-1. 07-01 [Read job postings like data](phases/07-getting-hired/01-read-job-postings-like-data): Across 300 analyst job postings, which tools are asked for most, how much experience do they want, and what do they say about visa sponsorship? (Level 1)
+1. 07-01 [Read job postings like data](phases/07-getting-hired/01-read-job-postings-like-data): Across 300 analyst job postings, which tools are required most, how much experience do they want, and what do they say about visa sponsorship? (Level 1)
 2. 07-02 [SQL interview questions](phases/07-getting-hired/02-sql-interview-questions): Can you answer the six SQL questions that come up again and again in analyst interviews, and explain why the obvious answer is wrong? (Level 2)
 3. 07-03 [Portfolio project end to end](phases/07-getting-hired/03-portfolio-project-end-to-end): Do customers who start on a free trial cancel within 90 days more often than customers who pay from day one? (Level 2)
 4. 07-04 [Match your resume to a posting](phases/07-getting-hired/04-match-your-resume-to-a-posting): Of five open roles, which ones fit this resume best, and which missing skills stand between the candidate and the rest? (Level 1)

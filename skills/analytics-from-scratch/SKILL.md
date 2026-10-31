@@ -38,7 +38,7 @@ Ask these one at a time, and wait for each answer. Stop early when the answer al
 Pick the starting point, first rule that matches:
 
 - Running code is "never", or SQL and Python are both "never": start at the first live lesson in `phases/00-start-here/` (in `curriculum.json` order). If that phase has no live lessons yet, start at `phases/01-sql/01-group-by-from-raw-rows/` and offer to explain how to run `python3 test_lesson.py` first.
-- SQL is "never" or "with help": start at the first live lesson in `phases/01-sql/`.
+- SQL is "never": start at `phases/00-start-here/04-your-first-sql-query/`. SQL is "with help": start at the first live lesson in `phases/01-sql/`.
 - SQL is comfortable, statistics is not: start at the first live lesson in `phases/02-statistics-and-experiments/`.
 - SQL and statistics are comfortable, Python is "never" or "with help": start at the first live lesson in `phases/05-python-for-analysts/`. Phases 06 (AI for analysts) and 07 use Python exercises, so Python comes before them. Mention that phases 03 (metrics) and 04 (dashboards) are open to them as well.
 - SQL, statistics and Python are all comfortable: offer phase 03 (metrics) for product and growth roles, phase 04 (dashboards) for BI roles, or phase 06 (AI for analysts) if they have not evaluated a model's outputs before. Let them choose.

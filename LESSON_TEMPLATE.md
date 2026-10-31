@@ -31,7 +31,7 @@ Set `kind` in curriculum.json.
 | Kind | Use when | How it is checked |
 |---|---|---|
 | `tested` | The logic can run in Python or SQLite | The test above |
-| `tested` with a recorded fixture | The lesson is about an AI model's output | Test against recorded outputs in `data/`, labelled with model, date, prompt and temperature, or clearly labelled as simulated. An optional `live_run.py` may re-record with the learner's own key and is never used by the test |
+| `tested` with a recorded fixture | The lesson is about an AI model's output | Test against recorded outputs in `data/`, with provenance in `data/fixture.json` (model, date, prompt and temperature), or clearly labelled as simulated (model "none"). An optional `live_run.py` may re-record with the learner's own key and is never used by the test |
 | `tested` with an export check | The skill lives in a GUI (Excel, Power BI, Tableau) | Rebuild the logic in code and test it. An optional task asks the learner to do it in the tool and export a CSV, which the test checks if present and skips if not |
 | `guide` | Nothing computational to check (behavioural interviews, wiring a client) | No test. Marked "Guide, no test" everywhere. Still has Check yourself questions |
 

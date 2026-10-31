@@ -96,12 +96,12 @@ An **analytics manager** track adds the Level 3 statistics and causal lessons, t
 <!-- generated:level-beginner -->
 **00 Start here**
 
-- [ ] 00-01 Run your first lesson *(planned)*: Is Python ready on your computer, and how does a lesson tell you that your answer is right? About 1 h.
-- [ ] 00-02 Think like an analyst *(planned)*: A manager says sales are down. What do you ask before you touch any data? About 2 h.
-- [ ] 00-03 Tables, rows and grain *(planned)*: What does one row of this table mean, and which column identifies it? About 1.5 h.
-- [ ] 00-04 Your first SQL query *(planned)*: Which ten orders were the biggest last week, and from which city? About 2 h.
-- [ ] 00-05 NULLs, CASE and COALESCE *(planned)*: How many orders have no delivery date, and how do we bucket orders into small, medium and large? About 2 h.
-- [ ] 00-06 Python for spreadsheet people *(planned)*: Can you total a column of a CSV without opening Excel? About 3 h.
+- [x] 00-01 [Run your first lesson](phases/00-start-here/01-run-your-first-lesson): Is Python ready on your computer, and how does a lesson tell you that your answer is right? About 1 h.
+- [x] 00-02 [Think like an analyst](phases/00-start-here/02-think-like-an-analyst): A manager says sales are down. What do you ask before you touch any data? About 2 h.
+- [x] 00-03 [Tables, rows and grain](phases/00-start-here/03-tables-rows-and-grain): What does one row of this table mean, and which column identifies it? About 1.5 h.
+- [x] 00-04 [Your first SQL query](phases/00-start-here/04-your-first-sql-query): Which ten orders were the biggest last week, and from which city? About 2 h.
+- [x] 00-05 [NULLs, CASE and COALESCE](phases/00-start-here/05-nulls-case-and-coalesce): How many orders have no delivery date, and how do we bucket orders into small, medium and large? About 2 h.
+- [x] 00-06 [Python for spreadsheet people](phases/00-start-here/06-python-for-spreadsheet-people): Can you total a column of a CSV without opening Excel? About 3 h.
 
 **01 SQL from raw tables**
 
@@ -148,7 +148,7 @@ An **analytics manager** track adds the Level 3 statistics and causal lessons, t
 
 **07 Getting hired**
 
-- [x] 07-01 [Read job postings like data](phases/07-getting-hired/01-read-job-postings-like-data): Across 300 analyst job postings, which tools are asked for most, how much experience do they want, and what do they say about visa sponsorship? About 2 h.
+- [x] 07-01 [Read job postings like data](phases/07-getting-hired/01-read-job-postings-like-data): Across 300 analyst job postings, which tools are required most, how much experience do they want, and what do they say about visa sponsorship? About 2 h.
 - [x] 07-04 [Match your resume to a posting](phases/07-getting-hired/04-match-your-resume-to-a-posting): Of five open roles, which ones fit this resume best, and which missing skills stand between the candidate and the rest? About 2 h.
 - [ ] 07-05 Role roadmaps from postings *(planned)*: Data, business, product or BI analyst: which skills differ? About 2 h.
 - [ ] 07-06 Explain findings to leadership *(planned)*: Can the VP act on your summary after reading only the first two lines? About 2 h.
@@ -168,7 +168,7 @@ Level total: about 76.5 hours of focused work.
 <!-- generated:level-intermediate -->
 **01 SQL from raw tables**
 
-- [x] 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its year to date, who are the top reps, and did revenue go up or down from last month? About 2 h.
+- [x] 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its fiscal year to date, who are the top reps, and did revenue go up or down from last month? About 2 h.
 - [x] 01-04 [Cohort retention](phases/01-sql/04-cohort-retention): Of the users who signed up in each month, what share were still active one, two and three months later? About 2 h.
 - [ ] 01-08 Duplicates and reconciliation *(planned)*: After the CRM import doubled some rows, how many unique customers really signed up? About 2 h.
 - [ ] 01-09 Rolling averages and percent of total *(planned)*: What is the 7-day moving average of orders, and each region's share of revenue? About 2 h.
@@ -200,7 +200,7 @@ Level total: about 76.5 hours of focused work.
 **04 Dashboards and spreadsheets**
 
 - [x] 04-01 [Model the data a dashboard needs](phases/04-dashboards/01-model-the-data-a-dashboard-needs): How do you turn one flat export of order lines into tables a dashboard can slice by date, product and region without double counting? About 2 h.
-- [x] 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, year to date and growth on last year numbers without Power BI? About 2 h.
+- [x] 04-02 [DAX measures from scratch](phases/04-dashboards/02-dax-measures-from-scratch): What does a Power BI measure actually compute, and how do you get the same Total Sales, filtered sales, share, year to date and growth on last year numbers without Power BI? About 2 h.
 - [x] 04-03 [Tableau LOD expressions in SQL](phases/04-dashboards/03-tableau-lod-expressions-in-sql): How do you compute a number at a different level of detail from the chart it sits in, such as each customer's first order month in a chart by month, or a region's total in a chart by customer? About 2 h.
 - [ ] 04-08 Relationships, role-playing dates and many-to-many *(planned)*: Why does revenue by ship month differ from revenue by order month? About 2 h.
 - [ ] 04-09 One metric, one definition: the semantic layer *(planned)*: Why do two dashboards show different active users? About 2 h.
