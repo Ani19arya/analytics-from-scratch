@@ -8,17 +8,22 @@ jobs:
   check:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
+        # The course promises Python 3.9 or later. Hosted runners no longer ship
+        # 3.9, so each version runs inside the official Python image.
         python: ["3.9", "3.12"]
+    container: python:${{ matrix.python }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
+      - name: Trust the checkout (container user differs from the owner)
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Python version
+        run: python --version
       - name: Lesson tests (solutions pass, exercises fail)
         run: python tools/run_all_tests.py --exercise
       - name: Lint (style, curriculum, links)
-        run: python tools/lint.py
+        run: python tools/lint.py --strict
       - name: Generated docs are current
         run: python tools/build_docs.py --check
       - name: Every dataset rebuilds byte for byte
