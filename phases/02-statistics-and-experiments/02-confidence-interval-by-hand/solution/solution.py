@@ -1,9 +1,9 @@
-"""Lesson 02 solution: confidence intervals by hand.
-"""
+"""Lesson 02 solution: confidence intervals by hand."""
 import csv
 import math
 
-# Two-sided critical values. Z is the normal distribution.
+# Two-sided critical values of the standard normal distribution: the middle
+# 90%, 95% or 99% of the bell curve lies between -Z and +Z.
 Z = {0.90: 1.6449, 0.95: 1.9600, 0.99: 2.5758}
 
 # Student t critical values for degrees of freedom 1 to 30.
@@ -47,6 +47,10 @@ def mean_ci(values, confidence=0.95):
 
 
 def proportion_ci(successes, n, confidence=0.95):
+    if n <= 0:
+        raise ValueError("n must be at least 1")
+    if not 0 <= successes <= n:
+        raise ValueError("successes must be between 0 and n")
     p = successes / n
     se = math.sqrt(p * (1 - p) / n)
     margin = Z[confidence] * se

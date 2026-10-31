@@ -1,6 +1,6 @@
 """Lesson 04: sample size for a two-proportion test, from the formula.
 
-Rules: no scipy, no `statistics` module. Use `math`.
+Rules: no scipy, no numpy, no `statistics` module (the test checks this). Use `math`.
 Fill in every function marked TODO, then run: python3 test_lesson.py
 """
 import csv
@@ -33,19 +33,23 @@ def sample_size_per_group(p1, p2, alpha=0.05, power=0.80):
 
 def sample_size_for_lift(baseline, relative_lift, alpha=0.05, power=0.80):
     """Same as above with p2 = baseline * (1 + relative_lift).
-    relative_lift = 0.10 means a 10% relative improvement."""
+    relative_lift = 0.10 means a 10% relative improvement (10% -> 11%),
+    NOT 10 percentage points (10% -> 20%). Raise ValueError if relative_lift is 0."""
     # TODO
     raise NotImplementedError
 
 
-def weeks_needed(n_per_group, weekly_visitors, groups=2):
-    """Whole weeks of traffic needed to fill every group: ceil(n * groups / weekly)."""
+def weeks_needed(n_per_group, weekly_visitors, groups=2, min_weeks=1):
+    """Whole weeks needed to fill every group: ceil(n * groups / weekly), but never
+    fewer than min_weeks, so the test always covers full weekly cycles.
+    Raise ValueError if weekly_visitors is not positive."""
     # TODO
     raise NotImplementedError
 
 
-def plan(path, relative_lift, alpha=0.05, power=0.80):
+def plan(path, relative_lift, alpha=0.05, power=0.80, min_weeks=2):
     """For each row in the pages CSV return a dict with keys
-    page, baseline_rate, n_per_group, weeks. Keep the file order."""
+    page, baseline_rate, weekly_visitors, n_per_group and weeks
+    (weeks uses weeks_needed with min_weeks). Keep the file order."""
     # TODO
     raise NotImplementedError

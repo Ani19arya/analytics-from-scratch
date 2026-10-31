@@ -1,12 +1,14 @@
 """Lesson 02: confidence intervals by hand.
 
-Rules: no `statistics` module. `math` is fine for sqrt.
+Rules: no `statistics`, `numpy`, `scipy` or `pandas` (the test checks this).
+`math` is fine for sqrt.
 Fill in every function marked TODO, then run: python3 test_lesson.py
 """
 import csv
 import math
 
-# Two-sided critical values. Z is the normal distribution.
+# Two-sided critical values of the standard normal distribution: the middle
+# 90%, 95% or 99% of the bell curve lies between -Z and +Z.
 Z = {0.90: 1.6449, 0.95: 1.9600, 0.99: 2.5758}
 
 # Student t critical values for degrees of freedom 1 to 30.
@@ -38,14 +40,16 @@ def critical_value(df, confidence=0.95):
 
 
 def mean_ci(values, confidence=0.95):
-    """Return (low, high) for the mean: mean +/- critical_value(n - 1) * sd / sqrt(n)."""
+    """Return (low, high) for the mean: mean +/- critical_value(n - 1) * sd / sqrt(n).
+    Fewer than 2 values: raise ValueError (sample_sd already does)."""
     # TODO
     raise NotImplementedError
 
 
 def proportion_ci(successes, n, confidence=0.95):
     """Return (low, high) for a proportion: p +/- z * sqrt(p * (1 - p) / n).
-    Use Z, not the t table."""
+    Use Z, not the t table. Raise ValueError if n < 1 or successes is not
+    between 0 and n."""
     # TODO
     raise NotImplementedError
 
