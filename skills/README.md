@@ -8,6 +8,8 @@ It works in three modes. It asks which one you want if you do not say, and you c
 - **Working analyst.** Starts with the placement check `python3 tools/placement.py`, skips what you already know, and frames each lesson as a workplace problem with a stakeholder, a deadline and messy data. It challenges your recommendation: what would change your mind, what is the counterfactual, what did you not check.
 - **Interviewer.** A 45 minute mock analytics interview: SQL (about 12 minutes), statistics (10), a metrics case (12), a behavioural question (6) and a scorecard (5). Every question comes from a course lesson, and the scorecard quotes your answers against a transparent rubric and names the lessons to revisit. The rubric and question bank are in [INTERVIEW_RUBRIC.md](analytics-from-scratch/INTERVIEW_RUBRIC.md). It is practice, not a prediction of a real interview.
 
+All three modes share one learner profile, `.learner/profile.json` (kept on your computer, gitignored), read and written with `python3 tools/progress.py`: `status` at the start of a session, `check <lesson-id>` after a lesson, and the placement result and mock interview scorecards recorded as you go. `progress.py report --md` shows your before and after.
+
 In every mode it only sends you to lessons that exist, never invents numbers, asks you to run the tests, and gives honest feedback.
 
 What the tutor does:
