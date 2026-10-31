@@ -85,8 +85,8 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 6 | 0 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
-| [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **113** | **8** |
+| [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 3 | 5 |
+| **All** | | **116** | **5** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -237,9 +237,9 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 
 ### 10 Capstone projects
 
-1. 10-01 E-commerce performance review *(planned)*: Prepare the quarterly business review for an online store. (Level 3)
-2. 10-02 Customer retention and cohort analysis *(planned)*: Find where retention breaks and which cohort to study first. (Level 3)
-3. 10-03 Marketing attribution and campaign effectiveness *(planned)*: Reallocate next quarter's budget across channels, and defend it. (Level 3)
+1. 10-01 [E-commerce performance review](phases/10-capstone-projects/01-ecommerce-performance-review): Prepare the quarterly business review for an online store. (Level 3)
+2. 10-02 [Customer retention and cohort analysis](phases/10-capstone-projects/02-retention-and-cohorts): Find where retention breaks and which cohort to study first. (Level 3)
+3. 10-03 [Marketing attribution and campaign effectiveness](phases/10-capstone-projects/03-marketing-attribution): Reallocate next quarter's budget across channels, and defend it. (Level 3)
 4. 10-04 SaaS subscription and churn analysis *(planned)*: Build the churn model the finance team can plan with. (Level 3)
 5. 10-05 Executive dashboard *(planned)*: Design, model and verify the CEO dashboard, in the tool of your choice. (Level 3)
 6. 10-06 Automated analytics reporting *(planned)*: Make the weekly business review build, test and send itself. (Level 3)

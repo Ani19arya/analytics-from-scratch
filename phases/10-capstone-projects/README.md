@@ -9,7 +9,8 @@ A capstone is the size of real work: 10 to 14 hours, an ambiguous brief, several
 | `BRIEF.md` | The request as a stakeholder would send it, with the decision it informs and a deadline |
 | `data/` | Several synthetic tables built by `make_data.py`, with realistic mess: duplicates, late-arriving rows, a changed definition halfway through |
 | `DELIVERABLES.md` | Exactly what to hand in: the analysis, the numbers, a chart, a one-page write-up |
-| `test_capstone.py` | Checks the numbers that have a single right answer, on two seeded datasets |
+| `exercise.py` | Your starting file: the functions the checker calls. It fails the checker until you fill it in |
+| `test_lesson.py` | The checker: tests the numbers that have a single right answer, on two seeded datasets. `CHECK_SOLUTION=1 python3 test_lesson.py` runs it on the sample submission in `solution/` |
 | `RUBRIC.md` | How a reviewer scores the parts that do not: framing, judgement, communication, limits. Use it to grade yourself or a study partner |
 | `solution/` | A worked solution with the reasoning, to read after you finish |
 
@@ -25,9 +26,9 @@ flowchart LR
 
 ## Projects
 
-1. E-commerce performance review *(planned)*. Prepare the quarterly business review for an online store.
-2. Customer retention and cohort analysis *(planned)*. Find where retention breaks and which cohort to study first.
-3. Marketing attribution and campaign effectiveness *(planned)*. Reallocate next quarter's budget across channels, and defend it.
+1. [E-commerce performance review](01-ecommerce-performance-review/). Prepare the quarterly business review for an online store.
+2. [Customer retention and cohort analysis](02-retention-and-cohorts/). Find where retention breaks and which cohort to study first.
+3. [Marketing attribution and campaign effectiveness](03-marketing-attribution/). Reallocate next quarter's budget across channels, and defend it.
 4. SaaS subscription and churn analysis *(planned)*. Build the churn model the finance team can plan with.
 5. Executive dashboard *(planned)*. Design, model and verify the CEO dashboard, in the tool of your choice.
 6. Automated analytics reporting *(planned)*. Make the weekly business review build, test and send itself.

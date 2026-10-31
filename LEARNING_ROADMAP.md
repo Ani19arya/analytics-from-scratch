@@ -290,9 +290,9 @@ Level total: about 144 hours of focused work.
 
 **10 Capstone projects**
 
-- [ ] 10-01 E-commerce performance review *(planned)*: Prepare the quarterly business review for an online store. About 10 h.
-- [ ] 10-02 Customer retention and cohort analysis *(planned)*: Find where retention breaks and which cohort to study first. About 10 h.
-- [ ] 10-03 Marketing attribution and campaign effectiveness *(planned)*: Reallocate next quarter's budget across channels, and defend it. About 10 h.
+- [x] 10-01 [E-commerce performance review](phases/10-capstone-projects/01-ecommerce-performance-review): Prepare the quarterly business review for an online store. About 10 h.
+- [x] 10-02 [Customer retention and cohort analysis](phases/10-capstone-projects/02-retention-and-cohorts): Find where retention breaks and which cohort to study first. About 10 h.
+- [x] 10-03 [Marketing attribution and campaign effectiveness](phases/10-capstone-projects/03-marketing-attribution): Reallocate next quarter's budget across channels, and defend it. About 10 h.
 - [ ] 10-04 SaaS subscription and churn analysis *(planned)*: Build the churn model the finance team can plan with. About 10 h.
 - [ ] 10-05 Executive dashboard *(planned)*: Design, model and verify the CEO dashboard, in the tool of your choice. About 10 h.
 - [ ] 10-06 Automated analytics reporting *(planned)*: Make the weekly business review build, test and send itself. About 10 h.
