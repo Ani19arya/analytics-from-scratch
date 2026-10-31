@@ -264,8 +264,8 @@ Level total: about 144 hours of focused work.
 <!-- generated:level-advanced -->
 **01 SQL from raw tables**
 
-- [ ] 01-13 Query plans and indexes *(planned)*: Why does the dashboard query take 40 seconds, and what does the query plan say? About 2 h.
-- [ ] 01-14 SQL dialects for work and interviews *(planned)*: How do the same five queries look in SQLite, Postgres, BigQuery and Snowflake? About 2 h.
+- [x] 01-13 [Query plans and indexes](phases/01-sql/13-query-plans-and-indexes): Why does the dashboard query take 40 seconds, and what does the query plan say? About 2 h.
+- [x] 01-14 [SQL dialects for work and interviews](phases/01-sql/14-sql-dialects): How do the same five queries look in SQLite, Postgres, BigQuery and Snowflake? About 2 h.
 
 **02 Statistics and experiments**
 

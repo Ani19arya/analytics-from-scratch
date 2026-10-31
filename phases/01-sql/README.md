@@ -12,7 +12,7 @@ You need Python 3.9 or later. SQLite comes with Python, so there is nothing to i
 
 ## Lessons, in learning order
 
-Folder numbers stay fixed because they are live links; the list below is the order to take them in. Planned lessons are listed so you can see where the phase is going; they have no folder yet.
+Folder numbers stay fixed because they are live links; the list below is the order to take them in.
 
 **Level 1: beginner**
 
@@ -34,8 +34,8 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 
 **Level 3: advanced**
 
-13. 13 Query plans and indexes (planned): why does the dashboard query take 40 seconds?
-14. 14 SQL dialects for work and interviews (planned): the same five queries in SQLite, Postgres, BigQuery and Snowflake.
+13. [13 Query plans and indexes](13-query-plans-and-indexes/): why does the dashboard query take 40 seconds?
+14. [14 SQL dialects for work and interviews](14-sql-dialects/): the same five queries in SQLite, Postgres, BigQuery and Snowflake.
 
 ## How to run a lesson
 

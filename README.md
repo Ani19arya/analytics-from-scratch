@@ -76,7 +76,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | Phase | What you learn | Lessons live | Planned |
 |---|---|---|---|
 | [00 Start here](phases/00-start-here) | How to use the course, how an analyst thinks, and your first SQL query and Python script. For complete beginners. | 6 | 0 |
-| [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 12 | 2 |
+| [01 SQL from raw tables](phases/01-sql) | SQL from the first GROUP BY to query plans, built from raw rows and checked against Python. | 14 | 0 |
 | [02 Statistics and experiments](phases/02-statistics-and-experiments) | Probability, sampling, tests and regression by hand, so you know what a p-value or an interval really says. | 12 | 3 |
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 12 | 2 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
@@ -86,7 +86,7 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **102** | **19** |
+| **All** | | **104** | **17** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -115,8 +115,8 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 10. 01-10 [Sessionization from raw events](phases/01-sql/10-sessionization): How many sessions does each user have with a 30-minute timeout, and how long is a session? (Level 2)
 11. 01-11 [Gaps and islands: streaks](phases/01-sql/11-gaps-and-islands): Which users logged a workout three days in a row, and what is the longest streak? (Level 2)
 12. 01-12 [Review a query someone else wrote](phases/01-sql/12-review-a-query-someone-else-wrote): A teammate, or an assistant, wrote this query. Is the number on the slide right? (Level 2)
-13. 01-13 Query plans and indexes *(planned)*: Why does the dashboard query take 40 seconds, and what does the query plan say? (Level 3)
-14. 01-14 SQL dialects for work and interviews *(planned)*: How do the same five queries look in SQLite, Postgres, BigQuery and Snowflake? (Level 3)
+13. 01-13 [Query plans and indexes](phases/01-sql/13-query-plans-and-indexes): Why does the dashboard query take 40 seconds, and what does the query plan say? (Level 3)
+14. 01-14 [SQL dialects for work and interviews](phases/01-sql/14-sql-dialects): How do the same five queries look in SQLite, Postgres, BigQuery and Snowflake? (Level 3)
 
 ### 02 Statistics and experiments
 

@@ -319,4 +319,4 @@ In the Real Analyst Jobs data drop of 25 October 2026 ([data/job-market/2026-10]
 
 ## Next
 
-Back to the [Phase 01 overview](../README.md) for the next lesson.
+[13 Query plans and indexes](../13-query-plans-and-indexes/)

@@ -282,7 +282,7 @@
      "question": "Why does the dashboard query take 40 seconds, and what does the query plan say?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql",
@@ -297,7 +297,7 @@
      "question": "How do the same five queries look in SQLite, Postgres, BigQuery and Snowflake?",
      "level": "advanced",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql",
