@@ -2,7 +2,7 @@
 
 Fill in every function that raises NotImplementedError.
 Run from this folder: python3 test_lesson.py"""
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, quoteattr
 
 WIDTH, HEIGHT = 600, 400
 LEFT, RIGHT, TOP, BOTTOM = 60, 20, 40, 60
@@ -40,8 +40,20 @@ def sort_rows(rows):
     raise NotImplementedError
 
 
-def choose_chart(x_kind):
-    """'time' -> 'line', 'category' -> 'bar', anything else -> raise ValueError."""
+TASKS = ("compare", "rank", "trend", "distribution", "part_to_whole", "relationship")
+
+
+def choose_chart(task, n_items=None):
+    """A first-pass chart choice from the question being asked.
+    task is one of TASKS (exact lowercase strings):
+      'compare'       categories side by side            -> 'bar'
+      'rank'          which is biggest                    -> 'bar'
+      'distribution'  how values spread out               -> 'histogram'
+      'relationship'  does one number move with another   -> 'scatter'
+      'trend'         change over time, n_items periods:  fewer than 5 -> 'bar', else 'line'
+      'part_to_whole' shares of a total, n_items parts:   fewer than 5 -> 'stacked bar', else 'bar'
+    Raise ValueError for any other task, and when 'trend' or 'part_to_whole'
+    gets an n_items that is not a whole number of at least 2."""
     # TODO
     raise NotImplementedError
 
@@ -54,13 +66,14 @@ def bar_chart_svg(rows, title):
     - for each tick from axis_ticks(axis_max): a <line class="gridline"> and a
       <text class="tick"> whose text is fmt(tick)
     - for each row, in sorted order, slot = PLOT_WIDTH / len(rows):
-        <rect class="bar" data-label=label data-value=value
+        <rect class="bar" data-label=label data-value=value (the number, as given)
               x = LEFT + i * slot + slot * 0.15, width = slot * 0.7,
               height = value / axis_max * PLOT_HEIGHT, y = BASELINE - height>
         <text class="value-label"> with fmt(value), above the bar
         <text class="bar-label"> with the label, under the baseline
     - a <line class="baseline"> at y = BASELINE
-    Escape labels and the title with xml.sax.saxutils.escape so 'Parts & Accessories' is valid XML.
+    Escape text with xml.sax.saxutils.escape so 'Parts & Accessories' is valid XML, and
+    write attribute values with quoteattr, which adds the quotes and also escapes a " in a label.
     """
     # TODO
     raise NotImplementedError

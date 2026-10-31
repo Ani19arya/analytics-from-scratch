@@ -2,10 +2,11 @@
 -- Raw table:
 --   transactions(order_id, line_no, order_date, product, category, unit_price,
 --                region, region_manager, quantity)
--- The test runs each query as CREATE TABLE <name> AS <query>, in this order,
--- so later queries can join to the tables built by earlier ones.
+-- The test runs the first four queries as CREATE TABLE <name> AS <query>, in
+-- this order, so later queries can join to the tables built by earlier ones.
 
 -- query: dim_date
+-- strftime('%w') is SQLite: 0 is Sunday. PostgreSQL writes EXTRACT(DOW FROM date).
 WITH RECURSIVE days(date) AS (
   SELECT MIN(order_date) FROM transactions
   UNION ALL
@@ -18,7 +19,9 @@ SELECT
   CAST(strftime('%Y', date) AS INTEGER) AS year,
   (CAST(strftime('%m', date) AS INTEGER) + 2) / 3 AS quarter,
   CAST(strftime('%m', date) AS INTEGER) AS month,
-  strftime('%Y-%m', date) AS year_month
+  strftime('%Y-%m', date) AS year_month,
+  CAST(strftime('%w', date) AS INTEGER) AS weekday_num,
+  substr('SunMonTueWedThuFriSat', 1 + 3 * CAST(strftime('%w', date) AS INTEGER), 3) AS weekday
 FROM days;
 
 -- query: dim_product
@@ -59,3 +62,27 @@ JOIN dim_date d ON d.date_key = f.date_key
 JOIN dim_product p ON p.product_key = f.product_key
 GROUP BY d.year_month, p.category
 ORDER BY d.year_month, p.category;
+
+-- query: orders_by_region
+-- The orders card: COUNT(DISTINCT order_id), DISTINCTCOUNT in DAX.
+SELECT
+  r.region,
+  COUNT(DISTINCT f.order_id) AS orders,
+  COUNT(*) AS order_lines,
+  ROUND(SUM(f.revenue), 2) AS revenue
+FROM fact_sales f
+JOIN dim_region r ON r.region_key = f.region_key
+GROUP BY r.region
+ORDER BY r.region;
+
+-- query: revenue_by_weekday
+-- Start from the calendar, so days with no sales stay in the result.
+SELECT
+  d.weekday_num,
+  d.weekday,
+  COUNT(DISTINCT d.date_key) AS days,
+  ROUND(COALESCE(SUM(f.revenue), 0), 2) AS revenue
+FROM dim_date d
+LEFT JOIN fact_sales f ON f.date_key = d.date_key
+GROUP BY d.weekday_num, d.weekday
+ORDER BY d.weekday_num;

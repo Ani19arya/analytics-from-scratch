@@ -4,11 +4,28 @@
 -- Run from this folder: python3 test_lesson.py
 
 -- query: sales_by_category
--- TODO: one row per category.
+-- TODO: a table visual with category on rows and no slicers. One row per category.
 -- total_sales   = SUM(amount) for the category, rounded to 2 decimals
 -- online_sales  = the same, but only channel 'Online', rounded to 2 decimals
 -- share_of_all  = the category's sales / sales of ALL categories, rounded to 4 decimals
 -- Columns: category, total_sales, online_sales, share_of_all. Order by category.
+
+
+-- query: share_with_year_slicer
+-- TODO: the same visual with a Year slicer set to 2026 (order_date in 2026).
+-- share_of_all = the category's 2026 sales / 2026 sales of ALL categories.
+-- ALL(category) removes the category filter only: the year slicer still applies.
+-- Columns: category, total_sales (rounded to 2), share_of_all (rounded to 4). Order by category.
+
+
+-- query: channel_matrix
+-- TODO: channel on rows, Year slicer set to 2026.
+-- total_sales        = the row's sales, rounded to 2
+-- online_sales       = CALCULATE([Total Sales], sales[channel] = "Online"), rounded to 2.
+--                      The boolean filter REPLACES the row's channel filter.
+-- online_keepfilters = CALCULATE([Total Sales], KEEPFILTERS(sales[channel] = "Online")),
+--                      rounded to 2. NULL (blank) where the row's channel is not Online.
+-- Columns: channel, total_sales, online_sales, online_keepfilters. Order by channel.
 
 
 -- query: sales_ytd

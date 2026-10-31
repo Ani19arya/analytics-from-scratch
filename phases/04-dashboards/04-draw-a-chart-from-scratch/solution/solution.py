@@ -1,5 +1,5 @@
 """Lesson 04: draw a chart from scratch. Worked answer."""
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, quoteattr
 
 WIDTH, HEIGHT = 600, 400
 LEFT, RIGHT, TOP, BOTTOM = 60, 20, 40, 60
@@ -43,13 +43,25 @@ def sort_rows(rows):
     return sorted(rows, key=lambda r: (-r[1], r[0]))
 
 
-def choose_chart(x_kind):
-    """'time' -> 'line', 'category' -> 'bar'."""
-    if x_kind == "time":
-        return "line"
-    if x_kind == "category":
+TASKS = ("compare", "rank", "trend", "distribution", "part_to_whole", "relationship")
+
+
+def choose_chart(task, n_items=None):
+    """A first-pass chart choice from the question being asked."""
+    if task not in TASKS:
+        raise ValueError("unknown task %r: use one of %s" % (task, ", ".join(TASKS)))
+    if task in ("compare", "rank"):
         return "bar"
-    raise ValueError("x_kind must be 'time' or 'category'")
+    if task == "distribution":
+        return "histogram"
+    if task == "relationship":
+        return "scatter"
+    # trend and part_to_whole depend on how many periods or parts there are.
+    if not isinstance(n_items, int) or n_items < 2:
+        raise ValueError("%s needs n_items, a whole number of at least 2" % task)
+    if task == "trend":
+        return "bar" if n_items < 5 else "line"
+    return "stacked bar" if n_items < 5 else "bar"
 
 
 def bar_chart_svg(rows, title):
@@ -62,7 +74,9 @@ def bar_chart_svg(rows, title):
     axis_max = nice_max(max(v for _, v in rows))
     slot = PLOT_WIDTH / len(rows)
     out = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d">' % (WIDTH, HEIGHT, WIDTH, HEIGHT),
+        '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" '
+        'font-family="Helvetica, Arial, sans-serif">' % (WIDTH, HEIGHT, WIDTH, HEIGHT),
+        '<rect width="%d" height="%d" fill="#ffffff"/>' % (WIDTH, HEIGHT),
         '<text class="title" x="%d" y="24" font-size="16">%s</text>' % (LEFT, escape(title)),
     ]
     for t in axis_ticks(axis_max):
@@ -73,8 +87,8 @@ def bar_chart_svg(rows, title):
         h = value / axis_max * PLOT_HEIGHT
         x = LEFT + i * slot + slot * 0.15
         cx = LEFT + i * slot + slot / 2
-        out.append('<rect class="bar" data-label="%s" data-value="%s" x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="#3b6ea5"/>'
-                   % (escape(label, {'"': "&quot;"}), value, x, BASELINE - h, slot * 0.7, h))
+        out.append('<rect class="bar" data-label=%s data-value="%s" x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="#3b6ea5"/>'
+                   % (quoteattr(label), value, x, BASELINE - h, slot * 0.7, h))
         out.append('<text class="value-label" x="%.2f" y="%.2f" text-anchor="middle" font-size="11">%s</text>' % (cx, BASELINE - h - 5, fmt(value)))
         out.append('<text class="bar-label" x="%.2f" y="%d" text-anchor="middle" font-size="11">%s</text>' % (cx, BASELINE + 16, escape(label)))
     out.append('<line class="baseline" x1="%d" x2="%d" y1="%d" y2="%d" stroke="#333"/>' % (LEFT, LEFT + PLOT_WIDTH, BASELINE, BASELINE))

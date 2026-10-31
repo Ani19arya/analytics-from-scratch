@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#ffffff"/>
+<text class="title" x="60" y="24" font-size="16">Same data, axis starting at 28,000</text>
+<line class="gridline" x1="60" x2="580" y1="340.00" y2="340.00" stroke="#ddd"/>
+<text class="tick" x="54" y="344.00" text-anchor="end" font-size="11">28,000</text>
+<line class="gridline" x1="60" x2="580" y1="290.00" y2="290.00" stroke="#ddd"/>
+<text class="tick" x="54" y="294.00" text-anchor="end" font-size="11">30,000</text>
+<line class="gridline" x1="60" x2="580" y1="240.00" y2="240.00" stroke="#ddd"/>
+<text class="tick" x="54" y="244.00" text-anchor="end" font-size="11">32,000</text>
+<line class="gridline" x1="60" x2="580" y1="190.00" y2="190.00" stroke="#ddd"/>
+<text class="tick" x="54" y="194.00" text-anchor="end" font-size="11">34,000</text>
+<line class="gridline" x1="60" x2="580" y1="140.00" y2="140.00" stroke="#ddd"/>
+<text class="tick" x="54" y="144.00" text-anchor="end" font-size="11">36,000</text>
+<line class="gridline" x1="60" x2="580" y1="90.00" y2="90.00" stroke="#ddd"/>
+<text class="tick" x="54" y="94.00" text-anchor="end" font-size="11">38,000</text>
+<line class="gridline" x1="60" x2="580" y1="40.00" y2="40.00" stroke="#ddd"/>
+<text class="tick" x="54" y="44.00" text-anchor="end" font-size="11">40,000</text>
+<rect class="bar" x="73.00" y="67.50" width="60.67" height="272.50" fill="#b5523b"/>
+<text class="value-label" x="103.33" y="62.50" text-anchor="middle" font-size="11">38,900</text>
+<text class="bar-label" x="103.33" y="356" text-anchor="middle" font-size="11">Service</text>
+<rect class="bar" x="159.67" y="277.50" width="60.67" height="62.50" fill="#b5523b"/>
+<text class="value-label" x="190.00" y="272.50" text-anchor="middle" font-size="11">30,500</text>
+<text class="bar-label" x="190.00" y="356" text-anchor="middle" font-size="11">Kids</text>
+<rect class="bar" x="246.33" y="340.00" width="60.67" height="0.00" fill="#b5523b"/>
+<text class="value-label" x="276.67" y="335.00" text-anchor="middle" font-size="11">24,700</text>
+<text class="bar-label" x="276.67" y="356" text-anchor="middle" font-size="11">Mountain</text>
+<rect class="bar" x="333.00" y="340.00" width="60.67" height="0.00" fill="#b5523b"/>
+<text class="value-label" x="363.33" y="335.00" text-anchor="middle" font-size="11">8,700</text>
+<text class="bar-label" x="363.33" y="356" text-anchor="middle" font-size="11">Parts &amp; Accessories</text>
+<rect class="bar" x="419.67" y="340.00" width="60.67" height="0.00" fill="#b5523b"/>
+<text class="value-label" x="450.00" y="335.00" text-anchor="middle" font-size="11">8,400</text>
+<text class="bar-label" x="450.00" y="356" text-anchor="middle" font-size="11">Road</text>
+<rect class="bar" x="506.33" y="340.00" width="60.67" height="0.00" fill="#b5523b"/>
+<text class="value-label" x="536.67" y="335.00" text-anchor="middle" font-size="11">4,100</text>
+<text class="bar-label" x="536.67" y="356" text-anchor="middle" font-size="11">Gravel</text>
+<line class="baseline" x1="60" x2="580" y1="340" y2="340" stroke="#333"/>
+</svg>

@@ -4,13 +4,16 @@ Run from the lesson folder: python3 make_data.py
 Writes data/transactions.csv: one row per order line, the way an
 order system exports it, with product and region details repeated on
 every line. The data is synthetic and deterministic (fixed seed).
+
+The test calls build(seed=...) with another seed to get a second,
+different dataset in memory, so a query that hard-codes the answers fails.
 """
 import csv
 import datetime
 import os
 import random
 
-random.seed(401)
+DEFAULT_SEED = 401
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
@@ -30,8 +33,9 @@ PRODUCTS = [
 REGIONS = [("North", "Amara Osei"), ("South", "Diego Ramos"), ("East", "Mei Lin"), ("West", "Tom Becker")]
 
 
-def main():
-    os.makedirs(DATA, exist_ok=True)
+def build(seed=DEFAULT_SEED):
+    """Return {"transactions": [row, ...]} with values as they appear in the CSV."""
+    rng = random.Random(seed)
     rows = []
     order_id = 10000
     day = datetime.date(2025, 1, 1)
@@ -40,11 +44,11 @@ def main():
         # The warehouse does not ship on Sundays, and orders are dated by ship
         # date, so Sundays have no rows at all.
         if day.weekday() != 6:
-            for _ in range(random.randint(1, 3)):
+            for _ in range(rng.randint(1, 3)):
                 order_id += 1
-                region, manager = random.choice(REGIONS)
-                for line_no in range(1, random.randint(1, 3) + 1):
-                    product, category, price = random.choice(PRODUCTS)
+                region, manager = rng.choice(REGIONS)
+                for line_no in range(1, rng.randint(1, 3) + 1):
+                    product, category, price = rng.choice(PRODUCTS)
                     rows.append({
                         "order_id": order_id,
                         "line_no": line_no,
@@ -54,9 +58,15 @@ def main():
                         "unit_price": "%.2f" % price,
                         "region": region,
                         "region_manager": manager,
-                        "quantity": random.randint(1, 4),
+                        "quantity": rng.randint(1, 4),
                     })
         day += datetime.timedelta(days=1)
+    return {"transactions": rows}
+
+
+def main():
+    os.makedirs(DATA, exist_ok=True)
+    rows = build()["transactions"]
     with open(os.path.join(DATA, "transactions.csv"), "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         writer.writeheader()

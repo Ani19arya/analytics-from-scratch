@@ -2,16 +2,48 @@
 -- Table: sales(order_date 'YYYY-MM-DD', category, channel, amount)
 
 -- query: sales_by_category
--- Total Sales = SUM(amount), Online Sales = CALCULATE([Total Sales], channel = "Online"),
--- Share = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(category))).
+-- A table visual with category on rows and no slicers.
+-- Total Sales = SUM(amount)
+-- Online Sales = CALCULATE([Total Sales], sales[channel] = "Online"). Channel is
+--   not on this visual, so the CASE WHEN inside the GROUP BY is the same thing.
+-- Share = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(sales[category])))
+--   ALL(category) drops only the category grouping: a window over the grouped rows.
 SELECT
   category,
   ROUND(SUM(amount), 2) AS total_sales,
   ROUND(SUM(CASE WHEN channel = 'Online' THEN amount ELSE 0 END), 2) AS online_sales,
-  ROUND(SUM(amount) / (SELECT SUM(amount) FROM sales), 4) AS share_of_all
+  ROUND(SUM(amount) / SUM(SUM(amount)) OVER (), 4) AS share_of_all
 FROM sales
 GROUP BY category
 ORDER BY category;
+
+-- query: share_with_year_slicer
+-- The same visual with a Year slicer set to 2026. The slicer is a WHERE clause,
+-- and ALL(sales[category]) must keep it: the window sums only the 2026 rows.
+SELECT
+  category,
+  ROUND(SUM(amount), 2) AS total_sales,
+  ROUND(SUM(amount) / SUM(SUM(amount)) OVER (), 4) AS share_of_all
+FROM sales
+WHERE substr(order_date, 1, 4) = '2026'
+GROUP BY category
+ORDER BY category;
+
+-- query: channel_matrix
+-- Channel on rows, Year slicer set to 2026.
+-- online_sales: CALCULATE([Total Sales], sales[channel] = "Online") REPLACES the
+--   row's channel filter, so every row shows the 2026 online total.
+-- online_keepfilters: CALCULATE([Total Sales], KEEPFILTERS(sales[channel] = "Online"))
+--   intersects with the row's filter: Online on the Online row, blank (NULL) on Retail.
+SELECT
+  channel,
+  ROUND(SUM(amount), 2) AS total_sales,
+  ROUND(SUM(SUM(CASE WHEN channel = 'Online' THEN amount END)) OVER (), 2) AS online_sales,
+  ROUND(SUM(CASE WHEN channel = 'Online' THEN amount END), 2) AS online_keepfilters
+FROM sales
+WHERE substr(order_date, 1, 4) = '2026'
+GROUP BY channel
+ORDER BY channel;
 
 -- query: sales_ytd
 WITH RECURSIVE months(m) AS (
