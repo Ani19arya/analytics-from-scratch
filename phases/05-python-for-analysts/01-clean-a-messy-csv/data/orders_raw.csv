@@ -1,107 +1,108 @@
 order_id,order_date,customer,city,amount
-1001,21/09/2026, Farah Khan,  Austin,"INR 1,30,700"
-1002,"Sep 21, 2026",Farah Khan,Austin,"INR 70,900"
-1003,23/09/2026,Hana Sato, Seattle ,"INR 74,000"
-1004,15-Sep-2026,Asha Rao,Bengaluru,$771.04
-1005,2026-09-07,  Asha Rao ,Denver,$935.00
-1006,05-Sep-2026,Farah Khan,Pune,$812.34
-1007,26/09/2026,Divya Nair,Mumbai,USD 1336.85
-1008,"Sep 25, 2026",Eli Brooks,Austin,$338.63
-1009,19-Sep-2026,Asha Rao,Bengaluru,USD 408.72
-1010,2026-09-13,Chen Wei,Denver,"INR 1,24,300"
-1011,"Sep 13, 2026",Gopal Iyer,Austin,"$1,263.68"
-1012,"Sep 03, 2026",Divya Nair,Denver,"$1,039.70"
-1013,13-Sep-2026,Gopal Iyer,Bengaluru,"INR 1,48,100"
-1014,2026-09-01,Farah Khan,Bengaluru,Rs 16800
-1015,30-Sep-2026,Eli Brooks,Seattle,Rs 53900
-1016,"Sep 02, 2026",Hana Sato,Denver,$732.87
-1017,02/09/2026,Eli Brooks,Pune,$847.04
-1018,10/09/2026,Ben Ortiz,Pune,USD 1351.28
-1019,2026-09-01,Farah Khan,Bengaluru,"$1,238.40"
-1020,"Sep 14, 2026",Divya Nair,Bengaluru,$295.36
-1021,2026-09-25,Gopal  Iyer,Pune,"$1,281.75"
-1022,16/09/2026,Divya Nair,Pune,USD 291.49
-1023,"Sep 05, 2026",Divya Nair,Bengaluru,USD 1852.16
-1024,"Sep 13, 2026",Chen Wei,Seattle,
-1025,2026-09-28,Divya Nair,Denver,Rs 53500
-1026,02-Sep-2026,Gopal Iyer,,"$1,799.63"
-1027,"Sep 18, 2026",Hana Sato,Seattle,$832.56
-1028,"Sep 20, 2026", Chen Wei,Bengaluru,$828.71
-1029,11-Sep-2026, Chen Wei ,Pune,"INR 30,000"
-1030,01/09/2026,Gopal Iyer,Mumbai,Rs 108500
-1031,"Sep 23, 2026",  Hana Sato ,Austin,"INR 83,400"
-1032,2026-09-30,Divya Nair,Seattle,USD 1925.59
-1033,2026-09-18,Gopal Iyer,Seattle,USD 1013.31
-1034,04-Sep-2026, Asha Rao,Pune,USD 1127.70
-1035,"Sep 23, 2026",  Asha Rao,Pune,"$1,351.62"
-1036,"Sep 28, 2026",Hana Sato, Austin ,$179.53
-1037,19/09/2026,Chen Wei,Bengaluru,"INR 1,44,000"
-1038,2026-09-20,Hana Sato,Denver,"INR 1,32,200"
-1039,"Sep 18, 2026",Farah Khan,Mumbai,"INR 16,600"
-1040,2026-09-14,  Asha Rao ,Bengaluru,"INR 1,30,700"
-1041,,Farah Khan,Austin,Rs 49500
-1042,19-Sep-2026,Asha Rao,Pune,Rs 30800
-1043,"Sep 26, 2026", Hana Sato,Mumbai,"$1,289.17"
-1044,09/09/2026,Hana Sato,Bengaluru,Rs 22400
-1045,"Sep 22, 2026",Eli Brooks,Denver,"INR 1,11,500"
-1046,2026-09-30,Hana Sato,Seattle,Rs 99600
-1047,"Sep 26, 2026",Asha Rao,Bengaluru,"INR 80,600"
-1048,25/09/2026,Farah Khan,Mumbai,Rs 27200
-1049,2026-09-22,  Hana Sato,Pune,Rs 68900
-1050,23/09/2026,Ben Ortiz,Bengaluru,"$1,311.46"
-1051,"Sep 06, 2026",Asha Rao,  Seattle ,Rs 14300
-1052,11-Sep-2026,Ben  Ortiz,Austin,USD 364.39
-1053,2026-09-07,Gopal Iyer,Austin,USD 1904.58
-1054,"Sep 09, 2026",Farah Khan,Bengaluru,Rs 111600
-1055,29-Sep-2026,Asha Rao,Austin,USD 1899.45
-1056,29/09/2026,Chen Wei,Austin,Rs 112100
-1057,"Sep 24, 2026",  Chen Wei,Bengaluru,"INR 74,000"
-1058,11/09/2026,  Divya Nair,Austin,Rs 46900
-1059,2026-09-29,Asha Rao,Austin,USD 848.96
-1060,2026-09-04,Chen Wei,Austin,"INR 45,900"
-1061,"Sep 20, 2026",Hana Sato,Mumbai,
-1028,2026-09-20, Chen Wei,Bengaluru,$828.71
-1062,05/09/2026,Hana Sato,Seattle,"$1,975.10"
-1063,24/09/2026,Farah Khan, Seattle,"INR 61,000"
-1064,2026-09-19,Chen Wei,  Seattle ,"INR 83,600"
-1065,11/09/2026,Ben  Ortiz,Pune,"$1,852.87"
-1066,"Sep 08, 2026",Hana Sato,Seattle,"INR 33,100"
-1067,09/09/2026,Asha  Rao,Denver,"$1,382.27"
-1068,2026-09-14, Chen Wei,Bengaluru,"INR 10,600"
-1069,2026-09-06,Gopal Iyer,Pune,"INR 84,300"
-1070,2026-09-03,Ben Ortiz,Denver,USD 1558.17
-1071,2026-09-11,Farah  Khan,Mumbai,Rs 31600
-1072,TBD,Farah Khan,Seattle,"INR 57,600"
-1073,30/09/2026,Eli Brooks,Seattle,
-1074,09-Sep-2026,Chen Wei,,"INR 1,21,600"
-1075,2026-09-18,Chen Wei,Austin,"INR 51,600"
-1035,2026-09-23,  Asha Rao,Pune,"$1,351.62"
-1015,30-Sep-2026,Eli Brooks,Seattle,Rs 53900
-1076,,Divya Nair,Seattle,USD 255.83
-1077,07-Sep-2026,Hana Sato,Seattle,"INR 27,200"
-1078,"Sep 08, 2026",Hana Sato,Bengaluru,"$1,165.68"
-1079,11-Sep-2026,Farah Khan,Seattle,Rs 67600
-1080,,Asha Rao,Denver,USD 1332.63
-1081,TBD,Farah Khan,Mumbai,"INR 80,900"
-1082,17/09/2026,Eli Brooks,Denver,Rs 111000
-1083,"Sep 07, 2026", Gopal Iyer ,Pune,"INR 33,300"
-1084,09-Sep-2026,Asha Rao,Bengaluru,Rs 141400
-1085,30/09/2026, Asha Rao,Denver,USD 64.81
-1086,10-Sep-2026,Hana Sato,,USD 866.26
-1087,"Sep 27, 2026",Asha Rao, Denver ,"$1,688.47"
-1088,2026-09-07,  Eli Brooks,Bengaluru,$834.39
-1089,20-Sep-2026,Asha Rao,Austin,Rs 113900
-1090,2026-09-05,Gopal Iyer,Seattle,Rs 122700
-1091,24/09/2026,Divya Nair,Seattle,USD 751.58
-1083,"Sep 07, 2026",  Gopal Iyer ,Pune,"INR 33,300"
-1082,17/09/2026,Eli Brooks,Denver,Rs 111000
-1092,2026-09-26,Chen Wei,Seattle,"INR 99,100"
-1093,17-Sep-2026,Divya Nair,Seattle,USD 1448.85
-1094,17/09/2026,Asha Rao,Seattle,"INR 33,000"
-1095,16-Sep-2026,Farah  Khan,Austin,"INR 1,05,500"
-1096,22/09/2026,Gopal  Iyer,Denver,"INR 1,13,500"
-1097,05-Sep-2026,Asha Rao,Seattle,$615.23
-1098,29/09/2026,Eli Brooks,Denver,Rs 148100
-1006,05-Sep-2026,Farah Khan,Pune,$812.34
-1099,2026-09-26,Farah Khan,Austin,
-1100,2026-09-21,  Farah Khan , Seattle ,$535.56
+1001,2026-09-21,Farah Khan,Bengaluru,"INR 1,30,700"
+1002,"Sep 08, 2026",Farah Khan,Seattle,"$1,621.31"
+1003,17/09/2026,  Farah Khan,Bengaluru,
+1004,"Sep 12, 2026", Hana Sato ,Denver,USD 1896.08
+1005,01-Sep-2026,Asha  Rao,Bengaluru,Rs 96600
+1006,25-Sep-2026,Chen Wei,Bengaluru,"INR 45,700"
+1007,2026-09-15,Chen Wei,Seattle,$43.55
+1008,07/09/2026,Ben Ortiz,Denver,$765.07
+1009,26-Sep-2026,Ben Ortiz,Pune,"INR 1,37,500"
+1010,07/09/2026,Chen Wei,Mumbai,Rs 25600
+1011,"Sep 16, 2026",  Asha Rao ,Bengaluru,"INR 32,700"
+1012,07/09/2026,Gopal Iyer,Pune,Rs 71600
+1013,15-Sep-2026,Gopal  Iyer,Mumbai,"INR 36,900"
+1014,13-Sep-2026,Ben Ortiz,Seattle,USD 1965.42
+1015,"Sep 20, 2026",Gopal  Iyer,Denver,
+1016,,Divya Nair,Pune,Rs 44500
+1017,27/09/2026, Gopal Iyer ,Denver,USD 792.54
+1018,"Sep 12, 2026",Ben Ortiz,Pune,"INR 56,700"
+1019,"Sep 12, 2026",Eli Brooks,Bengaluru,"INR 92,000"
+1020,09/09/2026,Farah Khan, Seattle ,$113.84
+1021,15-Sep-2026,Divya Nair,Denver,$145.82
+1022,2026-09-14,  Eli Brooks ,Pune,"INR 1,44,200"
+1023,02-Sep-2026,Ben Ortiz,Bengaluru,"INR 45,600"
+1024,04/09/2026,Farah Khan,Pune,Rs 38100
+1025,"Sep 30, 2026",Gopal Iyer,Seattle,$696.78
+1026,18-Sep-2026,Chen Wei,Seattle,USD 1626.50
+1027,2026-09-02,Divya Nair,Mumbai,"INR 1,07,400"
+1028,"Sep 10, 2026",Gopal Iyer,Pune,"INR 1,31,700"
+1029,TBD,Divya Nair,Denver,"$1,239.09"
+1030,05-Sep-2026,Divya Nair,Mumbai,"INR 1,12,200"
+1024,2026-09-04,Farah Khan,Pune,Rs 38100
+1031,2026-09-01,Ben Ortiz,Austin,USD 1055.40
+1026,18-Sep-2026,Chen Wei,Seattle,USD 1626.50
+1032,30-Sep-2026,Eli Brooks,Austin,USD 642.09
+1033,"Sep 23, 2026",Gopal Iyer,Austin,"$1,299.88"
+1034,09/09/2026,Gopal Iyer,Austin,"$1,567.27"
+1035,02/09/2026,Gopal Iyer,Austin,USD 1799.63
+1036,2026-09-02,Gopal Iyer,Mumbai,"INR 6,800"
+1037,"Sep 24, 2026",Asha Rao,Denver,"$1,352.96"
+1038,2026-09-13,Farah  Khan,Mumbai,"INR 38,100"
+1039,11/09/2026,Chen Wei,Mumbai,Rs 80100
+1040,"Sep 25, 2026",Hana Sato,Austin,USD 224.59
+1041,"Sep 17, 2026",Farah Khan,Denver,"$1,181.17"
+1042,2026-09-13,Chen Wei,,Rs 95700
+1043,30-Sep-2026,Divya Nair,Pune,"INR 93,800"
+1044,"Sep 21, 2026",Hana Sato,,"INR 25,300"
+1045,"Sep 06, 2026", Chen Wei,Denver,"$1,410.67"
+1046,18-Sep-2026, Ben Ortiz ,Pune,"INR 13,100"
+1047,22/09/2026,Asha Rao,Bengaluru,Rs 132800
+1048,"Sep 01, 2026",  Ben Ortiz ,Mumbai,"INR 13,700"
+1049,2026-09-16,Gopal Iyer,Denver,USD 494.47
+1050,2026-09-23,Hana Sato,Austin,USD 744.21
+1051,26-Sep-2026, Gopal Iyer,Seattle,USD 1109.10
+1052,"Sep 18, 2026",  Ben Ortiz,Mumbai,"INR 89,600"
+1053,"Sep 12, 2026",Hana Sato, Mumbai ,"INR 85,300"
+1054,21/09/2026,Hana Sato,Pune,"INR 72,900"
+1055,2026-09-12,Eli Brooks,Austin,$743.89
+1056,"Sep 05, 2026",Divya Nair,Pune,"INR 22,300"
+1057,,  Hana Sato ,Denver,"$1,218.16"
+1058,04-Sep-2026,Hana Sato,,USD 1184.89
+1059,11-Sep-2026,Eli Brooks,Seattle,"$,"
+1060,"Sep 27, 2026", Hana Sato,Denver,"$1,861.15"
+1061,23/09/2026,Eli Brooks,Denver,USD 1567.16
+1062,"Sep 13, 2026",Hana Sato,Pune,"INR 67,300"
+1063,2026-09-04,Farah Khan,Mumbai,Rs 146200
+1064,"Sep 18, 2026",Hana Sato,Seattle,$933.31
+1065,03/09/2026,Farah Khan,Seattle,USD 1194.40
+1066,2026-09-24,  Chen Wei,Pune,Rs 78000
+1067,29/09/2026,Asha Rao,Mumbai,"INR 1,01,400"
+1060,"Sep 27, 2026", Hana Sato,Denver,"$1,861.15"
+1055,12/09/2026,Eli Brooks,Austin,$743.89
+1068,"Sep 02, 2026",Chen Wei,  Seattle ,USD 682.55
+1069,01-Sep-2026,Divya  Nair,Pune,Rs 50000
+1070,2026-09-27,Asha Rao,Mumbai,Rs 137200
+1071,"Sep 07, 2026",Eli Brooks,Denver,USD 367.19
+1072,18-Sep-2026,Ben Ortiz,Bengaluru,
+1073,08/09/2026,Gopal Iyer,Pune,Rs 52000
+1074,"Sep 26, 2026",  Divya Nair,Mumbai,
+1075,24/09/2026,  Farah Khan,Mumbai,Rs 103400
+1076,2026-09-06,Eli Brooks,Bengaluru,Rs 66100
+1077,2026-09-08,Ben Ortiz,Seattle,$505.87
+1078,"Sep 14, 2026",Ben Ortiz,Austin,$41.40
+1079,26/09/2026,Chen Wei,Bengaluru,"INR 45,900"
+1080,06/09/2026,Chen Wei, Mumbai,"INR 16,600"
+1081,TBD,Ben Ortiz,  Denver ,"$1,133.41"
+1082,23/09/2026,Eli  Brooks,Denver,"$1,507.31"
+1083,"Sep 10, 2026",Gopal Iyer,Bengaluru,"INR 1,41,100"
+1084,25/09/2026,Farah  Khan,Denver,$296.75
+1085,2026-09-25, Ben Ortiz,Pune,"INR 4,300"
+1086,2026-09-04,Hana Sato,Austin,$607.21
+1087,2026-09-21,Asha Rao,Bengaluru,Rs 52000
+1088,2026-09-16,Asha  Rao,Denver,USD 1807.55
+1089,30/09/2026,Chen Wei,Seattle,$329.94
+1090,11/09/2026,Ben Ortiz,Denver,$855.36
+1091,06-Sep-2026,Ben Ortiz,Seattle,"$1,335.87"
+1086,2026-09-04,  Hana Sato ,Austin,$607.21
+1092,2026-09-15,Hana Sato,Bengaluru,"INR 1,30,000"
+1093,27/09/2026,Farah Khan,Austin,USD 1785.55
+1094,09-Sep-2026,Hana Sato,Bengaluru,"INR 1,38,000"
+1095,"Sep 09, 2026",Eli Brooks,Seattle,$634.43
+1096,28-Sep-2026,Chen Wei,Bengaluru,Rs 121600
+1097,17/09/2026,Divya Nair,Mumbai,Rs 85100
+1098,"Sep 05, 2026",Ben Ortiz,Austin,$366.06
+1047,22/09/2026,Asha Rao,Bengaluru,"INR 1,33,800"
+1099,,Divya Nair,Seattle,USD 1571.56
+1100,"Sep 24, 2026", Farah Khan ,Austin,"$1,459.91"
+1095,"Sep 09, 2026",Eli Brooks,Seattle,$634.43

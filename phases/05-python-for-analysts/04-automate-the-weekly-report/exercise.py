@@ -84,7 +84,11 @@ def main(argv=None):
     cur = compute_kpis(rows_in_week(rows, monday))
     prev = compute_kpis(rows_in_week(rows, monday - timedelta(days=7)))
     path = write_report(build_report(monday, cur, prev), args.out, monday)
-    print("wrote", path)
+    try:
+        shown = os.path.relpath(path)
+    except ValueError:  # another drive on Windows
+        shown = path
+    print("wrote", path if shown.startswith("..") else shown)
     return path
 
 

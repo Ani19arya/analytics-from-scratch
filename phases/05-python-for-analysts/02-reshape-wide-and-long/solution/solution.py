@@ -17,13 +17,17 @@ def write_csv(path, header, rows):
         w.writerows(rows)
 
 
-def pivot_wider(rows, index, columns, values):
+def pivot_wider(rows, index, columns, values, duplicates="error"):
     """Long to wide. Returns (header, wide_rows).
 
     One output row per distinct value of `index`, one column per distinct value of
     `columns`, both in order of first appearance. A missing pair becomes "".
-    Two input rows for the same pair raise ValueError instead of overwriting.
+    Two input rows for the same pair raise ValueError (duplicates="error"), or are
+    added up as integers (duplicates="sum"), which is what a spreadsheet pivot table
+    does by default. Never overwrite one with the other.
     """
+    if duplicates not in ("error", "sum"):
+        raise ValueError("duplicates must be 'error' or 'sum', got %r" % duplicates)
     row_keys, col_keys, cells = [], [], {}
     for r in rows:
         i, c = r[index], r[columns]
@@ -32,8 +36,11 @@ def pivot_wider(rows, index, columns, values):
         if c not in col_keys:
             col_keys.append(c)
         if (i, c) in cells:
-            raise ValueError("two rows for %s=%s, %s=%s" % (index, i, columns, c))
-        cells[(i, c)] = r[values]
+            if duplicates == "error":
+                raise ValueError("two rows for %s=%s, %s=%s" % (index, i, columns, c))
+            cells[(i, c)] = str(int(cells[(i, c)]) + int(r[values]))
+        else:
+            cells[(i, c)] = r[values]
     header = [index] + col_keys
     wide = []
     for i in row_keys:
@@ -55,6 +62,13 @@ def pivot_longer(wide_rows, id_col, var_name, value_name):
     return long_rows
 
 
+def same_rows(a, b):
+    """True when a and b hold the same rows, in any order. Repeated rows must repeat equally often."""
+    def as_sorted(rows):
+        return sorted(tuple(sorted(r.items())) for r in rows)
+    return as_sorted(a) == as_sorted(b)
+
+
 def total_by(long_rows, key, value):
     """Sum `value` for each distinct `key`. One loop, whatever the key is."""
     out = {}
@@ -70,7 +84,8 @@ def main():
     for r in wide:
         print(",".join(str(r[h]) for h in header))
     back = pivot_longer(wide, "region", "month", "revenue")
-    print("long rows in:", len(long_rows), " long rows back:", len(back), " same:", back == long_rows)
+    print("long rows in:", len(long_rows), " long rows back:", len(back),
+          " same rows:", same_rows(back, long_rows), " same order:", back == long_rows)
     print("total by month:", total_by(long_rows, "month", "revenue"))
 
 

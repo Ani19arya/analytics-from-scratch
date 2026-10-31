@@ -87,6 +87,7 @@ def build_report(monday, cur, prev):
         "| Refund rate | %s | %s | %s |" % (fmt_rate(cur["refund_rate"]), fmt_rate(prev["refund_rate"]), format_change("refund_rate", cur["refund_rate"], prev["refund_rate"])),
         "",
         "Revenue and average order value count paid orders only. Refund rate is refunded orders as a share of all orders placed in the week.",
+        "Refunds can arrive days after the order, so the latest week's refund rate can still rise when the report is run again.",
         "",
     ]
     return "\n".join(lines)
@@ -114,7 +115,11 @@ def main(argv=None):
     cur = compute_kpis(rows_in_week(rows, monday))
     prev = compute_kpis(rows_in_week(rows, monday - timedelta(days=7)))
     path = write_report(build_report(monday, cur, prev), args.out, monday)
-    print("wrote", path)
+    try:
+        shown = os.path.relpath(path)
+    except ValueError:  # another drive on Windows
+        shown = path
+    print("wrote", path if shown.startswith("..") else shown)
     return path
 
 

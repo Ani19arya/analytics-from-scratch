@@ -1,30 +1,40 @@
 """Build data/signups.csv: synthetic sign-up events with UTC timestamps.
 
-The events run from Monday 8 December 2025 to Sunday 18 January 2026, so they
-cross a year end and six ISO weeks. Run: python3 make_data.py
+The events run from Monday 8 December 2025 00:00 UTC up to (not including)
+Monday 19 January 2026 00:00 UTC, so they cross a year end and six ISO weeks.
+
+    python3 make_data.py     # writes data/signups.csv for the default seed
+    build(seed)              # returns {"signups": rows}, values as strings like the CSV
 """
 import csv
 import os
 import random
 from datetime import datetime, timedelta
 
-random.seed(503)
+DEFAULT_SEED = 503
 
 START = datetime(2025, 12, 8)
 SECONDS = 42 * 24 * 3600  # six weeks
+END = START + timedelta(seconds=SECONDS)
+
+
+def build(seed=DEFAULT_SEED, n=700):
+    rng = random.Random(seed)
+    stamps = sorted(START + timedelta(seconds=rng.randrange(SECONDS)) for _ in range(n))
+    return {"signups": [{"event_id": str(i), "ts_utc": ts.strftime("%Y-%m-%dT%H:%M:%SZ")}
+                        for i, ts in enumerate(stamps, 1)]}
 
 
 def main():
     here = os.path.dirname(os.path.abspath(__file__))
     data = os.path.join(here, "data")
     os.makedirs(data, exist_ok=True)
-    stamps = sorted(START + timedelta(seconds=random.randrange(SECONDS)) for _ in range(700))
+    rows = build()["signups"]
     with open(os.path.join(data, "signups.csv"), "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["event_id", "ts_utc"])
-        for i, ts in enumerate(stamps, 1):
-            w.writerow([i, ts.strftime("%Y-%m-%dT%H:%M:%SZ")])
-    print("wrote", len(stamps), "events")
+        w = csv.DictWriter(f, fieldnames=["event_id", "ts_utc"])
+        w.writeheader()
+        w.writerows(rows)
+    print("wrote", len(rows), "events")
 
 
 if __name__ == "__main__":

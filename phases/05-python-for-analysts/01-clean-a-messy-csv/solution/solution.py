@@ -9,8 +9,9 @@ DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
 # The export mixes these. Slashes are day first: the file comes from the India office.
 DATE_FORMATS = ["%Y-%m-%d", "%d/%m/%Y", "%b %d, %Y", "%d-%b-%Y"]
 
-# A currency marker, optional spaces, then digits with optional commas and decimals.
-AMOUNT = re.compile(r"^(\$|USD|INR|RS\.?)\s*([\d,]+(?:\.\d+)?)$", re.IGNORECASE)
+# A currency marker, optional spaces, then a number that starts with a digit.
+# Commas may sit between digits; the number may end with a decimal part.
+AMOUNT = re.compile(r"^(\$|USD|INR|RS\.?)\s*(\d+(?:,\d+)*(?:\.\d+)?)$", re.IGNORECASE)
 CURRENCY = {"$": "USD", "USD": "USD", "INR": "INR", "RS": "INR", "RS.": "INR"}
 
 
@@ -44,7 +45,7 @@ def parse_amount(value):
 
 def clean_rows(raw_rows):
     """Return (clean_rows, report). Rows are checked in a fixed order of reasons."""
-    clean, seen = [], set()
+    candidates, seen = [], set()
     report = {"rows_in": len(raw_rows), "rows_out": 0, "trimmed_cells": 0, "filled_city": 0,
               "dropped": {}, "dropped_rows": []}
 
@@ -52,6 +53,7 @@ def clean_rows(raw_rows):
         report["dropped"][reason] = report["dropped"].get(reason, 0) + 1
         report["dropped_rows"].append((order_id, reason))
 
+    # Pass 1: tidy every cell, check each row on its own, remove exact repeats.
     for raw in raw_rows:
         rec = {}
         for key, value in raw.items():
@@ -86,10 +88,30 @@ def clean_rows(raw_rows):
             drop(rec["order_id"], "duplicate")
             continue
         seen.add(key)
-        clean.append(row)
+        candidates.append(row)
+
+    # Pass 2: an order id that still has two different rows is a conflict. Keep neither.
+    versions = {}
+    for row in candidates:
+        versions[row["order_id"]] = versions.get(row["order_id"], 0) + 1
+    clean = []
+    for row in candidates:
+        if versions[row["order_id"]] > 1:
+            drop(row["order_id"], "conflict")
+        else:
+            clean.append(row)
 
     report["rows_out"] = len(clean)
     return clean, report
+
+
+def totals_by_currency(clean):
+    """{currency: (orders, total amount)}. Never adds one currency to another."""
+    out = {}
+    for r in clean:
+        n, total = out.get(r["currency"], (0, 0.0))
+        out[r["currency"]] = (n + 1, round(total + r["amount"], 2))
+    return dict(sorted(out.items()))
 
 
 def main():
@@ -99,6 +121,9 @@ def main():
     print("blank cities filled with Unknown:", report["filled_city"])
     for reason, n in sorted(report["dropped"].items()):
         print("dropped", reason, n)
+    print("conflicts to send back:", [oid for oid, reason in report["dropped_rows"] if reason == "conflict"])
+    for currency, (n, total) in totals_by_currency(clean).items():
+        print("total", currency, n, "orders", format(total, ",.2f"))
     print("first clean row:", clean[0])
 
 
