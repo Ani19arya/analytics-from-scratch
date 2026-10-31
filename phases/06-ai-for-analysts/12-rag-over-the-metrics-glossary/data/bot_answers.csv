@@ -1,0 +1,21 @@
+question_id,answer,cited_doc_ids
+Q01,"Active user: any user who opened the app at least once in the last 30 days counts as an active user, whether or not the user ordered.",G548
+Q02,Promo share: the share of completed orders that used a discount code.,G258
+Q03,Average order value (AOV): food subtotal of completed orders divided by the number of completed orders.,G1095
+Q04,Churned customer: a customer who has not ordered for 60 days or more.,G558
+Q05,Late delivery: an order delivered more than 24 minutes after the time promised in the app.,G854
+Q06,"Gross merchandise value (GMV): the total customers paid for completed orders, including delivery fees and tips, before refunds.",G724
+Q07,"Net revenue: Tiffinbell's commission plus delivery fees on completed orders, minus refunds and the discounts Tiffinbell funds.",G575
+Q08,"Refund rate: refunded orders divided by completed orders in the same period, counted by orders, not by money.",G524
+Q09,Repeat rate: the share of customers whose first order was in a month who placed a second completed order within 30 days.,G688
+Q10,"Order conversion rate: app sessions that end with a completed order divided by all app sessions, per day.",G974
+Q11,Customer acquisition cost (CAC): marketing spend in a month divided by the new customers whose first completed order was in that month.,G117
+Q12,25-day retention: the share of a cohort of new customers with another completed order between day 1 and day 30 after their first.,G671
+Q13,Delivery time: minutes from the restaurant accepting the order to the courier marking it delivered.,G428
+Q14,Cancellation rate: orders cancelled before delivery divided by all orders placed.,G701
+Q15,New customer: a customer whose first ever completed order falls in the period.,G843
+Q16,Basket size: the average number of items in a completed order.,G931
+Q17,Promo share: the share of completed orders that used a discount code.,
+Q18,Courier utilisation: minutes a courier spends on deliveries divided by the minutes the courier is logged in.,G987
+Q19,Prep time: minutes from the restaurant accepting an order to the order being ready for pickup.,G190
+Q20,Contact rate: support tickets opened divided by completed orders.,G655

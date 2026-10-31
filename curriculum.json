@@ -1152,7 +1152,7 @@
      "question": "Can we put the model's JSON straight into a table?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai"
@@ -1166,7 +1166,7 @@
      "question": "How many labelled examples do we need before we trust the score?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1182,7 +1182,7 @@
      "question": "How many tickets can we auto-route at 95% precision, and who reviews the rest?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1197,7 +1197,7 @@
      "question": "Can a model grade answers, and does its grading agree with people?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1212,7 +1212,7 @@
      "question": "Can we let people ask the database questions in English without breaking anything?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",
@@ -1243,7 +1243,7 @@
      "question": "Which definition of active user did the bot cite, and was it the right one?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "genai",

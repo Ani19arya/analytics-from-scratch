@@ -1,0 +1,11 @@
+{
+  "file": "bot_answers.csv",
+  "answer_source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "Answer the analyst's question using only the glossary entries below. Cite the doc_id of every entry you use.",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "Each answer is the first sentence of a glossary entry. Some were damaged on purpose: a deprecated entry cited, another metric cited, a number changed, the citation left out, or an id that does not exist.",
+  "glossary_source": "synthetic, written for this lesson",
+  "seed": 667
+}

@@ -239,4 +239,4 @@ Checking AI output against the data is a Python and SQL job. In the Real Analyst
 
 ## Next
 
-That ends the live lessons of phase 06. Go on to [Phase 07: Getting hired](../../07-getting-hired/), starting with [Read job postings like data](../../07-getting-hired/01-read-job-postings-like-data/), or see what is planned in the [phase 06 overview](../).
+[04: How LLMs work, for analysts](../04-how-llms-work-for-analysts/): what a token is, what a run costs, and why the same prompt gives different answers.

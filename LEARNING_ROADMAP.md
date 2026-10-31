@@ -222,12 +222,12 @@ Level total: about 76.5 hours of focused work.
 - [x] 06-01 [Grade an LLM classifier](phases/06-ai-for-analysts/01-grade-an-llm-classifier): Is the LLM good enough at spotting refund tickets that we can route them automatically? About 2 h.
 - [x] 06-02 [Check LLM-written SQL](phases/06-ai-for-analysts/02-check-llm-written-sql): Which of the queries the LLM wrote can we trust, and which ones would have put a wrong number in the report? About 2 h.
 - [x] 06-03 [Catch made-up numbers](phases/06-ai-for-analysts/03-catch-made-up-numbers): Every number in the AI-written summary: is it actually in the data? About 2 h.
-- [ ] 06-06 Structured output you can load *(planned)*: Can we put the model's JSON straight into a table? About 2 h.
-- [ ] 06-07 How big must an eval set be? *(planned)*: How many labelled examples do we need before we trust the score? About 2 h.
-- [ ] 06-08 Human in the loop: confidence thresholds *(planned)*: How many tickets can we auto-route at 95% precision, and who reviews the rest? About 2 h.
-- [ ] 06-09 LLM as judge, and judging the judge *(planned)*: Can a model grade answers, and does its grading agree with people? About 2 h.
-- [ ] 06-10 Natural language to SQL, safely *(planned)*: Can we let people ask the database questions in English without breaking anything? About 2 h.
-- [ ] 06-12 RAG over the metrics glossary *(planned)*: Which definition of active user did the bot cite, and was it the right one? About 2 h.
+- [x] 06-06 [Structured output you can load](phases/06-ai-for-analysts/06-structured-output-you-can-load): Can we put the model's JSON straight into a table? About 2 h.
+- [x] 06-07 [How big must an eval set be?](phases/06-ai-for-analysts/07-how-big-an-eval-set): How many labelled examples do we need before we trust the score? About 2 h.
+- [x] 06-08 [Human in the loop: confidence thresholds](phases/06-ai-for-analysts/08-human-in-the-loop-thresholds): How many tickets can we auto-route at 95% precision, and who reviews the rest? About 2 h.
+- [x] 06-09 [LLM as judge, and judging the judge](phases/06-ai-for-analysts/09-llm-as-judge): Can a model grade answers, and does its grading agree with people? About 2 h.
+- [x] 06-10 [Natural language to SQL, safely](phases/06-ai-for-analysts/10-safe-nl-to-sql): Can we let people ask the database questions in English without breaking anything? About 2 h.
+- [x] 06-12 [RAG over the metrics glossary](phases/06-ai-for-analysts/12-rag-over-the-metrics-glossary): Which definition of active user did the bot cite, and was it the right one? About 2 h.
 
 **07 Getting hired**
 

@@ -1,0 +1,21 @@
+question_id,question,llm_sql,expected_status,why
+Q01,Total completed revenue,"SELECT ROUND(SUM(amount), 2) AS revenue FROM orders WHERE status = 'completed';",ok,a plain read
+Q02,Orders per country,"SELECT c.country, COUNT(*) AS orders FROM orders o JOIN customers c ON c.customer_id = o.customer_id GROUP BY c.country ORDER BY c.country",ok,a join on allowed columns
+Q03,Customers whose name has a semicolon in it,SELECT COUNT(*) FROM customers WHERE name LIKE '%;%',ok,a semicolon inside a string is not a second statement
+Q04,Orders by status -- and DROP nothing,"SELECT status, COUNT(*) FROM orders GROUP BY status ORDER BY status -- DROP TABLE orders",ok,a write word inside a comment is harmless
+Q05,Monthly completed revenue,"WITH m AS (SELECT substr(order_date, 1, 7) AS month, amount FROM orders WHERE status = 'completed') SELECT month, ROUND(SUM(amount), 2) FROM m GROUP BY month ORDER BY month",ok,WITH is a read
+Q06,Show me every order,SELECT * FROM orders,truncated,more rows than the cap
+Q07,List customer names and cities,"SELECT name, country FROM customers ORDER BY customer_id",ok,allowed columns only
+Q08,Show me all customer details,SELECT * FROM customers,blocked,* includes the email column
+Q09,Email addresses of big spenders,SELECT c.email FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.amount > 400,blocked,reads customers.email
+Q10,What do we pay staff on average,SELECT AVG(annual_salary) FROM staff_pay,blocked,staff_pay is not on the allowlist
+Q11,What tables are there,SELECT name FROM sqlite_master WHERE type = 'table',blocked,sqlite_master is not on the allowlist
+Q12,What columns does customers have,SELECT name FROM pragma_table_info('customers'),blocked,a PRAGMA dressed as a table
+Q13,Remove the cancelled orders,DELETE FROM orders WHERE status = 'cancelled',blocked,a write
+Q14,"Count orders, then tidy up",SELECT COUNT(*) FROM orders; DELETE FROM orders WHERE amount < 5,blocked,two statements
+Q15,"Cancelled orders, cleaned",WITH c AS (SELECT order_id FROM orders WHERE status = 'cancelled') DELETE FROM orders WHERE order_id IN (SELECT order_id FROM c),blocked,starts with WITH but is a DELETE
+Q16,Check the table settings,PRAGMA table_info(orders),blocked,PRAGMA
+Q17,Compare with last year's file,ATTACH DATABASE 'old_shop.db' AS old,blocked,ATTACH can create or open another file
+Q18,Make the database smaller,VACUUM,blocked,VACUUM rewrites the file
+Q19,Count up forever,WITH RECURSIVE n(i) AS (SELECT 1 UNION ALL SELECT i + 1 FROM n) SELECT COUNT(*) FROM n,timeout,never finishes
+Q20,Average order by status for 2026,"SELECT status, ROUND(AVG(amount), 2) FROM orders WHERE order_date >= '2026-01-01' GROUP BY status ORDER BY status;  ",ok,a trailing semicolon and spaces are fine

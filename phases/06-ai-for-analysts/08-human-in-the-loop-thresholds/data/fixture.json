@@ -1,0 +1,12 @@
+{
+  "file": "tickets.csv",
+  "label_source": "simulated",
+  "model": "none: no model was called",
+  "prompt_version": "none",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "confidence = 0.5 + 0.5 * Beta(4, 1), rounded to 0.01. The label is right with chance min(0.99, 1 - 1.4 * (1 - confidence)), otherwise a random other label. Overconfident on purpose.",
+  "splits": "T0001 to T0600 validation, T0601 to T1200 held-out",
+  "gold_label_source": "simulated single human labeller, treated as the truth",
+  "seed": 612
+}

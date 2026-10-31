@@ -310,4 +310,4 @@ Scripts like this one, which sit between the data and an AI tool, are written in
 
 ## Next
 
-The next lesson in this phase, RAG over the metrics glossary, is planned. See the [phase 06 overview](../README.md) for what comes next.
+[RAG over the metrics glossary](../12-rag-over-the-metrics-glossary/)

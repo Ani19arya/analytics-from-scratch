@@ -1,0 +1,18 @@
+{
+  "files": [
+    "answers.csv",
+    "pairs.csv"
+  ],
+  "source": "simulated",
+  "model": "none: no model was called",
+  "judge_prompt": "You are grading a support reply. Answer pass if it answers the customer's question correctly and politely, otherwise fail. Reply with one word.",
+  "pair_prompt": "Here are two replies to the same customer message, Reply 1 and Reply 2. Which is better? Answer 1 or 2.",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "human_raters": "simulated: two raters, each wrong on 7% of replies, independently",
+  "planted_biases": {
+    "length": "a bad reply of 120 words or more passes 45% of the time, a shorter bad reply 10%",
+    "position": "in a pair, the reply shown first gets 15 extra points of chance to win"
+  },
+  "seed": 609
+}

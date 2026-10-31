@@ -1,0 +1,21 @@
+question_id,question,answer_doc_id
+Q01,What counts as an active user?,G917
+Q02,What are daily active users?,G805
+Q03,What is average order value?,G361
+Q04,What is a churned customer?,G313
+Q05,What counts as a late delivery?,G854
+Q06,How is gross merchandise value defined?,G724
+Q07,How do we calculate net revenue?,G575
+Q08,How is refund rate calculated?,G524
+Q09,How do we measure repeat customers?,G688
+Q10,How do we measure conversion from sessions to orders?,G974
+Q11,How is CAC calculated?,G117
+Q12,How do we measure retention of new customers?,G671
+Q13,What does delivery time mean?,G428
+Q14,How do we count cancelled orders as a rate?,G701
+Q15,Who counts as a new customer?,G843
+Q16,How many items is basket size?,G931
+Q17,What is promo share?,G258
+Q18,"How busy are couriers, as a metric?",G987
+Q19,"How long do restaurants take to prepare food, as a metric?",G190
+Q20,What is contact rate?,G655

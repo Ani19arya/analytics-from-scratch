@@ -1,0 +1,25 @@
+doc_id,metric,status,effective_from,text
+G190,prep_time,current,2024-01-01,Prep time: minutes from the restaurant accepting an order to the order being ready for pickup.
+G843,new_customer,current,2024-01-01,New customer: a customer whose first ever completed order falls in the period.
+G558,churned_customer,deprecated,2023-06-01,Churned customer: a customer who has not ordered for 60 days or more.
+G548,active_user,deprecated,2023-01-01,"Active user: any user who opened the app at least once in the last 30 days counts as an active user, whether or not the user ordered."
+G917,active_user,current,2026-04-01,Active user: a customer with at least one completed order in the last 28 days. Opening the app without ordering does not count. This replaced the app-open definition on 1 April 2026.
+G258,promo_share,current,2024-01-01,Promo share: the share of completed orders that used a discount code.
+G613,average_order_value,deprecated,2022-01-01,"Average order value (AOV): total paid for an order, including the delivery fee, averaged over all orders placed."
+G688,repeat_rate,current,2025-03-01,Repeat rate: the share of customers whose first order was in a month who placed a second completed order within 30 days.
+G916,late_delivery,deprecated,2024-02-01,Late delivery: an order delivered more than 15 minutes after the promised time.
+G671,retention_30_day,current,2025-03-01,30-day retention: the share of a cohort of new customers with another completed order between day 1 and day 30 after their first.
+G655,contact_rate,current,2024-01-01,Contact rate: support tickets opened divided by completed orders.
+G428,delivery_time,current,2024-01-01,"Delivery time: minutes from the restaurant accepting the order to the courier marking it delivered. Reports show the median, not the mean."
+G117,customer_acquisition_cost,current,2024-01-01,Customer acquisition cost (CAC): marketing spend in a month divided by the new customers whose first completed order was in that month.
+G575,net_revenue,current,2024-01-01,"Net revenue: Tiffinbell's commission plus delivery fees on completed orders, minus refunds and the discounts Tiffinbell funds."
+G854,late_delivery,current,2026-01-15,Late delivery: an order delivered more than 10 minutes after the time promised in the app.
+G805,daily_active_users,current,2026-04-01,Daily active users (DAU): the number of distinct customers with a completed order on a given day.
+G313,churned_customer,current,2025-10-01,Churned customer: a customer whose last completed order was more than 90 days ago.
+G931,basket_size,current,2024-01-01,Basket size: the average number of items in a completed order.
+G724,gross_merchandise_value,current,2024-01-01,"Gross merchandise value (GMV): the total customers paid for completed orders, including delivery fees and tips, before refunds."
+G524,refund_rate,current,2024-01-01,"Refund rate: refunded orders divided by completed orders in the same period, counted by orders, not by money."
+G987,courier_utilisation,current,2024-01-01,Courier utilisation: minutes a courier spends on deliveries divided by the minutes the courier is logged in.
+G974,order_conversion_rate,current,2024-01-01,"Order conversion rate: app sessions that end with a completed order divided by all app sessions, per day."
+G701,cancellation_rate,current,2024-01-01,Cancellation rate: orders cancelled before delivery divided by all orders placed.
+G361,average_order_value,current,2025-07-01,Average order value (AOV): food subtotal of completed orders divided by the number of completed orders. Delivery fees and tips are excluded.

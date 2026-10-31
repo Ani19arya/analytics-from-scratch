@@ -1,0 +1,11 @@
+{
+  "file": "nl_questions.csv",
+  "llm_sql_source": "simulated",
+  "model": "none: no model was called",
+  "prompt": "You write SQLite for the shop database (tables customers, orders). Reply with one SQL query only.",
+  "temperature": "not applicable",
+  "date": "not applicable",
+  "how": "The SQL was written by hand for this lesson to cover plain reads and the ways a question tool is abused or misled. expected_status is what a safe gateway must do with each query.",
+  "tables": "customers.csv, orders.csv and staff_pay.csv are synthetic, built by make_data.py",
+  "seed": 610
+}

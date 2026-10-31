@@ -81,12 +81,12 @@ You climb every subject one level at a time: Level 1 (understand and solve guide
 | [03 Metrics and product analytics](phases/03-metrics-and-product-analytics) | Define, decompose and diagnose the numbers a business runs on. | 12 | 2 |
 | [04 Dashboards and spreadsheets](phases/04-dashboards) | What Excel, Power BI and Tableau compute underneath, rebuilt and tested, plus how to design for a decision. | 12 | 0 |
 | [05 Python for analysts](phases/05-python-for-analysts) | Cleaning, reshaping, profiling, APIs, charts and automation in standard library Python, with the bridge to pandas. | 10 | 0 |
-| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 6 | 9 |
+| [06 AI for analysts](phases/06-ai-for-analysts) | Use LLMs and agents for analysis, and measure, check and govern what they produce. | 12 | 3 |
 | [07 Getting hired](phases/07-getting-hired) | Roadmaps, interview rounds, an honest resume and a portfolio employers can run. | 12 | 0 |
 | [08 Modern data stack](phases/08-modern-data-stack) | Warehouses, transformation, orchestration, testing and version control: what an analyst must understand and what a data engineer builds. | 5 | 1 |
 | [09 Business case studies](phases/09-business-case-studies) | Real business questions, end to end: context, KPIs, analysis, recommendation and its limits. | 9 | 0 |
 | [10 Capstone projects](phases/10-capstone-projects) | Large end-to-end projects with a brief, data, deliverables, a rubric and a worked solution. | 0 | 8 |
-| **All** | | **96** | **25** |
+| **All** | | **102** | **19** |
 <!-- /generated:phase-table -->
 
 Lessons marked *planned* are being written in roughly the order listed. A lesson is only listed as live when its test passes.
@@ -188,13 +188,13 @@ Lessons marked *planned* are being written in roughly the order listed. A lesson
 3. 06-03 [Catch made-up numbers](phases/06-ai-for-analysts/03-catch-made-up-numbers): Every number in the AI-written summary: is it actually in the data? (Level 2)
 4. 06-04 [How LLMs work, for analysts](phases/06-ai-for-analysts/04-how-llms-work-for-analysts): What is a token, what does a run cost, and why does the same prompt give different answers? (Level 1)
 5. 06-05 [Prompt versions as experiments](phases/06-ai-for-analysts/05-prompt-versions-as-experiments): Is prompt v2 better than v1 on the same 200 tickets? (Level 1)
-6. 06-06 Structured output you can load *(planned)*: Can we put the model's JSON straight into a table? (Level 2)
-7. 06-07 How big must an eval set be? *(planned)*: How many labelled examples do we need before we trust the score? (Level 2)
-8. 06-08 Human in the loop: confidence thresholds *(planned)*: How many tickets can we auto-route at 95% precision, and who reviews the rest? (Level 2)
-9. 06-09 LLM as judge, and judging the judge *(planned)*: Can a model grade answers, and does its grading agree with people? (Level 2)
-10. 06-10 Natural language to SQL, safely *(planned)*: Can we let people ask the database questions in English without breaking anything? (Level 2)
+6. 06-06 [Structured output you can load](phases/06-ai-for-analysts/06-structured-output-you-can-load): Can we put the model's JSON straight into a table? (Level 2)
+7. 06-07 [How big must an eval set be?](phases/06-ai-for-analysts/07-how-big-an-eval-set): How many labelled examples do we need before we trust the score? (Level 2)
+8. 06-08 [Human in the loop: confidence thresholds](phases/06-ai-for-analysts/08-human-in-the-loop-thresholds): How many tickets can we auto-route at 95% precision, and who reviews the rest? (Level 2)
+9. 06-09 [LLM as judge, and judging the judge](phases/06-ai-for-analysts/09-llm-as-judge): Can a model grade answers, and does its grading agree with people? (Level 2)
+10. 06-10 [Natural language to SQL, safely](phases/06-ai-for-analysts/10-safe-nl-to-sql): Can we let people ask the database questions in English without breaking anything? (Level 2)
 11. 06-11 [Keep personal data out of prompts](phases/06-ai-for-analysts/11-keep-pii-out-of-prompts): Is any customer's email or phone number about to leave the building? (Level 1)
-12. 06-12 RAG over the metrics glossary *(planned)*: Which definition of active user did the bot cite, and was it the right one? (Level 2)
+12. 06-12 [RAG over the metrics glossary](phases/06-ai-for-analysts/12-rag-over-the-metrics-glossary): Which definition of active user did the bot cite, and was it the right one? (Level 2)
 13. 06-13 An analytics agent loop from scratch *(planned)*: What does an agent actually do between your question and its answer? (Level 3)
 14. 06-14 Audit an agent's work *(planned)*: The agent says revenue grew 12%. Which step should we check, and was it right? (Level 3)
 15. 06-15 MCP for analysts *(planned)*: How does an assistant get safe, read-only access to your data? (Level 3)

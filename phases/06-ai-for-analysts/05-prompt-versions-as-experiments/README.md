@@ -265,4 +265,4 @@ Testing a change on the same items and reading the result is evaluation work in 
 
 ## Next
 
-The next lesson in this phase, structured output you can load, is planned. See the [phase 06 overview](../README.md) for what comes next.
+[Structured output you can load](../06-structured-output-you-can-load/)
