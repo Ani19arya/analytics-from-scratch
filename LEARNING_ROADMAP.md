@@ -170,11 +170,11 @@ Level total: about 76.5 hours of focused work.
 
 - [x] 01-03 [Window functions](phases/01-sql/03-window-functions): How is each region tracking against its fiscal year to date, who are the top reps, and did revenue go up or down from last month? About 2 h.
 - [x] 01-04 [Cohort retention](phases/01-sql/04-cohort-retention): Of the users who signed up in each month, what share were still active one, two and three months later? About 2 h.
-- [ ] 01-08 Duplicates and reconciliation *(planned)*: After the CRM import doubled some rows, how many unique customers really signed up? About 2 h.
-- [ ] 01-09 Rolling averages and percent of total *(planned)*: What is the 7-day moving average of orders, and each region's share of revenue? About 2 h.
-- [ ] 01-10 Sessionization from raw events *(planned)*: How many sessions does each user have with a 30-minute timeout, and how long is a session? About 2 h.
-- [ ] 01-11 Gaps and islands: streaks *(planned)*: Which users logged a workout three days in a row, and what is the longest streak? About 2 h.
-- [ ] 01-12 Review a query someone else wrote *(planned)*: A teammate, or an assistant, wrote this query. Is the number on the slide right? About 2 h.
+- [x] 01-08 [Duplicates and reconciliation](phases/01-sql/08-duplicates-and-reconciliation): After the CRM import doubled some rows, how many unique customers really signed up? About 2 h.
+- [x] 01-09 [Rolling averages and percent of total](phases/01-sql/09-rolling-averages-and-percent-of-total): What is the 7-day moving average of orders, and each region's share of revenue? About 2 h.
+- [x] 01-10 [Sessionization from raw events](phases/01-sql/10-sessionization): How many sessions does each user have with a 30-minute timeout, and how long is a session? About 2 h.
+- [x] 01-11 [Gaps and islands: streaks](phases/01-sql/11-gaps-and-islands): Which users logged a workout three days in a row, and what is the longest streak? About 2 h.
+- [x] 01-12 [Review a query someone else wrote](phases/01-sql/12-review-a-query-someone-else-wrote): A teammate, or an assistant, wrote this query. Is the number on the slide right? About 2 h.
 
 **02 Statistics and experiments**
 

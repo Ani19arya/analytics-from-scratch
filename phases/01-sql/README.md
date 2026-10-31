@@ -24,13 +24,13 @@ Folder numbers stay fixed because they are live links; the list below is the ord
 
 **Level 2: intermediate**
 
-6. 08 Duplicates and reconciliation (planned): after the CRM import doubled some rows, how many unique customers really signed up?
+6. [08 Duplicates and reconciliation](08-duplicates-and-reconciliation/): after the CRM import doubled some rows, how many unique customers really signed up?
 7. [03 Window functions](03-window-functions/): fiscal year to date running totals, RANK versus ROW_NUMBER for a bonus list, LAG for month over month, and the ROWS versus RANGE frame trap.
-8. 09 Rolling averages and percent of total (planned): the 7-day moving average of orders, and each region's share of revenue.
-9. 10 Sessionization from raw events (planned): sessions per user with a 30-minute timeout.
-10. 11 Gaps and islands: streaks (planned): which users logged a workout three days in a row?
+8. [09 Rolling averages and percent of total](09-rolling-averages-and-percent-of-total/): the 7-day moving average of orders, and each region's share of revenue.
+9. [10 Sessionization from raw events](10-sessionization/): sessions per user with a 30-minute timeout.
+10. [11 Gaps and islands: streaks](11-gaps-and-islands/): which users logged a workout three days in a row?
 11. [04 Cohort retention](04-cohort-retention/): monthly signup cohorts, retention by month since signup, and a triangle that keeps real zeros as 0 and unobserved months blank.
-12. 12 Review a query someone else wrote (planned): a teammate, or an assistant, wrote this query. Is the number on the slide right?
+12. [12 Review a query someone else wrote](12-review-a-query-someone-else-wrote/): a teammate, or an assistant, wrote this query. Is the number on the slide right?
 
 **Level 3: advanced**
 

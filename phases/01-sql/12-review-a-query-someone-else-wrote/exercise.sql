@@ -1,0 +1,36 @@
+-- Lesson 12: review a query someone else wrote. Your turn.
+-- Tables:
+--   customers(customer_id, city)
+--   orders(order_id, customer_id, ordered_at, amount, status)    one row per order
+--   order_items(order_id, line_no, item, qty)                    one row per item line
+--   promo_redemptions(order_id, promo_code, channel)              at most one row per order
+-- Write one query under each "-- query:" marker. Keep the markers.
+-- Run from this folder: python3 test_lesson.py
+-- Run Rahul's query as it is: python3 ../query.py slide_query.sql
+--
+-- What Meher asked for (the definitions the slide must follow):
+--   October 2026 = ordered_at from 1 October 00:00:00 up to, but not
+--   including, 1 November 00:00:00. Completed orders only. Leave out the
+--   orders that used a staff promo code; keep every other order, with or
+--   without a promo. Revenue is the order amount, counted once per order.
+--   Items are the sum of qty.
+
+-- query: fixed_slide
+-- TODO: the slide as it should be, one row per city.
+-- Columns: city, orders, items, revenue, avg_order_value (rounded to 2
+-- decimals), items_per_order (rounded to 2 decimals).
+-- Order by revenue from highest to lowest, then city.
+
+
+-- query: findings
+-- TODO: one row per real bug in slide_query.sql, with a column bug_code.
+-- Pick from this list. Not every code on it is a bug in Rahul's query:
+--   FANOUT             a join repeats rows, so a sum counts the same value more than once
+--   LEFT_JOIN_FILTER   a WHERE condition on the right-hand table of a LEFT JOIN removes rows it kept
+--   INTEGER_DIVISION   whole-number division drops the decimals
+--   DATE_BOUND         the date filter leaves out part of the period, or lets in too much
+--   STATUS_FILTER      the query should not filter on order status
+--   COUNT_DISTINCT     COUNT(DISTINCT o.order_id) gives the wrong number of orders
+--   MISSING_GROUP_BY   a column in SELECT is missing from GROUP BY
+--   CROSS_JOIN         a join has no join condition
+-- Example of the shape: SELECT 'SOME_CODE' AS bug_code UNION ALL SELECT 'ANOTHER_CODE';

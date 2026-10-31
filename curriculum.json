@@ -209,7 +209,7 @@
      "question": "After the CRM import doubled some rows, how many unique customers really signed up?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql",
@@ -224,7 +224,7 @@
      "question": "What is the 7-day moving average of orders, and each region's share of revenue?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -238,7 +238,7 @@
      "question": "How many sessions does each user have with a 30-minute timeout, and how long is a session?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql",
@@ -253,7 +253,7 @@
      "question": "Which users logged a workout three days in a row, and what is the longest streak?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql"
@@ -267,7 +267,7 @@
      "question": "A teammate, or an assistant, wrote this query. Is the number on the slide right?",
      "level": "intermediate",
      "kind": "tested",
-     "status": "planned",
+     "status": "live",
      "hours": 2,
      "skills": [
       "sql",

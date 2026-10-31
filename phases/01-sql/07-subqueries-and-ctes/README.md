@@ -385,4 +385,4 @@ In the Real Analyst Jobs data drop of 25 October 2026 ([data/job-market/2026-10]
 
 ## Next
 
-Back to the [Phase 01 overview](../README.md) for the next lesson.
+[08 Duplicates and reconciliation](../08-duplicates-and-reconciliation/): after the CRM import doubled some rows, how many unique customers really signed up?
