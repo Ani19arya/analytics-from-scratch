@@ -8,6 +8,7 @@ import contextlib
 import io
 import json
 import os
+import re
 import shutil
 import sys
 import tempfile
@@ -330,7 +331,7 @@ class TestExport(TempProfile):
 
     def test_allowlist_schema_and_values(self):
         self.build()
-        code, out, err = self.export("--yes")
+        code, out, err = self.export("--yes", "--level", "full")
         self.assertEqual(code, 0, err)
         data = json.loads(out)
         self.check_keys(data)
@@ -353,9 +354,11 @@ class TestExport(TempProfile):
 
     def test_notes_names_and_paths_never_exported(self):
         self.build()
-        code, out, _ = self.export("--yes")
-        for text in SECRET_TEXT + ["notes", self.dir, os.path.expanduser("~"), "why", "role"]:
-            self.assertNotIn(text, out)
+        for level in pr.EXPORT_LEVELS:
+            code, out, _ = self.export("--yes", "--level", level)
+            self.assertEqual(code, 0)
+            for text in SECRET_TEXT + ["notes", self.dir, os.path.expanduser("~"), "why", "role"]:
+                self.assertNotIn(text, out, level)
 
     def test_dates_are_cut_to_the_day(self):
         p = pr.new_profile()
@@ -380,29 +383,120 @@ class TestExport(TempProfile):
         self.assertIn("It includes ONLY", err)   # shown even with --yes
         self.assertEqual(code, 0)
 
+    def test_notice_says_pseudonymous_and_warns_about_public_issues(self):
+        self.build()
+        for level in pr.EXPORT_LEVELS:
+            code, out, err = self.export("--level", level)
+            self.assertEqual(code, 1)
+            flat = " ".join(err.split())
+            self.assertIn("pseudonymous", flat)
+            self.assertIn("could still point to you in a small group", flat)
+            self.assertIn("public repo is visible to everyone", flat)
+            self.assertIn("send the export privately to the pilot organiser", flat)
+            self.assertIn("level: %s" % level, flat)
+            self.assertNotIn("anonymous summary", flat)
+            for ch in (chr(0x2014), chr(0x2013), chr(0x201C), chr(0x201D), chr(0x2018), chr(0x2019)):
+                self.assertNotIn(ch, err)
+
     def test_interactive_y_and_no(self):
         self.build()
         code, out, _ = self.export(stdin=FakeTty("n\n", True))
         self.assertEqual((code, out), (1, ""))
         code, out, _ = self.export(stdin=FakeTty("y\n", True))
         self.assertEqual(code, 0)
-        self.assertEqual(json.loads(out)["schema"], pr.EXPORT_SCHEMA)
+        self.assertEqual(json.loads(out)["schema"], pr.COARSE_SCHEMA)   # coarse is the default
 
     def test_pilot_id_is_kept_and_can_be_regenerated(self):
         self.build()
-        first = json.loads(self.export("--yes")[1])["pilot_id"]
-        self.assertEqual(json.loads(self.export("--yes")[1])["pilot_id"], first)
-        new = json.loads(self.export("--yes", "--new-id")[1])["pilot_id"]
+        first = json.loads(self.export("--yes", "--level", "full")[1])["pilot_id"]
+        self.assertEqual(json.loads(self.export("--yes", "--level", "full")[1])["pilot_id"], first)
+        new = json.loads(self.export("--yes", "--level", "full", "--new-id")[1])["pilot_id"]
         self.assertNotEqual(new, first)
         self.assertEqual(pr.load_profile(self.path)["pilot_id"], new)
 
     def test_out_file(self):
         self.build()
         target = os.path.join(self.dir, "pilot.json")
-        code, out, _ = self.export("--yes", "--out", target)
+        code, out, _ = self.export("--yes", "--level", "full", "--out", target)
         self.assertEqual((code, out), (0, ""))
         with open(target, encoding="utf-8") as f:
             self.check_keys(json.load(f))
+        code, out, _ = self.export("--yes", "--out", target)
+        self.assertEqual((code, out), (0, ""))
+        with open(target, encoding="utf-8") as f:
+            self.check_coarse_keys(json.load(f))
+
+    # -- coarse level ---------------------------------------------------------
+
+    def check_coarse_keys(self, data):
+        K = pr.COARSE_KEYS
+        self.assertEqual(sorted(data), sorted(K["top"]))
+        if data["placement"] is not None:
+            self.assertEqual(sorted(data["placement"]), sorted(K["placement"]))
+            for which in ("first", "latest"):
+                for area, level in data["placement"][which].items():
+                    self.assertIn(area, pr.PLACEMENT_AREAS)
+                    self.assertIn(level, pr.PLACEMENT_LEVELS + [None])
+        self.assertEqual(sorted(data["lessons"]), sorted(K["lessons"]))
+        for it in data["lessons"]["items"]:
+            self.assertEqual(sorted(it), sorted(K["lesson_item"]))
+            self.assertIsInstance(it["passed"], bool)
+        self.assertEqual(sorted(data["activity"]), sorted(K["activity"]))
+        for i in data["interviews"]:
+            self.assertEqual(sorted(i), sorted(K["interview"]))
+            self.assertEqual(sorted(i["rounds"]), sorted(pr.ROUNDS))
+            for v in i["rounds"].values():
+                self.assertIn(v, (True, False, None))
+        # Every key anywhere is in this level's allowlist (or is an area, round or nothing else).
+        allowed = set(k for keys in K.values() for k in keys) | set(pr.PLACEMENT_AREAS) | set(pr.ROUNDS)
+
+        def walk(x):
+            if isinstance(x, dict):
+                for k, v in x.items():
+                    self.assertIn(k, allowed)
+                    walk(v)
+            elif isinstance(x, list):
+                for v in x:
+                    walk(v)
+        walk(data)
+
+    def test_coarse_is_the_default_and_follows_its_allowlist(self):
+        self.build()
+        code, out, err = self.export("--yes")
+        self.assertEqual(code, 0, err)
+        data = json.loads(out)
+        self.assertEqual(data["schema"], pr.COARSE_SCHEMA)
+        self.check_coarse_keys(data)
+        self.assertRegex(data["export_id"], r"^x-[0-9a-f]{16}$")
+        self.assertRegex(data["exported_week"], r"^\d{4}-W\d{2}$")
+        self.assertRegex(data["course_month"], r"^(\d{4}-\d{2}|unknown)$")
+        self.assertEqual(data["placement"], {"count": 2, "first": {"sql": "mixed", "statistics": "weak"},
+                                             "latest": {"sql": "strong", "statistics": None}})
+        self.assertEqual(data["lessons"]["items"], [{"id": "01-01", "passed": True}, {"id": "01-02", "passed": False}])
+        self.assertEqual(data["activity"]["latest_day"], 49)
+        self.assertEqual(data["activity"]["first_pass_day"], 2)
+        self.assertEqual(data["interviews"], [{"overall": "pass", "rounds": {"sql": True, "statistics": True,
+                                                                           "metrics-case": True,
+                                                                           "behavioural": True}}])
+
+    def test_coarse_has_no_exact_dates_scores_or_lasting_id(self):
+        self.build()
+        out = self.export("--yes")[1]
+        self.assertIsNone(re.search(r"\d{4}-\d{2}-\d{2}", out), out)
+        for key in ("pilot_id", "exported_on", "course_version", "attempts", "correct", "scores", "date"):
+            self.assertNotIn('"%s"' % key, out)
+        self.assertNotIn("pilot_id", pr.load_profile(self.path))   # coarse never stores an id
+        self.assertNotEqual(json.loads(out)["export_id"], json.loads(self.export("--yes")[1])["export_id"])
+        p = pr.new_profile()
+        pr.record_attempt(p, "01-01", True, "2026-12-29")
+        data = pr.coarse_summary(p, LESSONS, month="2026-12", on="2027-01-01")
+        self.assertEqual(data["exported_week"], "2026-W53")
+        self.assertEqual(data["activity"], {"latest_day": 0, "export_day": 3, "first_pass_day": 0})
+        self.assertEqual(pr.coarse_summary(p, LESSONS, month="2026-12-29")["course_month"], "unknown")
+
+    def test_course_month_never_fails(self):
+        self.assertEqual(pr.course_month(self.dir), "unknown")
+        self.assertRegex(pr.course_month(), r"^(\d{4}-\d{2}|unknown)$")
 
     def test_course_version_never_fails(self):
         self.assertEqual(pr.course_version(self.dir), "unknown")
@@ -410,16 +504,21 @@ class TestExport(TempProfile):
 
 
 class TestAggregate(TempProfile):
-    def learner(self, name, attempts, placements=(), interviews=(), on="2026-10-31"):
+    def learner(self, name, attempts, placements=(), interviews=(), on="2026-10-31", level="full", levels=()):
         p = pr.new_profile()
         p["pilot_id"] = pr.new_pilot_id()
-        for counts, date in placements:
-            pr.record_placement(p, placement_result(counts), date)
+        for n, (counts, date) in enumerate(placements):
+            pr.record_placement(p, placement_result(counts, levels=levels[n] if levels else None), date)
         for lid, ok, date in attempts:
             pr.record_attempt(p, lid, ok, date)
         for scores, date in interviews:
             p["interviews"].append(pr.interview_entry(card(scores, date=date), LESSONS))
-        self.write_json(name, pr.export_summary(p, LESSONS, version="abc1234", on=on))
+        if level == "full":
+            data = pr.export_summary(p, LESSONS, version="abc1234", on=on)
+        else:
+            data = pr.coarse_summary(p, LESSONS, month="2026-10", on=on)
+        self.write_json(name, data)
+        return data
 
     def test_metrics(self):
         self.learner("a.json", [("00-01", False, "2026-10-01"), ("00-01", True, "2026-10-02"),
@@ -446,8 +545,48 @@ class TestAggregate(TempProfile):
         stuck = dict((r["id"], r) for r in agg["where_stuck"])
         self.assertEqual(stuck["00-01"]["tried"], 3)
         self.assertEqual(stuck["00-01"]["not_passed"], 1)
+        self.assertEqual(agg["exports_by_level"], {"full": 3, "coarse": 0})
+        self.assertEqual(agg["not_available_from_coarse"], [])
         code, text = self.cli("aggregate", self.dir)
         self.assertIn("Day-7 return:               1 of 2", text)
+        self.assertNotIn("Not available from coarse", text)
+
+    def test_mixed_full_and_coarse(self):
+        attempts = [("00-01", False, "2026-10-01"), ("00-01", True, "2026-10-02"),
+                    ("01-01", True, "2026-10-09"), ("10-01", True, "2026-10-20")]
+        placements = [({"sql": (1, 4)}, "2026-10-01"), ({"sql": (3, 4)}, "2026-10-20")]
+        levels = [{"sql": "weak"}, {"sql": "strong"}]
+        self.learner("a.json", attempts, placements, [([3, 3, 3, 3], "2026-10-25")], levels=levels)
+        coarse = self.learner("b.json", attempts, placements, [([3, 3, 3, 3], "2026-10-25")], level="coarse",
+                              levels=levels)
+        self.write_json("b-again.json", coarse)   # the same coarse file saved twice counts once
+        self.learner("c.json", [("00-01", False, "2026-10-01")], [({"sql": (0, 4)}, "2026-10-01")],
+                     level="coarse")
+        self.learner("d.json", [("00-01", True, "2026-10-28")], on="2026-10-30", level="coarse")
+        code, out = self.cli("aggregate", self.dir, "--json")
+        self.assertEqual(code, 0, out)
+        agg = json.loads(out)
+        self.assertEqual(agg["learners"], 4)
+        self.assertEqual(agg["exports_by_level"], {"full": 1, "coarse": 3})
+        self.assertEqual(agg["placement_completed"], 3)
+        self.assertEqual(agg["first_lesson_passed"], 3)
+        self.assertEqual(agg["median_days_to_first_pass"], 1)        # 1, 1 and 0 days
+        self.assertEqual(agg["day7_return"], {"returned": 2, "eligible": 3})
+        self.assertEqual(agg["lessons_passed_per_learner"], {"median": 2.0, "min": 0, "max": 3})
+        self.assertEqual(agg["placement_before_after"], {"learners_with_two_or_more": 1,
+                                                         "median_change_points_by_area": {"sql": 50.0}})
+        self.assertEqual(agg["placement_level_change"], {"learners_with_two_or_more": 2,
+                                                         "by_area": {"sql": {"up": 2, "same": 0, "down": 0}}})
+        self.assertEqual(agg["capstone_passed"], 2)
+        self.assertEqual(agg["mock_interview"], {"learners": 2, "latest_pass": 2})
+        stuck = dict((r["id"], r) for r in agg["where_stuck"])
+        self.assertEqual(stuck["00-01"], {"id": "00-01", "tried": 4, "not_passed": 1,
+                                          "median_failed_tries_before_pass": 1})   # from the full export only
+        self.assertEqual(len(agg["not_available_from_coarse"]), 3)
+        code, text = self.cli("aggregate", self.dir)
+        self.assertIn("Levels: 1 full, 3 coarse", text)
+        self.assertIn("Not available from coarse exports:", text)
+        self.assertIn("counted more than once", text)
 
     def test_latest_export_per_pilot_wins(self):
         p = pr.new_profile()

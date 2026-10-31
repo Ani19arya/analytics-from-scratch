@@ -6,14 +6,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking part in the pilot. Share only what you are happy to share. Issues on a public repo are public.
-        To include your progress, run `python3 tools/progress.py export` from the repo root. It shows exactly what it
-        includes and asks before writing. It has no notes, names, emails or paths. Please do not add any of those below.
+        Thanks for taking part in the pilot. Share only what you are happy to share.
+
+        **This issue is public: anything you write here is visible to everyone, and copies can outlive an edit.**
+        If you prefer, send your export privately to the pilot organiser instead of pasting it here.
+
+        To include your progress, run `python3 tools/progress.py export` from the repo root (the coarse level is the
+        default). It shows exactly what it includes and asks before writing. It is pseudonymous, not anonymous: no
+        name or contact details, but a random id and your activity pattern could still point to you in a small group.
+        Do not paste a `--level full` export here. Please do not add names, emails or paths anywhere below.
   - type: textarea
     id: export
     attributes:
-      label: Anonymous progress export (optional)
-      description: Paste the JSON printed by python3 tools/progress.py export --yes, or leave blank.
+      label: Pseudonymous progress export (optional, coarse level recommended)
+      description: Paste the JSON printed by python3 tools/progress.py export --yes (coarse), or leave blank.
       render: json
     validations:
       required: false

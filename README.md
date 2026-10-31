@@ -124,7 +124,7 @@ python3 tools/progress.py report --md     # before and after: placement, lessons
 
 Record a placement with `python3 tools/progress.py placement --answers answers.json` and a mock interview scorecard with `python3 tools/progress.py interview --from card.json`. The report is evidence of what you can now do, not a certificate.
 
-Nothing in the course tracks you. If you want to help improve it, `python3 tools/progress.py export` makes an anonymous summary of your progress (no notes, names, emails or paths); it shows exactly what it includes and asks before writing, and you can paste it into a Pilot check-in issue. To tell us where a lesson lost you or what is wrong in it, use the [issue forms](https://github.com/Ani19arya/analytics-from-scratch/issues/new/choose). Course owners: [docs/PILOT.md](docs/PILOT.md) explains how to run a pilot and turn exports into metrics with `progress.py aggregate`.
+Nothing in the course tracks you. If you want to help improve it, `python3 tools/progress.py export` makes an optional, pseudonymous progress summary: no name or contact details, but a random id and your activity pattern could still point to you in a small group. It shows exactly what it includes and asks before writing. The default, `--level coarse`, leaves out dates, tries and scores and is the one to paste in a public Pilot check-in issue; `--level full` should go privately to the pilot organiser. To tell us where a lesson lost you or what is wrong in it, use the [issue forms](https://github.com/Ani19arya/analytics-from-scratch/issues/new/choose). Course owners: [docs/PILOT.md](docs/PILOT.md) explains how to run a pilot and turn exports into metrics with `progress.py aggregate`.
 
 ## Curriculum
 

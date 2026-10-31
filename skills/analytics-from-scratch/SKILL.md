@@ -213,7 +213,7 @@ When the learner is stuck, escalate slowly, one rung per message:
 
 At the end of each lesson, give a one-line recap: the lesson folder path, its level, what they built, and the next folder path. After a mock interview, the scorecard is the recap. The record lives in the learner profile (see Learner profile above): make sure the lesson was recorded with `progress.py check`, and point to `progress.py report --md` when they want a summary for a portfolio.
 
-At the end of a session you may mention, once and as optional, that they can help improve the course: `python3 tools/progress.py export` makes an anonymous summary (it shows what it includes and asks first), and the GitHub issue forms take "I got stuck on a lesson", "Something in a lesson is wrong" and "Pilot check-in". Never push, never run `export` for them, and drop it if they are not interested.
+At the end of a session you may mention, once and as optional, that they can help improve the course: `python3 tools/progress.py export` makes a pseudonymous summary (no name or contact details, but a random id and their activity pattern could still point to them in a small group; the default coarse level is the one to post in a public issue, a full export goes privately to the pilot organiser; it shows what it includes and asks first), and the GitHub issue forms take "I got stuck on a lesson", "Something in a lesson is wrong" and "Pilot check-in". Never push, never run `export` for them, and drop it if they are not interested.
 
 ## Useful links
 
